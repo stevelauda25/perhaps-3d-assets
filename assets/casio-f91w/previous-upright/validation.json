@@ -1,0 +1,52 @@
+{
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "samples": 256,
+  "resolution": [
+    2048,
+    4438
+  ],
+  "case_bounds_mm": {
+    "x": 35.2,
+    "y": 38.2,
+    "z": 8.5
+  },
+  "scene_objects": 130,
+  "manufactured_collection_objects": 120,
+  "band_holes": 12,
+  "images": {
+    "hero.png": {
+      "width": 2048,
+      "height": 4438,
+      "bytes": 3491287
+    },
+    "front.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 3108014
+    },
+    "three_quarter.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 3269829
+    },
+    "material_closeup.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 5667778
+    }
+  },
+  "pose": "Upright closed wrist loop; 8 degree yaw; buckle hidden behind case",
+  "case_bounds_coordinate_system": "Manufactured case coordinates before rigid upright pose",
+  "packed_fonts": {
+    "Arial Bold": true,
+    "Arial Bold Italic": true,
+    "Arial Narrow Bold": true,
+    "Arial Regular": true
+  },
+  "blend_bytes": 1895314,
+  "limitations": [
+    "Subcomponent dimensions proportionally reconstructed from official photography.",
+    "Typography reconstructed with editable type; unreadable rear micro-engraving and serial number not fabricated."
+  ]
+}

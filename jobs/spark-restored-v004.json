@@ -1,0 +1,90 @@
+{
+  "id": "spark-restored-v004",
+  "output": "outputs/jobs/spark-restored-v004",
+  "asset_type": "packaging",
+  "tier": "spark",
+  "baseline": "spark-restored-v003 pushed further: same five lights, tighter key cone aimed slightly left, lower corner-strip/side levels; no lights added; camera, pose, product, materials untouched",
+  "input": "outputs/dependencies/spark-float-v002/stage.blend",
+  "references": [
+    "references/packaging/01_essential.png"
+  ],
+  "stages": [
+    {
+      "name": "stage",
+      "step": "light_adjust",
+      "params": {
+        "edit": {
+          "FLOAT | Key raking softbox": {
+            "position": [
+              -0.22,
+              -0.14,
+              0.18
+            ],
+            "target": [
+              -0.09,
+              -0.07,
+              0.085
+            ],
+            "size": [
+              0.1,
+              0.3
+            ],
+            "spread_deg": 24,
+            "power_w": 0.056
+          },
+          "FLOAT | Underside bounce": {
+            "position": [
+              0.0,
+              -0.09,
+              -0.26
+            ],
+            "target": [
+              0.0,
+              0.08,
+              0.0
+            ],
+            "size": [
+              0.3,
+              0.3
+            ],
+            "power_w": 0.018
+          },
+          "FLOAT | Side panel": {
+            "power_w": 0.03
+          },
+          "FLOAT | Edge strip corner (mirror)": {
+            "power_w": 0.14
+          }
+        }
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "final",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    }
+  ]
+}

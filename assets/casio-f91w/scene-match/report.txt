@@ -1,0 +1,65 @@
+CASIO F-91W — REFERENCE STUDIO MATCH
+
+Scene-only treatment of the validated material-match project. Original watch
+geometry, materials, graphics, dimensions and strap construction are preserved.
+The original source and its script/report/hero are retained in source-snapshot/.
+
+Changes
+- Level, straight-on 100 mm hero camera; 2400 x 2872 output. Projected product
+  bounds occupy 62% of frame height, top 9%, bottom 71%, horizontally centered.
+- Narrow overhead/front area light with restricted spread creates a central
+  vertical band. Its power was reduced after spread concentration made the
+  initial test too bright. Existing feathered reflection panel was narrowed,
+  repositioned and hidden from camera rays while retaining reflection visibility.
+- Low frontal fill supports the LCD; restrained left/right strips define edges.
+  The prior lower-strap fill is disabled. World illumination is zero.
+- Black ground lowered 0.5 mm, giving 0.7 mm clearance below the lowest watch
+  geometry. Ground roughness is 0.15–0.21 with a dark foreground transition.
+- Grazing horizontal ground strip produces the soft glow. A narrow red area
+  emitter at the lower front lights the strap underside with restrained spill.
+- AgX neutral look retained; exposure -0.65. No haze, bloom or painted reflections.
+
+Files
+casio_f91w_scene_match.blend — editable scene
+match_scene.py — incremental setup, preview/final render and validation modes
+hero.png — final 16-bit PNG
+reference_comparison.png — reference and final at equal display size
+face_native.png, strap_native.png, floor_native.png — unscaled inspection crops
+validation.json — reopened-file checks, light settings and final file hashes
+source_hashes.json — hashes of unchanged material-match source files
+preview_*.png and preview_comparison.png — retained targeted lighting tests
+hero_512_validation.png — first full-resolution output retained for noise comparison
+
+Reference limitations
+The reference depicts a wider metal chronograph. The Casio keeps its narrower
+silhouette, LCD, colored printing and softer resin reflections. The reference's
+fine longitudinal strap streaks are not reproduced by altering Casio materials.
+The floor glow is slightly lower and more diffuse, and the reflected strap is
+less distinct. These are remaining differences, not an exact pixel match.
+The small 402 x 481 reference limits inference about the original light rig.
+
+Execution
+One agent; no new research or builders. MCP protocol 15/add-on 1.8 compatibility
+and Python communication verified. All work used isolated Blender 5.2.3 LTS
+processes; the unrelated live three-object scene was preserved.
+Five small lighting previews bracketed spread, intensity, accent aiming and
+floor response. Native inspection of the 512-sample final revealed faint LCD
+mottling, prompting a sampling-only cleanup at 1536 samples, adaptive threshold
+0.0007. No product shaders were changed to hide noise.
+
+Final inspection and validation
+The 1536-sample result and native face, strap and floor crops were inspected.
+LCD mottling is visibly reduced relative to the 512-sample output. The crystal
+has no distracting hard rectangular reflection, resin grain remains visible
+under the central highlight, and the red underside accent stays very faint.
+Reference comparison is generated from the delivered hero, without exposure
+or contrast adjustment. Full-resolution 16-bit output remains available.
+Reopened-file fingerprint validation passed for 120 manufactured components
+and their product shader networks. Case bounds: 35.2 x 38.2 x 8.5 mm. Embedded
+fonts remain packed. Original source file hashes remain unchanged.
+
+Measured rendering time
+Initial 512-sample final: 176.77 seconds (2m 57s).
+Delivered 1536-sample cleanup: 574.70 seconds (9m 35s).
+Combined full-resolution rendering: 751.47 seconds (12m 31s), excluding previews.
+No exact token-savings claim is made.

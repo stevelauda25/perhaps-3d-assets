@@ -1,0 +1,71 @@
+{
+  "project": "Perhaps - 5 mystery box tiers",
+  "reference_count": 6,
+  "canonical_mesh_required": true,
+  "shared": {
+    "geometry": "Nearly cubic precision rigid box, identical across tiers; tall lift-off lid, shallow base, thin interstitial reveal band, separate interior collar/tray; diagonal parting line on mirrored left/right side views and horizontal on front/rear; top blank; bottom shows folded construction; front lower lid lowercase perhaps serif wordmark; opening-compatible independent lid/base pivots.",
+    "views": [
+      "3/4 hero",
+      "front",
+      "left",
+      "right",
+      "top",
+      "rear",
+      "bottom",
+      "opened",
+      "logo macro",
+      "construction macro",
+      "material macro"
+    ],
+    "background": "#000000"
+  },
+  "tiers": [
+    {
+      "tier": "Essential",
+      "price_usd": 50,
+      "primary": "01_essential.png",
+      "materials": "warm beige uncoated paperboard, delicate paper fiber/matte roughness",
+      "band": "ivory, satin/matte",
+      "branding": "subtle lowercase serif deboss per supplied images"
+    },
+    {
+      "tier": "Signature",
+      "price_usd": 100,
+      "primary": "02_signature.png",
+      "materials": "terracotta matte paper wrap, fine fibers",
+      "band": "ivory, satin/matte",
+      "branding": "slightly clearer recessed lowercase serif"
+    },
+    {
+      "tier": "Select",
+      "price_usd": 250,
+      "primary": "03_select_primary.png",
+      "secondary": "04_select_secondary.png",
+      "materials": "deep forest green woven bookcloth, fabric weave direction and fiber scale",
+      "band": "champagne-ivory light satin",
+      "branding": "blind-embossed lowercase serif"
+    },
+    {
+      "tier": "Reserve",
+      "price_usd": 500,
+      "primary": "05_reserve.png",
+      "materials": "oxblood burgundy fine micro-suede, directional fibers",
+      "band": "restrained champagne brushed metal",
+      "branding": "recessed lowercase serif"
+    },
+    {
+      "tier": "Private Edition",
+      "price_usd": 1000,
+      "primary": "06_private_edition.png",
+      "materials": "obsidian black fine-grain leather, pores, subdued reflection, minimal espresso undertone",
+      "band": "thin dark brushed metal",
+      "branding": "very subtle black-on-black debossed lowercase serif, restrained stitches allowed as detailing"
+    }
+  ],
+  "limitations": [
+    "Reference sheets are visual concepts; treat inter-view anomalies as inconsistencies rather than geometry to copy literally.",
+    "Reference PNGs are not PBR texture maps; source or synthesize appropriate maps.",
+    "Do not invent exact real-world dimensions from the reference; use consistent plausible dimensions and disclose assumptions.",
+    "Studio Cycles renders and real-time GLB preview have different material/lighting capabilities."
+  ]
+}

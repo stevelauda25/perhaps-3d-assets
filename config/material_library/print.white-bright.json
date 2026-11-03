@@ -1,0 +1,48 @@
+{
+  "id": "print.white-bright",
+  "category": "print",
+  "name": "Crisp white print (higher albedo, lower roughness)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": null,
+    "url": null,
+    "license": "parametric (no image maps)"
+  },
+  "maps": {
+    "color": null,
+    "roughness": null,
+    "normal": null,
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 40,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      0.95,
+      0.95,
+      0.92
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.38
+  },
+  "normal": null,
+  "height": null,
+  "micro": null,
+  "bsdf": {
+    "specular_ior_level": 0.3
+  },
+  "measured": {},
+  "limitations": [],
+  "selected_for": "omega speedmaster watch (candidate)"
+}

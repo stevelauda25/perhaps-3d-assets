@@ -1,0 +1,108 @@
+{
+  "name": "PERHAPS_CINEMATIC_STUDIO_V2",
+  "note": "Product-frame rig (box +-0.07 m, z 0..0.14, pivot on the pose controller; follows the pose yaw). Replaces the FLOAT rig. Key: small, near, grazing, narrow spread -> falloff across the face (not a big far softbox). Edge: thin strip on the camera mirror direction of the top-front bevel, offset so only part of the edge catches it. Side: weak panel behind-right, grazing the +x face so it brightens toward the rear silhouette. Bounce: large dim panel under/in front, grazing the underside. Key cone widened 18->24 deg so the falloff across the front and past the vertical edge is gradual, not a hard cut.",
+  "lights": [
+    {
+      "name": "PCS2 | 01 Grazing key",
+      "group": "key",
+      "size": [
+        0.1,
+        0.3
+      ],
+      "position": [
+        -0.22,
+        -0.14,
+        0.18
+      ],
+      "target": [
+        -0.085,
+        -0.07,
+        0.085
+      ],
+      "power_w": 0.12,
+      "color": [
+        1.0,
+        0.97,
+        0.94
+      ],
+      "spread_deg": 24
+    },
+    {
+      "name": "PCS2 | 02 Upper edge strip",
+      "group": "edge",
+      "size": [
+        0.08,
+        0.01
+      ],
+      "mirror": {
+        "point": [
+          0.03,
+          -0.07,
+          0.14
+        ],
+        "normal": [
+          0,
+          -1,
+          1
+        ],
+        "distance": 0.9
+      },
+      "power_w": 3.5,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "PCS2 | 03 Side definition",
+      "group": "side",
+      "size": [
+        0.2,
+        0.3
+      ],
+      "position": [
+        0.18,
+        0.45,
+        0.18
+      ],
+      "target": [
+        0.07,
+        0.0,
+        0.07
+      ],
+      "power_w": 0.012,
+      "color": [
+        1.0,
+        0.98,
+        0.96
+      ],
+      "spread_deg": 90
+    },
+    {
+      "name": "PCS2 | 04 Underside bounce",
+      "group": "bounce",
+      "size": [
+        0.12,
+        0.12
+      ],
+      "position": [
+        0.0,
+        -0.13,
+        -0.12
+      ],
+      "target": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "power_w": 0.12,
+      "color": [
+        1.0,
+        0.97,
+        0.93
+      ],
+      "spread_deg": 60
+    }
+  ]
+}

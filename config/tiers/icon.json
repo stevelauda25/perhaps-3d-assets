@@ -1,0 +1,6 @@
+{
+  "tier": "icon",
+  "builder": "leather",
+  "status": "approved-scene",
+  "note": "Approved asset is the scene package outputs/packaging/icon-v014 (see config/tiers.json); no tier_materials builder yet. Historical build scripts: pipeline/build_v013.py, build_v014.py."
+}

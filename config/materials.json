@@ -1,0 +1,219 @@
+{
+  "technical": {
+    "surface": "neutral geometry inspection",
+    "exterior": {
+      "color": [
+        0.25,
+        0.29,
+        0.34
+      ],
+      "roughness": 0.48
+    },
+    "interior": {
+      "color": [
+        0.55,
+        0.52,
+        0.46
+      ],
+      "roughness": 0.65
+    },
+    "band": {
+      "color": [
+        0.76,
+        0.7,
+        0.59
+      ],
+      "roughness": 0.45
+    },
+    "branding": {
+      "color": [
+        0.08,
+        0.08,
+        0.08
+      ],
+      "roughness": 0.5
+    }
+  },
+  "spark": {
+    "surface": "uncoated paperboard",
+    "branding_treatment": "subtle deboss",
+    "exterior": {
+      "color": [
+        0.48,
+        0.32,
+        0.19
+      ],
+      "roughness": 0.72
+    },
+    "interior": {
+      "color": [
+        0.6,
+        0.53,
+        0.41
+      ],
+      "roughness": 0.7
+    },
+    "band": {
+      "color": [
+        0.75,
+        0.69,
+        0.57
+      ],
+      "roughness": 0.55
+    },
+    "branding": {
+      "color": [
+        0.25,
+        0.15,
+        0.08
+      ],
+      "roughness": 0.7
+    }
+  },
+  "wonder": {
+    "surface": "matte paper wrap",
+    "branding_treatment": "deboss",
+    "exterior": {
+      "color": [
+        0.35,
+        0.09,
+        0.045
+      ],
+      "roughness": 0.68
+    },
+    "interior": {
+      "color": [
+        0.6,
+        0.53,
+        0.41
+      ],
+      "roughness": 0.7
+    },
+    "band": {
+      "color": [
+        0.75,
+        0.69,
+        0.57
+      ],
+      "roughness": 0.55
+    },
+    "branding": {
+      "color": [
+        0.12,
+        0.025,
+        0.01
+      ],
+      "roughness": 0.65
+    }
+  },
+  "select": {
+    "surface": "woven bookcloth",
+    "branding_treatment": "blind emboss/deboss pending review",
+    "exterior": {
+      "color": [
+        0.018,
+        0.065,
+        0.05
+      ],
+      "roughness": 0.7
+    },
+    "interior": {
+      "color": [
+        0.07,
+        0.065,
+        0.045
+      ],
+      "roughness": 0.75
+    },
+    "band": {
+      "color": [
+        0.68,
+        0.58,
+        0.43
+      ],
+      "roughness": 0.45
+    },
+    "branding": {
+      "color": [
+        0.008,
+        0.025,
+        0.018
+      ],
+      "roughness": 0.7
+    }
+  },
+  "prestige": {
+    "surface": "micro-suede",
+    "branding_treatment": "deboss",
+    "exterior": {
+      "color": [
+        0.14,
+        0.012,
+        0.025
+      ],
+      "roughness": 0.8
+    },
+    "interior": {
+      "color": [
+        0.06,
+        0.009,
+        0.015
+      ],
+      "roughness": 0.8
+    },
+    "band": {
+      "color": [
+        0.58,
+        0.43,
+        0.26
+      ],
+      "roughness": 0.35,
+      "metallic": 1
+    },
+    "branding": {
+      "color": [
+        0.04,
+        0.003,
+        0.008
+      ],
+      "roughness": 0.75
+    }
+  },
+  "icon": {
+    "surface": "fine-grain leather",
+    "branding_treatment": "black-on-black deboss",
+    "exterior": {
+      "color": [
+        0.009,
+        0.007,
+        0.006
+      ],
+      "roughness": 0.48
+    },
+    "interior": {
+      "color": [
+        0.006,
+        0.005,
+        0.004
+      ],
+      "roughness": 0.75
+    },
+    "band": {
+      "color": [
+        0.075,
+        0.06,
+        0.043
+      ],
+      "roughness": 0.38,
+      "metallic": 1
+    },
+    "branding": {
+      "color": [
+        0.004,
+        0.003,
+        0.002
+      ],
+      "roughness": 0.6
+    }
+  }
+}

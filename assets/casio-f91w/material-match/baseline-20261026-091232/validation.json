@@ -1,0 +1,144 @@
+{
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "samples": 512,
+  "resolution": [
+    2048,
+    4438
+  ],
+  "case_bounds_mm": {
+    "x": 35.2,
+    "y": 38.2,
+    "z": 8.5
+  },
+  "scene_objects": 131,
+  "manufactured_collection_objects": 120,
+  "band_holes": 12,
+  "images": {
+    "hero.png": {
+      "width": 2048,
+      "height": 4438,
+      "bytes": 7110004,
+      "bit_depth": 16,
+      "sha256": "8071cbf893bb087b721904666d811e101346a99c0e79fb2aaac6a87086bd18fd"
+    },
+    "front.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 8294351,
+      "bit_depth": 16,
+      "sha256": "9ee107b05c927e76ded20e326b50a751f513aa09781e484ec3e59859d448a909"
+    },
+    "three_quarter.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 9958333,
+      "bit_depth": 16,
+      "sha256": "80669a383b7a50790a9926f2043fc271c61b115640a5e062fe6ee9e810b8fb8c"
+    },
+    "material_closeup.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 22793447,
+      "bit_depth": 16,
+      "sha256": "fe59805e4149f0dd0b7c501e80c6d8f52c6074d25324e69b3b989d6f521b10d3"
+    }
+  },
+  "LCD_layer_stack_mm": {
+    "module_backing_top": 7.349999904632568,
+    "polarizer_top": 7.549999713897705,
+    "electrodes": 7.565000057220459,
+    "printed_mask_top": 7.993,
+    "crystal_bottom": 8.0
+  },
+  "planar_ink_max_thickness_mm": 0,
+  "LCD_electrode_max_thickness_mm": 0.0,
+  "LCD_aperture_center_clear": true,
+  "realism_refinement": "Flat underside printing; recessed LCD with clean flat electrodes; reconstructed squared CASIO mark; convex molded shoulder; dielectric satin resin and shaped studio gradients.",
+  "pose": "Upright closed wrist loop; 8 degree yaw; buckle hidden behind case",
+  "case_bounds_coordinate_system": "Manufactured case coordinates before rigid upright pose",
+  "packed_fonts": {
+    "Arial Bold": true,
+    "Arial Regular": true
+  },
+  "blend_bytes": 1505478,
+  "limitations": [
+    "Subcomponent dimensions reconstructed from official photography; no manufacturer CAD available.",
+    "Selected lettering and indicator outlines traced from a product photograph, with finite reference resolution.",
+    "Unreadable rear micro-engraving and serial number omitted rather than invented."
+  ],
+  "unchanged_manufactured_geometry": [
+    "Bezel | inclined inner shoulder",
+    "Bezel | lower chamfer",
+    "Buckle band | flexible tapered resin",
+    "Buckle | black resin frame",
+    "Buckle | central tongue",
+    "Case | tapered lugs and shell",
+    "Caseback | circular stamped relief",
+    "Caseback | compressed black perimeter gasket",
+    "Caseback | crosshead screw",
+    "Caseback | crosshead screw.001",
+    "Caseback | crosshead screw.002",
+    "Caseback | crosshead screw.003",
+    "Caseback | stamped steel",
+    "Keeper | side",
+    "Keeper | side.001",
+    "Keeper | top",
+    "Perforated band | flexible tapered resin",
+    "Pusher",
+    "Pusher protective resin shoulder",
+    "Pusher protective resin shoulder.001",
+    "Pusher protective resin shoulder.002",
+    "Pusher.001",
+    "Pusher.002",
+    "Recessed lug pin hole",
+    "Recessed lug pin hole.001",
+    "Recessed lug pin hole.002",
+    "Recessed lug pin hole.003"
+  ],
+  "camera_transforms_preserved": true,
+  "photography_refinement": "2026-10-26: stable physically scaled mold grain, continuous ink borders, acrylic side normals, official-photo vector lettering and LCD indicators, broader LCD electrodes, broad silk lighting.",
+  "saved_file": "/Users/admin/Documents/perhaps-3d-assets/assets/casio-f91w/casio_f91w.blend",
+  "blend_sha256": "8807f3afd25771131aa84a3cdb68a136051ce3538e5ff1d13f2a140f993d474f",
+  "source_baseline": "backup-20261026-083440/casio_f91w.blend1",
+  "verified_graphics_source": "references/casio-f91w/F-91W-1_06.jpg",
+  "traced_graphics": [
+    "Verified print | CASIO",
+    "Verified print | F-91W model",
+    "Verified print | Alarm chronograph",
+    "Verified print | Water",
+    "Verified print | Resist",
+    "Verified print | WR logo",
+    "Verified print | signal",
+    "Verified print | bell"
+  ],
+  "microtexture": {
+    "01 | Black molded resin \u2022 40 micron grain": {
+      "grain_spacing_m": 6.896551724137931e-05,
+      "height_bound_m": 3.8000000000000005e-06
+    },
+    "02 | Flexible black urethane \u2022 satin micrograin": {
+      "grain_spacing_m": 8.695652173913044e-05,
+      "height_bound_m": 4.56e-06
+    }
+  },
+  "render_seconds": {
+    "hero": 171.33,
+    "front": 225.19,
+    "three_quarter": 207.58,
+    "material_closeup": 558.34
+  },
+  "visual_review": {
+    "inspected_final_views": [
+      "hero.png",
+      "front.png",
+      "three_quarter.png",
+      "material_closeup.png"
+    ],
+    "native_pixel_comparisons": [
+      "comparison_material.png",
+      "comparison_face.png"
+    ],
+    "date": "2026-10-26"
+  }
+}

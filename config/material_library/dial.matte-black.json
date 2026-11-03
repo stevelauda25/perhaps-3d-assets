@@ -1,0 +1,54 @@
+{
+  "id": "dial.matte-black",
+  "category": "dial",
+  "name": "Matte black dial (parametric, fine grain)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": null,
+    "url": null,
+    "license": "parametric (no image maps)"
+  },
+  "maps": {
+    "color": null,
+    "roughness": null,
+    "normal": null,
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 40,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      0.006,
+      0.006,
+      0.007
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.6
+  },
+  "normal": null,
+  "height": null,
+  "micro": {
+    "scale_per_mm": 90,
+    "strength": 0.25,
+    "distance_mm": 0.003
+  },
+  "bsdf": {
+    "specular_ior_level": 0.3
+  },
+  "measured": {},
+  "limitations": [
+    "Grain scale chosen from the macro photograph, not measured."
+  ],
+  "selected_for": "omega speedmaster watch (candidate)"
+}

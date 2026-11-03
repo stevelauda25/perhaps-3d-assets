@@ -1,0 +1,59 @@
+{
+  "blender": "5.2.3 LTS",
+  "unchanged_manufactured_objects": 120,
+  "case_bounds_mm": [
+    35.2,
+    38.2,
+    8.5
+  ],
+  "packed_fonts": {
+    "Arial Bold": true,
+    "Arial Regular": true
+  },
+  "images": {
+    "hero": {
+      "resolution": [
+        2048,
+        4438
+      ],
+      "bit_depth": 16,
+      "sha256": "ce21bc4bb8a3563dc8457ee20b77081952573ded6713340da05e0612fc81cfc9"
+    },
+    "front": {
+      "resolution": [
+        2400,
+        2400
+      ],
+      "bit_depth": 16,
+      "sha256": "5dccd9f90fd2fa4c590742dc356fda4fd74e4164e0b35846a216f0c987ec6851"
+    },
+    "material_closeup": {
+      "resolution": [
+        2400,
+        2400
+      ],
+      "bit_depth": 16,
+      "sha256": "d90d750bea56ba645b9224ed7886b9e6de9a2b95ba7c41ad359eb24404f5d5ca"
+    }
+  },
+  "samples": 512,
+  "look": "None",
+  "framing": {
+    "hero": {
+      "height_fraction": 0.8,
+      "width_fraction": 0.8235,
+      "focal_length_mm": 100.0
+    },
+    "front": {
+      "height_fraction": 0.85,
+      "width_fraction": 0.4038,
+      "focal_length_mm": 100.0
+    }
+  },
+  "render_seconds": {
+    "hero": 472.6,
+    "front": 214.91,
+    "material_closeup": 608.99
+  },
+  "blend_sha256": "607cda0b784b6009aeafdd6c4cf33e35d49cc5abf8a49cc00882411df35734b2"
+}

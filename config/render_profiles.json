@@ -1,0 +1,35 @@
+{
+  "final": {
+    "note": "Approved v010 quality: 512 samples, threshold 0.003, denoise, full resolution, 16-bit PNG + half EXR. Change only with designer approval.",
+    "samples": 512,
+    "adaptive_threshold": 0.003,
+    "denoise": true,
+    "scale": 1.0,
+    "exr": true
+  },
+  "diagnostic": {
+    "note": "v010 crop diagnostics: final pixel density, 256 samples, border required. Answers one material/lighting question per crop.",
+    "samples": 256,
+    "adaptive_threshold": 0.003,
+    "denoise": true,
+    "scale": 1.0,
+    "exr": false,
+    "border_required": true
+  },
+  "preview": {
+    "note": "Composition/geometry/broad response only. Not evidence of final material quality.",
+    "samples": 64,
+    "adaptive_threshold": 0.01,
+    "denoise": true,
+    "scale": 0.5,
+    "exr": false
+  },
+  "comparison": {
+    "note": "Full resolution, 96 samples: same-pixel comparison renders against reference photos. Not a quality profile.",
+    "samples": 96,
+    "adaptive_threshold": 0.01,
+    "denoise": true,
+    "scale": 1.0,
+    "exr": false
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "reference": "references/packaging/06_private_edition.png",
+  "reference_reconstruction": true,
+  "studio_file": "config/studio_private_v009.json",
+  "benchmark_views": [
+    "reference_hero",
+    "reference_leather_macro",
+    "reference_branding_macro",
+    "reference_corner_macro"
+  ],
+  "leather": {
+    "source_maps": {
+      "color": "textures/sources/ambientcg_leather037_2k/Leather037_2K-PNG_Color.png",
+      "roughness": "textures/sources/ambientcg_leather037_2k/Leather037_2K-PNG_Roughness.png",
+      "normal": "textures/sources/ambientcg_leather037_2k/Leather037_2K-PNG_NormalGL.png",
+      "height": "textures/sources/ambientcg_leather037_2k/Leather037_2K-PNG_Displacement.png",
+      "tile_width_mm": 32,
+      "source_url": "https://ambientcg.com/view?id=Leather037",
+      "license": "CC0-1.0",
+      "technique": "Photometric Stereo"
+    },
+    "color_linear": [
+      0.0048,
+      0.0043,
+      0.004
+    ],
+    "albedo_range": [
+      0.025,
+      0.12
+    ],
+    "albedo_factors": [
+      0.72,
+      1.15
+    ],
+    "roughness_gain": 0.6,
+    "roughness_offset": 0.205,
+    "normal_strength": 0.45,
+    "grain_height_um": 4,
+    "bump_strength": 0.2,
+    "ior": 1.46,
+    "specular_level": 0.5,
+    "coat_weight": 0.01,
+    "coat_roughness": 0.35,
+    "sheen": 0.012,
+    "leather_grain_scale_multiplier": 3.0,
+    "surface_refinement": {
+      "pore_spacing_mm": 0.14,
+      "pore_depth_um": 0.8,
+      "pore_strength": 0.35,
+      "pressed_micro_factor": 0.45,
+      "roughness_variation": 0.012,
+      "finish_spacing_mm": 1.2,
+      "summit_polish": 0.012,
+      "pore_roughness": 0.018
+    }
+  },
+  "metal": {
+    "color_linear": [
+      0.095,
+      0.089,
+      0.082
+    ],
+    "roughness": 0.29,
+    "roughness_variation": 0.025,
+    "anisotropy": 0.58,
+    "brush_spacing_um": 20,
+    "brush_length_mm": 30,
+    "brush_height_um": 0.45,
+    "bump_strength": 0.25
+  },
+  "interior": {
+    "color_linear": [
+      0.0055,
+      0.0046,
+      0.004
+    ],
+    "roughness": 0.82,
+    "sheen": 0.16,
+    "fiber_spacing_mm": 0.07,
+    "fiber_height_um": 2
+  },
+  "branding": {
+    "text": "perhaps",
+    "font": "/System/Library/Fonts/Supplemental/Didot.ttc",
+    "font_description": "Provisional Didot Regular reconstruction; no official vector found locally",
+    "width_mm": 76,
+    "center_z_mm": 55,
+    "deboss_depth_mm": 0.09,
+    "edge_radius_mm": 0.015,
+    "pressed_color_factor": 0.92
+  },
+  "stitching": {
+    "edge_inset_mm": 1.1,
+    "pitch_mm": 1.4,
+    "length_mm": 0.55,
+    "radius_mm": 0.018,
+    "color_linear": [
+      0.0045,
+      0.004,
+      0.0038
+    ],
+    "roughness": 0.72,
+    "sink_um": 25,
+    "crown_um": 31
+  },
+  "presets": {
+    "preview": {
+      "resolution": 1024,
+      "samples": 128,
+      "adaptive_threshold": 0.01,
+      "denoise": true,
+      "bit_depth": "16"
+    },
+    "material_preview": {
+      "resolution": 640,
+      "samples": 64,
+      "adaptive_threshold": 0.02,
+      "denoise": true,
+      "bit_depth": "8"
+    },
+    "performance": {
+      "resolution": 384,
+      "samples": 16,
+      "adaptive_threshold": 0.03,
+      "denoise": true,
+      "bit_depth": "8"
+    },
+    "hero": {
+      "resolution": 2048,
+      "samples": 256,
+      "adaptive_threshold": 0.005,
+      "denoise": true,
+      "bit_depth": "16"
+    },
+    "macro": {
+      "resolution": 1536,
+      "samples": 256,
+      "adaptive_threshold": 0.005,
+      "denoise": true,
+      "bit_depth": "16"
+    }
+  },
+  "reference_camera": {
+    "position": [
+      -0.8,
+      -0.61,
+      0.33
+    ],
+    "target": [
+      0,
+      0,
+      0.07
+    ],
+    "lens_mm": 150
+  },
+  "macros": {
+    "reference_leather_macro": {
+      "position": [
+        -0.15,
+        -0.23,
+        0.15
+      ],
+      "target": [
+        -0.055,
+        -0.068,
+        0.117
+      ],
+      "ortho_scale_mm": 28
+    },
+    "reference_branding_macro": {
+      "position": [
+        -0.12,
+        -0.33,
+        0.12
+      ],
+      "target": [
+        0,
+        -0.07,
+        0.047
+      ],
+      "ortho_scale_mm": 96
+    },
+    "reference_corner_macro": {
+      "position": [
+        -0.15,
+        -0.18,
+        0.18
+      ],
+      "target": [
+        -0.069,
+        -0.069,
+        0.138
+      ],
+      "ortho_scale_mm": 18
+    }
+  }
+}

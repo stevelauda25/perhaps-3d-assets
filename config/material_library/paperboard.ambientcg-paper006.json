@@ -1,0 +1,80 @@
+{
+  "id": "paperboard.ambientcg-paper006",
+  "category": "paperboard",
+  "name": "ambientCG Paper006 (beige uncoated, fibre flecks)",
+  "version": "v001",
+  "status": "approved",
+  "approved_version": "spark-v002",
+  "source": {
+    "dir": "textures/sources/ambientcg_paper006_2k",
+    "url": "https://ambientcg.com/view?id=Paper006",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": "Paper006_2K-PNG_Color.png",
+    "roughness": "Paper006_2K-PNG_Roughness.png",
+    "normal": null,
+    "height": "Paper006_2K-PNG_Displacement.png"
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 300,
+    "uv_map": null,
+    "uv_mm_per_unit": null
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.369,
+      0.533
+    ],
+    "range": [
+      0.62,
+      0.82
+    ]
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.48,
+    "bump_strength": 1.0,
+    "note": "distance gives rms slope 0.08, matching Paper002's supplied normal relief (0.087)"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.48,
+    "specular_ior_level": 0.3,
+    "sheen_weight": 0.12,
+    "sheen_roughness": 0.65
+  },
+  "measured": {
+    "mean_srgb_8bit": [
+      165,
+      135,
+      104
+    ],
+    "reference_sheet_flat_face_srgb_8bit": [
+      166,
+      130,
+      99
+    ]
+  },
+  "limitations": [
+    "Physical tile size is assumed (300 mm wide): ambientCG lists no dimensions for this asset.",
+    "2K source (~6.8 px/mm): hero-distance flecks/fibres are magnified ~1x, macro crops ~3x.",
+    "No embossed leaf/crinkle pattern like the reference sheet; this is plain uncoated stock.",
+    "Supplied normal map is flat (std ~1/255); relief comes from the 16-bit height map only.",
+    "Roughness 0.37-0.53 in source is glossier than uncoated paper; remapped, not measured."
+  ],
+  "selected_for": "spark (approved as part of spark-v002)"
+}

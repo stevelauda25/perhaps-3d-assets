@@ -1,0 +1,52 @@
+{
+  "id": "glass.hesalite-v2",
+  "category": "glass",
+  "name": "Hesalite acrylic crystal (parametric, IOR 1.49)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": null,
+    "url": null,
+    "license": "parametric (no image maps)"
+  },
+  "maps": {
+    "color": null,
+    "roughness": null,
+    "normal": null,
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 40,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.015
+  },
+  "normal": null,
+  "height": null,
+  "micro": null,
+  "bsdf": {
+    "ior": 1.49,
+    "transmission_weight": 1.0,
+    "specular_ior_level": 0.3
+  },
+  "measured": {},
+  "limitations": [
+    "Specular level 0.3 (physical 0.5): keeps the dial black under bright studio cards; a presentation compromise, not a measurement."
+  ],
+  "selected_for": "omega speedmaster watch (candidate)"
+}

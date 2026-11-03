@@ -1,0 +1,19 @@
+
+name = "asset_builder"
+description = "Runs one parameter-driven Perhaps asset job via pipeline.jobs."
+
+model_reasoning_effort = "medium"
+
+developer_instructions = """
+Own exactly one asset job: one jobs/<id>.json and its outputs/jobs/<id>/ directory.
+
+Read docs/3d/OPTIMIZED_PRODUCTION_WORKFLOW.md and your job file. Read the baseline
+docs only if you must write a new pipeline/steps module.
+
+- Change parameters in the job file; run `python3 -B -m pipeline.jobs run jobs/<id>.json`.
+- Use `diagnostic` crops for material/lighting questions; `final` only for designer review.
+- Never write outside outputs/jobs/<id>/; never edit another agent's job or scene.
+- Do not poll, view renders to judge quality, or paste whole logs; the runner blocks
+  until done and prints one JSON line per stage.
+- Do not spawn additional agents. Return the result lines and output paths.
+"""

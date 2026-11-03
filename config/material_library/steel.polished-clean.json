@@ -1,0 +1,62 @@
+{
+  "id": "steel.polished-clean",
+  "category": "steel",
+  "name": "Metal012 polished, near-mirror (scratches faint)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/ambientcg_metal012_1k",
+    "url": "https://ambientcg.com/view?id=Metal012",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": null,
+    "roughness": "Metal012_1K-JPG_Roughness.jpg",
+    "normal": "Metal012_1K-JPG_NormalGL.jpg",
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 40,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      0.7,
+      0.71,
+      0.72
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.043,
+      0.153
+    ],
+    "range": [
+      0.025,
+      0.06
+    ]
+  },
+  "normal": {
+    "strength": 0.25
+  },
+  "height": null,
+  "micro": null,
+  "bsdf": {
+    "metallic": 1.0
+  },
+  "measured": {
+    "source_roughness_mean": 0.088
+  },
+  "limitations": [
+    "Downscaled from 2K to 1K to keep the scene light.",
+    "Scratch scale/density assumed; designer judges in lookdev."
+  ],
+  "selected_for": "omega speedmaster watch (candidate)"
+}

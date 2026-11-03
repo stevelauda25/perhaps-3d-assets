@@ -1,0 +1,7 @@
+{
+  "image": "references/omega-speedmaster-310-30-42-50-01-001/studio_white/bobs_3q_side_loop_clasp.jpg",
+  "note": "Coarse pixel positions (original 2160 px) read from a labelled grid on the photo; refined to blob centroids by pipeline/ref_register.py. Bars on the dial plane at radius 13.85 mm; hour 12 is covered by the hands and not used.",
+  "bar_radius_mm": 13.85,
+  "plane_z_mm": 9.0,
+  "bars_px": {"1": [1004, 756], "2": [1111, 869], "3": [1129, 1023], "4": [1090, 1177], "5": [985, 1299], "6": [869, 1330], "7": [742, 1273], "8": [646, 1173], "9": [624, 1025], "10": [650, 877], "11": [742, 756]}
+}

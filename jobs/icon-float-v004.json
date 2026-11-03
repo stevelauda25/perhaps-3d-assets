@@ -1,0 +1,55 @@
+{
+  "id": "icon-float-v004",
+  "output": "outputs/jobs/icon-float-v004",
+  "asset_type": "packaging",
+  "tier": "icon",
+  "baseline": "floating low-angle presentation from shared presets; product untouched (no geometry_lock: the pose parent moves world transforms by design; local transforms verified separately)",
+  "input": "outputs/packaging/icon-v020/private_edition.blend",
+  "references": [
+    "references/packaging/06_private_edition.png"
+  ],
+  "stages": [
+    {
+      "name": "stage",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {
+          "key_mult": 1,
+          "edge_mult": 1,
+          "side_mult": 1,
+          "bounce_mult": 1
+        }
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "final",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    }
+  ]
+}

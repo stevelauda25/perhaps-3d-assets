@@ -1,0 +1,69 @@
+{
+  "id": "suede.ambientcg-leather039",
+  "category": "suede",
+  "name": "ambientCG Leather039 (fine suede, soft nap with directional streaks)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/ambientcg_leather039_2k",
+    "url": "https://ambientcg.com/view?id=Leather039",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": "Leather039_2K-JPG_Color.jpg",
+    "roughness": "Leather039_2K-JPG_Roughness.jpg",
+    "normal": "Leather039_2K-JPG_NormalGL.jpg",
+    "height": "Leather039_2K-JPG_Displacement.jpg"
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 160,
+    "uv_map": null,
+    "uv_mm_per_unit": null
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.486,
+      0.757
+    ],
+    "range": [
+      0.62,
+      0.88
+    ]
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.08,
+    "bump_strength": 1.0,
+    "note": "distance chosen by close-up crop, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.2,
+    "sheen_weight": 0.4,
+    "sheen_roughness": 0.4
+  },
+  "measured": {
+    "mean_srgb_8bit": "orange-tan source (R~250); hue-shifted to oxblood in the tier preset"
+  },
+  "limitations": [
+    "Physical tile size assumed (ambientCG lists none); tile_width_mm is chosen for readability.",
+    "Source colour is light orange-tan: oxblood comes from the hue shift, saturation and value in the tier preset.",
+    "Suede nap direction follows the box-projection axes on each face, not one continuous wrap."
+  ],
+  "selected_for": "prestige (candidate)"
+}

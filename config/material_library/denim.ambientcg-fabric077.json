@@ -1,0 +1,74 @@
+{
+  "id": "denim.ambientcg-fabric077",
+  "category": "denim",
+  "name": "ambientCG Fabric077 (clean diagonal-twill denim, dark warp / light weft)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/ambientcg_fabric077_2k",
+    "url": "https://ambientcg.com/view?id=Fabric077",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": "Fabric077_2K-JPG_Color.jpg",
+    "roughness": "Fabric077_2K-JPG_Roughness.jpg",
+    "normal": "Fabric077_2K-JPG_NormalGL.jpg",
+    "height": "Fabric077_2K-JPG_Displacement.jpg"
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 300,
+    "uv_map": null,
+    "uv_mm_per_unit": null
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.596,
+      0.796
+    ],
+    "range": [
+      0.55,
+      0.78
+    ]
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.18,
+    "bump_strength": 1.0,
+    "note": "distance chosen by close-up crop, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.25,
+    "sheen_weight": 0.2,
+    "sheen_roughness": 0.5
+  },
+  "measured": {
+    "mean_srgb_8bit": [
+      94,
+      94,
+      94
+    ],
+    "note": "luminance of colour map; hue is blue"
+  },
+  "limitations": [
+    "Physical tile size assumed (ambientCG lists none); tile_width_mm is chosen for readability.",
+    "Source colour is blue indigo: forest green comes from the colour-adjust hue shift plus a pigment tint, keeping warp/weft contrast.",
+    "Twill direction follows the box-projection axes, not a single continuous cloth wrap."
+  ],
+  "selected_for": "select (candidate)"
+}

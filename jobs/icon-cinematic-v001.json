@@ -1,0 +1,54 @@
+{
+  "id": "icon-cinematic-v001",
+  "output": "outputs/jobs/icon-cinematic-v001",
+  "asset_type": "packaging",
+  "tier": "icon",
+  "baseline": "PERHAPS_CINEMATIC_STUDIO_V2 on the icon-float-v004 presentation scene: new lights only; camera, pose, product, materials untouched (no geometry_lock: the pose parent moves world transforms by design; local transforms verified by pipeline.rig_verify)",
+  "input": "outputs/dependencies/icon-float-v004/stage.blend",
+  "references": [
+    "references/packaging/06_private_edition.png"
+  ],
+  "stages": [
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {
+          "key_mult": 1.2,
+          "edge_mult": 1,
+          "side_mult": 2,
+          "bounce_mult": 1.2
+        }
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "final",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    }
+  ]
+}

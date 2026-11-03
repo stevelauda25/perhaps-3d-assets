@@ -1,0 +1,1882 @@
+{
+  "file": "/Users/admin/Documents/Blender File/Noir_Perfume/Noir_Perfume.blend",
+  "version": "5.2.3 LTS",
+  "scenes": [
+    {
+      "name": "NOIR | Product Studio",
+      "engine": "CYCLES",
+      "camera": "Hero",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "exposure": -0.699999988079071,
+      "view_transform": "AgX",
+      "look": "None",
+      "compositor": true,
+      "units": 1.0,
+      "objects": [
+        {
+          "name": "01 | Hollow smoked glass bottle",
+          "type": "MESH",
+          "dimensions": [
+            0.07000000029802322,
+            0.03200000151991844,
+            0.09399999678134918
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "02 | Fragrance fill with meniscus",
+          "type": "MESH",
+          "dimensions": [
+            0.057999998331069946,
+            0.02199999988079071,
+            0.06720000505447388
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "03 | Crimp collar",
+          "type": "MESH",
+          "dimensions": [
+            0.023000000044703484,
+            0.023000000044703484,
+            0.007000000216066837
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.09650000184774399
+          ]
+        },
+        {
+          "name": "04 | Pump sleeve",
+          "type": "MESH",
+          "dimensions": [
+            0.02319999970495701,
+            0.02319999970495701,
+            0.012000000104308128
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.10599999874830246
+          ]
+        },
+        {
+          "name": "05 | Fine lower collar seam",
+          "type": "MESH",
+          "dimensions": [
+            0.02329999953508377,
+            0.02329999953508377,
+            0.00044999999227002263
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.10000000149011612
+          ]
+        },
+        {
+          "name": "06 | Actuator stem reveal",
+          "type": "MESH",
+          "dimensions": [
+            0.01899999938905239,
+            0.01899999938905239,
+            0.0020000000949949026
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.11299999803304672
+          ]
+        },
+        {
+          "name": "07 | Spray actuator",
+          "type": "MESH",
+          "dimensions": [
+            0.023600000888109207,
+            0.023600000888109207,
+            0.010999999940395355
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.12049999833106995
+          ]
+        },
+        {
+          "name": "08 | Nozzle bezel",
+          "type": "MESH",
+          "dimensions": [
+            0.004399999976158142,
+            0.004399999976158142,
+            0.0006000000284984708
+          ],
+          "location": [
+            0.0,
+            -0.011649999767541885,
+            0.12150000035762787
+          ]
+        },
+        {
+          "name": "09 | Nozzle insert",
+          "type": "MESH",
+          "dimensions": [
+            0.003599999938160181,
+            0.003599999938160181,
+            0.0006500000017695129
+          ],
+          "location": [
+            0.0,
+            -0.012000000104308128,
+            0.12150000035762787
+          ]
+        },
+        {
+          "name": "10 | Spray aperture",
+          "type": "MESH",
+          "dimensions": [
+            0.0008399999933317304,
+            0.0008399999933317304,
+            9.999999747378752e-05
+          ],
+          "location": [
+            0.0,
+            -0.012360000051558018,
+            0.12150000035762787
+          ]
+        },
+        {
+          "name": "11 | Internal dip tube",
+          "type": "CURVE",
+          "dimensions": [
+            0.016226815059781075,
+            0.001200000406242907,
+            0.07932209223508835
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Ground | Seamless charcoal",
+          "type": "MESH",
+          "dimensions": [
+            200.0,
+            200.0,
+            0.0
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Key | Tall left softbox",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            -0.11999999731779099,
+            -0.23000000417232513,
+            0.15000000596046448
+          ],
+          "power": 5.0,
+          "shape": "RECTANGLE",
+          "size": 0.11500000208616257,
+          "size_y": 0.23000000417232513
+        },
+        {
+          "name": "Fill | Broad camera right",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.12999999523162842,
+            -0.20000000298023224,
+            0.12999999523162842
+          ],
+          "power": 0.6000000238418579,
+          "shape": "RECTANGLE",
+          "size": 0.11999999731779099,
+          "size_y": 0.18000000715255737
+        },
+        {
+          "name": "Rim | Right strip",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.10000000149011612,
+            0.054999999701976776,
+            0.14000000059604645
+          ],
+          "power": 3.0,
+          "shape": "RECTANGLE",
+          "size": 0.02500000037252903,
+          "size_y": 0.20999999344348907
+        },
+        {
+          "name": "Top | Shoulder highlight",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            -0.019999999552965164,
+            0.019999999552965164,
+            0.25
+          ],
+          "power": 0.800000011920929,
+          "shape": "RECTANGLE",
+          "size": 0.12999999523162842,
+          "size_y": 0.09000000357627869
+        },
+        {
+          "name": "Backdrop | Pool behind bottle",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.0,
+            0.07999999821186066,
+            0.20000000298023224
+          ],
+          "power": 0.699999988079071,
+          "shape": "RECTANGLE",
+          "size": 0.10000000149011612,
+          "size_y": 0.10000000149011612
+        },
+        {
+          "name": "Hero",
+          "type": "CAMERA",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.06499999761581421,
+            -0.3799999952316284,
+            0.125
+          ],
+          "lens": 70.0,
+          "dof": false
+        },
+        {
+          "name": "Front",
+          "type": "CAMERA",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.0,
+            -0.38999998569488525,
+            0.10499999672174454
+          ],
+          "lens": 75.0,
+          "dof": false
+        },
+        {
+          "name": "ThreeQuarter",
+          "type": "CAMERA",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.24500000476837158,
+            -0.30000001192092896,
+            0.1550000011920929
+          ],
+          "lens": 70.0,
+          "dof": false
+        },
+        {
+          "name": "MaterialDetail",
+          "type": "CAMERA",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            0.06400000303983688,
+            -0.1899999976158142,
+            0.14399999380111694
+          ],
+          "lens": 105.0,
+          "dof": false
+        }
+      ]
+    },
+    {
+      "name": "Scene",
+      "engine": "BLENDER_EEVEE",
+      "camera": "Camera",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "exposure": 0.0,
+      "view_transform": "AgX",
+      "look": "None",
+      "compositor": true,
+      "units": 1.0,
+      "objects": [
+        {
+          "name": "Cube",
+          "type": "MESH",
+          "dimensions": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Light",
+          "type": "LIGHT",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            4.076245307922363,
+            1.0054539442062378,
+            5.903861999511719
+          ],
+          "power": 1000.0,
+          "shape": null,
+          "size": null,
+          "size_y": null
+        },
+        {
+          "name": "Camera",
+          "type": "CAMERA",
+          "dimensions": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "location": [
+            7.358891487121582,
+            -6.925790786743164,
+            4.958309173583984
+          ],
+          "lens": 50.0,
+          "dof": false
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Atomizer | Satin black anodized aluminum.001",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.004000000189989805,
+              0.004999999888241291,
+              0.006000000052154064,
+              1.0
+            ],
+            "Metallic": 1.0,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.25,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 9.999999974752427e-07,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    },
+    {
+      "name": "Dip tube | Translucent polymer",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.3499999940395355,
+              0.3400000035762787,
+              0.2800000011920929,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "IOR": 1.4600000381469727,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.800000011920929,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 0.0,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    },
+    {
+      "name": "Fragrance | Clear neutral amber",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.7200000286102295,
+              0.6499999761581421,
+              0.46000000834465027,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "IOR": 1.3600000143051147,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 1.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 0.0,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    },
+    {
+      "name": "Glass | Neutral smoked flint \u2022 IOR 1.001",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.41999998688697815,
+              0.4399999976158142,
+              0.41999998688697815,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "IOR": 1.5199999809265137,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 1.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 3.000000106112566e-07,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "VOLUME_ABSORPTION",
+          "inputs": {
+            "Color": [
+              0.20000000298023224,
+              0.23999999463558197,
+              0.20000000298023224,
+              1.0
+            ],
+            "Density": 75.0,
+            "Weight": 0.0
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ],
+        [
+          "VOLUME_ABSORPTION",
+          "Volume",
+          "OUTPUT_MATERIAL",
+          "Volume"
+        ]
+      ]
+    },
+    {
+      "name": "Material",
+      "nodes": [
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.800000011920929,
+              0.800000011920929,
+              0.800000011920929,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "Roughness": 0.5,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ]
+      ]
+    },
+    {
+      "name": "Nozzle | Black injection molded polymer",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.006000000052154064,
+              0.007000000216066837,
+              0.00800000037997961,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 1.500000053056283e-06,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    },
+    {
+      "name": "Studio | Charcoal satin surface",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.0010000000474974513,
+              0.0010000000474974513,
+              0.0010000000474974513,
+              1.0
+            ],
+            "Metallic": 0.0,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 4.999999873689376e-06,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    },
+    {
+      "name": "Trim | Dark champagne nickel",
+      "nodes": [
+        {
+          "type": "BSDF_PRINCIPLED",
+          "inputs": {
+            "Base Color": [
+              0.18000000715255737,
+              0.1599999964237213,
+              0.10000000149011612,
+              1.0
+            ],
+            "Metallic": 1.0,
+            "IOR": 1.5,
+            "Alpha": 1.0,
+            "Thin Wall": false,
+            "Weight": 0.0,
+            "Diffuse Roughness": 0.0,
+            "Subsurface Weight": 0.0,
+            "Subsurface Radius": [
+              1.0,
+              0.20000000298023224,
+              0.10000000149011612
+            ],
+            "Subsurface Scale": 0.004999999888241291,
+            "Subsurface IOR": 1.399999976158142,
+            "Subsurface Anisotropy": 0.0,
+            "Specular IOR Level": 0.5,
+            "Specular Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Anisotropic": 0.0,
+            "Anisotropic Rotation": 0.0,
+            "Tangent": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Transmission Weight": 0.0,
+            "Coat Weight": 0.0,
+            "Coat Roughness": 0.029999999329447746,
+            "Coat IOR": 1.5,
+            "Coat Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Coat Normal": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Sheen Weight": 0.0,
+            "Sheen Roughness": 0.5,
+            "Sheen Tint": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Emission Strength": 0.0,
+            "Thin Film Thickness": 0.0,
+            "Thin Film IOR": 1.3300000429153442
+          }
+        },
+        {
+          "type": "OUTPUT_MATERIAL",
+          "inputs": {
+            "Displacement": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Thickness": 0.0
+          }
+        },
+        {
+          "type": "TEX_NOISE",
+          "inputs": {
+            "W": 0.0,
+            "Scale": 11000.0,
+            "Detail": 2.0,
+            "Roughness": 0.5,
+            "Lacunarity": 2.0,
+            "Offset": 0.0,
+            "Gain": 1.0,
+            "Distortion": 0.0
+          }
+        },
+        {
+          "type": "TEX_COORD",
+          "inputs": {}
+        },
+        {
+          "type": "MAP_RANGE",
+          "inputs": {
+            "From Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "From Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "To Min": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "To Max": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Steps": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "Vector": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "type": "BUMP",
+          "inputs": {
+            "Strength": 0.12999999523162842,
+            "Distance": 9.999999974752427e-07,
+            "Filter Width": 0.10000000149011612,
+            "Normal": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ],
+      "links": [
+        [
+          "BSDF_PRINCIPLED",
+          "BSDF",
+          "OUTPUT_MATERIAL",
+          "Surface"
+        ],
+        [
+          "TEX_COORD",
+          "Object",
+          "TEX_NOISE",
+          "Vector"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "MAP_RANGE",
+          "Value"
+        ],
+        [
+          "MAP_RANGE",
+          "Result",
+          "BSDF_PRINCIPLED",
+          "Roughness"
+        ],
+        [
+          "TEX_NOISE",
+          "Factor",
+          "BUMP",
+          "Height"
+        ],
+        [
+          "BUMP",
+          "Normal",
+          "BSDF_PRINCIPLED",
+          "Normal"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "name": "Render Result",
+      "path": "",
+      "packed": false,
+      "exists": false
+    },
+    {
+      "name": "Viewer Node",
+      "path": "",
+      "packed": false,
+      "exists": false
+    }
+  ]
+}

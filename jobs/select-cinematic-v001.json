@@ -1,0 +1,77 @@
+{
+  "id": "select-cinematic-v001",
+  "output": "outputs/jobs/select-cinematic-v001",
+  "asset_type": "packaging",
+  "tier": "select",
+  "baseline": "icon-cinematic-v001 recipe (floating_stage, then cinematic_studio PERHAPS_CINEMATIC_STUDIO_V2) on the Select scene",
+  "input": "outputs/dependencies/select-v001/logo.blend",
+  "references": [
+    "references/packaging/03_select_primary.png"
+  ],
+  "stages": [
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {
+          "key_mult": 1.8,
+          "edge_mult": 1.5,
+          "side_mult": 8,
+          "bounce_mult": 0.6
+        }
+      }
+    },
+    {
+      "name": "crop-face",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "diagnostic",
+        "border": [
+          0.28,
+          0.58,
+          0.4,
+          0.78
+        ]
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "final",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    }
+  ]
+}

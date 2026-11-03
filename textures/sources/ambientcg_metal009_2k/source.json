@@ -1,0 +1,21 @@
+{
+  "asset": "Metal009",
+  "author": "ambientCG",
+  "asset_url": "https://ambientcg.com/view?id=Metal009",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "download_url": "https://ambientcg.com/get?file=Metal009_2K-JPG.zip",
+  "archive_sha256": "6f79f53d5073e65707c5765316fa9257f4604e1790093be5a51ed8226761a7f0",
+  "downloaded": "2026-11-03",
+  "note": "Only Roughness + NormalGL kept (Color, Metalness=1, Displacement, NormalDX, bundled scene files dropped). Brush lines run along image X (roughness gradient ratio x/y 0.14).",
+  "files": {
+    "Metal009_2K-JPG_Roughness.jpg": {
+      "bytes": 1891607,
+      "sha256": "e802f013b93cb1bd4b55cd91f02a1863233475a7f8bd0e6755cfaa447a729674"
+    },
+    "Metal009_2K-JPG_NormalGL.jpg": {
+      "bytes": 4120356,
+      "sha256": "8773d9e97a4b057ced3e538d8ecc6069d27c8948191d61daf79b9ad93d93e3b3"
+    }
+  }
+}

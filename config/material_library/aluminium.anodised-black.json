@@ -1,0 +1,56 @@
+{
+  "id": "aluminium.anodised-black",
+  "category": "aluminium",
+  "name": "Black anodised aluminium (parametric, fine grain)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": null,
+    "url": null,
+    "license": "parametric (no image maps)"
+  },
+  "maps": {
+    "color": null,
+    "roughness": null,
+    "normal": null,
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 40,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      0.014,
+      0.014,
+      0.016
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.34
+  },
+  "normal": null,
+  "height": null,
+  "micro": {
+    "scale_per_mm": 70,
+    "strength": 0.15,
+    "distance_mm": 0.002
+  },
+  "bsdf": {
+    "coat_weight": 0.25,
+    "coat_roughness": 0.2,
+    "specular_ior_level": 0.5
+  },
+  "measured": {},
+  "limitations": [
+    "Values read from photographs, not measured."
+  ],
+  "selected_for": "omega speedmaster watch (candidate)"
+}

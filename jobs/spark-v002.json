@@ -1,0 +1,67 @@
+{
+  "id": "spark-v002",
+  "output": "outputs/jobs/spark-v002",
+  "asset_type": "packaging",
+  "tier": "spark",
+  "baseline": "canonical geometry (assets/canonical/box_base.blend, materials stripped); Spark paperboard materials only",
+  "input": "assets/canonical/box_base.blend",
+  "geometry_lock": "assets/canonical/geometry_lock.json",
+  "references": [
+    "references/packaging/01_essential.png",
+    "config/tiers/spark-v002.json"
+  ],
+  "stages": [
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/tiers/spark-v002.json",
+        "exposure_ev": 1.0
+      }
+    },
+    {
+      "name": "crop-material",
+      "render": {
+        "camera": "CAM | production_leather_macro",
+        "resolution": 1536,
+        "profile": "diagnostic",
+        "border": [
+          0.4,
+          0.733333333,
+          0.3,
+          0.633333333
+        ]
+      }
+    },
+    {
+      "name": "crop-branding",
+      "render": {
+        "camera": "CAM | production_branding_macro",
+        "resolution": 1536,
+        "profile": "diagnostic",
+        "border": [
+          0.15,
+          0.85,
+          0.2,
+          0.8
+        ]
+      }
+    },
+    {
+      "name": "preview-hero",
+      "render": {
+        "camera": "CAM | production_hero",
+        "resolution": 2048,
+        "profile": "preview"
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | production_hero",
+        "resolution": 2048,
+        "profile": "final"
+      }
+    }
+  ]
+}

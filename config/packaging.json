@@ -1,0 +1,56 @@
+{
+  "asset": "perhaps_box",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "references": [
+    "references/packaging/01_essential.png",
+    "references/packaging/02_signature.png",
+    "references/packaging/03_select_primary.png",
+    "references/packaging/04_select_secondary.png",
+    "references/packaging/05_reserve.png",
+    "references/packaging/06_private_edition.png",
+    "references/packaging/manifest.json"
+  ],
+  "geometry_mm": {
+    "width": 140,
+    "depth": 140,
+    "height": 140,
+    "wall": 2.5,
+    "base_front": 22,
+    "base_rear": 105,
+    "reveal": 5,
+    "bevel": 0.6,
+    "collar_wall": 2,
+    "collar_clearance": 0.5,
+    "collar_engagement": 10,
+    "tray_thickness": 1.2
+  },
+  "assumptions": [
+    "140 mm cube and all thicknesses are plausible estimates, not measured manufacturer dimensions.",
+    "Front is -Y, rear is +Y, left is -X; Z is up; meshes are in meters with unit scale 1.",
+    "Side references imply low-front/high-rear seam endpoints. Rear reference panels contradict this by repeating a low front seam. Use a continuous sloped seam with a high horizontal rear edge; rear fidelity requires user review.",
+    "The base is shallow at front and wedge-shaped toward rear. The tall front lid becomes shallow at rear. A uniformly shallow base cannot meet the diagonal sides without extra unsupported joints.",
+    "The visible reveal is the exterior of a separate fitted interior collar; no floating decorative strip, hidden hinges, magnets, or latches.",
+    "The removable lid lifts vertically before moving aside; it is not hinged.",
+    "Bottom wrap fold lines and tier-specific stitching, embossing and branding are deferred; the structural bottom is solid.",
+    "Technical colors are neutral. Tier finishes are parameter placeholders, not final photorealistic materials."
+  ],
+  "materials_file": "config/materials.json",
+  "studio": {
+    "world_strength": 0,
+    "floor_color": [0.002, 0.002, 0.002],
+    "floor_roughness": 0.4,
+    "camera_lens_mm": 70,
+    "orthographic_margin": 1.4,
+    "lights": [
+      {"name": "Key", "position": [-0.32, -0.38, 0.48], "power": 18, "size": [0.30, 0.38]},
+      {"name": "Fill", "position": [0.30, -0.20, 0.25], "power": 6, "size": [0.25, 0.30]},
+      {"name": "Rim", "position": [0.18, 0.30, 0.38], "power": 14, "size": [0.12, 0.30]},
+      {"name": "Rear fill", "position": [-0.20, 0.30, 0.26], "power": 5, "size": [0.24, 0.30]},
+      {"name": "Underside inspection", "position": [0, -0.10, -0.25], "power": 4, "size": [0.25, 0.25]}
+    ]
+  },
+  "presets": {
+    "preview": {"resolution": 768, "samples": 32, "adaptive_threshold": 0.04, "denoise": true, "bit_depth": "8"},
+    "final": {"resolution": 2400, "samples": 512, "adaptive_threshold": 0.005, "denoise": true, "bit_depth": "16"}
+  }
+}

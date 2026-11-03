@@ -1,0 +1,24 @@
+{
+  "tier": "spark",
+  "extends": "spark",
+  "surface": "library paperboard ambientCG Paper006 (approved in spark-v002)",
+  "roles": {
+    "exterior": {
+      "library": "paperboard.ambientcg-paper006"
+    },
+    "branding": {
+      "library": "paperboard.ambientcg-paper006",
+      "overrides": {
+        "color": {
+          "value": 0.86
+        },
+        "roughness": {
+          "range": [
+            0.58,
+            0.78
+          ]
+        }
+      }
+    }
+  }
+}

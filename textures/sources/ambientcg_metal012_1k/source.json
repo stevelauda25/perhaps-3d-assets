@@ -1,0 +1,21 @@
+{
+  "asset": "Metal012",
+  "author": "ambientCG",
+  "asset_url": "https://ambientcg.com/view?id=Metal012",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "download_url": "https://ambientcg.com/get?file=Metal012_2K-JPG.zip",
+  "archive_sha256": "68eba86af3ab65a1394cacc84bb35b92cd1006e9459ec5a6a4c9467d51a73d59",
+  "downloaded": "2026-11-03",
+  "note": "Derived: 2K Roughness + NormalGL downscaled to 1024 px (INTER_AREA, JPEG q92) to keep the scene light. Near-isotropic scratches, roughness mean 0.088.",
+  "files": {
+    "Metal012_1K-JPG_Roughness.jpg": {
+      "bytes": 167247,
+      "sha256": "741fb560d500f507baba69555691f90bc45f4be59161645bbe7601ed5bf89e9f"
+    },
+    "Metal012_1K-JPG_NormalGL.jpg": {
+      "bytes": 34148,
+      "sha256": "2880b0840ebe759fa938fd170266d34d13ee4931f9628ad8fd35eb67282cdc98"
+    }
+  }
+}

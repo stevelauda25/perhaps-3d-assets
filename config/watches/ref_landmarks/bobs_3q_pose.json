@@ -1,0 +1,73 @@
+{
+ "image": "references/omega-speedmaster-310-30-42-50-01-001/studio_white/bobs_3q_side_loop_clasp.jpg",
+ "size": [
+  2160,
+  2160
+ ],
+ "focal_px": 6250.0,
+ "focal_mm_35": 104.2,
+ "mean_reproj_px": 1.79,
+ "dial_normal_vs_view_deg": 30.8,
+ "camera_distance_mm": 286.5,
+ "camera_pos_model_mm": [
+  150.4,
+  -11.3,
+  243.6
+ ],
+ "rvec": [
+  -3.06487779330081,
+  -0.017305262761545828,
+  0.841201601666785
+ ],
+ "tvec": [
+  -4.893174741036781,
+  -2.119082951989629,
+  286.43934531859117
+ ],
+ "landmarks_refined": [
+  [
+   "1",
+   true
+  ],
+  [
+   "2",
+   true
+  ],
+  [
+   "3",
+   true
+  ],
+  [
+   "4",
+   true
+  ],
+  [
+   "5",
+   true
+  ],
+  [
+   "6",
+   true
+  ],
+  [
+   "7",
+   true
+  ],
+  [
+   "8",
+   true
+  ],
+  [
+   "9",
+   true
+  ],
+  [
+   "10",
+   true
+  ],
+  [
+   "11",
+   true
+  ]
+ ]
+}

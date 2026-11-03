@@ -1,0 +1,72 @@
+{
+  "id": "select-v001",
+  "output": "outputs/jobs/select-v001",
+  "asset_type": "packaging",
+  "tier": "select",
+  "baseline": "canonical geometry; Select deep-forest-green woven bookcloth, champagne band, SVG blind deboss",
+  "input": "assets/canonical/box_base.blend",
+  "geometry_lock": "assets/canonical/geometry_lock.json",
+  "references": [
+    "references/packaging/03_select_primary.png",
+    "config/tiers/select.json",
+    "references/brand/perhaps-wordmark-v2.clean.svg"
+  ],
+  "stages": [
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/tiers/select.json",
+        "exposure_ev": -0.25
+      }
+    },
+    {
+      "name": "logo",
+      "step": "logo_stamp",
+      "params": {
+        "svg": "references/brand/perhaps-wordmark-v2.clean.svg",
+        "width_mm": 76.0,
+        "center_z_mm": 44.0,
+        "front_y_mm": -70.0,
+        "uv_tile_mm": 32.0,
+        "wrap": "PE6 | Continuous lid leather wrap",
+        "lid_shell": "Box | Lid shell",
+        "depth_mm": 0.32,
+        "floor_color_factor": 0.9,
+        "floor_normal_factor": 0.7,
+        "floor_roughness_offset": 0.0,
+        "shoulder_mm": 0.45,
+        "fine_div": 3,
+        "shoulder_round": 0.3
+      }
+    },
+    {
+      "name": "crop-material",
+      "render": {
+        "camera": "CAM | production_leather_macro",
+        "resolution": 1536,
+        "profile": "diagnostic",
+        "border": [
+          0.4,
+          0.733333333,
+          0.3,
+          0.633333333
+        ]
+      }
+    },
+    {
+      "name": "crop-branding",
+      "render": {
+        "camera": "CAM | production_branding_macro",
+        "resolution": 1536,
+        "profile": "diagnostic",
+        "border": [
+          0.15,
+          0.85,
+          0.2,
+          0.8
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+CASIO F-91W MATERIAL MATCHING PASS — 2026-10-26
+
+Completed and visually inspected hero.png (2048 x 4438), front.png and
+material_closeup.png (2400 x 2400). Each final view rendered once at 512
+Cycles samples with adaptive sampling, denoising, neutral AgX and 16-bit PNG.
+
+Diagnosis and changes
+The baseline's shared bump/roughness noise and broad uniform highlights made
+the strap read as smooth plastic. Its high-contrast look hid lower-strap detail.
+Independent molded structure, fine finish and roughness fields now break up
+highlights. The strap is slightly rougher than the case. Shader-only edge masks
+soften finish transitions without moving vertices. No dirt, scratches or wear.
+Case/strap starting grain spacings: 120/140 micrometers; secondary detail:
+45/60 micrometers. Effective height bounds: 3.9/4.55 micrometers. These are
+look-development choices, not measured factory specifications.
+
+LCD electrodes are darker against a gray-green backing. Crystal thickness and
+1.49 IOR remain; roughness is 0.014. Buttons use restrained metal roughness,
+without generic bump. Key/fill placement and neutral AgX improve readability.
+A hard rectangular reflection from the added lower fill was identified and
+removed by repositioning that light outside the crystal reflection path.
+100 mm focal lengths retained; hero/front height occupancy is 80%/85%.
+
+Visual validation
+Matched baseline/candidate crops use identical cameras, illumination, exposure
+and pixel scale. comparison_case.png and comparison_strap.png show stronger
+molded surface character and less uniform highlights. comparison_denoising.png
+shows the texture survives filtering. One material correction reduced coarse
+pocking and blotchy roughness before final rendering. Final full-watch views,
+material close-up, and native-resolution hero/button crops were inspected.
+The largest improvement is tactile strap response; LCD contrast and lower-strap
+readability also improved. Grain is subtle at display size and visible close up.
+
+Preservation and technical validation
+Reopened the delivered casio_f91w.blend and generated validation.json from it.
+All 120 manufactured component geometry/graphics hashes match the baseline;
+case bounds remain 35.2 x 38.2 x 8.5 mm. Packed fonts remain embedded.
+All 41 snapshotted original files remain unchanged (source_preservation.json).
+The unrelated live Blender scene remains its original three objects.
+MCP/add-on connection passed: Blender 5.2.3 LTS, add-on 1.8, protocol 15.
+
+Deliverables in this directory
+casio_f91w.blend — editable finished project
+refine_material_match.py — incremental script; no full builder rerun
+hero.png, front.png, material_closeup.png — final renders
+comparison_case.png, comparison_strap.png — matching before/after crops
+comparison_denoising.png — matching raw/denoised crop
+validation.json, source_preservation.json — checks and hashes
+baseline-20261026-091232/ — immutable prior project, scripts and renders
+references/ — supplied real-product and previous-render images
+
+Measured final rendering times
+Hero: 472.60 seconds (7m 53s)
+Front: 214.91 seconds (3m 35s)
+Material close-up: 608.99 seconds (10m 09s)
+Total: 1296.50 seconds (21m 37s), excluding previews and validation.
+
+Remaining limitations
+Material matching is based on processed photographs, not measured surface or
+reflectance data. The source's lettering, indicator/segment contours and thin
+crystal-edge highlights remain approximate; geometry and graphics were
+intentionally preserved. This is an improvement in material credibility, not
+a claim of exact photographic equivalence. No new three-quarter render was
+requested for this pass; the prior deliverable remains available.
+
+Efficiency
+No new research, full rebuild, or additional agent was used. Existing resources
+and studio were reused, with grouped background Blender execution through MCP.
+Large image inspections and source reads consume context; localized crops and
+compact logs limited repetition. Rendering time is reported separately from
+token usage; no exact token savings are claimed.

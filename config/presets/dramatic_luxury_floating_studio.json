@@ -1,0 +1,132 @@
+{
+  "name": "dramatic_luxury_floating_studio",
+  "note": "Shared rig in the product frame (follows the pose yaw). Powers are for the Icon scene (-0.25 EV); per-tier multipliers by group live in the job file. Hierarchy: key (raking softbox, close, strong falloff) > edge strips > side > bounce. World is pure black; floor and old cards off. Edge strips use 'mirror': positioned on the camera's mirror direction about the bevel normal.",
+  "lights": [
+    {
+      "name": "FLOAT | Key raking softbox",
+      "group": "key",
+      "size": [
+        0.45,
+        0.8
+      ],
+      "position": [
+        -0.55,
+        -0.2,
+        0.45
+      ],
+      "target": [
+        0.06,
+        -0.07,
+        0.08
+      ],
+      "power_w": 8,
+      "color": [
+        1,
+        0.97,
+        0.94
+      ]
+    },
+    {
+      "name": "FLOAT | Side panel",
+      "group": "side",
+      "size": [
+        0.5,
+        0.6
+      ],
+      "position": [
+        0.9,
+        -0.35,
+        0.3
+      ],
+      "target": [
+        0.07,
+        -0.02,
+        0.07
+      ],
+      "power_w": 0.8,
+      "color": [
+        1,
+        0.98,
+        0.96
+      ]
+    },
+    {
+      "name": "FLOAT | Underside bounce",
+      "group": "bounce",
+      "size": [
+        0.6,
+        0.6
+      ],
+      "position": [
+        0.15,
+        -0.55,
+        -0.45
+      ],
+      "target": [
+        0,
+        0,
+        0.0
+      ],
+      "power_w": 0.5,
+      "color": [
+        1,
+        0.97,
+        0.93
+      ]
+    },
+    {
+      "name": "FLOAT | Edge strip top (mirror)",
+      "group": "edge",
+      "size": [
+        0.7,
+        0.03
+      ],
+      "mirror": {
+        "point": [
+          0,
+          -0.07,
+          0.14
+        ],
+        "normal": [
+          0,
+          -1,
+          1
+        ],
+        "distance": 0.9
+      },
+      "power_w": 3,
+      "color": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "FLOAT | Edge strip corner (mirror)",
+      "group": "edge",
+      "size": [
+        0.03,
+        0.7
+      ],
+      "mirror": {
+        "point": [
+          0.07,
+          -0.07,
+          0.07
+        ],
+        "normal": [
+          1,
+          -1,
+          0
+        ],
+        "distance": 0.9
+      },
+      "power_w": 3,
+      "color": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

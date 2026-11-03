@@ -1,0 +1,67 @@
+{
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "samples": 512,
+  "resolution": [
+    2048,
+    4438
+  ],
+  "case_bounds_mm": {
+    "x": 35.2,
+    "y": 38.2,
+    "z": 8.5
+  },
+  "scene_objects": 142,
+  "manufactured_collection_objects": 132,
+  "band_holes": 12,
+  "images": {
+    "hero.png": {
+      "width": 2048,
+      "height": 4438,
+      "bytes": 6976847,
+      "bit_depth": 16
+    },
+    "front.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 7947772,
+      "bit_depth": 16
+    },
+    "three_quarter.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 9440039,
+      "bit_depth": 16
+    },
+    "material_closeup.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 22538896,
+      "bit_depth": 16
+    }
+  },
+  "LCD_layer_stack_mm": {
+    "module_backing_top": 7.349999904632568,
+    "polarizer_top": 7.549999713897705,
+    "electrodes": 7.565000057220459,
+    "printed_mask_top": 7.993,
+    "crystal_bottom": 8.0
+  },
+  "planar_ink_max_thickness_mm": 0.0,
+  "LCD_electrode_max_thickness_mm": 0.0,
+  "LCD_aperture_center_clear": true,
+  "realism_refinement": "Flat underside printing; recessed LCD with clean flat electrodes; reconstructed squared CASIO mark; convex molded shoulder; dielectric satin resin and shaped studio gradients.",
+  "pose": "Upright closed wrist loop; 8 degree yaw; buckle hidden behind case",
+  "case_bounds_coordinate_system": "Manufactured case coordinates before rigid upright pose",
+  "packed_fonts": {
+    "Arial Bold": true,
+    "Arial Bold Italic": true,
+    "Arial Narrow Bold": true,
+    "Arial Regular": true
+  },
+  "blend_bytes": 1938052,
+  "limitations": [
+    "Subcomponent dimensions proportionally reconstructed from official photography.",
+    "Typography reconstructed with editable type; unreadable rear micro-engraving and serial number not fabricated."
+  ]
+}

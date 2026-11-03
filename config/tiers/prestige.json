@@ -1,0 +1,156 @@
+{
+  "tier": "prestige",
+  "builder": "paperboard",
+  "surface": "oxblood burgundy suede wrap (library suede.ambientcg-leather039, hue-shifted), champagne-gold metal band",
+  "extends": "spark",
+  "roles": {
+    "exterior": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "hue": 0.405,
+          "saturation": 1.0,
+          "value": 0.27,
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "contrast": 0.35
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 1.0,
+          "sheen_roughness": 0.25,
+          "sheen_tint": [
+            0.65,
+            0.2,
+            0.22
+          ],
+          "specular_ior_level": 0.12
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.34,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.15,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "branding": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "hue": 0.405,
+          "saturation": 1.0,
+          "value": 0.245,
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "contrast": 0.35
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 1.0,
+          "sheen_roughness": 0.25,
+          "sheen_tint": [
+            0.65,
+            0.2,
+            0.22
+          ],
+          "specular_ior_level": 0.12
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.34,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.15,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "interior": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "hue": 0.405,
+          "saturation": 1.0,
+          "value": 0.15,
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "contrast": 0.35
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 1.0,
+          "sheen_roughness": 0.25,
+          "sheen_tint": [
+            0.65,
+            0.2,
+            0.22
+          ],
+          "specular_ior_level": 0.12
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.34,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.15,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "band": {
+      "metal": {
+        "color_linear": [
+          0.72,
+          0.45,
+          0.17
+        ],
+        "roughness": 0.42
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "steel.brushed-links",
+  "category": "steel",
+  "name": "Metal009 brushed, grain along the bracelet (tangent about X)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/ambientcg_metal009_2k",
+    "url": "https://ambientcg.com/view?id=Metal009",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": null,
+    "roughness": "Metal009_2K-JPG_Roughness.jpg",
+    "normal": "Metal009_2K-JPG_NormalGL.jpg",
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 24,
+    "uv_map": null,
+    "uv_mm_per_unit": null,
+    "object_unit_mm": true
+  },
+  "color": {
+    "tint_linear": [
+      0.62,
+      0.63,
+      0.64
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.388,
+      0.557
+    ],
+    "range": [
+      0.2,
+      0.32
+    ]
+  },
+  "normal": {
+    "strength": 0.9
+  },
+  "height": null,
+  "micro": null,
+  "bsdf": {
+    "metallic": 1.0,
+    "anisotropic": 0.75
+  },
+  "measured": {
+    "source_roughness_mean": 0.469,
+    "brush_gradient_ratio_x_over_y": 0.14,
+    "source_color_mean_srgb": [
+      0.573,
+      0.583,
+      0.596
+    ]
+  },
+  "limitations": [
+    "Physical tile size assumed (ambientCG lists none); chosen so brush lines read at watch scale.",
+    "Box projection: brush direction follows projection axes per face, not one continuous direction.",
+    "Roughness range is calibrated from the source map to a satin-steel target, not measured on an Omega bracelet."
+  ],
+  "selected_for": "omega speedmaster watch (candidate)",
+  "tangent": {
+    "axis": "X"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "height_fraction": 0.8,
+    "width_fraction": 0.8235,
+    "focal_length_mm": 100.0
+  },
+  "front": {
+    "height_fraction": 0.85,
+    "width_fraction": 0.4038,
+    "focal_length_mm": 100.0
+  }
+}

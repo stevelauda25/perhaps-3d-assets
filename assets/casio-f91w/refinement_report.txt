@@ -1,0 +1,20 @@
+CASIO F-91W-1 PHOTOGRAPHY REFINEMENT — 2026-10-26
+
+Main causes: uniform resin highlights, overlapping planar ink joins and faceted acrylic edge shading, inaccurate substitute wordmarks/indicators, and hard softbox reflections.
+
+Changes: physically scaled root-local molded grain with distinct case/strap roughness; continuous planar ink borders; smoother acrylic sidewall normals; eight editable graphic groups traced from official F-91W-1_06.jpg and smoothed to remove pixel stair steps; fuller LCD electrodes; restrained fill and low-luminance feathered diffusion panel.
+
+Baseline recovered from backup-20261026-083440/casio_f91w.blend1. The canonical .blend had contained an older scene. Backup includes both versions, previous renders, all existing scripts and validation. All 13 original Python scripts remain byte-for-byte unchanged.
+
+Updated: casio_f91w.blend; hero.png; front.png; three_quarter.png; material_closeup.png; validation.json.
+Added: refine_photography.py; trace_verified_graphics.py; verified_graphics_contours.json; validate_photography.py; photography_candidate.blend; comparison_material.png; comparison_face.png; preservation_check.json; photography_render_times.json; preview images and compact execution logs.
+
+Validation: saved .blend reopened, case 35.2 x 38.2 x 8.5 mm, 27 protected manufactured meshes unchanged, camera transforms preserved, LCD aperture clear, remaining font resources packed. All four final images actually inspected; two matching before/after comparisons inspected at 1:1 pixel scale.
+
+Final rendering: Cycles 512 samples, adaptive threshold 0.004, 16-bit PNG, hero 2048 x 4438, other views 2400 x 2400. Total measured rendering 19.37 minutes; individual seconds {"hero": 171.33, "front": 225.19, "three_quarter": 207.58, "material_closeup": 558.34}. Three reduced-resolution macro previews and one composition preview preceded one production pass per view.
+
+Efficiency: single agent; existing official references reused; no web research or full-scene reconstruction; grouped background Blender operations launched through verified MCP. Main token-intensive operations were visual comparisons and the initial shader/script inspection. Exact token accounting is not available; render duration is separate from token usage. One attempted automatic validator queue failed because MCP execution variables are not persistent; separate validation succeeded, with no effect on the render.
+
+Remaining limitations: photograph-derived subcomponent proportions and finite-resolution traced graphics; no factory CAD or calibrated measured BRDF; unreadable rear micro-engraving/serial omitted. The inherited upright composition and dark floor treatment remain intentional.
+
+Reproduce: run refine_photography.py in Blender background mode to load the preserved baseline, apply incremental edits and save/preview the candidate. Add -- --final to render the candidate and save the delivered project. validate_photography.py reopens and validates the delivery. trace_verified_graphics.py regenerates the contour data using local Python with cv2/numpy and the existing official photograph. Original build.py is preserved and is not the entrypoint for this refinement.

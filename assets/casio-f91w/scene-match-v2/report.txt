@@ -1,0 +1,75 @@
+CASIO STUDIO REFINEMENT V2
+
+Starting point: the previously delivered scene-match/casio_f91w_scene_match.blend.
+This is an incremental lighting/camera/floor pass, not a rebuild. The previous
+scene, render, script and validation are retained in source-snapshot/.
+
+Changes directed by the reference comparison
+1. Framing: 100 mm level front camera retained. Projected manufactured bounds
+   increased from 62% to 65.5% frame height (+5.65% relative size); framing raised
+   so the bottom is at 70.7%, horizontal center 50%. Bounds include some empty
+   corners around curved geometry; visible silhouette is slightly smaller.
+2. Key: emitter width reduced from 6 mm to 3 mm, length from 100 mm to 75 mm,
+   spread from 0.22 to 0.11 rad. Position/aim moved upward and toward the watch
+   center. Power reduced to 0.0055 W to compensate for concentration. This
+   produces a slimmer central path instead of the previous broad strap sheen.
+3. Separation: both side strips moved forward to y=-25 mm and aimed at the
+   case, with restrained power increases. The front fill was brought closer
+   and kept low. The case edges and buttons are clearer without lifting the
+   entire background or lower strap.
+4. Reflection panel: narrowed and shortened; luminance reduced. Camera-ray
+   visibility remains disabled, reflection contribution retained.
+5. Floor: grazing emitter lowered, reduced in height and power, then shortened
+   for softer falloff. The reflective-to-matte foreground transition was
+   extended to retain a faint, gradually fading strap reflection.
+6. Red accent: power reduced 70%, emitter narrowed slightly. It remains confined
+   to the underside rather than becoming a visible red spotlight.
+
+All manufactured meshes, materials, editable printing, LCD layers and their
+transforms were preserved. No material tuning proved necessary. Neutral AgX,
+exposure -0.65, dark world, physical floor and 16-bit PNG output are retained.
+
+Preview validation
+Three 804 x 962 previews addressed the named defects: initial composition/key/
+case separation, floor brightness, then floor falloff and reflection length.
+Equal-size reference/previous/refined comparison was inspected. The revised
+key is narrower, case edges separate more clearly, and the lower strap remains
+subdued. At 402 x 481 display size, side-margin luminance profiles place the
+floor peak near 70.5% height versus reference 70.3% and previous 72.1%. The
+bright floor core is approximately 6 pixels wide at half maximum versus 13 in
+the previous image. These are display-image measurements, not physical data.
+
+Remaining differences
+The reference's wider metal chronograph case, shorter-looking strap sections
+and directional brushed highlights differ from this preserved resin Casio.
+The Casio LCD and colored printing also respond differently from an analog
+black dial. Its silhouette cannot be made identical without changing the
+product. Floor and reflection falloff are closer but not a pixel-identical
+reconstruction. The 402 x 481 source limits inference about the original rig.
+
+Outputs
+casio_f91w_scene_match.blend — editable updated scene
+hero.png — full-resolution hero
+refine_studio.py — incremental preview/final/validation script
+reference_comparison.png — reference, previous and delivered final comparison
+validation.json — reopened-project hashes, dimensions and settings
+Native face/strap/floor crops — visual inspection evidence
+
+Execution used one agent and isolated Blender processes orchestrated through
+verified MCP (Blender 5.2.3 LTS, add-on 1.8, protocol 15). No new research,
+geometry rebuilding or product shader rewriting was performed.
+
+Final validation
+The delivered hero, three-way comparison and native face/strap/floor crops were
+actually inspected. LCD is clean at native resolution, the case grain remains
+visible, and the narrow overhead band stays restrained. Floor reflection is
+faint and smoothly fades; the red underside is barely visible.
+Reopened-project validation passed: manufactured geometry and product shader
+fingerprints unchanged, case bounds 35.2 x 38.2 x 8.5 mm, packed fonts retained.
+Original source hashes are unchanged and the live Blender scene remains its
+original three objects.
+
+Final output: 2400 x 2872, 1536 Cycles samples, adaptive threshold 0.0007,
+denoising enabled, 16-bit PNG. Final render time: 876.28 seconds (14m 36s).
+Only one full-quality render was performed in this pass; three small previews
+preceded it. Render time is separate from token usage; no token-savings claim.

@@ -1,0 +1,91 @@
+{
+  "id": "prestige-cinematic-v001",
+  "output": "outputs/jobs/prestige-cinematic-v001",
+  "asset_type": "packaging",
+  "tier": "prestige",
+  "baseline": "icon-cinematic-v001 recipe (floating_stage, then cinematic_studio PERHAPS_CINEMATIC_STUDIO_V2) on the Select scene",
+  "input": "outputs/dependencies/prestige-v001/logo.blend",
+  "references": [
+    "references/packaging/05_reserve.png"
+  ],
+  "stages": [
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {
+          "key_mult": 2.0,
+          "edge_mult": 1.5,
+          "side_mult": 8,
+          "bounce_mult": 0.6
+        }
+      }
+    },
+    {
+      "name": "crop-face",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "diagnostic",
+        "border": [
+          0.28,
+          0.58,
+          0.4,
+          0.78
+        ]
+      }
+    },
+    {
+      "name": "crop-band",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "diagnostic",
+        "border": [
+          0.27,
+          0.58,
+          0.37,
+          0.52
+        ]
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "final",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    }
+  ]
+}

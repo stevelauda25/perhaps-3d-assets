@@ -1,0 +1,52 @@
+{
+  "input": "outputs/packaging/private-edition-v009/private_edition.blend",
+  "output": "outputs/packaging/private-edition-v010",
+  "final_scene": "private_edition_calibrated.blend",
+  "source_manifest": "textures/sources/polyhaven_leather_red_02_8k/source.json",
+  "leather": {
+    "tile_mm": 400,
+    "uv_base_tile_mm": 32,
+    "color_linear": [0.0048, 0.0043, 0.0040],
+    "luminance_range": [0.010, 0.093],
+    "pigment_factors": [0.55, 1.35],
+    "roughness_source_range": [0.365, 0.624],
+    "roughness_range": [0.32, 0.52],
+    "normal_strength": 0.6,
+    "pressed_normal_strength": 0.35,
+    "pressed_color_factor": 0.65,
+    "pressed_roughness_offset": -0.055,
+    "ior": 1.46,
+    "coat_weight": 0.02,
+    "coat_roughness": 0.35
+  },
+  "finishing": {
+    "deboss_depth_mm": 0.20,
+    "die_lip_mm": 0.035,
+    "stitch_radius_mm": 0.045,
+    "stitch_length_mm": 1.0,
+    "stitch_original_length_mm": 0.55,
+    "metal_color_linear": [0.13, 0.125, 0.12],
+    "metal_roughness_range": [0.32, 0.42],
+    "metal_anisotropy": 0.65
+  },
+  "camera": {"position": [-1.05, -0.80, 0.355], "target": [0, 0, 0.075], "lens_mm": 200},
+  "macro_scales_mm": {"leather_macro": 50, "branding_macro": 96, "corner_macro": 50},
+  "view_transform": "Standard",
+  "look": "None",
+  "exposure": -0.25,
+  "neutral_lights": [
+    {"name": "Front silk reflection", "position": [0.24, -0.30, 0.35], "target": [0, -0.06, 0.08], "power": 0.8, "size": [0.35, 0.50]},
+    {"name": "Left silk reflection", "position": [-0.30, 0.15, 0.25], "target": [-0.06, 0, 0.08], "power": 0.25, "size": [0.30, 0.50]},
+    {"name": "Top reflection card", "position": [0.38, 0.26, 0.24], "target": [0, 0, 0.14], "power": 0, "size": [0.18, 0.18]},
+    {"name": "Quiet camera fill", "position": [-0.45, -0.40, 0.30], "target": [0, 0, 0.075], "power": 0, "size": [0.30, 0.35]},
+    {"name": "Low inlay reflection", "position": [0.06, -0.11, 0.006], "target": [0, -0.067, 0.025], "power": 0, "size": [0.075, 0.016]}
+  ],
+  "studio_lights": [
+    {"name": "Front silk reflection", "position": [0.28, -0.30, 0.20], "target": [0, -0.06, 0.08], "power": 0.85, "size": [0.22, 0.65]},
+    {"name": "Left silk reflection", "position": [-0.30, 0.22, 0.20], "target": [-0.06, 0, 0.085], "power": 0.60, "size": [0.20, 0.55]},
+    {"name": "Top reflection card", "position": [0.38, 0.28, 0.25], "target": [0, 0, 0.14], "power": 0.04, "size": [0.22, 0.25]},
+    {"name": "Quiet camera fill", "position": [-0.45, -0.40, 0.30], "target": [0, 0, 0.075], "power": 0.025, "size": [0.30, 0.35]},
+    {"name": "Low inlay reflection", "position": [0.06, -0.11, 0.010], "target": [0, -0.067, 0.025], "power": 0.009, "size": [0.12, 0.025]}
+  ],
+  "render": {"hero_resolution": 2048, "macro_resolution": 1536, "calibration_samples": 256, "final_samples": 512, "adaptive_threshold": 0.003, "filter_width": 1.0}
+}

@@ -1,0 +1,50 @@
+{
+  "blender": "5.2.3 LTS",
+  "engine": "CYCLES",
+  "samples": 256,
+  "resolution": [
+    2400,
+    2400
+  ],
+  "case_bounds_mm": {
+    "x": 35.2,
+    "y": 38.2,
+    "z": 8.5
+  },
+  "scene_objects": 129,
+  "manufactured_collection_objects": 120,
+  "band_holes": 12,
+  "images": {
+    "hero.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 6013609
+    },
+    "front.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 5443601
+    },
+    "three_quarter.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 5474205
+    },
+    "material_closeup.png": {
+      "width": 2400,
+      "height": 2400,
+      "bytes": 6785792
+    }
+  },
+  "packed_fonts": {
+    "Arial Bold": true,
+    "Arial Bold Italic": true,
+    "Arial Narrow Bold": true,
+    "Arial Regular": true
+  },
+  "blend_bytes": 1875115,
+  "limitations": [
+    "Subcomponent dimensions proportionally reconstructed from official photography.",
+    "Typography reconstructed with editable type; unreadable rear micro-engraving and serial number not fabricated."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "spark": {
+    "name": "The Spark Box",
+    "price_usd": 50,
+    "status": "approved",
+    "version": "v004",
+    "scene": "outputs/jobs/spark-restored-v004/stage.blend",
+    "job": "jobs/spark-restored-v004.json",
+    "preset": "config/tiers/spark-v002.json",
+    "note": "final: spark-restored-v004"
+  },
+  "wonder": {
+    "name": "The Wonder Box",
+    "price_usd": 100,
+    "status": "candidate",
+    "preset": "config/tiers/wonder.json",
+    "version": "v001",
+    "scene": "outputs/jobs/wonder-cinematic-v001/stage.blend",
+    "job": "jobs/wonder-cinematic-v001.json",
+    "note": "v003 material + icon-cinematic-v001 lighting recipe (PERHAPS_CINEMATIC_STUDIO_V2, energies scaled for terracotta) via jobs/wonder-cinematic-v001.json; pending designer approval"
+  },
+  "select": {
+    "name": "The Select Box",
+    "price_usd": 250,
+    "status": "candidate",
+    "preset": "config/tiers/select.json",
+    "version": "v001",
+    "scene": "outputs/jobs/select-cinematic-v001/stage.blend",
+    "job": "jobs/select-cinematic-v001.json",
+    "note": "deep forest green denim-weave cloth (library denim.ambientcg-fabric077, hue-shifted, 200 mm tile), champagne band, SVG blind deboss; recipe from jobs/select-v001.json; pending designer approval"
+  },
+  "prestige": {
+    "name": "The Prestige Box",
+    "price_usd": 500,
+    "status": "candidate",
+    "preset": "config/tiers/prestige.json",
+    "version": "v001",
+    "scene": "outputs/jobs/prestige-cinematic-v001/stage.blend",
+    "job": "jobs/prestige-cinematic-v001.json",
+    "note": "oxblood suede (library suede.ambientcg-leather039 colour + directional fibre-nap layer, velvet sheen), champagne-gold metal band, SVG deboss; recipe from jobs/prestige-v001.json; pending designer approval"
+  },
+  "icon": {
+    "name": "The Icon Box",
+    "price_usd": 1000,
+    "status": "approved",
+    "version": "v001",
+    "scene": "outputs/jobs/icon-cinematic-v001/stage.blend",
+    "job": "jobs/icon-cinematic-v001.json",
+    "preset": "config/tiers/icon.json",
+    "note": "final: icon-cinematic-v001"
+  }
+}

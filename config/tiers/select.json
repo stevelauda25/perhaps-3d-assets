@@ -1,0 +1,75 @@
+{
+  "tier": "select",
+  "builder": "paperboard",
+  "surface": "deep forest green denim-weave cloth (library denim.ambientcg-fabric077, hue-shifted to green)",
+  "extends": "spark",
+  "roles": {
+    "exterior": {
+      "library": "denim.ambientcg-fabric077",
+      "overrides": {
+        "maps": {
+          "normal": null
+        },
+        "color": {
+          "hue": 0.317,
+          "saturation": 2.0,
+          "value": 0.3,
+          "tint_linear": [
+            0.4,
+            1.0,
+            0.62
+          ]
+        },
+        "height": {
+          "bump_distance_mm": 0.1
+        },
+        "mapping": {
+          "tile_width_mm": 200
+        },
+        "bsdf": {
+          "sheen_weight": 0.05,
+          "specular_ior_level": 0.2
+        }
+      }
+    },
+    "branding": {
+      "library": "denim.ambientcg-fabric077",
+      "overrides": {
+        "maps": {
+          "normal": null
+        },
+        "color": {
+          "hue": 0.317,
+          "saturation": 2.0,
+          "value": 0.28,
+          "tint_linear": [
+            0.4,
+            1.0,
+            0.62
+          ]
+        },
+        "height": {
+          "bump_distance_mm": 0.1
+        },
+        "mapping": {
+          "tile_width_mm": 200
+        },
+        "bsdf": {
+          "sheen_weight": 0.05,
+          "specular_ior_level": 0.2
+        }
+      }
+    },
+    "band": {
+      "color_linear": [
+        0.9,
+        0.74,
+        0.58
+      ],
+      "roughness_range": [
+        0.42,
+        0.56
+      ]
+    }
+  }
+}

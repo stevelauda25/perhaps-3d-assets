@@ -1,0 +1,3767 @@
+{
+  "protected": {
+    "Box | Base shell": {
+      "type": "MESH",
+      "parent": "CTRL | Base",
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Manufactured edge radius",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": false,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "width": 0.0006000000284984708,
+          "width_pct": 0.0006000000284984708,
+          "segments": 4,
+          "affect": "EDGES",
+          "limit_method": "ANGLE",
+          "edge_weight": "bevel_weight_edge",
+          "vertex_weight": "bevel_weight_vert",
+          "angle_limit": 0.5235987901687622,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_clamp_overlap": true,
+          "offset_type": "OFFSET",
+          "profile_type": "SUPERELLIPSE",
+          "profile": 0.5,
+          "material": -1,
+          "loop_slide": true,
+          "mark_seam": false,
+          "mark_sharp": false,
+          "harden_normals": true,
+          "face_strength_mode": "FSTR_NONE",
+          "miter_outer": "MITER_SHARP",
+          "miter_inner": "MITER_SHARP",
+          "spread": 0.10000000149011612,
+          "vmesh_method": "ADJ"
+        },
+        {
+          "name": "Weighted surface normals",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": true,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "weight": 50,
+          "mode": "FACE_AREA",
+          "thresh": 0.009999999776482582,
+          "keep_sharp": true,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_face_influence": false
+        }
+      ],
+      "vertices": [
+        [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          0.0
+        ],
+        [
+          0.07000000029802322,
+          -0.07000000029802322,
+          0.0
+        ],
+        [
+          0.07000000029802322,
+          0.07000000029802322,
+          0.0
+        ],
+        [
+          -0.07000000029802322,
+          0.07000000029802322,
+          0.0
+        ],
+        [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          0.02199999988079071
+        ],
+        [
+          0.07000000029802322,
+          -0.07000000029802322,
+          0.02199999988079071
+        ],
+        [
+          0.07000000029802322,
+          0.07000000029802322,
+          0.10499999672174454
+        ],
+        [
+          -0.07000000029802322,
+          0.07000000029802322,
+          0.10499999672174454
+        ],
+        [
+          -0.06750000268220901,
+          -0.06750000268220901,
+          0.02348214201629162
+        ],
+        [
+          0.06750000268220901,
+          -0.06750000268220901,
+          0.02348214201629162
+        ],
+        [
+          0.06750000268220901,
+          0.06750000268220901,
+          0.10351786017417908
+        ],
+        [
+          -0.06750000268220901,
+          0.06750000268220901,
+          0.10351786017417908
+        ],
+        [
+          -0.06750000268220901,
+          -0.06750000268220901,
+          0.0024999999441206455
+        ],
+        [
+          0.06750000268220901,
+          -0.06750000268220901,
+          0.0024999999441206455
+        ],
+        [
+          0.06750000268220901,
+          0.06750000268220901,
+          0.0024999999441206455
+        ],
+        [
+          -0.06750000268220901,
+          0.06750000268220901,
+          0.0024999999441206455
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4,
+          7
+        ],
+        [
+          4,
+          5,
+          9,
+          8
+        ],
+        [
+          5,
+          6,
+          10,
+          9
+        ],
+        [
+          6,
+          7,
+          11,
+          10
+        ],
+        [
+          7,
+          4,
+          8,
+          11
+        ],
+        [
+          8,
+          9,
+          13,
+          12
+        ],
+        [
+          9,
+          10,
+          14,
+          13
+        ],
+        [
+          10,
+          11,
+          15,
+          14
+        ],
+        [
+          11,
+          8,
+          12,
+          15
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "face_settings": [
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ]
+      ]
+    },
+    "Box | Interior collar and reveal": {
+      "type": "MESH",
+      "parent": "CTRL | Base",
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Manufactured edge radius",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": false,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "width": 0.0005000000237487257,
+          "width_pct": 0.0005000000237487257,
+          "segments": 4,
+          "affect": "EDGES",
+          "limit_method": "ANGLE",
+          "edge_weight": "bevel_weight_edge",
+          "vertex_weight": "bevel_weight_vert",
+          "angle_limit": 0.5235987901687622,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_clamp_overlap": true,
+          "offset_type": "OFFSET",
+          "profile_type": "SUPERELLIPSE",
+          "profile": 0.5,
+          "material": -1,
+          "loop_slide": true,
+          "mark_seam": false,
+          "mark_sharp": false,
+          "harden_normals": true,
+          "face_strength_mode": "FSTR_NONE",
+          "miter_outer": "MITER_SHARP",
+          "miter_inner": "MITER_SHARP",
+          "spread": 0.10000000149011612,
+          "vmesh_method": "ADJ"
+        },
+        {
+          "name": "Weighted surface normals",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": true,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "weight": 50,
+          "mode": "FACE_AREA",
+          "thresh": 0.009999999776482582,
+          "keep_sharp": true,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_face_influence": false
+        }
+      ],
+      "vertices": [
+        [
+          -0.06700000166893005,
+          -0.06700000166893005,
+          0.0024999999441206455
+        ],
+        [
+          0.06700000166893005,
+          -0.06700000166893005,
+          0.0024999999441206455
+        ],
+        [
+          0.06700000166893005,
+          0.06700000166893005,
+          0.0024999999441206455
+        ],
+        [
+          -0.06700000166893005,
+          0.06700000166893005,
+          0.0024999999441206455
+        ],
+        [
+          -0.06700000166893005,
+          -0.06700000166893005,
+          0.03877857327461243
+        ],
+        [
+          0.06700000166893005,
+          -0.06700000166893005,
+          0.03877857327461243
+        ],
+        [
+          0.06700000166893005,
+          0.06700000166893005,
+          0.11822143197059631
+        ],
+        [
+          -0.06700000166893005,
+          0.06700000166893005,
+          0.11822143197059631
+        ],
+        [
+          -0.06499999761581421,
+          -0.06499999761581421,
+          0.039964284747838974
+        ],
+        [
+          0.06499999761581421,
+          -0.06499999761581421,
+          0.039964284747838974
+        ],
+        [
+          0.06499999761581421,
+          0.06499999761581421,
+          0.11703571677207947
+        ],
+        [
+          -0.06499999761581421,
+          0.06499999761581421,
+          0.11703571677207947
+        ],
+        [
+          -0.06499999761581421,
+          -0.06499999761581421,
+          0.0024999999441206455
+        ],
+        [
+          0.06499999761581421,
+          -0.06499999761581421,
+          0.0024999999441206455
+        ],
+        [
+          0.06499999761581421,
+          0.06499999761581421,
+          0.0024999999441206455
+        ],
+        [
+          -0.06499999761581421,
+          0.06499999761581421,
+          0.0024999999441206455
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4,
+          7
+        ],
+        [
+          4,
+          5,
+          9,
+          8
+        ],
+        [
+          5,
+          6,
+          10,
+          9
+        ],
+        [
+          6,
+          7,
+          11,
+          10
+        ],
+        [
+          7,
+          4,
+          8,
+          11
+        ],
+        [
+          8,
+          9,
+          13,
+          12
+        ],
+        [
+          9,
+          10,
+          14,
+          13
+        ],
+        [
+          10,
+          11,
+          15,
+          14
+        ],
+        [
+          11,
+          8,
+          12,
+          15
+        ],
+        [
+          12,
+          13,
+          1,
+          0
+        ],
+        [
+          13,
+          14,
+          2,
+          1
+        ],
+        [
+          14,
+          15,
+          3,
+          2
+        ],
+        [
+          15,
+          12,
+          0,
+          3
+        ]
+      ],
+      "face_settings": [
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ]
+      ]
+    },
+    "Box | Interior tray floor": {
+      "type": "MESH",
+      "parent": "CTRL | Base",
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Manufactured edge radius",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": false,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "width": 0.0003000000142492354,
+          "width_pct": 0.0003000000142492354,
+          "segments": 4,
+          "affect": "EDGES",
+          "limit_method": "ANGLE",
+          "edge_weight": "bevel_weight_edge",
+          "vertex_weight": "bevel_weight_vert",
+          "angle_limit": 0.5235987901687622,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_clamp_overlap": true,
+          "offset_type": "OFFSET",
+          "profile_type": "SUPERELLIPSE",
+          "profile": 0.5,
+          "material": -1,
+          "loop_slide": true,
+          "mark_seam": false,
+          "mark_sharp": false,
+          "harden_normals": true,
+          "face_strength_mode": "FSTR_NONE",
+          "miter_outer": "MITER_SHARP",
+          "miter_inner": "MITER_SHARP",
+          "spread": 0.10000000149011612,
+          "vmesh_method": "ADJ"
+        },
+        {
+          "name": "Weighted surface normals",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": true,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "weight": 50,
+          "mode": "FACE_AREA",
+          "thresh": 0.009999999776482582,
+          "keep_sharp": true,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_face_influence": false
+        }
+      ],
+      "vertices": [
+        [
+          -0.06480000168085098,
+          -0.06480000168085098,
+          0.0024999999441206455
+        ],
+        [
+          0.06480000168085098,
+          -0.06480000168085098,
+          0.0024999999441206455
+        ],
+        [
+          0.06480000168085098,
+          0.06480000168085098,
+          0.0024999999441206455
+        ],
+        [
+          -0.06480000168085098,
+          0.06480000168085098,
+          0.0024999999441206455
+        ],
+        [
+          -0.06480000168085098,
+          -0.06480000168085098,
+          0.003700000001117587
+        ],
+        [
+          0.06480000168085098,
+          -0.06480000168085098,
+          0.003700000001117587
+        ],
+        [
+          0.06480000168085098,
+          0.06480000168085098,
+          0.003700000001117587
+        ],
+        [
+          -0.06480000168085098,
+          0.06480000168085098,
+          0.003700000001117587
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4,
+          7
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "face_settings": [
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ]
+      ]
+    },
+    "Box | Lid shell": {
+      "type": "MESH",
+      "parent": "CTRL | Lid lift-off",
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Manufactured edge radius",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": false,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "width": 0.0006000000284984708,
+          "width_pct": 0.0006000000284984708,
+          "segments": 4,
+          "affect": "EDGES",
+          "limit_method": "ANGLE",
+          "edge_weight": "bevel_weight_edge",
+          "vertex_weight": "bevel_weight_vert",
+          "angle_limit": 0.5235987901687622,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_clamp_overlap": true,
+          "offset_type": "OFFSET",
+          "profile_type": "SUPERELLIPSE",
+          "profile": 0.5,
+          "material": -1,
+          "loop_slide": true,
+          "mark_seam": false,
+          "mark_sharp": false,
+          "harden_normals": true,
+          "face_strength_mode": "FSTR_NONE",
+          "miter_outer": "MITER_SHARP",
+          "miter_inner": "MITER_SHARP",
+          "spread": 0.10000000149011612,
+          "vmesh_method": "ADJ"
+        },
+        {
+          "name": "Weighted surface normals",
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": true,
+          "show_on_cage": false,
+          "show_expanded": true,
+          "is_active": true,
+          "use_pin_to_last": false,
+          "use_apply_on_spline": false,
+          "weight": 50,
+          "mode": "FACE_AREA",
+          "thresh": 0.009999999776482582,
+          "keep_sharp": true,
+          "vertex_group": "",
+          "invert_vertex_group": false,
+          "use_face_influence": false
+        }
+      ],
+      "vertices": [
+        [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          0.0012499988079071045
+        ],
+        [
+          0.07000000029802322,
+          -0.07000000029802322,
+          0.0012499988079071045
+        ],
+        [
+          0.07000000029802322,
+          0.07000000029802322,
+          0.0012499988079071045
+        ],
+        [
+          -0.07000000029802322,
+          0.07000000029802322,
+          0.0012499988079071045
+        ],
+        [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          -0.11174999922513962
+        ],
+        [
+          0.07000000029802322,
+          -0.07000000029802322,
+          -0.11174999922513962
+        ],
+        [
+          0.07000000029802322,
+          0.07000000029802322,
+          -0.02875000238418579
+        ],
+        [
+          -0.07000000029802322,
+          0.07000000029802322,
+          -0.02875000238418579
+        ],
+        [
+          -0.06750000268220901,
+          -0.06750000268220901,
+          -0.11026786267757416
+        ],
+        [
+          0.06750000268220901,
+          -0.06750000268220901,
+          -0.11026786267757416
+        ],
+        [
+          0.06750000268220901,
+          0.06750000268220901,
+          -0.030232146382331848
+        ],
+        [
+          -0.06750000268220901,
+          0.06750000268220901,
+          -0.030232146382331848
+        ],
+        [
+          -0.06750000268220901,
+          -0.06750000268220901,
+          -0.0012499988079071045
+        ],
+        [
+          0.06750000268220901,
+          -0.06750000268220901,
+          -0.0012499988079071045
+        ],
+        [
+          0.06750000268220901,
+          0.06750000268220901,
+          -0.0012499988079071045
+        ],
+        [
+          -0.06750000268220901,
+          0.06750000268220901,
+          -0.0012499988079071045
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          4,
+          5,
+          1
+        ],
+        [
+          1,
+          5,
+          6,
+          2
+        ],
+        [
+          2,
+          6,
+          7,
+          3
+        ],
+        [
+          3,
+          7,
+          4,
+          0
+        ],
+        [
+          4,
+          8,
+          9,
+          5
+        ],
+        [
+          5,
+          9,
+          10,
+          6
+        ],
+        [
+          6,
+          10,
+          11,
+          7
+        ],
+        [
+          7,
+          11,
+          8,
+          4
+        ],
+        [
+          8,
+          12,
+          13,
+          9
+        ],
+        [
+          9,
+          13,
+          14,
+          10
+        ],
+        [
+          10,
+          14,
+          15,
+          11
+        ],
+        [
+          11,
+          15,
+          12,
+          8
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ],
+        [
+          12,
+          15,
+          14,
+          13
+        ]
+      ],
+      "face_settings": [
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ]
+      ]
+    },
+    "CAM | bottom": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0
+        ],
+        [
+          0.0,
+          1.5099580252808664e-07,
+          -1.0,
+          -0.5320000648498535
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | bottom",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | branding_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.9548567533493042,
+          -0.07899469137191772,
+          0.2863710820674896,
+          0.0560000017285347
+        ],
+        [
+          0.2970665991306305,
+          0.25391149520874023,
+          -0.920478343963623,
+          -0.25
+        ],
+        [
+          -1.242811187296411e-09,
+          0.9639962911605835,
+          0.26591578125953674,
+          0.09700000286102295
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | branding_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.691111147403717,
+        "angle_y": 0.4710899591445923,
+        "angle": 0.691111147403717,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 10.0,
+        "lens": 50.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.0989999994635582,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | corner_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.8331535458564758,
+          0.23981136083602905,
+          -0.49834293127059937,
+          -0.14499999582767487
+        ],
+        [
+          -0.5530417561531067,
+          0.36127427220344543,
+          -0.7507501244544983,
+          -0.1850000023841858
+        ],
+        [
+          7.512138466836404e-08,
+          0.9010945558547974,
+          0.4336226284503937,
+          0.20499999821186066
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | corner_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.691111147403717,
+        "angle_y": 0.4710899591445923,
+        "angle": 0.691111147403717,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 10.0,
+        "lens": 50.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.019999999552965164,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | front": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6020000576972961
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.07000000029802322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | front",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | hero": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.8064049482345581,
+          0.2689742147922516,
+          -0.526653528213501,
+          -0.3170454502105713
+        ],
+        [
+          -0.5913637280464172,
+          0.36678293347358704,
+          -0.718163788318634,
+          -0.43233466148376465
+        ],
+        [
+          -2.2880861649809958e-08,
+          0.8905746340751648,
+          0.4548371732234955,
+          0.343811959028244
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | hero",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "PERSP",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | leather_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.7568230032920837,
+          0.11795206367969513,
+          -0.6428889632225037,
+          -0.10499999672174454
+        ],
+        [
+          -0.6536198854446411,
+          0.13657616078853607,
+          -0.744397759437561,
+          -0.11100000143051147
+        ],
+        [
+          5.0402675810801156e-08,
+          0.9835823774337769,
+          0.18045979738235474,
+          0.1550000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | leather_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.691111147403717,
+        "angle_y": 0.4710899591445923,
+        "angle": 0.691111147403717,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 10.0,
+        "lens": 50.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.029999999329447746,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | left": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          -4.371138828673793e-08,
+          -4.371138828673793e-08,
+          -1.0,
+          -0.6020000576972961
+        ],
+        [
+          -1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.07000000029802322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | left",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | opened": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.8532818555831909,
+          0.27357217669487,
+          -0.44392383098602295,
+          -0.447174996137619
+        ],
+        [
+          -0.5214500427246094,
+          0.4476635158061981,
+          -0.7264208793640137,
+          -0.5687037706375122
+        ],
+        [
+          -3.738554354981716e-08,
+          0.8513258099555969,
+          0.5246373414993286,
+          0.6136200428009033
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | opened",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "PERSP",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | rear": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          -1.0,
+          1.5099583094979607e-07,
+          1.5099581673894136e-07,
+          0.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -7.54979225803254e-08,
+          1.0,
+          0.6020000576972961
+        ],
+        [
+          1.509958451606508e-07,
+          1.0,
+          7.549790126404332e-08,
+          0.07000000029802322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | rear",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | reference_branding_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.9079594016075134,
+          0.10351849347352982,
+          -0.4060709774494171,
+          -0.11999999731779099
+        ],
+        [
+          -0.4190581440925598,
+          0.22429007291793823,
+          -0.8798205852508545,
+          -0.33000001311302185
+        ],
+        [
+          -9.016758895086241e-09,
+          0.9690086841583252,
+          0.24702654778957367,
+          0.11999999731779099
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | reference_branding_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.3561858832836151,
+        "angle_y": 0.23885785043239594,
+        "angle": 0.3561858832836151,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 100.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.09600000083446503,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | reference_corner_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.8077909350395203,
+          0.17230278253555298,
+          -0.5637246966362,
+          -0.15000000596046448
+        ],
+        [
+          -0.5894690752029419,
+          0.2361186295747757,
+          -0.7725116014480591,
+          -0.18000000715255737
+        ],
+        [
+          -2.967336598658221e-09,
+          0.9563261866569519,
+          0.29230165481567383,
+          0.18000000715255737
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | reference_corner_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.3561858832836151,
+        "angle_y": 0.23885785043239594,
+        "angle": 0.3561858832836151,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 100.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.017999999225139618,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | reference_hero": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.6063425540924072,
+          0.1989755928516388,
+          -0.7699074149131775,
+          -0.800000011920929
+        ],
+        [
+          -0.7952035665512085,
+          0.15171895921230316,
+          -0.5870541930198669,
+          -0.6100000143051147
+        ],
+        [
+          8.797143635774773e-08,
+          0.9681890606880188,
+          0.25021976232528687,
+          0.33000001311302185
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | reference_hero",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "PERSP",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.23885785043239594,
+        "angle_y": 0.1596599668264389,
+        "angle": 0.23885785043239594,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 150.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 6.0,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | reference_leather_macro": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          0.8626178503036499,
+          0.08754696696996689,
+          -0.49822279810905457,
+          -0.15000000596046448
+        ],
+        [
+          -0.5058561563491821,
+          0.1492905169725418,
+          -0.8496010303497314,
+          -0.23000000417232513
+        ],
+        [
+          -5.734320396300063e-08,
+          0.9849100708961487,
+          0.17306682467460632,
+          0.15000000596046448
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | reference_leather_macro",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.3561858832836151,
+        "angle_y": 0.23885785043239594,
+        "angle": 0.3561858832836151,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 100.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.02800000086426735,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | right": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          0.6020000576972961
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.07000000029802322
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | right",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CAM | top": {
+      "type": "CAMERA",
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.6720000505447388
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [],
+      "camera": {
+        "name": "CAM | top",
+        "use_fake_user": false,
+        "use_extra_user": false,
+        "is_runtime_data": false,
+        "tag": false,
+        "type": "ORTHO",
+        "sensor_fit": "AUTO",
+        "passepartout_alpha": 0.5,
+        "angle_x": 0.5033799409866333,
+        "angle_y": 0.33955657482147217,
+        "angle": 0.5033799409866333,
+        "clip_start": 0.0010000000474974513,
+        "clip_end": 20.0,
+        "lens": 70.0,
+        "sensor_width": 36.0,
+        "sensor_height": 24.0,
+        "ortho_scale": 0.19599999487400055,
+        "display_size": 1.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "show_limits": false,
+        "show_mist": false,
+        "show_passepartout": true,
+        "show_safe_areas": false,
+        "show_safe_center": false,
+        "show_name": false,
+        "show_sensor": false,
+        "show_background_images": false,
+        "lens_unit": "MILLIMETERS",
+        "composition_guide_color": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "show_composition_center": false,
+        "show_composition_center_diagonal": false,
+        "show_composition_thirds": false,
+        "show_composition_golden": false,
+        "show_composition_golden_tria_a": false,
+        "show_composition_golden_tria_b": false,
+        "show_composition_harmony_tri_a": false,
+        "show_composition_harmony_tri_b": false,
+        "panorama_type": "FISHEYE_EQUISOLID",
+        "fisheye_fov": 3.1415927410125732,
+        "fisheye_lens": 10.5,
+        "latitude_min": -1.5707963705062866,
+        "latitude_max": 1.5707963705062866,
+        "longitude_min": -3.1415927410125732,
+        "longitude_max": 3.1415927410125732,
+        "fisheye_polynomial_k0": -1.1735143743862864e-05,
+        "fisheye_polynomial_k1": -0.019988736137747765,
+        "fisheye_polynomial_k2": -3.3525323033245513e-06,
+        "fisheye_polynomial_k3": 3.0992753181635635e-06,
+        "fisheye_polynomial_k4": -2.60646473293491e-08,
+        "central_cylindrical_range_u_min": -3.1415927410125732,
+        "central_cylindrical_range_u_max": 3.1415927410125732,
+        "central_cylindrical_range_v_min": -1.0,
+        "central_cylindrical_range_v_max": 1.0,
+        "central_cylindrical_radius": 1.0,
+        "custom_filepath": "",
+        "custom_mode": "INTERNAL",
+        "custom_bytecode": "",
+        "custom_bytecode_hash": ""
+      }
+    },
+    "CTRL | Base": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": []
+    },
+    "CTRL | Lid lift-off": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.13875000178813934
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": []
+    },
+    "GUIDE | Front branding area": {
+      "type": "EMPTY",
+      "parent": "CTRL | Lid lift-off",
+      "matrix_basis": [
+        [
+          0.041999999433755875,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          9.999999747378752e-05,
+          0.0,
+          -0.07010000199079514
+        ],
+        [
+          0.0,
+          0.0,
+          0.008999999612569809,
+          0.052000001072883606
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          -0.13875000178813934
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "modifiers": []
+    }
+  },
+  "transforms": {
+    "Box | Base shell": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Base"
+    },
+    "Box | Interior collar and reveal": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Base"
+    },
+    "Box | Interior tray floor": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Base"
+    },
+    "Box | Lid shell": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Lid lift-off"
+    },
+    "CTRL | Base": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    },
+    "CTRL | Lid lift-off": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.13875000178813934
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    },
+    "PE6 | Continuous base leather wrap": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Base"
+    },
+    "PE6 | Continuous lid leather wrap": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Lid lift-off"
+    },
+    "PE6 | Inset leather stitching": {
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_inverse": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0,
+          -0.13875000178813934
+        ],
+        [
+          -0.0,
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "parent": "CTRL | Lid lift-off"
+    }
+  },
+  "source": "/Users/admin/Documents/perhaps-3d-assets/outputs/packaging/private-edition-v009/private_edition.blend",
+  "source_sha256": "08c9f6265088e34b1633d807fbf57874d65add535b86a1c57ee5fd9e74fdfd5d"
+}

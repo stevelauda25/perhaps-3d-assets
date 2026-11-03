@@ -1,0 +1,60 @@
+{
+  "id": "omega-speedmaster-black-v014",
+  "output": "outputs/jobs/omega-speedmaster-black-v014",
+  "asset_type": "watch",
+  "model": "Omega Speedmaster Moonwatch Professional 310.30.42.50.01.001",
+  "baseline": "v14: v13 model (bracelet barrel links, crown/pushers rebuilt from macro, shoulders) in the dark straight-on presentation kit",
+  "input": "assets/watches/baseline/casio_studio_base.blend",
+  "references": [
+    "references/omega-speedmaster-310-30-42-50-01-001/sources.md",
+    "config/watches/speedmaster-moonwatch-black-v11.json",
+    "config/watches/speedmaster-trace.json",
+    "config/watches/speedmaster-print.json",
+    "config/presets/watch_kit_front.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_speedmaster_v3",
+      "params": {
+        "spec": "config/watches/speedmaster-moonwatch-black-v11.json",
+        "library_roles": {
+          "steel_brushed": "steel.brushed-aniso",
+          "steel_polished": "steel.polished-clean",
+          "steel_links": "steel.brushed-links",
+          "bezel_black": "aluminium.anodised-black",
+          "dial_black": "dial.matte-black",
+          "subdial_black": "dial.matte-black",
+          "print_white": "print.white-bright",
+          "lume": "lume.bright",
+          "hesalite": "glass.hesalite-v2"
+        }
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_front.json"
+      }
+    },
+    {
+      "name": "preview-front-ref",
+      "render": {
+        "camera": "CAM | front_ref",
+        "resolution": 2048,
+        "profile": "preview",
+        "aspect_h_over_w": 1.25
+      }
+    },
+    {
+      "name": "preview-front-macro",
+      "render": {
+        "camera": "CAM | front_ref_macro",
+        "resolution": 2048,
+        "profile": "preview",
+        "aspect_h_over_w": 1.25
+      }
+    }
+  ]
+}

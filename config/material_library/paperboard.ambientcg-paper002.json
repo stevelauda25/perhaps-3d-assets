@@ -1,0 +1,76 @@
+{
+  "id": "paperboard.ambientcg-paper002",
+  "category": "paperboard",
+  "name": "ambientCG Paper002 (off-white recycled stock, real micro-relief)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/ambientcg_paper002_2k",
+    "url": "https://ambientcg.com/view?id=Paper002",
+    "license": "CC0-1.0"
+  },
+  "maps": {
+    "color": "Paper002_2K-JPG_Color.jpg",
+    "roughness": "Paper002_2K-JPG_Roughness.jpg",
+    "normal": "Paper002_2K-JPG_NormalGL.jpg",
+    "height": null
+  },
+  "mapping": {
+    "mode": "box",
+    "tile_width_mm": 300,
+    "uv_map": null,
+    "uv_mm_per_unit": null
+  },
+  "color": {
+    "tint_linear": [
+      0.69,
+      0.46,
+      0.27
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "source_range": [
+      0.92,
+      0.957
+    ],
+    "range": [
+      0.66,
+      0.84
+    ]
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": null,
+  "micro": null,
+  "bsdf": {
+    "ior": 1.48,
+    "specular_ior_level": 0.3,
+    "sheen_weight": 0.12,
+    "sheen_roughness": 0.65
+  },
+  "measured": {
+    "mean_srgb_8bit": [
+      195,
+      185,
+      179
+    ],
+    "reference_sheet_flat_face_srgb_8bit": [
+      166,
+      130,
+      99
+    ]
+  },
+  "limitations": [
+    "Physical tile size is assumed (300 mm wide): ambientCG lists no dimensions for this asset.",
+    "2K source (~6.8 px/mm): hero-distance flecks/fibres are magnified ~1x, macro crops ~3x.",
+    "No embossed leaf/crinkle pattern like the reference sheet; this is plain uncoated stock.",
+    "Source is grey recycled-looking stock with coloured flecks; heavy warm tint (0.69,0.46,0.27) also tints the flecks.",
+    "JPG maps, 2048x1588 (non-square); mapping keeps texels square.",
+    "Source roughness 0.92-0.96 is remapped, not measured."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "tier": "spark",
+  "builder": "paperboard",
+  "surface": "uncoated warm-sand paperboard",
+  "slot_map": {
+    "PE6 | Scanned obsidian leather": "exterior",
+    "PE6 | Pressed leather": "branding",
+    "PE | Dark soft interior lining.001": "interior",
+    "PE | Dark graphite brushed inlay.001": "band"
+  },
+  "hide_render": [
+    "PE6 | Inset leather stitching"
+  ],
+  "defaults": {
+    "fiber_scale_per_mm": 3.2,
+    "fiber_detail": 7.0,
+    "mottle_scale_per_mm": 0.22,
+    "mottle_amount": 0.07,
+    "speckle_amount": 0.05,
+    "bump_strength": 0.22,
+    "bump_distance_mm": 0.12,
+    "ior": 1.48,
+    "specular_ior_level": 0.3,
+    "sheen_weight": 0.12,
+    "sheen_roughness": 0.65
+  },
+  "roles": {
+    "exterior": {
+      "color_linear": [
+        0.46,
+        0.285,
+        0.15
+      ],
+      "roughness_range": [
+        0.74,
+        0.9
+      ]
+    },
+    "branding": {
+      "from": "exterior",
+      "color_factor": 0.86,
+      "roughness_offset": -0.06,
+      "bump_strength": 0.12
+    },
+    "interior": {
+      "color_linear": [
+        0.72,
+        0.66,
+        0.54
+      ],
+      "roughness_range": [
+        0.7,
+        0.86
+      ],
+      "bump_strength": 0.1,
+      "mottle_amount": 0.03
+    },
+    "band": {
+      "color_linear": [
+        0.8,
+        0.74,
+        0.62
+      ],
+      "roughness_range": [
+        0.5,
+        0.64
+      ],
+      "bump_strength": 0.06,
+      "mottle_amount": 0.025,
+      "speckle_amount": 0.02
+    }
+  },
+  "studio": {
+    "lights": [
+      {
+        "name": "Front silk reflection",
+        "position": [
+          0.28,
+          -0.3,
+          0.2
+        ],
+        "target": [
+          0,
+          -0.06,
+          0.08
+        ],
+        "power": 0.85,
+        "size": [
+          0.22,
+          0.65
+        ]
+      },
+      {
+        "name": "Left silk reflection",
+        "position": [
+          -0.3,
+          0.22,
+          0.2
+        ],
+        "target": [
+          -0.06,
+          0,
+          0.085
+        ],
+        "power": 0.6,
+        "size": [
+          0.2,
+          0.55
+        ]
+      },
+      {
+        "name": "Top reflection card",
+        "position": [
+          0.38,
+          0.28,
+          0.25
+        ],
+        "target": [
+          0,
+          0,
+          0.14
+        ],
+        "power": 0.04,
+        "size": [
+          0.22,
+          0.25
+        ]
+      },
+      {
+        "name": "Quiet camera fill",
+        "position": [
+          -0.45,
+          -0.4,
+          0.3
+        ],
+        "target": [
+          0,
+          0,
+          0.075
+        ],
+        "power": 0.025,
+        "size": [
+          0.3,
+          0.35
+        ]
+      },
+      {
+        "name": "Low inlay reflection",
+        "position": [
+          0.06,
+          -0.11,
+          0.01
+        ],
+        "target": [
+          0,
+          -0.067,
+          0.025
+        ],
+        "power": 0.009,
+        "size": [
+          0.12,
+          0.025
+        ]
+      }
+    ]
+  }
+}

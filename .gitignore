@@ -1,0 +1,18 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+outputs/
+delivery/
+*.blend
+*.blend[0-9]*
+*.glb
+*.gltf
+*.fbx
+*.exr
+*.hdr
+# Keep source reference images; ignore historical/generated asset imagery.
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.log

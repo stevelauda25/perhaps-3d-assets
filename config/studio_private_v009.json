@@ -1,0 +1,148 @@
+{
+  "view_transform": "Standard",
+  "exposure": -0.25,
+  "floor_color": [
+    0.00015,
+    0.00015,
+    0.00015
+  ],
+  "floor_reflection_fraction": 0.025,
+  "lights": [
+    {
+      "name": "Front silk reflection",
+      "position": [
+        0.29,
+        -0.3,
+        0.105
+      ],
+      "target": [
+        0,
+        -0.065,
+        0.09
+      ],
+      "power": 0.3,
+      "size": [
+        0.16,
+        0.35
+      ]
+    },
+    {
+      "name": "Left silk reflection",
+      "position": [
+        -0.32,
+        0.22,
+        0.065
+      ],
+      "target": [
+        -0.065,
+        0,
+        0.085
+      ],
+      "power": 0.2,
+      "size": [
+        0.14,
+        0.3
+      ]
+    },
+    {
+      "name": "Top reflection card",
+      "position": [
+        0.38,
+        0.26,
+        0.24
+      ],
+      "target": [
+        0,
+        0,
+        0.14
+      ],
+      "power": 0.07,
+      "size": [
+        0.18,
+        0.18
+      ]
+    },
+    {
+      "name": "Quiet camera fill",
+      "position": [
+        -0.45,
+        -0.4,
+        0.3
+      ],
+      "target": [
+        0,
+        0,
+        0.075
+      ],
+      "power": 0.045,
+      "size": [
+        0.3,
+        0.35
+      ]
+    },
+    {
+      "name": "Low inlay reflection",
+      "position": [
+        0.06,
+        -0.11,
+        0.006
+      ],
+      "target": [
+        0,
+        -0.067,
+        0.025
+      ],
+      "power": 0.004,
+      "size": [
+        0.075,
+        0.016
+      ]
+    }
+  ],
+  "neutral": {
+    "floor_color": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "floor_reflection_fraction": 0,
+    "lights": [
+      {
+        "name": "Neutral large key",
+        "position": [
+          -0.15,
+          -0.25,
+          0.2
+        ],
+        "target": [
+          0,
+          0,
+          0.09
+        ],
+        "power": 1.0,
+        "size": [
+          0.25,
+          0.3
+        ]
+      },
+      {
+        "name": "Neutral fill",
+        "position": [
+          0.2,
+          -0.1,
+          0.2
+        ],
+        "target": [
+          0,
+          0,
+          0.09
+        ],
+        "power": 0.5,
+        "size": [
+          0.2,
+          0.25
+        ]
+      }
+    ]
+  }
+}

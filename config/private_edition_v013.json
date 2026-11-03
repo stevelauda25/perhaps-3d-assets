@@ -1,0 +1,22 @@
+{
+  "name": "Perhaps Private Edition v013 - lean rebuild on Essential v002",
+  "base": "outputs/jobs/essential-v002/look.blend",
+  "base_lock": "essential-v002 geometry == canonical v010 lock; only the lid wrap (wordmark) differs",
+  "visual_reference": "outputs/packaging/private-edition-v012-optimized/private_edition_calibrated.blend",
+  "output": "outputs/packaging/private-edition-v013",
+  "scene": "private_edition.blend",
+  "lid_wrap": "PE6 | Continuous lid leather wrap",
+  "reference_materials": {
+    "Essential | exterior": "PE6 | Scanned obsidian leather",
+    "Essential | branding": "PE6 | Pressed leather",
+    "Essential | interior": "PE | Dark soft interior lining.001",
+    "Essential | band": "PE | Dark graphite brushed inlay.001"
+  },
+  "images": {
+    "Original 8K source | color": "leather_red_02_lum_8k.png",
+    "Original 8K source | roughness": "leather_red_02_rough_8k.png",
+    "Original 8K source | normal": "leather_red_02_nor_gl_8k.png"
+  },
+  "show_render": ["PE6 | Inset leather stitching"],
+  "exposure": -0.25
+}
