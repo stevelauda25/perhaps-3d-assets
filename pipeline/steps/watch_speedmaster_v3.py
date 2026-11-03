@@ -522,10 +522,16 @@ def run(params):
                     coll.objects.link(o)
                     o.parent = pose
                     o.location = (cxm * fx, sign * (ya + yb) / 2, bc["z"])
+                    if bc.get("follow_path"):  # worn pose: lay the link along the loop path (arc length from the path start)
+                        u = (ya + yb) / 2 - b["path_yz"][0][0]
+                        if u > 0:
+                            pos_, tan_ = at(u)
+                            o.location = (cxm * fx, sign * pos_.x, pos_.y + bc["z"] - b["path_yz"][0][1])
+                            o.rotation_euler = (sign * math.atan2(tan_.y, tan_.x), 0, 0)
                     md = o.modifiers.new("Edge", "BEVEL")
                     md.width, md.segments, md.limit_method, md.angle_limit, md.material = bc.get("chamfer", 0.12), 2, "ANGLE", math.radians(30), 1
                     o.modifiers.new("Weighted normals", "WEIGHTED_NORMAL").keep_sharp = True
-        if bc.get("backing"):  # solid plate behind the links: the gaps between links read as thin dark lines, nothing shows through
+        if bc.get("backing") and not bc.get("follow_path"):  # solid plate behind the links: the gaps between links read as thin dark lines, nothing shows through
             for sign in (1, -1):
                 ya_, yb_ = bc["y_start"], bc["y_end"]
                 trap = [(-base_w * taper(ya_) / 2 + 0.15, sign * ya_), (base_w * taper(ya_) / 2 - 0.15, sign * ya_), (base_w * taper(yb_) / 2 - 0.15, sign * yb_), (-base_w * taper(yb_) / 2 + 0.15, sign * yb_)]
