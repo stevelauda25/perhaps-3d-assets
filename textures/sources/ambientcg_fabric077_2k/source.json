@@ -1,0 +1,33 @@
+{
+  "asset": "Fabric077",
+  "author": "ambientCG",
+  "asset_url": "https://ambientcg.com/view?id=Fabric077",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "download_url": "https://ambientcg.com/get?file=Fabric077_2K-JPG.zip",
+  "archive_sha256": "ea5114459059ed591aa43af2d475389f6be220252156c4ed642b440cedb5bbd5",
+  "downloaded": "2026-10-30",
+  "note": "NormalDX and bundled scene/material files dropped (unused).",
+  "files": {
+    "Fabric077.png": {
+      "bytes": 571997,
+      "sha256": "5dfe540831e8851a5f00db3daf49651a5570f60ddbee0778524e74f31e4d7d06"
+    },
+    "Fabric077_2K-JPG_Color.jpg": {
+      "bytes": 6060128,
+      "sha256": "bca514e715730df0050aaa842bac62223d187c933048b8b45c51bff0273e5073"
+    },
+    "Fabric077_2K-JPG_Displacement.jpg": {
+      "bytes": 3078347,
+      "sha256": "85f6627228225dc53f254087d76ec8b95f5d544a728ec8711354dfcaa166b184"
+    },
+    "Fabric077_2K-JPG_NormalGL.jpg": {
+      "bytes": 10153524,
+      "sha256": "afedae77de570b7d7bde5e808e9c880eeb88197b212f75397fe43c4edae034c0"
+    },
+    "Fabric077_2K-JPG_Roughness.jpg": {
+      "bytes": 2144520,
+      "sha256": "d112b57b65c0a26ded3683b71c2ee62bf68cb4f16bdbfa125cbca5dea3b82d28"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "asset": "Paper006",
+  "author": "ambientCG",
+  "asset_url": "https://ambientcg.com/view?id=Paper006",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "download_url": "https://ambientcg.com/get?file=Paper006_2K-PNG.zip",
+  "archive_sha256": "fd8fe5e27c1bde3b6ecbcfc9169b0b42efd05777d0109f2206c848c9087293d9",
+  "creation_method": "PBRApproximated (per ambientCG API)",
+  "downloaded": "2026-10-30",
+  "files": {
+    "Paper006_2K-PNG_Color.png": {
+      "bytes": 6722012,
+      "sha256": "c71e9599310eba086da43282e87e1852cef163c479e382d584089fb398114014"
+    },
+    "Paper006_2K-PNG_Displacement.png": {
+      "bytes": 7549956,
+      "sha256": "d6ca7eb79b3c8471e5676472464713a3d8af9168bbc953660615f8acb48f46a2"
+    },
+    "Paper006_2K-PNG_NormalGL.png": {
+      "bytes": 17259143,
+      "sha256": "f4255af6209451ba15e39053e9061219c7e096c9098b93f7514ca97b936ffafd"
+    },
+    "Paper006_2K-PNG_Roughness.png": {
+      "bytes": 2433947,
+      "sha256": "d5923d437f70e6aabd50632aafaf57eed1a3157dc24dbe731040d9e9b5b5e6ce"
+    }
+  }
+}

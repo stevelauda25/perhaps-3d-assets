@@ -1,0 +1,33 @@
+{
+  "asset": "Leather039",
+  "author": "ambientCG",
+  "asset_url": "https://ambientcg.com/view?id=Leather039",
+  "license": "CC0-1.0",
+  "license_url": "https://docs.ambientcg.com/license/",
+  "download_url": "https://ambientcg.com/get?file=Leather039_2K-JPG.zip",
+  "archive_sha256": "650efcd50b06d1671005e809c16c767059417505b4416a197e490dda9c420364",
+  "downloaded": "2026-10-30",
+  "note": "NormalDX and bundled scene/material files dropped (unused).",
+  "files": {
+    "Leather039.png": {
+      "bytes": 344525,
+      "sha256": "372afb73d223d011a847c8eab3288a72827913b2d6700f62713016ae4bbcfe25"
+    },
+    "Leather039_2K-JPG_Color.jpg": {
+      "bytes": 5841943,
+      "sha256": "6db683d25dc9ca9272f27089df5bcc605a40552b2da3cbab0fbdfc9e8bdf4508"
+    },
+    "Leather039_2K-JPG_Displacement.jpg": {
+      "bytes": 3344591,
+      "sha256": "bb7b71c25fe2b3f4744e3b73877f1fe755ac96c55422ff78ab75900cae9553ed"
+    },
+    "Leather039_2K-JPG_NormalGL.jpg": {
+      "bytes": 7850093,
+      "sha256": "7f7e8477b00fd5430c5d465ac9583ee5a891081426b0425d0b32a1ce7dba524e"
+    },
+    "Leather039_2K-JPG_Roughness.jpg": {
+      "bytes": 3162342,
+      "sha256": "90873234accb27fbf8758781717ecbd84ed7b35d56a3bba572c7c587736a025e"
+    }
+  }
+}

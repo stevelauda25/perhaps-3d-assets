@@ -1,0 +1,40 @@
+{
+  "asset": "leather_red_02",
+  "author": "Rob Tuytel / Poly Haven",
+  "source_url": "https://polyhaven.com/a/leather_red_02",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "published_width_m": 0.6,
+  "source_resolution": 8192,
+  "capture_provenance": "Original published photographic PBR material; capture technique and absolute relief depth not specified by provider. Normals/height are supplied maps, not independently measured here.",
+  "maps": {
+    "color": {
+      "path": "textures/sources/polyhaven_leather_red_02_8k/leather_red_02_coll1_8k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/leather_red_02/leather_red_02_coll1_8k.png",
+      "md5": "2d14fa3abd422f2d841eb8dba8e28910",
+      "sha256": "59333325f3320b54716d8690029648a9a82a3c64e3b109f897b79dfe0c31434d",
+      "bytes": 108818342
+    },
+    "normal": {
+      "path": "textures/sources/polyhaven_leather_red_02_8k/leather_red_02_nor_gl_8k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/leather_red_02/leather_red_02_nor_gl_8k.png",
+      "md5": "611e46da74ca045433847036fcc8cfab",
+      "sha256": "87d6fb5e49c77f275a5a4b8b2c00edf3e8482f46773f2a1e2dcf0f38ab57866f",
+      "bytes": 86788036
+    },
+    "roughness": {
+      "path": "textures/sources/polyhaven_leather_red_02_8k/leather_red_02_rough_8k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/leather_red_02/leather_red_02_rough_8k.png",
+      "md5": "289e7ad71c2623ed686641d045e8eb81",
+      "sha256": "9697a2d3c20752abce556bbc8a0b5b82d1ebe71b8c5988249a38db81bb86f518",
+      "bytes": 36699594
+    },
+    "height": {
+      "path": "textures/sources/polyhaven_leather_red_02_8k/leather_red_02_disp_8k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/8k/leather_red_02/leather_red_02_disp_8k.png",
+      "md5": "1a6380599aa4028db86fa6f89edfbbab",
+      "sha256": "169536bb813e09230d70a3a742825ba1104f914c88ade995f6a88be1d143f82d",
+      "bytes": 106828104
+    }
+  }
+}
