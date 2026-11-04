@@ -480,6 +480,129 @@ def run(params):
         add("pushers", g, "steel_polished")
 
 
+    def fold_clasp(fc):
+        """Omega fold-over clasp at the bottom of the worn loop (references/omega-clasp/): a brushed cover with polished
+        grooves and a raised polished Omega at one end, oval push buttons on both flanks, and an end barrel at each end
+        joining the bracelet. Built straight in a clasp frame (x across, s along, n outward from the wrist), then bent
+        onto a circular arc through the loop bottom and the loop path at the clasp ends (the path kinks at its end)."""
+        L, W, n0, n1 = fc["length"], fc["width"], fc["inner"], fc["outer"]
+        (ey, ez), _ = at(half_len - L / 2)
+        bz = b["path_yz"][-1][1]
+        zc = (ey ** 2 + ez ** 2 - bz ** 2) / (2 * (ez - bz))
+        R = zc - bz
+
+        def bend(x, s_, n):
+            ph = s_ / R
+            return (x, (R + n) * math.sin(ph), zc - (R + n) * math.cos(ph))
+
+        def solid(name, verts, faces, mat_ids, slots, bevel=None):
+            import bmesh
+            me = subd_mesh(P + name, (verts, faces, mat_ids), slots)
+            bm = bmesh.new()
+            bm.from_mesh(me)
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)  # the bend mirrors the frame; let each solid face outward
+            bm.to_mesh(me)
+            bm.free()
+            o = bpy.data.objects.new(P + name, me)
+            coll.objects.link(o)
+            o.parent = pose
+            if bevel:
+                md = o.modifiers.new("Edge", "BEVEL")
+                md.width, md.segments, md.limit_method, md.angle_limit, md.material = bevel, 2, "ANGLE", math.radians(30), 1
+            o.modifiers.new("Weighted normals", "WEIGHTED_NORMAL").keep_sharp = True
+            parts[name] = o
+            return o
+
+        def arc(cx, cn, r, a0, a1, k=5):
+            return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / k)), cn + r * math.sin(math.radians(a0 + (a1 - a0) * i / k))) for i in range(k + 1)]
+
+        # cover cross-section, counter-clockwise in (x, n); edge i (point i -> i+1) is polished on the groove flanks
+        ro, ri, crown, gw, gd = fc["r_outer"], fc["r_inner"], fc["crown"], fc["groove_w"], fc["groove_d"]
+        top = lambda x: n1 - crown * (2 * x / W) ** 2
+        sec, pol, floor = [], [], {}  # floor: section index of a groove bottom -> its groove x
+
+        def put(pts, polished=False):
+            for q in pts:
+                sec.append(q)
+                pol.append(polished)
+        put(arc(-W / 2 + ri, n0 + ri, ri, 180, 270))
+        put(arc(W / 2 - ri, n0 + ri, ri, 270, 360))
+        put(arc(W / 2 - ro, top(W / 2) - ro, ro, 0, 90))
+        xs = [W / 2 - ro - 0.5 * i for i in range(1, int((W - 2 * ro) / 0.5))]
+        grooves = sorted(fc["grooves"], reverse=True)
+        x_prev = W / 2 - ro
+        for g in grooves:
+            put([(x, top(x)) for x in xs if g + gw / 2 < x < x_prev])
+            put([(g + gw / 2, top(g + gw / 2))], polished=True)
+            floor[len(sec)] = g
+            put([(g, top(g) - gd)], polished=True)
+            put([(g - gw / 2, top(g - gw / 2))])
+            x_prev = g - gw / 2
+        put([(x, top(x)) for x in xs if x < x_prev])
+        put(arc(-W / 2 + ro, top(W / 2) - ro, ro, 90, 180))
+        NS = fc["stations"]
+        verts, faces, mids = [], [], []
+        m = len(sec)
+        stop = L / 2 - fc["logo"]["from_end"] - fc["logo"]["r_outer"] - fc["logo"]["clear"]  # the centre grooves end short of the Omega
+        for j in range(NS + 1):
+            s_ = -L / 2 + L * j / NS
+            verts += [bend(x, s_, top(x) if s_ > stop and abs(floor.get(i, 99)) < fc["logo"]["r_outer"] else n) for i, (x, n) in enumerate(sec)]
+        for j in range(NS):
+            for i in range(m):
+                a, c = j * m + i, j * m + (i + 1) % m
+                faces.append((a, c, c + m, a + m))
+                mids.append(1 if pol[i] else 0)
+        faces += [tuple(range(m)), tuple(range(NS * m, NS * m + m))]
+        mids += [0, 0]
+        solid("clasp_cover", verts, faces, mids, ("steel_links", "steel_polished"), bevel=fc["chamfer"])
+
+        # raised Omega on the logo end (upright toward that end), push buttons, end barrels: polished / brushed
+        g_v, g_f = [], []
+
+        def prism(poly, lo, hi, m_=None):  # poly in (x, s); n from lo to hi
+            base, k = len(g_v), len(poly)
+            for n in (lo, hi):
+                g_v.extend(bend(x, s_, n) for x, s_ in poly)
+            g_f.append(tuple(range(base + k - 1, base - 1, -1)))
+            g_f.append(tuple(range(base + k, base + 2 * k)))
+            g_f.extend((base + i, base + (i + 1) % k, base + k + (i + 1) % k, base + k + i) for i in range(k))
+        lg = fc["logo"]
+        sc, r_o, r_i, h = L / 2 - lg["from_end"], lg["r_outer"], lg["r_inner"], lg["height"]
+        ring = [(x, sc + y) for x, y in arc(0, 0, r_o, -58, 238, 28)] + [(x, sc + y) for x, y in arc(0, 0, r_i, 238, -58, 28)]
+        prism(ring, top(0) - 0.05, top(0) + h)
+        for side in (1, -1):
+            foot = [(side * 0.6, sc - r_o - 0.02), (side * (r_o + 0.4), sc - r_o - 0.02), (side * (r_o + 0.4), sc - r_o + 0.4), (side * 0.6, sc - r_o + 0.4)]
+            prism(foot, top(0) - 0.05, top(0) + h - 0.02)
+        bt = fc["button"]
+        for side in (1, -1):  # oval domes half-sunk into each flank
+            base = len(g_v)
+            la, lo_ = 8, 16
+            for i in range(la + 1):
+                th = math.pi * i / la
+                for k in range(lo_):
+                    ph = 2 * math.pi * k / lo_
+                    a, b_, c = math.cos(th), math.sin(th) * math.cos(ph), math.sin(th) * math.sin(ph)
+                    g_v.append(bend(side * (W / 2 - bt["sink"] + bt["out"] * a), L / 2 - bt["from_end"] + bt["half_len"] * b_, (n0 + n1) / 2 + bt["lift"] + bt["half_h"] * c))
+            for i in range(la):
+                for k in range(lo_):
+                    p0, p1 = base + i * lo_ + k, base + i * lo_ + (k + 1) % lo_
+                    g_f.append((p0, p1, p1 + lo_, p0 + lo_))
+        solid("clasp_polished", g_v, g_f, [0] * len(g_f), ("steel_polished",))
+
+        g_v, g_f = [], []
+        gap, rb = fc["barrel_gap"], fc["barrel_r"]
+        for end in (1, -1):  # cylinders across the bracelet, axis x
+            sc_ = end * (L / 2 + gap / 2)
+            circ = [(sc_ + rb * math.cos(2 * math.pi * k / 24), rb * math.sin(2 * math.pi * k / 24)) for k in range(24)]
+            hw = fc["barrel_width"] / 2
+            base = len(g_v)
+            for x in (-hw, hw):
+                g_v.extend(bend(x, s_, n) for s_, n in circ)
+            g_f.append(tuple(range(base + 23, base - 1, -1)))
+            g_f.append(tuple(range(base + 24, base + 48)))
+            g_f.extend((base + i, base + (i + 1) % 24, base + 24 + (i + 1) % 24, base + 24 + i) for i in range(24))
+        solid("clasp_barrels", g_v, g_f, [0] * len(g_f), ("steel_links", "steel_polished"), bevel=fc["chamfer"])
+
     # ---- bracelet (straight pose): per-column links with rounded barrel ends, end links reaching the case ----
     bc = b.get("columns")
     if bc:
@@ -497,8 +620,13 @@ def run(params):
                 pitch_c = bc["pitch"] * (bc.get("rail_rows", 1) if ci in (1, 3) else 1)  # the thin links are long rails spanning several rows
                 spans = []
                 y_a = bc["y_start"]
-                while y_a < bc["y_end"]:
+                fc = b.get("fold_clasp") if bc.get("follow_path") else None
+                # With the fold clasp the links stop short of it (its end barrels fill the gap); a sliver is merged.
+                y_stop = b["path_yz"][0][0] + half_len - fc["length"] / 2 - fc["barrel_gap"] if fc else bc["y_end"]
+                while y_a < y_stop:
                     y_b = bnd + k_ * pitch_c - bc["gap"] / 2
+                    if fc and y_stop - y_b < 1.0:
+                        y_b = y_stop
                     spans.append((y_a, y_b))
                     y_a, k_ = y_b + bc["gap"], k_ + 1
                 for si, (ya, yb) in enumerate(spans):
@@ -522,14 +650,22 @@ def run(params):
                     coll.objects.link(o)
                     o.parent = pose
                     o.location = (cxm * fx, sign * (ya + yb) / 2, bc["z"])
+                    if bc.get("follow_path"):  # worn pose: lay the link along the loop path (arc length from the path start)
+                        u = (ya + yb) / 2 - b["path_yz"][0][0]
+                        if u > 0:
+                            pos_, tan_ = at(u)
+                            o.location = (cxm * fx, sign * pos_.x, pos_.y + bc["z"] - b["path_yz"][0][1])
+                            o.rotation_euler = (sign * math.atan2(tan_.y, tan_.x), 0, 0)
                     md = o.modifiers.new("Edge", "BEVEL")
                     md.width, md.segments, md.limit_method, md.angle_limit, md.material = bc.get("chamfer", 0.12), 2, "ANGLE", math.radians(30), 1
                     o.modifiers.new("Weighted normals", "WEIGHTED_NORMAL").keep_sharp = True
-        if bc.get("backing"):  # solid plate behind the links: the gaps between links read as thin dark lines, nothing shows through
+        if bc.get("backing") and not bc.get("follow_path"):  # solid plate behind the links: the gaps between links read as thin dark lines, nothing shows through
             for sign in (1, -1):
                 ya_, yb_ = bc["y_start"], bc["y_end"]
                 trap = [(-base_w * taper(ya_) / 2 + 0.15, sign * ya_), (base_w * taper(ya_) / 2 - 0.15, sign * ya_), (base_w * taper(yb_) / 2 - 0.15, sign * yb_), (-base_w * taper(yb_) / 2 + 0.15, sign * yb_)]
                 add("bracelet_backing_%+d" % sign, Geo().prism(trap, bc["z"] - 0.9, bc["z"] + bc.get("backing_top", 0.9)), bc.get("backing_mat", "steel_polished"))
+        if b.get("fold_clasp") and bc.get("follow_path"):
+            fold_clasp(b["fold_clasp"])
         b = dict(b, no_clasp=True)
         usable_rows = 0
     # ---- bracelet: five-link row, one shared mesh ----
