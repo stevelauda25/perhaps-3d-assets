@@ -143,8 +143,8 @@
    0.2,
    0.6
   ],
-  "bend_y": 24.0,
-  "bend_radius": 40.0
+  "bend_y": 22.0,
+  "bend_radius": 28.0
  },
  "materials": {
   "steel_polished": {
