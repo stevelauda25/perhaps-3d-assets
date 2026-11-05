@@ -10,6 +10,7 @@ All CC0 (ambientCG / Poly Haven); each folder's `source.json` records origin, li
 | Prestige Box | `sources/ambientcg_leather039_2k` | Color, Roughness, NormalGL, Displacement |
 | Icon Box | `../outputs/packaging/icon-v020/textures` (lean 2k maps, force-added to git) | lum, normal, roughness |
 | Watch (Speedmaster) | `sources/ambientcg_metal009_2k`, `sources/ambientcg_metal012_1k` | Roughness, NormalGL |
+| Watch (Seiko SNK607K1 GLB) | `derived/metal009_normalgl_1k.jpg` | NormalGL (Metal009 2K downscaled to 1024 px, Lanczos, JPEG quality 92; keeps the GLB under 10 MB) |
 
 The Icon maps were derived from the Poly Haven `leather_red_02` 8k scan (`sources/polyhaven_leather_red_02_8k/source.json` has the URL and checksums). The
 8k PNGs are not kept; download them again to regenerate with `pipeline/lean_leather_maps.py`.

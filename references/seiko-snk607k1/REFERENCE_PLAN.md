@@ -103,7 +103,7 @@ The dial map keeps the photo's lighting, indices, logo and print; the hands, the
 
 ```sh
 blender -b --factory-startup --python pipeline/watch_empty_base.py -- assets/watches/baseline/empty_base.blend   # once per machine
-python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v005.json                 # build, GLB, white comparison render
+python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v006.json                 # build, GLB, white comparison render
 python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # dark-kit previews (front, macro, crown side)
 ```
 
@@ -114,8 +114,9 @@ python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # 
 | v003 | Applied 5 shield (traced outline) and raised lume dots | `outputs/jobs/seiko-snk607k1-v003/board_front.png`, `outputs/jobs/seiko-snk607k1-v003-presentation/board_presentation.png` |
 | v004 | Crystal alpha-blended instead of transmission: web viewers blurred the dial through the transmission glass | `outputs/jobs/seiko-snk607k1-v004/cmp-front.png` |
 | v005 | Brushed steel on the bracelet, lugs and end links: ambientCG Metal009 normal map (CC0) on planar UVs, lines along the bracelet, strength 1.0, 20 mm tile | `outputs/jobs/seiko-snk607k1-v005/cmp-front.png` |
+| v006 | Bracelet straight to 24 mm, then rolled back over a 14 mm radius so the ends curve away like the Casio straps; normal map at 1K so the GLB stays under 10 MB (7.1 MB) | `outputs/jobs/seiko-snk607k1-v006/cmp-front.png` |
 
-v003 approved on 2026-11-05 (reported by Irsyad); v004 changes the crystal material and v005 adds the brushed steel normal map (11.5 MB GLB). Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v005/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
+v003 approved on 2026-11-05 (reported by Irsyad); v004 changes the crystal material, v005 adds the brushed steel normal map, v006 curves the bracelet ends and uses a 1K normal map (7.1 MB GLB). Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v006/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
 
 ## Known gaps
 

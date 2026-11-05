@@ -133,7 +133,7 @@
  "bracelet": {
   "pitch": 6.0,
   "centre_start_y": 18.1,
-  "end_y": 40.0,
+  "end_y": 46.0,
   "z0": 0.6,
   "z1": 3.8,
   "centre_ratio": 0.49,
@@ -142,7 +142,9 @@
   "backing_z": [
    0.2,
    0.6
-  ]
+  ],
+  "bend_y": 24.0,
+  "bend_radius": 14.0
  },
  "materials": {
   "steel_polished": {
@@ -229,10 +231,10 @@
  },
  "steel_textures": {
   "steel_brushed": {
-   "normal": "textures/sources/ambientcg_metal009_2k/Metal009_2K-JPG_NormalGL.jpg",
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
    "tile_mm": 20,
    "strength": 1.0,
-   "note": "ambientCG Metal009 (CC0); lines run along the bracelet; bevels keep the plain polished material"
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
   }
  }
 }
