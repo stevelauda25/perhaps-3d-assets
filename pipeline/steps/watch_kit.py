@@ -1,7 +1,7 @@
 """watch_kit: reflection-first studio. Replaces lights with emissive gradient cards + black flags, builds a coloured gradient world
 (camera sees a screen-space gradient, reflections see a direction gradient of the same colours), adds cameras and a compositor post chain.
 
-Params: kit_preset (config/presets/watch_kit_*.json). Needs `OMG | pose` (watch or probe scene); the dial centre is pose @ (0, 0, 8.5) mm.
+Params: kit_preset (config/presets/watch_kit_*.json), pose (default `OMG | pose`). Needs that pose empty (watch or probe scene); the dial centre is pose @ (0, 0, 8.5) mm.
 Why cards and not area lights: steel and glass show what they mirror, so a card with a linear emission ramp becomes the smooth
 light-to-dark sweep on curved links/flanks; black flags carve the dark between sweeps. Cards are invisible to the camera and cast no
 shadow. Angles: az 0 = dial normal, negative = viewer's left, el up; distance in metres from the dial centre.
@@ -142,7 +142,7 @@ def post_chain(scene, post):
 
 def run(params):
     cfg = json.loads((ROOT / params["kit_preset"]).read_text())
-    scene, pose = bpy.context.scene, bpy.data.objects["OMG | pose"]
+    scene, pose = bpy.context.scene, bpy.data.objects[params.get("pose", "OMG | pose")]
     center = pose.matrix_world @ Vector((0, 0, 8.5))
     old = bpy.data.collections.new("WATCH_KIT | previous lights (excluded)")
     scene.collection.children.link(old)

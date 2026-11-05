@@ -1,0 +1,230 @@
+{
+ "model": "Seiko 5 Automatic SNK607K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes come from the trace; heights are fitted by eye from the 3/4 photo and are inferred (no side view). The SEIKO letters stay in the dial map (their outline merges with the dial bumps in the photo).",
+ "trace": "config/watches/seiko-snk607k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snk607k1/dial_photo.png",
+ "verified_mm": {
+  "diameter": 37.0,
+  "bracelet_next_to_case": 20.26
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.4,
+    0
+   ],
+   [
+    18.2,
+    0.6
+   ],
+   [
+    18.5,
+    1.6
+   ],
+   [
+    18.5,
+    6.6
+   ],
+   [
+    18.35,
+    7.1
+   ],
+   [
+    16.25,
+    9.6
+   ],
+   [
+    15.95,
+    9.6
+   ],
+   [
+    15.95,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 15.6,
+  "r_out": 15.97,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 15.7,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 13.32,
+  "z": 8.0,
+  "rehaut_r": 15.66,
+  "rehaut_z": 9.0,
+  "map_half_mm": 15.666,
+  "roughness": 0.45
+ },
+ "indices": {
+  "width": 0.6,
+  "height": 0.35,
+  "line_width": 0.18,
+  "double_offset": 0.27,
+  "double_width": 0.32
+ },
+ "daydate_frame": {
+  "wall": 0.2,
+  "height": 0.12
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "hour": {
+   "half_width": 0.5,
+   "root_half_width": 0.35,
+   "lume_half_width": 0.22
+  },
+  "minute": {
+   "half_width": 0.42,
+   "root_half_width": 0.3,
+   "lume_half_width": 0.2
+  },
+  "seconds": {
+   "half_width": 0.08,
+   "counterweight_half_width": 0.3,
+   "counterweight_from": 2.6,
+   "tip_dot_radius": 0.22
+  },
+  "hub": {
+   "radius": 0.9,
+   "cap_radius": 0.6,
+   "cap_height": 0.25
+  }
+ },
+ "crown": {
+  "radius": 1.97,
+  "flute_depth": 0.25,
+  "teeth": 18,
+  "r_from": 18.2,
+  "r_to": 20.0,
+  "z": 4.1
+ },
+ "lug": {
+  "inner_x": 10.13,
+  "from_y": 10.5,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "pitch": 6.0,
+  "centre_start_y": 18.1,
+  "end_y": 40.0,
+  "z0": 0.6,
+  "z1": 3.8,
+  "centre_ratio": 0.49,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.2,
+   0.6
+  ]
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.02,
+   "transmission": 1.0,
+   "ior": 1.52
+  },
+  "index_line": {
+   "color": [
+    0.005,
+    0.005,
+    0.006
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.9,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "seconds_red": {
+   "color": [
+    0.35,
+    0.02,
+    0.03
+   ],
+   "metallic": 0.2,
+   "roughness": 0.3
+  }
+ },
+ "pose": {
+  "z_m": 0.05
+ },
+ "logo": {
+  "shield_height": 0.25,
+  "lume_dot_radius": 0.25
+ }
+}
