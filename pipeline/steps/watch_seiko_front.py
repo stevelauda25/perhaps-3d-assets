@@ -184,30 +184,34 @@ def run(params):
         for sy in (1, -1):
             slab(g, [(sx * x, sy * y) for x, y in outline], 0.0, slope)
     add("lugs", g, "steel_brushed", bevel=lg["bevel"], polished_bevel=True)
-    el = cfg["end_link"]
-    g = Geo()
+    # ---- bracelet: centre links start at the case, outer links at the lug tips (half a row apart, as in the photo) ----
+    br, el = cfg["bracelet"], cfg["end_link"]
+    hw_at = lambda y: half(round(min(max(y, tip), br["end_y"] - 0.25) * 4) / 4)  # silhouette rows are 0.25 mm apart
+    cw_at = lambda y: br["centre_ratio"] * hw_at(y)
+    g = Geo()  # end-link sides: between the first centre link and the lugs, from inside the case to the lug tips
     for sy in (1, -1):
-        g.prism(rect(0, sy * (lg["from_y"] + tip) / 2, 2 * lg["inner_x"], tip - lg["from_y"]), 0.0, el["top_z"])
+        for sx in (1, -1):
+            x0 = cw_at(tip) + br["gap"]
+            g.prism(rect(sx * (x0 + lg["inner_x"]) / 2, sy * (lg["from_y"] + tip) / 2, lg["inner_x"] - x0, tip - lg["from_y"]), 0.0, el["top_z"])
     add("end_links", g, "steel_brushed", bevel=el["bevel"], polished_bevel=True)
-
-    # ---- bracelet: centre and outer links staggered by half a pitch, width tapering with the silhouette ----
-    br = cfg["bracelet"]
-    hw_at = lambda y: half(round(min(y, br["end_y"] - 0.25) * 4) / 4)  # silhouette rows are 0.25 mm apart
     links, back = Geo(), Geo()
     rows = 0
     for sy in (1, -1):
-        k = 0
-        while tip + k * br["pitch"] < br["end_y"]:
-            y0, y1 = tip + k * br["pitch"], min(tip + (k + 1) * br["pitch"] - br["gap"], br["end_y"])
-            cw_ = br["centre_ratio"] * hw_at((y0 + y1) / 2)
-            links.prism(rect(0, sy * (y0 + y1) / 2, 2 * cw_, y1 - y0), br["z0"], br["z1"])
-            o0, o1 = max(tip + (k - 0.5) * br["pitch"], tip), min(tip + (k + 0.5) * br["pitch"] - br["gap"], br["end_y"])
-            ow = hw_at((o0 + o1) / 2)
-            for sx in (1, -1):
-                links.prism(rect(sx * (cw_ + br["gap"] + (ow - cw_ - br["gap"]) / 2), sy * (o0 + o1) / 2, ow - cw_ - br["gap"], o1 - o0), br["z0"], br["z1"])
-            k += 1
-            rows += 1
-        back.prism(rect(0, sy * (tip - 1 + br["end_y"]) / 2, 2 * (hw_at(tip + 1) - 0.3), br["end_y"] - tip + 1), *br["backing_z"])
+        for start, centre in ((br["centre_start_y"], True), (tip, False)):
+            y0 = start
+            while y0 < br["end_y"] - 0.5:
+                y1 = min(y0 + br["pitch"] - br["gap"], br["end_y"])
+                ym = (y0 + y1) / 2
+                if centre:
+                    links.prism(rect(0, sy * ym, 2 * cw_at(ym), y1 - y0), br["z0"], br["z1"])
+                    rows += 1
+                else:
+                    x0, x1 = cw_at(ym) + br["gap"], hw_at(ym)
+                    for sx in (1, -1):
+                        links.prism(rect(sx * (x0 + x1) / 2, sy * ym, x1 - x0, y1 - y0), br["z0"], br["z1"])
+                y0 += br["pitch"]
+        y_back = min(br["centre_start_y"], tip) - 1
+        back.prism(rect(0, sy * (y_back + br["end_y"]) / 2, 2 * (hw_at(tip) - 0.3), br["end_y"] - y_back), *br["backing_z"])
     add("bracelet_links", links, "steel_brushed", bevel=br["bevel"], polished_bevel=True)
     add("bracelet_backing", back, "steel_gap")
 
