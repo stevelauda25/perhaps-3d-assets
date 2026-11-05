@@ -112,6 +112,8 @@ def main(task_path):
         bpy.context.preferences.filepaths.save_version = 0
         bpy.ops.wm.save_as_mainfile(filepath=str(out_dir / (spec["name"] + ".blend")), compress=False)
         result["outputs"] = [spec["name"] + ".blend"]
+        if isinstance(result["summary"], dict):  # files a step wrote into the job folder (e.g. an exported GLB)
+            result["outputs"] += result["summary"].get("outputs", [])
     result["code"] = loaded_code()
     Path(task["result"]).write_text(json.dumps(result, indent=2) + "\n")
 
