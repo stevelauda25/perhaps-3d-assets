@@ -33,9 +33,9 @@ A front-facing GLB in `models/watches/seiko-snk361k1.glb`, built like `seiko-snk
 | Dial | Plain black; edge at 13.6 mm, thin polished rehaut ring | #1 |
 | Minute track | White ticks around the outer edge | #1, dial map |
 | Hour indices | Applied batons, polished outline with a black centre and a white lume block at the outer end; 9.4–12.8 mm; double at 12; lume block only at 3 (day-date) | #1 |
-| Logo, print | `SEIKO`, `5` shield, `AUTOMATIC 21 JEWELS`, small print at 6: kept in the dial map (the seconds hand crosses the shield in #1) | #1 |
+| Logo, print | `SEIKO`, `5` shield, `AUTOMATIC 21 JEWELS`, small print at 6: in the dial map. The seconds hand crosses `SEIKO` and the shield in #1, so that block comes from the SNK381K1 front photo (same applied logo, no hand over it) | #1, SNK381K1 #1 |
 | Day-date | `MON 7`, polished frame 7.5 × 2.6 mm, centre 8.3 mm right of the pivot | #1 |
-| Hands | Polished, white lume inserts, wide short tails; seconds hand polished with a long paddle tail; polished hub | #1 |
+| Hands | Polished rim around a black centre (skeleton), rounded tips and tail ends, white lume inserts on hour and minute; seconds hand a thin polished needle with a long paddle tail; polished hub with a black ring and polished cap | #1, Irsyad |
 | Crown | Small knurled crown at 4 o'clock | #1 |
 | Bracelet | Five columns: brushed outer and centre links in step, polished mid links half a row offset; rows 5.42 mm apart; tapers from 18.5 mm to 14.6 mm | #1 |
 | End link | Solid, five columns, between the lugs (17.4 mm wide) from the case to the lug tips | #1 |
@@ -62,12 +62,12 @@ python3 -B -m pipeline.seiko_snk361_dial    # -> outputs/watches/seiko-snk361k1/
 | Indices | 9.41–12.84 mm, lume block from 12.00 mm; width 0.80 mm (12: 1.98 mm) |
 | Hands (10:07:47) | hour 304.6°, 7.83 mm; minute 39.5°, 11.71 mm; seconds 350.8°, 11.82 mm, tail 4.64 mm |
 
-Hands, day-date, logo boxes, crown and bracelet columns are read from gridded crops (`MANUAL_PX`, ±8 px ≈ ±0.1 mm); ring and index radii come from radial profiles. The dial map fills the hand zones by inpainting (plain black dial); the strip where the seconds hand crossed `SEIKO` and the shield is soft and sits under the 3D seconds hand.
+Hands, day-date, logo boxes, crown and bracelet columns are read from gridded crops (`MANUAL_PX`, ±8 px ≈ ±0.1 mm); ring and index radii come from radial profiles. The dial map fills the hand zones by inpainting (plain black dial) and replaces the `SEIKO` + shield block with the same logo from the SNK381K1 photo.
 
 ## Build status
 
 ```sh
-python3 -B -m pipeline.jobs run jobs/seiko-snk361k1-v004.json   # build, GLB, white comparison render
+python3 -B -m pipeline.jobs run jobs/seiko-snk361k1-v005.json   # build, GLB, white comparison render
 ```
 
 | Version | Change | Board |
@@ -76,6 +76,7 @@ python3 -B -m pipeline.jobs run jobs/seiko-snk361k1-v004.json   # build, GLB, wh
 | v002 | Lugs start where the silhouette leaves the 37 mm case circle (9.5 mm, was 10.5 mm from SNK607K1); 1.6 MB GLB | `outputs/jobs/seiko-snk361k1-v002/board_front.png`, `board_measured.png` |
 | v003 | 36 mm case (Irsyad) instead of 37 mm: every plan size 2.7 % smaller, heights unchanged; lugs from 9.25 mm, bend from the lug tips at 20.0 mm; 1.6 MB GLB | `outputs/jobs/seiko-snk361k1-v003/board_front.png`, `board_measured.png` |
 | v004 | Case a full circle at 12 and 6 (Irsyad): no flat where the end link meets it | `outputs/jobs/seiko-snk361k1-v004/board_front.png` |
+| v005 | Rounded hand tips and tail ends (Irsyad); hands as a polished rim around a black centre; clean `SEIKO` + 5 shield in the dial map from the SNK381K1 photo (template match 0.93) | `outputs/jobs/seiko-snk361k1-v005/board_front.png` |
 
 ## Known gaps
 

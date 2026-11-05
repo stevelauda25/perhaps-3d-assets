@@ -121,26 +121,40 @@ def run(params):
         g.prism(rect(cx_, cy_, w_, h_), d["z"], d["z"] + fr["height"])
     add("daydate_frame", g, "steel_polished", bevel=0.05)
 
-    # ---- hands at the photo's time: polished blades with wide tails, lume inserts on hour and minute ----
+    # ---- hands at the photo's time: polished rim around a black centre (skeleton, as photographed), rounded ends,
+    #      wide tails, lume inserts on hour and minute ----
     hs, th, t = cfg["hands"], cfg["hands"]["thickness"], tr["hands"]
+    rim = hs["rim"]
 
-    def hand(name, poly, deg, z0, mat):
-        add(name, Geo().prism([rot(x, y, deg) for x, y in poly], z0, z0 + th), mat, bevel=0.03)
+    def arc(cx, cy, r, a0, a1, n=5):
+        return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / n)), cy + r * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(n + 1)]
+
+    def outline(L, hw, tail, tw, root):
+        """Blade to a rounded tip at L, wide tail with a rounded end at -tail; hand-local, pivot at 0, counter-clockwise."""
+        rt, rb = hw * hs["tip_round"], tw * hs["tip_round"]
+        return (arc(tw - rb, -tail + rb, rb, -90, 0) + [(tw, -root), (hw, root)] + arc(hw - rt, L - rt, rt, 0, 90)
+                + arc(-hw + rt, L - rt, rt, 90, 180) + [(-hw, root), (-tw, -root)] + arc(-tw + rb, -tail + rb, rb, 180, 270))
+
+    def plate(name, poly, deg, z0, z1, mat, bevel=None):
+        add(name, Geo().prism([rot(x, y, deg) for x, y in poly], z0, z1), mat, bevel=bevel)
 
     for name in ("hour", "minute"):
         h = t[name]
-        L, tail, hw, tw = h["length_mm"], h["tail_mm"], h["half_width_mm"], h["tail_half_width_mm"]
-        hand("hand_" + name, [(-tw, -tail), (tw, -tail), (tw, -0.6), (hw, 0.8), (hw, L - 1.0), (0, L), (-hw, L - 1.0), (-hw, 0.8), (-tw, -0.6)],
-             h["angle_deg"], hs["z"][name], "steel_polished")
+        L, tail, hw, tw, deg, z = h["length_mm"], h["tail_mm"], h["half_width_mm"], h["tail_half_width_mm"], h["angle_deg"], hs["z"][name]
+        plate("hand_" + name, outline(L, hw, tail, tw, 0.7), deg, z, z + th, "steel_polished", bevel=0.03)
+        plate("hand_%s_centre" % name, outline(L - rim, hw - rim, tail - rim, tw - rim, 0.7), deg, z + th, z + th + 0.01, "index_line")
         a, b = h["lume_from_to_mm"]
-        z = hs["z"][name] + th
-        add("hand_%s_lume" % name, Geo().prism([rot(x, y, h["angle_deg"]) for x, y in rect(0, (a + b) / 2, 2 * (hw - hs["lume_inset"]), b - a)], z, z + 0.03), "lume")
+        plate("hand_%s_lume" % name, rect(0, (a + b) / 2, 2 * (hw - rim), b - a), deg, z + th, z + th + 0.03, "lume")
     h = t["seconds"]
-    L, tail, hw, tw = h["length_mm"], h["tail_mm"], hs["seconds_half_width"], h["tail_half_width_mm"]
-    hand("hand_seconds", [(-tw, -tail), (tw, -tail), (hw * 2, 0), (hw, L), (-hw, L), (-hw * 2, 0)], h["angle_deg"], hs["z"]["seconds"], "steel_polished")
+    L, tail, tw, deg, z = h["length_mm"], h["tail_mm"], h["tail_half_width_mm"], h["angle_deg"], hs["z"]["seconds"]
+    plate("hand_seconds", outline(L, hs["seconds_half_width"], tail, tw, 0.9), deg, z, z + th, "steel_polished", bevel=0.03)
+    w, r = tw - rim, (tw - rim) * hs["tip_round"]  # black centre of the tail paddle, from beside the hub to its rounded end
+    plate("hand_seconds_centre", arc(w - r, -tail + rim + r, r, -90, 0) + [(w, -1.0), (-w, -1.0)] + arc(-w + r, -tail + rim + r, r, 180, 270),
+          deg, z + th, z + th + 0.01, "index_line")
     hub_r, cap_r = tr["hub_radius_mm"]
-    add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, hs["z"]["seconds"]), (0, hs["z"]["seconds"])], segs=48), "steel_polished")
-    zc = hs["z"]["seconds"] + th
+    add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, z), (0, z)], segs=48), "steel_polished")
+    zc = z + th
+    add("hub_ring", Geo().lathe([(0, zc), (hub_r * 0.8, zc), (hub_r * 0.8, zc + 0.02), (0, zc + 0.02)], segs=48), "index_line")
     add("hub_cap", Geo().lathe([(0, zc), (cap_r, zc), (cap_r, zc + 0.15), (cap_r * 0.6, zc + 0.25), (0, zc + 0.25)], segs=48), "steel_polished")
 
     # ---- crown: fluted cylinder on a radial axis at the traced angle (4 o'clock) ----

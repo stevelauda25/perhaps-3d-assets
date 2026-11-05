@@ -84,8 +84,9 @@
    "minute": 8.7,
    "seconds": 8.95
   },
-  "lume_inset": 0.15,
-  "seconds_half_width": 0.08
+  "seconds_half_width": 0.08,
+  "rim": 0.12,
+  "tip_round": 0.6
  },
  "crown": {
   "radius": 1.41,
