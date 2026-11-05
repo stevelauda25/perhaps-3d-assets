@@ -1,0 +1,203 @@
+{
+ "model": "Seiko 5 Automatic SNK361K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes come from the trace; heights are the SNK607K1 values (no side view of this model); plan sizes for the 36 mm case. The SEIKO letters, 5 shield, print and minute track stay in the dial map.",
+ "trace": "config/watches/seiko-snk361k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snk361k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.0,
+  "bracelet_next_to_case": 18.19
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    16.93,
+    0
+   ],
+   [
+    17.71,
+    0.6
+   ],
+   [
+    18.0,
+    1.6
+   ],
+   [
+    18.0,
+    6.6
+   ],
+   [
+    17.85,
+    7.1
+   ],
+   [
+    14.74,
+    9.6
+   ],
+   [
+    14.45,
+    9.6
+   ],
+   [
+    14.45,
+    7.8
+   ],
+   [
+    0.0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 14.06,
+  "r_out": 14.5,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 14.3,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "z": 8.0,
+  "rehaut_r": 14.06,
+  "rehaut_z": 9.0,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.35,
+  "wall": 0.15
+ },
+ "daydate_frame": {
+  "wall": 0.4,
+  "height": 0.15
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "seconds_half_width": 0.08,
+  "rim": 0.12,
+  "tip_round": 0.6
+ },
+ "crown": {
+  "radius": 1.41,
+  "flute_depth": 0.2,
+  "teeth": 16,
+  "r_from": 17.71,
+  "r_to": 19.26,
+  "z": 4.1
+ },
+ "lug": {
+  "inner_x": 8.722,
+  "from_y": 9.25,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "from_y": 15.08,
+  "top_z": 4.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 46.0,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 20.0,
+  "bend_radius": 23.0
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "index_line": {
+   "color": [
+    0.005,
+    0.005,
+    0.006
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.9,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}

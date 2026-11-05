@@ -1,7 +1,8 @@
 """watch_seiko_front: build the Seiko 5 SNK607K1 as a flat-backed front relief (like the Casio GLBs in models/watches/).
 
 Params: spec (config/watches/seiko-snk607k1-v1.json). Model in mm, origin = hand pivot, dial faces +z, back flat at z = 0,
-under one pose empty `SKO | pose` (scale 0.001, rotated 90 deg about X so the dial faces -Y in Blender and +Z in glTF).
+under one pose empty `SKO | pose` (scale 0.001, rotated 90 deg about X so the dial faces -Y in Blender and +Z in glTF). For the
+flat 2.5D look the watch-head objects carry a depth scale (pose.depth_scale); the bracelet is built at final depth so its bend stays round.
 Plan sizes come from the trace (config/watches/seiko-snk607k1-trace.json); heights from the spec. The dial is the photo map
 from pipeline/seiko_dial.py on a planar UV. Materials are plain Principled BSDFs with direct image links so the GLB keeps
 them. Rebuild with --force after regenerating the dial map (the map is not part of the stage fingerprint).
@@ -123,7 +124,9 @@ def run(params):
 
     pose = bpy.data.objects.new(P + "pose", None)
     coll.objects.link(pose)
-    pose.rotation_euler, pose.scale, pose.location = (math.pi / 2, 0, 0), (0.001,) * 3, (0, 0, cfg["pose"]["z_m"])
+    pose.rotation_euler, pose.location = (math.pi / 2, 0, 0), (0, 0, cfg["pose"]["z_m"])
+    pose.scale = (0.001,) * 3
+    ds = cfg["pose"].get("depth_scale", 1.0)  # 2.5D: watch head depth pressed flat like the Casio front reliefs; the bracelet bend is not
 
     def add(name, geo, mat, bevel=None, polished_bevel=False):
         me = geo.mesh(P + name, True if bevel else None) if isinstance(geo, Geo) else geo
@@ -141,6 +144,8 @@ def run(params):
             if polished_bevel:
                 m.material = 1
             o.modifiers.new("Weighted normals", "WEIGHTED_NORMAL").keep_sharp = True
+        if not name.startswith("bracelet"):
+            o.scale = (1, 1, ds)
         parts[name] = o
         return o
 
@@ -253,7 +258,8 @@ def run(params):
     add("lugs", g, "steel_brushed", bevel=lg["bevel"], polished_bevel=True)
     # ---- bracelet: centre links start at the case, outer links at the lug tips (half a row apart, as in the photo) ----
     br, el = cfg["bracelet"], cfg["end_link"]
-    hw_at = lambda y: half(round(min(max(y, tip), br["end_y"] - 0.25) * 4) / 4)  # silhouette rows are 0.25 mm apart
+    sil_max = min(max(sil), -min(sil)) - 0.25  # the photo ends here; links further out keep the last traced width
+    hw_at = lambda y: half(round(min(max(y, tip), sil_max) * 4) / 4)  # silhouette rows are 0.25 mm apart
     cw_at = lambda y: br["centre_ratio"] * hw_at(y)
     g = Geo()  # end-link sides: between the first centre link and the lugs, from inside the case to the lug tips
     for sy in (1, -1):
@@ -261,6 +267,18 @@ def run(params):
             x0 = cw_at(tip) + br["gap"]
             g.prism(rect(sx * (x0 + lg["inner_x"]) / 2, sy * (lg["from_y"] + tip) / 2, lg["inner_x"] - x0, tip - lg["from_y"]), 0.0, el["top_z"])
     add("end_links", g, "steel_brushed", bevel=el["bevel"], polished_bevel=True)
+    zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]  # bracelet built at final depth: flattened thickness, unflattened curve
+
+    def place(s, sy):
+        """Rigid placement of a link whose centre sits at distance s along the bracelet: straight up to bend_y, then
+        rolled back over a circle of radius R (away from the viewer), so the ends curve out of sight like the Casio straps."""
+        over = s - br["bend_y"]
+        if over <= 0:
+            return Matrix.Translation((0, sy * s, zm))
+        th = over / R
+        m = Matrix.Translation((0, sy * (br["bend_y"] + R * math.sin(th)), zm - R * (1 - math.cos(th))))
+        return m @ Matrix.Rotation(-sy * th, 4, "X")
+
     links, back = Geo(), Geo()
     rows = 0
     for sy in (1, -1):
@@ -268,17 +286,16 @@ def run(params):
             y0 = start
             while y0 < br["end_y"] - 0.5:
                 y1 = min(y0 + br["pitch"] - br["gap"], br["end_y"])
-                ym = (y0 + y1) / 2
+                ym, M = (y0 + y1) / 2, place((y0 + y1) / 2, sy)
                 if centre:
-                    links.prism(rect(0, sy * ym, 2 * cw_at(ym), y1 - y0), br["z0"], br["z1"])
+                    links.prism(rect(0, 0, 2 * cw_at(ym), y1 - y0), ds * br["z0"] - zm, ds * br["z1"] - zm, M)
+                    back.prism(rect(0, 0, 2 * (hw_at(ym) - 0.3), y1 - y0 + br["gap"]), ds * br["backing_z"][0] - zm, ds * br["backing_z"][1] - zm, M)
                     rows += 1
                 else:
                     x0, x1 = cw_at(ym) + br["gap"], hw_at(ym)
                     for sx in (1, -1):
-                        links.prism(rect(sx * (x0 + x1) / 2, sy * ym, x1 - x0, y1 - y0), br["z0"], br["z1"])
+                        links.prism(rect(sx * (x0 + x1) / 2, 0, x1 - x0, y1 - y0), ds * br["z0"] - zm, ds * br["z1"] - zm, M)
                 y0 += br["pitch"]
-        y_back = min(br["centre_start_y"], tip) - 1
-        back.prism(rect(0, sy * (y_back + br["end_y"]) / 2, 2 * (hw_at(tip) - 0.3), br["end_y"] - y_back), *br["backing_z"])
     add("bracelet_links", links, "steel_brushed", bevel=br["bevel"], polished_bevel=True)
     add("bracelet_backing", back, "steel_gap")
 

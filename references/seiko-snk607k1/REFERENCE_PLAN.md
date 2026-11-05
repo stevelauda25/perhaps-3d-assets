@@ -79,7 +79,7 @@ A 37 mm case and a 20 mm bracelet agree within 2–6 % in #1, so the two anchors
 
 ```sh
 python3 -B -m pipeline.seiko_trace    # -> config/watches/seiko-snk607k1-trace.json
-python3 -B -m pipeline.seiko_dial     # -> outputs/watches/seiko-snk607k1/dial_photo.png (regenerated, not committed)
+python3 -B -m pipeline.seiko_dial     # -> outputs/watches/seiko-snk607k1/dial_photo.jpg (regenerated, not committed)
 ```
 
 | Item | Value |
@@ -103,7 +103,7 @@ The dial map keeps the photo's lighting, indices, logo and print; the hands, the
 
 ```sh
 blender -b --factory-startup --python pipeline/watch_empty_base.py -- assets/watches/baseline/empty_base.blend   # once per machine
-python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v005.json                 # build, GLB, white comparison render
+python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v009.json                 # build, GLB, white comparison render
 python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # dark-kit previews (front, macro, crown side)
 ```
 
@@ -114,8 +114,12 @@ python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # 
 | v003 | Applied 5 shield (traced outline) and raised lume dots | `outputs/jobs/seiko-snk607k1-v003/board_front.png`, `outputs/jobs/seiko-snk607k1-v003-presentation/board_presentation.png` |
 | v004 | Crystal alpha-blended instead of transmission: web viewers blurred the dial through the transmission glass | `outputs/jobs/seiko-snk607k1-v004/cmp-front.png` |
 | v005 | Brushed steel on the bracelet, lugs and end links: ambientCG Metal009 normal map (CC0) on planar UVs, lines along the bracelet, strength 1.0, 20 mm tile | `outputs/jobs/seiko-snk607k1-v005/cmp-front.png` |
+| v006 | Bracelet straight to 24 mm, then rolled back over a 14 mm radius so the ends curve away like the Casio straps; normal map at 1K so the GLB stays under 10 MB (7.1 MB) | `outputs/jobs/seiko-snk607k1-v006/cmp-front.png` |
+| v007 | 2.5D like the Casio W-218HC GLB: depth scaled to 0.35 (depth/height 0.275 to about 0.07), bracelet bend radius 40 mm; dial map at the photo's own 2266 px, light unsharp mask, JPEG (1.8 MB GLB) | `outputs/jobs/seiko-snk607k1-v007/cmp-front.png` |
+| v008 | Rounder bracelet: the bend starts at the lug tips (22 mm), radius 28 mm, and is built at final depth so the 0.35 depth scale (now on the watch-head objects only) no longer flattens it; ends drop about 10 mm | `outputs/jobs/seiko-snk607k1-v008/cmp-front.png` |
+| v009 | Bracelet bend radius 23 mm instead of 28 (a little more curve, ends drop about 11.5 mm) | `outputs/jobs/seiko-snk607k1-v009/cmp-front.png` |
 
-v003 approved on 2026-11-05 (reported by Irsyad); v004 changes the crystal material and v005 adds the brushed steel normal map (11.5 MB GLB). Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v005/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
+v003 approved on 2026-11-05 (reported by Irsyad); v004 changes the crystal material, v005 adds the brushed steel normal map, v006 curves the bracelet ends and uses a 1K normal map, v007 flattens the depth to 2.5D and sharpens the dial map, v008 and v009 round the bracelet (1.8 MB GLB). Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v009/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
 
 ## Known gaps
 
