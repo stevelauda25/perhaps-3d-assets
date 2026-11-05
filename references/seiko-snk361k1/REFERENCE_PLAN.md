@@ -67,16 +67,18 @@ Hands, day-date, logo boxes, crown and bracelet columns are read from gridded cr
 ## Build status
 
 ```sh
-python3 -B -m pipeline.jobs run jobs/seiko-snk361k1-v005.json   # build, GLB, white comparison render
+python3 -B -m pipeline.jobs run jobs/seiko-snk361k1.json --force   # build, GLB, white comparison render (overwrites outputs/jobs/seiko-snk361k1/)
 ```
 
-| Version | Change | Board |
-| --- | --- | --- |
-| v001 | First front relief; heights, 2.5D depth, glass, steel textures and bracelet bend (23 mm radius from the lug tips) as SNK607K1 v009 | `outputs/jobs/seiko-snk361k1-v001/board_front.png` |
-| v002 | Lugs start where the silhouette leaves the 37 mm case circle (9.5 mm, was 10.5 mm from SNK607K1); 1.6 MB GLB | `outputs/jobs/seiko-snk361k1-v002/board_front.png`, `board_measured.png` |
-| v003 | 36 mm case (Irsyad) instead of 37 mm: every plan size 2.7 % smaller, heights unchanged; lugs from 9.25 mm, bend from the lug tips at 20.0 mm; 1.6 MB GLB | `outputs/jobs/seiko-snk361k1-v003/board_front.png`, `board_measured.png` |
-| v004 | Case a full circle at 12 and 6 (Irsyad): no flat where the end link meets it | `outputs/jobs/seiko-snk361k1-v004/board_front.png` |
-| v005 | Rounded hand tips and tail ends (Irsyad); hands as a polished rim around a black centre; clean `SEIKO` + 5 shield in the dial map from the SNK381K1 photo (template match 0.93) | `outputs/jobs/seiko-snk361k1-v005/board_front.png` |
+One job and one output folder; each change overwrites them. Board: `outputs/jobs/seiko-snk361k1/board_front.png`.
+
+| Round | Change |
+| --- | --- |
+| v001 | First front relief; heights, 2.5D depth, glass, steel textures and bracelet bend (23 mm radius from the lug tips) as SNK607K1 v009 |
+| v002 | Lugs start where the silhouette leaves the 37 mm case circle (9.5 mm, was 10.5 mm from SNK607K1); 1.6 MB GLB |
+| v003 | 36 mm case (Irsyad) instead of 37 mm: every plan size 2.7 % smaller, heights unchanged; lugs from 9.25 mm, bend from the lug tips at 20.0 mm; 1.6 MB GLB |
+| v004 | Case a full circle at 12 and 6 (Irsyad): no flat where the end link meets it |
+| v005 | Rounded hand tips and tail ends (Irsyad); hands as a polished rim around a black centre; clean `SEIKO` + 5 shield in the dial map from the SNK381K1 photo (template match 0.93) |
 
 ## Known gaps
 

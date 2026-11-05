@@ -1,6 +1,6 @@
 """watch_seiko_snk361_front: build the Seiko 5 SNK361K1 as a flat-backed front relief (like the other GLBs in models/watches/).
 
-Params: spec (config/watches/seiko-snk361k1-v1.json). Same frame, pose, 2.5D depth scale and materials as watch_seiko_front
+Params: spec (config/watches/seiko-snk361k1.json). Same frame, pose, 2.5D depth scale and materials as watch_seiko_front
 (SNK607K1), whose helpers it reuses; this model differs in the parts: hollow batons with lume blocks, hands with wide tails, a
 five-column bracelet (mid columns half a row offset) and a five-part end link running under the case. Plan sizes come from config/watches/seiko-snk361k1-trace.json; heights from the spec. The dial is the photo map from
 pipeline/seiko_snk361_dial.py. Rebuild with --force after regenerating the dial map (the map is not part of the stage fingerprint).
