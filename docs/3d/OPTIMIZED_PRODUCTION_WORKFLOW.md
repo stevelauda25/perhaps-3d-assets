@@ -120,5 +120,5 @@ same `run` command — completed unchanged stages are skipped, failed ones rerun
 - **Icon changes:** `jobs/icon-v014.json` renders the approved scene. Its scene was assembled by historical scripts
   (`pipeline/build_v013.py`, `build_v014.py`; inputs removed, see [WORKSPACE_CLEANUP.md](WORKSPACE_CLEANUP.md)); treat the
   package as the source of truth. Spark history: [ESSENTIAL_V001_REPORT.md](ESSENTIAL_V001_REPORT.md) (pre-rename).
-- **Watches:** own `.blend` and steps; no packaging abstractions. A render-only job
+- **Watches:** for Casio reference-based GLB delivery, follow [Watch workflow, section 0](WATCH_PRODUCTION_WORKFLOW.md#0-casio-reference-based-glb-delivery), including skill use, 2× reference export, viewer review and publishing. Watches own `.blend` and steps; no packaging abstractions. A render-only job
   (see `jobs/casio-f91w-preview.json`) never saves a scene, so it cannot alter sources.

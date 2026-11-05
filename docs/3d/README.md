@@ -18,8 +18,7 @@ AI coding agent → configuration / Python → Blender CLI / bpy → Cycles rend
    production**; parameter-driven jobs, incremental stages, render queue. Enough on its own
    for look changes and renders. [Job spec](ASSET_JOB_SPEC.md),
    [performance audit](PERFORMANCE_AND_TOKEN_OPTIMIZATION.md).
-0b. [Watch workflow](WATCH_PRODUCTION_WORKFLOW.md): **reference-first workflow for watch assets** (Omega Speedmaster test, v014): study references before modelling,
-   trace to JSON, build, same-pixel comparison, presentation scene, pitfalls, kept files.
+0b. [Watch workflow](WATCH_PRODUCTION_WORKFLOW.md): **watch assets**. For Casio reference-based GLB delivery, start at section 0: `cc-blender-skill`, base reuse, reference preparation/export at 2× or higher, HTML viewer review and SKU-based publishing. Sections 1–10 cover the full-model Speedmaster pipeline.
 1. [Production workflow](PRODUCTION_WORKFLOW.md): the canonical operating procedure,
    safety policy, command selection and extension workflow.
 2. [v010 baseline](BASELINE_V010.md) (historical; artifacts removed, see cleanup report): exact scene, settings, integrity manifest,

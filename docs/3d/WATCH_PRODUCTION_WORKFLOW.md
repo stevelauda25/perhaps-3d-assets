@@ -1,11 +1,47 @@
 # Watch asset production workflow (reference-first)
 
-Status: **method proven on the Omega Speedmaster Moonwatch Professional 310.30.42.50.01.001 (Hesalite, black dial)**, latest
+Full-model baseline: **method proven on the Omega Speedmaster Moonwatch Professional 310.30.42.50.01.001 (Hesalite, black dial)**, latest
 version `v014`. Nothing here is approved: approval is manual and the designer's alone. Technical measurements below are inputs
 and aids, never a visual or photorealism score.
 
 Use this for any new watch (or other small hard-surface product with printed faces). Box work keeps using
 [OPTIMIZED_PRODUCTION_WORKFLOW.md](OPTIMIZED_PRODUCTION_WORKFLOW.md); the job runner, render profiles and stage fingerprints are shared.
+
+## 0. Casio reference-based GLB delivery
+
+Use this branch for the Casio watch variants built from supplied product photos and an existing Blender base. Sections 1–10 describe the separate full-model Speedmaster pipeline; use them when that scope is requested. A front-only delivery does not require back-view references or a complete rear assembly.
+
+### 0.1 Skill and starting asset
+
+- Use [RobLe3/cc-blender-skill](https://github.com/RobLe3/cc-blender-skill) as the Blender workflow skill when needed for modeling, materials, lighting, rendering or export. Read the installed skill instructions before applying them and record the skill path/version used. If unavailable, report that limitation; never report a skill as used merely because it was recommended.
+- Inspect the supplied photo and the current Blender scene. Start from the closest approved watch base, preserving the original master, references and approved variants. Reuse suitable geometry, materials, dial construction and studio settings; modify the parts that differ for the new SKU.
+- Confirm the requested presentation: front relief (2.5D), full model, straight strap or a curved wrist loop. Keep the established scope unless the designer changes it. A requested curved strap should bend behind the case with an appropriate inner surface.
+
+### 0.2 Reference preparation and 2× export
+
+1. Preserve the original reference. Record its source, native pixel dimensions and product name/SKU.
+2. Crop the useful watch area, correct perspective where needed, and align the dial to the watch centerline. Check 12/6 and 3/9 (or XII/VI and III/IX); register bezel markings separately if their axis differs from the dial.
+3. Create an upscaled working reference at **2× the source width and height**, or **4× or higher** when small print needs closer inspection. Retain the original for comparison. Record the actual output pixel dimensions, scale factor and upscale method. Enlargement improves inspection and sampling; it does not establish recovered detail or justify invented lettering, grain or geometry.
+4. When preparing references in **Figma**, place the upscaled image at the intended reference size and export **PNG at 2× or higher**. Verify the exported file's actual pixel dimensions. Figma's export scale enlarges the output; use an image upscaler first when enhancement is needed. Outside Figma, export an equivalent PNG and record its dimensions.
+
+“2× export” means the reference image's pixel dimensions. GLB has no 2× image-resolution setting. Choose the embedded texture resolution separately to preserve visible detail within the delivery size limit. Preserve original material maps; reference enlargement is not a replacement for measured PBR data.
+
+### 0.3 Blender build and review
+
+- Match the case silhouette, bezel levels, dial placement, crown/pushers and strap connections to the supplied reference. Keep recesses and shadows consistent with the designer's latest corrections.
+- Use the prepared reference for dial print and texture fitting. Keep print readable under zoom, with registered UVs and deliberate grain scale. Avoid adding a second baked shadow where geometry or the source image already supplies it.
+- Save an editable `.blend` master for the SKU. Export only the requested watch meshes; exclude reference planes, hidden variants, cameras and lights.
+- Reuse the existing **HTML GLB viewer**, updating its asset URL/cache version and product title after export. Open it on the same local server and keep the review tab available to the designer. Provide zoom, reset and pan so details can be inspected without reopening the file in another application.
+- For a front-locked presentation, disable rotation and auto-rotation in the viewer while keeping zoom and pan. Rotation is a viewer behavior: a GLB cannot prohibit another application from rotating it. Front relief geometry defines the asset's intended viewing scope.
+- Present the exported GLB for manual designer review, including the alignment, strap/case junctions, recesses and print at enlarged zoom. Technical checks do not certify visual similarity; designer comments drive corrections.
+
+### 0.4 Delivery and GitHub replacement
+
+- Target **5–10 MB** when useful detail warrants it; the final file must be **strictly smaller than 10,000,000 bytes**. Spend the budget on readable print, texture quality and useful geometry. Never add padding or redundant data to reach a minimum size.
+- Embed every required texture inside the GLB. Check the glTF 2.0 header/length, embedded image buffer views, absence of external buffer/image URIs, and UV attributes used by normal maps. Verify that the exported file contains only the intended variant and opens in the HTML viewer.
+- Publish as `models/watches/casio-<normalized-sku>.glb`: lowercase, preserving the SKU suffix. Examples: `casio-mrw200h-7bv.glb` and `casio-mtpv005l-2b5.glb`. Use the designer-supplied full product name in the viewer; do not infer a different SKU from the photo.
+- On an authorized replacement, overwrite the same published SKU path so existing consumers retain their reference. Keep working `.blend` files, reference images and local viewer files outside that asset commit unless separately requested.
+- After the designer requests push, check remote changes, commit only the requested files, push, and verify the remote branch matches the commit. Report the filename, byte size and commit. State whether detection in the Perhaps application was actually tested; viewer success alone does not establish application integration.
 
 ## 1. What the method is (and is not)
 
