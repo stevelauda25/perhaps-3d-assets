@@ -1,6 +1,6 @@
 # Reference plan: Seiko 5 Automatic SNK607K1 (black textured dial, steel bracelet)
 
-Written 2026-11-05 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Reference set approved by Irsyad on 2026-11-05; the built asset still needs designer approval.
+Written 2026-11-05 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Reference set approved by Irsyad on 2026-11-05; build v003 approved the same day.
 
 ## Target asset
 
