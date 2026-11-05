@@ -226,5 +226,13 @@
  "logo": {
   "shield_height": 0.25,
   "lume_dot_radius": 0.25
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/sources/ambientcg_metal009_2k/Metal009_2K-JPG_NormalGL.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0); lines run along the bracelet; bevels keep the plain polished material"
+  }
  }
 }

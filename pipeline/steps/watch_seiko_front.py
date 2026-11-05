@@ -100,7 +100,26 @@ def run(params):
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d = cfg["dial"]
     mats["dial"] = photo_material("dial_photo", ROOT / cfg["dial_map"], d["roughness"])
+    textured = cfg.get("steel_textures", {})
+    for key, tx in textured.items():  # brushed lines as a tangent-space normal map: a plain image link, so the GLB keeps it
+        nodes, links = mats[key].node_tree.nodes, mats[key].node_tree.links
+        b = next(n for n in nodes if n.type == "BSDF_PRINCIPLED")
+        im = bpy.data.images.load(str(ROOT / tx["normal"]), check_existing=True)
+        im.colorspace_settings.name = "Non-Color"
+        im.pack()
+        tex, nm = nodes.new("ShaderNodeTexImage"), nodes.new("ShaderNodeNormalMap")
+        tex.image, tex.location, nm.location = im, (-600, -300), (-250, -300)
+        nm.inputs["Strength"].default_value = tx["strength"]
+        links.new(tex.outputs["Color"], nm.inputs["Color"])
+        links.new(nm.outputs["Normal"], b.inputs["Normal"])
     parts = {}
+
+    def brushed_uv(me, tile_mm):
+        """Planar UV in mm / tile, turned 90 deg so the texture's lines (along image X) run along the bracelet (model Y)."""
+        uv = me.uv_layers.new(name="UVMap")
+        for loop in me.loops:
+            x, y, _ = me.vertices[loop.vertex_index].co
+            uv.data[loop.index].uv = (y / tile_mm, -x / tile_mm)
 
     pose = bpy.data.objects.new(P + "pose", None)
     coll.objects.link(pose)
@@ -112,6 +131,8 @@ def run(params):
         coll.objects.link(o)
         o.parent = pose
         me.materials.append(mats[mat])
+        if mat in textured:
+            brushed_uv(me, textured[mat]["tile_mm"])
         if bevel:
             if polished_bevel:
                 me.materials.append(mats["steel_polished"])
