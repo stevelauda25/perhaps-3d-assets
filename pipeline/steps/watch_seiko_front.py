@@ -54,6 +54,43 @@ def slab(g, poly, z0, top):
     return g
 
 
+def plate(shapes, z0, z1, name):
+    """Solid from traced outlines with holes ({"outer", "holes"} in mm): capped top and bottom, walls on every loop."""
+    from mathutils import Vector, geometry as mg
+    verts, faces = [], []
+    for sh in shapes:
+        loops = []
+        for i, lp in enumerate([sh["outer"]] + sh["holes"]):
+            area = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(lp, lp[1:] + lp[:1]))
+            loops.append(lp if (area > 0) == (i == 0) else lp[::-1])  # outer counter-clockwise, holes clockwise
+        offs = []
+        for lp in loops:
+            o, n = len(verts), len(lp)
+            offs.append(o)
+            verts += [(x, y, z0) for x, y in lp] + [(x, y, z1) for x, y in lp]
+            faces += [(o + i, o + (i + 1) % n, o + n + (i + 1) % n, o + n + i) for i in range(n)]
+        flat = [(o, len(lp)) for o, lp in zip(offs, loops)]
+
+        def where(k):
+            for o, n in flat:
+                if k < n:
+                    return o, n, k
+                k -= n
+
+        for tri in mg.tessellate_polygon([[Vector((x, y, 0)) for x, y in lp] for lp in loops]):
+            pts = [where(k) for k in tri]
+            xy = [verts[o + k][:2] for o, n, k in pts]
+            ccw = (xy[1][0] - xy[0][0]) * (xy[2][1] - xy[0][1]) - (xy[1][1] - xy[0][1]) * (xy[2][0] - xy[0][0]) > 0
+            top = tuple(o + n + k for o, n, k in pts)
+            bottom = tuple(o + k for o, n, k in pts)
+            faces += [top if ccw else top[::-1], bottom[::-1] if ccw else bottom]
+    me = bpy.data.meshes.new(name)
+    me.from_pydata(verts, [], faces)
+    me.validate()
+    me.update()
+    return me
+
+
 def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
@@ -131,6 +168,15 @@ def run(params):
                              (fx - fw / 2 + wl / 2, fy, wl, fh - 2 * wl), (fx + fw / 2 - wl / 2, fy, wl, fh - 2 * wl)):
         g.prism(rect(cx_, cy_, w_, h_), d["z"], d["z"] + fr["height"])
     add("daydate_frame", g, "steel_polished")
+
+    # ---- applied "5" shield (traced outline, the 5 is a hole showing the dial) and lume dots ----
+    lg_ = cfg["logo"]
+    add("logo_5_shield", plate(tr["logo_5_shield_shapes"], d["z"], d["z"] + lg_["shield_height"], P + "logo_5_shield"), "steel_polished")
+    g = Geo()
+    for dot in tr["lume_dots"].values():
+        x, y = rot(0, dot["radius_mm"], dot["angle_deg"])
+        g.lathe([(0, d["z"]), (lg_["lume_dot_radius"], d["z"]), (lg_["lume_dot_radius"], d["z"] + 0.05), (0, d["z"] + 0.05)], segs=24, m=Matrix.Translation((x, y, 0)))
+    add("lume_dots", g, "lume")
 
     # ---- hands at the photo's time (traced angles and lengths) ----
     hs, th = cfg["hands"], cfg["hands"]["thickness"]

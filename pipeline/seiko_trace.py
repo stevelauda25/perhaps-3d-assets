@@ -16,6 +16,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+from pipeline.watch_print import UP, shapes_from_mask
 from pipeline.watch_trace import fit_circle
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -139,6 +140,16 @@ def trace(path=FRONT, overlay=None):
         out[k] = box(M[k])
     out["minute_track_radius_mm"] = sorted(v / S for v in M["minute_track_radius_px_at_9"])
     out["dial_texture_edge_radius_mm"] = round(M["dial_texture_edge_px_at_9"] / S, 3)
+    # applied "5" shield: bright plate with the 5 as a hole (threshold 180 is clean; the SEIKO letters merge with the dial bumps, so they stay in the dial map)
+    x0, y0, x1, y1 = M["logo_5_shield"]
+    pad = 12
+    crop = (gray[y0 - pad:y1 + pad, x0 - pad:x1 + pad] > 180).astype(np.uint8) * 255
+    crop = cv2.morphologyEx(crop, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    n, lab, st, _ = cv2.connectedComponentsWithStats(crop)
+    crop = (lab == 1 + int(np.argmax(st[1:, 4]))).astype(np.uint8) * 255  # the shield, not stray dial highlights
+    up = cv2.GaussianBlur(cv2.resize(crop, None, fx=UP, fy=UP, interpolation=cv2.INTER_LINEAR), (0, 0), UP * 0.45)
+    to_mm = lambda p: [round((p[0] / UP + x0 - pad - px0) / S, 3), round(-(p[1] / UP + y0 - pad - py0) / S, 3)]
+    out["logo_5_shield_shapes"] = shapes_from_mask((up > 128).astype(np.uint8) * 255, to_mm, 200)
     out["manual_px"] = M
     out["artefacts_not_traced"] = ARTEFACTS
 
