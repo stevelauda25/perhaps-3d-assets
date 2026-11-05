@@ -1,7 +1,8 @@
 """watch_seiko_front: build the Seiko 5 SNK607K1 as a flat-backed front relief (like the Casio GLBs in models/watches/).
 
 Params: spec (config/watches/seiko-snk607k1-v1.json). Model in mm, origin = hand pivot, dial faces +z, back flat at z = 0,
-under one pose empty `SKO | pose` (scale 0.001, rotated 90 deg about X so the dial faces -Y in Blender and +Z in glTF).
+under one pose empty `SKO | pose` (scale 0.001, depth scaled by pose.depth_scale for the flat 2.5D look, rotated 90 deg
+about X so the dial faces -Y in Blender and +Z in glTF).
 Plan sizes come from the trace (config/watches/seiko-snk607k1-trace.json); heights from the spec. The dial is the photo map
 from pipeline/seiko_dial.py on a planar UV. Materials are plain Principled BSDFs with direct image links so the GLB keeps
 them. Rebuild with --force after regenerating the dial map (the map is not part of the stage fingerprint).
@@ -123,7 +124,8 @@ def run(params):
 
     pose = bpy.data.objects.new(P + "pose", None)
     coll.objects.link(pose)
-    pose.rotation_euler, pose.scale, pose.location = (math.pi / 2, 0, 0), (0.001,) * 3, (0, 0, cfg["pose"]["z_m"])
+    pose.rotation_euler, pose.location = (math.pi / 2, 0, 0), (0, 0, cfg["pose"]["z_m"])
+    pose.scale = (0.001, 0.001, 0.001 * cfg["pose"].get("depth_scale", 1.0))  # 2.5D: depth pressed flat like the Casio front reliefs
 
     def add(name, geo, mat, bevel=None, polished_bevel=False):
         me = geo.mesh(P + name, True if bevel else None) if isinstance(geo, Geo) else geo

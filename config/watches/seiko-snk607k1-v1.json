@@ -2,7 +2,7 @@
  "model": "Seiko 5 Automatic SNK607K1",
  "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes come from the trace; heights are fitted by eye from the 3/4 photo and are inferred (no side view). The SEIKO letters stay in the dial map (their outline merges with the dial bumps in the photo).",
  "trace": "config/watches/seiko-snk607k1-trace.json",
- "dial_map": "outputs/watches/seiko-snk607k1/dial_photo.png",
+ "dial_map": "outputs/watches/seiko-snk607k1/dial_photo.jpg",
  "verified_mm": {
   "diameter": 37.0,
   "bracelet_next_to_case": 20.26
@@ -144,7 +144,7 @@
    0.6
   ],
   "bend_y": 24.0,
-  "bend_radius": 14.0
+  "bend_radius": 40.0
  },
  "materials": {
   "steel_polished": {
@@ -223,7 +223,8 @@
   }
  },
  "pose": {
-  "z_m": 0.05
+  "z_m": 0.05,
+  "depth_scale": 0.35
  },
  "logo": {
   "shield_height": 0.25,
