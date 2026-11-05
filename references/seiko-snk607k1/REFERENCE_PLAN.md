@@ -103,7 +103,7 @@ The dial map keeps the photo's lighting, indices, logo and print; the hands, the
 
 ```sh
 blender -b --factory-startup --python pipeline/watch_empty_base.py -- assets/watches/baseline/empty_base.blend   # once per machine
-python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003.json                 # build, GLB, white comparison render
+python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v004.json                 # build, GLB, white comparison render
 python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # dark-kit previews (front, macro, crown side)
 ```
 
@@ -112,8 +112,9 @@ python3 -B -m pipeline.jobs run jobs/seiko-snk607k1-v003-presentation.json    # 
 | v001 | First front relief | `outputs/jobs/seiko-snk607k1-v001/board_front.png` (its render folder now holds a v002 render) |
 | v002 | Lugs follow the case outline; centre links start at the case, outer links at the lug tips | `outputs/jobs/seiko-snk607k1-v002/board_front.png` |
 | v003 | Applied 5 shield (traced outline) and raised lume dots | `outputs/jobs/seiko-snk607k1-v003/board_front.png`, `outputs/jobs/seiko-snk607k1-v003-presentation/board_presentation.png` |
+| v004 | Crystal alpha-blended instead of transmission: web viewers blurred the dial through the transmission glass | `outputs/jobs/seiko-snk607k1-v004/cmp-front.png` |
 
-v003 approved on 2026-11-05 (reported by Irsyad). Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v003/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
+v003 approved on 2026-11-05 (reported by Irsyad); v004 changes only the crystal material. Delivered GLB: `models/watches/seiko-snk607k1.glb`, a copy of `outputs/jobs/seiko-snk607k1-v004/seiko-snk607k1.glb` (metres, dial facing +Z, dial map embedded). Measured: case 37.0 mm, bracelet next to the case 20.27 mm, lug to lug 43.5 mm. Materials are plain Principled BSDFs (not library presets) so the GLB keeps the dial texture.
 
 ## Known gaps
 

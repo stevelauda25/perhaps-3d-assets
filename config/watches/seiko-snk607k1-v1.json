@@ -188,9 +188,9 @@
     1.0
    ],
    "metallic": 0.0,
-   "roughness": 0.02,
-   "transmission": 1.0,
-   "ior": 1.52
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
   },
   "index_line": {
    "color": [

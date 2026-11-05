@@ -22,7 +22,7 @@ def principled(name, p):
     m.use_nodes = True
     b = next(n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
     for key, value in {"Base Color": (*p["color"], 1), "Metallic": p["metallic"], "Roughness": p["roughness"],
-                       "Transmission Weight": p.get("transmission"), "IOR": p.get("ior")}.items():
+                       "Transmission Weight": p.get("transmission"), "IOR": p.get("ior"), "Alpha": p.get("alpha")}.items():
         if value is not None:
             b.inputs[key].default_value = value
     return m

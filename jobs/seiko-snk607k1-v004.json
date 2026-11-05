@@ -1,0 +1,46 @@
+{
+  "id": "seiko-snk607k1-v004",
+  "output": "outputs/jobs/seiko-snk607k1-v004",
+  "asset_type": "watch",
+  "model": "Seiko 5 Automatic SNK607K1",
+  "baseline": "v4: v3 with an alpha-blended crystal instead of transmission, so the dial stays sharp in web viewers",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/seiko-snk607k1/REFERENCE_PLAN.md",
+    "config/watches/seiko-snk607k1-v1.json",
+    "config/watches/seiko-snk607k1-trace.json",
+    "config/presets/watch_kit_white_front_seiko.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_seiko_front",
+      "params": {
+        "spec": "config/watches/seiko-snk607k1-v1.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/seiko-snk607k1-v004/seiko-snk607k1.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_seiko.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
