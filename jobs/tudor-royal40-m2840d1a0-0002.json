@@ -1,0 +1,46 @@
+{
+ "id": "tudor-royal40-m2840d1a0-0002",
+ "output": "outputs/jobs/tudor-royal40-m2840d1a0-0002",
+ "asset_type": "watch",
+ "model": "TUDOR Royal 40 M2840D1A0-0002",
+ "baseline": "First build: front relief from the catalogue photo at 40 mm, photo-map blue dial with Roman numerals and day-date windows, 48-segment ribbed bezel, photographed steel hands, five-column brushed/polished bracelet at the photo's joints (Royal 40 template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-royal-40-m2840d1a0-0002/REFERENCE_PLAN.md",
+  "config/watches/tudor-royal40-m2840d1a0-0002.json",
+  "config/watches/tudor-royal40-m2840d1a0-0002-trace.json",
+  "config/presets/watch_kit_white_front_tudor_royal40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_royal40",
+   "params": {
+    "spec": "config/watches/tudor-royal40-m2840d1a0-0002.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-royal40-m2840d1a0-0002/tudor-royal40-m2840d1a0-0002.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_royal40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

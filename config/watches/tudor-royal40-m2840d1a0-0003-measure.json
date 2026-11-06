@@ -1,0 +1,20 @@
+{
+ "note": "Pixel measurements read from references/tudor-royal-40-m2840d1a0-0003/tudor-m2840d1a0-0003_900x1200.png (900 x 1200 photo px). pivot = hand hub hole; case_edge_left_x = alpha edge of the case on the pivot row (anchors 40 mm); rings = radii in px from the pivot (bezel_out = facet outer edge, bezel_in = facet inner end, dial_flat = end of the printed dial incl. black rehaut band, crystal_edge = inside of the polished inner ring); tip_rows_px = case/bracelet joints (top, bottom). Same photo template as -0001 (alpha silhouette identical, hands at 10:09 in the same place, checked on overlay): pivot, case_edge_left_x, rings, crown, tip_rows_px, channel_mm, hand lengths/angles/tails (the photographed time is 10:09:xx for all); per-dial: date window only.",
+ "pivot": [450, 609],
+ "case_edge_left_x": 172,
+ "rings": {"bezel_in": 232, "crystal_edge": 228, "dial_flat": 205, "bezel_out": 275},
+ "hour_tip": [355, 544],
+ "minute_tip": [624, 521],
+ "seconds_tip": [297, 747],
+ "hour_tail": [485, 633],
+ "minute_tail": [416, 627],
+ "seconds_tail": [482, 578],
+ "hub_r": 13,
+ "hour_lume": [0.25, 0.92],
+ "minute_lume": [0.15, 0.84],
+ "crown": {"x0": 726, "x1": 762, "y0": 562, "y1": 656},
+ "date": {"x0": 581, "y0": 589, "x1": 621, "y1": 628},
+ "channel_mm": [2.34, 4.5],
+ "tip_rows_px": [287, 927],
+ "segments": 48
+}

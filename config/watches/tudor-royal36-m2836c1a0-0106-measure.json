@@ -1,0 +1,63 @@
+{
+ "pivot": [
+  448,
+  664
+ ],
+ "case_edge_left_x": 195,
+ "rings": {
+  "bezel_in": 216,
+  "crystal_edge": 213,
+  "dial_flat": 207,
+  "bezel_out": 248
+ },
+ "hour_tip": [
+  357,
+  609
+ ],
+ "minute_tip": [
+  612,
+  586
+ ],
+ "seconds_tip": [
+  318,
+  790
+ ],
+ "hour_tail": [
+  483,
+  686
+ ],
+ "minute_tail": [
+  418,
+  684
+ ],
+ "seconds_tail": [
+  479,
+  640
+ ],
+ "hub_r": 16,
+ "hour_lume": [
+  0.2,
+  0.8
+ ],
+ "minute_lume": [
+  0.35,
+  0.86
+ ],
+ "crown": {
+  "x0": 700,
+  "x1": 740,
+  "y0": 622,
+  "y1": 710
+ },
+ "date": {
+  "x0": 565,
+  "y0": 647,
+  "x1": 614,
+  "y1": 688
+ },
+ "channel_mm": [
+  2.5,
+  4.5
+ ],
+ "note": "0106: starts from the 0103/0104 values (same Royal 36 template, same 10:09 pose; alpha silhouette vs 0103 max diff 48/255, steel-region mean RGB diff 0.8); light dial like 0104, so the 0104 tails (hour 483,686; seconds 479,640) and hub_r 16 are used; checked on 5x crops and by overlay of the render, see baseline/BASELINE.md"
+}

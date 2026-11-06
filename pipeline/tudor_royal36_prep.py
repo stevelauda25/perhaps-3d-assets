@@ -1,6 +1,6 @@
-"""Phase 1 for the Tudor Royal 36 M2836C1A0-xxxx variants: 2x working reference, trace JSON, dial and steel photo maps.
+"""Phase 1 for the Tudor Royal 36 / Royal 40 variants: 2x working reference, trace JSON, dial and steel photo maps.
 
-    python3 -B -m pipeline.tudor_royal36_prep [0101]      # variant suffix of M2836C1A0-<suffix>; default 0101
+    python3 -B -m pipeline.tudor_royal36_prep [m2836c1a0-0101]   # lower-case SKU (m2836c1a0 = Royal 36, m2840d1a0 = Royal 40); a bare 0104 means m2836c1a0-0104
         reads    references/tudor-royal-36-m2836c1a0-<suffix>/tudor-m2836c1a0-<suffix>_900x1200.png
                  config/watches/tudor-royal36-m2836c1a0-<suffix>-measure.json   (pixel measurements read from that photo, see 0101)
         writes   the 2x reference, config/watches/tudor-royal36-m2836c1a0-<suffix>-trace.json,
@@ -21,17 +21,19 @@ import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-SUFFIX = sys.argv[1] if len(sys.argv) > 1 else "0101"
-NAME = "tudor-royal36-m2836c1a0-" + SUFFIX
-REF = ROOT / ("references/tudor-royal-36-m2836c1a0-" + SUFFIX)
-SRC = REF / ("tudor-m2836c1a0-%s_900x1200.png" % SUFFIX)
-UP = REF / ("tudor-m2836c1a0-%s_1800x2400.png" % SUFFIX)
+ARG = sys.argv[1] if len(sys.argv) > 1 else "m2836c1a0-0101"
+SKU = ARG if "-" in ARG else "m2836c1a0-" + ARG  # lower-case SKU; a bare 4-digit suffix means a Royal 36 M2836C1A0-<suffix>
+SIZE = {"m2836c1a0": "36", "m2840d1a0": "40"}[SKU.split("-")[0]]
+NAME = "tudor-royal%s-%s" % (SIZE, SKU)
+REF = ROOT / ("references/tudor-royal-%s-%s" % (SIZE, SKU))
+SRC = REF / ("tudor-%s_900x1200.png" % SKU)
+UP = REF / ("tudor-%s_1800x2400.png" % SKU)
 TRACE = ROOT / ("config/watches/%s-trace.json" % NAME)
 STEEL = ROOT / ("outputs/watches/%s/steel_photo.jpg" % NAME)
 DIAL = ROOT / ("outputs/watches/%s/dial_photo.jpg" % NAME)
 PX = {k: (tuple(v) if isinstance(v, list) and all(isinstance(i, (int, float)) for i in v) else v)
       for k, v in json.loads((ROOT / ("config/watches/%s-measure.json" % NAME)).read_text()).items()}
-CASE_MM = 36.0
+CASE_MM = float(SIZE)  # the model name is the case diameter in mm
 
 
 

@@ -1,0 +1,63 @@
+{
+ "pivot": [
+  448,
+  664
+ ],
+ "case_edge_left_x": 195,
+ "rings": {
+  "bezel_in": 216,
+  "crystal_edge": 213,
+  "dial_flat": 207,
+  "bezel_out": 248
+ },
+ "hour_tip": [
+  357,
+  609
+ ],
+ "minute_tip": [
+  612,
+  586
+ ],
+ "seconds_tip": [
+  318,
+  790
+ ],
+ "hour_tail": [
+  483,
+  686
+ ],
+ "minute_tail": [
+  418,
+  684
+ ],
+ "seconds_tail": [
+  479,
+  640
+ ],
+ "hub_r": 16,
+ "hour_lume": [
+  0.2,
+  0.8
+ ],
+ "minute_lume": [
+  0.35,
+  0.86
+ ],
+ "crown": {
+  "x0": 700,
+  "x1": 740,
+  "y0": 622,
+  "y1": 710
+ },
+ "date": {
+  "x0": 565,
+  "y0": 647,
+  "x1": 614,
+  "y1": 688
+ },
+ "channel_mm": [
+  2.5,
+  4.5
+ ],
+ "note": "0104: silver dial, gold Roman numerals, gold hands. Alpha silhouette vs 0101 max diff 58/255, steel-region mean RGB diff 0.5; pivot, case edge, rings, crown, date box and hand tip/tail points are the 0101 values, same 10:09 pose (checked on 3x pixel-grid crops, then by overlay of the render); final pass: seconds tail shortened to (479,640) and hour tail to (483,686) (0101 values overran the photographed tails, leaving grey stubs on the silver dial), hub_r 16"
+}
