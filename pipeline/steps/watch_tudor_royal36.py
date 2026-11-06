@@ -1,4 +1,4 @@
-"""watch_tudor_royal36: build the TUDOR Royal 36 M2836C1A0-0101 as a flat-backed front relief (like the Seiko GLBs in models/watches/).
+"""watch_tudor_royal36: build a TUDOR Royal 36 (M2836C1A0-xxxx variant; spec key hands.material picks the hand metal, default gold) as a flat-backed front relief (like the Seiko GLBs in models/watches/).
 
 Params: spec (config/watches/tudor-royal36-m2836c1a0-0101.json). Same frame, pose (`SKO | pose`), 2.5D depth scale, materials and
 bracelet curl as watch_seiko_front, whose helpers it reuses. Parts: integrated case and lugs cut from the photo silhouette (brushed
@@ -135,7 +135,7 @@ def run(params):
         g_ = Geo()
         for sx in (1, -1):  # two facets meeting at a ridge on the centre line
             slab(g_, [rot(sx * x, y, deg) for x, y in half_outline], z, lambda x, y, z=z, deg=deg: z + th + hs["ridge"] * _on_axis(x, y, deg))
-        add("hand_" + name, g_, "gold", bevel=0.02)
+        add("hand_" + name, g_, hs.get("material", "gold"), bevel=0.02)
         if name != "seconds":
             f0, f1 = tr["hand_lume"][name]
             lw = hs["lume_half_width"][name]
@@ -143,7 +143,7 @@ def run(params):
                                            z + th + hs["ridge"] * 0.4, z + th + hs["ridge"] + hs["lume_height"]), "lume")
     hub_r = tr["hub_radius_mm"]
     add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, hs["z"]["minute"] + th), (hub_r * 0.55, hs["z"]["seconds"] + th + 0.1), (0, hs["z"]["seconds"] + th + 0.1)], segs=48),
-        "gold", smooth=True)
+        hs.get("material", "gold"), smooth=True)
 
     # ---- crown on the 3 o'clock axis: fluted cylinder plus a plain cap ----
     c, cw = cfg["crown"], tr["crown"]
