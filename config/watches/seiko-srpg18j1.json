@@ -1,0 +1,31 @@
+{
+ "model": "Seiko Prospex SRPG18J1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (42.4 mm case, listing); heights fit the listed 11.7 mm before the house depth scale. Colours follow the turned SKU photo (front_turned): pink rose gold, dark plum dial, maroon insert; the photo map is graded to it. Dial print, minute track, date, bezel compass print and the strap leather come from one photo map.",
+ "trace": "config/watches/seiko-srpg18j1-trace.json",
+ "photo_map": "outputs/watches/seiko-srpg18j1/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.4, "bezel_insert": 0.35, "strap_leather": 0.55},
+ "verified_mm": {"diameter": 42.4, "strap_next_to_case": 20.3},
+ "case": {"top_z": 8.0, "opening_r": 15.0, "bevel": 1.0},
+ "bezel": {"z0": 7.6, "ring_top_z": 10.1, "ring_inner_r": 18.8, "insert_top_z": [10.3, 10.1]},
+ "gasket": {"z0": 7.6, "z1": 10.2},
+ "crystal": {"z0": 9.7, "z1": 10.05},
+ "dial": {"z": 7.0, "flange_z": 8.4},
+ "indices": {"height": 0.35, "lume_height": 0.03, "stick_height": 0.2},
+ "hands": {"thickness": 0.15, "z": {"hour": 7.6, "minute": 7.85, "seconds": 8.1}, "hub": {"cap_height": 0.25}},
+ "crown": {"teeth": 24, "flute_depth": 0.25, "z": 4.0},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 37.8,
+           "note": "House curl (SUR419P1): bend at the horn tips, 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [1.0, 0.7, 0.64], "metallic": 1.0, "roughness": 0.12, "note": "pink rose gold from the turned SKU photo (case 1 : 0.72 : 0.74 linear; Irsyad 2026-11-06)"},
+  "steel_brushed": {"color": [0.93, 0.63, 0.57], "metallic": 1.0, "roughness": 0.3},
+  "gasket_black": {"color": [0.012, 0.008, 0.007], "metallic": 0.0, "roughness": 0.4},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour: a white one lays a grey haze over this dark dial in model-viewer; reflections stay"},
+  "lume": {"color": [0.85, 0.79, 0.7], "metallic": 0.0, "roughness": 0.5, "note": "pale cream lume from the turned SKU photo (1 : 0.92 : 0.88 linear)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines along the strap axis; bevels keep the polished material"}
+ }
+}
