@@ -1,6 +1,6 @@
 """watch_seiko_snk381: build the Seiko 5 SNK381K1 as a flat-backed front relief, like watch_seiko_front (SNK607K1).
 
-Params: spec (config/watches/seiko-snk381k1-v1.json). Same frame as watch_seiko_front: mm, origin = hand pivot, dial faces +z,
+Params: spec (config/watches/seiko-snk381k1.json). Same frame as watch_seiko_front: mm, origin = hand pivot, dial faces +z,
 back flat at z = 0, one pose empty `SKO | pose`, watch head depth scaled by pose.depth_scale, bracelet built at final depth.
 Differences from the SNK607K1: the applied numerals stay in the dial map (pipeline/seiko_snk381_dial.py), leaf-shaped hour and
 minute hands, a dark seconds hand with a lume disc on its tail, a black hub cap, and a five-column bracelet whose mid links sit
@@ -13,7 +13,7 @@ import math
 import bpy
 from mathutils import Matrix
 
-from pipeline.steps.watch_seiko_front import P, photo_material, plate, principled, slab
+from pipeline.steps.watch_seiko_front import P, curl, photo_material, plate, principled, slab
 from pipeline.steps.watch_speedmaster import Geo, ROOT, rect, rot
 
 
@@ -165,15 +165,9 @@ def run(params):
     for sy in (1, -1):
         g.prism(rect(0, sy * (el["from_y"] + tip) / 2, 2 * lg["inner_x"], tip - el["from_y"]), 0.0, el["top_z"])
     add("end_links", g, "steel_brushed", bevel=el["bevel"], polished_bevel=True)
-    zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]
-
-    def place(s, sy):
-        """Rigid placement of a link centred at distance s along the bracelet: straight to bend_y, then rolled back over radius R."""
-        over = s - br["bend_y"]
-        if over <= 0:
-            return Matrix.Translation((0, sy * s, zm))
-        a_ = over / R
-        return Matrix.Translation((0, sy * (br["bend_y"] + R * math.sin(a_)), zm - R * (1 - math.cos(a_)))) @ Matrix.Rotation(-sy * a_, 4, "X")
+    zm = ds * (br["z0"] + br["z1"]) / 2
+    box = curl(br["bend_y"], br["bend_radius"], zm)  # links bend with the curve (approved on SUR419P1)
+    za, zb = ds * br["z0"], ds * br["z1"]
 
     groups, back = {}, Geo()
     rows = 0
@@ -181,8 +175,8 @@ def run(params):
         y0 = tip + br["gap"]
         while y0 < br["end_y"] - 0.5:  # backing plate per row, under every column
             y1 = min(y0 + br["pitch"], br["end_y"])
-            ym = (y0 + y1) / 2
-            back.prism(rect(0, 0, 2 * (hw_at(ym) - 0.3), y1 - y0), ds * br["backing_z"][0] - zm, ds * br["backing_z"][1] - zm, place(ym, sy))
+            hb = hw_at((y0 + y1) / 2) - 0.3
+            box(back, -hb, hb, y0, y1, ds * br["backing_z"][0], ds * br["backing_z"][1], sy)
             y0 = y1
             rows += 1
         for f0, f1, phase, mat in br["columns"]:
@@ -193,10 +187,11 @@ def run(params):
                 if b_ - a_ > 0.5:
                     ym = (a_ + b_) / 2
                     x0, x1 = f0 * hw_at(ym) + (br["gap"] / 2 if f0 else 0), f1 * hw_at(ym) - br["gap"] / 2
-                    for sx in ((1, -1) if f0 else (1,)):
-                        cx = sx * (x0 + x1) / 2 if f0 else 0
-                        w = (x1 - x0) if f0 else 2 * x1
-                        g.prism(rect(cx, 0, w, b_ - a_), ds * br["z0"] - zm, ds * br["z1"] - zm, place(ym, sy))
+                    if f0:
+                        box(g, x0, x1, a_, b_, za, zb, sy)
+                        box(g, -x1, -x0, a_, b_, za, zb, sy)
+                    else:
+                        box(g, -x1, x1, a_, b_, za, zb, sy)
                 y0 += br["pitch"]
     for mat, g in groups.items():
         add("bracelet_links_" + mat.split("_")[1], g, mat, bevel=br["bevel"], polished_bevel=mat != "steel_polished")

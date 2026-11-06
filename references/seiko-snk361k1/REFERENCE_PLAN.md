@@ -79,6 +79,7 @@ One job and one output folder; each change overwrites them. Board: `outputs/jobs
 | v003 | 36 mm case (Irsyad) instead of 37 mm: every plan size 2.7 % smaller, heights unchanged; lugs from 9.25 mm, bend from the lug tips at 20.0 mm; 1.6 MB GLB |
 | v004 | Case a full circle at 12 and 6 (Irsyad): no flat where the end link meets it |
 | v005 | Rounded hand tips and tail ends (Irsyad); hands as a polished rim around a black centre; clean `SEIKO` + 5 shield in the dial map from the SNK381K1 photo (template match 0.93) |
+| curl | Bracelet links bend with a smooth 7 mm curl from the lug tips, as on SUR419P1 (Irsyad, 2026-11-06); job and spec without version numbers |
 
 ## Known gaps
 
