@@ -4,7 +4,7 @@ Written 2026-11-07 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATC
 
 ## Target asset
 
-Front relief GLB in `models/watches/tudor-royal36-m2836c1a0-0101.glb` (naming after the Casio/Seiko rule: lowercase brand and SKU), flat back, 2.5D depth, curled bracelet, built like the Seiko reliefs.
+Front relief GLB in `models/watches/tudor-m2836c1a0-0101.glb` (tracker rule: lowercase brand-SKU, the tracker auto-matches only that), flat back, 2.5D depth, curled bracelet, built like the Seiko reliefs.
 
 ## References held
 

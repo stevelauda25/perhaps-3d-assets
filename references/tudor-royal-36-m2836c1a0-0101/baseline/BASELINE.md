@@ -4,7 +4,7 @@ Designer-accepted front-relief build, kept to compare later changes against the 
 
 | Item | Value |
 | --- | --- |
-| GLB | `models/watches/tudor-royal36-m2836c1a0-0101.glb`, 1,484,268 bytes, sha256 `55e01631312661757225f26eef27b4762fa91a288b90355ca40c81eec279729b` |
+| GLB | `models/watches/tudor-m2836c1a0-0101.glb`, 1,484,268 bytes, sha256 `55e01631312661757225f26eef27b4762fa91a288b90355ca40c81eec279729b` |
 | Comparison render | `baseline_cmp-front_1800.png` (1800 px, white kit, same frame as the 2x reference), sha256 `c6040fc0921be7fad9718bf25b31d2371eeda18b8b035d9292ec7e11e0eb2ae6` |
 | Side by side | `baseline_vs_reference.png` (left: reference 2x crop, right: render) |
 | Reference | `../tudor-m2836c1a0-0101_900x1200.png` (original), `../tudor-m2836c1a0-0101_1800x2400.png` (2x working copy) |
