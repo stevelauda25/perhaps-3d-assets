@@ -1,0 +1,63 @@
+{
+ "pivot": [
+  448,
+  664
+ ],
+ "case_edge_left_x": 195,
+ "rings": {
+  "bezel_in": 216,
+  "crystal_edge": 213,
+  "dial_flat": 207,
+  "bezel_out": 248
+ },
+ "hour_tip": [
+  357,
+  609
+ ],
+ "minute_tip": [
+  612,
+  586
+ ],
+ "seconds_tip": [
+  318,
+  790
+ ],
+ "hour_tail": [
+  485,
+  688
+ ],
+ "minute_tail": [
+  418,
+  684
+ ],
+ "seconds_tail": [
+  478,
+  632
+ ],
+ "hub_r": 20,
+ "hour_lume": [
+  0.2,
+  0.8
+ ],
+ "minute_lume": [
+  0.35,
+  0.86
+ ],
+ "crown": {
+  "x0": 700,
+  "x1": 740,
+  "y0": 622,
+  "y1": 710
+ },
+ "date": {
+  "x0": 565,
+  "y0": 647,
+  "x1": 614,
+  "y1": 688
+ },
+ "channel_mm": [
+  2.5,
+  4.5
+ ],
+ "note": "0102: identical template to 0101 outside the dial (alpha silhouette max diff 45/255 on 400 px, steel-region mean RGB diff 2.4); pivot, rings, case edge, crown, date box and hand tip/tail points checked against the 0102 photo by overlay of the render (hands align within about 1 px at 2x), so the 0101 values are kept"
+}

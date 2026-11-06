@@ -1,0 +1,244 @@
+{
+ "model": "TUDOR Royal 36 M2836C1A0-0102 (steel, blue dial, baton indices, bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (36 mm case, Royal 36); heights are estimates (no side view) before the house depth scale. The blue sunburst dial, applied baton indices, TUDOR print, date window and minute track come from one 2x photo map with the photographed hands left in it (the 3D hands cover them).",
+ "trace": "config/watches/tudor-royal36-m2836c1a0-0102-trace.json",
+ "dial_map": "outputs/watches/tudor-royal36-m2836c1a0-0102/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 4.4,
+  "ramp_from_y": 13.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette into the bracelet; the top is brushed and slopes down toward the bracelet",
+  "tip_top": 20.2,
+  "tip_bottom": 21.3
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_base": 8.6,
+  "z_plain": 9.1,
+  "z_rib": 8.95,
+  "arc_steps": 6,
+  "ribs": 5,
+  "rib_fill": 0.9,
+  "rib_to_gap": 2.0,
+  "note": "48 segments of 7.5 deg: plain polished facets centred at 0, 15, 30 deg ..., ribbed facets between (5 radial ribs), phase read from the photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 9.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.45
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "half_width": {
+   "hour": 0.62,
+   "minute": 0.5,
+   "seconds": 0.1
+  },
+  "tail_half_width": {
+   "hour": 0.62,
+   "minute": 0.6,
+   "seconds": 0.25
+  },
+  "lume_half_width": {
+   "hour": 0.02,
+   "minute": 0.02
+  },
+  "note": "half widths include 0.1 mm over the photographed hands so the 3D hands hide the ones in the map; 0102: hands carry the photographed pixels (material steel_photo, front projection) and the photographed lume strip stays in them, so the raised lume prism is reduced to a 0.04 mm sliver",
+  "material": "steel_photo"
+ },
+ "crown": {
+  "teeth": 24,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 20.0
+ },
+ "bracelet": {
+  "gap": 0.4,
+  "z0": 0.6,
+  "z_outer": 3.4,
+  "z_channel": 3.8,
+  "bevel": 0.2,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "rows_mm": {
+   "top": [
+    [
+     20.2,
+     23.4
+    ],
+    [
+     23.4,
+     26.65
+    ],
+    [
+     26.65,
+     29.3
+    ],
+    [
+     29.3,
+     30.0
+    ]
+   ],
+   "bottom": [
+    [
+     21.3,
+     25.3
+    ],
+    [
+     25.3,
+     28.9
+    ],
+    [
+     28.9,
+     31.8
+    ],
+    [
+     31.8,
+     32.65
+    ]
+   ]
+  },
+  "channel_pieces_mm": {
+   "top": [
+    [
+     18.6,
+     21.7
+    ],
+    [
+     22.1,
+     25.0
+    ],
+    [
+     25.5,
+     28.1
+    ],
+    [
+     28.5,
+     29.95
+    ]
+   ],
+   "bottom": [
+    [
+     19.4,
+     22.8
+    ],
+    [
+     23.8,
+     27.0
+    ],
+    [
+     27.8,
+     30.9
+    ],
+    [
+     31.5,
+     32.65
+    ]
+   ]
+  },
+  "channel_x_mm": [
+   2.5,
+   4.5
+  ],
+  "note": "Flat bracelet: row joints and polished pieces are the positions measured in the photo (top and bottom differ because of the photo's perspective), so the front view lines up with it. No curl: the photo's foreshortening is built into the row positions."
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_groove": {
+   "color": [
+    0.2,
+    0.2,
+    0.21
+   ],
+   "metallic": 1.0,
+   "roughness": 0.45,
+   "note": "shaded bottoms of the bezel grooves"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gold": {
+   "color": [
+    0.92,
+    0.72,
+    0.3
+   ],
+   "metallic": 1.0,
+   "roughness": 0.15,
+   "note": "yellow-gold hands from the photo (sRGB about 240, 200, 110)"
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour keeps the dark dial clear"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-royal36-m2836c1a0-0102/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.1,
+  "emission": 0.4
+ }
+}

@@ -1,7 +1,10 @@
-"""Phase 1 for the Tudor Royal 36 M2836C1A0-0101 (black dial, Roman numerals): 2x working reference, trace JSON and dial photo map.
+"""Phase 1 for the Tudor Royal 36 M2836C1A0-xxxx variants: 2x working reference, trace JSON, dial and steel photo maps.
 
-    python3 -B -m pipeline.tudor_royal36_prep      # writes the 2x reference, config/watches/tudor-royal36-m2836c1a0-0101-trace.json,
-                                                  # outputs/watches/tudor-royal36-m2836c1a0-0101/dial_photo.jpg (+ .json)
+    python3 -B -m pipeline.tudor_royal36_prep [0101]      # variant suffix of M2836C1A0-<suffix>; default 0101
+        reads    references/tudor-royal-36-m2836c1a0-<suffix>/tudor-m2836c1a0-<suffix>_900x1200.png
+                 config/watches/tudor-royal36-m2836c1a0-<suffix>-measure.json   (pixel measurements read from that photo, see 0101)
+        writes   the 2x reference, config/watches/tudor-royal36-m2836c1a0-<suffix>-trace.json,
+                 outputs/watches/tudor-royal36-m2836c1a0-<suffix>/{dial_photo,steel_photo}.jpg (+ .json)
 
 Source: the catalogue photo (900 x 1200, transparent background, front view with a little perspective). Anchor: case diameter
 36 mm (model name, catalog 2) from the left edge of the silhouette on the pivot row (the right side carries the crown).
@@ -11,31 +14,25 @@ the photographed ones at the photographed time (10:09:xx) and the minute hand st
 """
 import json
 import math
+import sys
 from pathlib import Path
 
 import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-REF = ROOT / "references/tudor-royal-36-m2836c1a0-0101"
-SRC = REF / "tudor-m2836c1a0-0101_900x1200.png"
-UP = REF / "tudor-m2836c1a0-0101_1800x2400.png"
-TRACE = ROOT / "config/watches/tudor-royal36-m2836c1a0-0101-trace.json"
-STEEL = ROOT / "outputs/watches/tudor-royal36-m2836c1a0-0101/steel_photo.jpg"
-DIAL = ROOT / "outputs/watches/tudor-royal36-m2836c1a0-0101/dial_photo.jpg"
+SUFFIX = sys.argv[1] if len(sys.argv) > 1 else "0101"
+NAME = "tudor-royal36-m2836c1a0-" + SUFFIX
+REF = ROOT / ("references/tudor-royal-36-m2836c1a0-" + SUFFIX)
+SRC = REF / ("tudor-m2836c1a0-%s_900x1200.png" % SUFFIX)
+UP = REF / ("tudor-m2836c1a0-%s_1800x2400.png" % SUFFIX)
+TRACE = ROOT / ("config/watches/%s-trace.json" % NAME)
+STEEL = ROOT / ("outputs/watches/%s/steel_photo.jpg" % NAME)
+DIAL = ROOT / ("outputs/watches/%s/dial_photo.jpg" % NAME)
+PX = {k: (tuple(v) if isinstance(v, list) and all(isinstance(i, (int, float)) for i in v) else v)
+      for k, v in json.loads((ROOT / ("config/watches/%s-measure.json" % NAME)).read_text()).items()}
 CASE_MM = 36.0
 
-PX = {
-    "pivot": (448, 664), "case_edge_left_x": 195,
-    "rings": {"bezel_in": 216, "crystal_edge": 213, "dial_flat": 207, "bezel_out": 248},
-    "hour_tip": (357, 609), "minute_tip": (612, 586), "seconds_tip": (318, 790),
-    "hour_tail": (485, 688), "minute_tail": (418, 684), "seconds_tail": (478, 632),
-    "hub_r": 20, "hour_lume": (0.2, 0.8), "minute_lume": (0.35, 0.86),
-    "crown": {"x0": 700, "x1": 740, "y0": 622, "y1": 710},
-    "date": {"x0": 565, "y0": 647, "x1": 614, "y1": 688},
-    # bracelet columns, 6 o'clock side: polished channels |x| 2.5..4.5 mm (px 412..385 / 482..510), brushed rows joint at 380, 330, 286, 256
-    "channel_mm": [2.5, 4.5],
-}
 
 
 def build():
