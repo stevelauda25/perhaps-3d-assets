@@ -1,0 +1,46 @@
+{
+ "id": "seiko-sur419p1",
+ "output": "outputs/jobs/seiko-sur419p1",
+ "asset_type": "watch",
+ "model": "Seiko SUR419P1",
+ "baseline": "First build: front relief from the front photo at 39.4 mm, house depth, glass, steel and bracelet bend",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/seiko-sur419p1/REFERENCE_PLAN.md",
+  "config/watches/seiko-sur419p1.json",
+  "config/watches/seiko-sur419p1-trace.json",
+  "config/presets/watch_kit_white_front_seiko_sur419.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_seiko_sur419_front",
+   "params": {
+    "spec": "config/watches/seiko-sur419p1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/seiko-sur419p1/seiko-sur419p1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_seiko_sur419.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
