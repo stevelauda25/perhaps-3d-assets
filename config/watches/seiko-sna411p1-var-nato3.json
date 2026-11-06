@@ -1,0 +1,33 @@
+{
+ "model": "Seiko Pilot's Flight SNA411P1 on a black/red NATO strap (SKU SNA411P1-VAR-NATO3)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the straightened turned photo (42 mm coin-edge bezel, Irsyad); heights fitted to the listed 13 mm. Dial, subdials with their hands, date and the slide-rule bezel insert come from one photo map; the strap from a straightened atlas of the photo's strap.",
+ "trace": "config/watches/seiko-sna411p1-var-nato3-trace.json",
+ "dial_map": "outputs/watches/seiko-sna411p1-var-nato3/dial_photo.jpg",
+ "verified_mm": {"diameter": 42.0, "lug_to_lug": 46.34},
+ "case": {"profile_rz": [[0.0, 0], [19.8, 0], [20.5, 0.8], [20.6, 2.0], [20.6, 8.6], [20.3, 9.0], [17.0, 9.0], [17.0, 7.2], [0.0, 7.2]],
+          "material": "steel_polished"},
+ "bezel": {"z0": 8.9, "ring_top_z": 10.7, "teeth_root_r": 20.55, "insert_top_z": 10.5, "insert_inner_z": 10.2},
+ "crystal": {"z0": 9.8, "z1": 10.6},
+ "dial": {"z": 7.4, "roughness": 0.4},
+ "lume_dots": {"height": 0.25},
+ "hands": {"thickness": 0.12, "z": {"hour": 7.8, "minute": 8.05, "chrono": 8.3}, "lume_height": 0.03, "cap_radius": 0.25},
+ "crown": {"radius": 3.0, "teeth": 16, "flute_depth": 0.5, "r_from": 20.3, "flutes_to": 23.6, "r_to": 24.1, "z": 4.6,
+           "note": "short wide fluted crown with a rounded end, from the turned photo (6.0 mm across, 3.45 mm out of the case)"},
+ "pushers": {"collar_radius": 2.3, "teeth": 16, "flute_depth": 0.35, "r_from": 20.3, "collar_to": 23.2,
+             "button_radius": 1.5, "button_to": 23.8, "r_to": 24.4, "z": 4.6,
+             "note": "screw-down fluted collar at the case, then a plain button with a domed end (turned photo)"},
+ "lug": {"outline_mm": [[11.2, 16.0], [14.5, 14.5], [14.5, 21.9], [13.9, 23.17], [11.2, 23.17]],
+         "top_z_at_case": 8.4, "top_z_at_tip": 6.4, "bevel": 0.4,
+         "note": "6 o'clock lug of the straightened photo (inner 11.2, outer 14.5 mm, tip 23.17 mm), mirrored to all four"},
+ "strap": {"map": "outputs/watches/seiko-sna411p1-var-nato3/strap_photo.jpg", "roughness": 0.85, "half_width": 11.0,
+           "z0": 1.2, "z1": 2.6, "edge_chamfer": 0.15, "from_y": 16.0, "bend_radius": 7.0, "bend_after_tip": 0.0, "arc_over_radius": 2.2,
+           "note": "NATO 22 mm; house curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R; built at final depth"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "lume": {"color": [0.62, 0.63, 0.66], "metallic": 0.0, "roughness": 0.5, "note": "light grey lume as in the photo"},
+  "chrono_yellow": {"color": [0.79, 0.56, 0.02], "metallic": 0.0, "roughness": 0.35, "note": "photo about sRGB 230/196/40"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission; black base colour keeps the black dial clear (SRPG18J1)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}
