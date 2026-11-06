@@ -1,0 +1,250 @@
+{
+ "model": "Seiko 5 SNZG13K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (42 mm case, Irsyad 2026-11-06: same case as SNZG11J1); heights are the SNZG11J1 ones scaled to the listed 12 mm thickness (no side view). All dial print stays in the dial map. Three-column brushed bracelet from the photo with the house 7 mm curl.",
+ "trace": "config/watches/seiko-snzg13k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snzg13k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0,
+  "lug_to_lug": 48.99
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    19.8,
+    0.0
+   ],
+   [
+    20.7,
+    0.74
+   ],
+   [
+    21.0,
+    1.85
+   ],
+   [
+    21.0,
+    8.31
+   ],
+   [
+    20.85,
+    9.05
+   ],
+   [
+    20.4,
+    9.6
+   ],
+   [
+    19.3,
+    10.06
+   ],
+   [
+    18.9,
+    10.15
+   ],
+   [
+    18.7,
+    10.11
+   ],
+   [
+    18.7,
+    7.75
+   ],
+   [
+    0.0,
+    7.75
+   ]
+  ],
+  "material": "steel_satin"
+ },
+ "gasket": {
+  "r_in": 17.16,
+  "r_out": 18.7,
+  "z0": 7.85,
+  "z1": 9.51
+ },
+ "crystal": {
+  "radius": 18.7,
+  "z0": 9.51,
+  "z1": 9.92
+ },
+ "dial": {
+  "z": 7.85,
+  "roughness": 0.45
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 8.17,
+   "minute": 8.4,
+   "seconds": 8.63
+  },
+  "point_mm": 1.1,
+  "frame": 0.27,
+  "hour": {
+   "lume_from": 2.3,
+   "collet_r": 1.3
+  },
+  "minute": {
+   "lume_from": 3.4,
+   "collet_r": 0.62
+  },
+  "seconds": {
+   "half_width": 0.1,
+   "arrow_half_width": 0.42,
+   "note": "paddle tail (length, half width) from the trace: it lies under the hour hand"
+  },
+  "hub": {
+   "radius": 0.5,
+   "cap_radius": 0.22,
+   "note": "cap = the dark pivot hole seen in the photo"
+  }
+ },
+ "crown": {
+  "radius": 2.9,
+  "flute_depth": 0.16,
+  "teeth": 22,
+  "r_from": 21.2,
+  "r_to": 23.85,
+  "z": 5.08,
+  "material": "steel_satin",
+  "neck": {
+   "r_from": 20.5,
+   "radius": 1.9
+  }
+ },
+ "lug": {
+  "inner_arc_r": 18.9,
+  "fit_from_y": 17.0,
+  "top_z_at_case": 8.68,
+  "top_z_at_tip": 7.02,
+  "bevel": 0.35,
+  "material": "steel_brushed",
+  "note": "outer edge: straight line fitted to the traced edge from fit_from_y to the tip, down to where it meets the case; inner side follows an 18.9 mm arc, just outside the bezel inner edge (18.7 mm), so the lug never shows through the crystal"
+ },
+ "materials": {
+  "lume": {
+   "color": [
+    0.49,
+    0.48,
+    0.56
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "light grey inlay as in the photo"
+  },
+  "seconds_red": {
+   "color": [
+    0.72,
+    0.06,
+    0.05
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_steel": {
+   "color": [
+    0.8,
+    0.8,
+    0.88
+   ],
+   "metallic": 1.0,
+   "roughness": 0.22,
+   "note": "hands, hub, collets: bright white-silver with a cool tint as in the photo (frame about sRGB 220/219/245); rougher than mirror steel so it stays light in any viewer"
+  },
+  "steel_satin": {
+   "color": [
+    0.72,
+    0.72,
+    0.73
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "case, bezel and crown: fine satin finish in the photo, plain (no normal map: the lines are radial on the bezel)"
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "bevel edges of the brushed parts"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "end_link": {
+  "from_y": 17.5,
+  "top_z": 4.6,
+  "bevel": 0.3,
+  "note": "between the lugs from under the case: outer columns to the lug tips, centre column centre_shift shorter (photo)"
+ },
+ "bracelet": {
+  "end_y": 39.9,
+  "gap": 0.15,
+  "z0": 0.6,
+  "z_outer": 3.4,
+  "z_centre": 3.6,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "Three brushed columns from the photo: outer links from the lug tips, the centre column about 1 mm nearer the case; width follows the photo taper (21.5 mm at the lugs); house curl (SUR419P1), end_y = tip + 2.2 x radius"
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines along the bracelet; bevels keep the polished material"
+  }
+ }
+}

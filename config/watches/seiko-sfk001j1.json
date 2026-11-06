@@ -1,0 +1,33 @@
+{
+ "model": "Seiko Prospex SFK001J1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre (hand pivot and bezel centre, which sit up to 0.56 mm off it in the photo, are put on it). Plan sizes from the trace (45 mm case width, listing); heights estimated for the listed 13.2 mm before the house depth scale (no side view). Wave dial, 24-hour flange, date (redrawn as 6) and the 60-minute bezel insert come from one photo map with all hands removed; case, scalloped bezel, applied indices, hands, crown and bracelet are 3D.",
+ "trace": "config/watches/seiko-sfk001j1-trace.json",
+ "photo_map": "outputs/watches/seiko-sfk001j1/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.3, "bezel_insert": 0.35},
+ "verified_mm": {"diameter": 45.0, "lug_width": 20.0},
+ "case": {"top_z": 8.0, "opening_r": 16.0, "bevel": 1.0, "note": "Sumo case: one brushed plate from the photo outline (mean of both edges), lugs either side of the bracelet, polished rounded edges"},
+ "bezel": {"z0": 7.8, "ring_top_z": 10.4, "scallop_depth": 0.3, "ring_inner_r": 20.0, "insert_top_z": [10.55, 10.45],
+           "lip": {"r": [15.44, 15.67], "z1": 10.2}, "note": "polished ring with 60 rounded scallops (0.3 mm notches, Irsyad 2026-11-06), photo insert, thin polished lip at the crystal edge"},
+ "crystal": {"r": 15.5, "z0": 9.6, "z1": 10.1},
+ "dial": {"z": 6.6, "flange_r": 15.5, "flange_z": 7.9, "note": "flat wave dial to 13.51 mm, then the 24-hour flange as a cone"},
+ "indices": {"height": 0.35, "lume_height": 0.04},
+ "hands": {"thickness": 0.15, "z": {"gmt": 7.0, "hour": 7.25, "minute": 7.5, "seconds": 7.75}, "lume_height": 0.03, "hub_cap_height": 0.25},
+ "crown": {"teeth": 24, "flute_depth": 0.22, "r_from": 21.8, "z": 4.0},
+ "end_link": {"from_y": 19.5, "top_z": 4.6},
+ "bracelet": {"end_y": 41.5, "z0": 0.6, "z1": 3.8, "gap": 0.15, "bevel": 0.3, "backing_z": [0.2, 0.6], "bend_radius": 7.0, "bend_after_tip": 0.0,
+              "note": "House curl (SUR419P1): bend at the lug tips (26.1 mm), 7 mm radius, end_y = tip + 2.2 x radius. Three columns (centre 0.49 of the width): outer links from the lug tips, centre links 2.0 mm nearer the case (photo)"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass (SRPG18J1)"},
+  "lume": {"color": [0.66, 0.78, 0.76], "metallic": 0.0, "roughness": 0.5, "note": "pale mint lume from the photo (sRGB 210, 227, 225)"},
+  "gmt_orange": {"color": [0.96, 0.3, 0.0], "metallic": 0.0, "roughness": 0.35, "note": "orange GMT hand from the photo (sRGB 251, 153, 8)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"}
+ }
+}
