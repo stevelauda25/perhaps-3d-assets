@@ -1,0 +1,46 @@
+{
+  "id": "tudor-royal36-m2836c1a0-0101",
+  "output": "outputs/jobs/tudor-royal36-m2836c1a0-0101",
+  "asset_type": "watch",
+  "model": "TUDOR Royal 36 M2836C1A0-0101",
+  "baseline": "First build: front relief from the catalogue photo at 36 mm, photo-map dial with Roman numerals, 48-segment ribbed bezel, gold hands, five-column brushed/polished bracelet with house curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/tudor-royal-36-m2836c1a0-0101/REFERENCE_PLAN.md",
+    "config/watches/tudor-royal36-m2836c1a0-0101.json",
+    "config/watches/tudor-royal36-m2836c1a0-0101-trace.json",
+    "config/presets/watch_kit_white_front_tudor_royal36.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_tudor_royal36",
+      "params": {
+        "spec": "config/watches/tudor-royal36-m2836c1a0-0101.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/tudor-royal36-m2836c1a0-0101/tudor-royal36-m2836c1a0-0101.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_tudor_royal36.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 1800,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
