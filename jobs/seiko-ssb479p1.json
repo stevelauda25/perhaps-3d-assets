@@ -1,0 +1,46 @@
+{
+  "id": "seiko-ssb479p1",
+  "output": "outputs/jobs/seiko-ssb479p1",
+  "asset_type": "watch",
+  "model": "Seiko SSB479P1",
+  "baseline": "First build: quartz chronograph, black tachymeter insert and dial from the straight front photo at 38.7 mm, five-column bracelet, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/seiko-ssb479p1/REFERENCE_PLAN.md",
+    "config/watches/seiko-ssb479p1.json",
+    "config/watches/seiko-ssb479p1-trace.json",
+    "config/presets/watch_kit_white_front_seiko_ssb479.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_seiko_ssb479",
+      "params": {
+        "spec": "config/watches/seiko-ssb479p1.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/seiko-ssb479p1/seiko-ssb479p1.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_seiko_ssb479.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
