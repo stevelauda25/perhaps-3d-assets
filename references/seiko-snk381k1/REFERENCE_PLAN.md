@@ -40,7 +40,7 @@ A front-facing GLB in `models/watches/seiko-snk381k1.glb`, like `seiko-snk607k1.
 ```sh
 python3 -B -m pipeline.seiko_snk381_trace    # -> config/watches/seiko-snk381k1-trace.json
 python3 -B -m pipeline.seiko_snk381_dial     # -> outputs/watches/seiko-snk381k1/dial_photo.jpg (regenerated, not committed)
-python3 -B -m pipeline.jobs run jobs/seiko-snk381k1-v003.json
+python3 -B -m pipeline.jobs run jobs/seiko-snk381k1.json
 ```
 
 Scale 111.73 px/mm, origin = hand pivot (2292, 4677). Hands read 10:08:50. The dial map is the photo with the hands and their shadows inpainted away; numerals beside a hand are kept out of the fill.
@@ -59,6 +59,7 @@ Scale 111.73 px/mm, origin = hand pivot (2292, 4677). Hands read 10:08:50. The d
 | v001 | First front relief: numerals in the dial map, leaf hands, seconds tail disc, five-column bracelet, bend radius 28 mm | `outputs/jobs/seiko-snk381k1-v001/cmp-front.png` |
 | v002 | House values from the SNK607K1 v009: bend from the lug tips (21.5 mm), radius 23 mm; dial map also removes hand shadows, sharpen 0.6, JPEG 93 (GLB 2.2 MB) | `outputs/jobs/seiko-snk381k1-v002/board_front.png` |
 | v003 | Full 5 shield plate: the trace box was too narrow and cut off its right side, which then showed the flat photo in a different shade | `outputs/jobs/seiko-snk381k1-v003/board_front.png` |
+| curl | Bracelet links bend with a smooth 7 mm curl from the lug tips, as on SUR419P1 (Irsyad, 2026-11-06); job and spec without version numbers | `outputs/jobs/seiko-snk381k1/cmp-front.png` |
 
 Not approved yet; not in `models/watches/`.
 

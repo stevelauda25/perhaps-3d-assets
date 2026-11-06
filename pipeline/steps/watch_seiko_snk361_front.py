@@ -11,7 +11,7 @@ import math
 import bpy
 from mathutils import Matrix
 
-from pipeline.steps.watch_seiko_front import P, photo_material, principled, slab
+from pipeline.steps.watch_seiko_front import P, curl, photo_material, principled, slab
 from pipeline.steps.watch_speedmaster import Geo, ROOT, rect, rot
 
 
@@ -212,17 +212,16 @@ def run(params):
     add("end_links", end_brushed, "steel_brushed", bevel=el["bevel"], polished_bevel=True)
     add("end_links_mid", end_polished, "steel_polished", bevel=el["bevel"])
 
-    zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]  # bracelet built at final depth: flattened thickness, unflattened curve
+    zm = ds * (br["z0"] + br["z1"]) / 2  # bracelet built at final depth: flattened thickness, unflattened curve
+    box = curl(br["bend_y"], br["bend_radius"], zm)
+    za, zb = ds * br["z0"], ds * br["z1"]
 
-    def place(s, sy):
-        """Rigid placement of a link whose centre sits at distance s along the bracelet: straight up to bend_y, then
-        rolled back over a circle of radius R (away from the viewer), so the ends curve out of sight."""
-        over = s - br["bend_y"]
-        if over <= 0:
-            return Matrix.Translation((0, sy * s, zm))
-        th_ = over / R
-        m_ = Matrix.Translation((0, sy * (br["bend_y"] + R * math.sin(th_)), zm - R * (1 - math.cos(th_))))
-        return m_ @ Matrix.Rotation(-sy * th_, 4, "X")
+    def bent_piece(geo, kind, x0, x1, y0, y1, sy):
+        if kind == "centre":
+            box(geo, -x1, x1, y0, y1, za, zb, sy)
+        else:
+            box(geo, x0, x1, y0, y1, za, zb, sy)
+            box(geo, -x1, -x0, y0, y1, za, zb, sy)
 
     pitch = tr["bracelet_pitch_mm"]
     brushed, polished, back = Geo(), Geo(), Geo()
@@ -235,12 +234,13 @@ def run(params):
                 if y0 >= br["end_y"] - 0.5:
                     break
                 y1 = min(y1 - gap, br["end_y"])
-                ym, M = (y0 + y1) / 2, place((y0 + y1) / 2, sy)
+                ym = (y0 + y1) / 2
                 cols = columns(hw_at(ym))
                 for kind in kinds:
-                    piece(polished if kind == "mid" else brushed, kind, *cols[kind], y1 - y0, ds * br["z0"] - zm, ds * br["z1"] - zm, M)
+                    bent_piece(polished if kind == "mid" else brushed, kind, *cols[kind], y0, y1, sy)
                 if kinds[0] == "centre":
-                    back.prism(rect(0, 0, 2 * (hw_at(ym) - 0.3), y1 - y0 + gap), ds * br["backing_z"][0] - zm, ds * br["backing_z"][1] - zm, M)
+                    hb = hw_at(ym) - 0.3
+                    box(back, -hb, hb, y0 - gap / 2, y1 + gap / 2, ds * br["backing_z"][0], ds * br["backing_z"][1], sy)
                     rows += 1
                 y0 = y1 + gap
     add("bracelet_links", brushed, "steel_brushed", bevel=br["bevel"], polished_bevel=True)

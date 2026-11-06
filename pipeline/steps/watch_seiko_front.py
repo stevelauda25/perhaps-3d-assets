@@ -1,8 +1,8 @@
 """watch_seiko_front: build the Seiko 5 SNK607K1 as a flat-backed front relief (like the Casio GLBs in models/watches/).
 
-Params: spec (config/watches/seiko-snk607k1-v1.json). Model in mm, origin = hand pivot, dial faces +z, back flat at z = 0,
+Params: spec (config/watches/seiko-snk607k1.json). Model in mm, origin = hand pivot, dial faces +z, back flat at z = 0,
 under one pose empty `SKO | pose` (scale 0.001, rotated 90 deg about X so the dial faces -Y in Blender and +Z in glTF). For the
-flat 2.5D look the watch-head objects carry a depth scale (pose.depth_scale); the bracelet is built at final depth so its bend stays round.
+flat 2.5D look the watch-head objects carry a depth scale (pose.depth_scale); the bracelet is built at final depth so its bend stays round; its links bend with the curve (curl()).
 Plan sizes come from the trace (config/watches/seiko-snk607k1-trace.json); heights from the spec. The dial is the photo map
 from pipeline/seiko_dial.py on a planar UV. Materials are plain Principled BSDFs with direct image links so the GLB keeps
 them. Rebuild with --force after regenerating the dial map (the map is not part of the stage fingerprint).
@@ -53,6 +53,37 @@ def slab(g, poly, z0, top):
     g.f += [(base + i, base + (i + 1) % n, base + n + (i + 1) % n, base + n + i) for i in range(n)]
     g.smooth += [False] * (n + 2)
     return g
+
+
+def curl(bend_y, R, zm):
+    """Smooth bracelet curl (approved on SUR419P1): returns box(geo, x0, x1, s0, s1, za, zb, sy), a link part from s0 to s1
+    along the bracelet (mm from the pivot, heights za..zb at final depth), mirrored to 6 o'clock with sy = -1. Straight up to
+    bend_y, then rolled back over radius R away from the viewer; inside the bend the box is sliced every 0.4 mm so it follows
+    the curve instead of turning as one rigid piece. Heights stay normal to the curve (neutral line zm)."""
+    def bend(s, z):
+        if s <= bend_y:
+            return s, z
+        a, r = (s - bend_y) / R, R + z - zm
+        return bend_y + r * math.sin(a), zm - R + r * math.cos(a)
+
+    def box(geo, x0, x1, s0, s1, za, zb, sy):
+        cuts = [s0] + [s0 + k * 0.4 for k in range(1, int((s1 - s0) / 0.4) + 1) if bend_y - 0.4 < s0 + k * 0.4 < s1 - 0.05] + [s1]
+        base = len(geo.v)
+        for s_ in cuts:
+            for x, z in ((x0, za), (x1, za), (x1, zb), (x0, zb)):
+                y, z_ = bend(s_, z)
+                geo.v.append((x, sy * y, z_))
+        faces = [(0, 1, 2, 3)]
+        for k in range(len(cuts) - 1):
+            b, n = 4 * k, 4 * k + 4
+            faces += [(b, n, n + 1, b + 1), (b + 3, b + 2, n + 2, n + 3), (b + 1, n + 1, n + 2, b + 2), (b, b + 3, n + 3, n)]
+        n = 4 * (len(cuts) - 1)
+        faces.append((n + 3, n + 2, n + 1, n))
+        for f in faces:
+            f = tuple(base + i for i in f)
+            geo.f.append(f if sy > 0 else f[::-1])  # mirrored in y: flip the winding to keep normals outward
+            geo.smooth.append(True)
+    return box
 
 
 def plate(shapes, z0, z1, name):
@@ -267,17 +298,9 @@ def run(params):
             x0 = cw_at(tip) + br["gap"]
             g.prism(rect(sx * (x0 + lg["inner_x"]) / 2, sy * (lg["from_y"] + tip) / 2, lg["inner_x"] - x0, tip - lg["from_y"]), 0.0, el["top_z"])
     add("end_links", g, "steel_brushed", bevel=el["bevel"], polished_bevel=True)
-    zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]  # bracelet built at final depth: flattened thickness, unflattened curve
-
-    def place(s, sy):
-        """Rigid placement of a link whose centre sits at distance s along the bracelet: straight up to bend_y, then
-        rolled back over a circle of radius R (away from the viewer), so the ends curve out of sight like the Casio straps."""
-        over = s - br["bend_y"]
-        if over <= 0:
-            return Matrix.Translation((0, sy * s, zm))
-        th = over / R
-        m = Matrix.Translation((0, sy * (br["bend_y"] + R * math.sin(th)), zm - R * (1 - math.cos(th))))
-        return m @ Matrix.Rotation(-sy * th, 4, "X")
+    zm = ds * (br["z0"] + br["z1"]) / 2  # bracelet built at final depth: flattened thickness, unflattened curve
+    box = curl(br["bend_y"], br["bend_radius"], zm)
+    za, zb = ds * br["z0"], ds * br["z1"]
 
     links, back = Geo(), Geo()
     rows = 0
@@ -286,15 +309,16 @@ def run(params):
             y0 = start
             while y0 < br["end_y"] - 0.5:
                 y1 = min(y0 + br["pitch"] - br["gap"], br["end_y"])
-                ym, M = (y0 + y1) / 2, place((y0 + y1) / 2, sy)
+                ym = (y0 + y1) / 2
                 if centre:
-                    links.prism(rect(0, 0, 2 * cw_at(ym), y1 - y0), ds * br["z0"] - zm, ds * br["z1"] - zm, M)
-                    back.prism(rect(0, 0, 2 * (hw_at(ym) - 0.3), y1 - y0 + br["gap"]), ds * br["backing_z"][0] - zm, ds * br["backing_z"][1] - zm, M)
+                    box(links, -cw_at(ym), cw_at(ym), y0, y1, za, zb, sy)
+                    hb = hw_at(ym) - 0.3
+                    box(back, -hb, hb, y0 - br["gap"] / 2, y1 + br["gap"] / 2, ds * br["backing_z"][0], ds * br["backing_z"][1], sy)
                     rows += 1
                 else:
                     x0, x1 = cw_at(ym) + br["gap"], hw_at(ym)
-                    for sx in (1, -1):
-                        links.prism(rect(sx * (x0 + x1) / 2, 0, x1 - x0, y1 - y0), ds * br["z0"] - zm, ds * br["z1"] - zm, M)
+                    box(links, x0, x1, y0, y1, za, zb, sy)
+                    box(links, -x1, -x0, y0, y1, za, zb, sy)
                 y0 += br["pitch"]
     add("bracelet_links", links, "steel_brushed", bevel=br["bevel"], polished_bevel=True)
     add("bracelet_backing", back, "steel_gap")

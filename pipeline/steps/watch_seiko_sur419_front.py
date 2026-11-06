@@ -13,7 +13,7 @@ import math
 import bpy
 from mathutils import Matrix
 
-from pipeline.steps.watch_seiko_front import P, photo_material, plate, principled, slab
+from pipeline.steps.watch_seiko_front import P, curl, photo_material, plate, principled, slab
 from pipeline.steps.watch_speedmaster import Geo, ROOT, rect, rot
 
 
@@ -201,33 +201,7 @@ def run(params):
     zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]  # bracelet built at final depth: flattened thickness, unflattened curve
     bend_y = tip + br.get("bend_after_tip", 0.0)
 
-    def bend(s, z):
-        """(distance along the bracelet, height) -> (y, z): straight up to bend_y, then rolled back over a circle of
-        radius R (away from the viewer), so the ends curve out of sight. Heights stay normal to the curve."""
-        if s <= bend_y:
-            return s, z
-        a, r = (s - bend_y) / R, R + z - zm
-        return bend_y + r * math.sin(a), zm - R + r * math.cos(a)
-
-    def bent_box(geo, x0, x1, s0, s1, za, zb, sy):
-        """Box from s0 to s1 along the bracelet, sliced every 0.4 mm inside the bend so it follows the curve smoothly
-        (like the resin straps of the Casio GLBs) instead of turning as one rigid piece."""
-        cuts = [s0] + [s0 + k * 0.4 for k in range(1, int((s1 - s0) / 0.4) + 1) if s0 + k * 0.4 > bend_y - 0.4 and s0 + k * 0.4 < s1 - 0.05] + [s1]
-        base = len(geo.v)
-        for s_ in cuts:
-            for x, z in ((x0, za), (x1, za), (x1, zb), (x0, zb)):
-                y, z_ = bend(s_, z)
-                geo.v.append((x, sy * y, z_))
-        faces = [(0, 1, 2, 3)]
-        for k in range(len(cuts) - 1):
-            b, n = 4 * k, 4 * k + 4
-            faces += [(b, n, n + 1, b + 1), (b + 3, b + 2, n + 2, n + 3), (b + 1, n + 1, n + 2, b + 2), (b, b + 3, n + 3, n)]
-        n = 4 * (len(cuts) - 1)
-        faces.append((n + 3, n + 2, n + 1, n))
-        for f in faces:
-            f = tuple(base + i for i in f)
-            geo.f.append(f if sy > 0 else f[::-1])  # mirrored in y: flip the winding to keep normals outward
-            geo.smooth.append(True)
+    bent_box = curl(bend_y, R, zm)
 
     pitch = tr["bracelet_pitch_mm"]
     brushed, polished, back = Geo(), Geo(), Geo()
