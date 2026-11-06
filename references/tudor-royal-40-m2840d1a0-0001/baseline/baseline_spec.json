@@ -1,0 +1,262 @@
+{
+ "model": "TUDOR Royal 40 M2840D1A0-0001 (steel, black dial, baton indices, day-date, bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Royal 40 template (same photo template for -0002/-0003, only the dial map changes): case, bezel, crown and bracelet from the 40 mm photo silhouette and joints. The black sunburst dial, applied baton indices, TUDOR print, MONDAY and date windows and minute track come from one 2x photo map with the photographed hands left in it.",
+ "trace": "config/watches/tudor-royal40-m2840d1a0-0001-trace.json",
+ "dial_map": "outputs/watches/tudor-royal40-m2840d1a0-0001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 4.4,
+  "ramp_from_y": 14.5,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette into the bracelet; the top is brushed and slopes down toward the bracelet",
+  "tip_top": 23.17,
+  "tip_bottom": 22.88
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_base": 8.6,
+  "z_plain": 9.1,
+  "z_rib": 8.95,
+  "arc_steps": 6,
+  "ribs": 5,
+  "rib_fill": 0.9,
+  "rib_to_gap": 2.0,
+  "note": "48 segments of 7.5 deg: plain polished facets centred at 0, 15, 30 deg ..., ribbed facets between (5 radial ribs), phase read from the photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 9.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.4
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "half_width": {
+   "hour": 0.62,
+   "minute": 0.5,
+   "seconds": 0.1
+  },
+  "tail_half_width": {
+   "hour": 0.62,
+   "minute": 0.6,
+   "seconds": 0.25
+  },
+  "lume_half_width": {
+   "hour": 0.3,
+   "minute": 0.22
+  },
+  "note": "half widths include 0.1 mm over the photographed hands so the 3D hands hide the ones in the map; hands and hub use the steel_photo material (the reference photo projected from the front), so the 3D hands show the photographed steel and lume shading",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.42
+ },
+ "crown": {
+  "teeth": 24,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 21.65
+ },
+ "bracelet": {
+  "gap": 0.06,
+  "z0": 0.6,
+  "z_outer": 3.4,
+  "z_channel": 3.8,
+  "bevel": 0.2,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "rows_mm": {
+   "top": [
+    [
+     23.17,
+     26.76
+    ],
+    [
+     26.76,
+     29.89
+    ],
+    [
+     29.89,
+     33.02
+    ],
+    [
+     33.02,
+     35.0
+    ]
+   ],
+   "bottom": [
+    [
+     22.88,
+     26.87
+    ],
+    [
+     26.87,
+     30.25
+    ],
+    [
+     30.25,
+     33.67
+    ],
+    [
+     33.67,
+     36.3
+    ]
+   ]
+  },
+  "channel_pieces_mm": {
+   "top": [
+    [
+     21.35,
+     24.37
+    ],
+    [
+     24.69,
+     25.3
+    ],
+    [
+     25.41,
+     28.97
+    ],
+    [
+     29.12,
+     32.21
+    ],
+    [
+     32.35,
+     34.06
+    ],
+    [
+     34.24,
+     34.62
+    ]
+   ],
+   "bottom": [
+    [
+     21.26,
+     24.28
+    ],
+    [
+     24.93,
+     25.45
+    ],
+    [
+     25.52,
+     28.4
+    ],
+    [
+     28.47,
+     28.99
+    ],
+    [
+     29.17,
+     31.8
+    ],
+    [
+     32.12,
+     32.59
+    ],
+    [
+     32.77,
+     35.25
+    ],
+    [
+     35.37,
+     35.97
+    ]
+   ]
+  },
+  "channel_x_mm": [
+   2.34,
+   4.5
+  ],
+  "note": "Flat bracelet: row joints (dark joint lines of the brushed columns) and polished pieces (gaps = dark joint lines of the polished columns) are the positions measured in the photo with brightness scans, top and bottom separately (perspective). Pieces run under the case end. No curl.",
+  "inset": 0.04,
+  "backing_inset": 0.4
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_groove": {
+   "color": [
+    0.2,
+    0.2,
+    0.21
+   ],
+   "metallic": 1.0,
+   "roughness": 0.45,
+   "note": "shaded bottoms of the bezel grooves"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-royal40-m2840d1a0-0001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.03,
+  "emission": 0.33
+ }
+}

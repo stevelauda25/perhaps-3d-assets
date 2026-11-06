@@ -1,0 +1,46 @@
+{
+ "id": "tudor-royal40-m2840d1a0-0001",
+ "output": "outputs/jobs/tudor-royal40-m2840d1a0-0001",
+ "asset_type": "watch",
+ "model": "TUDOR Royal 40 M2840D1A0-0001",
+ "baseline": "First build: front relief from the catalogue photo at 40 mm, photo-map dial with baton indices and day-date windows, 48-segment ribbed bezel, photographed-hand batons, five-column brushed/polished bracelet at the photo's joints (Royal 40 template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-royal-40-m2840d1a0-0001/REFERENCE_PLAN.md",
+  "config/watches/tudor-royal40-m2840d1a0-0001.json",
+  "config/watches/tudor-royal40-m2840d1a0-0001-trace.json",
+  "config/presets/watch_kit_white_front_tudor_royal40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_royal40",
+   "params": {
+    "spec": "config/watches/tudor-royal40-m2840d1a0-0001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-royal40-m2840d1a0-0001/tudor-royal40-m2840d1a0-0001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_royal40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
