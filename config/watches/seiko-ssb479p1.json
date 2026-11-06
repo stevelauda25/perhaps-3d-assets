@@ -1,0 +1,34 @@
+{
+ "model": "Seiko SSB479P1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = case and dial centre. Plan sizes from the trace (38.7 mm case, listing); heights estimated for the listed 12.6 mm before the house depth scale (no side view). Dial, subdials, date, print, crystal wall and the tachymeter insert come from one photo map; subdial hands stay printed in it.",
+ "trace": "config/watches/seiko-ssb479p1-trace.json",
+ "photo_map": "outputs/watches/seiko-ssb479p1/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.3, "bezel_insert": 0.35},
+ "verified_mm": {"diameter": 38.7, "lug_width": 19.6},
+ "case": {"profile_rz": [[0.0, 0.0], [18.6, 0.0], [19.15, 0.4], [19.35, 1.2], [19.35, 6.9], [19.2, 7.6], [18.96, 7.9], [16.9, 7.9], [16.9, 6.2], [0.0, 6.2]]},
+ "bezel": {"profile_rz": [[18.96, 7.9], [19.32, 7.9], [19.32, 8.7], [19.2, 9.05], [18.96, 9.05], [18.96, 7.9]],
+           "insert_z0": 7.9, "insert_top_z": [9.4, 9.0], "note": "thin polished steel edge around the black insert; insert slopes down outward"},
+ "dial": {"z": 6.3, "wall_top_z": 9.3, "note": "flat dial to the traced dial edge, then the grey crystal wall of the photo as a cone up to the insert"},
+ "crystal": {"z0": 9.3, "z_edge": 10.6, "z1": 11.4, "chamfer": 2.5},
+ "indices": {"height": 0.35, "lume_height": 0.03, "lume_inset": 0.06, "max_outer_r": 14.45},
+ "hands": {"thickness": 0.15, "z": {"hour": 7.0, "minute": 7.25, "chrono": 7.5}, "hub_cap_height": 0.2},
+ "crown": {"radius": 2.95, "flute_depth": 0.15, "teeth": 36, "r_from": 20.25, "collar_radius": 1.6, "collar_from": 18.8, "z": 4.0},
+ "pushers": {"stem_radius": 1.0, "stem_from": 18.8, "cap_from": 20.4, "cap_radius": 1.6},
+ "lug": {"inner_x": 10.0, "from_y": 11.0, "top_z_at_case": 7.0, "top_z_at_tip": 5.0, "bevel": 0.35},
+ "end_link": {"from_y": 17.0, "half_width": 9.9, "top_z": 4.2, "bevel": 0.3},
+ "bracelet": {"end_y": 38.0, "z0": 0.5, "z1": 3.2, "gap": 0.15, "bevel": 0.3, "backing_z": [0.15, 0.5], "bend_radius": 7.0, "bend_after_tip": 0.0,
+              "note": "House curl (SUR419P1): bend at the lug tips (22.6 mm), 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour keeps the dark dial clear (SRPG18J1)"},
+  "lume": {"color": [0.8, 0.67, 0.51], "metallic": 0.0, "roughness": 0.5, "note": "cream lume from the photo (sRGB about 232, 214, 190)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"}
+ }
+}

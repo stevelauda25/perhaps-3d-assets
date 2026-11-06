@@ -1,0 +1,45 @@
+{
+ "model": "Seiko Presage Style60's SSA425J1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (40.8 mm case, listing); heights fit the listed 12.8 mm with a box crystal before the house depth scale. Black dial with the 24-hour sub-dial and the open-heart aperture, minute track, crystal wall, SEIKO, PRESAGE AUTOMATIC, lume pads, the print at 6 and the black 60-minute bezel insert come from one photo map.",
+ "trace": "config/watches/seiko-ssa425j1-trace.json",
+ "dial_map": "outputs/watches/seiko-ssa425j1/dial_photo.jpg",
+ "verified_mm": {"diameter": 40.8, "lug_to_lug": 47.0},
+ "case": {
+  "profile_rz": [[0.0, 0], [19.9, 0], [20.35, 0.6], [20.4, 1.4], [20.4, 7.6], [20.3, 8.5], [20.14, 9.0], [20.14, 8.7], [17.79, 8.7],
+                 [17.79, 9.5], [17.5, 9.7], [17.05, 9.7], [17.05, 6.5], [0.0, 6.5]],
+  "material": "steel_polished",
+  "note": "case flank, thin steel lip outside the insert, polished inner bezel ring up to the crystal"
+ },
+ "bezel_insert": {"z_outer": 9.0, "z_inner": 9.3, "roughness": 0.3},
+ "gasket": {"r_in": 16.95, "r_out": 17.05, "z0": 8.0, "z1": 9.75},
+ "crystal": {"z0": 8.0, "z1": 12.4, "note": "box Hardlex: tall flat-topped cylinder"},
+ "dial": {"z": 6.6, "rehaut_z": 8.0, "roughness": 0.35},
+ "indices": {"height": 0.4, "bevel": 0.05, "ribs": 3, "rib_gap": 0.08, "clear_of_aperture": 0.15},
+ "hands": {"thickness": 0.12, "ridge": 0.1, "lume_height": 0.03, "z": {"sub24": 6.9, "hour": 7.05, "minute": 7.3, "seconds": 7.55},
+           "minute_tail_half_width": 0.55},
+ "crown": {"radius": 2.75, "flute_depth": 0.25, "teeth": 24, "r_from": 20.2, "cap_radius": 2.2, "z": 3.8},
+ "lug": {"inner_x": 10.2, "from_y": 14.25, "top_z_at_case": 7.0, "top_z_at_tip": 5.0, "bevel": 0.4},
+ "end_link": {"from_y": 17.0, "top_z": 4.6, "bevel": 0.3},
+ "bracelet": {
+  "half_width": 10.1, "end_y": 39.0, "gap": 0.15,
+  "z0": 0.6, "z_outer": 3.4, "z_centre": 3.6,
+  "bevel": 0.3,
+  "backing_z": [0.2, 0.6],
+  "bend_radius": 7.0, "bend_after_tip": 0.0,
+  "note": "Three brushed columns from the photo: outer links from the lug tips, the centre column 1.5 mm nearer the case; house curl (SUR419P1), end_y = tip + 2.2 x radius"
+ },
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "gasket_black": {"color": [0.01, 0.01, 0.012], "metallic": 0.0, "roughness": 0.4},
+  "lume": {"color": [0.93, 0.9, 0.72], "metallic": 0.0, "roughness": 0.5, "note": "cream Lumibrite from the photo (sRGB 250, 248, 226)"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour keeps the dark dial clear (SRPG18J1)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines along the bracelet; bevels keep the polished material"}
+ }
+}

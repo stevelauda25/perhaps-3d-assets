@@ -1,0 +1,231 @@
+{
+ "source": "outputs/watches/seiko-sna411p1-var-nato3/front_rectified.png",
+ "scale_px_per_mm": 41.4286,
+ "origin_px": [
+  1150,
+  1640
+ ],
+ "anchor": "coin-edge bezel 42.0 mm across (Irsyad)",
+ "rings_mm": {
+  "bezel_outer": 21.0,
+  "insert_outer": 20.331,
+  "crystal": 16.747
+ },
+ "photo_centres_mm": {
+  "bezel": [
+   -0.813,
+   0.135
+  ],
+  "crystal": [
+   -0.294,
+   0.005
+  ],
+  "hand_pivot": [
+   -0.41,
+   -0.072
+  ]
+ },
+ "teeth_count": 56,
+ "lume_dots": {
+  "ring_mm": 10.983,
+  "radius_mm": 0.821,
+  "hours": [
+   1,
+   2,
+   4,
+   5,
+   7,
+   8,
+   10,
+   11
+  ]
+ },
+ "subdial_ring_mm": 7.676,
+ "hands": {
+  "hour": {
+   "angle_deg": 304.5,
+   "length_mm": 8.992,
+   "half_width_mm": 0.941,
+   "half_outline_mm": [
+    [
+     0,
+     -0.8
+    ],
+    [
+     0.3,
+     -0.8
+    ],
+    [
+     0.3,
+     1.0
+    ],
+    [
+     0.941,
+     2.0
+    ],
+    [
+     0.941,
+     7.692
+    ],
+    [
+     0,
+     8.992
+    ]
+   ],
+   "lume": {
+    "from_mm": 2.4,
+    "to_mm": 7.392,
+    "half_width_mm": 0.583
+   }
+  },
+  "minute": {
+   "angle_deg": 49.51,
+   "length_mm": 12.379,
+   "half_width_mm": 0.603,
+   "half_outline_mm": [
+    [
+     0,
+     -0.8
+    ],
+    [
+     0.25,
+     -0.8
+    ],
+    [
+     0.25,
+     1.2
+    ],
+    [
+     0.603,
+     2.2
+    ],
+    [
+     0.603,
+     11.179
+    ],
+    [
+     0,
+     12.379
+    ]
+   ],
+   "lume": {
+    "from_mm": 2.6,
+    "to_mm": 10.879,
+    "half_width_mm": 0.374
+   }
+  },
+  "chrono": {
+   "angle_deg": 359.89,
+   "length_mm": 12.817,
+   "needle_half_mm": 0.097,
+   "root_half_mm": 0.338,
+   "tail_apex_mm": 1.376,
+   "tail_mm": 4.031,
+   "tail_base_half_mm": 1.062
+  }
+ },
+ "hub_radius_mm": 0.531,
+ "crown": {
+  "angle_deg": 90.0,
+  "r_to_mm": 25.683,
+  "radius_mm": 2.655
+ },
+ "pushers": {
+  "angles_deg": [
+   62.0,
+   118.0
+  ],
+  "r_to_mm": 25.272,
+  "radius_mm": 1.931
+ },
+ "lug_mm": {
+  "inner_x": 11.2,
+  "outer_x": 14.483,
+  "tip_y": 23.172
+ },
+ "strap_mm": {
+  "half_width": 11.466
+ },
+ "manual_px": {
+  "dial_centre": [
+   1150,
+   1640
+  ],
+  "bezel_centre": [
+   1116.3,
+   1634.4
+  ],
+  "bezel_outer_r": 870.0,
+  "insert_outer_r": 842.3,
+  "crystal_centre": [
+   1137.8,
+   1639.8
+  ],
+  "crystal_r": 693.8,
+  "teeth": 56,
+  "lume_dot_r": [
+   455.0,
+   34.0
+  ],
+  "subdial_r": 318.0,
+  "hand_pivot": [
+   1133,
+   1643
+  ],
+  "hour_tip": [
+   826,
+   1432
+  ],
+  "minute_tip": [
+   1523,
+   1310
+  ],
+  "hour_half_width_px": 39,
+  "minute_half_width_px": 25,
+  "chrono_tip": [
+   1132,
+   1112
+  ],
+  "chrono_tail": {
+   "apex_y": 1700,
+   "base_y": 1810,
+   "base_half_px": 44,
+   "needle_half_px": 4,
+   "root_half_px": 14
+  },
+  "hub_r_px": 22,
+  "crown": {
+   "angle_deg": 90.0,
+   "r_to_px": 1064,
+   "radius_px": 110
+  },
+  "pushers": {
+   "angles_deg": [
+    62.0,
+    118.0
+   ],
+   "r_to_px": 1047,
+   "radius_px": 80
+  },
+  "lug_px": {
+   "inner_x": 1614,
+   "outer_x": 1750,
+   "tip_y": 2600
+  },
+  "strap_px": {
+   "x": [
+    700,
+    1650
+   ],
+   "rows_top": [
+    330,
+    645
+   ]
+  }
+ },
+ "artefacts_not_traced": [
+  "straightened from a turned photo: only the dial plane is true",
+  "subdial hands stay in the photo map (flat)",
+  "12 o'clock lug and strap distorted by perspective: 6 o'clock values mirrored"
+ ]
+}

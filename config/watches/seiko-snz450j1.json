@@ -1,0 +1,76 @@
+{
+ "model": "Seiko 5 Sports SNZ450J1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre (circle through the indices). Plan sizes from the trace (38 mm case, Irsyad); heights estimated from the 3/4 photo (no orthographic side view). Gold tone as on SNKL50K1. The print, the minute and date tracks and the day-date discs stay in the dial map.",
+ "trace": "config/watches/seiko-snz450j1-trace.json",
+ "dial_map": "outputs/watches/seiko-snz450j1/dial_photo.jpg",
+ "verified_mm": {
+  "width_flanks": 38.0
+ },
+ "case": {
+  "z_inner": 7.4,
+  "z_edge": 4.8,
+  "edge_round": 0.5,
+  "slope_power": 1.4,
+  "rings": 28,
+  "scoop": {"depth": 1.4, "tangential": [6.0, 4.2], "radial": [1.3, 1.5], "centre_r": [15.1, 17.3], "note": "elliptical dishes: half lengths along the case and across it, centre radius; at 12/6, then on the flanks (photo)"},
+  "claw": {"height": 1.2, "half_width": 1.4, "inner_r": 13.6, "fade": 1.2, "note": "pyramid pointing at the dial, widest at its traced centre, fading outward"},
+  "material": "steel_polished"
+ },
+ "bezel": {
+  "profile_rz": [[13.41, 7.4], [12.95, 8.2], [12.55, 8.15], [12.33, 7.85], [12.33, 7.55]],
+  "material": "steel_polished"
+ },
+ "gasket": {"r_in": 12.18, "r_out": 12.35, "z0": 6.4, "z1": 7.6},
+ "crystal": {"radius": 12.33, "z0": 7.55, "z1": 7.9},
+ "dial": {
+  "texture_edge_r": 12.18,
+  "z": 6.4,
+  "rehaut_r": 12.33,
+  "rehaut_z": 7.2,
+  "map_half_mm": 12.442,
+  "roughness": 0.4
+ },
+ "daydate_frame": {"wall": 0.25, "height": 0.15, "material": "steel_polished"},
+ "logo": {"seiko_height": 0.2, "shield_height": 0.25, "bevel": 0.03, "note": "SEIKO traced from the SNKL50K1 photo, shield from the SNK607K1 trace (too soft to trace here)"},
+ "indices": {"height": 0.3, "frame": 0.15, "lume_height": 0.03, "marker_12_lume_inset": 0.2},
+ "hands": {
+  "thickness": 0.12,
+  "z": {"hour": 6.85, "minute": 7.02, "seconds": 7.19},
+  "tail_widen": 1.15,
+  "lume_half_width": 0.62,
+  "lume_from": 0.13,
+  "lume_to": 0.97,
+  "seconds_half_width": 0.1,
+  "seconds_tail_half_width": 0.22,
+  "hub": {"cap_height": 0.2}
+ },
+ "crown": {"radius": 2.4, "flute_depth": 0.25, "teeth": 14, "r_from": 18.4, "r_to": 21.4, "z": 2.9},
+ "end_link": {"top_z": 4.4, "bevel": 0.3, "under_case": 1.5},
+ "bracelet": {
+  "end_y": 35.16,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [0.2, 0.6],
+  "bend_radius": 7.0,
+  "half_width": [[19.76, 10.3], [22.5, 9.8], [27.0, 8.4], [30.0, 8.12], [45.0, 8.12]],
+  "half_width_note": "first link flares to the case (photo silhouette, 12 and 6 sides averaged); 16.25 mm past it",
+  "columns": [[0.0, 0.45, "centre", "steel_brushed"], [0.45, 1.0, "outer", "steel_brushed"]],
+  "columns_note": "[x0, x1 as a fraction of the half width, joint set from the trace, material]: centre links 0.376 of a row past the outer links (photo)",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the first outer joint (lug tip), end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {"color": [1.0, 0.72, 0.3], "metallic": 1.0, "roughness": 0.1, "note": "gold tone as SNKL50K1 (photo mid-tones here: 1 : 0.67-0.73 : 0.25-0.34, linear)"},
+  "steel_brushed": {"color": [0.88, 0.62, 0.25], "metallic": 1.0, "roughness": 0.3},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "gasket_black": {"color": [0.01, 0.01, 0.01], "metallic": 0.0, "roughness": 0.4},
+  "crystal": {"color": [1.0, 1.0, 1.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08, "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission"},
+  "lume": {"color": [0.8, 0.8, 0.74], "metallic": 0.0, "roughness": 0.5, "note": "white lume as photographed"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"}
+ }
+}
