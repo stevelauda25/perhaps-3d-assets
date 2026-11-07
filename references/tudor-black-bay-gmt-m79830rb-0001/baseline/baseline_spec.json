@@ -1,0 +1,452 @@
+{
+ "model": "TUDOR Black Bay GMT M79830RB-0001 (41 mm steel, black dial, blue/red GMT bezel, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Black Bay GMT template (config/watches/tudor-bbgmt-*): case, 24 h bezel (polished flange + blue/red insert + coin edge), crown on a neck and four hands (hour, minute, seconds, red GMT with arrow head) from the 41 mm photo silhouette; the black dial, indices, print, date window and minute track come from one 2x photo map with the photographed hands left in it.",
+ "trace": "config/watches/tudor-bbgmt-m79830rb-0001-trace.json",
+ "dial_map": "outputs/watches/tudor-bbgmt-m79830rb-0001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 19.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (straight diagonal lug flanks from the bezel to the bracelet); top slopes toward the strap",
+  "tip_top": 24.22,
+  "tip_bottom": 24.55
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 1.475,
+  "round_mm": 0.3,
+  "note": "steel ring: polished flange (bezel_in, 1.475 mm wide, sloping up to the insert) + blue/red insert (to insert_out) + coin-edge ring (to bezel_out); colours, numerals and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.28
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "gmt": 8.05,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.2,
+     0.64
+    ],
+    [
+     5.2,
+     0.64
+    ],
+    [
+     6.75,
+     2.14
+    ],
+    [
+     8.2,
+     0.64
+    ],
+    [
+     9.253,
+     0.64
+    ]
+   ],
+   "minute": [
+    [
+     -1.2,
+     0.565
+    ],
+    [
+     12.72,
+     0.565
+    ],
+    [
+     13.13,
+     0.34
+    ],
+    [
+     13.752,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -4.495,
+     0.34
+    ],
+    [
+     -1.4,
+     0.34
+    ],
+    [
+     -1.3,
+     0.19
+    ],
+    [
+     8.0,
+     0.19
+    ],
+    [
+     9.04,
+     1.2
+    ],
+    [
+     10.08,
+     0.19
+    ],
+    [
+     13.5,
+     0.15
+    ],
+    [
+     13.714,
+     0.0
+    ]
+   ],
+   "gmt": [
+    [
+     -0.3,
+     0.24
+    ],
+    [
+     14.319,
+     0.24
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.2,
+     0.5
+    ],
+    [
+     5.25,
+     0.5
+    ],
+    [
+     6.75,
+     1.98
+    ],
+    [
+     8.15,
+     0.5
+    ],
+    [
+     9.1,
+     0.5
+    ]
+   ],
+   "minute": [
+    [
+     2.4,
+     0.3
+    ],
+    [
+     12.2,
+     0.3
+    ],
+    [
+     12.7,
+     0.15
+    ]
+   ],
+   "seconds": [
+    [
+     8.23,
+     0.0
+    ],
+    [
+     9.04,
+     0.86
+    ],
+    [
+     9.85,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, 0.04 mm wider than the photographed hands so the 3D hands hide the ones in the map; the last point sits at the traced length. lume = +w side outline [s, w], mirrored about the axis. hands.polygons = free polygons in mm (GMT arrow head: red frame outline, white lume inset). Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43,
+  "polygons": {
+   "gmt": {
+    "z": 8.1,
+    "outline_mm": [
+     [
+      5.073,
+      -10.117
+     ],
+     [
+      7.236,
+      -10.416
+     ],
+     [
+      6.959,
+      -12.489
+     ],
+     [
+      6.428,
+      -12.863
+     ],
+     [
+      6.181,
+      -12.332
+     ],
+     [
+      4.617,
+      -11.741
+     ]
+    ],
+    "lume_mm": [
+     [
+      5.307,
+      -10.474
+     ],
+     [
+      6.969,
+      -10.704
+     ],
+     [
+      6.756,
+      -12.297
+     ],
+     [
+      6.348,
+      -12.585
+     ],
+     [
+      6.158,
+      -12.176
+     ],
+     [
+      4.956,
+      -11.722
+     ]
+    ]
+   }
+  }
+ },
+ "crown": {
+  "teeth": 56,
+  "flute_depth": 0.12,
+  "z": 4.2,
+  "cap_radius_fraction": 0.82,
+  "fluted_to_mm": 23.45,
+  "bevel": 0.2,
+  "neck_radius_fraction": 0.78,
+  "base_chamfer_mm": 0.2,
+  "note": "no crown guards; fluted part x 736..777 px, neck from the bezel to x 736 (84 px high); the photo shows about 80 fine flutes, 56 teeth keep the polygon count down (the flutes come from the projected photo)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind selects the section built from strap[kind]; only the bracelet is used here",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "centre_x_mm": {
+    "top": [
+     [
+      0.0,
+      -5.088,
+      4.793
+     ],
+     [
+      40.0,
+      -5.088,
+      4.793
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -5.162,
+      4.72
+     ],
+     [
+      40.0,
+      -5.162,
+      4.72
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       24.22,
+       33.03
+      ],
+      [
+       33.03,
+       35.7
+      ]
+     ],
+     "bottom": [
+      [
+       24.55,
+       33.44
+      ],
+      [
+       33.44,
+       37.65
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       23.1,
+       27.21
+      ],
+      [
+       27.21,
+       27.72
+      ],
+      [
+       27.72,
+       35.7
+      ]
+     ],
+     "bottom": [
+      [
+       23.4,
+       27.95
+      ],
+      [
+       27.95,
+       28.4
+      ],
+      [
+       28.4,
+       36.2
+      ],
+      [
+       36.2,
+       36.58
+      ],
+      [
+       36.58,
+       37.65
+      ]
+     ]
+    }
+   },
+   "note": "Flat bracelet of three brushed columns (outer / centre / outer). Joints read from the photo with brightness scans, top and bottom separately (photo px, mm = distance from the pivot / 13.561): outer columns top joint y 162, bottom joint y 1063.5; centre column top joints 297 / 241 / 234 (a 0.5 mm dark band between 241 and 234), bottom 927 / 989 / 995 / 1101 / 1106; vertical joint lines x 381 / 515 (top), 380 / 514 (bottom). Rivet ears at the sides come from the alpha silhouette."
+  },
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_strap": 3.3,
+   "bevel": 0.3,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "centre_x_mm": {
+    "top": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "strap": {
+     "top": [
+      [
+       22.1,
+       31.4
+      ]
+     ],
+     "bottom": [
+      [
+       21.8,
+       33.5
+      ]
+     ]
+    }
+   },
+   "note": "PLACEHOLDER for M79000N-0002 (not built here): one continuous column over the silhouette; list transverse grooves / end pieces per side in pieces_mm.strap, measure the y ranges (mm from the pivot) on the -0002 photo"
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-bbgmt-m79830rb-0001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ }
+}

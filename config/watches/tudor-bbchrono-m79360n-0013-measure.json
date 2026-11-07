@@ -1,0 +1,60 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-chrono-m79360n-0013/tudor-m79360n-0013_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (449, 612) (hub disc centre (449.1, 612.5), r 20 px, read at 8x); the bezel/dial circles (radial profiles, circle fits) sit about 1..2 px off the hub, perspective makes the flange outer edge 224 px (top) .. 237 px (bottom) from the hub, so the rings below are averages about the hub. case_edge_left_x = left edge of the bezel on the pivot row (169: anchors the 41 mm case, 280 px = 20.5 mm, 13.659 px/mm). rings = radii px: dial_flat 199 (end of the minute track), crystal_edge 214 (black rehaut 200..214), bezel_in 215 (polished flange 215..233), insert 233..276 (black aluminium tachymeter insert with white numerals/pearls/ticks in the photo), bezel_out 280 (thin steel outer rim 276..280); insert_out 276. crown box: fluted x 731..771, y 570..674 (centre y 622, radius 52 px); neck x 721..731 about 83 px high. Pushers at 2 and 4 o'clock: radial from the crown-axis point (449, 622) at +-30 deg, radius 26 px, end faces at 341.5 px from that point, fluted ring 297..321 px, neck from the bezel to 297 px (see spec pushers). tip_rows_px = case top edge y 300 and bottom edge y 945. mirror_rows_px = y ranges where the right silhouette is the crown/pusher (replaced by the mirrored left edge): upper pusher y 425..512, crown 570..675, lower pusher 726..822. Hands (about 10:09): hour = free polygon (spec hands.polygons.hour), minute 63.55 deg through the pivot, half width 7 px (6.25 px near the tip), taper from s = 178 px to the point at s = 192 px; central chronograph seconds hand 180 deg (down), tail triangle at 12 (base y 436, width 37 px), needle 3 px half width, ball end centre s = 62 px radius 7 px, tip s = 69 px. Sub-dials (in the dial map, 3D hands and hubs added): left centre (340.9, 615) radius 61 hub (340.9, 614.5) r 8.7, black wedge hand to (303, 649.5); right centre (553.5, 615.5) radius 61, hub (554.2, 613.8) r 8.7, black bar hand up to (555.2, 571.5). Date window x 433..468 y 727..758 printed in the dial map.",
+ "pivot": [
+  449,
+  612
+ ],
+ "case_edge_left_x": 169,
+ "rings": {
+  "dial_flat": 199,
+  "crystal_edge": 214,
+  "bezel_in": 215,
+  "insert_out": 276,
+  "bezel_out": 280
+ },
+ "hand_keys": [
+  "minute",
+  "seconds"
+ ],
+ "minute_tip": [
+  620.9,
+  526.6
+ ],
+ "minute_tail": [
+  441.0,
+  615.5
+ ],
+ "seconds_tip": [
+  449.0,
+  681.0
+ ],
+ "seconds_tail": [
+  449.5,
+  436.0
+ ],
+ "hub_r": 20,
+ "crown": {
+  "x0": 731,
+  "x1": 771,
+  "y0": 570,
+  "y1": 674
+ },
+ "tip_rows_px": [
+  300,
+  945
+ ],
+ "mirror_rows_px": [
+  [
+   425,
+   512
+  ],
+  [
+   570,
+   675
+  ],
+  [
+   726,
+   822
+  ]
+ ]
+}

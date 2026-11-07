@@ -1,0 +1,46 @@
+{
+ "id": "tudor-bb58-m7939a1a0ru-0001",
+ "output": "outputs/jobs/tudor-bb58-m7939a1a0ru-0001",
+ "asset_type": "watch",
+ "model": "TUDOR Black Bay 58 M7939A1A0RU-0001",
+ "baseline": "First build: front relief from the catalogue photo at 39 mm, photo-map black dial, rotating bezel with insert and coin edge, snowflake hands, five-column steel bracelet at the photo's joints (Black Bay 58 template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-black-bay-58-m7939a1a0ru-0001/REFERENCE_PLAN.md",
+  "config/watches/tudor-bb58-m7939a1a0ru-0001.json",
+  "config/watches/tudor-bb58-m7939a1a0ru-0001-trace.json",
+  "config/presets/watch_kit_white_front_tudor_bb58.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_bb58",
+   "params": {
+    "spec": "config/watches/tudor-bb58-m7939a1a0ru-0001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-bb58-m7939a1a0ru-0001/tudor-bb58-m7939a1a0ru-0001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_bb58.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

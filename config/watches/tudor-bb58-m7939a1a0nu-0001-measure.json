@@ -1,0 +1,64 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-58-m7939a1a0nu-0001/tudor-m7939a1a0nu-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (451, 613) (dark pin hole, read at 8x); the dial / bezel circle (Hough + circle fits on the dial edge, rehaut edge and bezel steel edge) is centred at about (450.2, 615.0), i.e. 0.8 px left and 2 px below the hub hole: rings below are radii about that circle. case_edge_left_x = left edge of the coin-edge bezel on the pivot row (180.5; anchors the 39 mm case: 270.5 px = 19.5 mm, 13.872 px/mm; the silhouette's mid line is x 450.2). rings = radii in px: dial_flat 191.5 (end of the black dial incl. minute track; rehaut ring in the map from 192), crystal_edge 213 (end of the grey rehaut ring), bezel_in 214, insert_out 261 (end of the black insert, steel coin-edge ring starts 260.5), bezel_out 270.5 (coin tips). crown box: x 718..755, y 572..662 (centre 617, 91 px = 6.5 mm). tip_rows_px = lug top y 303 and lug bottom y 944 (alpha silhouette steps; the bracelet's alpha ends y 141 / 1123). Hands (about 10:10:38): hour axis 304.9 deg (stem half width 10.85 px, snowflake diamond widest +-32 px at 83 px from the pivot, nub to 121.5 px); minute 64.1 deg (blade half width 8.55 px, pointed tip at 180.5 px); seconds 227.8 deg (needle half width 1.5 px, counterweight disc centre 67.3 px behind the hub, radius 7 px; lume disc centre 103.3 px, radius 12 px; tip 179 px). Hub radius 18 px. The photo carries the TUDOR Master Chronometer logo and a tick mark at the lower right (separate alpha components, excluded by the prep: only the largest component is the watch). No date window: the date box is a dummy at the pivot and unused.",
+ "pivot": [
+  451,
+  613
+ ],
+ "case_edge_left_x": 180.5,
+ "rings": {
+  "dial_flat": 191.5,
+  "crystal_edge": 213,
+  "bezel_in": 214,
+  "insert_out": 261,
+  "bezel_out": 270.5
+ },
+ "hour_tip": [
+  351.4,
+  543.5
+ ],
+ "minute_tip": [
+  613.4,
+  534.2
+ ],
+ "seconds_tip": [
+  318.4,
+  733.2
+ ],
+ "hour_tail": [
+  464.1,
+  622.2
+ ],
+ "minute_tail": [
+  436.6,
+  620.0
+ ],
+ "seconds_tail": [
+  505.8,
+  563.3
+ ],
+ "hub_r": 18.0,
+ "hour_lume": [
+  0.21,
+  0.95
+ ],
+ "minute_lume": [
+  0.18,
+  0.95
+ ],
+ "crown": {
+  "x0": 718,
+  "x1": 755,
+  "y0": 572,
+  "y1": 662
+ },
+ "date": {
+  "x0": 451,
+  "y0": 613,
+  "x1": 451,
+  "y1": 613
+ },
+ "tip_rows_px": [
+  303,
+  944
+ ]
+}
