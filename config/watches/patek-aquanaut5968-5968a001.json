@@ -1,0 +1,368 @@
+{
+ "model": "PATEK PHILIPPE Aquanaut Chronograph 5968A-001 (42.2 mm steel, black and orange embossed dial, black rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Aquanaut Chronograph 5968A-001 (catalog 2 row 110): the Aquanaut template (case slab from the alpha silhouette, superellipse bezel ring with scanned window and chamfer, flat polygon dial with the native photo map, one fluted crown, one-piece rubber strap) plus the chronograph parts: two pusher prisms at 2 / 4 o'clock, the central orange chronograph hand with its long tail, the sub-dial hand at 6 o'clock with its own pivot, orange hubs. Scale 30.09 px/mm anchored on the left flank (21.1 mm from the pivot). Step: pipeline/steps/watch_patek_aquanaut5968.py.",
+ "trace": "config/watches/patek-aquanaut5968-5968a001-trace.json",
+ "dial_map": "outputs/watches/patek-aquanaut5968-5968a001/dial_photo.jpg",
+ "steel_map": "outputs/watches/patek-aquanaut5968-5968a001/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.2
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 6.2,
+  "ramp_from_y": 20.0,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 720,
+  "note": "case slab = silhouette between the lug tips (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25) with the crown rows replaced by a straight line, top and bottom sloping toward the strap; bezel = superellipse ring (min of the superellipse and the silhouette less silhouette_margin_mm, sampled by rays) at bezel_z, then a chamfer ring down to the dial window at chamfer_z",
+  "tip_top": 23.5,
+  "tip_bottom": 26.25,
+  "pusher_note": "pushers: see spec.pusher"
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6
+ },
+ "dial": {
+  "z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.31,
+  "note": "flat polygon (the window less the chamfer) with the native photo map: embossed grid, applied numerals, indices, minute track, date window and the photographed hands stay in the map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "sub": 7.55,
+   "chrono": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     0.0,
+     0.881
+    ],
+    [
+     9.422,
+     0.881
+    ],
+    [
+     10.419,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     0.0,
+     0.897
+    ],
+    [
+     13.477,
+     0.897
+    ],
+    [
+     14.49,
+     0.0
+    ]
+   ],
+   "chrono": [
+    [
+     -6.049,
+     0.0
+    ],
+    [
+     -5.899,
+     0.15
+    ],
+    [
+     -5.7,
+     0.399
+    ],
+    [
+     -5.5,
+     0.631
+    ],
+    [
+     -5.301,
+     0.698
+    ],
+    [
+     -5.102,
+     0.665
+    ],
+    [
+     -4.703,
+     0.631
+    ],
+    [
+     -4.304,
+     0.598
+    ],
+    [
+     -3.972,
+     0.565
+    ],
+    [
+     -3.473,
+     0.532
+    ],
+    [
+     -2.975,
+     0.482
+    ],
+    [
+     -2.476,
+     0.432
+    ],
+    [
+     -1.977,
+     0.399
+    ],
+    [
+     -1.479,
+     0.332
+    ],
+    [
+     -0.98,
+     0.282
+    ],
+    [
+     -0.399,
+     0.233
+    ],
+    [
+     0.0,
+     0.199
+    ],
+    [
+     0.997,
+     0.166
+    ],
+    [
+     6.979,
+     0.15
+    ],
+    [
+     7.976,
+     0.116
+    ],
+    [
+     10.968,
+     0.1
+    ],
+    [
+     13.959,
+     0.086
+    ],
+    [
+     14.956,
+     0.08
+    ],
+    [
+     15.055,
+     0.0
+    ]
+   ],
+   "sub": [
+    [
+     -2.626,
+     0.0
+    ],
+    [
+     -2.493,
+     0.1
+    ],
+    [
+     -2.393,
+     0.273
+    ],
+    [
+     -2.194,
+     0.415
+    ],
+    [
+     -2.094,
+     0.432
+    ],
+    [
+     -1.861,
+     0.389
+    ],
+    [
+     -1.595,
+     0.339
+    ],
+    [
+     -1.329,
+     0.273
+    ],
+    [
+     -1.064,
+     0.213
+    ],
+    [
+     -0.798,
+     0.176
+    ],
+    [
+     -0.332,
+     0.133
+    ],
+    [
+     0.665,
+     0.08
+    ],
+    [
+     5.716,
+     0.08
+    ],
+    [
+     5.8,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.609,
+     0.465
+    ],
+    [
+     8.924,
+     0.465
+    ],
+    [
+     9.429,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     2.626,
+     0.455
+    ],
+    [
+     13.028,
+     0.455
+    ],
+    [
+     13.51,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; measured on this photo (hour 303.26, minute 52.74, central chronograph hand 0.30, sub-dial hand 137.87 deg; centre-line offsets and the sub-dial pivot in the trace). lume = [s, half width] of the pale inlay. Hour / minute hands, grey hub: hands_photo; orange chronograph hands and hubs: hands_orange (the reference photo projected from the front).",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.34,
+  "order": [
+   "hour",
+   "minute",
+   "sub",
+   "chrono"
+  ],
+  "materials": {
+   "chrono": "hands_orange",
+   "sub": "hands_orange"
+  },
+  "emission_orange": 0.36
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: a lathe about the axis (profile = [radius, mm along the axis] from the base point), flutes are texture"
+ },
+ "strap": {
+  "kind": "rubber",
+  "note": "strap.kind rubber, ONE full-width piece: edges = trace.strap_y_left_right_mm (silhouette outside the lug zone, measured lug inner walls inside it), from under the bezel to the rounded ends; the embossed grid pad of the photo is texture only",
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.3,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.17,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "pieces_mm": {
+    "full": {
+     "top": [
+      [
+       18.8,
+       31.0
+      ]
+     ],
+     "bottom": [
+      [
+       18.8,
+       40.75
+      ]
+     ]
+    }
+   },
+   "emission_top": 0.235,
+   "emission_bottom": 0.27
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.282
+ },
+ "pusher": {
+  "z0": 2.5,
+  "z1": 6.9,
+  "bevel": 0.15,
+  "note": "polygon prisms from the photo silhouette at the 2 and 4 o'clock rows (trace.pushers), closed under the case; the photo is projected on them like on every steel part"
+ }
+}

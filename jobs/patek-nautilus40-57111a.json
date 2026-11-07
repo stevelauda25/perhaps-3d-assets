@@ -1,0 +1,46 @@
+{
+ "id": "patek-nautilus40-57111a",
+ "output": "outputs/jobs/patek-nautilus40-57111a",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Nautilus 5711/1A (40 mm steel, blue embossed dial, steel bracelet)",
+ "baseline": "First build: Nautilus template follower on the 350 x 492 px JPEG catalogue photo at 40 mm (own measure, patek_nautilus40_prep, kit scale; working size = source x4)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-nautilus-5711-1a/REFERENCE_PLAN.md",
+  "config/watches/patek-nautilus40-57111a.json",
+  "config/watches/patek-nautilus40-57111a-trace.json",
+  "config/presets/watch_kit_white_front_patek_nautilus40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_nautilus41",
+   "params": {
+    "spec": "config/watches/patek-nautilus40-57111a.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-nautilus40-57111a/patek-nautilus40-57111a.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_nautilus40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

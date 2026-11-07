@@ -1,0 +1,245 @@
+{
+ "note": "Pixel measurements read from references/patek-nautilus-5811-1g/patek-58111g_original.png (1920 x 2691 RGBA PNG, the watch occupies x 271..1671, y 261..2551). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]) in the WORKING image (native here, upscale 1). Pivot = centre of the small hub screw / dark seconds hub disc (hub chord scans: dark disc x 937..981, small circle centre (958.7, 1370.2); seconds tail centre 960.0, shaft centre 956.6 at the 6 o'clock index: camera tilt) -> (959.4, 1370.0). Scale: listed 41 mm = left flank of the case (median alpha edge over rows 1340..1440, x about 271.4) to the right flank (x 1643 at the crown notch) with the pivot 20.5 mm from the left flank: S = (pivot x - flank) / 20.5. Bezel outer edge (outer edge of the polished band, read at the corner (420, 1027), (500, 910), (610, 835), (755, 787) and the top centre y 762): superellipse centre (959.4, 1370), half axes 612 x 608, exponent 2.35 (within 2 % on all five points); polished outer band 40 px wide. Window (cushion shape) scanned like the Aquanaut. Crown: 3 o'clock, axis y 1380, notch wall (case flank) x 1643, tip x 1672.5, radius 84.5 px at x 1646..1653; barrel visible from x 1600 (radius 59). Hands (about 10:09:30): hour 304.56 deg (frame half width 22.5, lume half 10, round tip s 262, flare from the stem s 45..68), minute 49.44 deg (frame half 19, lume half 9, tip s 404), seconds 180.4 deg (shaft half 3.3, tip s 414 at the bottom of the 6 o'clock baton, spade counterweight tail tip s 154, widest half 12.5 at s 135). Hub: base disc radius 38.7, seconds hub disc 20.5. Bracelet (outer brushed links with a polished centre link per row): top row joints at y 375..379, 521, 678; bottom joints at 2087, 2245, 2392, 2500; polished centre pieces measured on dark outline scans (rows 296, 380, 510, 660, 2105, 2255, 2400, 2495, 2538).",
+ "reference_dir": "references/patek-nautilus-5811-1g",
+ "upscale": 1,
+ "case_mm": 41.0,
+ "pivot": [
+  959.4,
+  1370.0
+ ],
+ "anchor": {
+  "rows": [
+   1340,
+   1440
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 1296,
+   "y1": 1466,
+   "x0": 1643.0,
+   "x1": 1643.0
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   959.4,
+   1370.0
+  ],
+  "half_x_px": 612.0,
+  "half_y_px": 608.0,
+  "exponent": 2.35,
+  "bevel_px": 40
+ },
+ "aperture": {
+  "bright_thr": 150,
+  "min_run_px": 60,
+  "r_start_px": 380,
+  "r_end_px": 720,
+  "median_half": 6,
+  "mean_half": 2,
+  "chamfer_px": 12,
+  "n": 360
+ },
+ "steel_max_px": 2048,
+ "hands": {
+  "hour": {
+   "angle_deg": 304.56,
+   "length_px": 262.0,
+   "tail_px": 0.0
+  },
+  "minute": {
+   "angle_deg": 49.44,
+   "length_px": 404.0,
+   "tail_px": 0.0
+  },
+  "seconds": {
+   "angle_deg": 180.4,
+   "length_px": 414.0,
+   "tail_px": 154.0
+  }
+ },
+ "hub_r_px": [
+  38.7,
+  20.5
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1600.0,
+    1380.0
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0,
+     0
+    ],
+    [
+     59,
+     0
+    ],
+    [
+     76,
+     23
+    ],
+    [
+     84.5,
+     46
+    ],
+    [
+     84.5,
+     53
+    ],
+    [
+     80,
+     54
+    ],
+    [
+     64,
+     56
+    ],
+    [
+     54,
+     59
+    ],
+    [
+     48.5,
+     62
+    ],
+    [
+     44,
+     65
+    ],
+    [
+     35.5,
+     68
+    ],
+    [
+     12.5,
+     71
+    ],
+    [
+     0,
+     72.5
+    ]
+   ]
+  }
+ ],
+ "bracelet": {
+  "rows_px": {
+   "top": [
+    [
+     524,
+     676
+    ],
+    [
+     380,
+     519
+    ],
+    [
+     276,
+     373
+    ],
+    [
+     262,
+     274
+    ]
+   ],
+   "bottom": [
+    [
+     2092,
+     2243
+    ],
+    [
+     2248,
+     2390
+    ],
+    [
+     2395,
+     2497
+    ],
+    [
+     2503,
+     2552
+    ]
+   ]
+  },
+  "pieces_px": [
+   {
+    "side": "top",
+    "y0": 274,
+    "y1": 318,
+    "x0": 814,
+    "x1": 1115,
+    "r": 8
+   },
+   {
+    "side": "top",
+    "y0": 340,
+    "y1": 423,
+    "x0": 800,
+    "x1": 1128,
+    "r": 9
+   },
+   {
+    "side": "top",
+    "y0": 458,
+    "y1": 567,
+    "x0": 783,
+    "x1": 1138,
+    "r": 10
+   },
+   {
+    "side": "top",
+    "y0": 610,
+    "y1": 712,
+    "x0": 759,
+    "x1": 1162,
+    "r": 10
+   },
+   {
+    "side": "bottom",
+    "y0": 2050,
+    "y1": 2158,
+    "x0": 754,
+    "x1": 1160,
+    "r": 10
+   },
+   {
+    "side": "bottom",
+    "y0": 2203,
+    "y1": 2313,
+    "x0": 780,
+    "x1": 1136,
+    "r": 10
+   },
+   {
+    "side": "bottom",
+    "y0": 2352,
+    "y1": 2443,
+    "x0": 792,
+    "x1": 1123,
+    "r": 9
+   },
+   {
+    "side": "bottom",
+    "y0": 2466,
+    "y1": 2522,
+    "x0": 805,
+    "x1": 1109,
+    "r": 8
+   },
+   {
+    "side": "bottom",
+    "y0": 2528,
+    "y1": 2548,
+    "x0": 819,
+    "x1": 1098,
+    "r": 6
+   }
+  ]
+ }
+}

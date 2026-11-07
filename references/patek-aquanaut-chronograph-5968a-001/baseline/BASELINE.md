@@ -1,0 +1,41 @@
+# Baseline: PATEK PHILIPPE Aquanaut Chronograph 5968A-001 (saved 2026-11-07, awaiting designer approval)
+
+Front-relief build on the 42.2 mm steel / black-and-orange graduated embossed dial / black rubber strap catalogue render (1920 x 2691, native size, catalog 2 row 110). Adapted from the Aquanaut 5168G builds (5167A template) with the chronograph parts added (two pushers, central orange chronograph hand with its long tail, sub-dial hand with its own pivot, orange hubs). Approval is the designer's; this file is not a similarity score.
+
+| Item | Value |
+| --- | --- |
+| GLB | `models/watches/patek-5968a001.glb`, 2,381,520 bytes (2.27 MiB), sha256 `5ae0704c8da52009df5c18b9df13644c671522d65ea2175b47b8d38a6db1155f` (GLB 2.0, declared length = file length, two embedded JPEG image bufferViews, no external URIs) |
+| Geometry (glb_audit) | 20 meshes / 20 primitives, 8 materials, 37,461 vertices, 54,832 triangles; textures: steel map 1297 x 2048 (native 1380 x 2180 crop downscaled by 0.939, INTER_AREA, JPEG q90), dial map 964 x 964 (native); size 45.6 x 71.8 x 3.1 mm. Meshes: case, bezel, core, crystal, dial, hand_hour / hand_minute / hand_sub / hand_chrono, lume_hour / lume_minute, hub, hub_chrono, hub_sub, crown_3, pusher_2, pusher_4, bracelet_links_top / bottom, bracelet_backing. Triangles are mostly the 720-ray bezel and case rings, the 96-segment crown and hub lathes and the strap slabs; no hidden back faces except the flat back slab. Designer-note targets met (<= 2.5 MB, <= 60,000 triangles, textures <= 2048 px) |
+| Comparison render | `baseline_cmp-front_1280.png` (1280 px, 16-bit PNG, white kit, 15.0444 px/mm = half of the native 30.0888 px/mm, pivot at the frame centre; same frame as the photo downscaled by 0.5 (INTER_AREA) with its pivot (479.5, 660.0) moved to (640, 640)), sha256 `6edab53ee0f3d5465ab47eaeb0d523738e61a848011cbee8c2c4b05ed3688a4d` |
+| Side by side | `baseline_vs_reference.png` (left: half-size reference on white, right: render), sha256 `a8e5e4d67631663c0215d717088e8274b8372c13ff3715182eb32029af0c6381`; `zoom_check.jpg` (3x crops, reference | render) |
+| Reference | `../patek-5968a001_original.png` (catalogue file, 1920 x 2691 RGBA, untouched; measuring and map source, no 2x copy: at 30 px/mm it is already large) |
+| Job / step / spec | `jobs/patek-aquanaut5968-5968a001.json`, `pipeline/steps/watch_patek_aquanaut5968.py`, `baseline_spec.json`, `baseline_job.json` |
+| Inputs rebuilt by | `python3 -B -m pipeline.patek_aquanaut5968_prep 5968a001` (reads `config/watches/patek-aquanaut5968-5968a001-measure.json`; writes `-trace.json`, `outputs/watches/patek-aquanaut5968-5968a001/{dial_photo,steel_photo}.jpg`) |
+| Kit preset | `config/presets/watch_kit_white_front_patek_aquanaut5968.json` |
+
+Rebuild: `python3 -B -m pipeline.patek_aquanaut5968_prep 5968a001 && python3 -B -m pipeline.jobs run jobs/patek-aquanaut5968-5968a001.json --force`, then `cp outputs/jobs/patek-aquanaut5968-5968a001/patek-aquanaut5968-5968a001.glb models/watches/patek-5968a001.glb`.
+
+## Registration and scale
+
+Pivot = pin-hole of the orange central hub (959.0, 1320.0); scale 30.0888 px/mm anchored on the left flank (323.9 px = 21.1 mm from the pivot, the template rule). Mirror check: the right flank (pusher base row 1092 x 1592, crown notch wall x 1586) lies within 8 px of the mirrored position, so the case is symmetric about the pivot to about 0.25 mm; flank-to-notch-wall reads 41.94 mm (0.6 % below 42.2, inside the step's 0.35 mm check). Phase correlation render vs photo in the half-scale frame: dial, hour and minute hands shift below 0.05 px, bezel sides and strap 0.0 to 0.3 px.
+
+## State
+
+Steel parts (case, bezel, crown, pushers) carry the photo projected from the front, steel emission 0.282; non-metallic `strap_photo` rubber, emission 0.235 top / 0.27 bottom; hour / minute hands, lume and grey hub `hands_photo` 0.34; orange chronograph and sub-dial hands and hubs `hands_orange` 0.36; native dial photo map emission 0.31; crystal alpha 0.02; specular 0 and roughness 0.6 (steel) / 0.8 (rubber) / 0.35 (dial), so an app environment light adds little; no extra baked shadows. Case outline = alpha silhouette with the crown rows 1251..1449 and both pusher row ranges (866..1092, 1594..1830) replaced by straight flank lines (the crown and pushers are separate parts; outline vertices sit exactly at both ends of each replaced range, otherwise the 0.25 mm grid leaves a hairline gap). Pushers: polygon prisms from the photo silhouette (z 2.5 to 6.9), closed 25 px under the case. Lug tips 23.5 / 26.25 mm. Hand heights: hour 7.4, sub 7.55, minute 7.65, chrono 7.9 mm.
+
+Region mean luminance (sRGB grey, 1280 frame, render : photo): whole watch 1.010, bezel face 1.008 (top 1.011), dial < 15 mm 1.009 (by photo brightness: dark 1.010, mid 0.987 / 0.990, bright 0.996 / 0.994), dial outer ring 13 to 15.5 mm 1.038 (window chamfer and index edges), hour hand 1.007 (lume 1.001), minute hand 1.003, orange hands 1.005 (green channel 1.011), strap top 0.998, strap bottom 0.998, lugs TL 1.014 / TR 1.007 / BL 0.995 / BR 0.991, crown 1.008 (box) / 1.021 (whole), upper pusher 1.006. Silhouette IoU of render vs photo alpha 0.9945; mean abs grey difference inside the photo silhouette 4.6. Emission trials: hands 0.43 gave +4 % (0.34 kept), orange 0.43 +3 % (0.36), dial 0.323 -> 0.31, strap 0.22 / 0.308 -> 0.235 / 0.27.
+
+## Zoom check
+
+`zoom_check.jpg` (3x crops: logo and 12 o'clock print with the chronograph hand, hands, hub and sub-dial, 6 o'clock print with SWISS MADE) plus extra viewed crops of pushers, crown, lugs and strap junctions.
+- Sharp and matching: PATEK PHILIPPE / GENEVE, numerals, indices, orange minute track, sub-dial print and the embossed grid are the photo's own native pixels; hour / minute hand outlines and lume, the orange central hand, the sub-dial hand with its counterweight arrow and both orange hubs sit on the photographed ones with no doubled edge at 3x.
+- Soft: bezel and case brushing, crown flutes and the strap grain are flat texture without relief and slightly softer than the source (comparison frame is half the photo size); pusher and lug facets are the photo's shading on gently stepped geometry.
+- Residuals: a very faint light line under the crown at the case shoulder; a lighter soft edge on the bezel outer wall next to the upper pusher (bevel catching the kit light, about 8 %); a faint crease in the lower lug tops (triangulation of the sloped case top, tip_z 6.2 keeps it small); the counterweight arrow of the sub-dial hand is modelled symmetric (the photo's is chiselled), the central hand tail arrow is within one or two photo pixels.
+
+## Known differences
+
+Background, soft drop shadow and alpha rim are not part of the asset; the embossed grid, applied numerals / indices, minute track, date window, sub-dial layout, brushed / polished facets, crown flutes and the strap's embossed pad are texture only; hands, hubs, crown, pushers, bezel / chamfer step, crystal and dial plane are geometry; lug inner walls and polished facets are flat photo texture; strap / lug junction is a flat overlay (inner walls straight lines between measured points); hand centre-line offsets are modelled, pivot offsets by height are not; no side view (real thickness about 13 mm), back flat; the sub-dial is not recessed (texture only).
+
+## Template for the next Aquanaut Chronograph variants (another 5968A / 5960 dial or strap)
+
+Copy `config/watches/patek-aquanaut5968-5968a001-measure.json` and the spec / job / kit preset under new names (ids, trace, map paths, kit scale and centre offset) and run the same commands with the new key. Per photo (re-measure): pivot, left-flank anchor rows, hands (angles, centre-line offsets, tips, lume, the sub-dial pivot and angle, central hand tail), crown rows and wall, pusher row ranges and flank lines, strap inner walls, lug tips, bezel rows, crown profile, dial and strap emissions, hand emissions. Template (spec values): case / bezel / crystal / dial heights, hand z order, rubber strap block, step `watch_patek_aquanaut5968`, prep `patek_aquanaut5968_prep` (reads `references/patek-aquanaut-chronograph-5968a-001/patek-*_original.png`: change `MODEL` in the prep for a different reference folder).

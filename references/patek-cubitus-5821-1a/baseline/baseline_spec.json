@@ -1,0 +1,402 @@
+{
+ "model": "PATEK PHILIPPE Cubitus 5821/1A (45 mm steel, green embossed dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Cubitus template (config key 58211a): case slab from the alpha silhouette between the shoulders (rows 608 / 1978), measured rounded-octagon bezel polygon with a traced window polygon and a recessed rim, flat polygon dial with the native photo map, one crown at 3, steel bracelet as link pieces between the measured joints. Scale 30.2444 px/mm anchored on the 45 mm case width (both flanks). Step and kit are the Cubitus copies.",
+ "trace": "config/watches/patek-cubitus45-58211a-trace.json",
+ "dial_map": "outputs/watches/patek-cubitus45-58211a/dial_photo.jpg",
+ "steel_map": "outputs/watches/patek-cubitus45-58211a/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 45.0
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 6.4,
+  "ramp_from_y": 19.5,
+  "bevel": 0.0,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "bezel_bevel": 0.0,
+  "silhouette_margin_mm": 0.1,
+  "rays": 360,
+  "note": "case slab = silhouette between the shoulders (tip_top 22.25 = row 608, tip_bottom 23.0 = row 1978; 0.25 mm grid, sum a multiple of 0.25) with the crown rows replaced by the flank line, sloping from the bezel's outer edge (y 19.5) to the shoulders; bezel = polygon ring (min of the measured octagon and the silhouette less silhouette_margin_mm, by rays) at bezel_z, then a rim ring down to the dial window at chamfer_z; rays 360 and no bezel / case bevel (mobile target: the bevel facets of a 720-ray ring cost 29k triangles and add only a 1 px shading line); omit_core drops the hidden dark core prism under the dial",
+  "tip_top": 22.25,
+  "tip_bottom": 23.0,
+  "omit_core": true
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6
+ },
+ "dial": {
+  "z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.334,
+  "note": "flat polygon (the window less the rim) with the native photo map: embossed horizontal grid, applied indices and numerals, minute dots, date window, print and the photographed hands stay in the map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     0.0,
+     0.337
+    ],
+    [
+     1.653,
+     0.337
+    ],
+    [
+     1.852,
+     0.42
+    ],
+    [
+     2.05,
+     0.546
+    ],
+    [
+     2.248,
+     0.615
+    ],
+    [
+     2.447,
+     0.665
+    ],
+    [
+     2.645,
+     0.691
+    ],
+    [
+     2.844,
+     0.731
+    ],
+    [
+     3.042,
+     0.737
+    ],
+    [
+     7.935,
+     0.741
+    ],
+    [
+     8.101,
+     0.741
+    ],
+    [
+     8.2,
+     0.701
+    ],
+    [
+     8.299,
+     0.635
+    ],
+    [
+     8.398,
+     0.569
+    ],
+    [
+     8.497,
+     0.463
+    ],
+    [
+     8.597,
+     0.185
+    ],
+    [
+     8.663,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     0.0,
+     0.274
+    ],
+    [
+     1.852,
+     0.274
+    ],
+    [
+     2.05,
+     0.45
+    ],
+    [
+     2.248,
+     0.496
+    ],
+    [
+     2.447,
+     0.539
+    ],
+    [
+     2.645,
+     0.579
+    ],
+    [
+     3.042,
+     0.595
+    ],
+    [
+     12.564,
+     0.589
+    ],
+    [
+     12.664,
+     0.536
+    ],
+    [
+     12.763,
+     0.463
+    ],
+    [
+     12.862,
+     0.364
+    ],
+    [
+     12.961,
+     0.149
+    ],
+    [
+     13.017,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -5.125,
+     0.017
+    ],
+    [
+     -4.893,
+     0.265
+    ],
+    [
+     -4.629,
+     0.397
+    ],
+    [
+     -3.306,
+     0.364
+    ],
+    [
+     -1.984,
+     0.314
+    ],
+    [
+     -0.992,
+     0.281
+    ],
+    [
+     -0.265,
+     0.198
+    ],
+    [
+     0.0,
+     0.109
+    ],
+    [
+     0.066,
+     0.106
+    ],
+    [
+     12.829,
+     0.099
+    ],
+    [
+     13.06,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.182,
+     0.0
+    ],
+    [
+     2.202,
+     0.165
+    ],
+    [
+     2.248,
+     0.281
+    ],
+    [
+     2.331,
+     0.337
+    ],
+    [
+     7.803,
+     0.337
+    ],
+    [
+     7.886,
+     0.298
+    ],
+    [
+     7.952,
+     0.198
+    ],
+    [
+     8.001,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     2.314,
+     0.0
+    ],
+    [
+     2.348,
+     0.132
+    ],
+    [
+     2.414,
+     0.231
+    ],
+    [
+     2.48,
+     0.298
+    ],
+    [
+     12.101,
+     0.298
+    ],
+    [
+     12.201,
+     0.265
+    ],
+    [
+     12.267,
+     0.165
+    ],
+    [
+     12.316,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; measured on the 5821/1A photo with perpendicular edge scans (threshold 100) about the pivot: hour 302.84 deg (frame half width 22.4 px, neck 10.2 px to s 50, tip s 262, rounded), minute 50.81 deg (half width 18, neck 8.3 to s 56, tip s 393.7), seconds 180 deg (shaft half 3.2 px to s 395 inside the 6 o'clock index, pointed counterweight tail to s -155, half width 12 -> 8.5); lume = inlay [s, half width] (hour half 10.2 from s 66 to 242, minute half 9 from s 70 to 372.5). Hands and hub use hands_photo (reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43,
+  "hub_segs": 64
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: a lathe about the axis (profile = [radius, mm along the axis] from the base point at the case flank), flutes are texture",
+  "segs": 64
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "steel bracelet: link pieces between the measured joints (rows top 606 / 452 / 339, bottom 2157 / 2330 / 2440 / 2535), outline = the silhouette at every 0.25 mm row; polished centre inserts and brushed link faces are texture only",
+  "bracelet": {
+   "gap": 0.0,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.3,
+   "lift": 0.15,
+   "bevel": 0.0,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.285,
+   "roughness": 0.6,
+   "specular": 0.0,
+   "pieces_mm": {
+    "full": {
+     "top": [
+      [
+       22.1,
+       27.39
+      ],
+      [
+       27.39,
+       31.12
+      ],
+      [
+       31.12,
+       33.95
+      ]
+     ],
+     "bottom": [
+      [
+       22.9,
+       28.99
+      ],
+      [
+       28.99,
+       34.71
+      ],
+      [
+       34.71,
+       38.34
+      ],
+      [
+       38.34,
+       41.49
+      ],
+      [
+       41.49,
+       41.9
+      ]
+     ]
+    }
+   },
+   "emission_top": 0.262,
+   "emission_bottom": 0.283
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.281
+ }
+}

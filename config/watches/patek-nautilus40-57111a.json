@@ -1,0 +1,299 @@
+{
+ "model": "PATEK PHILIPPE Nautilus 5711/1A (40 mm steel, blue horizontally embossed dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Nautilus template (watch_patek_nautilus41 step, patek_nautilus40_prep, config key 57111a) on the 350 x 492 px JPEG catalogue photo (white background, no alpha; enlarged x4 with Lanczos for measuring, so print and fine detail are as soft as the 6.6 px/mm source): case slab from the flood-fill silhouette (ears and crown shoulder included) between the end-link tips, superellipse bezel ring with a polished outer band, scanned cushion window with chamfer, flat polygon dial with the photo map (embossed lines, applied indices, date window and the photographed hands stay in the map), one fluted crown, integrated bracelet = brushed outer-link rows + polished centre pieces from the trace. The photo's lighting is baked into the maps (emission), specular is zero on every photo part.",
+ "trace": "config/watches/patek-nautilus40-57111a-trace.json",
+ "dial_map": "outputs/watches/patek-nautilus40-57111a/dial_photo.jpg",
+ "steel_map": "outputs/watches/patek-nautilus40-57111a/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 3.6,
+  "ramp_from_y": 17.5,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 360,
+  "note": "case slab = silhouette between the end-link tips (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25), sloping toward the bracelet; bezel = superellipse ring (min of the superellipse and the silhouette less silhouette_margin_mm, by rays) with a polished outer band sloping up by bezel_band_dz over trace bezel bevel_mm, flat face at bezel_z out to the scanned window edge, then a chamfer ring down to the dial window at chamfer_z",
+  "tip_top": 20.25,
+  "tip_bottom": 21.75,
+  "bezel_band_dz": 0.45
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6
+ },
+ "dial": {
+  "z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.34,
+  "note": "flat polygon (the window less the chamfer) with the native photo map: embossed lines, applied indices, minute dots, date window and the photographed hands stay in the map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.04,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     0.0,
+     0.157
+    ],
+    [
+     1.345,
+     0.157
+    ],
+    [
+     1.644,
+     0.257
+    ],
+    [
+     1.883,
+     0.487
+    ],
+    [
+     2.092,
+     0.643
+    ],
+    [
+     7.172,
+     0.643
+    ],
+    [
+     7.411,
+     0.601
+    ],
+    [
+     7.591,
+     0.487
+    ],
+    [
+     7.71,
+     0.344
+    ],
+    [
+     7.8,
+     0.172
+    ],
+    [
+     7.83,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     0.0,
+     0.164
+    ],
+    [
+     1.294,
+     0.164
+    ],
+    [
+     1.611,
+     0.268
+    ],
+    [
+     1.898,
+     0.447
+    ],
+    [
+     2.128,
+     0.566
+    ],
+    [
+     11.042,
+     0.566
+    ],
+    [
+     11.271,
+     0.521
+    ],
+    [
+     11.415,
+     0.417
+    ],
+    [
+     11.53,
+     0.268
+    ],
+    [
+     11.602,
+     0.119
+    ],
+    [
+     11.617,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -4.589,
+     0.015
+    ],
+    [
+     -4.469,
+     0.149
+    ],
+    [
+     -4.231,
+     0.298
+    ],
+    [
+     -4.022,
+     0.372
+    ],
+    [
+     -2.682,
+     0.286
+    ],
+    [
+     -1.937,
+     0.229
+    ],
+    [
+     -1.192,
+     0.182
+    ],
+    [
+     0.0,
+     0.12
+    ],
+    [
+     0.029,
+     0.115
+    ],
+    [
+     11.537,
+     0.115
+    ],
+    [
+     11.941,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.092,
+     0.286
+    ],
+    [
+     7.023,
+     0.286
+    ],
+    [
+     7.233,
+     0.243
+    ],
+    [
+     7.382,
+     0.143
+    ],
+    [
+     7.441,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     2.301,
+     0.268
+    ],
+    [
+     10.926,
+     0.268
+    ],
+    [
+     11.127,
+     0.223
+    ],
+    [
+     11.213,
+     0.119
+    ],
+    [
+     11.257,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; the 5811/1G hand outlines (same Patek parts) rescaled per hand to what the 5711/1A photo shows: hour tip 7.83 mm, frame half width 17 px = 0.64 mm (x0.96); minute tip 11.62 mm (x0.965 along), half width 15 px = 0.57 mm; seconds shaft to the 6 o'clock baton 11.97 mm, shaft half 0.115 mm (the 6.6 px/mm source blurs a 0.2 mm shaft), counterweight tail tip 4.57 mm as the 5811. Hands and hub use hands_photo (reference photo projected from the front); the photographed hands stay in the dial map.",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: a lathe about the axis (profile = [radius, mm along the axis] from the base point), flutes are texture"
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.285
+ },
+ "bracelet": {
+  "gap": 0.05,
+  "z0": 0.6,
+  "z_side": 3.3,
+  "lift": 0.15,
+  "piece_lift": 0.35,
+  "bevel": 0.1,
+  "piece_bevel": 0.1,
+  "inset": 0.03,
+  "emission_top": 0.275,
+  "emission_bottom": 0.29,
+  "note": "bracelet rows and polished centre pieces come from trace.bracelet (rows_mm / pieces_mm); rows follow the silhouette; pieces are rounded rectangles raised piece_lift over the rows; all carry the projected photo (steel_photo material); gap = dark joint between rows",
+  "backing_inset": 0.2,
+  "backing_z": [
+   0.2,
+   0.6
+  ]
+ }
+}
