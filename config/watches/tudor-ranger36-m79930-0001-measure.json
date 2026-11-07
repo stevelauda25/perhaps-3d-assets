@@ -1,0 +1,18 @@
+{
+ "note": "Pixel measurements read from references/tudor-ranger-36-m79930-0001/tudor-m79930-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (dark dot at about 451.5, 667); case_edge_left_x = alpha edge of the case on the pivot row (199; anchors 36 mm, 14.0 px/mm). rings = radii in px from the ring centre (the photo's dial/bezel circle is centred at 449.8, 666.6, 1.2 px left of the pivot): dial_flat 200 (end of the black dial print, start of the grey rehaut), crystal_edge 213 (end of the rehaut), bezel_in 215 (start of the polished chamfer), bezel_out 249 (end of the flat brushed top; the silhouette is at 250.8). tip_rows_px = lug steps of the silhouette (369 top, 970 bottom). Hand tips = farthest neutral-bright pixels of the hand mask in each sector; tails (hour/minute hidden under the hub) by assumption 1.4 mm opposite the hand; the seconds stub ends at about (494, 626). Crown box x 703..746, y 624..711 (centre on the pivot row). There is no date window: the date box is a dummy at the pivot and unused. Different from the Ranger 39: smaller (36 mm, 14.0 px/mm), pivot row 667, narrower bezel, crown on the pivot row.",
+ "pivot": [451, 667],
+ "case_edge_left_x": 199,
+ "rings": {"bezel_in": 215, "crystal_edge": 213, "dial_flat": 200, "bezel_out": 249},
+ "hour_tip": [350, 597],
+ "minute_tip": [613, 581],
+ "seconds_tip": [314, 788],
+ "hour_tail": [467, 678],
+ "minute_tail": [434, 676],
+ "seconds_tail": [494, 626],
+ "hub_r": 19,
+ "hour_lume": [0.22, 0.52],
+ "minute_lume": [0.14, 0.7],
+ "crown": {"x0": 703, "x1": 746, "y0": 624, "y1": 711},
+ "date": {"x0": 451, "y0": 667, "x1": 451, "y1": 667},
+ "tip_rows_px": [369, 970]
+}

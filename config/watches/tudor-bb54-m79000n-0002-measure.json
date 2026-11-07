@@ -1,0 +1,64 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-54-m79000n-0002/tudor-m79000n-0002_900x1200.png (900 x 1200 photo px). The case, bezel, crown, dial and hands register with the M79000N-0001 photo to the pixel (shift search +-2 px: best at 0, 0; mean abs grey difference 1.3 over the dial box), so pivot, case_edge_left_x, rings, crown, hand tips / tails, hub_r and lumes are the -0001 values (see that measure file for their derivation: pivot (451, 653), coin-edge left edge 193 anchors 37 mm = 13.946 px/mm). Differences are the strap only: black rubber strap in three vertical sections (joint lines x ~388.5 / ~510.5 at the top, ~389.5 / ~508.5 at the bottom end); side sections end on the lug tops (y 345.5 top, 957.5 bottom), the centre section runs over the case end piece to y 372.5 (top) / 930 (bottom). tip_rows_px = lug top y 345 and lug bottom y 957 (strap/steel boundary on the side sections).",
+ "pivot": [
+  451,
+  653
+ ],
+ "case_edge_left_x": 193,
+ "rings": {
+  "dial_flat": 195,
+  "crystal_edge": 206,
+  "bezel_in": 207,
+  "insert_out": 249,
+  "bezel_out": 258
+ },
+ "hour_tip": [
+  352.7,
+  590.4
+ ],
+ "minute_tip": [
+  601.3,
+  571.4
+ ],
+ "seconds_tip": [
+  433.0,
+  824.1
+ ],
+ "hour_tail": [
+  467.9,
+  663.7
+ ],
+ "minute_tail": [
+  433.4,
+  662.5
+ ],
+ "seconds_tail": [
+  458.4,
+  582.4
+ ],
+ "hub_r": 18.5,
+ "hour_lume": [
+  0.24,
+  0.96
+ ],
+ "minute_lume": [
+  0.19,
+  0.95
+ ],
+ "crown": {
+  "x0": 703,
+  "x1": 741,
+  "y0": 610,
+  "y1": 693
+ },
+ "date": {
+  "x0": 451,
+  "y0": 653,
+  "x1": 451,
+  "y1": 653
+ },
+ "tip_rows_px": [
+  345,
+  957
+ ]
+}

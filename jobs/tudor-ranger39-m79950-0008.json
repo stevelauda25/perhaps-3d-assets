@@ -1,0 +1,46 @@
+{
+ "id": "tudor-ranger39-m79950-0008",
+ "output": "outputs/jobs/tudor-ranger39-m79950-0008",
+ "asset_type": "watch",
+ "model": "TUDOR Ranger 39 M79950-0008",
+ "baseline": "First build: front relief from the catalogue photo at 39 mm, photo-map beige dial with Arabic numerals, smooth bezel, sword hands, three-column steel bracelet (Ranger 39 template of -0001)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-ranger-39-m79950-0008/REFERENCE_PLAN.md",
+  "config/watches/tudor-ranger39-m79950-0008.json",
+  "config/watches/tudor-ranger39-m79950-0008-trace.json",
+  "config/presets/watch_kit_white_front_tudor_ranger39.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_ranger39",
+   "params": {
+    "spec": "config/watches/tudor-ranger39-m79950-0008.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-ranger39-m79950-0008/tudor-ranger39-m79950-0008.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_ranger39.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

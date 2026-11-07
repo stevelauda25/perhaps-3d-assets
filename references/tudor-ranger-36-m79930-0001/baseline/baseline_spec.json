@@ -1,0 +1,370 @@
+{
+ "model": "TUDOR Ranger 36 M79930-0001 (steel, black dial, large numerals, 3-column steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Ranger 36 build from the Ranger 39 recipe, re-measured on the 36 mm photo (14.0 px/mm, pivot row 667): case, bezel, crown and bracelet from the photo silhouette and joints; hand outlines measured on this photo. The black dial with Arabic numerals, indices, print and minute track comes from one 2x photo map with the photographed hands left in it.",
+ "trace": "config/watches/tudor-ranger36-m79930-0001-trace.json",
+ "dial_map": "outputs/watches/tudor-ranger36-m79930-0001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.7,
+  "ramp_from_y": 13.4,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette into the bracelet; the top is brushed and slopes down toward the bracelet",
+  "tip_top": 21.1,
+  "tip_bottom": 21.45
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_top": 8.6,
+  "z_chamfer": 8.0,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "smooth fixed bezel: flat brushed top from bezel_in to bezel_out, polished chamfer toward the dial, rounded outer edge (read from the photo, no facets or ribs)"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 9.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.33
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.4,
+     0.5
+    ],
+    [
+     1.0,
+     0.55
+    ],
+    [
+     1.5,
+     0.69
+    ],
+    [
+     4.4,
+     0.69
+    ],
+    [
+     4.6,
+     0.93
+    ],
+    [
+     4.8,
+     1.17
+    ],
+    [
+     5.0,
+     1.5
+    ],
+    [
+     5.2,
+     1.63
+    ],
+    [
+     5.45,
+     1.56
+    ],
+    [
+     5.85,
+     1.43
+    ],
+    [
+     6.5,
+     1.18
+    ],
+    [
+     7.14,
+     0.96
+    ],
+    [
+     7.8,
+     0.68
+    ],
+    [
+     8.2,
+     0.45
+    ],
+    [
+     8.5,
+     0.31
+    ],
+    [
+     8.78,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.4,
+     0.4
+    ],
+    [
+     1.0,
+     0.5
+    ],
+    [
+     1.4,
+     0.62
+    ],
+    [
+     3.5,
+     0.65
+    ],
+    [
+     9.7,
+     0.65
+    ],
+    [
+     10.4,
+     0.56
+    ],
+    [
+     11.1,
+     0.45
+    ],
+    [
+     11.8,
+     0.36
+    ],
+    [
+     12.5,
+     0.24
+    ],
+    [
+     12.9,
+     0.15
+    ],
+    [
+     13.1,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -4.24,
+     0.26
+    ],
+    [
+     -0.3,
+     0.26
+    ],
+    [
+     0.0,
+     0.19
+    ],
+    [
+     7.5,
+     0.19
+    ],
+    [
+     7.58,
+     0.68
+    ],
+    [
+     9.4,
+     0.56
+    ],
+    [
+     9.55,
+     0.19
+    ],
+    [
+     12.9,
+     0.19
+    ],
+    [
+     13.056,
+     0.0
+    ]
+   ]
+  },
+  "lume_half_width": {
+   "hour": 0.27,
+   "minute": 0.25
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, 0.05 mm wider than the photographed hands so the 3D hands hide the ones in the map; the last point sits at the traced length; hands and hub use the steel_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.42
+ },
+ "crown": {
+  "teeth": 36,
+  "flute_depth": 0.28,
+  "z": 4.2,
+  "cap_radius_fraction": 0.85,
+  "fluted_to_mm": 20.64,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.62,
+  "base_chamfer_mm": 0.5
+ },
+ "bracelet": {
+  "gap": 0.06,
+  "z0": 0.6,
+  "z_outer": 3.4,
+  "z_centre": 3.5,
+  "bevel": 0.2,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "inset": 0.04,
+  "backing_inset": 0.4,
+  "centre_x_mm": {
+   "top": [
+    [
+     0.0,
+     -4.97,
+     4.64
+    ],
+    [
+     40.0,
+     -4.97,
+     4.64
+    ]
+   ],
+   "bottom": [
+    [
+     0.0,
+     -5.07,
+     4.64
+    ],
+    [
+     27.0,
+     -5.05,
+     4.63
+    ],
+    [
+     30.5,
+     -5.0,
+     4.58
+    ],
+    [
+     32.4,
+     -4.95,
+     4.55
+    ]
+   ]
+  },
+  "pieces_mm": {
+   "outer": {
+    "top": [
+     [
+      21.29,
+      27.29
+     ],
+     [
+      27.29,
+      30.54
+     ]
+    ],
+    "bottom": [
+     [
+      21.43,
+      26.86
+     ],
+     [
+      26.86,
+      30.75
+     ],
+     [
+      30.75,
+      32.39
+     ]
+    ]
+   },
+   "centre": {
+    "top": [
+     [
+      19.93,
+      23.0
+     ],
+     [
+      23.0,
+      28.86
+     ],
+     [
+      28.86,
+      30.54
+     ]
+    ],
+    "bottom": [
+     [
+      19.96,
+      23.29
+     ],
+     [
+      23.29,
+      28.0
+     ],
+     [
+      28.0,
+      31.71
+     ],
+     [
+      31.71,
+      32.39
+     ]
+    ]
+   }
+  },
+  "note": "Flat bracelet of three brushed columns. Joint positions (dark lines) read from this photo with brightness scans, top and bottom separately: outer columns top y 369 / 285, bottom 967 / 1043 / 1097.5; centre column top 388 / 345 / 263, bottom 946.5 / 993 / 1059 / 1111 (photo px, listed as mm from the pivot row 667, 14.0 px/mm). The first pieces run under the case end. centre_x_mm = the vertical joint lines between the columns, [|y|, left x, right x] (photo x 381.3 / 516.0 top, 380 / 516 bottom, pivot x 451). No curl, no polished channels."
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-ranger36-m79930-0001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.03,
+  "emission": 0.32
+ }
+}
