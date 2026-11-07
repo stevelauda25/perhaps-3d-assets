@@ -1,0 +1,843 @@
+{
+ "model": "OMEGA Speedmaster Moonwatch Professional Co-Axial Master Chronometer Chronograph 42 mm 310.30.42.50.01.001 (42 mm steel, black dial, black tachymeter bezel, steel bracelet, chronograph)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Omega approach (Diver 300M / Seamaster 300 / Aqua Terra: 1024 px PNG with alpha, bracelet columns, ring centre next to the pivot) with the chronograph parts of the Breitling Chronomat / Tudor Black Bay Chrono steps: one black tachymeter bezel ring (no coin ring), baton hour / minute hands with lume strips, chrono seconds hand with a lume diamond, three sub-dials with white baton hands and hubs, fluted crown with a domed cap, two chronograph pushers at +-23.5 deg (own origins), asymmetric twisted lugs carried by the alpha silhouette, five-column steel bracelet (outer, narrow, centre, narrow, outer) built by pipeline/steps/watch_omega_moonwatch.py.",
+ "trace": "config/watches/omega-moonwatch-31030425001001-trace.json",
+ "dial_map": "outputs/watches/omega-moonwatch-31030425001001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0,
+  "lug_to_lug": 47.5
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated twisted lugs: the case outline follows the photo silhouette (lug tops y 163.7, bottoms y 768.5 px); the crown / pusher rows take the straight shoulder line (right_override_px), the guard shoulders stay in the silhouette; top and bottom slope toward the bracelet",
+  "tip_top": 22.75,
+  "tip_bottom": 25.0
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.3,
+  "chamfer_mm": 0.669,
+  "round_mm": 0.25,
+  "note": "one black ring: inner chamfer bezel_in .. bezel_in + chamfer_mm (lighter grey in the photo), flat top to bezel_out (insert_out = bezel_out: no steel coin ring); numerals, dots and TACHYMETRE are photo texture"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.5
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.325
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.102,
+     0.472
+    ],
+    [
+     0.0,
+     0.472
+    ],
+    [
+     1.102,
+     0.512
+    ],
+    [
+     8.661,
+     0.516
+    ],
+    [
+     8.898,
+     0.476
+    ],
+    [
+     9.134,
+     0.339
+    ],
+    [
+     9.291,
+     0.272
+    ],
+    [
+     9.449,
+     0.157
+    ],
+    [
+     9.606,
+     0.071
+    ],
+    [
+     9.685,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.102,
+     0.457
+    ],
+    [
+     0.0,
+     0.457
+    ],
+    [
+     1.26,
+     0.465
+    ],
+    [
+     4.094,
+     0.461
+    ],
+    [
+     6.299,
+     0.461
+    ],
+    [
+     9.449,
+     0.449
+    ],
+    [
+     12.598,
+     0.441
+    ],
+    [
+     13.228,
+     0.433
+    ],
+    [
+     13.543,
+     0.421
+    ],
+    [
+     13.701,
+     0.362
+    ],
+    [
+     13.858,
+     0.291
+    ],
+    [
+     14.016,
+     0.205
+    ],
+    [
+     14.173,
+     0.15
+    ],
+    [
+     14.331,
+     0.13
+    ],
+    [
+     14.961,
+     0.122
+    ],
+    [
+     15.039,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -1.575,
+     0.228
+    ],
+    [
+     0.0,
+     0.228
+    ],
+    [
+     1.496,
+     0.244
+    ],
+    [
+     3.15,
+     0.224
+    ],
+    [
+     4.724,
+     0.213
+    ],
+    [
+     6.299,
+     0.197
+    ],
+    [
+     7.874,
+     0.181
+    ],
+    [
+     8.504,
+     0.169
+    ],
+    [
+     8.74,
+     0.417
+    ],
+    [
+     8.898,
+     0.575
+    ],
+    [
+     9.094,
+     0.693
+    ],
+    [
+     9.37,
+     0.669
+    ],
+    [
+     9.685,
+     0.606
+    ],
+    [
+     10.0,
+     0.535
+    ],
+    [
+     10.315,
+     0.472
+    ],
+    [
+     10.63,
+     0.409
+    ],
+    [
+     10.945,
+     0.343
+    ],
+    [
+     11.26,
+     0.28
+    ],
+    [
+     11.575,
+     0.217
+    ],
+    [
+     11.89,
+     0.154
+    ],
+    [
+     12.205,
+     0.142
+    ],
+    [
+     13.78,
+     0.126
+    ],
+    [
+     14.803,
+     0.118
+    ],
+    [
+     14.961,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.047,
+     0.0
+    ],
+    [
+     2.047,
+     0.165
+    ],
+    [
+     8.425,
+     0.165
+    ],
+    [
+     8.425,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     3.937,
+     0.0
+    ],
+    [
+     3.937,
+     0.087
+    ],
+    [
+     13.071,
+     0.087
+    ],
+    [
+     13.071,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     8.898,
+     0.0
+    ],
+    [
+     9.055,
+     0.346
+    ],
+    [
+     9.37,
+     0.417
+    ],
+    [
+     9.685,
+     0.354
+    ],
+    [
+     10.0,
+     0.287
+    ],
+    [
+     10.315,
+     0.228
+    ],
+    [
+     10.63,
+     0.165
+    ],
+    [
+     10.945,
+     0.094
+    ],
+    [
+     11.181,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured as the thr-100 silhouette in rotated strips (axes from edge-midpoint line fits, least-squares pivot): hour baton 6.65 px half width to s 110 then a pointed tip to 123; minute 5.9 -> 5.5 px to s 172, shoulder, needle 1.6 px to 191; chrono seconds shaft 3 -> 1.8 px with the lume diamond (max half width 8.8 px at s 116) and a needle to 190. Lume = green strip of the hour / minute hands (half width 2.1 / 1.1 px) and the diamond of the seconds hand. The last profile point sits at the traced length. Sub-dial hands are polygons (hands.polygons) over the sub-dial hubs (hands.discs). Hands / hubs use the hands_photo material (the reference photo projected from the front).",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.415,
+  "polygons": {
+   "sub_left": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -7.024,
+      -0.051
+     ],
+     [
+      -7.024,
+      3.937
+     ],
+     [
+      -6.819,
+      4.055
+     ],
+     [
+      -6.614,
+      3.937
+     ],
+     [
+      -6.614,
+      -0.051
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_right": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      6.693,
+      -0.133
+     ],
+     [
+      6.693,
+      4.008
+     ],
+     [
+      6.898,
+      4.126
+     ],
+     [
+      7.102,
+      4.008
+     ],
+     [
+      7.102,
+      -0.133
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_bottom": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -0.142,
+      -6.898
+     ],
+     [
+      -0.142,
+      -2.709
+     ],
+     [
+      0.063,
+      -2.591
+     ],
+     [
+      0.268,
+      -2.709
+     ],
+     [
+      0.268,
+      -6.898
+     ]
+    ],
+    "thick": 0.08
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -6.796,
+    "y_mm": -0.051,
+    "r_mm": 0.705,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 6.905,
+    "y_mm": -0.133,
+    "r_mm": 0.705,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_bottom_hub",
+    "x_mm": 0.034,
+    "y_mm": -6.898,
+    "r_mm": 0.705,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 18,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.48,
+  "cap_start_fraction": 0.5,
+  "fluted_to_mm": 22.921,
+  "bevel": 0.25,
+  "note": "fluted barrel x 770..803.5 px (r 42.2 px, centre y 462.7) with a domed Omega cap x 803.5..811.4 (r 20 px); the housing shoulders above and below (x 785) stay in the silhouette (right_override_px rows 419..505)"
+ },
+ "pushers": {
+  "neck_radius_fraction": 0.8,
+  "cap_radius_fraction": 0.97,
+  "teeth": 24,
+  "flute_depth": 0.0,
+  "z": 4.2,
+  "bevel": 0.15,
+  "cap_cylinder": true,
+  "items": [
+   {
+    "origin_mm": [
+     0.031,
+     -0.252
+    ],
+    "angle_deg": 23.5,
+    "radius_mm": 2.331,
+    "neck_from_mm": 19.685,
+    "r_from_mm": 20.63,
+    "fluted_to_mm": 22.795,
+    "r_to_mm": 23.74
+   },
+   {
+    "origin_mm": [
+     -0.441,
+     -1.181
+    ],
+    "angle_deg": -23.5,
+    "radius_mm": 2.425,
+    "neck_from_mm": 19.843,
+    "r_from_mm": 21.102,
+    "fluted_to_mm": 22.874,
+    "r_to_mm": 23.819
+   }
+  ],
+  "note": "two chronograph pushers (cylindrical buttons with a rounded end face), axes at +-23.5 deg from their own origin points on the crown side (the two axes do not meet: camera tilt), end faces 301.5 / 302.5 px from the origins, button radii 29.6 / 30.8 px, neck 10 px; measured in axis-aligned views of the silhouette"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind bracelet, see strap.bracelet.note",
+  "bracelet": {
+   "gap": 0.08,
+   "groove": 0.1,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_narrow": 3.45,
+   "z_centre": 3.4,
+   "lift": 0.15,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.05,
+   "backing_material": "steel_photo",
+   "columns": [
+    "outer",
+    "narrow",
+    "centre",
+    "narrow",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      22.748,
+      -4.205,
+      -2.803,
+      2.992,
+      4.394
+     ],
+     [
+      35.189,
+      -4.142,
+      -2.803,
+      2.992,
+      4.299
+     ]
+    ],
+    "bottom": [
+     [
+      25.835,
+      -4.504,
+      -3.157,
+      2.843,
+      4.205
+     ],
+     [
+      44.732,
+      -4.598,
+      -3.181,
+      2.819,
+      4.22
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       18.0,
+       22.748,
+       -9.937,
+       10.205
+      ],
+      [
+       22.748,
+       23.693
+      ],
+      [
+       23.693,
+       26.606
+      ],
+      [
+       26.606,
+       27.472
+      ],
+      [
+       27.472,
+       30.661
+      ],
+      [
+       30.661,
+       33.22
+      ],
+      [
+       33.22,
+       35.465
+      ]
+     ],
+     "bottom": [
+      [
+       19.0,
+       24.417,
+       -10.386,
+       10.008
+      ],
+      [
+       24.417,
+       25.677
+      ],
+      [
+       25.677,
+       29.378
+      ],
+      [
+       29.378,
+       30.402
+      ],
+      [
+       30.402,
+       33.945
+      ],
+      [
+       33.945,
+       34.732
+      ],
+      [
+       34.732,
+       37.803
+      ],
+      [
+       37.803,
+       41.504
+      ],
+      [
+       41.504,
+       43.866
+      ],
+      [
+       43.866,
+       44.732
+      ],
+      [
+       44.732,
+       44.89
+      ]
+     ]
+    },
+    "narrow": {
+     "top": [
+      [
+       18.0,
+       22.748,
+       -9.937,
+       10.205
+      ],
+      [
+       22.748,
+       23.693
+      ],
+      [
+       23.693,
+       26.606
+      ],
+      [
+       26.606,
+       27.472
+      ],
+      [
+       27.472,
+       30.661
+      ],
+      [
+       30.661,
+       33.22
+      ],
+      [
+       33.22,
+       35.465
+      ]
+     ],
+     "bottom": [
+      [
+       19.0,
+       24.417,
+       -10.386,
+       10.008
+      ],
+      [
+       24.417,
+       25.677
+      ],
+      [
+       25.677,
+       29.378
+      ],
+      [
+       29.378,
+       30.402
+      ],
+      [
+       30.402,
+       33.945
+      ],
+      [
+       33.945,
+       34.732
+      ],
+      [
+       34.732,
+       37.803
+      ],
+      [
+       37.803,
+       41.504
+      ],
+      [
+       41.504,
+       43.866
+      ],
+      [
+       43.866,
+       44.732
+      ],
+      [
+       44.732,
+       44.89
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       21.724
+      ],
+      [
+       21.724,
+       24.874
+      ],
+      [
+       24.874,
+       25.661
+      ],
+      [
+       25.661,
+       29.205
+      ],
+      [
+       29.205,
+       31.882
+      ],
+      [
+       31.882,
+       34.323
+      ],
+      [
+       34.323,
+       35.465
+      ]
+     ],
+     "bottom": [
+      [
+       19.0,
+       23.315
+      ],
+      [
+       23.315,
+       27.094
+      ],
+      [
+       27.094,
+       28.197
+      ],
+      [
+       28.197,
+       31.74
+      ],
+      [
+       31.74,
+       36.15
+      ],
+      [
+       36.15,
+       36.78
+      ],
+      [
+       36.78,
+       39.929
+      ],
+      [
+       39.929,
+       42.921
+      ],
+      [
+       42.921,
+       44.496
+      ],
+      [
+       44.496,
+       44.89
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 22.75,
+    "bottom": 25.0
+   },
+   "note": "Moonwatch bracelet (12.7 px/mm, pivot (512.4, 451.9)): five columns outer / narrow / centre / narrow / outer; vertical joints from brightness-valley centroids (top x 459 / 476.8 / 550.4 / 568, bottom 455 / 472.3 / 548.5 / 565.8 px); outer and narrow columns share the joint rows (top 163, 151, 114, 103, 62.5, 30 px; bottom 762, 778, 825, 838, 883, 893, 932, 979, 1009, 1020 px), the centre column is staggered (top 176, 136, 126, 81, 47, 16; bottom 748, 796, 810, 855, 911, 919, 959, 997, 1017 px), from vertical brightness scans; the end links between the lugs end at the lug inner edges (x limits of the first outer piece); the joint gaps show the photographed pixels (backing_material steel_photo)"
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-moonwatch-31030425001001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  -0.006,
+  -0.012
+ ]
+}

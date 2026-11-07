@@ -1,0 +1,125 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-offshore-diver-15720st-green/audemars-15720st-green_1200x1626.png (1200 x 1626 PNG with alpha, the larger rendition of the catalogue asset; the watch occupies x 438..781, y 578..1083). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). pivot = where the hour and minute centre lines cross (PCA fits of the hand masks R > G + 6 or R > 190: (597.6, 796.5)) and the hub circle fit (598.4, 796.6); the hub is a rose-gold disc of radius 10.6..11 px. Scale: 42 mm = width across the octagon flats; the left flat of the case silhouette (rows 780..815, median alpha edge 452.5 px) is 21 mm from the pivot (the right flat is hidden by the crown guard). Everything higher than the hands sits 1.5..2.6 px higher in the photo (camera tilt, as on the Breitling): the opening circle (radius 109.5 about (598.8, 795.1), fit to the outer edge of the black rotating ring, rms 0.9 px) is 1.5 px above the pivot, the eight screws are centred (599.0, 794.0). octagon = outer edge of the bezel: left / right flats from the case silhouette (452.0 / 745.0), top flat 650.3 and bottom flat 946.0 read from the polished chamfer lines; the octagon is regular (inradius 146.5 px, screws sit on the vertex rays at 134.7 px). Screws: hexagonal heads with a slot, circumradius 10.6 px; centres read on 8x tiles (top pair y 672, upper side pair y 744, lower side pair y 844.2, bottom pair y 915.4). Crowns: the 3 o'clock crown is a black hexagonal nut (circumradius 28 px, flat face toward the viewer, 30 px long) plus a rose-gold ring (radius 17.5 px, 6.5 px long) on the horizontal axis y 803; the 10 o'clock crown (rotating bezel) is the same part on the axis 300 degrees (outer ring centre (446.5, 702.5)); both are separate parts, the silhouette rows of the crowns are replaced by straight lines (right: guard notch wall x 745 for rows 775..832; left: from (484, 683) to (455, 738)). Hands (about 10:07:38; angle = clockwise from 12, lengths from the pivot in px; the hand mask is the colour mask R > G + 6 or R > 190): hour 303.4 deg (rose-gold bar half width 8 px from s 17 to 53, rounded tip at s 58, white lume inlay half 1.4 from s 16 to 53), minute 49.1 deg (bar half width 5.5 from s 17 to 85, rounded tip at s 90, white lume inlay half 1.8 from s 43 to 86), seconds 228.7 deg (thin needle half 0.8, lollipop centre s 50.3 outer radius 6.4 / white core 5.2, tip s 90). Dial: green waffle (Mega Tapisserie) plate out to r 90 about the opening centre, then the black rotating ring (inner edge r 88..95, outer edge 109.5) with a cream sector between about 0 and 15 minutes.",
+ "pivot": [
+  598.2,
+  796.6
+ ],
+ "anchor": {
+  "rows": [
+   780,
+   815
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "left",
+   "y0": 678,
+   "y1": 738,
+   "x0": 485.0,
+   "x1": 455.0
+  },
+  {
+   "side": "right",
+   "y0": 775,
+   "y1": 832,
+   "x0": 745.0,
+   "x1": 745.0
+  }
+ ],
+ "octagon": {
+  "left_x": 452.0,
+  "right_x": 745.0,
+  "top_y": 650.3,
+  "bottom_y": 946.0
+ },
+ "opening_circle_px": [
+  598.8,
+  795.1,
+  109.5
+ ],
+ "dial_flat_r_px": 90.0,
+ "ring_in_r_px": 91.0,
+ "screws_px": [
+  [
+   649.6,
+   672.0
+  ],
+  [
+   720.8,
+   745.0
+  ],
+  [
+   720.8,
+   844.5
+  ],
+  [
+   649.4,
+   915.4
+  ],
+  [
+   548.9,
+   915.4
+  ],
+  [
+   476.8,
+   843.9
+  ],
+  [
+   477.1,
+   743.4
+  ],
+  [
+   548.5,
+   672.0
+  ]
+ ],
+ "screw_r_px": 10.6,
+ "hands": {
+  "hour": {
+   "angle_deg": 303.4,
+   "length_px": 58.0,
+   "tail_px": 8.0
+  },
+  "minute": {
+   "angle_deg": 49.1,
+   "length_px": 90.0,
+   "tail_px": 8.0
+  },
+  "seconds": {
+   "angle_deg": 228.7,
+   "length_px": 90.0,
+   "tail_px": 10.0
+  }
+ },
+ "hub_r": 10.8,
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    741.0,
+    803.0
+   ],
+   "angle_deg": 90.0,
+   "hex_len_px": 34.0,
+   "hex_r_px": 28.0,
+   "ring_len_px": 6.5,
+   "ring_r_px": 17.5
+  },
+  {
+   "name": "crown_10",
+   "base_px": [
+    483.1,
+    719.75
+   ],
+   "angle_deg": 300.0,
+   "hex_len_px": 34.0,
+   "hex_r_px": 28.0,
+   "ring_len_px": 6.5,
+   "ring_r_px": 17.5
+  }
+ ],
+ "tip_rows_px": [
+  626.0,
+  981.0
+ ]
+}

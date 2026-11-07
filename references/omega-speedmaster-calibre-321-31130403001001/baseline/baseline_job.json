@@ -1,0 +1,46 @@
+{
+ "id": "omega-calibre321-31130403001001",
+ "output": "outputs/jobs/omega-calibre321-31130403001001",
+ "asset_type": "watch",
+ "model": "OMEGA Speedmaster Calibre 321 Chronograph 39.7 mm 311.30.40.30.01.001",
+ "baseline": "First build (follower of the Omega Moonwatch template, everything re-measured on the Calibre 321 photo): front relief from the catalogue photo at 39.7 mm (black tachymeter bezel ring with a wide inner chamfer, baton hands with beige lume, chrono seconds hand with a lume diamond and counterweight tail, three sub-dials with hands and hubs, fluted crown, two pushers at about +-25 deg, straight lugs, three-column steel bracelet)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/omega-speedmaster-calibre-321-31130403001001/REFERENCE_PLAN.md",
+  "config/watches/omega-calibre321-31130403001001.json",
+  "config/watches/omega-calibre321-31130403001001-trace.json",
+  "config/presets/watch_kit_white_front_omega_calibre321.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_omega_calibre321",
+   "params": {
+    "spec": "config/watches/omega-calibre321-31130403001001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/omega-calibre321-31130403001001/omega-calibre321-31130403001001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_omega_calibre321.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

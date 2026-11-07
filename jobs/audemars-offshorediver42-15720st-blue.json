@@ -1,0 +1,46 @@
+{
+ "id": "audemars-offshorediver42-15720st-blue",
+ "output": "outputs/jobs/audemars-offshorediver42-15720st-blue",
+ "asset_type": "watch",
+ "model": "AUDEMARS PIGUET Royal Oak Offshore Diver 15720ST (blue)",
+ "baseline": "Follower build of the Offshore Diver template (green, first Audemars Piguet): front relief from the 1200 x 1626 catalogue photo (standup-1339) at 42 mm, blue waffle dial, white rotating-ring sector, blue rubber strap",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/audemars-royal-oak-offshore-diver-15720st-blue/REFERENCE_PLAN.md",
+  "config/watches/audemars-offshorediver42-15720st-blue.json",
+  "config/watches/audemars-offshorediver42-15720st-blue-trace.json",
+  "config/presets/watch_kit_white_front_audemars_offshorediver42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_audemars_offshorediver42",
+   "params": {
+    "spec": "config/watches/audemars-offshorediver42-15720st-blue.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/audemars-offshorediver42-15720st-blue/audemars-offshorediver42-15720st-blue.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_audemars_offshorediver42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

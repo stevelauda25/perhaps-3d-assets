@@ -1,0 +1,31 @@
+{
+ "note": "Pixel measurements read from references/omega-speedmaster-moonwatch-professional-31030425001001/omega-31030425001001_original.png (1024 x 1024 RGBA PNG, upright render with a slight tilt / yaw, crown at 3 with two chronograph pushers at about +-23.5 deg, steel bracelet that runs off the image at 12 and 6 o'clock, asymmetric twisted lugs). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]).",
+ "scale_px_per_mm": 12.7,
+ "scale_basis": "No circle of the silhouette is on the case (the left flank is the twisted lug), so the scale is the mean of three published dimensions read on the photo: case width 42 mm = left silhouette extreme x 247.1 to the bezel centre x 512.3 = 265.2 px -> 12.63 px/mm; lug to lug 47.5 mm = rows 163.7 (lug top where it meets the bracelet) to 768.5 (lug bottom) = 604.8 px -> 12.73 px/mm; bracelet / lug width 20 mm = 255.9 px (silhouette x 386.1 .. 642.0 at row 160) -> 12.79 px/mm; adopted 12.7 (case 41.8 mm, lug to lug 47.6 mm, bracelet 20.15 mm).",
+ "pivot": [512.4, 451.9],
+ "pivot_basis": "least-squares point of the three hand axes (hour 304.15 deg, minute 48.48 deg, seconds 222.45 deg, edge-midpoint line fits in rotated strips, residuals 0.04 / 0.42 / 0.41 px); the hub circle sits at (512.5, 453) (base lower than the hand pivot, tilt parallax), the bezel top circle at (512.3, 452.05).",
+ "bezel_out_circle_px": [512.32, 452.05, 250.28],
+ "bezel_out_circle_note": "black bezel ring outer edge (dark ring to steel case ring, 50 percent crossing on 1.5 deg rays, 81 points, ellipse axes 499.9 x 501.9 px = round); NOT the scale anchor (see scale_basis). The steel ring beyond it (about 15 px at 9 o'clock) and the lug flank are in the silhouette.",
+ "rings": {"dial_flat": 211.0, "crystal_edge": 213.0, "bezel_in": 213.5, "chamfer_to": 222.0, "insert_out": 250.28, "bezel_out": 250.28},
+ "rings_note": "radial profiles at 285 / 300 / 200 / 225 deg from (512.4, 452.0): dial print ends r 192, black dial margin to 213, lighter inner chamfer of the bezel r 214 .. 222 (grey 50 .. 75), black bezel top (numerals / ticks) r 222 .. 250.3, bright steel ring from 251. No steel coin ring on the Speedmaster bezel: insert_out = bezel_out.",
+ "hands": {
+  "hour": {"angle_deg": 304.15, "length_px": 123.0, "tail_px": 18.0},
+  "minute": {"angle_deg": 48.48, "length_px": 191.0, "tail_px": 18.0},
+  "seconds": {"angle_deg": 222.45, "length_px": 190.0, "tail_px": 20.0}
+ },
+ "hub_r": 18.2,
+ "crown": {"x0": 770.0, "x1": 811.4, "y0": 420.5, "y1": 504.9, "fluted_to_x": 803.5},
+ "right_override_px": [[306.5, 377.0, 744.3, 775.7], [419.0, 505.0, 785.4, 785.4], [547.0, 617.5, 774.0, 741.9]],
+ "right_override_note": "rows where the right alpha edge is a chronograph pusher (upper rows 308..376, lower 549..617) or the crown (421..503): replaced by the straight case flank / crown-guard shoulder line; the 3D pushers and crown are added in the step",
+ "pushers_px": [
+  {"origin": [512.8, 455.1], "dir_deg_up": 23.5, "end_s": 301.5, "button_from_s": 262.0, "neck_from_s": 250.0, "radius": 29.6},
+  {"origin": [506.8, 466.9], "dir_deg_up": -23.5, "end_s": 302.5, "button_from_s": 268.0, "neck_from_s": 252.0, "radius": 30.8}
+ ],
+ "pushers_note": "axis-aligned views (rotated about the origin) of the silhouette: upper pusher t -28.6 .. +30.7 (centre +1.1), end face s 301.5; lower pusher t -31 .. +30.5, end face s 302.5; the two axes do not pass through one point (tilt), so each has its own origin; top / bottom edge slopes 0.42 / 0.47 -> 23.5 deg",
+ "tip_rows_px": [163.7, 768.5],
+ "subdials_px": {
+  "left_9": {"hub": [426.09, 452.55], "hub_r": 8.95, "baton_x": 425.8, "baton_w": 5.2, "tip_y": 400.4},
+  "right_3": {"hub": [600.09, 453.59], "hub_r": 8.95, "baton_x": 600.0, "baton_w": 5.2, "tip_y": 399.5},
+  "bottom_6": {"hub": [512.83, 539.50], "hub_r": 8.95, "baton_x": 513.2, "baton_w": 5.2, "tip_y": 484.8}
+ }
+}

@@ -1,0 +1,234 @@
+{
+ "note": "Pixel measurements read from references/omega-speedmaster-calibre-321-31130403001001/omega-31130403001001_original.png (1024 x 1024 RGBA PNG, near-upright catalogue render, crown at 3 with two chronograph pushers at about +-25 deg, 3-column steel bracelet that runs off the image at 12 and 6 o'clock, round case flank without crown guards, straight lugs). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]).",
+ "scale_px_per_mm": 14.2,
+ "scale_basis": "Case width 39.7 mm: the left case flank is a clean circle (fit over rows 330..600: centre (512.2, 460.9), r 281.2, residual 0.05 px; with the bezel centre (513.3) as centre r 282.4) -> 14.17 .. 14.23 px/mm; bracelet / lug gap 19 mm = 268 px (x 376 .. 644 at rows 132 .. 160) -> 14.1 px/mm; lug to lug (rows 134 .. 805.5 = 671.5 px) -> 47.3 mm at 14.2 (no published figure used). Adopted 14.2 (case 39.77 mm, lug to lug 47.5 mm as built, bracelet gap 18.9 mm).",
+ "pivot": [
+  511.72,
+  461.76
+ ],
+ "pivot_basis": "least-squares point of the three hand axes (hour 303.468 deg, minute 47.898 deg, seconds 221.828 deg; edge-midpoint line fits in rotated strips, thr 110, residuals 0.01 / 0.05 / 0.05 px); the hub circle (r 21.0) is centred there; bezel outer circle (513.30, 460.70) r 275.12 (ellipse axes 548.7 x 551.2 px, round within 0.5 percent).",
+ "bezel_out_circle_px": [
+  513.3,
+  460.7,
+  275.12
+ ],
+ "bezel_out_circle_note": "black bezel ring outer edge (dark ring to steel, 60-level crossing on 1 deg rays outside the crown / pusher sector, 162 points after outlier rejection, std 0.38 px); NOT the scale anchor. The steel case ring beyond it (about 7 px) and the case flank circle (centre 513.3, 460.7, r 281.6..282.0) are in the silhouette.",
+ "rings": {
+  "dial_flat": 204.0,
+  "crystal_edge": 211.5,
+  "bezel_in": 212.0,
+  "chamfer_to": 243.0,
+  "insert_out": 275.12,
+  "bezel_out": 275.12
+ },
+ "rings_note": "median radial profiles over 80 deg of dial about the bezel centre: black dial to r 203.5, bright thin inner steel ring r 204.5 .. 211.5 (grey ~90), dark gap 212 .. 218 (grey 37), lighter inner chamfer r 219 .. 242 (grey ~88), black bezel top (numerals / ticks) r 244 .. 274.5, bright steel ring from 275.5. No steel coin ring: insert_out = bezel_out.",
+ "hands": {
+  "hour": {
+   "angle_deg": 303.468,
+   "length_px": 136.3,
+   "tail_px": 20.0
+  },
+  "minute": {
+   "angle_deg": 47.898,
+   "length_px": 209.6,
+   "tail_px": 20.0
+  },
+  "seconds": {
+   "angle_deg": 221.828,
+   "length_px": 210.7,
+   "tail_px": 52.0
+  }
+ },
+ "hub_r": 21.0,
+ "crown": {
+  "x0": 779.0,
+  "x1": 833.4,
+  "y0": 419.4,
+  "y1": 514.4,
+  "fluted_to_x": 825.0
+ },
+ "right_override_px": [
+  [
+   300.0,
+   312.58,
+   744.54,
+   752.8
+  ],
+  [
+   312.58,
+   325.17,
+   752.8,
+   760.14
+  ],
+  [
+   325.17,
+   337.75,
+   760.14,
+   766.64
+  ],
+  [
+   337.75,
+   350.33,
+   766.64,
+   772.37
+  ],
+  [
+   350.33,
+   362.92,
+   772.37,
+   777.38
+  ],
+  [
+   362.92,
+   375.5,
+   777.38,
+   781.7
+  ],
+  [
+   418.0,
+   430.19,
+   791.64,
+   793.24
+  ],
+  [
+   430.19,
+   442.38,
+   793.24,
+   794.3
+  ],
+  [
+   442.38,
+   454.56,
+   794.3,
+   794.83
+  ],
+  [
+   454.56,
+   466.75,
+   794.83,
+   794.84
+  ],
+  [
+   466.75,
+   478.94,
+   794.84,
+   794.31
+  ],
+  [
+   478.94,
+   491.12,
+   794.31,
+   793.25
+  ],
+  [
+   491.12,
+   503.31,
+   793.25,
+   791.66
+  ],
+  [
+   503.31,
+   515.5,
+   791.66,
+   789.52
+  ],
+  [
+   559.5,
+   571.75,
+   777.0,
+   772.08
+  ],
+  [
+   571.75,
+   584.0,
+   772.08,
+   766.47
+  ],
+  [
+   584.0,
+   596.25,
+   766.47,
+   760.13
+  ],
+  [
+   596.25,
+   608.5,
+   760.13,
+   753.0
+  ],
+  [
+   608.5,
+   620.75,
+   753.0,
+   744.99
+  ],
+  [
+   620.75,
+   633.0,
+   744.99,
+   736.04
+  ]
+ ],
+ "right_override_note": "rows where the right alpha edge is a chronograph pusher (upper rows 301..374, lower 560..632) or the crown (419..514): replaced by the case flank circle (centre (513.3, 460.7), r 281.6, in 12-row chords); the 3D pushers and crown are added in the step. This case has no crown guards: the flank is the circle.",
+ "pushers_px": [
+  {
+   "origin": [
+    514.8,
+    464.8
+   ],
+   "dir_deg_up": 24.7,
+   "end_s": 329.0,
+   "button_from_s": 288.5,
+   "neck_from_s": 280.0,
+   "radius": 31.9
+  },
+  {
+   "origin": [
+    512.2,
+    462.7
+   ],
+   "dir_deg_up": -25.7,
+   "end_s": 335.0,
+   "button_from_s": 293.5,
+   "neck_from_s": 280.0,
+   "radius": 31.6
+  }
+ ],
+ "pushers_note": "axis-aligned views (rotated about the measured origin) of the alpha silhouette: upper pusher (24.7 deg) top edge flat at t -27.7, bottom 36.2 -> 34.7, end face s 329; lower pusher (-25.7 deg) edges t -29.7 / +33.5 flat, end face s 335; origins are the point (513, 461) shifted across the axis to the pusher centre line",
+ "tip_rows_px": [
+  134.0,
+  805.5
+ ],
+ "subdials_px": {
+  "left_9": {
+   "hub": [
+    416.99,
+    462.29
+   ],
+   "hub_r": 9.94,
+   "baton_x": 416.84,
+   "baton_w": 5.2,
+   "tip_y": 400.3
+  },
+  "right_3": {
+   "hub": [
+    607.36,
+    461.84
+   ],
+   "hub_r": 10.0,
+   "baton_x": 607.26,
+   "baton_w": 5.1,
+   "tip_y": 399.8
+  },
+  "bottom_6": {
+   "hub": [
+    512.88,
+    557.32
+   ],
+   "hub_r": 9.91,
+   "baton_x": 512.78,
+   "baton_w": 5.1,
+   "tip_y": 495.0
+  }
+ }
+}

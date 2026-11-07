@@ -1,0 +1,828 @@
+{
+ "model": "OMEGA Speedmaster Calibre 321 Chronograph 39.7 mm 311.30.40.30.01.001 (39.7 mm steel, black dial, black tachymeter bezel, steel bracelet, chronograph)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Follower of the Omega Moonwatch template (pipeline/steps/watch_omega_moonwatch.py, copied as watch_omega_calibre321.py) re-measured on its own photo: one black tachymeter bezel ring (no coin ring) with a wide inner chamfer, baton hour / minute hands with beige lume strips, chrono seconds hand with a lume diamond and a long counterweight tail, three sub-dials with white batons and hubs, fluted crown with a domed cap (no guards), two chronograph pushers at about +-25 deg (own origins), straight lugs carried by the alpha silhouette (case flank = circle), three-column steel bracelet (outer, centre, outer).",
+ "trace": "config/watches/omega-calibre321-31130403001001-trace.json",
+ "dial_map": "outputs/watches/omega-calibre321-31130403001001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 39.7,
+  "lug_to_lug": 47.5
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "straight lugs: the case outline follows the photo silhouette (lug tops y 134 px, bottoms y 805.5 px; lug to lug 47.5 mm as built, measured on the photo with no published figure used); top and bottom slope toward the bracelet",
+  "tip_top": 23.25,
+  "tip_bottom": 24.25
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.3,
+  "chamfer_mm": 2.183,
+  "round_mm": 0.25,
+  "note": "one black ring: inner chamfer bezel_in .. bezel_in + chamfer_mm (lighter grey in the photo, 31 px wide), flat top to bezel_out (insert_out = bezel_out: no steel coin ring); numerals, dots and TACHYMETRE are photo texture"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.5
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.325
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.408,
+     0.521
+    ],
+    [
+     0.0,
+     0.521
+    ],
+    [
+     8.768,
+     0.521
+    ],
+    [
+     8.838,
+     0.493
+    ],
+    [
+     8.908,
+     0.458
+    ],
+    [
+     8.979,
+     0.419
+    ],
+    [
+     9.049,
+     0.377
+    ],
+    [
+     9.12,
+     0.335
+    ],
+    [
+     9.19,
+     0.289
+    ],
+    [
+     9.261,
+     0.25
+    ],
+    [
+     9.331,
+     0.211
+    ],
+    [
+     9.401,
+     0.173
+    ],
+    [
+     9.472,
+     0.13
+    ],
+    [
+     9.535,
+     0.088
+    ],
+    [
+     9.599,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.408,
+     0.43
+    ],
+    [
+     0.0,
+     0.43
+    ],
+    [
+     13.275,
+     0.43
+    ],
+    [
+     13.345,
+     0.405
+    ],
+    [
+     13.415,
+     0.377
+    ],
+    [
+     13.486,
+     0.345
+    ],
+    [
+     13.556,
+     0.317
+    ],
+    [
+     13.627,
+     0.282
+    ],
+    [
+     13.697,
+     0.246
+    ],
+    [
+     13.768,
+     0.211
+    ],
+    [
+     13.838,
+     0.176
+    ],
+    [
+     13.908,
+     0.137
+    ],
+    [
+     13.979,
+     0.106
+    ],
+    [
+     14.049,
+     0.081
+    ],
+    [
+     14.12,
+     0.06
+    ],
+    [
+     14.648,
+     0.056
+    ],
+    [
+     14.718,
+     0.049
+    ],
+    [
+     14.761,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -3.662,
+     0.282
+    ],
+    [
+     -3.556,
+     0.444
+    ],
+    [
+     -3.38,
+     0.465
+    ],
+    [
+     -1.479,
+     0.345
+    ],
+    [
+     0.0,
+     0.254
+    ],
+    [
+     1.831,
+     0.246
+    ],
+    [
+     4.366,
+     0.225
+    ],
+    [
+     6.901,
+     0.197
+    ],
+    [
+     8.592,
+     0.183
+    ],
+    [
+     8.732,
+     0.303
+    ],
+    [
+     8.873,
+     0.43
+    ],
+    [
+     9.014,
+     0.563
+    ],
+    [
+     9.155,
+     0.676
+    ],
+    [
+     9.296,
+     0.697
+    ],
+    [
+     9.437,
+     0.669
+    ],
+    [
+     9.718,
+     0.606
+    ],
+    [
+     10.0,
+     0.553
+    ],
+    [
+     10.282,
+     0.504
+    ],
+    [
+     10.563,
+     0.44
+    ],
+    [
+     10.845,
+     0.38
+    ],
+    [
+     11.127,
+     0.327
+    ],
+    [
+     11.408,
+     0.271
+    ],
+    [
+     11.69,
+     0.204
+    ],
+    [
+     11.972,
+     0.151
+    ],
+    [
+     12.394,
+     0.144
+    ],
+    [
+     13.239,
+     0.137
+    ],
+    [
+     14.085,
+     0.13
+    ],
+    [
+     14.648,
+     0.123
+    ],
+    [
+     14.838,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.007,
+     0.0
+    ],
+    [
+     2.007,
+     0.18
+    ],
+    [
+     8.275,
+     0.18
+    ],
+    [
+     8.275,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     3.627,
+     0.0
+    ],
+    [
+     3.627,
+     0.109
+    ],
+    [
+     12.817,
+     0.109
+    ],
+    [
+     12.817,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     8.824,
+     0.0
+    ],
+    [
+     8.873,
+     0.049
+    ],
+    [
+     9.014,
+     0.173
+    ],
+    [
+     9.155,
+     0.299
+    ],
+    [
+     9.296,
+     0.391
+    ],
+    [
+     9.437,
+     0.366
+    ],
+    [
+     9.577,
+     0.342
+    ],
+    [
+     9.718,
+     0.313
+    ],
+    [
+     9.859,
+     0.282
+    ],
+    [
+     10.0,
+     0.25
+    ],
+    [
+     10.141,
+     0.218
+    ],
+    [
+     10.282,
+     0.19
+    ],
+    [
+     10.423,
+     0.158
+    ],
+    [
+     10.563,
+     0.13
+    ],
+    [
+     10.704,
+     0.095
+    ],
+    [
+     10.845,
+     0.067
+    ],
+    [
+     10.958,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured as the thr-110 silhouette in rotated strips about the least-squares pivot: hour baton half width 7.4 px to s 124.5 then a pointed tip to 136.3 (beige lume strip 2.55 px half width, s 28.5 .. 117.5); minute 6.1 px to s 188.5, shoulder, needle 0.8 px to 209.6 (lume strip 1.55 px, s 51.5 .. 182); chrono seconds shaft 3.5 -> 2.6 px with the lume diamond (max half width 9.9 px at s 132, lume 5.55 px) and a needle 2.05 -> 1.75 px to 210.7, tail (counterweight) 52 px with half width 4.9 .. 6.6 px. Sub-dial hands are polygons (hands.polygons) over the sub-dial hubs (hands.discs). Hands / hubs use the hands_photo material (the reference photo projected from the front).",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.402,
+  "polygons": {
+   "sub_left": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -6.865,
+      -0.037
+     ],
+     [
+      -6.865,
+      3.624
+     ],
+     [
+      -6.752,
+      3.941
+     ],
+     [
+      -6.752,
+      4.328
+     ],
+     [
+      -6.611,
+      4.328
+     ],
+     [
+      -6.611,
+      3.941
+     ],
+     [
+      -6.499,
+      3.624
+     ],
+     [
+      -6.499,
+      -0.037
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_right": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      6.549,
+      -0.006
+     ],
+     [
+      6.549,
+      3.659
+     ],
+     [
+      6.658,
+      3.976
+     ],
+     [
+      6.658,
+      4.363
+     ],
+     [
+      6.799,
+      4.363
+     ],
+     [
+      6.799,
+      3.976
+     ],
+     [
+      6.908,
+      3.659
+     ],
+     [
+      6.908,
+      -0.006
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_bottom": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -0.105,
+      -6.73
+     ],
+     [
+      -0.105,
+      -3.045
+     ],
+     [
+      0.004,
+      -2.728
+     ],
+     [
+      0.004,
+      -2.341
+     ],
+     [
+      0.145,
+      -2.341
+     ],
+     [
+      0.145,
+      -2.728
+     ],
+     [
+      0.254,
+      -3.045
+     ],
+     [
+      0.254,
+      -6.73
+     ]
+    ],
+    "thick": 0.08
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -6.671,
+    "y_mm": -0.037,
+    "r_mm": 0.7,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 6.735,
+    "y_mm": -0.006,
+    "r_mm": 0.704,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_bottom_hub",
+    "x_mm": 0.082,
+    "y_mm": -6.73,
+    "r_mm": 0.698,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 18,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.46,
+  "cap_start_fraction": 0.5,
+  "fluted_to_mm": 22.062,
+  "bevel": 0.25,
+  "note": "fluted barrel x 779 (hidden start) .. 825 px (r 47.5 px, centre y 466.9) with a domed Omega cap x 825 .. 833.4 (r 21.5 px); no crown guards: the case flank circle stays in the silhouette (right_override_px rows 418..515)"
+ },
+ "pushers": {
+  "neck_radius_fraction": 0.72,
+  "cap_radius_fraction": 0.97,
+  "teeth": 24,
+  "flute_depth": 0.0,
+  "z": 4.2,
+  "bevel": 0.15,
+  "cap_cylinder": true,
+  "items": [
+   {
+    "origin_mm": [
+     0.217,
+     -0.214
+    ],
+    "angle_deg": 24.7,
+    "radius_mm": 2.246,
+    "neck_from_mm": 19.718,
+    "r_from_mm": 20.317,
+    "fluted_to_mm": 22.324,
+    "r_to_mm": 23.169
+   },
+   {
+    "origin_mm": [
+     0.034,
+     -0.066
+    ],
+    "angle_deg": -25.7,
+    "radius_mm": 2.225,
+    "neck_from_mm": 19.718,
+    "r_from_mm": 20.669,
+    "fluted_to_mm": 22.746,
+    "r_to_mm": 23.592
+   }
+  ],
+  "note": "two chronograph pushers (cylindrical buttons with a rounded end face), axes at +24.7 / -25.7 deg from their own origin points near the case centre, end faces 329 / 335 px from the origins, button radii 31.9 / 31.6 px, neck half width about 23 px; measured in axis-aligned views of the silhouette"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind bracelet, see strap.bracelet.note",
+  "bracelet": {
+   "gap": 0.08,
+   "groove": 0.1,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.4,
+   "lift": 0.15,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.05,
+   "backing_material": "steel_photo",
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      20.546,
+      -5.051,
+      4.949
+     ],
+     [
+      26.885,
+      -5.051,
+      4.738
+     ],
+     [
+      32.166,
+      -5.051,
+      4.548
+     ]
+    ],
+    "bottom": [
+     [
+      19.946,
+      -4.91,
+      5.02
+     ],
+     [
+      29.454,
+      -4.839,
+      4.879
+     ],
+     [
+      39.454,
+      -4.839,
+      4.632
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       18.0,
+       23.409,
+       -9.558,
+       9.28
+      ],
+      [
+       23.409,
+       26.314
+      ],
+      [
+       26.314,
+       28.997
+      ],
+      [
+       28.997,
+       31.099
+      ],
+      [
+       31.099,
+       32.413
+      ]
+     ],
+     "bottom": [
+      [
+       19.0,
+       24.306,
+       -9.17,
+       9.527
+      ],
+      [
+       24.306,
+       28.186
+      ],
+      [
+       28.186,
+       31.89
+      ],
+      [
+       31.89,
+       35.01
+      ],
+      [
+       35.01,
+       37.397
+      ],
+      [
+       37.397,
+       39.489
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       21.011
+      ],
+      [
+       21.011,
+       24.821
+      ],
+      [
+       24.821,
+       27.652
+      ],
+      [
+       27.652,
+       30.23
+      ],
+      [
+       30.23,
+       32.413
+      ]
+     ],
+     "bottom": [
+      [
+       19.0,
+       21.587
+      ],
+      [
+       21.587,
+       25.897
+      ],
+      [
+       25.897,
+       30.123
+      ],
+      [
+       30.123,
+       33.468
+      ],
+      [
+       33.468,
+       36.355
+      ],
+      [
+       36.355,
+       38.489
+      ],
+      [
+       38.489,
+       39.489
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 23.25,
+    "bottom": 24.25
+   },
+   "note": "Calibre 321 bracelet (14.2 px/mm, pivot (511.72, 461.76)): three columns outer / centre / outer; vertical joints from brightness-valley scans (top x 440 / 576..582, bottom 442.5 / 583..577.5 px); the outer columns share their joint rows (top 20.15, 50, 88.1, 129.35 px; bottom 806.9, 862, 914.6, 958.9, 992.8 px; left and right differ by up to 2 px, mean used), the centre column has its own (top 32.5, 69.1, 109.3, 163.4; bottom 768.3, 829.5, 889.5, 937, 978, 1008.3 px), from vertical brightness scans; the end links between the lugs end at the lug inner edges (x limits of the first outer piece); the joint gaps show the photographed pixels (backing_material steel_photo); the polished double joint lines of the links are photo texture"
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-calibre321-31130403001001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  0.111,
+  0.075
+ ]
+}

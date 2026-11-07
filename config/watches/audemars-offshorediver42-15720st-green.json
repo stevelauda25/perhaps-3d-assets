@@ -1,0 +1,436 @@
+{
+ "model": "AUDEMARS PIGUET Royal Oak Offshore Diver 15720ST (42 mm steel, green waffle dial, green rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). FIRST AUDEMARS PIGUET and the Offshore Diver TEMPLATE (variant key 15720st-green; the blue one, 15720st-blue, copies this spec and changes only what differs): structure of the Breitling Superocean 42 rubber build (case slab from the alpha silhouette sloping into the strap, rubber strap in side / centre / side sections, rose-gold hands from profile lists) with the Cartier Santos bezel approach (polygonal bezel ring sampled by rays from the pivot, eight screw heads): regular OCTAGON bezel (outer edge from the measured flats) with a polished chamfer down to the round opening, rotating black ring with its cream sector and the Mega Tapisserie waffle dial as the 2x photo map (flat, the waffle relief is texture only), two crowns (3 o'clock and 10 o'clock: black hexagonal nut plus rose-gold ring on their own axes) as separate parts, the integrated crown guard and the lugs from the silhouette.",
+ "trace": "config/watches/audemars-offshorediver42-15720st-green-trace.json",
+ "dial_map": "outputs/watches/audemars-offshorediver42-15720st-green/dial_photo.jpg",
+ "steel_map": "outputs/watches/audemars-offshorediver42-15720st-green/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 3.4,
+  "ramp_from_y": 21.0,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "chamfer_mm": 0.3,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 720,
+  "screw_z": 0.12,
+  "note": "case slab = silhouette between the lug tops (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25) with the crown rows replaced by straight lines, top and bottom sloping toward the strap; bezel = octagon ring (min of the octagon and the silhouette less silhouette_margin_mm, sampled by rays) at bezel_z, then a chamfer ring down to the opening at chamfer_z",
+  "tip_top": 24.75,
+  "tip_bottom": 26.75
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.0,
+  "ring_z": 7.5,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3,
+  "note": "flat waffle plate out to opening.dial_flat_mm, step up to the rotating ring plane ring_z out to the opening; one lathe with the photo map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     -0.868,
+     0.723
+    ],
+    [
+     0.0,
+     0.868
+    ],
+    [
+     1.302,
+     0.579
+    ],
+    [
+     1.88,
+     0.694
+    ],
+    [
+     2.314,
+     1.041
+    ],
+    [
+     2.603,
+     1.157
+    ],
+    [
+     7.665,
+     1.157
+    ],
+    [
+     8.027,
+     0.911
+    ],
+    [
+     8.273,
+     0.405
+    ],
+    [
+     8.388,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.157,
+     0.463
+    ],
+    [
+     0.0,
+     0.723
+    ],
+    [
+     1.302,
+     0.55
+    ],
+    [
+     1.88,
+     0.506
+    ],
+    [
+     2.314,
+     0.752
+    ],
+    [
+     2.603,
+     0.795
+    ],
+    [
+     12.293,
+     0.795
+    ],
+    [
+     12.655,
+     0.564
+    ],
+    [
+     12.944,
+     0.217
+    ],
+    [
+     13.017,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -1.446,
+     0.116
+    ],
+    [
+     0.0,
+     0.116
+    ],
+    [
+     6.219,
+     0.116
+    ],
+    [
+     6.349,
+     0.116
+    ],
+    [
+     6.481,
+     0.477
+    ],
+    [
+     6.614,
+     0.648
+    ],
+    [
+     6.745,
+     0.759
+    ],
+    [
+     6.878,
+     0.836
+    ],
+    [
+     7.01,
+     0.887
+    ],
+    [
+     7.143,
+     0.915
+    ],
+    [
+     7.275,
+     0.926
+    ],
+    [
+     7.406,
+     0.915
+    ],
+    [
+     7.539,
+     0.887
+    ],
+    [
+     7.671,
+     0.836
+    ],
+    [
+     7.804,
+     0.759
+    ],
+    [
+     7.936,
+     0.648
+    ],
+    [
+     8.069,
+     0.477
+    ],
+    [
+     8.229,
+     0.116
+    ],
+    [
+     13.017,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.314,
+     0.202
+    ],
+    [
+     7.665,
+     0.202
+    ]
+   ],
+   "minute": [
+    [
+     6.219,
+     0.26
+    ],
+    [
+     12.438,
+     0.26
+    ]
+   ],
+   "seconds": [
+    [
+     6.523,
+     0.0
+    ],
+    [
+     6.648,
+     0.416
+    ],
+    [
+     6.773,
+     0.561
+    ],
+    [
+     6.899,
+     0.651
+    ],
+    [
+     7.024,
+     0.709
+    ],
+    [
+     7.149,
+     0.742
+    ],
+    [
+     7.275,
+     0.752
+    ],
+    [
+     7.4,
+     0.742
+    ],
+    [
+     7.525,
+     0.709
+    ],
+    [
+     7.651,
+     0.651
+    ],
+    [
+     7.776,
+     0.561
+    ],
+    [
+     7.901,
+     0.416
+    ],
+    [
+     8.027,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; measured from the colour mask R > G + 6 or R > 190 in rotated strips. lume = [s, half width] of the white inlay. Hands and hub use hands_photo (reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: hexagonal black nut (flat face toward the viewer) from the base point along the axis angle, then the rose-gold ring"
+ },
+ "strap": {
+  "kind": "rubber",
+  "note": "strap.kind rubber: left / centre / right sections; centre_x_mm = [|y|, left x, right x] of the two vertical seams of the centre section (photo seams x 571.5 / 626.5 top and 571.5 / 627.5 bottom); side sections start on the lug tops (tip rows), the centre section too and stops at the shallow notch in the end; strap ends from the alpha silhouette",
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.3,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.17,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "centre_x_mm": {
+    "top": [
+     [
+      0.0,
+      -3.862,
+      4.093
+     ],
+     [
+      40.0,
+      -3.862,
+      4.093
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -3.862,
+      4.238
+     ],
+     [
+      45.0,
+      -3.862,
+      4.238
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "full": {
+     "top": [
+      [
+       24.75,
+       27.86
+      ]
+     ],
+     "bottom": [
+      [
+       26.75,
+       31.59
+      ]
+     ]
+    },
+    "side": {
+     "top": [
+      [
+       27.26,
+       31.0
+      ]
+     ],
+     "bottom": [
+      [
+       30.99,
+       40.75
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       27.26,
+       30.25
+      ]
+     ],
+     "bottom": [
+      [
+       30.99,
+       40.75
+      ]
+     ]
+    }
+   },
+   "backing_to_mm": {
+    "top": 30.2
+   },
+   "edge_from": {
+    "top": 24.75,
+    "bottom": 26.75
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ }
+}

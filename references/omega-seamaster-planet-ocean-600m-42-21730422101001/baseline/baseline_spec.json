@@ -1,0 +1,560 @@
+{
+ "model": "OMEGA Seamaster Planet Ocean 600M Co-Axial Master Chronometer 42 mm 217.30.42.21.01.001 (42 mm steel, black dial, black ceramic bezel with serrated steel coin ring, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). FOLLOWER/ADAPT of the Omega Diver 300M bracelet build (210.30.42.20.03.001): same step (watch_omega_diver300m), prep copy omega_planetocean42_prep; re-measured on this photo (12.95 px/mm from the 21 mm lug width / the 42 mm coin ring, pivot (512.1, 462.25), not the Diver's frame): serrated steel coin ring outside the black ceramic ring, steel flange inside it, solid arrow hour / minute hands and lozenge seconds hand, bigger crown, three-column bracelet (brushed outer, polished centre, brushed outer), no helium valve in the silhouette, angular lugs from the alpha.",
+ "trace": "config/watches/omega-planetocean42-21730422101001-trace.json",
+ "dial_map": "outputs/watches/omega-planetocean42-21730422101001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (angular lugs, lug tops y 163.5 / bottoms y 775.5 px, crown guards at 3 o'clock), top and bottom sloping into the bracelet; the left silhouette at the case middle is the coin ring (42 mm)",
+  "tip_top": 23.0,
+  "tip_bottom": 24.25
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 8.0,
+  "z_insert": 8.3,
+  "z_coin": 8.3,
+  "chamfer_mm": 0.8,
+  "round_mm": 0.3,
+  "note": "black ceramic ring (insert_out radius) with the steel flange (bezel_in..bezel_in + chamfer_mm, sloped) inside it and the serrated steel coin ring (insert_out..bezel_out) outside it; numerals, minute dots, triangle, pip and the teeth come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.29
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "parts": {
+   "hour": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       -2.124,
+       0.486
+      ],
+      [
+       -1.236,
+       0.486
+      ],
+      [
+       0.154,
+       1.197
+      ],
+      [
+       1.081,
+       1.208
+      ],
+      [
+       5.483,
+       0.486
+      ],
+      [
+       5.66,
+       1.792
+      ],
+      [
+       7.722,
+       0.564
+      ],
+      [
+       8.556,
+       0.0
+      ],
+      [
+       7.722,
+       -0.564
+      ],
+      [
+       5.66,
+       -1.792
+      ],
+      [
+       5.483,
+       -0.486
+      ],
+      [
+       1.081,
+       -1.208
+      ],
+      [
+       0.154,
+       -1.197
+      ],
+      [
+       -1.236,
+       -0.486
+      ],
+      [
+       -2.124,
+       -0.486
+      ]
+     ]
+    }
+   ],
+   "minute": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       -2.548,
+       0.425
+      ],
+      [
+       -2.008,
+       0.544
+      ],
+      [
+       -0.772,
+       1.004
+      ],
+      [
+       -0.309,
+       1.135
+      ],
+      [
+       0.772,
+       1.097
+      ],
+      [
+       1.081,
+       1.031
+      ],
+      [
+       9.869,
+       0.448
+      ],
+      [
+       9.977,
+       1.683
+      ],
+      [
+       12.849,
+       0.0
+      ],
+      [
+       9.977,
+       -1.683
+      ],
+      [
+       9.869,
+       -0.448
+      ],
+      [
+       1.081,
+       -1.031
+      ],
+      [
+       0.772,
+       -1.097
+      ],
+      [
+       -0.309,
+       -1.135
+      ],
+      [
+       -0.772,
+       -1.004
+      ],
+      [
+       -2.008,
+       -0.544
+      ],
+      [
+       -2.548,
+       -0.425
+      ]
+     ]
+    }
+   ],
+   "seconds": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       -1.699,
+       0.216
+      ],
+      [
+       0.0,
+       0.247
+      ],
+      [
+       3.089,
+       0.232
+      ],
+      [
+       4.633,
+       0.216
+      ],
+      [
+       7.761,
+       0.185
+      ],
+      [
+       8.355,
+       0.687
+      ],
+      [
+       10.502,
+       0.201
+      ],
+      [
+       10.656,
+       0.139
+      ],
+      [
+       12.046,
+       0.112
+      ],
+      [
+       13.243,
+       0.093
+      ],
+      [
+       13.243,
+       -0.093
+      ],
+      [
+       12.046,
+       -0.112
+      ],
+      [
+       10.656,
+       -0.139
+      ],
+      [
+       10.502,
+       -0.201
+      ],
+      [
+       8.355,
+       -0.687
+      ],
+      [
+       7.761,
+       -0.185
+      ],
+      [
+       4.633,
+       -0.216
+      ],
+      [
+       3.089,
+       -0.232
+      ],
+      [
+       0.0,
+       -0.247
+      ],
+      [
+       -1.699,
+       -0.216
+      ]
+     ]
+    }
+   ]
+  },
+  "note": "solid hands as signed outlines [mm along the hand from the pivot, signed lateral] traced from the photo in strips rotated about the pivot (threshold 110 of 255, nearest run to the axis; hour arrow tip 110.8 px / barbs 23 px half width, minute arrow tip 166.4 px / barbs 21.8 px, seconds shaft 2.4..3.2 px half width with a lozenge at 100..137 px and the end at 171.5 px; the hub zone is shaped from the visible stubs). The lume panels and the steel faces are texture (hands_photo = the projected photo); no separate lume polygons",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 10,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.7,
+  "cap_start_fraction": 0.85,
+  "fluted_to_mm": 24.0,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.75,
+  "base_chamfer_mm": 0.3,
+  "note": "crown 7.1 mm tall (rows 422..514 px) with wide flutes, rounded cap; the crown guards above and below belong to the case silhouette"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns left to right (3 columns: brushed outer link, polished centre link, brushed outer link, each with its own pieces_mm list): joints = centroids of the dark lines (grey < ~110) from brightness scans over the column centre bands of the 1x photo, top and bottom separately (rows converted with pivot y 462.25 and 12.95 px/mm); the stepped centre joints at the top (rows 119.5 / 137.8) are both kept, the double line at the bottom (rows 882 / 886) is one joint at 884; the outer columns start at the lug tips (23.0 top / 24.25 bottom), the centre column under the case at 20 mm; ends at the alpha ends (2 px inside). bounds_x_mm = the two vertical column boundaries [|y|, x1, x2] (dark gap centres, scan of rows 10..150 and 790..1010)",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "bevel": 0.1,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "oL",
+    "c",
+    "oR"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -5.012,
+      5.035
+     ],
+     [
+      35.25,
+      -5.012,
+      5.035
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -5.0,
+      5.05
+     ],
+     [
+      31.5,
+      -5.0,
+      5.05
+     ],
+     [
+      34.0,
+      -5.0,
+      4.973
+     ],
+     [
+      36.5,
+      -5.0,
+      4.873
+     ],
+     [
+      39.0,
+      -5.02,
+      4.757
+     ],
+     [
+      42.0,
+      -5.07,
+      4.564
+     ],
+     [
+      42.75,
+      -5.07,
+      4.518
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "oL": {
+     "top": [
+      [
+       23.0,
+       24.07
+      ],
+      [
+       24.07,
+       28.24
+      ],
+      [
+       28.24,
+       32.24
+      ],
+      [
+       32.24,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       24.25,
+       25.89
+      ],
+      [
+       25.89,
+       30.44
+      ],
+      [
+       30.44,
+       35.31
+      ],
+      [
+       35.31,
+       39.17
+      ],
+      [
+       39.17,
+       42.03
+      ],
+      [
+       42.03,
+       42.75
+      ]
+     ]
+    },
+    "oR": {
+     "top": [
+      [
+       23.0,
+       24.0
+      ],
+      [
+       24.0,
+       28.18
+      ],
+      [
+       28.18,
+       32.18
+      ],
+      [
+       32.18,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       24.25,
+       25.75
+      ],
+      [
+       25.75,
+       30.44
+      ],
+      [
+       30.44,
+       35.31
+      ],
+      [
+       35.31,
+       39.12
+      ],
+      [
+       39.12,
+       42.03
+      ],
+      [
+       42.03,
+       42.75
+      ]
+     ]
+    },
+    "c": {
+     "top": [
+      [
+       20.0,
+       25.02
+      ],
+      [
+       25.02,
+       26.43
+      ],
+      [
+       26.43,
+       30.14
+      ],
+      [
+       30.14,
+       33.38
+      ],
+      [
+       33.38,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       26.89
+      ],
+      [
+       26.89,
+       32.61
+      ],
+      [
+       32.61,
+       37.01
+      ],
+      [
+       37.01,
+       41.14
+      ],
+      [
+       41.14,
+       42.75
+      ]
+     ]
+    }
+   },
+   "groove": 0.05,
+   "z_oL": 3.4,
+   "z_oR": 3.4,
+   "z_c": 3.5
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-planetocean42-21730422101001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  -0.016,
+  0.151
+ ]
+}

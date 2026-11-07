@@ -1,0 +1,518 @@
+{
+ "model": "OMEGA Speedmaster Silver Snoopy Award 50th Anniversary Co-Axial Master Chronometer Chronograph 42 mm 310.32.42.50.02.001 (42 mm steel, white / silver dial with blue sub-dials and the Snoopy engraving, blue tachymeter bezel, blue nylon strap, chronograph)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Follower of the Omega Moonwatch template (config/watches/omega-moonwatch-31030425001001.json, untouched): the same structure (one tachymeter bezel ring without coin ring, baton hands with lume strips, three sub-dials with hands and hubs, fluted crown with a domed cap, two chronograph pushers with their own origins and angles, asymmetric twisted lugs carried by the alpha silhouette) built by pipeline/steps/watch_omega_snoopy.py (copy of watch_omega_moonwatch.py with a one-piece NYLON strap = `strap_photo` material, a hub centred on the photographed dome and the chrono seconds hand as free polygons). Every number is measured again on the Snoopy photo (see the measure file): this render has another scale and perspective than the Moonwatch one (12.87 px/mm, bezel top 257.26 px, pushers about 8 percent thicker).",
+ "trace": "config/watches/omega-snoopy-31032425002001-trace.json",
+ "dial_map": "outputs/watches/omega-snoopy-31032425002001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0,
+  "lug_to_lug": 47.5
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated twisted lugs: the case outline follows the photo silhouette (lug tops y 158.6, bottoms y 773.5 px = 47.78 mm, tip_top 23.0 + tip_bottom 24.75 = 47.75); the crown / pusher rows take the straight shoulder line (right_override_px), the guard shoulders stay in the silhouette; top and bottom slope toward the strap; notch: the gap between the strap end (y 19.5 top, -20.87 bottom) and the bezel is background in the photo (alpha 0) between the lug inner edges (x -9.94 .. 10.31 top, -9.97 .. 10.29 bottom) and is cut out of the case slab down to the steel case ring circle (r 264.5 px = 20.5 mm about the ring centre)",
+  "tip_top": 23.0,
+  "tip_bottom": 24.75,
+  "notch": {
+   "top": [
+    -9.94,
+    10.31
+   ],
+   "bottom": [
+    -9.97,
+    10.29
+   ],
+   "ring_r_mm": 20.5
+  }
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.3,
+  "chamfer_mm": 1.593,
+  "round_mm": 0.25,
+  "note": "one blue ring: wide silver inner chamfer bezel_in .. chamfer_to (steel look in the photo), flat blue top to bezel_out (insert_out = bezel_out: no steel coin ring); numerals, dots and TACHYMETRE are photo texture"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.5
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.36
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.399,
+     0.466
+    ],
+    [
+     0.0,
+     0.466
+    ],
+    [
+     8.974,
+     0.466
+    ],
+    [
+     9.658,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.399,
+     0.373
+    ],
+    [
+     0.0,
+     0.373
+    ],
+    [
+     13.636,
+     0.373
+    ],
+    [
+     14.32,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     1.943,
+     0.0
+    ],
+    [
+     1.943,
+     0.186
+    ],
+    [
+     8.353,
+     0.186
+    ],
+    [
+     8.353,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     4.157,
+     0.0
+    ],
+    [
+     4.157,
+     0.155
+    ],
+    [
+     13.248,
+     0.155
+    ],
+    [
+     13.248,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile hands (hour, minute) = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured about the least-squares pivot: hour baton half width 6.0 px to s 115.5 then a pointed tip to 124.3, minute 4.8 px to s 175.5 then an arrow tip to 184.3, lume = white strips (hour s 25..107.5 half 2.4 px, minute s 53.5..170.5 half 2.0 px). The chrono seconds hand is free polygons (hands.polygons): tail + shaft (half 6.0 px at the tail end s -52 to 3.3 px), lume diamond (kite, s 99.9 .. 132.3) and needle to s 194.5. Sub-dial hands are polygons over hubs (hands.discs). Hands / hubs use the hands_photo material (the reference photo projected from the front).",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.36,
+  "polygons": {
+   "sec_body": {
+    "z": 8.2,
+    "outline_mm": [
+     [
+      3.119,
+      2.625
+     ],
+     [
+      1.885,
+      1.436
+     ],
+     [
+      0.779,
+      0.342
+     ],
+     [
+      -0.299,
+      -0.779
+     ],
+     [
+      -2.382,
+      -3.085
+     ],
+     [
+      -4.941,
+      -5.904
+     ],
+     [
+      -5.321,
+      -5.559
+     ],
+     [
+      -2.784,
+      -2.719
+     ],
+     [
+      -0.713,
+      -0.402
+     ],
+     [
+      0.319,
+      0.76
+     ],
+     [
+      1.333,
+      1.938
+     ],
+     [
+      2.429,
+      3.252
+     ]
+    ],
+    "thick": 0.12
+   },
+   "sec_diamond": {
+    "z": 8.2,
+    "outline_mm": [
+     [
+      -5.092,
+      -5.861
+     ],
+     [
+      -5.039,
+      -6.624
+     ],
+     [
+      -6.907,
+      -7.614
+     ],
+     [
+      -5.971,
+      -5.765
+     ]
+    ],
+    "lume_mm": [
+     [
+      -5.234,
+      -5.995
+     ],
+     [
+      -5.209,
+      -6.522
+     ],
+     [
+      -6.748,
+      -7.37
+     ],
+     [
+      -5.937,
+      -5.912
+     ]
+    ],
+    "thick": 0.12
+   },
+   "sec_needle": {
+    "z": 8.2,
+    "outline_mm": [
+     [
+      -6.839,
+      -7.643
+     ],
+     [
+      -10.059,
+      -11.28
+     ],
+     [
+      -10.099,
+      -11.243
+     ],
+     [
+      -6.943,
+      -7.549
+     ]
+    ],
+    "thick": 0.12
+   },
+   "sub_left": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -6.885,
+      -0.171
+     ],
+     [
+      -6.885,
+      4.071
+     ],
+     [
+      -6.741,
+      4.188
+     ],
+     [
+      -6.598,
+      4.071
+     ],
+     [
+      -6.598,
+      -0.171
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_right": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      6.848,
+      -0.214
+     ],
+     [
+      6.848,
+      4.009
+     ],
+     [
+      7.019,
+      4.126
+     ],
+     [
+      7.19,
+      4.009
+     ],
+     [
+      7.19,
+      -0.214
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_bottom": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -0.071,
+      -7.141
+     ],
+     [
+      -0.071,
+      -2.867
+     ],
+     [
+      0.104,
+      -2.751
+     ],
+     [
+      0.279,
+      -2.867
+     ],
+     [
+      0.279,
+      -7.141
+     ]
+    ],
+    "thick": 0.08
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -6.749,
+    "y_mm": -0.171,
+    "r_mm": 0.637,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 7.062,
+    "y_mm": -0.214,
+    "r_mm": 0.687,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_bottom_hub",
+    "x_mm": 0.1,
+    "y_mm": -7.141,
+    "r_mm": 0.679,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 18,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.48,
+  "cap_start_fraction": 0.5,
+  "fluted_to_mm": 23.041,
+  "bevel": 0.25,
+  "note": "fluted barrel x 774.0..807.4 px (r 43.15 px, centre y 461.5) with a domed Omega cap to x 814.2; the housing shoulders above and below (x 790.3) stay in the silhouette (right_override_px rows 417.5..505.5)"
+ },
+ "pushers": {
+  "neck_radius_fraction": 0.8,
+  "cap_radius_fraction": 0.97,
+  "teeth": 24,
+  "flute_depth": 0.0,
+  "z": 4.2,
+  "bevel": 0.15,
+  "cap_cylinder": true,
+  "items": [
+   {
+    "origin_mm": [
+     0.285,
+     -0.428
+    ],
+    "angle_deg": 24.44,
+    "radius_mm": 2.551,
+    "neck_from_mm": 20.047,
+    "r_from_mm": 21.057,
+    "fluted_to_mm": 22.914,
+    "r_to_mm": 23.846
+   },
+   {
+    "origin_mm": [
+     -0.128,
+     -0.641
+    ],
+    "angle_deg": -24.85,
+    "radius_mm": 2.563,
+    "neck_from_mm": 20.357,
+    "r_from_mm": 21.368,
+    "fluted_to_mm": 23.193,
+    "r_to_mm": 24.126
+   }
+  ],
+  "note": "two chronograph pushers (cylindrical buttons with a rounded end face), axes at +24.44 / -24.85 deg from their own origin points on the crown side (the axes do not meet: camera tilt), end faces 306.9 / 310.5 px from the origins, button radii 32.83 / 32.98 px, neck 13 px; measured in axis-aligned views of the silhouette",
+  "cap_round_mm": 1.4
+ },
+ "strap": {
+  "kind": "nylon",
+  "note": "strap.kind nylon: one-piece blue nylon strap (columns ['strap']); pieces from the visible strap end at the case (y 19.5 top, -20.87 bottom; the bezel overlaps it at the centre) to the strap ends at the image borders (alpha rows 1 and 1023, the silhouette narrows from 20.7 mm at the lugs to about 8 mm at the ends); the weave, the lighter edge stitching and the shading at the lugs are the projected photo (strap_photo: emission / roughness 0.8 / specular 0), flat, no relief",
+  "nylon": {
+   "gap": -0.1,
+   "groove": 0.1,
+   "z0": 0.6,
+   "z_strap": 3.3,
+   "lift": 0.15,
+   "bevel": 0.05,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.1,
+   "backing_inset": 0.05,
+   "sample_mm": 0.25,
+   "backing_material": "strap_photo",
+   "emission": 0.295,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "columns": [
+    "strap"
+   ],
+   "pieces_mm": {
+    "strap": {
+     "top": [
+      [
+       19.5,
+       23.0,
+       -9.94,
+       10.31
+      ],
+      [
+       23.0,
+       34.75
+      ]
+     ],
+     "bottom": [
+      [
+       20.87,
+       24.75,
+       -9.97,
+       10.29
+      ],
+      [
+       24.75,
+       44.0
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 23.0,
+    "bottom": 25.0
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-snoopy-31032425002001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  0.151,
+  -0.098
+ ],
+ "hub_centre_mm": [
+  0.106,
+  -0.184
+ ]
+}
