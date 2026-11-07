@@ -1,0 +1,60 @@
+{
+ "note": "Pixel measurements for references/patek-calatrava-6007g-red/patek-6007g-red_original.png (1920 x 2691 px RGBA PNG, same studio camera as the blue variant). Verified against the blue photo: dial / case / hands / hub registration is identical (phase correlation 0.005 px on the dial region, hour / minute hands do not differ at all, the seconds hand sits at the same pixels, hub disc x 931..988 at row 1258, pointer axis 179.3..179.5 deg, silhouette xor 5389 px of 2.0 million, only at the strap ends rows 309..351 / 2521..2557 where the dark alpha edge differs and a few px at the pocket rows 671..676 / 1911..1918). Every value therefore equals the blue measure (circle (956.50, 1271.23) r 626.35 px = 40 mm; pivot (960.0, 1258.3); rings; hands; crown; lug rows 547.5 / 2052; pocket rows). Differences: red dial markers, red seconds hand, red stitching and red lining instead of blue; the leather emboss is a different pattern (a woven checker, texture only). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]), NATIVE photo pixels (no 2x copy).",
+ "pivot": [
+  960.0,
+  1258.3
+ ],
+ "bezel_out_circle_px": [
+  956.5,
+  1271.23,
+  626.35
+ ],
+ "rings": {
+  "dial_flat": 487.0,
+  "crystal_edge": 494.7,
+  "bezel_in": 494.7,
+  "bezel_out": 608.0
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.447,
+   "length_px": 284.5,
+   "tail_px": 106.5
+  },
+  "minute": {
+   "angle_deg": 53.404,
+   "length_px": 424.5,
+   "tail_px": 106.5
+  }
+ },
+ "hub_r": 36.0,
+ "crown": {
+  "x0": 1577,
+  "x1": 1657,
+  "y0": 1189.5,
+  "y1": 1377
+ },
+ "mirror_rows_px": [
+  [
+   1186,
+   1380
+  ]
+ ],
+ "mirror_axis_x_px": 956.5,
+ "tip_rows_px": [
+  547.5,
+  2052
+ ],
+ "pocket_rows_px": {
+  "top": [
+   660,
+   765
+  ],
+  "bottom": [
+   1820,
+   1925
+  ]
+ },
+ "pocket_min_gap_px": 8,
+ "cutter_extend_px": 3.0
+}

@@ -1,0 +1,247 @@
+{
+ "model": "PATEK PHILIPPE Aquanaut 5168G (42.2 mm white gold, green embossed dial, green composite rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Variant of the Aquanaut template (config key 5168g-green, the SKU repeats in catalog 2 row 102 green and row 104 blue): same structure as config/watches/patek-aquanaut40-5167a001.json (case slab from the alpha silhouette, superellipse bezel ring with scanned window and chamfer, flat polygon dial with the native photo map, one fluted crown, one-piece rubber strap), re-measured on the 5168G green photo at 42.2 mm (scale 29.85 px/mm): case tips, hands, hub, crown, strap pieces and emissions are per variant. Step and kit lighting are the template's.",
+ "trace": "config/watches/patek-aquanaut42-5168g-green-trace.json",
+ "dial_map": "outputs/watches/patek-aquanaut42-5168g-green/dial_photo.jpg",
+ "steel_map": "outputs/watches/patek-aquanaut42-5168g-green/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.2
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 3.4,
+  "ramp_from_y": 20.5,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 720,
+  "note": "case slab = silhouette between the lug tips (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25) with the crown rows replaced by a straight line, top and bottom sloping toward the strap; bezel = superellipse ring (min of the superellipse and the silhouette less silhouette_margin_mm, sampled by rays) at bezel_z, then a chamfer ring down to the dial window at chamfer_z",
+  "tip_top": 24.75,
+  "tip_bottom": 25.75
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6
+ },
+ "dial": {
+  "z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.325,
+  "note": "flat polygon (the window less the chamfer) with the native photo map: embossed grid, applied numerals, indices, minute track, date window and the photographed hands stay in the map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     0.0,
+     0.938
+    ],
+    [
+     9.313,
+     0.938
+    ],
+    [
+     10.385,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     0.0,
+     0.827
+    ],
+    [
+     13.836,
+     0.827
+    ],
+    [
+     14.64,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -5.126,
+     0.017
+    ],
+    [
+     -5.025,
+     0.436
+    ],
+    [
+     -4.69,
+     0.419
+    ],
+    [
+     -4.02,
+     0.362
+    ],
+    [
+     -3.35,
+     0.322
+    ],
+    [
+     -2.68,
+     0.288
+    ],
+    [
+     -2.01,
+     0.255
+    ],
+    [
+     -1.005,
+     0.201
+    ],
+    [
+     0.0,
+     0.151
+    ],
+    [
+     0.201,
+     0.09
+    ],
+    [
+     14.74,
+     0.09
+    ],
+    [
+     14.874,
+     0.06
+    ],
+    [
+     15.008,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.915,
+     0.509
+    ],
+    [
+     9.112,
+     0.509
+    ],
+    [
+     9.648,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     2.68,
+     0.492
+    ],
+    [
+     13.233,
+     0.492
+    ],
+    [
+     13.802,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; measured on the 5168G green photo from rows rotated about the pivot (hour 302.6, minute 50.6, seconds 180.28 deg): frame half widths hour 28.0 / minute 24.7 px, lume inlay half 15.2 / 14.7 px, arrow shoulders at s 278 / 413 px, apexes 310 / 437 px, seconds shaft half 2.7 px to the tip at 448 px, counterweight tail to 153 px. lume = [s, half width] of the pale inlay. Hands and hub use hands_photo (reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: a lathe about the axis (profile = [radius, mm along the axis] from the base point), flutes are texture"
+ },
+ "strap": {
+  "kind": "rubber",
+  "note": "strap.kind rubber, ONE full-width piece: edges = trace.strap_y_left_right_mm (silhouette outside the lug zone, measured lug inner walls inside it), from under the bezel (18.5 mm) to the rounded ends; the embossed grid pad of the photo is texture only",
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.3,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.17,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "pieces_mm": {
+    "full": {
+     "top": [
+      [
+       18.8,
+       32.15
+      ]
+     ],
+     "bottom": [
+      [
+       18.8,
+       39.9
+      ]
+     ]
+    }
+   },
+   "emission_top": 0.22,
+   "emission_bottom": 0.305
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.285
+ }
+}

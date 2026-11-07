@@ -43,6 +43,15 @@ Use this branch for the Casio watch variants built from supplied product photos 
 - On an authorized replacement, overwrite the same published SKU path so existing consumers retain their reference. Keep working `.blend` files, reference images and local viewer files outside that asset commit unless separately requested.
 - After the designer requests push, check remote changes, commit only the requested files, push, and verify the remote branch matches the commit. Report the filename, byte size and commit. State whether detection in the Perhaps application was actually tested; viewer success alone does not establish application integration.
 
+### 0.5 Front-relief checks for the Catalog 2 reward assets
+
+The Catalog 2 GLBs (Tudor, Breitling, Cartier, Omega, Audemars Piguet, Patek) are **front-locked reliefs**: real layered meshes (case, bezel, crystal, dial plate, hands, crown/pushers, bracelet or strap), flat back, depth scaled to about 35 % of the real thickness, with the catalogue photo projected from the front on the steel parts and the dial. Users can only pinch-zoom, so front fidelity comes first. Two host-side tools support review (facts and crops, no scores or verdicts):
+
+- `python3 -B -m pipeline.glb_audit [glob] [out.md]` writes `docs/3d/GLB_AUDIT.md`: file size, meshes, triangles, texture sizes and extent per GLB against the mobile working targets (file <= 2.5 MB, <= 60,000 triangles, textures <= 2048 px on the long side). Real-device frame-rate checks stay a manual step.
+- `python3 -B -m pipeline.zoom_check [baseline dir ...]` cuts the same 3x crops (logo/12 o'clock print, hands and hub, lower dial text) from the reference and the render into `baseline/zoom_check.jpg`, for a designer's look at small details.
+
+Baseline folders (`references/<watch>/baseline/`) hold the comparison render, side-by-side, spec/job snapshot and `BASELINE.md` with the region luminance ratios and the known differences. The baked photo lighting is reproduced with emission (see the spec); an app-side lighting check is still to be done in the app.
+
 ## 1. What the method is (and is not)
 
 The asset is **not sculpted or CAD-modelled and not a downloaded model**. A Python build step creates the meshes from
