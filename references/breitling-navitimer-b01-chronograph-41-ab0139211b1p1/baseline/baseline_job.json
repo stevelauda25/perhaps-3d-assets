@@ -1,0 +1,46 @@
+{
+ "id": "breitling-navitimer41-ab0139211b1p1",
+ "output": "outputs/jobs/breitling-navitimer41-ab0139211b1p1",
+ "asset_type": "watch",
+ "model": "BREITLING Navitimer B01 Chronograph 41 AB0139211B1P1",
+ "baseline": "First build (Breitling Navitimer template): front relief from the catalogue photo at 41 mm (Superocean 42 structure with Navitimer measurements: 56-tooth coin-edge slide-rule bezel, crown, two pushers, chronograph sub-dial needles and hubs, red chrono seconds hand, one-piece leather strap)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/breitling-navitimer-b01-chronograph-41-ab0139211b1p1/REFERENCE_PLAN.md",
+  "config/watches/breitling-navitimer41-ab0139211b1p1.json",
+  "config/watches/breitling-navitimer41-ab0139211b1p1-trace.json",
+  "config/presets/watch_kit_white_front_breitling_navitimer41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_breitling_navitimer41",
+   "params": {
+    "spec": "config/watches/breitling-navitimer41-ab0139211b1p1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/breitling-navitimer41-ab0139211b1p1/breitling-navitimer41-ab0139211b1p1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_breitling_navitimer41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

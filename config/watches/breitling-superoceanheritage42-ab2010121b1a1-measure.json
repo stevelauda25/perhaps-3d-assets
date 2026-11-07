@@ -1,0 +1,20 @@
+{
+ "note": "Pixel measurements read from references/breitling-superocean-heritage-42-ab2010121b1a1/breitling-ab2010121b1a1_original.webp (1024 x 1024 px, WebP with alpha, upright render, crown at 3, steel mesh bracelet). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). bezel_out_circle_px: the coin-edge tooth TIPS are the widest part (silhouette tip radius 240.5 px about the ring centre, teeth valleys 235.5) = 42 mm / 2 -> 11.4524 px/mm; ring centre (511.2, 485.5) = circle fit to the ceramic outer edge (dark-to-bright gradient maximum every 5 deg, rms 0.25 px, r 226.9), 2.8 px BELOW the hand pivot (parallax of the slightly tilted render). pivot (511.2, 482.7) = least-squares crossing of the hour / minute / seconds centre lines in rotated strips (hour 304.2 deg, minute 47.9 deg, seconds 222.4 deg; the hub pin dot is at (511.0, 483.3)). rings (px about the ring centre, left / bottom / top radial scans, 10-30 deg sectors): ceramic ends r 219 then a dark gap 220..226 (shadow between ceramic and coin ring), coin ring starts 226.9 (teeth valleys 235.5, tips 240.5); inner: the ceramic ends at r 181.5 (dark line 179..182), chrome rehaut 172..178, dark gap 168..171 = end of the printed dial (minute ticks end at r ~165). insert_out 220 (ceramic edge), crystal_edge 180.5, bezel_in 181.0, dial_flat 171. crown (no guards): body x 748 (flank, touching the coin-ring teeth) .. 798 (cap end), y 445..523.5 (78.5 px = 6.85 mm tall, centre y 484.25), fluted to x 782.5 then a narrower rounded cap (cap height 64 px). tip_rows_px: lug tops y 197 (the silhouette widens from the strap width 391/632 at y 195 to 385/642 at 198 along a slanted top), lug bottoms y 775 (392/633 at 775). mesh ends y 105 (top) and 918 (bottom, 2 px inside the ragged alpha ends). end-link bars (polished tube between the lugs): top y 209..250, x 388.5..634.5; bottom y 721..763, x 390..634. Hands (about 10:08:35, angles clockwise from 12, lengths from the pivot in px; widths = thr-60 silhouette in rotated strips): hour 304.2 deg arrow head (barbs half width 23.4 at s 59.5, tip s 122, shaft half 5.75 up to s 53.5, no tail), minute 47.9 deg leaf (shaft half 5.5 at s 16 growing to 7.75 at s 55, leaf half 10.5 at s 109, tip s 153), seconds 222.4 deg needle (half 2.8 -> 1.0, tip s 164, short tail hidden under the minute hand). Hub radius 14.5 px (outer disc).",
+ "pivot": [511.2, 482.7],
+ "bezel_out_circle_px": [511.2, 485.5, 240.5],
+ "rings": {
+  "dial_flat": 171.0,
+  "crystal_edge": 180.5,
+  "bezel_in": 181.0,
+  "insert_out": 220.0,
+  "bezel_out": 240.5
+ },
+ "hands": {
+  "hour": {"angle_deg": 304.2, "length_px": 122.0, "tail_px": 12.0},
+  "minute": {"angle_deg": 47.9, "length_px": 153.0, "tail_px": 12.0},
+  "seconds": {"angle_deg": 222.4, "length_px": 164.0, "tail_px": 14.0}
+ },
+ "hub_r": 14.5,
+ "crown": {"x0": 748, "x1": 798, "y0": 445, "y1": 523.5},
+ "tip_rows_px": [197, 775]
+}

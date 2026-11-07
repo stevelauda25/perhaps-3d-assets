@@ -1,0 +1,243 @@
+{
+ "model": "CARTIER Tank Must Extra-Large Automatic WSTA0053 (41 x 31 mm steel, silver dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Cartier Tank Must template (Santos and other Cartier variants copy this approach): two brancards (rounded vertical bars of the case, outer edge from the photo silhouette), brushed case bars above and below the dial opening, a recessed dial plane carrying the 2x photo map (numerals, railroad track, date window and the photographed hands stay in it), a flat crystal, blue sword hands over the photographed ones, a faceted steel crown with a blue sapphire cabochon (steel_photo projected, so the blue comes from the photo) and a three-column brushed steel bracelet at the photo's own joints. Everything is projected from the front photo; heights are estimated (no side view).",
+ "trace": "config/watches/cartier-tankmustxl-wsta0053-trace.json",
+ "dial_map": "outputs/watches/cartier-tankmustxl-wsta0053/dial_photo.jpg",
+ "steel_map": "outputs/watches/cartier-tankmustxl-wsta0053/steel_photo.jpg",
+ "verified_mm": {
+  "width": 31.0,
+  "lug_to_lug": 41.0
+ },
+ "case": {
+  "brancard_z": 6.4,
+  "bar_z": 5.4,
+  "core_z": 3.3,
+  "brancard_bevel": 0.9,
+  "bar_bevel": 0.2,
+  "bar_overlap_mm": 0.3,
+  "note": "brancards: slabs from the silhouette's outer edge to the inner edge, the top and bottom corners follow the silhouette rows; bars: rectangles between the brancards (case.bar_*_y_mm of the trace); core: flat block under the dial"
+ },
+ "crystal": {
+  "z0": 4.9,
+  "z1": 5.0
+ },
+ "dial": {
+  "z": 3.6,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.34
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.06,
+  "material": "hands_photo",
+  "emission": 0.32,
+  "z": {
+   "hour": 3.9,
+   "minute": 4.15,
+   "seconds": 4.4
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.2,
+     0.3
+    ],
+    [
+     0.0,
+     0.3
+    ],
+    [
+     1.6,
+     0.28
+    ],
+    [
+     5.2,
+     0.27
+    ],
+    [
+     6.1,
+     0.31
+    ],
+    [
+     6.6,
+     0.2
+    ],
+    [
+     6.977,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.2,
+     0.26
+    ],
+    [
+     1.6,
+     0.26
+    ],
+    [
+     7.6,
+     0.24
+    ],
+    [
+     9.2,
+     0.28
+    ],
+    [
+     9.75,
+     0.16
+    ],
+    [
+     10.062,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -3.315,
+     0.1
+    ],
+    [
+     -3.1,
+     0.17
+    ],
+    [
+     -2.2,
+     0.17
+    ],
+    [
+     -1.0,
+     0.13
+    ],
+    [
+     9.0,
+     0.12
+    ],
+    [
+     9.819,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, about 0.05 mm wider than the photographed hands so the 3D hands hide the ones in the map; the last point sits at the traced length. Hands and hub use the hands_photo material (the reference photo projected from the front, so the blue comes from it)"
+ },
+ "crown": {
+  "z": 3.2,
+  "segs": 48,
+  "profile_mm": [
+   [
+    0.0,
+    15.441
+   ],
+   [
+    2.248,
+    15.5
+   ],
+   [
+    2.485,
+    15.914
+   ],
+   [
+    2.84,
+    16.387
+   ],
+   [
+    3.076,
+    16.742
+   ],
+   [
+    3.136,
+    16.979
+   ],
+   [
+    2.84,
+    17.334
+   ],
+   [
+    2.366,
+    17.689
+   ],
+   [
+    2.071,
+    17.985
+   ],
+   [
+    1.775,
+    17.985
+   ],
+   [
+    1.716,
+    18.281
+   ],
+   [
+    1.538,
+    18.754
+   ],
+   [
+    1.242,
+    19.227
+   ],
+   [
+    0.828,
+    19.582
+   ],
+   [
+    0.355,
+    19.854
+   ],
+   [
+    0.0,
+    19.961
+   ]
+  ],
+  "bevel": 0.0,
+  "note": "lathe profile [radius, x] mm along the 3 o'clock axis: faceted steel part (widest 3.1 mm at x 16.8) then the sapphire cabochon dome; studs and the blue come from the projected photo"
+ },
+ "bracelet": {
+  "gap": 0.06,
+  "z0": 0.6,
+  "z_outer": 4.2,
+  "z_centre": 4.3,
+  "bevel": 0.15,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "inset": 0.04,
+  "backing_inset": 0.12,
+  "note": "three brushed columns (outer / centre / outer) in pieces at the photo's joints (trace.bracelet); piece rows and the vertical joint lines are measured in the measure JSON"
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.27
+ }
+}

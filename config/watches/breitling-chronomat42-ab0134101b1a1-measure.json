@@ -1,0 +1,67 @@
+{
+ "note": "Pixel measurements read from references/breitling-chronomat-b01-42-ab0134101b1a1/breitling-ab0134101b1a1_original.webp (1024 x 1024 px, WebP with alpha, upright render, crown at 3 with two chronograph pushers, steel rouleaux bracelet). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). bezel_out_circle_px: circle fitted to the left silhouette of the round case/bezel (rows 390..555 and 570+, away from the 45 rider tab that sticks out 2.8 px at row 480; fit residuals 0.1 px, r 227.7 = 42 mm / 2 -> 10.8429 px/mm), centre (511.9, 479.2) = 1.7 px BELOW the hand pivot (parallax of the slightly tilted render). pivot (512.2, 477.5) = crossing of the hour (304.2 deg) and minute (48.8 deg) centre lines in rotated strips; the red chronograph seconds needle (0 deg) is the vertical line x 512.0 from y 325 to the hub. rings (px about the ring centre, radial scans on four sectors): dark tachymeter ring of the dial ends at r 177 (end of the printed dial), rehaut / bezel inner edge r 178.8..179.3, polished flange 179.3..218 (rider tabs, ticks in the photo), darker outer chamfer 218..227.7. Hands: hour 304.2 deg bar with a chamfered tip (length 110 px, body half width 6.3 px s 29..100, neck half 3.2 px), minute 48.8 deg (152.5 px, half width 6.8 / 7.1 / 7.2 px), red chronograph seconds 0 deg (152 px, needle half width 2 px with a kite 117..147 px of half width up to 6.4 px, white lume window inside). Sub-dial hubs (pin dots): left (427.1, 479.7), right (595.7, 479.3), bottom (511.9, 564.0); each carries a white bar hand pointing to 12 (tip 43 / 43.6 / 40 px above the hub, half width 2.4 px, tail 14 px). Crown: barrel x 740 (flank) .. 797 (cap end), y 447..519 (centre 483), fluted to x 788, narrower cap; pushers: rectangular blocks radial from (512.2, 483) at +-30 deg, end faces 272.3 px (25.1 mm) from that point, 54 px wide. right_override_px: straight case-shoulder lines replacing the alpha edge where the pushers (rows 316..384 and 578..646) and the crown (rows 438..526) protrude. tip_rows_px: lug tops y 219, lug bottoms y 749.5. Bracelet rows: see the spec (top / bottom boundaries at the dark joint lines, joint columns from horizontal gradient scans).",
+ "pivot": [
+  512.2,
+  477.5
+ ],
+ "bezel_out_circle_px": [
+  511.9,
+  479.2,
+  227.7
+ ],
+ "rings": {
+  "dial_flat": 177.0,
+  "crystal_edge": 178.8,
+  "bezel_in": 179.3,
+  "insert_out": 218.0,
+  "bezel_out": 227.7
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 304.2,
+   "length_px": 110.0,
+   "tail_px": 6.0
+  },
+  "minute": {
+   "angle_deg": 48.8,
+   "length_px": 152.5,
+   "tail_px": 6.0
+  },
+  "seconds": {
+   "angle_deg": 0.0,
+   "length_px": 152.0,
+   "tail_px": 1.0
+  }
+ },
+ "hub_r": 9.0,
+ "crown": {
+  "x0": 740,
+  "x1": 797,
+  "y0": 448,
+  "y1": 518
+ },
+ "right_override_px": [
+  [
+   316,
+   384,
+   693.5,
+   744.0
+  ],
+  [
+   438,
+   526,
+   766.5,
+   766.5
+  ],
+  [
+   578,
+   646,
+   743.0,
+   691.0
+  ]
+ ],
+ "tip_rows_px": [
+  219,
+  749.5
+ ]
+}

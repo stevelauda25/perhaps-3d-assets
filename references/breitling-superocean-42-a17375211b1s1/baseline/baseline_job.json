@@ -1,0 +1,46 @@
+{
+ "id": "breitling-superocean42-a17375211b1s1",
+ "output": "outputs/jobs/breitling-superocean42-a17375211b1s1",
+ "asset_type": "watch",
+ "model": "BREITLING Superocean Automatic 42 A17375211B1S1",
+ "baseline": "First build (first Breitling, sets the Breitling template): front relief from the catalogue photo at 42 mm (Black Bay 54 rubber-strap structure with Breitling measurements: ceramic-insert dive bezel with coin-edge ring, crown with guards, block-lume hands, red-ringed seconds lollipop, textured-side rubber strap)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/breitling-superocean-42-a17375211b1s1/REFERENCE_PLAN.md",
+  "config/watches/breitling-superocean42-a17375211b1s1.json",
+  "config/watches/breitling-superocean42-a17375211b1s1-trace.json",
+  "config/presets/watch_kit_white_front_breitling_superocean42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_breitling_superocean42",
+   "params": {
+    "spec": "config/watches/breitling-superocean42-a17375211b1s1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/breitling-superocean42-a17375211b1s1/breitling-superocean42-a17375211b1s1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_breitling_superocean42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

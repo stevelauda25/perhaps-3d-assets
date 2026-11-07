@@ -1,0 +1,450 @@
+{
+ "model": "BREITLING Superocean Automatic 42 A17375211B1S1 (42 mm steel, black dial, black rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). FIRST BREITLING: structure of the Tudor Black Bay 54 rubber-strap build (smooth-bezel rotating dive bezel with insert, crown, rubber strap in side / centre / side sections) with its own measurements: ceramic insert inside a steel coin-edge ring, crown with guards (silhouette), block-lume minute hand, bar-lume hour hand, red-ringed lollipop seconds hand, textured-side rubber strap. Later Breitling variants (Superocean Heritage, Chronomat B01, Navitimer B01) copy this spec and change what differs.",
+ "trace": "config/watches/breitling-superocean42-a17375211b1s1-trace.json",
+ "dial_map": "outputs/watches/breitling-superocean42-a17375211b1s1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 218 / bottoms y 734 px); the crown guards come from the silhouette; top and bottom slope toward the strap",
+  "tip_top": 23.25,
+  "tip_bottom": 23.5
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel coin-edge ring (bezel_in..bezel_out) around the black insert (bezel_in..insert_out); numerals, markers and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -2.488,
+     0.715
+    ],
+    [
+     -0.905,
+     0.715
+    ],
+    [
+     0.0,
+     0.896
+    ],
+    [
+     6.513,
+     0.914
+    ],
+    [
+     6.694,
+     0.85
+    ],
+    [
+     6.875,
+     0.597
+    ],
+    [
+     7.056,
+     0.38
+    ],
+    [
+     7.237,
+     0.145
+    ],
+    [
+     7.372,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -0.905,
+     0.407
+    ],
+    [
+     0.0,
+     0.479
+    ],
+    [
+     5.627,
+     0.498
+    ],
+    [
+     5.654,
+     1.619
+    ],
+    [
+     8.847,
+     1.619
+    ],
+    [
+     8.874,
+     0.443
+    ],
+    [
+     10.855,
+     0.353
+    ],
+    [
+     12.438,
+     0.28
+    ]
+   ],
+   "seconds": [
+    [
+     -0.995,
+     0.199
+    ],
+    [
+     0.0,
+     0.47
+    ],
+    [
+     2.533,
+     0.47
+    ],
+    [
+     2.578,
+     0.262
+    ],
+    [
+     7.599,
+     0.226
+    ],
+    [
+     7.64,
+     0.226
+    ],
+    [
+     7.706,
+     0.388
+    ],
+    [
+     7.805,
+     0.531
+    ],
+    [
+     7.932,
+     0.651
+    ],
+    [
+     8.082,
+     0.74
+    ],
+    [
+     8.248,
+     0.795
+    ],
+    [
+     8.422,
+     0.814
+    ],
+    [
+     8.595,
+     0.795
+    ],
+    [
+     8.761,
+     0.74
+    ],
+    [
+     8.911,
+     0.651
+    ],
+    [
+     9.038,
+     0.531
+    ],
+    [
+     9.138,
+     0.388
+    ],
+    [
+     9.204,
+     0.226
+    ],
+    [
+     9.227,
+     0.136
+    ],
+    [
+     12.447,
+     0.054
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.171,
+     0.597
+    ],
+    [
+     6.513,
+     0.597
+    ],
+    [
+     7.011,
+     0.181
+    ],
+    [
+     7.101,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     5.88,
+     1.384
+    ],
+    [
+     8.684,
+     1.384
+    ]
+   ],
+   "seconds": [
+    [
+     7.834,
+     0.0
+    ],
+    [
+     7.854,
+     0.152
+    ],
+    [
+     7.912,
+     0.294
+    ],
+    [
+     8.006,
+     0.416
+    ],
+    [
+     8.128,
+     0.509
+    ],
+    [
+     8.27,
+     0.568
+    ],
+    [
+     8.422,
+     0.588
+    ],
+    [
+     8.574,
+     0.568
+    ],
+    [
+     8.716,
+     0.509
+    ],
+    [
+     8.837,
+     0.416
+    ],
+    [
+     8.931,
+     0.294
+    ],
+    [
+     8.99,
+     0.152
+    ],
+    [
+     9.01,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip measured as the thr-60 silhouette in rotated strips (so the 3D hands cover the photographed ones); the last point sits at the traced length. lume = +w side outline [s, w] of the lume polygon mirrored about the axis (hour: bar, minute: rectangular block, seconds: lollipop core). Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 1.0,
+  "fluted_to_mm": 23.5,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.75,
+  "base_chamfer_mm": 0.3,
+  "note": "crown with guards: the guards are part of the case silhouette (right edge x 758 px above and below the crown)"
+ },
+ "strap": {
+  "kind": "rubber",
+  "note": "strap.kind rubber: left / centre / right sections at the photo seams: centre_x_mm = [|y|, left x, right x] of the two vertical seams between the textured side sections and the smooth centre section (std-of-brightness scans every 10 px, 11.0548 px/mm about the pivot (512.0, 474.5)); the side sections start on the lug tops (top y 218, bottom y 734 px), the centre section runs from under the bezel; ends at the alpha silhouette (top y 104, bottom y 920). The strap flares toward the lugs and narrows toward the ends (silhouette).",
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.4,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.3,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "centre_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.885,
+      4.794
+     ],
+     [
+      22.08,
+      -4.885,
+      4.794
+     ],
+     [
+      32.93,
+      -3.89,
+      3.709
+     ],
+     [
+      40.0,
+      -3.89,
+      3.709
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.975,
+      4.794
+     ],
+     [
+      23.2,
+      -4.975,
+      4.794
+     ],
+     [
+      35.8,
+      -4.252,
+      3.89
+     ],
+     [
+      41.0,
+      -4.252,
+      3.89
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "side": {
+     "top": [
+      [
+       23.25,
+       33.45
+      ]
+     ],
+     "bottom": [
+      [
+       23.5,
+       40.2
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       20.0,
+       33.45
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       40.2
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 23.5,
+    "bottom": 23.75
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/breitling-superocean42-a17375211b1s1/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  0.0,
+  0.06
+ ]
+}

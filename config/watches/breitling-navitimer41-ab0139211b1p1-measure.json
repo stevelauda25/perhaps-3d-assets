@@ -1,0 +1,67 @@
+{
+ "note": "Pixel measurements read from references/breitling-navitimer-b01-chronograph-41-ab0139211b1p1/breitling-ab0139211b1p1_original.webp (1024 x 1024 px, WebP with alpha, upright render with a slight camera tilt, leather strap, crown at 3, pushers at 2 and 4). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). bezel_out_circle_px = circle fitted to the tooth TIPS of the coin edge on the left silhouette (rows 350..600, rms 0.05 px): centre (512.12, 470.74), r 222.95 px = 41 mm / 2 -> 10.8756 px/mm; the 56 teeth (period 6.4286 deg, tip phase 3.2 deg clockwise from 12) have flat tips at 223.0 and rounded valleys at 218.9 px (spec bezel.teeth). pivot = hub disc centre and crossing of the hour and minute centre lines (fits over s 30..78 / 20..125 px): (513.07, 469.75) at HAND height; the hub pin hole is seen at (511.9, 471.3), the bezel rings are centred (512.12, 470.74) = ring_centre_mm [-0.087, -0.091]; the red chronograph seconds hand is a vertical line at x 512.0 (centre of its 4 px), i.e. 1.07 px left of the pivot (spec hands.offset_mm). rings = radii in px about the ring centre from radial scans at 225..235, 305..315, 35..45 and 135..145 deg: dial_flat 172.0 / crystal_edge 173.4 (the black minute-track ring ends at 173, the bright slide-rule ring starts), bezel_in 173.4, insert_out 210.0 (the white slide-rule ring ends at 203, bevel and dark line to 210, coin ring 211..222.95), bezel_out 222.95 (tooth tips). Hub disc r 13.4 px. Crown box x 731..765.5 (flank to cap end), y 433..509 (76 px = 7.0 mm, centre y 471 = 1.25 px below the pivot row), 16 flutes, rounded cap; no guards. Pushers (upper and lower) radial at +-30 deg from (513.07, 470.6), end faces at 256.55 px = 23.59 mm, cap diameter 43.6 px = 4.0 mm, cap length 25 px, collar r about 0.55 mm (spec pushers). tip_rows_px = lug top y 220 and lug bottom y 721 (the silhouette widens from the strap width 392..632 to the lug width). Strap ends y 103 (top, rounded corners) and 920 (bottom). Hands (about 10:08:35, angles clockwise from 12, lengths from the pivot in px, silhouettes in rotated strips at thresholds 45..110): hour 303.93 deg, symmetric bar half width 5.75 px from s 28 to 86 with chamfered ends, point at s 97.5; minute 47.91 deg, half width 5.7 px from s 20 to 130, point at s 141.5; chrono seconds 0 deg (red, half width 2 px, tip y 322), grey tail to y 513 (4.0 mm). Sub-dial hands (spec hands.polygons): left needle x 426.75 (half width 1.8 px) from y 428.25 to a ball (426.7, 471.3) r 6.1 px, short stub to y 479.5; right x 596.88, ball (596.9, 471.0) r 6.5; bottom x 511.9 from y 514 to ball (512.2, 556.5) r 6.75. lug_inner_px = inner edges of the lugs (x 392 / 632); the transparent pockets between a lug, the bezel arc and the strap end (top rows 264..~282, bottom rows ~662..685) are cut out of the case slab (trace case_cutters_mm); the strap itself ends at y 264 (top) and begins at y 686 (bottom).",
+ "pivot": [
+  513.07,
+  469.75
+ ],
+ "bezel_out_circle_px": [
+  512.12,
+  470.74,
+  222.95
+ ],
+ "rings": {
+  "dial_flat": 172.0,
+  "crystal_edge": 173.4,
+  "bezel_in": 173.4,
+  "insert_out": 210.0,
+  "bezel_out": 222.95
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 303.93,
+   "length_px": 97.5,
+   "tail_px": 13.0
+  },
+  "minute": {
+   "angle_deg": 47.91,
+   "length_px": 141.5,
+   "tail_px": 10.0
+  },
+  "seconds": {
+   "angle_deg": 0.0,
+   "length_px": 147.75,
+   "tail_px": 43.5
+  }
+ },
+ "hub_r": 13.4,
+ "crown": {
+  "x0": 731,
+  "x1": 765.5,
+  "y0": 433,
+  "y1": 509
+ },
+ "mirror_rows_px": [
+  [
+   321,
+   376
+  ],
+  [
+   433,
+   509
+  ],
+  [
+   565,
+   621
+  ]
+ ],
+ "mirror_axis_x_px": 512.12,
+ "tip_rows_px": [
+  220,
+  721
+ ],
+ "lug_inner_px": [
+  392,
+  632
+ ],
+ "cutter_extend_px": 3.0
+}

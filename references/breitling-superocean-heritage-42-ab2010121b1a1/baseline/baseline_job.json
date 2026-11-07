@@ -1,0 +1,46 @@
+{
+ "id": "breitling-superoceanheritage42-ab2010121b1a1",
+ "output": "outputs/jobs/breitling-superoceanheritage42-ab2010121b1a1",
+ "asset_type": "watch",
+ "model": "BREITLING Superocean Heritage Automatic 42 AB2010121B1A1",
+ "baseline": "First build: front relief from the catalogue photo at 42 mm (follower of the Breitling Superocean 42 template: ceramic-insert dive bezel with coin-edge ring, arrow / leaf / needle hands, steel mesh bracelet with end-link bars; column-driven bracelet in the Heritage step copy)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/breitling-superocean-heritage-42-ab2010121b1a1/REFERENCE_PLAN.md",
+  "config/watches/breitling-superoceanheritage42-ab2010121b1a1.json",
+  "config/watches/breitling-superoceanheritage42-ab2010121b1a1-trace.json",
+  "config/presets/watch_kit_white_front_breitling_superoceanheritage42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_breitling_superoceanheritage42",
+   "params": {
+    "spec": "config/watches/breitling-superoceanheritage42-ab2010121b1a1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/breitling-superoceanheritage42-ab2010121b1a1/breitling-superoceanheritage42-ab2010121b1a1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_breitling_superoceanheritage42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

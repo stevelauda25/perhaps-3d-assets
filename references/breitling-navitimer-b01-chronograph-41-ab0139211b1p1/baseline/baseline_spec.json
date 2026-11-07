@@ -1,0 +1,414 @@
+{
+ "model": "BREITLING Navitimer B01 Chronograph 41 AB0139211B1P1 (41 mm steel, black dial, silver sub-dials, black leather strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). NAVITIMER: structure of the Breitling Superocean 42 build (watch_breitling_superocean42) plus chronograph parts measured from the photo: 56-tooth coin-edge steel bezel with the engraved slide-rule scales as print, crown without guards, two plain-cylinder pushers at 2 and 4 o'clock (radial at +-30 deg), sub-dial needles and ball hubs, red chronograph seconds hand with grey tail, bar-lume hour and minute hands, one-piece black leather strap. Later Navitimer / chronograph variants copy this spec and change what differs.",
+ "trace": "config/watches/breitling-navitimer41-ab0139211b1p1-trace.json",
+ "dial_map": "outputs/watches/breitling-navitimer41-ab0139211b1p1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 220 / bottoms y 721 px, tooth tips of the coin edge on the sides); top and bottom slope toward the strap",
+  "tip_top": 23.0,
+  "tip_bottom": 23.0
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel bezel: flat engraved slide-rule ring (bezel_in..insert_out, scales are print in the photo) and a 56-tooth coin ring (insert_out..bezel_out, tooth profile in px about the ring centre, 20 steps per period from the tip centre at phase_deg clockwise from 12)",
+  "teeth": {
+   "n": 56,
+   "phase_deg": 3.2,
+   "profile_px": [
+    223.0,
+    222.99,
+    222.97,
+    222.92,
+    222.48,
+    221.25,
+    220.15,
+    219.5,
+    219.11,
+    218.93,
+    218.92,
+    219.1,
+    219.45,
+    220.07,
+    221.11,
+    222.39,
+    222.9,
+    222.97,
+    222.98,
+    222.99
+   ]
+  }
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.32
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.195,
+     0.166
+    ],
+    [
+     0.0,
+     0.175
+    ],
+    [
+     1.195,
+     0.202
+    ],
+    [
+     2.023,
+     0.423
+    ],
+    [
+     2.575,
+     0.538
+    ],
+    [
+     7.908,
+     0.538
+    ],
+    [
+     8.092,
+     0.432
+    ],
+    [
+     8.367,
+     0.285
+    ],
+    [
+     8.643,
+     0.147
+    ],
+    [
+     8.965,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -0.919,
+     0.386
+    ],
+    [
+     0.0,
+     0.405
+    ],
+    [
+     1.287,
+     0.414
+    ],
+    [
+     1.839,
+     0.529
+    ],
+    [
+     11.953,
+     0.529
+    ],
+    [
+     12.137,
+     0.455
+    ],
+    [
+     12.321,
+     0.386
+    ],
+    [
+     12.505,
+     0.276
+    ],
+    [
+     12.689,
+     0.184
+    ],
+    [
+     12.873,
+     0.101
+    ],
+    [
+     13.011,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -4.0,
+     0.257
+    ],
+    [
+     -3.678,
+     0.294
+    ],
+    [
+     -2.207,
+     0.276
+    ],
+    [
+     -1.287,
+     0.202
+    ],
+    [
+     0.0,
+     0.193
+    ],
+    [
+     13.425,
+     0.193
+    ],
+    [
+     13.585,
+     0.0
+    ]
+   ]
+  },
+  "lume": {},
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, thr 45..110 silhouettes in rotated strips (see the measure file), 0.03 mm wider than the photographed hands so the 3D hands hide them; the last point sits at the traced length. The hour and minute lume bars and the chamfers are in the projected photo (hands_photo). offset_mm shifts the whole seconds hand (red hand 1.07 px left of the pivot). Sub-dial needles are hands.polygons (mm about the pivot), ball hubs hands.discs.",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43,
+  "offset_mm": {
+   "seconds": [
+    -0.098,
+    0.0
+   ]
+  },
+  "polygons": {
+   "sub_left": {
+    "z": 7.45,
+    "thick": 0.08,
+    "outline_mm": [
+     [
+      -8.127,
+      3.839
+     ],
+     [
+      -7.747,
+      3.839
+     ],
+     [
+      -7.747,
+      -0.915
+     ],
+     [
+      -8.127,
+      -0.915
+     ]
+    ]
+   },
+   "sub_right": {
+    "z": 7.45,
+    "thick": 0.08,
+    "outline_mm": [
+     [
+      7.496,
+      3.839
+     ],
+     [
+      7.916,
+      3.839
+     ],
+     [
+      7.916,
+      -0.915
+     ],
+     [
+      7.496,
+      -0.915
+     ]
+    ]
+   },
+   "sub_bottom": {
+    "z": 7.45,
+    "thick": 0.08,
+    "outline_mm": [
+     [
+      -0.298,
+      -4.069
+     ],
+     [
+      0.082,
+      -4.069
+     ],
+     [
+      0.082,
+      -7.977
+     ],
+     [
+      -0.298,
+      -7.977
+     ]
+    ]
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -7.942,
+    "y_mm": -0.143,
+    "r_mm": 0.57,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 7.708,
+    "y_mm": -0.115,
+    "r_mm": 0.607,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_bottom_hub",
+    "x_mm": -0.08,
+    "y_mm": -7.977,
+    "r_mm": 0.625,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.93,
+  "fluted_to_mm": 22.521,
+  "bevel": 0.25,
+  "neck_radius_fraction": 0.85,
+  "base_chamfer_mm": 0.3,
+  "note": "crown without guards: box x 731..765.5 px, y 433..509 px (radius 3.49 mm), 16 flutes to x 758 px, then a rounded cap"
+ },
+ "strap": {
+  "kind": "leather",
+  "note": "strap.kind leather: ONE flat section (black leather with white stitching, texture = the projected photo) from its photographed ends at the bezel (top y 264, bottom y 688 px; pieces_mm) to the alpha ends (top y 103, bottom y 920 px); outline = the silhouette rows beyond edge_from (strap-wide above the lug tops); the strap narrows toward the rounded ends.",
+  "leather": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_strap": 3.4,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.29,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "pieces_mm": {
+    "strap": {
+     "top": [
+      [
+       18.95,
+       33.45
+      ]
+     ],
+     "bottom": [
+      [
+       20.1,
+       40.95
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 23.25,
+    "bottom": 23.25
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/breitling-navitimer41-ab0139211b1p1/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  -0.087,
+  -0.091
+ ],
+ "pushers": {
+  "origin_mm": [
+   0.0,
+   -0.078
+  ],
+  "angles_deg": [
+   30.0,
+   -30.0
+  ],
+  "z": 4.2,
+  "neck_from_mm": 19.8,
+  "collar_radius_mm": 0.75,
+  "cap_from_mm": 21.2,
+  "r_to_mm": 23.75,
+  "cap_radius_mm": 2.3,
+  "edge_mm": 0.25,
+  "note": "two chronograph pushers radial from (513.07, 470.6) px at +-30 deg (end-face centres at 256.55 px = 23.59 mm, cap diameter 4.0 mm, cap 2.3 mm long, collar tube r 0.55 mm); steel_photo texture"
+ }
+}
