@@ -1,0 +1,64 @@
+{
+ "note": "Pixel measurements read from references/tudor-pelagos-39-m25407n-0001/tudor-m25407n-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub pin hole (449, 594) (read at 12x); circle fits on the insert's outer edge (r 256.5) and the crystal rim (r 199.6) are centred at (449.1, 594.0), i.e. on the hub hole (ring_centre 0). case_edge_left_x = 449 - 270.8 (coin tooth tips, radius from the hub: silhouette exit radius left side 264.9..271.4, tips 271): anchors the 39 mm case, 13.887 px/mm. rings = radii in px about the pivot: dial_flat 191.5 (end of the black dial incl. minute track, grey rehaut ring 192..194, dark 195..198), crystal_edge 205 (end of the bright crystal rim 199..205), bezel_in 205.5, insert_out 256.5 (end of the black insert, titanium coin-edge ring 257..270.8), bezel_out 270.8 (coin tips). crown box: x 713..763, y 551..643 (centre 597, 92 px = 6.6 mm; fluted to x 751 then a rounded cap); the case also has a crown-guard shoulder above the crown (silhouette right edge x 735 at y 534..546). tip_rows_px = lug top y 291 and lug bottom y 908 (alpha silhouette departs from the bracelet width 310 / 590). Hands (about 10:08:30): hour axis 303.7 deg (stem half width 8.9 px, square-shouldered diamond widest +-29 px at 80 px from the pivot, nub half width 9 to 113.3 px, symmetric about the axis); minute 62.9 deg (blade half width 7.4..7.9 px, square-cut tip at 174.5 px; tip hidden against the 2 o'clock index in the photo); seconds 186.0 deg (needle half width 2.1 px, tip 176.4 px, lume diamond centre 106 px half diagonal 16 px, counterweight bar 55 px behind the hub half width 5.9 px). Hub radius 16 px. The photo carries a GPHG 2023 Sports Watch Prize logo at the lower right (separate alpha components, excluded by the prep: only the largest component is the watch). No date window: the date box is a dummy at the pivot and unused.",
+ "pivot": [
+  449,
+  594
+ ],
+ "case_edge_left_x": 178.2,
+ "rings": {
+  "dial_flat": 191.5,
+  "crystal_edge": 205.0,
+  "bezel_in": 205.5,
+  "insert_out": 256.5,
+  "bezel_out": 270.8
+ },
+ "hour_tip": [
+  354.7,
+  531.1
+ ],
+ "minute_tip": [
+  604.3,
+  514.5
+ ],
+ "seconds_tip": [
+  430.6,
+  769.4
+ ],
+ "hour_tail": [
+  462.3,
+  602.9
+ ],
+ "minute_tail": [
+  434.8,
+  601.3
+ ],
+ "seconds_tail": [
+  454.8,
+  539.0
+ ],
+ "hub_r": 16.0,
+ "hour_lume": [
+  0.2,
+  0.95
+ ],
+ "minute_lume": [
+  0.2,
+  0.95
+ ],
+ "crown": {
+  "x0": 713,
+  "x1": 763,
+  "y0": 551,
+  "y1": 643
+ },
+ "date": {
+  "x0": 449,
+  "y0": 594,
+  "x1": 449,
+  "y1": 594
+ },
+ "tip_rows_px": [
+  291,
+  908
+ ]
+}

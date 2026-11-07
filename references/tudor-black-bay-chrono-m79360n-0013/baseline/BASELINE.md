@@ -1,0 +1,37 @@
+# Baseline: TUDOR Black Bay Chrono M79360N-0013 (saved 2026-11-07, awaiting designer approval)
+
+Front-relief build with the Royal / Ranger / Black Bay 54 / Black Bay GMT recipe on the 41 mm Black Bay Chrono photo, new model-specific step and prep, three correction passes (pushers resized, pusher cap enlarged, dial emission 0.35 -> 0.32). This build sets the **Black Bay Chrono template**. Approval is the designer's; this file is not a similarity score.
+
+| Item | Value |
+| --- | --- |
+| GLB | `models/watches/tudor-m79360n-0013.glb`, 1,342,616 bytes, sha256 `258137a7ff8413a07f8e81cce4a143a4f0db4a97a4da97c1241e517993bd78cd` (GLB 2.0, declared length = file size, two embedded JPEG image bufferViews, no external URIs) |
+| Comparison render | `baseline_cmp-front_2048.png` (2048 px, 16-bit, white kit, 27.317 px/mm, pivot at the frame centre; same pixel frame as the 2x photo with its pivot (898, 1224) moved to (1024, 1024), i.e. offset (+126, -200)), sha256 `639a952c29ab6d51943fcb6a3e86e395dc19cf39047b3ff322c75d64c83d96f1` |
+| Side by side | `baseline_vs_reference.png` (left: 2x reference on white padded into the 2048 frame, right: render), sha256 `f8397680e9f1a907f9c9795501e99e57cad7b8d4ae2ad6123dd05b35190e9d08` |
+| Reference | `../tudor-m79360n-0013_900x1200.png` (original), `../tudor-m79360n-0013_1800x2400.png` (2x working copy) |
+| Job / step / spec | `jobs/tudor-bbchrono-m79360n-0013.json`, `pipeline/steps/watch_tudor_bbchrono.py`, `baseline_spec.json`, `baseline_job.json`, kit preset `config/presets/watch_kit_white_front_tudor_bbchrono.json` |
+| Inputs rebuilt by | `python3 -B -m pipeline.tudor_bbchrono_prep m79360n-0013` (trace, dial map, steel map in `outputs/watches/tudor-bbchrono-m79360n-0013/`; copy of `pipeline/tudor_bbgmt_prep.py` with profile hands from `measure.hand_keys` and pixel row ranges `measure.mirror_rows_px` for crown and pushers) from `config/watches/tudor-bbchrono-m79360n-0013-measure.json` |
+
+Rebuild: `python3 -B -m pipeline.tudor_bbchrono_prep m79360n-0013 && python3 -B -m pipeline.jobs run jobs/tudor-bbchrono-m79360n-0013.json --force && cp outputs/jobs/tudor-bbchrono-m79360n-0013/tudor-bbchrono-m79360n-0013.glb models/watches/tudor-m79360n-0013.glb`
+
+State: steel parts (case, bezel, crown, pushers, bracelet) carry the reference photo projected from the front; hands/hubs/lume use it through `hands_photo` (emission 0.43); dial is the 2x photo map (print, indices, both sub-dials with their scales, date window, minute track and the photographed hands stay in it); case and bracelet outlines follow the photo's alpha silhouette (crown and pusher rows use the mirrored left edge); steel emission 0.31 with specular 0, dial emission 0.32, dial specular 0, crystal alpha 0.02. Black Bay Chrono specific: bezel = one lathe (polished flange 215..233 px = 1.32 mm sloping up to the black insert, thin steel rim to 280 px = 20.5 mm), insert numerals/pearls from the projected photo; case 41 mm with lug edges 22.84 mm (top) / 24.38 mm (bottom) from the pivot, ramp from 18 mm; hands: hour hand = free polygon (arrow-like block, 13 vertices) with inset lume polygon, minute sword (63.6 deg, 14.05 mm, half width 0.5 mm), central chronograph seconds hand pointing down with the triangle tail at 12 (profile) and a ball tip, triangle lume polygon, two sub-dial hands (polygons) with two hub discs; crown 40 teeth on a neck; two chronograph pushers at 2 and 4 o'clock (spec `pushers`, same builder as the crown: radial from (0, -0.73 mm) at +-30 deg, base tube, fluted ring r 2.93 mm, narrower cap cylinder, end face 25.2 mm); five-column bracelet (outer, inner, centre, inner, outer) with joints measured top and bottom separately.
+
+Region mean luminance (sRGB grey, 2048 frame), render : photo: dial 1.016, dial rehaut ring 1.118, polished flange 1.016, bezel insert 1.034, steel outer rim 1.031, bracelet centre top 1.002 / bottom 0.987, outer columns top 1.012, crown 1.019, bright dial features (indices, hands, print) 0.990, dark dial 1.115, whole watch 1.011. Silhouette: 46,571 px differ of 1,626,108 (2.9 percent, mostly the photo's drop shadow, which is not part of the asset, and the lug corners).
+Emission trials: dial 0.35 -> dial 1.028, dark 1.134, bright 0.999; dial 0.32 -> 1.016, 1.115, 0.990 (kept: dark areas stay about 3 grey levels light while bright features sit 1 percent low, as on the Black Bay GMT / 54).
+
+Known differences: drop shadow and background are not part of the asset (the photo's grey shadow right of the watch reads as white in the render); dark dial and the black rehaut read about 3 grey levels lighter than the photo; the bezel numerals, pearls, date, dial print and sub-dial scales are texture only (no geometry); the pushers are cylinders with 28 teeth and a plain cap, their cap and flutes are a little squarer and the cap about 2 px shorter than the photo's; the crown has 40 teeth (the photo about 22 flutes) and a squarer edge; the photo's bezel/flange rings are about 1-2 px off the hub and the flange looks 13 px wider at 6 than at 12 (perspective), the render uses concentric average rings; the bracelet top end is cut square where the photo's top piece has a slightly curved end; hands' 3D bevels add a faint outline; the sub-dial hands are simple polygons; the render is a little softer than the photo (2x upscale); heights are estimated (no side view, copied from the Black Bay GMT build). Not verified: designer approval.
+
+## Template for the next Black Bay Chrono variants
+
+No further variants are queued. Registry entry `m79360n` (`tudor-black-bay-chrono` / `tudor-bbchrono`, 41 mm). For another SKU `<sku>` (a different dial, bezel or bracelet) with the same photo crop:
+
+```sh
+mkdir -p references/tudor-black-bay-chrono-<sku>      # photo + sources.md + REFERENCE_PLAN.md as for -0013
+cp config/watches/tudor-bbchrono-m79360n-0013-measure.json config/watches/tudor-bbchrono-<sku>-measure.json   # re-check pivot (449, 612), case_edge_left_x 169, hand tips, crown box, mirror_rows_px on the new photo
+python3 -B -m pipeline.tudor_bbchrono_prep <sku>     # 2x copy, trace, dial_photo.jpg, steel_photo.jpg
+cp config/watches/tudor-bbchrono-m79360n-0013.json config/watches/tudor-bbchrono-<sku>.json   # change model, trace, dial_map, steel_map paths
+cp jobs/tudor-bbchrono-m79360n-0013.json jobs/tudor-bbchrono-<sku>.json                        # replace the id / paths, keep step watch_tudor_bbchrono and the kit preset
+python3 -B -m pipeline.jobs run jobs/tudor-bbchrono-<sku>.json
+cp outputs/jobs/tudor-bbchrono-<sku>/tudor-bbchrono-<sku>.glb models/watches/tudor-<sku>.glb
+```
+
+Template (same for any Black Bay Chrono photo with this crop and the 10:09 pose; check by diffing the render against the 2x photo padded with offset (+126, -200)): case (tip_top / tip_bottom, ramp, heights), bezel rings and heights, crystal, crown and pushers (`pushers`), minute / seconds profiles, materials, pose, steel emission 0.31 / specular 0, bracelet columns, bounds and the piece joints for this bracelet. Per variant: the dial map (comes with the photo), dial emission, hand angles and the hour polygon (`hands.polygons.hour`, sub-dial hands and hubs: mm about the pivot, rotate for another time, minute / seconds angles from `minute_tip` / `seconds_tip` in the measure JSON), sub-dial positions if the dial differs, bezel colour needs nothing (the insert is the projected photo), a different bracelet or a rubber strap needs new `strap.bracelet` columns / pieces measured from the photo.

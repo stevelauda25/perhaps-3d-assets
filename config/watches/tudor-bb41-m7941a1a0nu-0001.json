@@ -1,0 +1,444 @@
+{
+ "model": "TUDOR Black Bay 41 M7941A1A0NU-0001 (41 mm steel, black dial, black coin-edge bezel, riveted three-column steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Black Bay 41 template (config/watches/tudor-bb41-*; step pipeline/steps/watch_tudor_bb41.py, a copy of watch_tudor_bb58.py used with a three-column bracelet): case, bezel (insert + coin edge), crown, hands (same artwork as the Black Bay 58 in px, so profiles = Black Bay 58 mm x 13.8718 / 13.7268) and the outer / centre / outer bracelet from the 41 mm photo; the dial, indices, print and minute track come from one 2x photo map with the photographed hands left in it.",
+ "trace": "config/watches/tudor-bb41-m7941a1a0nu-0001-trace.json",
+ "dial_map": "outputs/watches/tudor-bb41-m7941a1a0nu-0001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 19.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 287 / bottoms y 934.5); top slopes toward the bracelet",
+  "tip_top": 23.53,
+  "tip_bottom": 23.64
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel coin-edge ring (insert_out..bezel_out) around the black insert (bezel_in..insert_out); numerals, markers and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.29
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.21,
+     0.821
+    ],
+    [
+     4.443,
+     0.821
+    ],
+    [
+     6.046,
+     2.362
+    ],
+    [
+     7.649,
+     0.825
+    ],
+    [
+     8.847,
+     0.821
+    ]
+   ],
+   "minute": [
+    [
+     -1.21,
+     0.468
+    ],
+    [
+     1.457,
+     0.504
+    ],
+    [
+     2.186,
+     0.653
+    ],
+    [
+     12.203,
+     0.657
+    ],
+    [
+     12.312,
+     0.628
+    ],
+    [
+     12.53,
+     0.525
+    ],
+    [
+     12.749,
+     0.358
+    ],
+    [
+     12.968,
+     0.205
+    ],
+    [
+     13.149,
+     0.03
+    ]
+   ],
+   "seconds": [
+    [
+     -5.42,
+     0.103
+    ],
+    [
+     -5.38,
+     0.228
+    ],
+    [
+     -5.268,
+     0.396
+    ],
+    [
+     -5.101,
+     0.508
+    ],
+    [
+     -4.903,
+     0.548
+    ],
+    [
+     -4.704,
+     0.508
+    ],
+    [
+     -4.537,
+     0.396
+    ],
+    [
+     -4.425,
+     0.228
+    ],
+    [
+     -4.383,
+     0.139
+    ],
+    [
+     6.643,
+     0.139
+    ],
+    [
+     6.694,
+     0.3
+    ],
+    [
+     6.818,
+     0.544
+    ],
+    [
+     7.012,
+     0.738
+    ],
+    [
+     7.255,
+     0.862
+    ],
+    [
+     7.526,
+     0.904
+    ],
+    [
+     7.795,
+     0.862
+    ],
+    [
+     8.039,
+     0.738
+    ],
+    [
+     8.233,
+     0.544
+    ],
+    [
+     8.356,
+     0.3
+    ],
+    [
+     8.408,
+     0.139
+    ],
+    [
+     13.04,
+     0.03
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     1.894,
+     0.656
+    ],
+    [
+     4.554,
+     0.656
+    ],
+    [
+     6.046,
+     2.062
+    ],
+    [
+     7.54,
+     0.656
+    ],
+    [
+     8.45,
+     0.656
+    ]
+   ],
+   "minute": [
+    [
+     2.404,
+     0.438
+    ],
+    [
+     12.166,
+     0.438
+    ],
+    [
+     12.858,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     6.782,
+     0.0
+    ],
+    [
+     6.819,
+     0.229
+    ],
+    [
+     6.924,
+     0.438
+    ],
+    [
+     7.088,
+     0.601
+    ],
+    [
+     7.296,
+     0.706
+    ],
+    [
+     7.526,
+     0.743
+    ],
+    [
+     7.755,
+     0.706
+    ],
+    [
+     7.962,
+     0.601
+    ],
+    [
+     8.126,
+     0.438
+    ],
+    [
+     8.232,
+     0.229
+    ],
+    [
+     8.268,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, copied from the Black Bay 58 profiles (the photo shows the same hands in px: hour stem half width 10.5-10.8 px, diamond +-32 px at 84 px, nub end 121 px, seconds discs r 7 / 12 at 68 / 103 px) and scaled x 13.8718 / 13.7268 (carries the 0.03 mm margin) so the 3D hands hide the photographed ones; the last point sits at the traced length. lume = +w side outline [s, w] of the lume polygon, mirrored about the axis (hour: stem strip + snowflake diamond with the nub, minute: strip to a point, seconds: disc). Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.355
+ },
+ "crown": {
+  "teeth": 24,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 23.09,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.7,
+  "base_chamfer_mm": 0.3,
+  "note": "no crown guards; fluted part to x 768, rounded end cap to 775 (24 flutes visible over the 7.5 mm height)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.662,
+      4.626
+     ],
+     [
+      40.0,
+      -4.662,
+      4.626
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.713,
+      4.604
+     ],
+     [
+      40.0,
+      -4.713,
+      4.604
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       23.53,
+       32.6
+      ],
+      [
+       32.6,
+       35.79
+      ]
+     ],
+     "bottom": [
+      [
+       23.64,
+       31.98
+      ],
+      [
+       31.98,
+       37.32
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       22.66,
+       26.01
+      ],
+      [
+       26.01,
+       34.86
+      ],
+      [
+       34.86,
+       35.79
+      ]
+     ],
+     "bottom": [
+      [
+       22.54,
+       26.52
+      ],
+      [
+       26.52,
+       34.28
+      ],
+      [
+       34.28,
+       37.32
+      ]
+     ]
+    }
+   },
+   "note": "Flat bracelet of three columns (outer / centre / outer, riveted look) with the joints read from the photo with brightness scans (x 350 / 450 / 550, +-8 px wide) and 3x crops, top and bottom separately, mm from the pivot (13.7268 px/mm, pivot (451, 610)): outer top joint y 162.5, outer bottom 1049; centre top 253 and 131.5 (an end bar from y 131.5 to the end 118), centre bottom 974 and 1080.5; ends y 118 / 1123 (the last pieces stop 0.05 mm short). Vertical joint lines (dark lines) at x 387.0 / 514.5 (top) and 386.3 / 514.2 (bottom). The centre column starts under the case (row 299 on top, 1.1 mm inside the lug end at the bottom). Rivet ears at the sides come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-bb41-m7941a1a0nu-0001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  -0.02,
+  -0.02
+ ]
+}

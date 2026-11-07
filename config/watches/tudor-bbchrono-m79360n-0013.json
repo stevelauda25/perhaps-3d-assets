@@ -1,0 +1,567 @@
+{
+ "model": "TUDOR Black Bay Chrono M79360N-0013 (41 mm steel, black dial, black tachymeter bezel, steel five-column bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Black Bay Chrono template (config/watches/tudor-bbchrono-*, pipeline/steps/watch_tudor_bbchrono.py): case, tachymeter bezel (polished flange + black insert + thin steel rim), fluted crown on a neck, two angled chronograph pushers, hour hand as a free polygon, minute sword, central chronograph seconds hand (triangle tail, ball tip), two sub-dial hands with hubs, five-column bracelet from the 41 mm photo; the black dial with both sub-dials, print, date window and minute track comes from one 2x photo map with the photographed hands left in it.",
+ "trace": "config/watches/tudor-bbchrono-m79360n-0013-trace.json",
+ "dial_map": "outputs/watches/tudor-bbchrono-m79360n-0013/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 18.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug top edge y 300 px, bottom y 945 px); top slopes toward the bracelet",
+  "tip_top": 22.84,
+  "tip_bottom": 24.38
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 1.32,
+  "round_mm": 0.25,
+  "note": "steel ring: polished flange (bezel_in, 1.32 mm wide, sloping up to the insert) + black tachymeter insert (to insert_out) + thin steel rim (to bezel_out); numerals, pearls and ticks come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.32
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "minute": [
+    [
+     -1.2,
+     0.55
+    ],
+    [
+     7.3,
+     0.53
+    ],
+    [
+     13.0,
+     0.5
+    ],
+    [
+     14.053,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -12.886,
+     1.374
+    ],
+    [
+     -10.29,
+     0.24
+    ],
+    [
+     4.053,
+     0.217
+    ],
+    [
+     4.163,
+     0.377
+    ],
+    [
+     4.357,
+     0.5
+    ],
+    [
+     4.539,
+     0.533
+    ],
+    [
+     4.721,
+     0.5
+    ],
+    [
+     4.916,
+     0.377
+    ],
+    [
+     5.04,
+     0.182
+    ],
+    [
+     5.052,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "minute": [
+    [
+     2.0,
+     0.3
+    ],
+    [
+     12.0,
+     0.3
+    ],
+    [
+     12.6,
+     0.15
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, 0.04 mm wider than the photographed hands so the 3D hands hide the ones in the map; the last point sits at the traced length. Hour hand, the two sub-dial hands and the seconds-hand triangle lume are free polygons (hands.polygons, mm about the pivot, x right, y toward 12). Hands, hubs and discs use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43,
+  "polygons": {
+   "hour": {
+    "z": 7.7,
+    "ridge": 0.0,
+    "outline_mm": [
+     [
+      -8.273,
+      4.613
+     ],
+     [
+      -7.614,
+      5.564
+     ],
+     [
+      -6.846,
+      5.088
+     ],
+     [
+      -4.722,
+      5.491
+     ],
+     [
+      -4.32,
+      3.441
+     ],
+     [
+      -0.769,
+      1.318
+     ],
+     [
+      -0.22,
+      1.076
+     ],
+     [
+      -0.22,
+      -0.571
+     ],
+     [
+      -1.501,
+      0.256
+     ],
+     [
+      -4.832,
+      2.416
+     ],
+     [
+      -6.919,
+      1.977
+     ],
+     [
+      -7.212,
+      2.782
+     ],
+     [
+      -7.468,
+      4.1
+     ]
+    ],
+    "lume_mm": [
+     [
+      -7.578,
+      5.281
+     ],
+     [
+      -7.999,
+      4.667
+     ],
+     [
+      -7.285,
+      4.164
+     ],
+     [
+      -7.019,
+      2.81
+     ],
+     [
+      -6.791,
+      2.196
+     ],
+     [
+      -4.777,
+      2.599
+     ],
+     [
+      -1.4,
+      0.421
+     ],
+     [
+      -1.4,
+      1.473
+     ],
+     [
+      -4.466,
+      3.313
+     ],
+     [
+      -4.878,
+      5.271
+     ],
+     [
+      -6.846,
+      4.896
+     ]
+    ]
+   },
+   "sub_left": {
+    "z": 7.45,
+    "flat": true,
+    "outline_mm": [
+     [
+      -7.907,
+      -0.037
+     ],
+     [
+      -7.907,
+      -0.329
+     ],
+     [
+      -10.579,
+      -2.819
+     ],
+     [
+      -10.799,
+      -2.636
+     ],
+     [
+      -8.09,
+      0.0
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_right": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      7.519,
+      -0.146
+     ],
+     [
+      7.519,
+      2.965
+     ],
+     [
+      7.9,
+      2.965
+     ],
+     [
+      7.9,
+      -0.146
+     ]
+    ],
+    "thick": 0.08
+   },
+   "seconds_tail": {
+    "z": 8.2,
+    "ridge": 0.0,
+    "outline_mm": [],
+    "lume_mm": [
+     [
+      1.089,
+      12.684
+     ],
+     [
+      -0.952,
+      12.684
+     ],
+     [
+      0.037,
+      10.735
+     ]
+    ],
+    "lume_only": true
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -7.914,
+    "y_mm": -0.183,
+    "r_mm": 0.637,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 7.702,
+    "y_mm": -0.132,
+    "r_mm": 0.637,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 40,
+  "flute_depth": 0.2,
+  "z": 4.2,
+  "cap_radius_fraction": 0.9,
+  "fluted_to_mm": 23.28,
+  "bevel": 0.2,
+  "neck_radius_fraction": 0.8,
+  "base_chamfer_mm": 0.2,
+  "note": "fluted crown x 731..771 px (radius 3.81 mm, centre y -0.73 mm), neck from the bezel (83 px high); the photo shows about 22 flutes, 40 teeth keep it round"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       22.84,
+       27.82
+      ],
+      [
+       27.82,
+       31.99
+      ],
+      [
+       31.99,
+       34.25
+      ]
+     ],
+     "bottom": [
+      [
+       24.38,
+       30.09
+      ],
+      [
+       30.09,
+       34.78
+      ],
+      [
+       34.78,
+       37.0
+      ]
+     ]
+    },
+    "inner": {
+     "top": [
+      [
+       18.0,
+       22.04
+      ],
+      [
+       22.04,
+       25.92
+      ],
+      [
+       25.92,
+       30.46
+      ],
+      [
+       30.46,
+       33.39
+      ],
+      [
+       33.39,
+       34.25
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       27.6
+      ],
+      [
+       27.6,
+       32.21
+      ],
+      [
+       32.21,
+       35.88
+      ],
+      [
+       35.88,
+       37.0
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       22.81
+      ],
+      [
+       22.81,
+       27.89
+      ],
+      [
+       27.89,
+       32.07
+      ],
+      [
+       32.07,
+       34.25
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       30.09
+      ],
+      [
+       30.09,
+       34.74
+      ],
+      [
+       34.74,
+       37.0
+      ]
+     ]
+    }
+   },
+   "note": "Flat five-column bracelet (outer, inner, centre, inner, outer; 13.6585 px/mm, pivot (449, 612)). Joints read from the photo (mean luminance along each column band, 4x crops), top / bottom separately; outer joints top y 300 (case edge) / 232 / 175, bottom 945 / 1023 / 1087; inner top 311 / 258 / 196 / 156, bottom 989 / 1052 / 1102 (double dark lines 262..270 and 1046..1058 are in the projected photo); centre top 300.5 / 231 / 174, bottom 1023 / 1086.5. Bracelet alpha ends y 142 (top) / 1122 (bottom). Vertical joint lines top x 384 / 428 / 470 / 515, bottom 383 / 428 / 469 / 513.",
+   "z_inner": 3.45,
+   "columns": [
+    "outer",
+    "inner",
+    "centre",
+    "inner",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.759,
+      -1.538,
+      1.538,
+      4.832
+     ],
+     [
+      40.0,
+      -4.759,
+      -1.538,
+      1.538,
+      4.832
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.832,
+      -1.538,
+      1.464,
+      4.686
+     ],
+     [
+      40.0,
+      -4.832,
+      -1.538,
+      1.464,
+      4.686
+     ]
+    ]
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-bbchrono-m79360n-0013/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "pushers": {
+  "origin_mm": [
+   0.0,
+   -0.732
+  ],
+  "angles_deg": [
+   30.0,
+   -30.0
+  ],
+  "radius_mm": 2.93,
+  "neck_from_mm": 19.8,
+  "neck_radius_fraction": 0.9,
+  "r_from_mm": 21.05,
+  "fluted_to_mm": 23.1,
+  "r_to_mm": 25.2,
+  "cap_radius_fraction": 0.78,
+  "teeth": 28,
+  "flute_depth": 0.2,
+  "z": 4.2,
+  "bevel": 0.12,
+  "note": "two chronograph pushers at 2 and 4 o'clock measured from the photo: axis radial from (449, 622) px at +-30 deg; smooth base tube r 37 px up to 287 px, fluted ring r 40 px (2.93 mm) 287..315 px, smooth cap cylinder r 27 px to the end face at 341.5 px (all from the axis origin); steel_photo texture",
+  "cap_cylinder": true
+ }
+}

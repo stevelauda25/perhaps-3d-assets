@@ -1,0 +1,20 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-gmt-m79830rb-0001/tudor-m79830rb-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (450, 610); case_edge_left_x = left edge of the coin-edge bezel on the pivot row (172; anchors the 41 mm case: 556 px = 41 mm, 13.561 px/mm; the right bezel edge is then at 728, hidden by the crown). rings = radii in px from the pivot (radial profile on the 115/135/160/200/225 deg diagonals): dial_flat 191 (end of the minute track), crystal_edge 202 (end of the black rehaut), bezel_in 203 (start of the polished steel flange, 203..222), insert 223..270 (blue top / red bottom aluminium, numerals, markers, triangle in the photo), insert_out 270, bezel_out 278 (outer edge of the steel coin-edge ring 271..278). crown box = fluted part x 736..777, y 561..668 (centre 614.5, radius 53.5 px); the neck between the bezel and the flutes (x 722..736) is 84 px high. tip_rows_px = case top edge y 282 and case bottom edge y 943 (alpha steps). Hands (about 10:09:xx), axes by symmetry fits through the pivot: hour 304.0 deg, tip s = 125.5 px, stem half width 8.2 px, snowflake diamond widest +-28.5 px at s = 91.5 px, end bar from s = 111; minute 63.8 deg, half width 7.1 px, tip s = 186.5 px (taper from s = 172.5); seconds needle 185.74 deg (tip (431, 795) = 186 px), tail stub 8 px wide to (454.4, 549.2), rhombus lume at s = 122.6 px; GMT hand red 152.3 deg, shaft 5.5 px wide, arrow head (red frame + white lume) in the spec as a polygon, stem end (540.7, 781.7) = 194.2 px. Date window 573..625 x 592..628 (printed in the dial map).",
+ "pivot": [450, 610],
+ "case_edge_left_x": 172,
+ "rings": {"dial_flat": 191, "crystal_edge": 202, "bezel_in": 203, "insert_out": 270, "bezel_out": 278},
+ "hour_tip": [345.96, 539.84],
+ "minute_tip": [617.4, 527.8],
+ "seconds_tip": [431.0, 795.0],
+ "gmt_tip": [540.7, 781.7],
+ "hour_tail": [466.6, 621.2],
+ "minute_tail": [432.1, 618.8],
+ "seconds_tail": [454.4, 549.2],
+ "gmt_tail": [440.6, 592.3],
+ "hub_r": 20,
+ "hour_lume": [0.2, 1.0],
+ "minute_lume": [0.17, 0.97],
+ "crown": {"x0": 736, "x1": 777, "y0": 561, "y1": 668},
+ "date": {"x0": 573, "y0": 592, "x1": 625, "y1": 628},
+ "tip_rows_px": [282, 943]
+}

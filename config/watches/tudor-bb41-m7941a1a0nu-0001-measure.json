@@ -1,0 +1,64 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-41-m7941a1a0nu-0001/tudor-m7941a1a0nu-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub pin hole (451, 610) (dark hole, read at 10x; hole centroid exactly (451.0, 610.0)). The dial / bezel circle (circle fits on the dial edge r 203.56 and rehaut edge r 221.25) is centred at about (450.7, 610.3), i.e. within 0.4 px of the hub hole: ring_centre_mm is ~0. case_edge_left_x = 169.6, between the coin teeth tips (alpha reaches x 168 at its leftmost, 167.5 at some rows) and the mean tooth edge (170.4 from the alpha circle fit, 172.9 at row 610): it anchors 41 mm = 2 x (451 - 169.6) px = 13.727 px/mm and keeps the silhouette diameter within 0.35 mm of 41 (41.23); the right coin edge sits at x about 731. rings = radii in px about the pivot: dial_flat 203.5 (end of the black dial incl. minute track; grey rehaut ring 204 to 221), crystal_edge 221.3, bezel_in 222 (insert starts), insert_out 269.5 (insert edge measured 268.5-270 around the circle; steel coin ring from there), bezel_out 280.5 (coin edge, radial scans 279.5-281). crown box: x 727..775, y 556..658 (centre 607, 102 px = 7.5 mm, fluted part to x 768, rounded cap to 775). tip_rows_px = lug top y 287 and lug bottom y 934.5 (alpha silhouette steps; the bracelet's alpha ends y 118 / 1123). Hands (10:10:38 as on the Black Bay 58, same artwork in px: hour stem half width 10.5-10.8 px, snowflake diamond widest +-32 px at 84 px from the pivot, nub end at 121.2 px, axis 303.6 deg from the nub end mid point (350.0, 543.0), stem fit 304.1); minute tip (612.5, 530.5), 180.0 px at 63.8 deg; seconds needle 228.4 deg, ends at the minute track near (311.5, 733.5), tip taken 4 px short at 182 px, counterweight disc centre 68.4 px behind the hub (r 7), lume disc centre (373.6, 678.5) = 103.4 px (r 12). Hub radius 19 (edge threshold 21.25 px vs 20.25 on the BB58 whose hub_r is 18). The photo carries the TUDOR Master Chronometer logo and tick marks at the lower right (separate alpha components, excluded by the prep). No date window: the date box is a dummy at the pivot and unused.",
+ "pivot": [
+  451,
+  610
+ ],
+ "case_edge_left_x": 169.6,
+ "rings": {
+  "dial_flat": 203.5,
+  "crystal_edge": 221.3,
+  "bezel_in": 222,
+  "insert_out": 269.5,
+  "bezel_out": 280.5
+ },
+ "hour_tip": [
+  350.4,
+  542.5
+ ],
+ "minute_tip": [
+  612.5,
+  530.5
+ ],
+ "seconds_tip": [
+  314.9,
+  730.8
+ ],
+ "hour_tail": [
+  464.3,
+  619.4
+ ],
+ "minute_tail": [
+  436.3,
+  617.1
+ ],
+ "seconds_tail": [
+  506.8,
+  559.4
+ ],
+ "hub_r": 19.0,
+ "hour_lume": [
+  0.21,
+  0.95
+ ],
+ "minute_lume": [
+  0.18,
+  0.95
+ ],
+ "crown": {
+  "x0": 727,
+  "x1": 775,
+  "y0": 556,
+  "y1": 658
+ },
+ "date": {
+  "x0": 451,
+  "y0": 610,
+  "x1": 451,
+  "y1": 610
+ },
+ "tip_rows_px": [
+  287,
+  934.5
+ ]
+}

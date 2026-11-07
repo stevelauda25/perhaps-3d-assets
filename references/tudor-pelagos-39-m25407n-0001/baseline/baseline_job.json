@@ -1,0 +1,46 @@
+{
+ "id": "tudor-pelagos39-m25407n-0001",
+ "output": "outputs/jobs/tudor-pelagos39-m25407n-0001",
+ "asset_type": "watch",
+ "model": "TUDOR Pelagos 39 M25407N-0001",
+ "baseline": "First build: front relief from the catalogue photo at 39 mm, photo-map black dial, rotating bezel with insert and titanium coin edge, square-shouldered snowflake hands, three-column titanium bracelet at the photo's joints (Pelagos 39 template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-pelagos-39-m25407n-0001/REFERENCE_PLAN.md",
+  "config/watches/tudor-pelagos39-m25407n-0001.json",
+  "config/watches/tudor-pelagos39-m25407n-0001-trace.json",
+  "config/presets/watch_kit_white_front_tudor_pelagos39.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_pelagos39",
+   "params": {
+    "spec": "config/watches/tudor-pelagos39-m25407n-0001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-pelagos39-m25407n-0001/tudor-pelagos39-m25407n-0001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_pelagos39.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2176,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

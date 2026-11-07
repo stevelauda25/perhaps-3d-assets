@@ -1,0 +1,46 @@
+{
+ "id": "tudor-bbchrono-m79360n-0013",
+ "output": "outputs/jobs/tudor-bbchrono-m79360n-0013",
+ "asset_type": "watch",
+ "model": "TUDOR Black Bay Chrono M79360N-0013",
+ "baseline": "First build: front relief from the catalogue photo at 41 mm, photo-map black dial with two silver sub-dials, black tachymeter bezel (steel flange, black insert), hour polygon / minute sword / chronograph seconds hand with triangle tail and ball tip, two sub-dial hands, crown and two angled pushers, five-column steel bracelet at the photo's joints (Black Bay Chrono template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-black-bay-chrono-m79360n-0013/REFERENCE_PLAN.md",
+  "config/watches/tudor-bbchrono-m79360n-0013.json",
+  "config/watches/tudor-bbchrono-m79360n-0013-trace.json",
+  "config/presets/watch_kit_white_front_tudor_bbchrono.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_bbchrono",
+   "params": {
+    "spec": "config/watches/tudor-bbchrono-m79360n-0013.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-bbchrono-m79360n-0013/tudor-bbchrono-m79360n-0013.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_bbchrono.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,366 @@
+{
+ "model": "TUDOR Pelagos 39 M25407N-0001 (39 mm titanium, black dial, three-column titanium bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Pelagos 39 template (copy of the Black Bay 58 structure with its own measurements): case with crown-guard shoulder, bezel (black insert + titanium coin edge), crown, hands and the three-column bracelet from the 39 mm photo; the dial, indices, print and minute track come from one 2x photo map with the photographed hands left in it. Later Pelagos 39 variants change model, note, trace, dial_map, steel_map, emissions and whatever differs.",
+ "trace": "config/watches/tudor-pelagos39-m25407n-0001-trace.json",
+ "dial_map": "outputs/watches/tudor-pelagos39-m25407n-0001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 39.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 291 / bottoms y 908); top slopes toward the bracelet; the crown-guard shoulder above the crown (right edge x 735) comes from the silhouette",
+  "tip_top": 21.82,
+  "tip_bottom": 22.61
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel coin-edge ring (bezel_in..bezel_out) around the black insert (bezel_in..insert_out); numerals, markers and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.29
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.152,
+     0.67
+    ],
+    [
+     1.728,
+     0.67
+    ],
+    [
+     4.213,
+     0.677
+    ],
+    [
+     5.725,
+     2.117
+    ],
+    [
+     7.273,
+     0.691
+    ],
+    [
+     8.101,
+     0.677
+    ],
+    [
+     8.159,
+     0.605
+    ]
+   ],
+   "minute": [
+    [
+     -1.152,
+     0.558
+    ],
+    [
+     1.8,
+     0.558
+    ],
+    [
+     4.321,
+     0.576
+    ],
+    [
+     7.201,
+     0.587
+    ],
+    [
+     10.441,
+     0.598
+    ],
+    [
+     12.566,
+     0.598
+    ]
+   ],
+   "seconds": [
+    [
+     -3.982,
+     0.454
+    ],
+    [
+     -1.008,
+     0.454
+    ],
+    [
+     -1.008,
+     0.18
+    ],
+    [
+     6.61,
+     0.18
+    ],
+    [
+     7.64,
+     1.145
+    ],
+    [
+     8.67,
+     0.18
+    ],
+    [
+     12.702,
+     0.18
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     1.872,
+     0.396
+    ],
+    [
+     4.313,
+     0.396
+    ],
+    [
+     5.725,
+     1.743
+    ],
+    [
+     7.194,
+     0.396
+    ],
+    [
+     7.907,
+     0.396
+    ]
+   ],
+   "minute": [
+    [
+     1.944,
+     0.295
+    ],
+    [
+     12.241,
+     0.295
+    ]
+   ],
+   "seconds": [
+    [
+     6.812,
+     0.0
+    ],
+    [
+     7.64,
+     0.763
+    ],
+    [
+     8.468,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured on the photo (rows along each axis at 1 px, minute hand to s 145 then constant; seconds diamond from row runs) plus 0.03 mm so the 3D hands hide the photographed ones; the last point sits at the traced length. lume = +w side outline [s, w] of the lume polygon, mirrored about the axis (hour: stem strip + square-shouldered diamond with the nub, minute: strip with a square end, seconds: diamond). The seconds profile starts with the 5.9 px half-width counterweight bar behind the hub. Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.355
+ },
+ "crown": {
+  "teeth": 14,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 21.75,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.8,
+  "base_chamfer_mm": 0.3,
+  "note": "Pelagos 39 crown from the photo: x 713..763, y 551..643; fluted part to x 751, rounded end cap to 763; the shoulder above it is part of the case outline"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_inner": 3.45,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.846,
+      4.868
+     ],
+     [
+      40.0,
+      -4.846,
+      4.868
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.789,
+      4.925
+     ],
+     [
+      40.0,
+      -4.789,
+      4.925
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       21.72,
+       28.23
+      ],
+      [
+       28.23,
+       32.69
+      ],
+      [
+       32.69,
+       33.25
+      ]
+     ],
+     "bottom": [
+      [
+       22.51,
+       30.17
+      ],
+      [
+       30.17,
+       35.82
+      ],
+      [
+       35.82,
+       37.75
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       25.02
+      ],
+      [
+       25.02,
+       30.82
+      ],
+      [
+       30.82,
+       33.25
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       20.23
+      ],
+      [
+       20.23,
+       26.43
+      ],
+      [
+       26.43,
+       33.3
+      ],
+      [
+       33.3,
+       37.34
+      ],
+      [
+       37.34,
+       37.75
+      ]
+     ]
+    }
+   },
+   "note": "Flat three-column titanium bracelet (outer, centre, outer, 39 mm Pelagos). Joints read from the photo with brightness-step scans and 3x crops, top and bottom separately (13.8872 px/mm, pivot (449, 594)): outer top y 202 / 140 (end 129), bottom 1013 / 1091.5 (end 1121.5); centre top 246.5 / 166, bottom 875 / 961 / 1056.5 / 1112.5 (end 1122). The centre column starts at 18 mm under the bezel's coin ring. bounds_x_mm = the two vertical joint lines between the columns, [|y|, x1, x2] (top x 381.7 / 516.6, bottom 382.5 / 517.4 px). Outer link edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6,
+   "note": "dark gap between links"
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-pelagos39-m25407n-0001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  0.007,
+  0.0
+ ]
+}
