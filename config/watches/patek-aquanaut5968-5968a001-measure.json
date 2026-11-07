@@ -1,0 +1,170 @@
+{
+ "note": "Pixel measurements read from references/patek-aquanaut-chronograph-5968a-001/patek-5968a001_original.png (1920 x 2691 RGBA PNG, watch alpha bbox x 324..1695, y 384..2554; ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES, pixel i spans [i, i+1]). Same studio render family as the 5168G but its own pose and its own case (chronograph: two pushers, off-centre sub-dial at 6). Pivot = centre of the pin-hole of the orange central hub (diamond-shaped dark ring, rows 1317..1322, columns 956..961): (959.0, 1320.0); orange hub disc 41 px wide (r 20.5), grey hour/minute base disc r about 40. Scale: left flank of the case (median alpha edge rows 1308..1368) is 21.1 mm from the pivot (the right flank is symmetric: pusher base at row 1092 = x 1592, notch wall of the crown at 1586, both within 8 px of the mirrored 1594). Bezel outer: polished band meets the strap at rows 705 (top) and 1941 (bottom) on columns 940..980, left bezel outer edge x 339 and right about 1578 (i.e. half axes about 620 x 618, the template exponent 2.25, cut back to the silhouette). Hands (about 10:09:30): lume centre-line fit (thr 212, rows rotated about the pivot): hour 303.26 deg, centre line 3.07 px left of the pivot, lume half width 14.0, s 78.5..268.5 then taper to 283.7, steel frame half width 26.5 to s 283.5, tip s 313.5; minute 52.74 deg, 1.90 px right, lume half 13.7, s 79..392 then taper to 406.5, frame half 27 to s 405.5, tip 436; central orange chronograph hand (mask fit) 0.30 deg, 0.44 px left, tip s 453, tail s -182 (arrow, max half width 21); sub-dial hand (mask fit about its own pin-hole (958.6, 1532.0), hub disc r 22): 137.87 deg, centre line 1.15 px left of the pivot, thin shaft half width 2.4 px to s 174.5, counterweight arrow to s -79. Crown: rows 1251..1449, axis y 1351, notch wall x 1586, tip x 1695.5. Pushers: upper rows 866..1092, lower rows 1594..1830 (silhouette jumps at both ends), measured from the alpha silhouette. Lugs: top tips at rows 610 (left) / 617 (right), bottom tips at rows 2110 / 2113. Strap inner walls (dark mask): top rows 618..770 left 626 -> 622 and right 1291 -> 1297.5; bottom rows 1945..2112 left 616 -> 619.5 and right 1293 -> 1286.5.",
+ "case_mm": 42.2,
+ "pivot": [
+  959.0,
+  1320.0
+ ],
+ "anchor": {
+  "rows": [
+   1308,
+   1368
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 1251,
+   "y1": 1449,
+   "x0": 1586.0,
+   "x1": 1586.0
+  }
+ ],
+ "pushers": [
+  {
+   "name": "pusher_2",
+   "side": "right",
+   "y0": 866,
+   "y1": 1092,
+   "x0": 1447.0,
+   "x1": 1592.0,
+   "inner_shift_px": 25
+  },
+  {
+   "name": "pusher_4",
+   "side": "right",
+   "y0": 1594,
+   "y1": 1830,
+   "x0": 1583.0,
+   "x1": 1434.0,
+   "inner_shift_px": 25
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   959.0,
+   1323.0
+  ],
+  "half_x_px": 635.1,
+  "half_y_px": 618.0,
+  "exponent": 2.25
+ },
+ "aperture": {
+  "bright_thr": 150,
+  "min_run_px": 75,
+  "r_start_px": 420,
+  "r_end_px": 760,
+  "median_half": 12,
+  "mean_half": 4,
+  "chamfer_px": 14
+ },
+ "strap_inner_px": {
+  "top_lug_row": 618,
+  "bezel_top_row": 770,
+  "bezel_bottom_row": 1945,
+  "bottom_lug_row": 2112,
+  "top": [
+   626.0,
+   1291.0
+  ],
+  "top_end": [
+   622.0,
+   1297.5
+  ],
+  "bottom": [
+   616.0,
+   1293.0
+  ],
+  "bottom_end": [
+   619.5,
+   1286.5
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 303.26,
+   "length_px": 313.5,
+   "tail_px": 0.0,
+   "offset_px": -3.07
+  },
+  "minute": {
+   "angle_deg": 52.74,
+   "length_px": 436.0,
+   "tail_px": 0.0,
+   "offset_px": 1.9
+  },
+  "chrono": {
+   "angle_deg": 0.3,
+   "length_px": 453.0,
+   "tail_px": 182.0,
+   "offset_px": -0.44
+  },
+  "sub": {
+   "angle_deg": 137.87,
+   "length_px": 174.5,
+   "tail_px": 79.0,
+   "offset_px": -1.15,
+   "pivot_px": [
+    958.6,
+    1532.0
+   ]
+  }
+ },
+ "hub_r_px": [
+  40.0,
+  20.5,
+  22.0
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1580.5,
+    1351.0
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     98.5,
+     0.0
+    ],
+    [
+     98.5,
+     90.0
+    ],
+    [
+     91.0,
+     92.5
+    ],
+    [
+     73.0,
+     98.5
+    ],
+    [
+     55.0,
+     105.5
+    ],
+    [
+     37.0,
+     111.5
+    ],
+    [
+     19.0,
+     114.5
+    ],
+    [
+     0.0,
+     115.5
+    ]
+   ]
+  }
+ ],
+ "tip_rows_px": [
+  612.0,
+  2112.0
+ ]
+}

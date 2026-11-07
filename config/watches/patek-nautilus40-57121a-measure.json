@@ -1,0 +1,347 @@
+{
+ "note": "Pixel measurements read from references/patek-nautilus-5712-1a/patek-57121a_original.jpg (350 x 480 JPEG, white background, no alpha; the watch occupies source x 44..315, y 12..470). ALL POSITIONS ARE CONTINUOUS COORDINATES IN THE WORKING IMAGE = the source enlarged x4 with Lanczos (1400 x 1920; one source pixel = 4 working px, accuracy about +-1 source px = +-4 working px = +-0.15 mm). Pivot = intersection of the hour and minute lume centre lines (fits of the lume centre over s 110..185 / 70..290 on strips rotated to each hand): (700.4, 887.3), rounded (700.5, 887.5); the hub disc centre is at (702, 889.5) (pin dot (702, 890)), 2.7 px away (camera tilt, the hub stays in the dial map). Scale: both flanks of the silhouette (left flank x 177 over rows 840..1000, right flank x 1229 over rows 760..830 and 985..1040, crown rows replaced by the flank line) -> S = 1052 / 40 mm = 26.3 px/mm. Bezel outer (outer edge of the white polished band: left 247 / right 1157 on row 889, top 421 / bottom 1359 on column 700): superellipse centre (702, 890), half axes 455 x 469, exponent 2.35 held, band 32 px. The flood fill leaks into that band at the upper left (white on white, rows 570..650, 30 px): mask.union_bezel_outer adds the superellipse. The sub-dial layout (power reserve at 9, moon phase / retrograde date at 7, small seconds at 4:30) stays in the dial map; only hour (compass 302.2 deg, tip s 207.3, half width 16 px) and minute (53.5 deg, tip s 310.0, half width 13 px) are 3D hands. Crown: axis row 906, base x 1188, tip x 1263, max radius 66 px (flute dark outline rows 841..970). Bracelet joints = centres of the dark bands (top 184.5 / 266.5 / 354, bottom 1459.5 / 1570 / 1663 / 1734.5, end 1818 with a bulge to 1834); bottom drop shadow removed with mask.clip.",
+ "reference_dir": "references/patek-nautilus-5712-1a",
+ "upscale": 4,
+ "case_mm": 40.0,
+ "mask": {
+  "bg_tol": 12,
+  "clip": {
+   "y_from": 1690,
+   "left": [
+    [
+     1690,
+     451
+    ],
+    [
+     1740,
+     466
+    ],
+    [
+     1780,
+     480
+    ],
+    [
+     1810,
+     494
+    ],
+    [
+     1818,
+     500
+    ],
+    [
+     1819,
+     604
+    ],
+    [
+     1824,
+     614
+    ],
+    [
+     1830,
+     638
+    ],
+    [
+     1835,
+     680
+    ],
+    [
+     1836,
+     690
+    ]
+   ],
+   "right": [
+    [
+     1690,
+     959
+    ],
+    [
+     1740,
+     942
+    ],
+    [
+     1780,
+     934
+    ],
+    [
+     1810,
+     925
+    ],
+    [
+     1818,
+     918
+    ],
+    [
+     1819,
+     812
+    ],
+    [
+     1824,
+     802
+    ],
+    [
+     1830,
+     780
+    ],
+    [
+     1835,
+     740
+    ],
+    [
+     1836,
+     730
+    ]
+   ],
+   "bottom": 1836
+  },
+  "union_bezel_outer": 1.0
+ },
+ "pivot": [
+  700.5,
+  887.5
+ ],
+ "anchor": {
+  "rows": [
+   840,
+   1000
+  ],
+  "right_rows": [
+   [
+    760,
+    830
+   ],
+   [
+    985,
+    1040
+   ]
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 833,
+   "y1": 976,
+   "x0": "case_width",
+   "x1": "case_width"
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   702.0,
+   890.0
+  ],
+  "half_x_px": 455.0,
+  "half_y_px": 469.0,
+  "exponent": 2.35,
+  "bevel_px": 32
+ },
+ "aperture": {
+  "bright_thr": 150,
+  "min_run_px": 40,
+  "r_start_px": 300,
+  "r_end_px": 600,
+  "median_half": 6,
+  "mean_half": 2,
+  "chamfer_px": 10,
+  "n": 360
+ },
+ "steel_max_px": 1400,
+ "steel_quality": 90,
+ "hands": {
+  "hour": {
+   "angle_deg": 302.2,
+   "length_px": 207.3,
+   "tail_px": 0.0
+  },
+  "minute": {
+   "angle_deg": 53.5,
+   "length_px": 310.0,
+   "tail_px": 0.0
+  }
+ },
+ "hub_r_px": [
+  30.0,
+  14.0
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1188.0,
+    906.0
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0,
+     0
+    ],
+    [
+     31,
+     0
+    ],
+    [
+     44,
+     14
+    ],
+    [
+     57,
+     28
+    ],
+    [
+     64,
+     40
+    ],
+    [
+     66,
+     52
+    ],
+    [
+     65,
+     62
+    ],
+    [
+     57,
+     69
+    ],
+    [
+     44,
+     72
+    ],
+    [
+     22,
+     74
+    ],
+    [
+     0,
+     75
+    ]
+   ]
+  }
+ ],
+ "bracelet": {
+  "rows_px": {
+   "top": [
+    [
+     273,
+     348
+    ],
+    [
+     191,
+     260
+    ],
+    [
+     68,
+     178
+    ]
+   ],
+   "bottom": [
+    [
+     1465,
+     1565
+    ],
+    [
+     1575,
+     1658
+    ],
+    [
+     1668,
+     1729
+    ],
+    [
+     1740,
+     1818
+    ]
+   ]
+  },
+  "pieces_px": [
+   {
+    "side": "top",
+    "y0": 314,
+    "y1": 385,
+    "x0": 545,
+    "x1": 866,
+    "r": 8
+   },
+   {
+    "side": "top",
+    "y0": 228,
+    "y1": 279,
+    "x0": 570,
+    "x1": 846,
+    "r": 8
+   },
+   {
+    "side": "top",
+    "y0": 144,
+    "y1": 198,
+    "x0": 582,
+    "x1": 836,
+    "r": 8
+   },
+   {
+    "side": "top",
+    "y0": 88,
+    "y1": 119,
+    "x0": 590,
+    "x1": 832,
+    "r": 12
+   },
+   {
+    "side": "top",
+    "y0": 48,
+    "y1": 86,
+    "x0": 605,
+    "x1": 818,
+    "r": 17
+   },
+   {
+    "side": "bottom",
+    "y0": 1426,
+    "y1": 1508,
+    "x0": 542,
+    "x1": 862,
+    "r": 8
+   },
+   {
+    "side": "bottom",
+    "y0": 1543,
+    "y1": 1607,
+    "x0": 563,
+    "x1": 844,
+    "r": 8
+   },
+   {
+    "side": "bottom",
+    "y0": 1643,
+    "y1": 1700,
+    "x0": 573,
+    "x1": 836,
+    "r": 8
+   },
+   {
+    "side": "bottom",
+    "y0": 1730,
+    "y1": 1762,
+    "x0": 585,
+    "x1": 825,
+    "r": 14
+   },
+   {
+    "side": "bottom",
+    "y0": 1783,
+    "y1": 1806,
+    "x0": 600,
+    "x1": 815,
+    "r": 10
+   },
+   {
+    "side": "bottom",
+    "y0": 1808,
+    "y1": 1834,
+    "x0": 612,
+    "x1": 808,
+    "r": 16
+   }
+  ]
+ }
+}

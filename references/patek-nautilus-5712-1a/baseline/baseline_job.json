@@ -1,0 +1,46 @@
+{
+ "id": "patek-nautilus40-57121a",
+ "output": "outputs/jobs/patek-nautilus40-57121a",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Nautilus 5712/1A (40 mm steel, blue embossed dial with moon phase and power reserve, steel bracelet)",
+ "baseline": "First build: Nautilus template follower on the 350 x 480 px JPEG catalogue photo at 40 mm (own measure, patek_nautilus40_5712_prep, two-hand step copy, own kit scale; working size = source x4)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-nautilus-5712-1a/REFERENCE_PLAN.md",
+  "config/watches/patek-nautilus40-57121a.json",
+  "config/watches/patek-nautilus40-57121a-trace.json",
+  "config/presets/watch_kit_white_front_patek_nautilus40_5712.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_nautilus40_5712",
+   "params": {
+    "spec": "config/watches/patek-nautilus40-57121a.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-nautilus40-57121a/patek-nautilus40-57121a.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_nautilus40_5712.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

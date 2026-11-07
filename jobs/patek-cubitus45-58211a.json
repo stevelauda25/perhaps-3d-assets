@@ -1,0 +1,46 @@
+{
+ "id": "patek-cubitus45-58211a",
+ "output": "outputs/jobs/patek-cubitus45-58211a",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Cubitus 5821/1A (steel, green embossed dial, steel bracelet)",
+ "baseline": "First build: front relief from the 1920 x 2691 catalogue photo at 45 mm (native size, steel map downscaled to 2048 px), Cubitus template step watch_patek_cubitus45 (copy of the Aquanaut step: polygon bezel, steel bracelet link pieces)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-cubitus-5821-1a/REFERENCE_PLAN.md",
+  "config/watches/patek-cubitus45-58211a.json",
+  "config/watches/patek-cubitus45-58211a-trace.json",
+  "config/presets/watch_kit_white_front_patek_cubitus45.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_cubitus45",
+   "params": {
+    "spec": "config/watches/patek-cubitus45-58211a.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-cubitus45-58211a/patek-cubitus45-58211a.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_cubitus45.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1400,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

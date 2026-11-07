@@ -1,0 +1,46 @@
+{
+ "id": "patek-aquanaut5968-5968a001",
+ "output": "outputs/jobs/patek-aquanaut5968-5968a001",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Aquanaut Chronograph 5968A-001 (steel, black / orange dial, black rubber strap)",
+ "baseline": "First build: front relief from the 1920 x 2691 catalogue photo at 42.2 mm (Aquanaut template step copy with the chronograph parts: pushers, central chrono hand, sub-dial hand)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-aquanaut-chronograph-5968a-001/REFERENCE_PLAN.md",
+  "config/watches/patek-aquanaut5968-5968a001.json",
+  "config/watches/patek-aquanaut5968-5968a001-trace.json",
+  "config/presets/watch_kit_white_front_patek_aquanaut5968.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_aquanaut5968",
+   "params": {
+    "spec": "config/watches/patek-aquanaut5968-5968a001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-aquanaut5968-5968a001/patek-aquanaut5968-5968a001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_aquanaut5968.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
