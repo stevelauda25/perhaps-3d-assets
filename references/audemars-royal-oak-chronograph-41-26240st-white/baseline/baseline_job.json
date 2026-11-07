@@ -1,0 +1,46 @@
+{
+ "id": "audemars-royaloakchrono41-26240st-white",
+ "output": "outputs/jobs/audemars-royaloakchrono41-26240st-white",
+ "asset_type": "watch",
+ "model": "AUDEMARS PIGUET Royal Oak Chronograph 41 26240ST (white)",
+ "baseline": "First build (sets the Royal Oak Chronograph template): front relief from the 1200 x 1626 catalogue photo at 41 mm (Offshore Diver octagon-bezel structure with eight screws, three sub-dials and date as photo texture, crown plus two chronograph pushers, steel hands, integrated steel bracelet of full-width links)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/audemars-royal-oak-chronograph-41-26240st-white/REFERENCE_PLAN.md",
+  "config/watches/audemars-royaloakchrono41-26240st-white.json",
+  "config/watches/audemars-royaloakchrono41-26240st-white-trace.json",
+  "config/presets/watch_kit_white_front_audemars_royaloakchrono41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_audemars_royaloakchrono41",
+   "params": {
+    "spec": "config/watches/audemars-royaloakchrono41-26240st-white.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/audemars-royaloakchrono41-26240st-white/audemars-royaloakchrono41-26240st-white.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_audemars_royaloakchrono41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

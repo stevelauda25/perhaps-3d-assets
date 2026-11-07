@@ -1,0 +1,190 @@
+{
+ "model": "AUDEMARS PIGUET Royal Oak Selfwinding 41 15500ST (41 mm steel, white (silver) Grande Tapisserie dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Royal Oak 41 white-dial variant (key 15500st-white, catalog row 84; follower of the black template, only dial emission 0.34 and steel emission 0.30 differ): structure of the Offshore Diver build (case slab from the alpha silhouette sloping into the bracelet, octagon bezel ring sampled by rays with a thin chamfer, eight screw heads, flat dial plate with the 2x photo map, hands from profile lists, hexagonal crown from the trace) with an INTEGRATED steel bracelet: horizontal links between the measured seams (trace.bracelet.seams_mm) in three gapped columns and two continuous polished pin-link bars (trace.bracelet.bars_mm) crossing the seams; the Grande Tapisserie waffle, the batons, the print and the polished / brushed finishes are photo texture only.",
+ "trace": "config/watches/audemars-royaloak41-15500st-white-trace.json",
+ "dial_map": "outputs/watches/audemars-royaloak41-15500st-white/dial_photo.jpg",
+ "steel_map": "outputs/watches/audemars-royaloak41-15500st-white/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 3.4,
+  "ramp_from_y": 21.0,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "chamfer_mm": 0.3,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 720,
+  "screw_z": 0.12,
+  "note": "case slab = silhouette between the lug tops (tip_top / tip_bottom = the first seam of the bracelet, 0.25 mm grid, sum a multiple of 0.25) with the crown rows replaced by a straight line, top and bottom sloping toward the bracelet; bezel = octagon ring (min of the octagon and the silhouette less silhouette_margin_mm, sampled by rays) at bezel_z, then a chamfer ring down to the opening at chamfer_z",
+  "tip_top": 23.5,
+  "tip_bottom": 26.0
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.0,
+  "ring_z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.34,
+  "note": "flat Grande Tapisserie plate out to opening.dial_flat_mm, rim to the opening (no rotating ring: ring_z = z); one lathe with the 2x photo map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "profile": {
+   "hour": [
+    [
+     -0.57,
+     0.513
+    ],
+    [
+     0.0,
+     0.513
+    ],
+    [
+     8.412,
+     0.499
+    ],
+    [
+     8.554,
+     0.392
+    ],
+    [
+     8.697,
+     0.285
+    ],
+    [
+     8.839,
+     0.178
+    ],
+    [
+     8.911,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -0.57,
+     0.592
+    ],
+    [
+     0.0,
+     0.592
+    ],
+    [
+     13.116,
+     0.585
+    ],
+    [
+     13.259,
+     0.485
+    ],
+    [
+     13.402,
+     0.399
+    ],
+    [
+     13.544,
+     0.285
+    ],
+    [
+     13.644,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -0.57,
+     0.1
+    ],
+    [
+     0.0,
+     0.1
+    ],
+    [
+     14.371,
+     0.1
+    ]
+   ]
+  },
+  "lume": {},
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; measured from perpendicular brightness profiles of the photo (hour 3.6 px half width, minute 4.15 px incl. its dark facet, seconds needle 0.7 px). The polished facets and the luminous inlay stay in the photo map under the 3D hands (no lume objects). Hands and hub use hands_photo (reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.45
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "the crown comes from trace.crowns: hexagonal steel cap (flat face toward the viewer) from the base point along the axis angle (3 o'clock, no guards, no ring)"
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "bracelet": {
+  "gap": -0.02,
+  "inset": 0.04,
+  "z0": 0.6,
+  "z": 3.55,
+  "bar_lift": 0.0,
+  "bevel": 0.0,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "backing_inset": 0.4,
+  "note": "links and bars from trace.bracelet (seams, bars), their outer edges follow the silhouette; heights relative before the depth scale: pieces z 3.55 (the case tip is 3.4), the pin-link bars +bar_lift; a dark backing under all of it shows in the seams. gap = x gap between the columns (negative = overlap, no hairlines); seam_shrink = mm the link pieces reach into each seam",
+  "seam_shrink": 0.18
+ }
+}

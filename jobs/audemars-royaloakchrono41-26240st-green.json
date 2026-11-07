@@ -1,0 +1,46 @@
+{
+  "id": "audemars-royaloakchrono41-26240st-green",
+  "output": "outputs/jobs/audemars-royaloakchrono41-26240st-green",
+  "asset_type": "watch",
+  "model": "AUDEMARS PIGUET Royal Oak Chronograph 41 26240ST (green)",
+  "baseline": "Follower of the Royal Oak Chronograph template (white variant): same step and kit preset, new photo maps and trace, green dial emission re-tuned",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/audemars-royal-oak-chronograph-41-26240st-green/REFERENCE_PLAN.md",
+    "config/watches/audemars-royaloakchrono41-26240st-green.json",
+    "config/watches/audemars-royaloakchrono41-26240st-green-trace.json",
+    "config/presets/watch_kit_white_front_audemars_royaloakchrono41.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_audemars_royaloakchrono41",
+      "params": {
+        "spec": "config/watches/audemars-royaloakchrono41-26240st-green.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/audemars-royaloakchrono41-26240st-green/audemars-royaloakchrono41-26240st-green.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_audemars_royaloakchrono41.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 1280,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

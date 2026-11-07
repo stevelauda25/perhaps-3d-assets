@@ -1,0 +1,33 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-selfwinding-41-15500st-black/audemars-15500st-black_1200x1626.png (1200 x 1626 PNG with alpha, the larger rendition of the catalogue asset; the watch occupies x 456..765, y 578..1083). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). pivot = (600.0, 792.5): the seconds needle passes it to 0.1 px, the hour hand centre line to 0.2 px, the minute hand (full width incl. its dark right facet, threshold 60) to 0.1 px; the hub is a polished disc of radius about 7.6 px. Scale: 41 mm = width across the octagon flats; the left flat of the case silhouette (rows 786..803, median alpha edge about 456.25 px) is 20.5 mm from the pivot (the right flat is hidden by the crown, it reads 741.9..743 on the visible rows, symmetric to the left one about x 600), about 7.012 px/mm. Everything higher than the hands sits 1.5..2.5 px higher in the photo (camera tilt): the opening circle (about the outer edge of the thin black rim of the dial, centre (599.8, 790.0) r 109.8 from the top 679 / bottom 900 / right 708.7 / left 491 points) and the eight screws (centres of the slots, mean y 791). octagon = outer edge of the bezel: left / right flats from the case silhouette (456.2 / 743.4), top flat y 650.0 (polished chamfer starts there, rows 650..659 at x 600), bottom flat y 942.5 (chamfer rows 923..941, then the lug); the octagon is stretched (vertical semi axis 146.25 vs horizontal 143.6, the same photo tilt as the Offshore). Screws: heads with a slot (round outline radius 7.5 px incl. the ring, slots at different angles: ignored), on the vertex rays at 126 px from (600, 791). Crown (3 o'clock, no guards): hexagonal steel cap, flat face toward the viewer, x 743.0..765.8, rows 776.5..821 (top face bright rows 776..785, front face 785..808, lower face dark 808..821 = circumradius 22.3 px), axis y 798.7. Hands (about 10:07:38, same as the other AP renders; angle = clockwise from 12, lengths from the pivot): hour 303.8 deg (baton half width 3.6 px, tapered tip at s 62.5, polished facets with a luminous inlay: the facets are in the photo), minute 49.9 deg (half width 4.2 px incl. the dark facet, chamfered tip at s 95.7), seconds 227.3 deg (needle half width 0.7 px, tip s 100.8, round counterweight hidden under the minute hand). Bracelet: seams = dark gaps between links (same rows for the outer and the centre columns to +-1 px; rows [a, b) of the 1200 x 1626 frame): top [600,604) and [623,628) (the second one is the junction of the case, tip_top), bottom [975,982) (junction, tip_bottom), [1010,1016), [1040,1045), [1063,1066); the top end block (rows 578..588) is a darker last link. bars = the two polished pin-link bars that cross the seams, [row, left bar x0, x1, right bar x0, x1] read from the dark seam ends and the brightness steps (about +-1.5 px).",
+ "pivot": [600.0, 792.5],
+ "anchor": {"rows": [786, 803]},
+ "crown_replace": [
+  {"side": "right", "y0": 775, "y1": 822, "x0": 742.0, "x1": 741.6}
+ ],
+ "octagon": {"left_x": 456.2, "right_x": 743.4, "top_y": 650.0, "bottom_y": 942.5},
+ "opening_circle_px": [599.8, 790.0, 109.8],
+ "dial_flat_r_px": 108.0,
+ "ring_in_r_px": 108.2,
+ "screws_px": [[648.2, 675.5], [715.9, 743.8], [715.2, 839.6], [647.0, 907.0], [550.8, 906.6], [483.1, 838.5], [483.6, 741.9], [552.2, 674.6]],
+ "screw_r_px": 7.5,
+ "hands": {
+  "hour": {"angle_deg": 303.8, "length_px": 62.5, "tail_px": 8.0},
+  "minute": {"angle_deg": 49.9, "length_px": 95.7, "tail_px": 8.0},
+  "seconds": {"angle_deg": 227.3, "length_px": 100.8, "tail_px": 4.0}
+ },
+ "hub_r": 7.6,
+ "crowns": [
+  {"name": "crown_3", "base_px": [743.0, 798.7], "angle_deg": 90.0, "hex_len_px": 22.8, "hex_r_px": 22.3, "ring_len_px": 0.0, "ring_r_px": 0.0}
+ ],
+ "bracelet": {
+  "seams_px": {
+   "top": [[600, 604], [623, 628]],
+   "bottom": [[975, 982], [1010, 1016], [1040, 1045], [1063, 1066]]
+  },
+  "bars_px": {
+   "top": [[628, 545, 570, 631, 657], [605, 549, 571, 631, 654], [584, 552, 573, 629, 650]],
+   "bottom": [[975, 545, 569, 631, 655], [1010, 548, 570, 629, 652], [1040, 552, 572, 627, 648], [1064, 557, 573, 626, 642], [1083, 558, 574, 625, 641]]
+  }
+ }
+}

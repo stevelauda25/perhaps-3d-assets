@@ -1,0 +1,196 @@
+{
+ "note": "Pixel measurements for references/audemars-royal-oak-selfwinding-41-15500st-grey/audemars-15500st-grey_1200x1626.png (1200 x 1626 PNG with alpha; watch x 457..764, y 576..1083). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES. Follower of the Royal Oak 41 template: every value of the white measure file was mapped onto this photo with an ECC affine fit of the white and grey photos' gradient images (steel parts only, dial excluded; scale x 1.0009, y 1.0012, shift -0.36 / -0.61 px about the crop origin (420, 540)) and verified by overlay of the first render on this photo (phase correlation of 8 screws, hub, top / bottom flats, crown and 6 bracelet patches: all within 0.26 px of the 2x frame; the left flat patch reads 0.79 / 0.46 with a low correlation response because it is a lone edge; silhouette edges within 1 px at 2x). Hand angles / lengths / widths stay the template values (10:07:38 render); the hand centre lines and the hour tip coincide with the photo within 0.3 px (2x) in brightness profiles across and along the hands. Anchor: the left flat (rows 786..803) gives 6.9761 px/mm in the prep (white 6.9473, black 7.0141); the kit preset uses 2 x 6.9761.",
+ "pivot": [
+  600.22,
+  792.13
+ ],
+ "anchor": {
+  "rows": [
+   786,
+   803
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 775,
+   "y1": 822,
+   "x0": 741.25,
+   "x1": 740.85
+  }
+ ],
+ "octagon": {
+  "left_x": 457.71,
+  "right_x": 742.63,
+  "top_y": 649.8,
+  "bottom_y": 942.09
+ },
+ "opening_circle_px": [
+  600.15,
+  789.69,
+  109.31
+ ],
+ "dial_flat_r_px": 107.52,
+ "ring_in_r_px": 107.72,
+ "screws_px": [
+  [
+   648.15,
+   675.24
+  ],
+  [
+   715.31,
+   743.52
+  ],
+  [
+   714.61,
+   839.24
+  ],
+  [
+   646.94,
+   906.62
+  ],
+  [
+   551.55,
+   906.22
+  ],
+  [
+   484.39,
+   838.14
+  ],
+  [
+   484.89,
+   741.62
+  ],
+  [
+   552.96,
+   674.34
+  ]
+ ],
+ "screw_r_px": 7.5,
+ "hands": {
+  "hour": {
+   "angle_deg": 303.8,
+   "length_px": 62.26,
+   "tail_px": 8.0
+  },
+  "minute": {
+   "angle_deg": 49.9,
+   "length_px": 95.29,
+   "tail_px": 8.0
+  },
+  "seconds": {
+   "angle_deg": 227.3,
+   "length_px": 100.39,
+   "tail_px": 4.0
+  }
+ },
+ "hub_r": 7.6,
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    742.24,
+    798.39
+   ],
+   "angle_deg": 90.0,
+   "hex_len_px": 22.83,
+   "hex_r_px": 22.33,
+   "ring_len_px": 0.0,
+   "ring_r_px": 0.0
+  }
+ ],
+ "bracelet": {
+  "seams_px": {
+   "top": [
+    [
+     599.46,
+     603.47
+    ],
+    [
+     622.49,
+     627.5
+    ]
+   ],
+   "bottom": [
+    [
+     974.91,
+     981.92
+    ],
+    [
+     1009.95,
+     1015.96
+    ],
+    [
+     1039.99,
+     1044.99
+    ],
+    [
+     1062.01,
+     1065.02
+    ]
+   ]
+  },
+  "bars_px": {
+   "top": [
+    [
+     627.5,
+     545.76,
+     570.59,
+     631.14,
+     656.87
+    ],
+    [
+     604.47,
+     549.77,
+     571.59,
+     631.14,
+     653.96
+    ],
+    [
+     583.44,
+     552.77,
+     573.59,
+     629.14,
+     649.96
+    ]
+   ],
+   "bottom": [
+    [
+     974.91,
+     545.76,
+     569.58,
+     631.14,
+     654.97
+    ],
+    [
+     1009.95,
+     548.77,
+     570.59,
+     629.14,
+     651.96
+    ],
+    [
+     1039.99,
+     552.77,
+     572.59,
+     627.14,
+     647.96
+    ],
+    [
+     1063.01,
+     557.67,
+     573.59,
+     626.14,
+     642.05
+    ],
+    [
+     1082.04,
+     558.67,
+     574.59,
+     625.14,
+     641.05
+    ]
+   ]
+  }
+ }
+}

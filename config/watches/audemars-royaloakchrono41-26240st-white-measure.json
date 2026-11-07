@@ -1,0 +1,148 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-chronograph-41-26240st-white/audemars-26240st-white_1200x1626.png (1200 x 1626 PNG with alpha, the larger rendition of the catalogue asset; the watch occupies x 456..773, y 577..1083). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). pivot = hub (rose-steel disc, ring radius 5.3 px) centre from a rotational-symmetry search of the hub pattern (599.4, 792.9), consistent with the hand-axis tails. Scale: 41 mm = width across the octagonal bezel measured between the outer edges of the polished chamfer bands of the left and right flats (457.5 / 741.5 px = 284 px, 6.927 px/mm; the top / bottom flats at 651.5 / 936.0 give 284.5 px, i.e. a square octagon). The octagon is regular (inradius 142 px), centre (599.5, 793.75); the opening of the bezel (outer edge of the chapter-ring shadow, circle fit rms 0.26 px over 133 of 180 radial scans) is a circle of radius 110.4 about (599.9, 792.3), 0.6 px above the pivot; the eight screws are centred (600.0, 792.1) on the vertex rays at 125.3 px (hexagon heads, white hull circumradius 6.4 px, outline 7.5 px; slot angles differ per screw, ignored). Dial: white Grande Tapisserie plate out to about r 96 about the opening centre, then the chapter ring (minute track on a sloping flange) out to the bezel; three sub-dials (12 o'clock side right = 3 / 6 / 9 / 12 counter, 9 o'clock side left = 30 / 20 / 10 counter, 6 o'clock side bottom = 60 / 40 / 20 seconds), date window at 4 o'clock: all texture of the photo map (the photographed sub-dial hands stay in it). Crown: hexagonal barrel (flat face toward the viewer, circumradius 22 px, x 743..768 px) with an end cap to x 773, axis y 798; two chronograph pushers at 63 / 117 degrees (clockwise from 12): hexagonal nut (circumradius 18.2 px, ~20 px long, flat face toward the viewer) plus a cylindrical cap (radius ~10.5 px) ending 21 px from the nut centre; axes through (732.0, 715.5) and (731.3, 881.3), the caps sit 3.4 px off the nut axis toward the crown. Hands (clockwise from 12, lengths from the pivot): hour 304.0 deg, bar half width 3.0 px, s 12..60.5, its centre line lies 2.0 px counter-clockwise of the pivot axis; minute 50.3 deg, half width 2.9 px (wider inlay section s 12..44), tip at s 95.6; chrono seconds: thin needle whose tail ends 99.4 px from the pivot at 227.3 deg (needle angle 47.3 deg), the upper part is not separable from the minute hand and is not modelled. Bracelet: full-width links with dark joint gaps (top gaps at y 602..606 and 623..627, bottom gaps 978..984, 1008..1014, 1038..1044, 1064..1068) and polished pins across the gaps (texture).",
+ "pivot": [
+  599.4,
+  792.9
+ ],
+ "anchor": {
+  "left_x": 457.5,
+  "right_x": 741.5
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 690,
+   "y1": 735,
+   "x0": 715.5,
+   "x1": 735.5
+  },
+  {
+   "side": "right",
+   "y0": 776,
+   "y1": 820,
+   "x0": 743.0,
+   "x1": 743.0
+  },
+  {
+   "side": "right",
+   "y0": 866,
+   "y1": 906,
+   "x0": 739.5,
+   "x1": 715.6
+  }
+ ],
+ "octagon": {
+  "left_x": 457.5,
+  "right_x": 741.5,
+  "top_y": 651.5,
+  "bottom_y": 936.0
+ },
+ "opening_circle_px": [
+  599.9,
+  792.3,
+  110.4
+ ],
+ "dial_flat_r_px": 96.0,
+ "ring_in_r_px": 97.0,
+ "screws_px": [
+  [
+   648.0,
+   676.6
+  ],
+  [
+   716.0,
+   744.2
+  ],
+  [
+   716.0,
+   839.8
+  ],
+  [
+   648.0,
+   907.7
+  ],
+  [
+   552.0,
+   907.7
+  ],
+  [
+   484.0,
+   839.8
+  ],
+  [
+   484.0,
+   744.2
+  ],
+  [
+   552.0,
+   676.6
+  ]
+ ],
+ "screw_r_px": 7.5,
+ "hands": {
+  "hour": {
+   "angle_deg": 304.0,
+   "length_px": 60.5,
+   "tail_px": 4.0,
+   "offset_px": -2.0
+  },
+  "minute": {
+   "angle_deg": 50.3,
+   "length_px": 95.6,
+   "tail_px": 6.0,
+   "offset_px": 0.0
+  },
+  "seconds": {
+   "angle_deg": 47.3,
+   "length_px": 10.0,
+   "tail_px": 99.4,
+   "offset_px": 0.0
+  }
+ },
+ "hub_r": 5.3,
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    741.0,
+    798.0
+   ],
+   "angle_deg": 90.0,
+   "hex_len_px": 27.0,
+   "hex_r_px": 22.0,
+   "ring_len_px": 5.0,
+   "ring_r_px": 19.0,
+   "ring_shift_px": 0.0
+  },
+  {
+   "name": "pusher_up",
+   "base_px": [
+    721.3,
+    720.9
+   ],
+   "angle_deg": 63.0,
+   "hex_len_px": 22.5,
+   "hex_r_px": 18.2,
+   "ring_len_px": 10.8,
+   "ring_r_px": 10.5,
+   "ring_shift_px": 3.4
+  },
+  {
+   "name": "pusher_down",
+   "base_px": [
+    720.6,
+    875.9
+   ],
+   "angle_deg": 117.0,
+   "hex_len_px": 22.5,
+   "hex_r_px": 18.2,
+   "ring_len_px": 10.8,
+   "ring_r_px": 10.5,
+   "ring_shift_px": -3.2
+  }
+ ],
+ "tip_rows_px": [
+  626.7,
+  978.2
+ ]
+}
