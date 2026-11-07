@@ -1,0 +1,46 @@
+{
+ "id": "cartier-santoslarge-wssa0062",
+ "output": "outputs/jobs/cartier-santoslarge-wssa0062",
+ "asset_type": "watch",
+ "model": "CARTIER Santos de Cartier Large WSSA0062",
+ "baseline": "First build: front relief from the catalogue photo at 39.8 mm (square steel case with screwed bezel and horns), photo-map green dial with Roman numerals, steel sword hands, angular crown with sapphire cabochon, single-column steel bracelet at the photo's joints (follower of the Cartier Santos template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/cartier-santos-large-wssa0062/REFERENCE_PLAN.md",
+  "config/watches/cartier-santoslarge-wssa0062.json",
+  "config/watches/cartier-santoslarge-wssa0062-trace.json",
+  "config/presets/watch_kit_white_front_cartier_santoslarge_wssa0062.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_cartier_santoslarge",
+   "params": {
+    "spec": "config/watches/cartier-santoslarge-wssa0062.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/cartier-santoslarge-wssa0062/cartier-santoslarge-wssa0062.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_cartier_santoslarge_wssa0062.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1600,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

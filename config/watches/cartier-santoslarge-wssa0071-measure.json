@@ -1,0 +1,220 @@
+{
+ "note": "Pixel measurements read from references/cartier-santos-large-wssa0071/cartier-wssa0071_original.jpg (750 x 750 JPEG, no alpha, background (236,240,241) at the corner), px of that image (pixel centres at integers). Same Santos de Cartier Large render as WSSA0018 at another crop: the eight bezel screws (template matched against the silver photo, least squares) give an isotropic scale of 1.036 and an offset (-22.4, -22.0); the traced bezel outline quarter (tl) is the silver one mapped through that transform (checked on gridded 4x crops at all four corners, within about 1 px), as are the screws, crown guard positions and the geometry the template notes call template-wide. Measured on this photo: pivot = intersection of the three hand centre lines (least squares, residual under 0.1 px) at (364.6, 354.6) (the hub ring's own circle fit centres at (365.0, 355.7), 1 px lower: the ring is shaded on its lower side); hub_r 9.3 px (gradient radius 9.0 plus the dark rim); mask_tol 5 (tolerance 6 leaks into the bright top bracelet edge and cuts it from row 81 to 200; 4 differs from 5 by 394 px = halo); anchor: case width 39.8 mm = silhouette between the flanks on rows 262..288 (about 317 px, 7.965 px/mm); the horn-to-horn height (rows 160.5..557.5, 397 px = 49.8 mm) is not the listed 47.5 mm (same 4 percent as the silver photo), recorded not asserted. opening = where the polished bezel face ends (x 253.0..476.5, y 242.5..462.0, corner radius 25), dial_rect = the dial's outer rim (x 259.5..475.0, y 250.5..458.5, radius 21); both measured on row / column profiles through the middle of this photo (the silver photo's values mapped through the transform are 1.5 to 8 px off on the top and bottom edges). crown: steel octagon x 518.5..543 (rows 330.5..381.5, axis y 356.0, half height 25.5 px) plus the blue sapphire cabochon to x 556.2; guard_x 541.5, crown_rows 328..384. Hands (about 10:09; steel sword hands on the blue dial, brighter than the dial so measured from grey-level profiles in the hand frame): hour tip 63.4 px at 305.5 deg (the blade's slanted end; body centre line 303..307), minute 91.7 px at 49.9 deg, seconds 92.7 px at 215.1 deg (the thin blade runs into the VII numeral at the tip, so the length is where the line stops: lines of the three hands meet at the pivot) with a 39.4 px counterweight tail at 35.3 deg. pieces_px = bracelet joint rows (dark lines in the row profile averaged over x 340..392), listed outward from the case: top 199.5 / 160.4 / 129.8 / 104.9 / 87.8 (end 81.5 = silhouette), bottom 511.0 / 550.0 / 589.0 / 623.2 / 649.5 (end 663.5); the first piece of each side is the end link between the horns, end_link_x = the dark gap lines at its left / right edge (277.8 / 452.2 top, 278.0 / 453.0 bottom).",
+ "pivot": [
+  364.6,
+  354.6
+ ],
+ "anchor": {
+  "width_mm": 39.8,
+  "listed_lug_to_lug_mm": 47.5
+ },
+ "mask_tol": 5,
+ "width_rows": [
+  262,
+  288
+ ],
+ "horn": {
+  "top_y": 160.5,
+  "bottom_y": 557.5
+ },
+ "bezel": {
+  "cx": 366.1,
+  "cy": 358.7,
+  "tl": [
+   [
+    366.1,
+    207.5
+   ],
+   [
+    284.3,
+    207.5
+   ],
+   [
+    277.0,
+    211.1
+   ],
+   [
+    268.7,
+    220.4
+   ],
+   [
+    259.4,
+    226.1
+   ],
+   [
+    249.0,
+    231.3
+   ],
+   [
+    240.7,
+    236.5
+   ],
+   [
+    235.0,
+    244.3
+   ],
+   [
+    230.9,
+    254.6
+   ],
+   [
+    228.8,
+    268.1
+   ],
+   [
+    228.3,
+    288.8
+   ],
+   [
+    228.3,
+    358.7
+   ]
+  ]
+ },
+ "opening": {
+  "x0": 253.0,
+  "y0": 242.5,
+  "x1": 476.5,
+  "y1": 462.0,
+  "r": 25
+ },
+ "dial_rect": {
+  "x0": 259.5,
+  "y0": 250.5,
+  "x1": 475.0,
+  "y1": 458.5,
+  "r": 21
+ },
+ "screws": [
+  [
+   301.1,
+   219.7
+  ],
+  [
+   428.1,
+   219.2
+  ],
+  [
+   239.9,
+   292.2
+  ],
+  [
+   492.7,
+   291.3
+  ],
+  [
+   240.2,
+   418.2
+  ],
+  [
+   493.3,
+   418.6
+  ],
+  [
+   303.1,
+   491.2
+  ],
+  [
+   429.8,
+   490.7
+  ]
+ ],
+ "screw_r": 6.5,
+ "guard_x": 541.5,
+ "crown_rows": [
+  328,
+  384
+ ],
+ "crown": {
+  "centre_y": 356.0,
+  "profile_px": [
+   [
+    0,
+    518.5
+   ],
+   [
+    24.5,
+    518.5
+   ],
+   [
+    25.5,
+    520
+   ],
+   [
+    25.5,
+    541
+   ],
+   [
+    24.5,
+    543.5
+   ],
+   [
+    22,
+    546
+   ],
+   [
+    17.5,
+    550
+   ],
+   [
+    13,
+    553
+   ],
+   [
+    8,
+    555
+   ],
+   [
+    3,
+    556
+   ],
+   [
+    0,
+    556.2
+   ]
+  ]
+ },
+ "hub_r": 9.3,
+ "hour_tip": [
+  313.0,
+  317.8
+ ],
+ "minute_tip": [
+  434.7,
+  295.5
+ ],
+ "seconds_tip": [
+  311.3,
+  430.4
+ ],
+ "seconds_tail": [
+  387.4,
+  322.4
+ ],
+ "end_link_x": {
+  "top": [
+   277.8,
+   452.2
+  ],
+  "bottom": [
+   278.0,
+   453.0
+  ]
+ },
+ "pieces_px": {
+  "top": [
+   199.5,
+   160.4,
+   129.8,
+   104.9,
+   87.8
+  ],
+  "bottom": [
+   511.0,
+   550.0,
+   589.0,
+   623.2,
+   649.5
+  ]
+ }
+}

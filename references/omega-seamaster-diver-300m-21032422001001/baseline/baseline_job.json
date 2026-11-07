@@ -1,0 +1,46 @@
+{
+ "id": "omega-diver300m-21032422001001",
+ "output": "outputs/jobs/omega-diver300m-21032422001001",
+ "asset_type": "watch",
+ "model": "OMEGA Seamaster Diver 300M Co-Axial Master Chronometer 42 mm 210.32.42.20.01.001",
+ "baseline": "First build (first Omega, sets the Omega Diver 300M template): front relief from the catalogue photo at 42 mm (Breitling Superocean rubber structure with Omega measurements: black ceramic dive bezel, helium valve and crown housing in the silhouette, wave-pattern dial photo map, skeleton sword hands, five-column rubber strap with four grooves)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/omega-seamaster-diver-300m-21032422001001/REFERENCE_PLAN.md",
+  "config/watches/omega-diver300m-21032422001001.json",
+  "config/watches/omega-diver300m-21032422001001-trace.json",
+  "config/presets/watch_kit_white_front_omega_diver300m.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_omega_diver300m",
+   "params": {
+    "spec": "config/watches/omega-diver300m-21032422001001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/omega-diver300m-21032422001001/omega-diver300m-21032422001001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_omega_diver300m.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

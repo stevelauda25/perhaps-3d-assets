@@ -1,0 +1,22 @@
+{
+ "note": "Pixel measurements read from references/omega-seamaster-aqua-terra-150m-41-22010412103005/omega-22010412103005_original.png (1024 x 1024 px RGBA PNG, transparent background, no drop shadow, upright catalogue render with a slight camera tilt, crown at 3, polished fixed bezel, blue teak-pattern dial, three-column steel bracelet that runs to the image borders at 12 and 6). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). Scale: the case is a cushion shape, NOT a circle (a circle fit of the left silhouette has rms 0.4..2.5 px depending on the rows), so the scale is anchored on the case width: left silhouette minimum 240.26 (rows 465..485, alpha edge by coverage), mirrored about the case axis x = 509.15 (left + right edge of the same row, rows 426..433 and 526..529: 508.95..509.34) -> right 778.04, width 537.8 px = 41 mm -> 13.117 px/mm (cross-check: bracelet at the lug rows 175..200 is 265 px = 20.2 mm; the bezel top circle fitted below is 40.2 mm). pivot = where the hour, minute and seconds axes cross (centre lines in rotated strips, saturation < 0.16 / 0.2 against the blue dial, least squares, residual 0.0 / 0.23 / 0.22 px): (508.62, 470.96); angles (cw from 12): hour 304.07, minute 47.75, seconds 221.87 (10:08:36). rings (px, about the ring centre which the step takes from ring_centre_mm): bezel_out 263.8 = outer edge of the polished bezel top (circle fit of 56 edge points on 5 degree rays, centre (509.37, 472.94), rms 0.53 px, radius 263.75..264.9 depending on the edge criterion; the case flank continues beyond it to the silhouette at r ~ 269); bezel_in 224.0 = bright inner rim line (circle fit centre (510.27, 471.27), r 224.0, rms 0.46); the bright line spans r 223.5..225.5, a dark groove r 226..228, a grey bevel r 229..234 and the flat polished top from r 235.5; crystal_edge 223.5; dial_flat 211 = end of the blue dial / printed minute track (the grey translucent ring r 211..223 is dial slope). One ring centre (509.75, 472.05) = mean of the two fits -> ring_centre_mm [0.086, -0.083]. Crown: x 776 (flank) to 819.5 (cap end), y 436.0..521.0 (85 px = 6.5 mm, centre 478.5), fluted to x 800 then a rounded cap that ends in a 41 px (half 20.5) round boss; no crown housing shoulder (the silhouette at the crown rows is the mirrored left edge about the case axis). Lugs: the integral case widens from the bracelet at row ~174 (top, x 376 -> 330 at row 200) and narrows back at row ~795 (bottom). Hands (10:08:36): hour 304.07 deg solid sword with a lume strip and a short triangular tail (length 121 px); minute 47.75 deg solid sword with an arrow tip (length 184 px, lume triangle in the head); seconds 221.87 deg thin shaft with a lume arrow at 137..170 px and the needle to 205 px (the tail lies under the minute hand). Hub radius 8 px. Bracelet: three columns (brushed outer links with stepped dark joints, polished centre links), joints measured from brightness scans of the column centres (see config/watches/omega-aquaterra41-22010412103005.json strap).",
+ "pivot": [508.62, 470.96],
+ "case_width_px": 537.8,
+ "case_axis_px": 509.15,
+ "bezel_out_circle_px": [509.37, 472.94, 263.8],
+ "rings": {
+  "dial_flat": 211.0,
+  "crystal_edge": 223.5,
+  "bezel_in": 224.0,
+  "insert_out": 263.8,
+  "bezel_out": 263.8
+ },
+ "hands": {
+  "hour": {"angle_deg": 304.07, "length_px": 121.0, "tail_px": 28.0},
+  "minute": {"angle_deg": 47.75, "length_px": 184.0, "tail_px": 10.0},
+  "seconds": {"angle_deg": 221.87, "length_px": 205.0, "tail_px": 0.0}
+ },
+ "hub_r": 8.0,
+ "crown": {"x0": 776.0, "x1": 819.5, "y0": 436.0, "y1": 521.0},
+ "tip_rows_px": [174, 795]
+}

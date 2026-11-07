@@ -1,0 +1,261 @@
+{
+ "model": "CARTIER Santos de Cartier Large WSSA0071 (39.8 mm steel, blue dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Follower of the Santos Large template built for WSSA0018 (silver); this copy is for the blue dial WSSA0071 (steel sword hands as photographed): the case flank with its four horns from the photo silhouette (a thin sloping ring), the polished bezel face on top of it (outline traced from the photo, eight screw heads), a chamfer down to a recessed flat dial plane carrying the 2x photo map (numerals, minute track, date window and the photographed hands stay in it), a flat crystal, steel sword hands over the photographed ones, an angular steel crown with a blue sapphire cabochon (lathe, steel_photo projected so the blue comes from the photo) and a single-column steel bracelet in pieces at the photo's own joints (end links between the horns). Everything is projected from the front photo; heights are estimates (no side view; real case thickness about 9 mm).",
+ "trace": "config/watches/cartier-santoslarge-wssa0071-trace.json",
+ "dial_map": "outputs/watches/cartier-santoslarge-wssa0071/dial_photo.jpg",
+ "steel_map": "outputs/watches/cartier-santoslarge-wssa0071/steel_photo.jpg",
+ "verified_mm": {
+  "width": 39.8
+ },
+ "case": {
+  "flank_outer_z": 4.6,
+  "flank_z": 5.6,
+  "flank_bevel": 0.3,
+  "bezel_z": 6.8,
+  "bezel_bevel": 0.25,
+  "rays": 720,
+  "screw_z": 0.12,
+  "note": "flank ring: silhouette (outer edge, z flank_outer_z) to the bezel outline (z flank_z); bezel ring: bezel outline to the opening at bezel_z, then the chamfer ring down to the dial outline at dial.z; core block under the opening; rings are sampled by rays from the pivot so inner and outer outlines have the same point count"
+ },
+ "crystal": {
+  "z0": 6.0,
+  "z1": 6.1
+ },
+ "dial": {
+  "z": 5.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.32
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.06,
+  "material": "hands_photo",
+  "emission": 0.31,
+  "z": {
+   "hour": 5.2,
+   "minute": 5.4,
+   "seconds": 5.6
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.2,
+     0.3
+    ],
+    [
+     0.0,
+     0.3
+    ],
+    [
+     1.38,
+     0.34
+    ],
+    [
+     2.13,
+     0.41
+    ],
+    [
+     2.89,
+     0.47
+    ],
+    [
+     4.02,
+     0.53
+    ],
+    [
+     5.15,
+     0.6
+    ],
+    [
+     6.28,
+     0.66
+    ],
+    [
+     6.65,
+     0.68
+    ],
+    [
+     7.03,
+     0.61
+    ],
+    [
+     7.41,
+     0.39
+    ],
+    [
+     7.78,
+     0.14
+    ],
+    [
+     7.957,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.2,
+     0.15
+    ],
+    [
+     0.0,
+     0.15
+    ],
+    [
+     1.51,
+     0.15
+    ],
+    [
+     2.51,
+     0.19
+    ],
+    [
+     3.52,
+     0.21
+    ],
+    [
+     5.02,
+     0.26
+    ],
+    [
+     6.53,
+     0.31
+    ],
+    [
+     8.04,
+     0.35
+    ],
+    [
+     9.04,
+     0.38
+    ],
+    [
+     10.04,
+     0.4
+    ],
+    [
+     10.55,
+     0.36
+    ],
+    [
+     11.05,
+     0.24
+    ],
+    [
+     11.38,
+     0.09
+    ],
+    [
+     11.512,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -4.954,
+     0.35
+    ],
+    [
+     -4.816,
+     0.37
+    ],
+    [
+     -4.484,
+     0.376
+    ],
+    [
+     -3.928,
+     0.36
+    ],
+    [
+     -2.804,
+     0.28
+    ],
+    [
+     -1.68,
+     0.26
+    ],
+    [
+     -1.284,
+     0.2
+    ],
+    [
+     -0.856,
+     0.15
+    ],
+    [
+     0.0,
+     0.15
+    ],
+    [
+     9.5,
+     0.13
+    ],
+    [
+     11.1,
+     0.11
+    ],
+    [
+     11.634,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured on the WSSA0071 photo (steel hands on the blue dial: grey-level profiles in the hand frame, bright facet extent plus about 0.03 mm; the sword blades widen toward a slanted point); the last point sits at the traced length. Hands and hub use the hands_photo material (the reference photo projected from the front)"
+ },
+ "crown": {
+  "z": 3.4,
+  "segs": 48,
+  "note": "lathe about the 3 o'clock axis, profile [radius, x] mm from the trace (measure.crown.profile_px): angular steel part, then the sapphire cabochon dome; the facets and the blue come from the projected photo"
+ },
+ "bracelet": {
+  "gap": 0.06,
+  "z0": 0.6,
+  "z_pieces": [
+   5.7,
+   4.9,
+   4.7,
+   4.5,
+   4.3
+  ],
+  "bevel": 0.15,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "inset": 0.04,
+  "backing_inset": 0.12,
+  "note": "one brushed column in pieces at the photo's joints (trace.bracelet.pieces_mm, first piece = end link between the horns, edges trace.end_link_x_mm); z_pieces per piece outward from the case (multiplied by the pose depth scale)"
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.27
+ }
+}
