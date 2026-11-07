@@ -1,0 +1,46 @@
+{
+ "id": "audemars-royaloakopenworked41-15407st",
+ "output": "outputs/jobs/audemars-royaloakopenworked41-15407st",
+ "asset_type": "watch",
+ "model": "AUDEMARS PIGUET Royal Oak Double Balance Wheel Openworked 41 15407ST (steel, skeleton)",
+ "baseline": "First build (follower of the Royal Oak 41 template; catalog row 108): front relief from the 1200 x 1626 catalogue photo at 41 mm (thin octagonal screwed bezel, flat skeleton dial carrying the photographed movement as texture, one crown, integrated steel bracelet)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/audemars-royal-oak-openworked-15407st/REFERENCE_PLAN.md",
+  "config/watches/audemars-royaloakopenworked41-15407st.json",
+  "config/watches/audemars-royaloakopenworked41-15407st-trace.json",
+  "config/presets/watch_kit_white_front_audemars_royaloakopenworked41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_audemars_royaloak41",
+   "params": {
+    "spec": "config/watches/audemars-royaloakopenworked41-15407st.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/audemars-royaloakopenworked41-15407st/audemars-royaloakopenworked41-15407st.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_audemars_royaloakopenworked41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

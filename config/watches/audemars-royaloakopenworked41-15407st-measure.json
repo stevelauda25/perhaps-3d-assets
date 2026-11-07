@@ -1,0 +1,33 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-openworked-15407st/audemars-15407st_1200x1626.png (1200 x 1626 PNG with alpha, the larger rendition of the catalogue asset; the watch occupies x 457..766, y 578..1083, same camera template as the Royal Oak 41 black, the picture sits about 0.5..0.9 px right of it and the scale is 0.26 % smaller). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). pivot = (600.5, 794.0) = centre of the polished hub (dark centre dot at columns 599..601, rows 793..794; the bright disc spans 595..605 and the seconds needle passes it to 0.5 px). The photographed hour / minute hands are 1..2 px off the hub dot when their centre lines are extended (their fitted lines meet about 2 px left of it); the 3D hands are built on the hub pivot with angles read from the far half of each hand (hour 303.4, minute 46.2 (tip centre line), seconds 225.1 from the tip and the slope of the needle). Scale: 41 mm = width across the octagon flats; the left flat of the case silhouette (rows 786..803, median alpha edge 457.09 px) is 20.5 mm from the pivot, 6.996 px/mm (black dial 7.014). Opening circle (outer edge of the gold flange ring where the polished bezel chamfer ends; radial scans every 2 deg, robust circle fit, plus the extreme points: top 679.6, bottom 905.0, left 487.7, right 713.5): centre (600.4, 792.3) r 112.6 px: larger than the black dial's 109.8 because the openworked dial's flange ring runs out to the chamfer. octagon = outer edge of the bezel: left flat 457.1 (silhouette), right flat 743.9 (hidden by the crown: left flat + 41 mm; the right silhouette rows above and below the crown sit 0.4..1.0 px right of the black photo's), top flat 651.5 (polished chamfer line at x 596..606, 1.7 px lower than the black photo's 650.0 by profile matching, 0.8 by eye), bottom flat 942.7 (+0.2 px against the black one). Screws: the eight rose-gold hexagonal heads (centroids of the rose-gold pixels in the 118..150 px ring around the opening centre, area 140..152 px each, distance 125.3..126.9 px; slots ignored), order from the top right clockwise, round outline radius 7.5 px. Crown (3 o'clock, no guards): hexagonal steel cap, flat face toward the viewer, x 743.0..766.3, rows 777..820 (top face 777..785, front face 785..808, bottom face 808..820, circumradius 21.8 px), axis y 798.5. Hands: the openworked 15407ST has plain polished steel baton-type hands (no luminous inlay): hour 303.4 deg, tip at s 63.0, full width 7.6 px (both facets) so half width 3.8 px; minute 46.2 deg, tip at s 95.7, full width about 9 px incl. the dark facet so half width 4.5 px; seconds 225.1 deg, needle (dark with a white edge) tip at s 97.4, half width about 0.6 px. Bracelet: same layout as the black dial but the seams sit 2 px lower at the top and 1..3 px higher at the bottom (smaller scale, tilt): seams = dark rows [a, b) (mean grey < 110 in the centre column; outer columns agree to +-1) top [602,606) and [625,629) (the second one is the junction of the case, tip_top 23.5), bottom [974,982) (junction, tip_bottom 25.75), [1008,1015), [1038,1043), [1060,1066); the top end block (rows 578..586) is a darker last link with a thin dark line at rows 583..585 (not modelled as a seam, as on the black one). bars = the two polished pin-link bars, [row, left bar x0, x1, right bar x0, x1] from horizontal brightness profiles at rows 632 / 612 / 590 (top) and 972 / 1016 / 1044 / 1062 / 1080 (bottom) (edges read to about +-1 px).",
+ "pivot": [600.5, 794.0],
+ "anchor": {"rows": [786, 803]},
+ "crown_replace": [
+  {"side": "right", "y0": 776, "y1": 821, "x0": 742.2, "x1": 741.6}
+ ],
+ "octagon": {"left_x": 457.1, "right_x": 743.9, "top_y": 651.5, "bottom_y": 942.7},
+ "opening_circle_px": [600.4, 792.3, 112.6],
+ "dial_flat_r_px": 111.0,
+ "ring_in_r_px": 111.2,
+ "screws_px": [[648.0, 676.4], [717.1, 744.6], [717.2, 840.5], [649.3, 908.6], [552.1, 909.2], [483.5, 841.3], [482.7, 745.1], [550.7, 676.7]],
+ "screw_r_px": 7.5,
+ "hands": {
+  "hour": {"angle_deg": 303.4, "length_px": 63.0, "tail_px": 8.0},
+  "minute": {"angle_deg": 46.2, "length_px": 95.7, "tail_px": 8.0},
+  "seconds": {"angle_deg": 225.1, "length_px": 97.4, "tail_px": 4.0}
+ },
+ "hub_r": 6.3,
+ "crowns": [
+  {"name": "crown_3", "base_px": [743.0, 798.5], "angle_deg": 90.0, "hex_len_px": 23.3, "hex_r_px": 21.8, "ring_len_px": 0.0, "ring_r_px": 0.0}
+ ],
+ "bracelet": {
+  "seams_px": {
+   "top": [[602, 606], [625, 629]],
+   "bottom": [[974, 982], [1008, 1015], [1038, 1043], [1060, 1066]]
+  },
+  "bars_px": {
+   "top": [[628, 545.0, 572.0, 631.0, 657.5], [612, 548.0, 572.0, 631.0, 654.0], [590, 552.0, 575.5, 628.0, 649.0]],
+   "bottom": [[975, 544.5, 571.5, 630.5, 657.5], [1012, 547.5, 571.5, 629.5, 653.0], [1044, 552.0, 574.0, 627.5, 649.0], [1062, 558.0, 575.0, 627.5, 645.0], [1080, 560.5, 576.5, 626.5, 642.5]]
+  }
+ }
+}

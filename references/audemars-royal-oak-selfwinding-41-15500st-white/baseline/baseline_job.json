@@ -1,0 +1,46 @@
+{
+ "id": "audemars-royaloak41-15500st-white",
+ "output": "outputs/jobs/audemars-royaloak41-15500st-white",
+ "asset_type": "watch",
+ "model": "AUDEMARS PIGUET Royal Oak Selfwinding 41 15500ST (white)",
+ "baseline": "First build (follower of the Royal Oak 41 black template; catalog row 84, the 15510ST white row 89 uses the same photo): front relief from the 1200 x 1626 catalogue photo at 41 mm (Offshore Diver structure with a thin octagonal screwed bezel, flat Grande Tapisserie dial, one crown, integrated steel bracelet)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/audemars-royal-oak-selfwinding-41-15500st-white/REFERENCE_PLAN.md",
+  "config/watches/audemars-royaloak41-15500st-white.json",
+  "config/watches/audemars-royaloak41-15500st-white-trace.json",
+  "config/presets/watch_kit_white_front_audemars_royaloak41_white.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_audemars_royaloak41",
+   "params": {
+    "spec": "config/watches/audemars-royaloak41-15500st-white.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/audemars-royaloak41-15500st-white/audemars-royaloak41-15500st-white.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_audemars_royaloak41_white.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,241 @@
+{
+ "model": "AUDEMARS PIGUET Royal Oak Chronograph 41 26240ST (41 mm steel, white Grande Tapisserie dial, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Royal Oak Chronograph TEMPLATE (variant key 26240st-white; the green one, 26240st-green, copies this spec and changes only what differs): structure of the Offshore Diver build (case slab from the alpha silhouette sloping into the bracelet, regular OCTAGON bezel by rays with a polished chamfer down to the round opening, eight screw heads, dial lathe with the 2x photo map, hands from profile lists, hexagonal crown parts from the trace) with three sub-dials and the date window as photo texture only, the crown and the two chronograph pushers as three hexagonal-nut parts, a long thin chrono-seconds tail, and a bracelet of full-width links whose dark joint gaps and polished pins are the photographed backing.",
+ "trace": "config/watches/audemars-royaloakchrono41-26240st-white-trace.json",
+ "dial_map": "outputs/watches/audemars-royaloakchrono41-26240st-white/dial_photo.jpg",
+ "steel_map": "outputs/watches/audemars-royaloakchrono41-26240st-white/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "verified_tol_mm": 0.5,
+ "case": {
+  "body_z": 5.2,
+  "tip_z": 2.9,
+  "ramp_from_y": 19.0,
+  "bevel": 0.35,
+  "bezel_z": 7.2,
+  "chamfer_z": 6.7,
+  "chamfer_mm": 0.3,
+  "bezel_bevel": 0.2,
+  "silhouette_margin_mm": 0.1,
+  "rays": 720,
+  "screw_z": 0.12,
+  "note": "case slab = silhouette between the lug tops (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25) with the pusher and crown rows replaced by straight lines, top and bottom sloping toward the bracelet; bezel = octagon ring (min of the octagon and the silhouette less silhouette_margin_mm, sampled by rays) at bezel_z, then a chamfer ring down to the opening at chamfer_z; the silhouette flank is about 1.4 px wider per side than the bezel octagon, hence verified_tol_mm 0.5",
+  "tip_top": 24.0,
+  "tip_bottom": 26.75
+ },
+ "crystal": {
+  "z0": 6.75,
+  "z1": 6.9,
+  "dome": 0.1
+ },
+ "dial": {
+  "z": 5.6,
+  "ring_z": 5.9,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.35,
+  "note": "flat waffle plate out to opening.dial_flat_mm, step up to the chapter-ring plane ring_z out to the opening; one lathe with the photo map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 6.0,
+   "minute": 6.2,
+   "seconds": 6.4
+  },
+  "profile": {
+   "hour": [
+    [
+     -0.577,
+     0.3
+    ],
+    [
+     0.0,
+     0.4
+    ],
+    [
+     1.2,
+     0.43
+    ],
+    [
+     8.55,
+     0.43
+    ],
+    [
+     8.68,
+     0.28
+    ],
+    [
+     8.734,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -0.866,
+     0.25
+    ],
+    [
+     0.0,
+     0.3
+    ],
+    [
+     0.8,
+     0.38
+    ],
+    [
+     1.73,
+     0.44
+    ],
+    [
+     6.35,
+     0.44
+    ],
+    [
+     6.45,
+     0.39
+    ],
+    [
+     13.55,
+     0.39
+    ],
+    [
+     13.72,
+     0.22
+    ],
+    [
+     13.801,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -14.35,
+     0.07
+    ],
+    [
+     0.0,
+     0.07
+    ],
+    [
+     1.444,
+     0.0
+    ]
+   ]
+  },
+  "lume": {},
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, last point at the traced length; read on rotated 14x crops of the photo (hand axes: hour 304.0 deg with its centre line 2.0 px counter-clockwise of the pivot axis, minute 50.3 deg, chrono-seconds tail 227.3 deg ending 99.4 px from the pivot; the needle's upper half is hidden behind the minute hand and not modelled). Hands and hub use hands_photo (reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "z": 4.0,
+  "bevel": 0.15,
+  "note": "crown and the two pushers come from trace.crowns: hexagonal nut (flat face toward the viewer) from the base point along the axis angle, then a short cylindrical cap ring (ring_shift_mm = off-axis shift of the cap)"
+ },
+ "strap": {
+  "kind": "links",
+  "note": "strap.kind links: chain of full-width links (strap.links.pieces_mm [|y0|, |y1|], top and bottom separately) with the dark joint gaps between them; backing_mm = y range of the steel_photo backing under the gaps and the polished pins; link outline from the silhouette (edge_from = lug tips)",
+  "links": {
+   "z0": 0.6,
+   "z_full": 2.9,
+   "lift": 0.15,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.05,
+   "backing_material": "steel_photo",
+   "pieces_mm": {
+    "top": [
+     [
+      24.528,
+      26.982
+     ],
+     [
+      27.56,
+      29.436
+     ]
+    ],
+    "bottom": [
+     [
+      27.588,
+      31.053
+     ],
+     [
+      31.92,
+      35.384
+     ],
+     [
+      36.251,
+      39.138
+     ],
+     [
+      39.715,
+      41.5
+     ]
+    ]
+   },
+   "backing_mm": {
+    "top": [
+     24.0,
+     30.75
+    ],
+    "bottom": [
+     26.75,
+     41.5
+    ]
+   },
+   "edge_from": {
+    "top": 24.0,
+    "bottom": 26.75
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ }
+}

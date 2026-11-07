@@ -1,0 +1,148 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-chronograph-41-26240st-green/audemars-26240st-green_1200x1626.png (1200 x 1626 PNG with alpha, the larger rendition of the catalogue asset standup-994; the watch occupies x 456..772, y 578..1083). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). Follower of the Royal Oak Chronograph template (white variant, key 26240st-white). Registration against the white photo: silhouette (alpha) identical within 0.2 px on the right side and about 0.3 px further left on the left side, bezel flats / octagon edges within 0.15 px (left 457.5 same, right 741.4, top 651.5, bottom 936.15), bracelet joint rows the same within 0.3 px, crown / pushers identical (so crowns, crown_replace, tip rows, anchor are the white values and the scale stays 6.9268 px/mm, the kit preset is shared); the dial-side content is shifted: the eight screw heads (edge-weighted centroids) sit on average (-0.22, +0.21) px from the white ones and a hub symmetry search gives the same delta, hence pivot (599.2, 793.1) and screws = white + that delta; the bezel opening (rising edge from the dark shadow line to the bright polished chamfer, circle fit rms 0.22 px over 348 of 360 radial scans, window +-2.5 px) is a circle of radius 112.38 about (599.53, 792.30): larger by 1.9 px than the white one (110.46 about (599.89, 792.28) fitted with the same code), because the shadow line of the dark green chapter ring sits further out. Hands (steel, same shape and angles as the white photo; re-checked by overlay after the first build): hour 304.0 deg, minute 50.3 deg, chrono-seconds needle tail 227.3 deg.",
+ "pivot": [
+  599.2,
+  793.1
+ ],
+ "anchor": {
+  "left_x": 457.5,
+  "right_x": 741.5
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 690,
+   "y1": 735,
+   "x0": 715.5,
+   "x1": 735.5
+  },
+  {
+   "side": "right",
+   "y0": 776,
+   "y1": 820,
+   "x0": 743.0,
+   "x1": 743.0
+  },
+  {
+   "side": "right",
+   "y0": 866,
+   "y1": 906,
+   "x0": 739.5,
+   "x1": 715.6
+  }
+ ],
+ "octagon": {
+  "left_x": 457.5,
+  "right_x": 741.4,
+  "top_y": 651.5,
+  "bottom_y": 936.15
+ },
+ "opening_circle_px": [
+  599.53,
+  792.3,
+  112.38
+ ],
+ "dial_flat_r_px": 96.0,
+ "ring_in_r_px": 97.0,
+ "screws_px": [
+  [
+   647.78,
+   676.81
+  ],
+  [
+   715.78,
+   744.41
+  ],
+  [
+   715.78,
+   840.01
+  ],
+  [
+   647.78,
+   907.91
+  ],
+  [
+   551.78,
+   907.91
+  ],
+  [
+   483.78,
+   840.01
+  ],
+  [
+   483.78,
+   744.41
+  ],
+  [
+   551.78,
+   676.81
+  ]
+ ],
+ "screw_r_px": 7.5,
+ "hands": {
+  "hour": {
+   "angle_deg": 304.0,
+   "length_px": 60.5,
+   "tail_px": 4.0,
+   "offset_px": -2.0
+  },
+  "minute": {
+   "angle_deg": 50.3,
+   "length_px": 95.6,
+   "tail_px": 6.0,
+   "offset_px": 0.0
+  },
+  "seconds": {
+   "angle_deg": 47.3,
+   "length_px": 10.0,
+   "tail_px": 99.4,
+   "offset_px": 0.0
+  }
+ },
+ "hub_r": 5.3,
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    741.0,
+    798.0
+   ],
+   "angle_deg": 90.0,
+   "hex_len_px": 27.0,
+   "hex_r_px": 22.0,
+   "ring_len_px": 5.0,
+   "ring_r_px": 19.0,
+   "ring_shift_px": 0.0
+  },
+  {
+   "name": "pusher_up",
+   "base_px": [
+    721.3,
+    720.9
+   ],
+   "angle_deg": 63.0,
+   "hex_len_px": 22.5,
+   "hex_r_px": 18.2,
+   "ring_len_px": 10.8,
+   "ring_r_px": 10.5,
+   "ring_shift_px": 3.4
+  },
+  {
+   "name": "pusher_down",
+   "base_px": [
+    720.6,
+    875.9
+   ],
+   "angle_deg": 117.0,
+   "hex_len_px": 22.5,
+   "hex_r_px": 18.2,
+   "ring_len_px": 10.8,
+   "ring_r_px": 10.5,
+   "ring_shift_px": -3.2
+  }
+ ],
+ "tip_rows_px": [
+  626.7,
+  978.2
+ ]
+}
