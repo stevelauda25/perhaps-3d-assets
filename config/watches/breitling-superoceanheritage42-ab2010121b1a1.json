@@ -1,0 +1,359 @@
+{
+ "model": "BREITLING Superocean Heritage Automatic 42 AB2010121B1A1 (42 mm steel, black dial, steel mesh bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Follower of the Breitling Superocean 42 template (ceramic-insert dive bezel inside a steel coin-edge ring, no crown guards here) with its own measurements: arrow-head hour hand, leaf minute hand, needle seconds hand, 42 mm steel mesh (Milanese) bracelet built with the column-driven bracelet of pipeline/steps/watch_breitling_superoceanheritage42.py (strap.bracelet.columns = pieces chains with their own x tables: a polished end-link bar under each lug pair and the mesh to the alpha ends).",
+ "trace": "config/watches/breitling-superoceanheritage42-ab2010121b1a1-trace.json",
+ "dial_map": "outputs/watches/breitling-superoceanheritage42-ab2010121b1a1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 197 / bottoms y 775 px); no crown guards; top and bottom slope toward the bracelet",
+  "tip_top": 25.0,
+  "tip_bottom": 25.5
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel coin-edge ring (bezel_in..bezel_out) around the black insert (bezel_in..insert_out); numerals, markers and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.048,
+     0.502
+    ],
+    [
+     0.0,
+     0.502
+    ],
+    [
+     4.672,
+     0.502
+    ],
+    [
+     4.802,
+     0.917
+    ],
+    [
+     5.064,
+     1.965
+    ],
+    [
+     5.195,
+     2.043
+    ],
+    [
+     5.588,
+     1.886
+    ],
+    [
+     10.565,
+     0.096
+    ],
+    [
+     10.653,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -1.048,
+     0.463
+    ],
+    [
+     0.0,
+     0.463
+    ],
+    [
+     1.397,
+     0.48
+    ],
+    [
+     4.279,
+     0.725
+    ],
+    [
+     5.588,
+     0.786
+    ],
+    [
+     9.518,
+     1.004
+    ],
+    [
+     10.827,
+     0.707
+    ],
+    [
+     11.701,
+     0.493
+    ],
+    [
+     12.574,
+     0.271
+    ],
+    [
+     13.36,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -1.222,
+     0.262
+    ],
+    [
+     0.0,
+     0.262
+    ],
+    [
+     1.746,
+     0.249
+    ],
+    [
+     4.017,
+     0.227
+    ],
+    [
+     6.112,
+     0.218
+    ],
+    [
+     8.208,
+     0.175
+    ],
+    [
+     9.605,
+     0.17
+    ],
+    [
+     11.002,
+     0.105
+    ],
+    [
+     12.399,
+     0.044
+    ],
+    [
+     14.32,
+     0.044
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     5.414,
+     1.179
+    ],
+    [
+     8.775,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     4.541,
+     0.279
+    ],
+    [
+     6.112,
+     0.384
+    ],
+    [
+     8.557,
+     0.585
+    ],
+    [
+     9.605,
+     0.602
+    ],
+    [
+     10.478,
+     0.454
+    ],
+    [
+     11.177,
+     0.279
+    ],
+    [
+     11.701,
+     0.07
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip measured as the thr-60 silhouette in rotated strips (so the 3D hands cover the photographed ones); the last point sits at the traced length. lume = +w side outline [s, w] of the lume polygon mirrored about the axis (hour: triangle inside the arrow head, minute: leaf core; the seconds needle has no lume). Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.2,
+  "cap_radius_fraction": 0.85,
+  "fluted_to_mm": 23.69,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.75,
+  "base_chamfer_mm": 0.3,
+  "note": "fluted crown without guards (the crown rows of the silhouette are replaced by the mirrored left edge)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind bracelet in the Heritage step copy: strap.bracelet.columns = chains of flat pieces, each with its own x table (x_mm, [|y|, left, right] piecewise linear per side) or, when absent, the strap outline of the silhouette (edge_from = first strap-wide row beyond the lug tops). bar = polished end link between the lugs (top y 209..250 px, bottom 721..763), mesh = Milanese mesh to the alpha ends (top y 105, bottom 918 px); pivot (511.2, 482.7), 11.4524 px/mm.",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_mesh": 3.3,
+   "z_bar": 3.5,
+   "lift": 0.15,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "mesh",
+    "bar"
+   ],
+   "x_mm": {
+    "bar": {
+     "top": [
+      [
+       0.0,
+       -10.714,
+       10.766
+      ],
+      [
+       40.0,
+       -10.714,
+       10.766
+      ]
+     ],
+     "bottom": [
+      [
+       0.0,
+       -10.583,
+       10.722
+      ],
+      [
+       40.0,
+       -10.583,
+       10.722
+      ]
+     ]
+    }
+   },
+   "pieces_mm": {
+    "mesh": {
+     "top": [
+      [
+       23.9,
+       32.75
+      ]
+     ],
+     "bottom": [
+      [
+       24.5,
+       38.0
+      ]
+     ]
+    },
+    "bar": {
+     "top": [
+      [
+       20.25,
+       23.9
+      ]
+     ],
+     "bottom": [
+      [
+       20.75,
+       24.5
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 25.0,
+    "bottom": 25.75
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/breitling-superoceanheritage42-ab2010121b1a1/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  0.0,
+  -0.245
+ ]
+}

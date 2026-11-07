@@ -1,0 +1,46 @@
+{
+ "id": "breitling-chronomat42-ab0134101b1a1",
+ "output": "outputs/jobs/breitling-chronomat42-ab0134101b1a1",
+ "asset_type": "watch",
+ "model": "BREITLING Chronomat B01 42 AB0134101B1A1",
+ "baseline": "First build: front relief from the catalogue photo at 42 mm (new model within the Breitling approach: rider-tab tachymeter bezel, bar hands with red chronograph seconds hand, three sub-dials, crown and two pushers, steel rouleaux bracelet; own step with the Tudor Black Bay Chrono chronograph parts)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/breitling-chronomat-b01-42-ab0134101b1a1/REFERENCE_PLAN.md",
+  "config/watches/breitling-chronomat42-ab0134101b1a1.json",
+  "config/watches/breitling-chronomat42-ab0134101b1a1-trace.json",
+  "config/presets/watch_kit_white_front_breitling_chronomat42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_breitling_chronomat42",
+   "params": {
+    "spec": "config/watches/breitling-chronomat42-ab0134101b1a1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/breitling-chronomat42-ab0134101b1a1/breitling-chronomat42-ab0134101b1a1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_breitling_chronomat42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

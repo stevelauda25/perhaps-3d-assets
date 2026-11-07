@@ -1,0 +1,46 @@
+{
+ "id": "cartier-tankmustxl-wsta0053",
+ "output": "outputs/jobs/cartier-tankmustxl-wsta0053",
+ "asset_type": "watch",
+ "model": "CARTIER Tank Must Extra-Large Automatic WSTA0053",
+ "baseline": "First build: front relief from the catalogue photo at 41 x 31 mm (rectangular steel case with brancards), photo-map silver dial with Roman numerals, blue sword hands, faceted crown with sapphire cabochon, three-column steel bracelet at the photo's joints (Cartier Tank Must template)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/cartier-tank-must-xl-wsta0053/REFERENCE_PLAN.md",
+  "config/watches/cartier-tankmustxl-wsta0053.json",
+  "config/watches/cartier-tankmustxl-wsta0053-trace.json",
+  "config/presets/watch_kit_white_front_cartier_tankmustxl.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_cartier_tankmustxl",
+   "params": {
+    "spec": "config/watches/cartier-tankmustxl-wsta0053.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/cartier-tankmustxl-wsta0053/cartier-tankmustxl-wsta0053.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_cartier_tankmustxl.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1600,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

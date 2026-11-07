@@ -1,0 +1,26 @@
+{
+ "note": "Pixel measurements read from references/cartier-tank-must-xl-wsta0053/cartier-wsta0053_original.jpg (750 x 750 JPEG, no alpha). pivot = hand hub centre (blue hub bbox x 357..378, y 358..379). anchor: case width 31 mm = the silhouette from the left edge of the left brancard to the right edge of the right brancard on a mid row (262 px, 8.452 px/mm); the 41 mm lug-to-lug height (brancard top 197 to bottom 544, 347 px = 41.05 mm) is only checked, not used. brancards = the two rounded vertical bars of the Tank case (outer 237.5 / 498.5, inner edge 268 / 468). bars = the brushed case bars between the brancards above and below the dial opening (top y 230..250, bottom y 503..523); dial_rect = the dial opening between the brancards (x 268..468, y 250..503; the dial map and the dial plane cover exactly this rectangle). crown: steel part x 498..520 (y 344..398, widest 52 px at x 510), blue sapphire cabochon x 518..536 (y 358..384, centre y 371). Hands (about 10:09:xx): hour 303.8 deg tip 59 px, minute 55.9 deg tip 84.5 px, seconds 219.1 deg tip 83 px with a 28 px counterweight tail at 39.1 deg; hub radius 10.7 px; hand axes measured with blue-minus-red half-max profiles (the hands are 3 to 4 px wide). pieces_px = bracelet piece rows (y px, listed per column kind and side; dark joint lines found with brightness minima down columns x 276..296 (outer), 330..400 (centre), 438..458 (outer right)): outer top 80 / 89.5 / 113.5 / 183.5 / 214.2 / 229.5, outer bottom 523.5 / 548 / 556 / 612 / 650 / 664, centre top 80 / 94 / 135 / 160 / 215.5 / 229.5, centre bottom 523.5 / 574.5 / 598 / 628 / 645 / 664. centre_x_px = vertical joint lines between the outer and the centre columns, [y px, left x, right x] from horizontal brightness minima (top 305/429 at y 86 widening to 302/433 at the case, bottom 302/433 at the case narrowing to 305/430 at the end).",
+ "pivot": [367.5, 368.5],
+ "anchor": {"width_mm": 31.0, "height_mm": 41.0},
+ "brancard": {"inner_left_x": 268, "inner_right_x": 468},
+ "bars": {"top": [230, 250], "bottom": [503, 523]},
+ "dial_rect": [268, 250, 468, 503],
+ "crown": {"x0": 498, "x1": 536, "y0": 344, "y1": 398, "steel_x1": 520, "widest_x": 510, "cabochon": {"x0": 518, "x1": 536, "y0": 358, "y1": 384}},
+ "hub_r": 10.7,
+ "hour_tip": [318.9, 335.1],
+ "minute_tip": [437.7, 320.5],
+ "seconds_tip": [314.8, 432.6],
+ "hour_tail": [372.0, 379.0],
+ "minute_tail": [372.0, 379.0],
+ "seconds_tail": [385.1, 346.7],
+ "pieces_px": {
+  "outer": {"top": [[80, 89.5], [89.5, 113.5], [113.5, 183.5], [183.5, 214.2], [214.2, 229.5]],
+            "bottom": [[523.5, 548], [548, 556], [556, 612], [612, 650], [650, 664]]},
+  "centre": {"top": [[80, 94], [94, 135], [135, 160], [160, 215.5], [215.5, 229.5]],
+             "bottom": [[523.5, 574.5], [574.5, 598], [598, 628], [628, 645], [645, 664]]}
+ },
+ "centre_x_px": {
+  "top": [[80, 305.5, 428.5], [105, 304, 430], [170, 303, 432], [215, 302, 433], [230, 302, 433]],
+  "bottom": [[523, 302, 433], [565, 303, 432], [610, 304, 431], [655, 305, 430], [665, 305.5, 429.5]]
+ }
+}

@@ -1,0 +1,599 @@
+{
+ "model": "BREITLING Chronomat B01 42 AB0134101B1A1 (42 mm steel, black dial, steel rouleaux bracelet, chronograph)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Breitling approach (Superocean 42 / Heritage 42) with the chronograph parts of the Tudor Black Bay Chrono step: rider-tab tachymeter bezel (one steel flange, tabs and ticks in the projected photo), hour / minute bar hands, red chronograph seconds hand with a kite lume window, three sub-dials with white hands and hubs, crown with guards carried by the silhouette, two rectangular pushers radial at +-30 deg, 42 mm steel rouleaux bracelet (five-segment rows alternating with full-width tubes) built by pipeline/steps/watch_breitling_chronomat42.py.",
+ "trace": "config/watches/breitling-chronomat42-ab0134101b1a1-trace.json",
+ "dial_map": "outputs/watches/breitling-chronomat42-ab0134101b1a1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 219, bottoms y 749.5 px); the crown / pusher rows take the straight shoulder line (right_override_px), guards stay in the silhouette; top and bottom slope toward the bracelet",
+  "tip_top": 24.0,
+  "tip_bottom": 25.0
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.0,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "one steel lathe: flange bezel_in..insert_out (z_insert, rider tabs / ticks / numerals come from the projected photo) and the darker lower outer chamfer ring insert_out..bezel_out (z_coin below z_insert gives the step)"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.33
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -0.553,
+     0.304
+    ],
+    [
+     0.0,
+     0.304
+    ],
+    [
+     1.383,
+     0.304
+    ],
+    [
+     2.213,
+     0.323
+    ],
+    [
+     2.675,
+     0.572
+    ],
+    [
+     9.223,
+     0.59
+    ],
+    [
+     9.592,
+     0.507
+    ],
+    [
+     9.914,
+     0.277
+    ],
+    [
+     10.173,
+     0.0
+    ]
+   ],
+   "minute": [
+    [
+     -0.553,
+     0.304
+    ],
+    [
+     0.0,
+     0.304
+    ],
+    [
+     2.029,
+     0.304
+    ],
+    [
+     2.49,
+     0.553
+    ],
+    [
+     3.043,
+     0.627
+    ],
+    [
+     7.378,
+     0.636
+    ],
+    [
+     8.116,
+     0.664
+    ],
+    [
+     13.004,
+     0.673
+    ],
+    [
+     13.281,
+     0.609
+    ],
+    [
+     13.557,
+     0.378
+    ],
+    [
+     13.834,
+     0.157
+    ],
+    [
+     14.092,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -0.092,
+     0.194
+    ],
+    [
+     0.0,
+     0.194
+    ],
+    [
+     10.791,
+     0.194
+    ],
+    [
+     11.39,
+     0.599
+    ],
+    [
+     12.082,
+     0.507
+    ],
+    [
+     12.819,
+     0.36
+    ],
+    [
+     13.557,
+     0.221
+    ],
+    [
+     14.037,
+     0.194
+    ]
+   ]
+  },
+  "lume": {
+   "seconds": [
+    [
+     11.206,
+     0.0
+    ],
+    [
+     11.436,
+     0.203
+    ],
+    [
+     12.082,
+     0.24
+    ],
+    [
+     12.912,
+     0.092
+    ],
+    [
+     13.05,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured as the thr-120 silhouette in rotated strips (hour / minute are bare polished bars, 0.04..0.1 mm wider than the bright part so the 3D hands hide the photographed ones; the dark facet beside them stays in the map); the last point sits at the traced length. Seconds = red needle with the kite (lume = white window inside). Sub-dial hands are polygons (hands.polygons, mm about the pivot) over the sub-dial hubs (hands.discs). Hands / hubs use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43,
+  "polygons": {
+   "sub_left": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -8.07,
+      -1.494
+     ],
+     [
+      -8.07,
+      3.302
+     ],
+     [
+      -7.848,
+      3.763
+     ],
+     [
+      -7.627,
+      3.302
+     ],
+     [
+      -7.627,
+      -1.494
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_right": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      7.48,
+      -1.457
+     ],
+     [
+      7.48,
+      3.394
+     ],
+     [
+      7.701,
+      3.855
+     ],
+     [
+      7.922,
+      3.394
+     ],
+     [
+      7.922,
+      -1.457
+     ]
+    ],
+    "thick": 0.08
+   },
+   "sub_bottom": {
+    "z": 7.45,
+    "outline_mm": [
+     [
+      -0.249,
+      -9.269
+     ],
+     [
+      -0.249,
+      -4.75
+     ],
+     [
+      -0.028,
+      -4.289
+     ],
+     [
+      0.194,
+      -4.75
+     ],
+     [
+      0.194,
+      -9.269
+     ]
+    ],
+    "thick": 0.08
+   }
+  },
+  "discs": [
+   {
+    "name": "sub_left_hub",
+    "x_mm": -7.848,
+    "y_mm": -0.203,
+    "r_mm": 0.5,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_right_hub",
+    "x_mm": 7.701,
+    "y_mm": -0.166,
+    "r_mm": 0.5,
+    "z0": 7.3,
+    "z1": 7.7
+   },
+   {
+    "name": "sub_bottom_hub",
+    "x_mm": -0.028,
+    "y_mm": -7.978,
+    "r_mm": 0.5,
+    "z0": 7.3,
+    "z1": 7.7
+   }
+  ]
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.55,
+  "fluted_to_mm": 24.698,
+  "bevel": 0.25,
+  "neck_radius_fraction": 0.78,
+  "base_chamfer_mm": 0.2,
+  "note": "fluted barrel crown x 740..797 px, y 448..518 (silhouette half width 36 px at x 768 tapering to 27.5 at 788, 19 at 794), centre y 483 (the guards stay in the silhouette: right_override_px rows 438..526 end at x 766.5)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind bracelet, see strap.bracelet.note",
+  "bracelet": {
+   "gap": 0.12,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_pol": 3.3,
+   "z_centre": 3.4,
+   "z_tube": 3.5,
+   "lift": 0.15,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "pol",
+    "centre",
+    "pol",
+    "outer"
+   ],
+   "full": [
+    "tube"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      22.826,
+      -6.474,
+      -3.477,
+      3.394,
+      6.299
+     ],
+     [
+      28.544,
+      -6.382,
+      -3.477,
+      3.302,
+      6.253
+     ],
+     [
+      33.432,
+      -6.244,
+      -3.385,
+      3.348,
+      6.161
+     ]
+    ],
+    "bottom": [
+     [
+      23.564,
+      -6.382,
+      -3.431,
+      3.486,
+      6.437
+     ],
+     [
+      30.758,
+      -6.198,
+      -3.246,
+      3.532,
+      6.437
+     ],
+     [
+      36.845,
+      -6.013,
+      -3.154,
+      3.578,
+      6.437
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       21.277,
+       24.348,
+       -10.809,
+       10.708
+      ],
+      [
+       26.838,
+       30.25
+      ],
+      [
+       32.694,
+       34.17
+      ]
+     ],
+     "bottom": [
+      [
+       22.134,
+       25.362,
+       -10.809,
+       10.708
+      ],
+      [
+       29.144,
+       32.279
+      ],
+      [
+       35.415,
+       38.228
+      ]
+     ]
+    },
+    "pol": {
+     "top": [
+      [
+       21.277,
+       24.348
+      ],
+      [
+       26.838,
+       30.25
+      ],
+      [
+       32.694,
+       34.17
+      ]
+     ],
+     "bottom": [
+      [
+       22.134,
+       25.362
+      ],
+      [
+       29.144,
+       32.279
+      ],
+      [
+       35.415,
+       38.228
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       21.277,
+       24.348
+      ],
+      [
+       26.838,
+       30.25
+      ],
+      [
+       32.694,
+       34.17
+      ]
+     ],
+     "bottom": [
+      [
+       22.134,
+       25.362
+      ],
+      [
+       29.144,
+       32.279
+      ],
+      [
+       35.415,
+       38.228
+      ]
+     ]
+    },
+    "tube": {
+     "top": [
+      [
+       24.348,
+       26.838
+      ],
+      [
+       30.25,
+       32.694
+      ],
+      [
+       34.17,
+       34.677
+      ]
+     ],
+     "bottom": [
+      [
+       25.362,
+       29.144
+      ],
+      [
+       32.279,
+       35.415
+      ],
+      [
+       38.228,
+       40.211
+      ],
+      [
+       40.211,
+       40.764
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 24.2,
+    "bottom": 25.25
+   },
+   "note": "Rouleaux bracelet (10.8429 px/mm, pivot (512.2, 477.5)): rows alternate between full-width tubes (kind tube) and five-segment rows (outer, pol, centre, pol, outer). Top rows from the pivot outwards (photo y): E 213.5..246.8 (between the lugs, outer columns end at x 395 / 628.3 px), tube D 186.5..213.5, C 149.5..186.5, tube B 123..149.5, A 107..123, cap strip 101.5..107; bottom: E' 717.5..752.5 (between the lugs), tube 752.5..793.5, C' 793.5..827.5, tube 827.5..861.5, A' 861.5..892, tube 892..913.5, end strip 913.5..919.5; boundaries at the dark joint lines. Joint columns (polished segments) from horizontal gradient scans on the 5-segment rows (top x 442..445 / 474.5..475.5 / 548..549 / 579..580.5, bottom 443..447 / 475..478 / 550..551 / 582)."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/breitling-chronomat42-ab0134101b1a1/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "ring_centre_mm": [
+  -0.028,
+  -0.157
+ ],
+ "pushers": {
+  "origin_mm": [
+   0.0,
+   -0.507
+  ],
+  "angles_deg": [
+   30.0,
+   -30.0
+  ],
+  "radius_mm": 2.45,
+  "neck_from_mm": 20.0,
+  "neck_radius_fraction": 0.9,
+  "r_from_mm": 22.0,
+  "fluted_to_mm": 24.4,
+  "r_to_mm": 25.1,
+  "cap_radius_fraction": 0.95,
+  "teeth": 24,
+  "flute_depth": 0.0,
+  "z": 4.2,
+  "bevel": 0.15,
+  "cap_cylinder": true,
+  "note": "two chronograph pushers: rectangular blocks, axis radial from the crown-axis point (512.2, 483) px at +-30 deg, end face 272.3 px (25.1 mm) from it (silhouette scan along the axis), 54 px wide (rounded corners), modelled as plain cylinders (r 2.45 mm)"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "note": "Pixel measurements read from references/breitling-superocean-42-a17375211b1s1/breitling-a17375211b1s1_original.webp (1024 x 1024 px, WebP with alpha, upright render, crown at 3). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]); a position read at an integer pixel index i (sampling grid) is i + 0.5. pivot = where the hour and minute axes cross (fits of the silhouette centre lines over s 14..62 / 102..130 px of the minute hand and 12..46 px of the hour hand: (511.39, 474.17) in index coordinates), i.e. at HAND height; the hub pin hole is seen 1.7 px lower (511.3, 475.7) and the bezel rings are centred 0..1 px higher or lower (parallax of the slightly tilted camera: higher parts sit higher in the photo). bezel_out_circle_px = circle fitted to the left silhouette (coin ring outer edge, rows 330..620, rms 0.24 px): centre (512.06, 473.3), r 232.15 px = 42 mm / 2 -> 11.055 px/mm. rings = radii in px about the ring centre (all within 1 px of the pivot): crystal_edge 184.0 and bezel_in 184.5 (ceramic inner edge: dark line at 186-187, fit r 186.5 about (511.8, 474.0) at the top of the ceramic; the bright rehaul lip 176-183 belongs to the dial map), dial_flat 175 (end of the cream chapter ring), insert_out 220 (ceramic ends at ~216, dark gap 217-220, coin ring 221-231.5), bezel_out 232.15 (coin tooth tips). crown box: x 742..783 (flank to cap end), y 434..519 (84.5 px = 7.6 mm tall, centre y 476.5 = 2 px below the pivot row), fluted to x ~773 then a chamfered cap; the case silhouette carries the crown guards above and below (right edge x 758 at rows 416..432 and 516..528). tip_rows_px = lug top y 218 and lug bottom y 734 (silhouette widens from the strap width 393/628 at y 217 to 386/637 at 220; at the bottom 391/632 at 732 narrows to 392/630 at 735). Strap ends y 104 (top) and 920 (bottom, rows 2 px inside). Hands (about 10:08:35, angles clockwise from 12, lengths from the pivot in px, thr-60 silhouette widths measured in rotated strips): hour 303.0 deg (blunt bar half width 10 px from s 12 to 72, chamfered point at s 81.5; tail bar to s -27.5, half width 7.9), minute 46.6 deg (shaft half width 5.3 px, rectangular lume block s 62.5..98 half 17.7, thin tip shaft half 4.9 -> 3.1 up to s 137.5), seconds 222.5 deg (white shaft half 5.2 to s 28 then 2.9 -> 2.5, red-ringed lollipop centred s 93.1 outer radius 9 / white core 6.5, thin red needle half 1.4 to s 137.6). Hub radius 9.8 px.",
+ "pivot": [512.0, 474.5],
+ "bezel_out_circle_px": [512.06, 473.32, 232.15],
+ "rings": {
+  "dial_flat": 175.0,
+  "crystal_edge": 184.0,
+  "bezel_in": 184.5,
+  "insert_out": 220.0,
+  "bezel_out": 232.15
+ },
+ "hands": {
+  "hour": {"angle_deg": 303.0, "length_px": 81.5, "tail_px": 27.5},
+  "minute": {"angle_deg": 46.6, "length_px": 137.5, "tail_px": 10.0},
+  "seconds": {"angle_deg": 222.5, "length_px": 137.6, "tail_px": 11.0}
+ },
+ "hub_r": 9.8,
+ "crown": {"x0": 742, "x1": 783, "y0": 434, "y1": 519},
+ "tip_rows_px": [218, 734]
+}
