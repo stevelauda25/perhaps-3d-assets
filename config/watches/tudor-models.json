@@ -1,0 +1,8 @@
+{
+ "note": "Model registry for pipeline/tudor_prep.py: SKU prefix (lower case, before the first dash) -> reference folder prefix, file-name prefix and case diameter (Catalog 2 size column). Royal 36/40 keep their own older prep scripts.",
+ "m2836c1a0": {"ref": "tudor-royal-36", "name": "tudor-royal36", "case_mm": 36},
+ "m2840d1a0": {"ref": "tudor-royal-40", "name": "tudor-royal40", "case_mm": 40},
+ "m79930": {"ref": "tudor-ranger-36", "name": "tudor-ranger36", "case_mm": 36},
+ "m79950": {"ref": "tudor-ranger-39", "name": "tudor-ranger39", "case_mm": 39},
+ "m79000n": {"ref": "tudor-black-bay-54", "name": "tudor-bb54", "case_mm": 37}
+}

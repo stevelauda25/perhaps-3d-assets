@@ -1,0 +1,18 @@
+{
+ "note": "Pixel measurements read from references/tudor-black-bay-54-m79000n-0001/tudor-m79000n-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (451, 653); case_edge_left_x = left edge of the coin-edge bezel on the pivot row (193; anchors the 37 mm case: 258 px = 18.5 mm, 13.946 px/mm; the photo's right edge sits at about 703 so the watch is about 3 px off-centre, the crown hides the right side); rings = radii in px from the pivot read on the 225/315 deg diagonals: dial_flat 195 (end of the printed dial / minute track), crystal_edge 206 (end of the grey rehaut ring), bezel_in 207 (start of the black insert), insert_out 249 (end of the insert, dark line), bezel_out 258 (outer edge of the steel coin-edge ring). crown box: x 703..741, y 610..693 (centre 651.5). tip_rows_px = lug top y 344 and lug bottom y 957.5 (alpha silhouette steps). Hands: axes from the hand masks (hour 302.5 deg: stem half width 7.2 px, snowflake diamond widest +-27.5 px at 82.5 px from the pivot, flat end at 116.5 px; minute 61.5 deg: half width 7 px, tip at 171 px; seconds 186.0 deg: needle, counterweight disc at 65.5 px behind the hub, lume disc at 97.5 px). Catalogue time is about 10:09:xx. There is no date window: the date box is a dummy at the pivot and unused. Template for -0002 (rubber strap): same case, bezel, crown, hands; only the strap section and the dial/strap colours differ.",
+ "pivot": [451, 653],
+ "case_edge_left_x": 193,
+ "rings": {"dial_flat": 195, "crystal_edge": 206, "bezel_in": 207, "insert_out": 249, "bezel_out": 258},
+ "hour_tip": [352.7, 590.4],
+ "minute_tip": [601.3, 571.4],
+ "seconds_tip": [433.0, 824.1],
+ "hour_tail": [467.9, 663.7],
+ "minute_tail": [433.4, 662.5],
+ "seconds_tail": [458.4, 582.4],
+ "hub_r": 18.5,
+ "hour_lume": [0.24, 0.96],
+ "minute_lume": [0.19, 0.95],
+ "crown": {"x0": 703, "x1": 741, "y0": 610, "y1": 693},
+ "date": {"x0": 451, "y0": 653, "x1": 451, "y1": 653},
+ "tip_rows_px": [344, 957]
+}

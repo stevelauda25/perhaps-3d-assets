@@ -1,0 +1,18 @@
+{
+ "note": "Pixel measurements read from references/tudor-ranger-39-m79950-0001/tudor-m79950-0001_900x1200.png (900 x 1200 photo px). pivot = hand hub hole (dark dot at 451, 615.5); case_edge_left_x = alpha edge of the case on the pivot row (anchors 39 mm, 13.795 px/mm); rings = radii in px from the pivot, measured along the 45/135/225/315 deg diagonals (dial_flat = end of the black printed dial, crystal_edge = inner end of the bright bezel top = outer end of the grey chamfer/rehaut ring, bezel_in = same edge, bezel_out = outer edge of the bright flat bezel top); tip_rows_px = case/bracelet joints (lug tops 311 and bottoms 948 by the silhouette step). Hand tips from the farthest bright pixels along the hand axes; tails (hidden under the hub for hour/minute) by assumption; the seconds hand has no counterweight, its short tail ends at about (498, 573). There is no date window: the date box is a dummy at the pivot and unused. Template (same for -0008 beige if the photo frame matches): everything except the dial map; the catalogue time is 10:09:xx for all.",
+ "pivot": [451, 615],
+ "case_edge_left_x": 182,
+ "rings": {"bezel_in": 235, "crystal_edge": 233, "dial_flat": 213, "bezel_out": 267},
+ "hour_tip": [342, 545],
+ "minute_tip": [625, 529],
+ "seconds_tip": [295, 755],
+ "hour_tail": [468, 626],
+ "minute_tail": [433, 624],
+ "seconds_tail": [498, 573],
+ "hub_r": 20,
+ "hour_lume": [0.19, 0.5],
+ "minute_lume": [0.18, 0.66],
+ "crown": {"x0": 722, "x1": 765, "y0": 578, "y1": 670},
+ "date": {"x0": 451, "y0": 615, "x1": 451, "y1": 615},
+ "tip_rows_px": [311, 948]
+}

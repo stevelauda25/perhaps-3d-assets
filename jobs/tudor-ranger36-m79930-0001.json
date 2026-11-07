@@ -1,0 +1,46 @@
+{
+ "id": "tudor-ranger36-m79930-0001",
+ "output": "outputs/jobs/tudor-ranger36-m79930-0001",
+ "asset_type": "watch",
+ "model": "TUDOR Ranger 36 M79930-0001",
+ "baseline": "First build: front relief from the catalogue photo at 36 mm, photo-map black dial with Arabic numerals, smooth bezel, sword hands, three-column steel bracelet at the photo's joints (Ranger 36 from the Ranger 39 recipe)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-ranger-36-m79930-0001/REFERENCE_PLAN.md",
+  "config/watches/tudor-ranger36-m79930-0001.json",
+  "config/watches/tudor-ranger36-m79930-0001-trace.json",
+  "config/presets/watch_kit_white_front_tudor_ranger36.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_ranger39",
+   "params": {
+    "spec": "config/watches/tudor-ranger36-m79930-0001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-ranger36-m79930-0001/tudor-ranger36-m79930-0001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_ranger36.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

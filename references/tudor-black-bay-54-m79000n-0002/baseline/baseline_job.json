@@ -1,0 +1,46 @@
+{
+ "id": "tudor-bb54-m79000n-0002",
+ "output": "outputs/jobs/tudor-bb54-m79000n-0002",
+ "asset_type": "watch",
+ "model": "TUDOR Black Bay 54 M79000N-0002",
+ "baseline": "First build: front relief from the catalogue photo at 37 mm (Black Bay 54 template of M79000N-0001: case, bezel, crown, hands, dial map), rubber strap in three sections at the photo's seams with its own non-metallic strap material",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tudor-black-bay-54-m79000n-0002/REFERENCE_PLAN.md",
+  "config/watches/tudor-bb54-m79000n-0002.json",
+  "config/watches/tudor-bb54-m79000n-0002-trace.json",
+  "config/presets/watch_kit_white_front_tudor_bb54.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_tudor_bb54_rubber",
+   "params": {
+    "spec": "config/watches/tudor-bb54-m79000n-0002.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/tudor-bb54-m79000n-0002/tudor-bb54-m79000n-0002.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_tudor_bb54.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

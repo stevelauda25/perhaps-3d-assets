@@ -1,0 +1,439 @@
+{
+ "model": "TUDOR Black Bay 54 M79000N-0002 (37 mm steel, black dial, rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Same case, bezel, crown, hands and dial map as M79000N-0001 (the photos register to the pixel); only the strap differs: black rubber strap in three vertical sections (strap.kind rubber), own non-metallic strap_photo material.",
+ "trace": "config/watches/tudor-bb54-m79000n-0002-trace.json",
+ "dial_map": "outputs/watches/tudor-bb54-m79000n-0002/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 37.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (the lugs rise above the round bezel); top slopes toward the strap",
+  "tip_top": 22.0,
+  "tip_bottom": 21.75
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.5,
+  "chamfer_mm": 0.3,
+  "round_mm": 0.3,
+  "note": "steel coin-edge ring (bezel_in..bezel_out) around the black insert (bezel_in..insert_out); numerals, markers and triangle come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.29
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -1.2,
+     0.55
+    ],
+    [
+     4.3,
+     0.55
+    ],
+    [
+     4.374,
+     0.598
+    ],
+    [
+     4.876,
+     1.064
+    ],
+    [
+     5.306,
+     1.53
+    ],
+    [
+     5.808,
+     2.032
+    ],
+    [
+     5.952,
+     2.032
+    ],
+    [
+     6.454,
+     1.53
+    ],
+    [
+     6.884,
+     1.064
+    ],
+    [
+     7.314,
+     0.634
+    ],
+    [
+     7.386,
+     0.598
+    ],
+    [
+     8.357,
+     0.598
+    ]
+   ],
+   "minute": [
+    [
+     -1.2,
+     0.4
+    ],
+    [
+     1.3,
+     0.3
+    ],
+    [
+     2.2,
+     0.56
+    ],
+    [
+     11.33,
+     0.56
+    ],
+    [
+     11.62,
+     0.45
+    ],
+    [
+     11.94,
+     0.24
+    ],
+    [
+     12.263,
+     0.0
+    ]
+   ],
+   "seconds": [
+    [
+     -5.09,
+     0.1
+    ],
+    [
+     -4.98,
+     0.3
+    ],
+    [
+     -4.7,
+     0.46
+    ],
+    [
+     -4.42,
+     0.3
+    ],
+    [
+     -4.3,
+     0.13
+    ],
+    [
+     0.0,
+     0.13
+    ],
+    [
+     6.2,
+     0.13
+    ],
+    [
+     6.35,
+     0.4
+    ],
+    [
+     6.55,
+     0.58
+    ],
+    [
+     6.78,
+     0.7
+    ],
+    [
+     6.99,
+     0.74
+    ],
+    [
+     7.2,
+     0.7
+    ],
+    [
+     7.43,
+     0.58
+    ],
+    [
+     7.63,
+     0.4
+    ],
+    [
+     7.78,
+     0.13
+    ],
+    [
+     12.337,
+     0.0
+    ]
+   ]
+  },
+  "lume": {
+   "hour": [
+    [
+     2.008,
+     0.108
+    ],
+    [
+     4.517,
+     0.108
+    ],
+    [
+     4.661,
+     0.165
+    ],
+    [
+     5.019,
+     0.516
+    ],
+    [
+     5.378,
+     0.896
+    ],
+    [
+     5.736,
+     1.233
+    ],
+    [
+     5.916,
+     1.398
+    ],
+    [
+     6.095,
+     1.241
+    ],
+    [
+     6.454,
+     0.882
+    ],
+    [
+     6.812,
+     0.523
+    ],
+    [
+     7.171,
+     0.179
+    ],
+    [
+     7.386,
+     0.108
+    ],
+    [
+     7.995,
+     0.108
+    ]
+   ],
+   "minute": [
+    [
+     2.29,
+     0.197
+    ],
+    [
+     11.5,
+     0.197
+    ],
+    [
+     11.61,
+     0.1
+    ]
+   ],
+   "seconds": [
+    [
+     6.49,
+     0.0
+    ],
+    [
+     6.557,
+     0.25
+    ],
+    [
+     6.74,
+     0.433
+    ],
+    [
+     6.99,
+     0.5
+    ],
+    [
+     7.24,
+     0.433
+    ],
+    [
+     7.423,
+     0.25
+    ],
+    [
+     7.49,
+     0.0
+    ]
+   ]
+  },
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, 0.06 mm wider than the photographed hands so the 3D hands hide the ones in the map; the last point sits at the traced length. lume = +w side outline [s, w] of the lume polygon, mirrored about the axis (hour: stem strip + snowflake diamond, minute: strip, seconds: disc). Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 22,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 20.36,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.7,
+  "base_chamfer_mm": 0.3,
+  "note": "no crown guards on the Black Bay 54"
+ },
+ "strap": {
+  "kind": "rubber",
+  "note": "strap.kind rubber: left / centre / right sections at the photo's joint lines (centre_x_mm = [|y|, left x, right x] of the two vertical seams), measured on the -0002 photo (13.946 px/mm about the pivot (451, 653)): side sections start on the lug tops (top y 345.5, bottom 957.5), the centre section runs over the case end piece to y 372.5 (top) / 930 (bottom) and carries z above the case ramp (lift). Ends at the alpha silhouette (top 213/215, bottom 1123/1121).",
+  "rubber": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_side": 3.3,
+   "z_centre": 3.4,
+   "lift": 0.15,
+   "bevel": 0.25,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.3,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "centre_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.481,
+      4.267
+     ],
+     [
+      40.0,
+      -4.481,
+      4.267
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.446,
+      4.231
+     ],
+     [
+      19.0,
+      -4.446,
+      4.231
+     ],
+     [
+      33.7,
+      -4.374,
+      4.123
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "side": {
+     "top": [
+      [
+       22.0,
+       31.45
+      ]
+     ],
+     "bottom": [
+      [
+       21.75,
+       33.55
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       20.11,
+       31.55
+      ]
+     ],
+     "bottom": [
+      [
+       19.86,
+       33.65
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 22.5,
+    "bottom": 22.3
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/tudor-bb54-m79000n-0002/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.31
+ }
+}
