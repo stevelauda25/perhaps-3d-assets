@@ -1,0 +1,148 @@
+{
+ "note": "Pixel measurements read from references/patek-aquanaut-5168g-green/patek-5168g-green_original.png (1920 x 2691 RGBA PNG, the watch occupies x 329..1698, y 384..2554, i.e. 1370 x 2171 px incl. the crown; ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES, pixel i spans [i, i+1]). Pivot = the centre of the white seconds hub disc (chord scans: x 938..980 on row 1354, y 1336..1372 on column 950 -> (959.0, 1354.5)); the seconds shaft centre line passes through it within 0.1 px, the hour / minute lume centre lines within 1.5 px (hour left, minute right: camera tilt). Scale: 42.2 mm = left flank of the case (rows 1325..1385, x 329) to the notch wall of the crown (2 x pivot x - flank = 1588.5), pivot in the middle: S = (959 - flank) / 21.1. Bezel / case outline: a superellipse centred (959, 1354.75), half axes (959 - flank) x 622.25, exponent 2.25 (checked on the silhouette at rows 1100, 1150, 1200, 1500, 1600 within 3 px); the outer edge of the polished band meets the strap at row 732.5 (top, x 959) and 1977 (bottom): the polished band is about 40 px wide all round, brushed face inside it. Window (rounded square) edge scanned in the prep like the 5167A (bright run of >= 75 px, threshold 150; at x 880 the window edge is at row 872 (top) and 1825 (bottom), at row 1354 at x 484 (left)); polished chamfer about 14 px. Hands (about 10:09:30): hour 302.6 deg (lume centre-line fit, thr 205; frame half width 27.7, lume half 15.5 from s 87 to 272, chamfer to the arrow apex at s 310; centre -1.6), minute 50.6 deg (frame half width 26, lume half 14.5 from s 80 to 395, apex s 437), seconds 180.28 deg (shaft half width 2.7, tip s 448 inside the 6 o'clock index, counterweight tail to s 153, half width 13 at its end); hub: hour-hand base disc radius 40, white seconds hub disc radius 21. Crown: 3 o'clock, fluted cylinder, rows 1273..1440 (radius 83.5, axis y 1356.5), notch wall at the case width line (x 1588.5), tip x 1698.9 (axial 116 px); the guard shoulder right of the bezel (x 1590..1646, rows 1100..1272 and 1440..) is part of the case silhouette. Lugs: top corners start at row 612 (silhouette steps wider than the strap), bottom lug tips end at row 2120; strap inner walls (green / white-gold saturation scan, rows 620..720 top: left 624 -> 620, right 1288 -> 1295, so the strap flares to the case; rows 1980..2110 bottom: left 626 -> 628, right 1300 -> 1296); strap ends rounded (silhouette rows 384 top, 2554 bottom).",
+ "case_mm": 42.2,
+ "pivot": [
+  959.0,
+  1354.5
+ ],
+ "anchor": {
+  "rows": [
+   1325,
+   1385
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 1273,
+   "y1": 1440,
+   "x0": "case_width",
+   "x1": "case_width"
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   959.0,
+   1354.75
+  ],
+  "half_x_px": 629.83,
+  "half_y_px": 622.25,
+  "exponent": 2.25
+ },
+ "aperture": {
+  "bright_thr": 150,
+  "min_run_px": 75,
+  "r_start_px": 420,
+  "r_end_px": 760,
+  "median_half": 12,
+  "mean_half": 4,
+  "chamfer_px": 14
+ },
+ "strap_inner_px": {
+  "top_lug_row": 612,
+  "bezel_top_row": 810,
+  "bezel_bottom_row": 1900,
+  "bottom_lug_row": 2120,
+  "top": [
+   625.5,
+   1287.0
+  ],
+  "top_end": [
+   619.5,
+   1298.5
+  ],
+  "bottom": [
+   626.0,
+   1301.0
+  ],
+  "bottom_end": [
+   628.5,
+   1296.0
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 302.6,
+   "length_px": 310.0,
+   "tail_px": 0.0
+  },
+  "minute": {
+   "angle_deg": 50.6,
+   "length_px": 437.0,
+   "tail_px": 0.0
+  },
+  "seconds": {
+   "angle_deg": 180.28,
+   "length_px": 448.0,
+   "tail_px": 153.0
+  }
+ },
+ "hub_r_px": [
+  40.0,
+  21.0
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1583.0,
+    1356.5
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0,
+     0
+    ],
+    [
+     83,
+     0
+    ],
+    [
+     83,
+     86
+    ],
+    [
+     79,
+     90
+    ],
+    [
+     70,
+     94
+    ],
+    [
+     58,
+     97
+    ],
+    [
+     46,
+     102.5
+    ],
+    [
+     40,
+     105.6
+    ],
+    [
+     34,
+     112.5
+    ],
+    [
+     28,
+     114.5
+    ],
+    [
+     22,
+     115.6
+    ],
+    [
+     0,
+     116
+    ]
+   ]
+  }
+ ],
+ "tip_rows_px": [
+  612.0,
+  2120.0
+ ]
+}

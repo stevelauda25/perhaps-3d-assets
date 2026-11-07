@@ -1,0 +1,60 @@
+{
+ "note": "Pixel measurements read from references/patek-calatrava-6007g-blue/patek-6007g-blue_original.png (1920 x 2691 px RGBA PNG, upright studio render with a slight camera tilt, black leather strap with blue stitching and blue lining, crown at 3, date window at 3, blue sweep seconds hand pointing at 30 s). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]), NATIVE photo pixels (no 2x copy). bezel_out_circle_px = least-squares circle through the silhouette edge of the case sides (left rows 1180..1395, both sides rows 1090..1180 and 1395..1470, crown rows excluded, residual +-1 px): centre (956.50, 1271.23), r 626.35 px = 40 mm / 2 -> 31.3175 px/mm. The case top edge (x 957, y 649) and bottom edge (y 1888) agree with that circle within 3 px. pivot = centre of the blue seconds-hand hub disc (x 931..988 -> 959.5, y rows 1232..1286 -> 1258.5, r 28.5; the pointer axis crosses y 1258.3 at x 960.4) -> (960.0, 1258.3). The bezel inner edge (first bright radius after the dark minute track) is a circle (956.9, 1256.9) r 494.7 px (rms 2.5 px, the edge carries numerals), so the bezel / crystal / dial lathes are centred there (ring_centre_mm). rings (px about the ring centre): dial_flat 487 (a thin bright rehaut ring 487..494.7), crystal_edge = bezel_in 494.7, bezel_out 608 (the polished bezel reaches the case top edge at y 649 = 1256.9 - 608; the bottom edge sits 23 px farther out because of the camera tilt, that band belongs to the case slab). Hour hand (about 10:09): angle 305.447 deg clockwise from 12, centre line = the lume strip (lume s 42..258 px) 2.62 px left of the pivot, dark body tapering from half width 25.6 px at s 40 to 19.0 at the flat tip s 284.5, tail to s -106.5 (half width 16.5..17.5). Minute hand: 53.404 deg, lume centre line 0.09 px off the pivot, half width 23.7 at s 40, 19.5 at 232, 15.2 at the flat tip s 424.5, tail to -106.5. Seconds hand (blue, no lume): axis 179.47 deg (pointing down, 0.53 deg toward the right of 6), pointer half width 2.3 px from the hub to s 481 (y 1739), hub disc r 28.5, tail half width 13.4 px to s -150.8 (y 1107.5, rounded corners); the dark gunmetal hub cap around the blue disc has r about 36 px. Crown: box x 1577 (case edge) .. 1657 (cap end), y 1189.5..1377 (187.5 px = 5.99 mm, centre y 1283.3, 25 px below the pivot row because of the camera tilt), about 20 flutes, rounded cap from x 1646. lug tops y 547.5 (silhouette widens), lug bottoms y 2052 (silhouette back to strap width at row 2056); strap 613..1286 at row 544 (21.5 mm), 620..1301 at row 2060; strap ends y 309 (top, 588 px wide at row 359) and 2557 (bottom); leather lower end y about 668 (top), leather upper end y about 1917 (bottom); the transparent pockets between a lug and the blue lining are rows 670..750 (top) and 1830..1917 (bottom) with lug inner edges x 611 / 1288 (top) and 620 / 1299 (bottom).",
+ "pivot": [
+  960.0,
+  1258.3
+ ],
+ "bezel_out_circle_px": [
+  956.5,
+  1271.23,
+  626.35
+ ],
+ "rings": {
+  "dial_flat": 487.0,
+  "crystal_edge": 494.7,
+  "bezel_in": 494.7,
+  "bezel_out": 608.0
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.447,
+   "length_px": 284.5,
+   "tail_px": 106.5
+  },
+  "minute": {
+   "angle_deg": 53.404,
+   "length_px": 424.5,
+   "tail_px": 106.5
+  }
+ },
+ "hub_r": 36.0,
+ "crown": {
+  "x0": 1577,
+  "x1": 1657,
+  "y0": 1189.5,
+  "y1": 1377
+ },
+ "mirror_rows_px": [
+  [
+   1186,
+   1380
+  ]
+ ],
+ "mirror_axis_x_px": 956.5,
+ "tip_rows_px": [
+  547.5,
+  2052
+ ],
+ "pocket_rows_px": {
+  "top": [
+   660,
+   765
+  ],
+  "bottom": [
+   1820,
+   1925
+  ]
+ },
+ "pocket_min_gap_px": 8,
+ "cutter_extend_px": 3.0
+}

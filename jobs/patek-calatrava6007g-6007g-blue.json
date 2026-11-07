@@ -1,0 +1,46 @@
+{
+ "id": "patek-calatrava6007g-6007g-blue",
+ "output": "outputs/jobs/patek-calatrava6007g-6007g-blue",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Calatrava 6007G blue",
+ "baseline": "First build (Patek Philippe Calatrava 6007G template): front relief from the catalogue photo at 40 mm (Navitimer structure with Calatrava measurements: smooth polished bezel, crown, dark batons, blue sweep seconds hand polygon, one-piece leather strap with lining and pockets)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-calatrava-6007g-blue/REFERENCE_PLAN.md",
+  "config/watches/patek-calatrava6007g-6007g-blue.json",
+  "config/watches/patek-calatrava6007g-6007g-blue-trace.json",
+  "config/presets/watch_kit_white_front_patek_calatrava6007g.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_calatrava6007g",
+   "params": {
+    "spec": "config/watches/patek-calatrava6007g-6007g-blue.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-calatrava6007g-6007g-blue/patek-calatrava6007g-6007g-blue.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_calatrava6007g.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

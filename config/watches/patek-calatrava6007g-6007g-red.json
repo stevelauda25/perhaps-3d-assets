@@ -1,0 +1,443 @@
+{
+ "model": "PATEK PHILIPPE Calatrava 6007G red (40 mm white gold, black and red dial, black leather strap with red stitching and red lining)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). CALATRAVA 6007G template (structure of the Breitling Navitimer 41 build, watch_patek_calatrava6007g step): smooth polished domed bezel (bezel.profile_rz_mm), crown without guards, dark gunmetal hour / minute batons with lume strips (projected photo), red central seconds hand as one polygon (tail, hub disc, pointer) over a dark hub cap, one-piece leather strap with a red lining (case slab carries the lining pixels, pockets cut). This is the red variant (row 81): the blue build's spec with the red-photo paths; geometry measured identical, emissions re-tuned for red.",
+ "trace": "config/watches/patek-calatrava6007g-6007g-red-trace.json",
+ "dial_map": "outputs/watches/patek-calatrava6007g-6007g-red/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0
+ },
+ "case": {
+  "body_z": 8.0,
+  "tip_z": 3.6,
+  "ramp_from_y": 16.5,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 547.5 / bottoms y 2052 px, case circle r 20 mm); top and bottom slope toward the strap",
+  "tip_top": 22.75,
+  "tip_bottom": 25.25
+ },
+ "bezel": {
+  "z0": 7.6,
+  "profile_rz_mm": [
+   [
+    15.8,
+    8.7
+   ],
+   [
+    15.95,
+    9.2
+   ],
+   [
+    16.6,
+    9.6
+   ],
+   [
+    17.6,
+    9.85
+   ],
+   [
+    18.5,
+    9.65
+   ],
+   [
+    19.1,
+    9.1
+   ],
+   [
+    19.41,
+    8.4
+   ]
+  ],
+  "note": "polished domed bezel: top profile [r mm about the ring centre, z] from the crystal edge (15.8 mm) to the outer edge (19.41 mm), z0 = bottom"
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.8,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.2,
+  "rehaut_z": 8.2,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.31
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.5,
+   "minute": 7.75,
+   "seconds": 8.05
+  },
+  "profile": {
+   "hour": [
+    [
+     -3.401,
+     0.591
+    ],
+    [
+     -1.597,
+     0.559
+    ],
+    [
+     -1.213,
+     0.734
+    ],
+    [
+     1.277,
+     0.849
+    ],
+    [
+     3.193,
+     0.817
+    ],
+    [
+     4.79,
+     0.766
+    ],
+    [
+     6.386,
+     0.725
+    ],
+    [
+     7.663,
+     0.683
+    ],
+    [
+     9.084,
+     0.639
+    ]
+   ],
+   "minute": [
+    [
+     -3.401,
+     0.588
+    ],
+    [
+     -1.597,
+     0.556
+    ],
+    [
+     -1.213,
+     0.734
+    ],
+    [
+     1.277,
+     0.789
+    ],
+    [
+     7.408,
+     0.655
+    ],
+    [
+     11.016,
+     0.581
+    ],
+    [
+     13.555,
+     0.517
+    ]
+   ]
+  },
+  "lume": {},
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, measured in rotated strips about each hand's lume centre line (edges where the grey falls below 50, see the measure file), 1 px wider than the photographed hands so the 3D hands hide them; flat tips (last point = traced length). offset_mm shifts the whole hand perpendicular to its axis (the lume centre line passes 2.62 px left of the hub centre for the hour hand). The seconds hand (red here, same geometry as the blue build) is the free polygon hands.polygons.seconds (mm about the pivot): tail 4.8 mm, hub disc r 0.91 mm, pointer half width 0.073 mm to 15.36 mm at 179.47 deg.",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.34,
+  "offset_mm": {
+   "hour": [
+    -0.0485,
+    -0.0682
+   ],
+   "minute": [
+    0.0017,
+    -0.0023
+   ]
+  },
+  "hub": {
+   "z_top": 8.0
+  },
+  "polygons": {
+   "seconds": {
+    "z": 8.05,
+    "thick": 0.12,
+    "outline_mm": [
+     [
+      0.269,
+      4.818
+     ],
+     [
+      0.359,
+      4.78
+     ],
+     [
+      0.398,
+      4.691
+     ],
+     [
+      0.434,
+      0.807
+     ],
+     [
+      0.434,
+      0.807
+     ],
+     [
+      0.557,
+      0.729
+     ],
+     [
+      0.667,
+      0.633
+     ],
+     [
+      0.76,
+      0.52
+     ],
+     [
+      0.834,
+      0.394
+     ],
+     [
+      0.886,
+      0.258
+     ],
+     [
+      0.916,
+      0.115
+     ],
+     [
+      0.923,
+      -0.031
+     ],
+     [
+      0.906,
+      -0.177
+     ],
+     [
+      0.866,
+      -0.317
+     ],
+     [
+      0.805,
+      -0.45
+     ],
+     [
+      0.722,
+      -0.57
+     ],
+     [
+      0.622,
+      -0.677
+     ],
+     [
+      0.506,
+      -0.765
+     ],
+     [
+      0.377,
+      -0.834
+     ],
+     [
+      0.239,
+      -0.882
+     ],
+     [
+      0.095,
+      -0.906
+     ],
+     [
+      0.229,
+      -15.358
+     ],
+     [
+      0.082,
+      -15.359
+     ],
+     [
+      -0.052,
+      -0.908
+     ],
+     [
+      -0.196,
+      -0.886
+     ],
+     [
+      -0.335,
+      -0.841
+     ],
+     [
+      -0.465,
+      -0.774
+     ],
+     [
+      -0.583,
+      -0.688
+     ],
+     [
+      -0.685,
+      -0.583
+     ],
+     [
+      -0.77,
+      -0.464
+     ],
+     [
+      -0.834,
+      -0.333
+     ],
+     [
+      -0.876,
+      -0.193
+     ],
+     [
+      -0.896,
+      -0.048
+     ],
+     [
+      -0.892,
+      0.098
+     ],
+     [
+      -0.864,
+      0.241
+     ],
+     [
+      -0.814,
+      0.379
+     ],
+     [
+      -0.743,
+      0.506
+     ],
+     [
+      -0.652,
+      0.621
+     ],
+     [
+      -0.544,
+      0.719
+     ],
+     [
+      -0.422,
+      0.799
+     ],
+     [
+      -0.422,
+      0.799
+     ],
+     [
+      -0.458,
+      4.683
+     ],
+     [
+      -0.421,
+      4.773
+     ],
+     [
+      -0.331,
+      4.812
+     ]
+    ]
+   }
+  },
+  "discs": []
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.25,
+  "z": 4.0,
+  "cap_radius_fraction": 0.93,
+  "fluted_to_mm": 21.905,
+  "bevel": 0.2,
+  "neck_radius_fraction": 0.85,
+  "base_chamfer_mm": 0.3,
+  "note": "crown without guards: box x 1577..1657 px, y 1189.5..1377 px (radius 2.99 mm, centre 0.8 mm below the pivot row), about 20 flutes to x 1646 px, then a rounded cap"
+ },
+ "strap": {
+  "kind": "leather",
+  "note": "strap.kind leather: ONE flat section (black embossed leather with red stitching, texture = the projected photo) from its photographed ends at the bezel (top y 668, bottom y 1917 px; pieces_mm) to the alpha ends (top y 309, bottom y 2557 px); outline = the silhouette rows beyond edge_from (strap-wide); the strap narrows toward the rounded ends. The red lining under the strap between the lugs is in the case slab (silhouette rows) with the transparent pockets cut out.",
+  "leather": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_strap": 3.4,
+   "lift": 0.15,
+   "bevel": 0.12,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "emission": 0.23,
+   "roughness": 0.8,
+   "specular": 0.0,
+   "pieces_mm": {
+    "strap": {
+     "top": [
+      [
+       18.85,
+       30.25
+      ]
+     ],
+     "bottom": [
+      [
+       21.03,
+       41.25
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 22.75,
+    "bottom": 25.5
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/patek-calatrava6007g-6007g-red/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.275
+ },
+ "ring_centre_mm": [
+  -0.099,
+  0.045
+ ]
+}

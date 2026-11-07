@@ -1,0 +1,144 @@
+{
+ "note": "Pixel measurements read from references/patek-calatrava-weekly-calendar-5212a/patek-5212a_original.png (1920 x 2691 px RGBA PNG, upright studio render, camera tilt about 6 px between the hand pivot and the dial / bezel circles, brown leather strap with white stitching, cream dial with day, week-number and month rings, date window at 3, crown at 3). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]), NATIVE photo pixels (no 2x copy). bezel_out_circle_px = least-squares circle through the silhouette edge of the case sides (left rows 1000..1700, right rows 1000..1180 and 1500..1700, crown rows excluded, residual std 0.5 px): centre (957.85, 1378.20), r 630.46 px = 40 mm / 2 -> 31.523 px/mm. The bezel step line (a clean dark circle, rms 0.6 px) has centre (957.94, 1378.56) r 536.3 px and the outer chamfer start (958.8, 1372.0) r 601.6 px: the case, bezel and dial circles are about 3 to 6 px apart vertically (camera tilt); ring centre (958.5, 1375.5). rings (px about the ring centre): dial_flat 500, crystal_edge = bezel_in 507 (dial print ends about r 505, the bezel inner slope 508..528 reads grey 177), flat 528..536, step 536..541, upper flat to 602, outer chamfer 602..622, case lip 622..630; bezel_out 624 (stays inside the case silhouette by the 2.7 px ring-centre offset). pivot = centre of the hub cap disc (screw at (958.3, 1368.3), cap radius about 21.5 px) -> (958.3, 1368.7). hands5212a: strip fits (see pipeline/patek_calatrava5212a_polys.py): hour 304.5 deg, minute about 59.5 deg (blade to s 397), month needle 0.5 deg to the 12 index (s 395), day needle 154.5 deg to its red tip (s 213), week needle 223.5 deg to its red tip (s 410), spade hand 180.5 deg (tip s 157). Crown: box x 1577 (case edge) .. 1646.5 (cap end), y 1286..1471 (185 px = 5.87 mm, centre y 1378.5 = the case circle centre row), about 14 flutes, rounded cap from x 1633. lug tops y 632 (silhouette widens at row 632), lug bottoms y 2143; strap 649..1264 at row 622 (19.5 mm), 648..1272 at row 2150; strap ends y 428 (top) and 2559 (bottom); leather lower end y about 750 (top), leather upper end y about 2000 (bottom); the transparent pockets between a lug and the pink lining are rows 745..840 (top) and 1925..2010 (bottom) with lug inner edges x about 641 / 1271 (top) and 645 / 1274 (bottom).",
+ "pivot": [
+  958.3,
+  1368.7
+ ],
+ "bezel_out_circle_px": [
+  957.85,
+  1378.2,
+  630.46
+ ],
+ "rings": {
+  "dial_flat": 500.0,
+  "crystal_edge": 507.0,
+  "bezel_in": 507.0,
+  "bezel_out": 624.0
+ },
+ "hands": {},
+ "hub_r": 21.5,
+ "crown": {
+  "x0": 1577.0,
+  "x1": 1646.5,
+  "y0": 1286.0,
+  "y1": 1471.0
+ },
+ "mirror_rows_px": [
+  [
+   1284,
+   1475
+  ]
+ ],
+ "mirror_axis_x_px": 957.85,
+ "tip_rows_px": [
+  632,
+  2143
+ ],
+ "pocket_rows_px": {
+  "top": [
+   740,
+   845
+  ],
+  "bottom": [
+   1920,
+   2012
+  ]
+ },
+ "pocket_min_gap_px": 8,
+ "cutter_extend_px": 3.0,
+ "hands5212a": {
+  "needles": {
+   "hour": {
+    "theta": 304.5,
+    "thr": 185,
+    "fit": [
+     45,
+     235
+    ],
+    "s_a": 20,
+    "s_b": 256,
+    "z": 7.5
+   },
+   "minute": {
+    "theta": 59.5,
+    "thr": 185,
+    "fit": [
+     45,
+     290
+    ],
+    "s_a": 20,
+    "s_b": 397,
+    "z": 7.7
+   },
+   "month": {
+    "theta": 0.5,
+    "thr": 165,
+    "fit": [
+     45,
+     295
+    ],
+    "s_a": 18,
+    "s_b": 395,
+    "z": 7.85
+   },
+   "day": {
+    "theta": 154.5,
+    "thr": 165,
+    "fit": [
+     55,
+     205
+    ],
+    "s_a": 18,
+    "s_b": 213,
+    "z": 7.8
+   },
+   "week": {
+    "theta": 223.5,
+    "thr": 165,
+    "fit": [
+     55,
+     400
+    ],
+    "s_a": 18,
+    "s_b": 410,
+    "z": 7.9
+   }
+  },
+  "spade": {
+   "theta": 180.5,
+   "thr": 185,
+   "fit": [
+    55,
+    162
+   ],
+   "lin_to": 100,
+   "s_a": 20,
+   "tip_from": 146,
+   "z": 7.6
+  },
+  "hub_star_r_px": 66,
+  "hub_star_z": 7.4,
+  "red_tips": {
+   "day": [
+    1052,
+    1565,
+    45
+   ],
+   "week": [
+    674,
+    1666,
+    40
+   ]
+  },
+  "red_tip_z": {
+   "day": 7.83,
+   "week": 7.93
+  },
+  "index_r_px": [
+   285,
+   420
+  ],
+  "index_z": 7.2,
+  "index_thick": 0.15
+ }
+}

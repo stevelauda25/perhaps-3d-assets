@@ -1,0 +1,46 @@
+{
+ "id": "patek-aquanaut42-5168g-blue",
+ "output": "outputs/jobs/patek-aquanaut42-5168g-blue",
+ "asset_type": "watch",
+ "model": "PATEK PHILIPPE Aquanaut 5168G (white gold, blue embossed dial, blue rubber strap)",
+ "baseline": "First build: front relief from the 1920 x 2691 catalogue photo at 42.2 mm, follower of the 5168G green build (step unchanged, own prep copy with hand centre-line offsets, own measure / spec / kit scale)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/patek-aquanaut-5168g-blue/REFERENCE_PLAN.md",
+  "config/watches/patek-aquanaut42-5168g-blue.json",
+  "config/watches/patek-aquanaut42-5168g-blue-trace.json",
+  "config/presets/watch_kit_white_front_patek_aquanaut42_blue.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_patek_aquanaut40",
+   "params": {
+    "spec": "config/watches/patek-aquanaut42-5168g-blue.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/patek-aquanaut42-5168g-blue/patek-aquanaut42-5168g-blue.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_patek_aquanaut42_blue.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "note": "Pixel measurements read from references/patek-aquanaut-5168g-blue/patek-5168g-blue_original.png (1920 x 2691 RGBA PNG, the watch occupies x 332..1696, y 392..2553; ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES, pixel i spans [i, i+1]). Same studio render family as the green 5168G but NOT the same pose: the blue watch is about 0.4 % smaller, the hub sits 20 px higher in the frame and the parts at different heights are shifted against each other by up to ~20 px (lug tips 24.25 / 26.5 mm from the hub instead of 24.75 / 25.75, crown axis 15 px below the hub, strap ends 31.5 / 40.7 mm), so every pixel value below is re-measured on this photo. Pivot = centre of the white seconds hub disc (circle fit on the 205 grey level edge, 86 points, residual 0.17 px): (959.56, 1334.86), radius 21.0. Scale: left flank of the case (median alpha edge rows 1308..1368 = 332.49) is 21.1 mm from the pivot (the notch wall of the crown lies at 2 x pivot x - flank = 1586.6): S = 29.719 px/mm. Bezel outer superellipse: polished band meets the strap at row 717.5 (top) and 1959.0 (bottom) on columns 940..980, so centre y 1338.25, half axes 627.07 x 620.75, exponent 2.25 (green template, cut back to the silhouette). Hands (about 10:09:30): lume centre-line fit (thr 205, rows rotated about the pivot): hour 303.58 deg, centre line 3.69 px LEFT of the pivot, minute 51.08 deg, 2.61 px right, seconds 179.51 deg (thr 150 shaft fit), 0.5 px left; lengths / tail are the green's mm values times this scale (same hand set, tips not visible separately because of the numerals). Crown: rows 1267..1434 (silhouette steps), axis y 1350.5, tip x 1696.6, base 5.8 px inside the notch wall, profile = green's x 0.9956. Lugs: top corners start at row 617, bottom tips end at row 2124. Strap inner walls (blue minus red > 22 mask): top rows 640..750 left 631 -> 625, right 1298 -> 1295, bottom rows 1930..2040 constant 630 / 1300 then taper to 636 / 1294 at row 2120; written as straight lines between two points (top_end at row 810, bottom at row 1880).",
+ "case_mm": 42.2,
+ "pivot": [
+  959.56,
+  1334.86
+ ],
+ "anchor": {
+  "rows": [
+   1308,
+   1368
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 1267,
+   "y1": 1434,
+   "x0": "case_width",
+   "x1": "case_width"
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   959.56,
+   1338.25
+  ],
+  "half_x_px": 627.07,
+  "half_y_px": 620.75,
+  "exponent": 2.25
+ },
+ "aperture": {
+  "bright_thr": 150,
+  "min_run_px": 75,
+  "r_start_px": 420,
+  "r_end_px": 760,
+  "median_half": 12,
+  "mean_half": 4,
+  "chamfer_px": 14
+ },
+ "strap_inner_px": {
+  "top_lug_row": 617,
+  "bezel_top_row": 810,
+  "bezel_bottom_row": 1880,
+  "bottom_lug_row": 2124,
+  "top": [
+   632.2,
+   1298.7
+  ],
+  "top_end": [
+   622.5,
+   1292.9
+  ],
+  "bottom": [
+   629.5,
+   1300.5
+  ],
+  "bottom_end": [
+   637.5,
+   1292.5
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 303.58,
+   "length_px": 308.6,
+   "tail_px": 0.0,
+   "offset_px": -3.69
+  },
+  "minute": {
+   "angle_deg": 51.08,
+   "length_px": 435.1,
+   "tail_px": 0.0,
+   "offset_px": 2.61
+  },
+  "seconds": {
+   "angle_deg": 179.51,
+   "length_px": 446.0,
+   "tail_px": 152.3,
+   "offset_px": -0.5
+  }
+ },
+ "hub_r_px": [
+  39.8,
+  21.0
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1580.8,
+    1350.5
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     83.4,
+     0.0
+    ],
+    [
+     83.4,
+     85.6
+    ],
+    [
+     78.7,
+     89.6
+    ],
+    [
+     69.7,
+     93.6
+    ],
+    [
+     57.7,
+     96.6
+    ],
+    [
+     45.8,
+     102.1
+    ],
+    [
+     39.8,
+     105.1
+    ],
+    [
+     33.9,
+     112.0
+    ],
+    [
+     27.9,
+     114.0
+    ],
+    [
+     21.9,
+     115.1
+    ],
+    [
+     0.0,
+     115.5
+    ]
+   ]
+  }
+ ],
+ "tip_rows_px": [
+  617.0,
+  2124.0
+ ]
+}
