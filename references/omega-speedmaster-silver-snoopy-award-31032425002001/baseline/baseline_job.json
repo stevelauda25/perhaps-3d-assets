@@ -1,0 +1,46 @@
+{
+ "id": "omega-snoopy-31032425002001",
+ "output": "outputs/jobs/omega-snoopy-31032425002001",
+ "asset_type": "watch",
+ "model": "OMEGA Speedmaster Silver Snoopy Award 50th Anniversary Co-Axial Master Chronometer Chronograph 42 mm 310.32.42.50.02.001",
+ "baseline": "First build, follower of the Omega Moonwatch template (310.30.42.50.01.001): front relief from the catalogue photo at 42 mm (white / silver dial with blue sub-dials and the Snoopy engraving, blue tachymeter bezel, baton hands with white lume, chrono seconds hand with a lume diamond, three sub-dials with hands and hubs, fluted crown, two pushers at +24.4 / -24.9 deg, twisted lugs in the silhouette, one-piece blue NYLON strap as a non-metallic photo-projected strap)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/omega-speedmaster-silver-snoopy-award-31032425002001/REFERENCE_PLAN.md",
+  "config/watches/omega-snoopy-31032425002001.json",
+  "config/watches/omega-snoopy-31032425002001-trace.json",
+  "config/presets/watch_kit_white_front_omega_snoopy.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_omega_snoopy",
+   "params": {
+    "spec": "config/watches/omega-snoopy-31032425002001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/omega-snoopy-31032425002001/omega-snoopy-31032425002001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_omega_snoopy.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

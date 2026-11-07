@@ -1,0 +1,125 @@
+{
+ "note": "Pixel measurements read from references/audemars-royal-oak-offshore-diver-15720st-blue/audemars-15720st-blue_1200x1626.png (1200 x 1626 PNG with alpha; watch x 438..783, y 577..1083). CONTINUOUS PHOTO COORDINATES. FOLLOWER of the green Offshore Diver: the blue catalogue render is the same watch rendered 0.9 px right and 0.72 px higher (ECC translation fits on the hub, the three hands, all eight screws, both crowns, the case flanks and the bezel opening: x +0.76..1.0, y -0.6..-0.96; mean +0.88 / -0.74; hands PCA intersection (599.55, 796.67) vs green's (598.54, 797.32) = +1.0 / -0.65), so pivot, octagon, opening circle, screws, crown bases and crown_replace rows are the green values +(0.9, -0.72) (pivot 599.1, 795.88). Hand angles: PCA of the colour mask gives hour 303.3 / minute 49.0 (green 303.4 / 49.1), seconds unchanged (same time on the blue render). Scale: 42 mm = left flat of the case (silhouette plateau 454.0 over rows 790..830, 145.1 px from the pivot): 6.9095 px/mm (green 6.9143; the silhouette edge is quantised, the screw spacing says +0.08 %, all within 0.2 px). What differs from green is only the lug / strap interface: steel-to-rubber boundary (saturation threshold) top row 618 / bottom 988.5 (green 623 / 984.3), i.e. the lugs of this render are 4.3 px longer at the top and 4.8 px at the bottom relative to the pivot: tip_rows_px 621.0 / 985.2 (boundary +3 / -3 px as on the green: 626 / 981 vs 623 / 984); the blue strap's seams start 4.5 / 6 px further from the pivot; white (not cream) sector, blue waffle dial, blue rubber are texture only. Hand angles after the render-versus-photo mask check (centroid across the hand axis, 2x frame): hour 303.57, minute 48.78 (PCA of the photo masks alone gave 303.3 / 49.0; the render offset was -0.32 / +0.38 px with those).",
+ "pivot": [
+  599.1,
+  795.88
+ ],
+ "anchor": {
+  "rows": [
+   790,
+   830
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "left",
+   "y0": 677,
+   "y1": 737,
+   "x0": 485.9,
+   "x1": 455.9
+  },
+  {
+   "side": "right",
+   "y0": 774,
+   "y1": 831,
+   "x0": 745.9,
+   "x1": 745.9
+  }
+ ],
+ "octagon": {
+  "left_x": 452.9,
+  "right_x": 745.9,
+  "top_y": 649.58,
+  "bottom_y": 945.28
+ },
+ "opening_circle_px": [
+  599.7,
+  794.38,
+  109.5
+ ],
+ "dial_flat_r_px": 90.0,
+ "ring_in_r_px": 91.0,
+ "screws_px": [
+  [
+   650.5,
+   671.3
+  ],
+  [
+   721.7,
+   744.3
+  ],
+  [
+   721.7,
+   843.8
+  ],
+  [
+   650.3,
+   914.7
+  ],
+  [
+   549.8,
+   914.7
+  ],
+  [
+   477.7,
+   843.2
+  ],
+  [
+   478.0,
+   742.7
+  ],
+  [
+   549.4,
+   671.3
+  ]
+ ],
+ "screw_r_px": 10.6,
+ "hands": {
+  "hour": {
+   "angle_deg": 303.57,
+   "length_px": 58.0,
+   "tail_px": 8.0
+  },
+  "minute": {
+   "angle_deg": 48.78,
+   "length_px": 90.0,
+   "tail_px": 8.0
+  },
+  "seconds": {
+   "angle_deg": 228.7,
+   "length_px": 90.0,
+   "tail_px": 10.0
+  }
+ },
+ "hub_r": 10.8,
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    741.9,
+    802.28
+   ],
+   "angle_deg": 90.0,
+   "hex_len_px": 34.0,
+   "hex_r_px": 28.0,
+   "ring_len_px": 6.5,
+   "ring_r_px": 17.5
+  },
+  {
+   "name": "crown_10",
+   "base_px": [
+    484.0,
+    719.03
+   ],
+   "angle_deg": 300.0,
+   "hex_len_px": 34.0,
+   "hex_r_px": 28.0,
+   "ring_len_px": 6.5,
+   "ring_r_px": 17.5
+  }
+ ],
+ "tip_rows_px": [
+  621.0,
+  985.2
+ ]
+}

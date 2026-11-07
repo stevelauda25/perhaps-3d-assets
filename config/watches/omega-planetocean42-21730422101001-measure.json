@@ -1,0 +1,48 @@
+{
+ "note": "Pixel measurements for references/omega-seamaster-planet-ocean-600m-42-21730422101001/omega-21730422101001_original.png (1024 x 1024 px RGBA PNG, transparent background, no drop shadow, same catalogue render family as the Seamaster Diver 300M photos: upright render, slight camera tilt, bracelet ends inside the image at rows 3 / 1020). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). Scale: the Diver's anchor (left case-middle circle) does not exist here, the left silhouette at the case middle IS the serrated coin ring of the bezel (outer radius about 272 px = 21 mm = the 42 mm case diameter of the Catalog row: left silhouette x 239 at row 460, ring centre x 511.9); cross-check: the bracelet between the lugs is 271 px wide (rows 160..163 and 776..790) = 21 mm lug width at 12.905 px/mm (20 mm is 258 px), the Diver rubber photo has 12.951 px/mm; 12.95 px/mm is used (bezel_out_circle_px r = 21 mm * 12.95 = 271.95). Pivot: intersection of the hour / minute / seconds centre lines (the symmetrical edges of each hand in a strip rotated about the pivot: after choosing (511.6, 461.75) in cv2 pixel-centre coordinates, +0.5 for continuous, the three hands are symmetric about their axes within 0.3 px; minute and seconds are nearly collinear (10:09 pose) so the hour hand fixes the position along that line); the hub pin hole sits at (512.2, 463.4), 1.1 px below as on the Diver. Rings (edge crossings of radial profiles, 3 degree rays, outlier-rejected circle fits): ceramic outer (coin ring inner edge) circle (511.73, 460.96) r 253.4, ceramic inner edge circle (512.2, 458.9) r 203.4 (the two centres differ by 2 px in y: tilt, one ring_centre_mm is used), steel flange (rehaut ring) from r 193 to 203.4, dial flat ends about r 185. Hands in the pose of the Diver photos (10:09:36): hour 304.2 deg (arrow tip at 110.8 px), minute 47.2 deg (arrow tip 166.4 px), seconds 221.8 deg (hand ends 171.5 px where it meets the minute track). The three hands are solid (arrow hour and minute, lozenge seconds), traced as signed outlines in the spec.",
+ "pivot": [
+  512.1,
+  462.25
+ ],
+ "bezel_out_circle_px": [
+  511.9,
+  460.3,
+  271.95
+ ],
+ "rings": {
+  "dial_flat": 185.0,
+  "crystal_edge": 193.0,
+  "bezel_in": 193.0,
+  "insert_out": 253.4,
+  "bezel_out": 272.0
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 304.2,
+   "length_px": 110.8,
+   "tail_px": 27.5
+  },
+  "minute": {
+   "angle_deg": 47.2,
+   "length_px": 166.4,
+   "tail_px": 33.0
+  },
+  "seconds": {
+   "angle_deg": 221.8,
+   "length_px": 171.5,
+   "tail_px": 22.0
+  }
+ },
+ "hub_r": 12.0,
+ "crown": {
+  "x0": 783.0,
+  "x1": 831.0,
+  "y0": 422.0,
+  "y1": 514.4,
+  "guard_x": 800.5
+ },
+ "tip_rows_px": [
+  163.5,
+  775.5
+ ]
+}

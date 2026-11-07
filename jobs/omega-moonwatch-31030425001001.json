@@ -1,0 +1,46 @@
+{
+ "id": "omega-moonwatch-31030425001001",
+ "output": "outputs/jobs/omega-moonwatch-31030425001001",
+ "asset_type": "watch",
+ "model": "OMEGA Speedmaster Moonwatch Professional Co-Axial Master Chronometer Chronograph 42 mm 310.30.42.50.01.001",
+ "baseline": "First build (first Moonwatch, sets the Omega Moonwatch template): front relief from the catalogue photo at 42 mm (Omega approach with the Breitling Chronomat / Tudor Black Bay Chrono chronograph parts: black tachymeter bezel ring, baton hands with lume, chrono seconds hand, three sub-dials with hands and hubs, fluted crown, two pushers at +-23.5 deg, twisted lugs in the silhouette, five-column steel bracelet)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/omega-speedmaster-moonwatch-professional-31030425001001/REFERENCE_PLAN.md",
+  "config/watches/omega-moonwatch-31030425001001.json",
+  "config/watches/omega-moonwatch-31030425001001-trace.json",
+  "config/presets/watch_kit_white_front_omega_moonwatch.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_omega_moonwatch",
+   "params": {
+    "spec": "config/watches/omega-moonwatch-31030425001001.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/omega-moonwatch-31030425001001/omega-moonwatch-31030425001001.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_omega_moonwatch.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

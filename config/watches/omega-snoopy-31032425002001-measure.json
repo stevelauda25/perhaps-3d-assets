@@ -1,0 +1,136 @@
+{
+ "note": "Pixel measurements read from references/omega-speedmaster-silver-snoopy-award-31032425002001/omega-31032425002001_original.png (1024 x 1024 RGBA PNG, upright render with a slight tilt / yaw and a stronger perspective than the Moonwatch render, crown at 3 with two chronograph pushers at about +-24.5 deg, blue nylon strap that runs off the image at 12 and 6 o'clock, asymmetric twisted lugs). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]).",
+ "scale_px_per_mm": 12.87,
+ "scale_basis": "No circle of the silhouette is on the case (the left flank is the twisted lug), so the scale is the mean of published dimensions read on the photo: case width 42 mm = left silhouette extreme x 244.2 to the bezel centre x 512.8 = 268.6 px -> 12.80 px/mm; lug to lug 47.5 mm = rows 158.6 (lug top where the strap leaves it) to 773.5 (lug bottom) = 614.9 px -> 12.95 px/mm; strap 20 mm = 256 px (silhouette x 385.8 .. 641.8 at row 100, the strap is 266 px between the lugs) -> 12.8 px/mm; adopted 12.87 (case 41.74 mm, lug to lug 47.78 mm, strap 19.9 mm at row 100). The bezel top (nearer to the camera than the lugs) reads 2.8 percent larger than the Moonwatch template's 250.28 px at the same camera, the dial plane about 1 percent: perspective, the planar projection keeps every pixel where the photo has it.",
+ "pivot": [
+  510.86,
+  453.4
+ ],
+ "pivot_basis": "least-squares point of the hour (303.47 deg) and minute (50.44 deg) lume-strip axes (lines 0.02 / 0.12 px from the point); the chrono seconds hand (222.3 deg from the shaft, diamond and needle: the needle is bent 1.3 deg against the shaft in the render) passes within 1 px. The hub dome circle sits at (512.22, 455.77) r 18.42 (base lower and right of the hand pivot, tilt parallax), the bezel top circle at (512.76, 454.68).",
+ "bezel_out_circle_px": [
+  512.76,
+  454.68,
+  257.26
+ ],
+ "bezel_out_circle_note": "blue bezel ring outer edge (blue to steel, B - R channel crossing 45 on 1.5 deg rays, 233 points, ellipse axes 513.3 x 515.8 px = round within 0.5 percent, residual 0.5 px); NOT the scale anchor (see scale_basis). The steel ring beyond it (about 11 px at 9 o'clock) and the lug flank are in the silhouette.",
+ "rings": {
+  "dial_flat": 204.5,
+  "crystal_edge": 206.0,
+  "bezel_in": 206.5,
+  "chamfer_to": 227.0,
+  "insert_out": 257.26,
+  "bezel_out": 257.26
+ },
+ "rings_note": "radial profiles about (512.8, 454.7): dial print ends r 192, grey chapter ring to the dark dial edge line r 205.7 (circle fit, centre (512.87, 455.86)), silver inner bezel chamfer r 207 .. 227 (steel look, brightness 130 .. 210), blue bezel top r 227 (edge circle centre (512.87, 454.60) r 226.98, residual 0.43) .. 257.26 (numerals / ticks), bright steel ring from 258. No steel coin ring: insert_out = bezel_out.",
+ "hands": {
+  "hour": {
+   "angle_deg": 303.47,
+   "length_px": 124.3,
+   "tail_px": 18.0
+  },
+  "minute": {
+   "angle_deg": 50.44,
+   "length_px": 184.3,
+   "tail_px": 18.0
+  },
+  "seconds": {
+   "angle_deg": 222.3,
+   "length_px": 194.5,
+   "tail_px": 52.0
+  }
+ },
+ "hub_r": 18.4,
+ "hub_centre_px": [
+  512.22,
+  455.77
+ ],
+ "crown": {
+  "x0": 774.0,
+  "x1": 814.2,
+  "y0": 418.3,
+  "y1": 504.6,
+  "fluted_to_x": 807.4
+ },
+ "right_override_px": [
+  [
+   304.5,
+   373.5,
+   751.8,
+   781.1
+  ],
+  [
+   417.5,
+   505.5,
+   790.3,
+   790.3
+  ],
+  [
+   549.5,
+   618.5,
+   779.7,
+   750.2
+  ]
+ ],
+ "right_override_note": "rows where the right alpha edge is a chronograph pusher (upper rows 305..373, lower 550..618) or the crown (418..505): replaced by the straight case flank / crown-guard shoulder line (flank slope 0.46 px per row above and below the pushers, shoulder x 790.3); the 3D pushers and crown are added in the step",
+ "pushers_px": [
+  {
+   "origin": [
+    514.53,
+    458.91
+   ],
+   "dir_deg_up": 24.44,
+   "end_s": 306.9,
+   "button_from_s": 271.0,
+   "neck_from_s": 258.0,
+   "radius": 32.83
+  },
+  {
+   "origin": [
+    509.21,
+    461.65
+   ],
+   "dir_deg_up": -24.85,
+   "end_s": 310.5,
+   "button_from_s": 275.0,
+   "neck_from_s": 262.0,
+   "radius": 32.98
+  }
+ ],
+ "pushers_note": "axis-aligned views (alpha rotated about the origin): upper pusher t -33.2 .. +32.2 at s 298 (radius 32.83), end face s 306.9; lower pusher t -33 .. +32.9 (radius 32.98), end face s 310.5; origins and angles fitted until the top / bottom edge slopes cancel (the two axes do not meet because of the camera tilt); the buttons are about 8 percent thicker than on the Moonwatch render (perspective)",
+ "tip_rows_px": [
+  158.6,
+  773.5
+ ],
+ "subdials_px": {
+  "left_9": {
+   "hub": [
+    424.0,
+    455.6
+   ],
+   "hub_r": 8.2,
+   "baton_x": 424.1,
+   "baton_w": 3.7,
+   "tip_y": 399.5
+  },
+  "right_3": {
+   "hub": [
+    601.75,
+    456.15
+   ],
+   "hub_r": 8.84,
+   "baton_x": 601.2,
+   "baton_w": 4.4,
+   "tip_y": 400.3
+  },
+  "bottom_6": {
+   "hub": [
+    512.15,
+    545.31
+   ],
+   "hub_r": 8.74,
+   "baton_x": 512.2,
+   "baton_w": 4.5,
+   "tip_y": 488.8
+  }
+ }
+}

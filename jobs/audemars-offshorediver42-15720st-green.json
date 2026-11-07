@@ -1,0 +1,46 @@
+{
+ "id": "audemars-offshorediver42-15720st-green",
+ "output": "outputs/jobs/audemars-offshorediver42-15720st-green",
+ "asset_type": "watch",
+ "model": "AUDEMARS PIGUET Royal Oak Offshore Diver 15720ST (green)",
+ "baseline": "First build (first Audemars Piguet, sets the Offshore Diver template): front relief from the 1200 x 1626 catalogue photo at 42 mm (Breitling rubber-strap structure with an octagonal screwed bezel, rotating ring, waffle dial, two hexagonal crowns, rose-gold hands, green rubber strap)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/audemars-royal-oak-offshore-diver-15720st-green/REFERENCE_PLAN.md",
+  "config/watches/audemars-offshorediver42-15720st-green.json",
+  "config/watches/audemars-offshorediver42-15720st-green-trace.json",
+  "config/presets/watch_kit_white_front_audemars_offshorediver42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_audemars_offshorediver42",
+   "params": {
+    "spec": "config/watches/audemars-offshorediver42-15720st-green.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/audemars-offshorediver42-15720st-green/audemars-offshorediver42-15720st-green.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_audemars_offshorediver42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
