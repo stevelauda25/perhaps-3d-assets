@@ -1,0 +1,20 @@
+{
+ "note": "Pixel measurements read from references/omega-seamaster-diver-300m-21032422001001/omega-21032422001001_original.png (1024 x 1024 px RGBA PNG, transparent background, no drop shadow, slightly tilted/yawed catalogue render, crown at 3, helium escape valve at 10 o'clock). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]; a value read at pixel index i is i + 0.5). Scale: circle fitted to the LEFT silhouette (case middle, rows 400..600, rms 0.37 px): centre (512.33, 460.66), r 271.97 px = 42 mm / 2 -> 12.951 px/mm (cross-check: strap 20 mm = 256..258 px at the lug, 12.8..12.9 px/mm; the right silhouette is not on that circle because the render shows the right case flank / crown shoulder). pivot = where the hour, minute and seconds axes cross (centre lines of the silhouettes in rotated strips; least squares of the three lateral offsets) at HAND height: (514.4, 461.4); the hub pin hole is seen at (514.25, 462.5), i.e. about 1 px lower. rings (px, about the ring centre which the step takes from ring_centre_mm): bezel_out 257.17 = ceramic outer edge (circle fit to 63 dark-to-steel edge points, centre (511.84, 460.12), rms 0.41 px); bezel_in 191.0 = start of the bright inner rim of the ceramic (the rim circle is centred (511.93, 463.10), r 191.9: higher parts sit higher in the photo, the camera is tilted, so the ceramic top circle is 3 px higher than the rim circle; one centre (511.9, 461.6) serves both = ring_centre_mm [-0.19, -0.015]); dial_flat 189.5 (end of the printed minute track), crystal_edge 190.9; insert_out = bezel_out (no steel coin ring: the ceramic runs to the steel flank, which the case silhouette carries). Crown: x 784 (flank, where it leaves the case circle) to 837.6 (cap end), y 421.8..503.2 (81.4 px = 6.3 mm, centre 462.5), 8-9 visible flutes (16 teeth), fluted to x 821.7 then a chamfered cap; the case silhouette widens to x 806 above and below the crown rows (crown housing shoulder) and those rows keep the silhouette; only the crown rows take the mirrored left edge. Helium escape valve: x 225..~290, rows ~282..372 at 10 o'clock, carried by the silhouette (the step lays the left edge per 0.25 mm row). tip_rows_px: lug top y 146, lug bottom y 782 (the silhouette widens from the 256 px wide strap). Hands (10:06:36, angles cw from 12): hour 302.3 deg skeleton sword (outer half width 10 -> 18 px, hexagonal tip with round lume disc, window s 27..80), length 115.5 px; minute 47.2 deg skeleton sword with a triangular lume tip, length 167 px; seconds 221.6 deg thin white shaft, lollipop at s 118 (r 10.5 / core 7.2) and a red needle to s 190. Hub radius 12.5 px.",
+ "pivot": [514.4, 461.4],
+ "bezel_out_circle_px": [512.33, 460.66, 271.97],
+ "rings": {
+  "dial_flat": 189.5,
+  "crystal_edge": 190.9,
+  "bezel_in": 191.0,
+  "insert_out": 257.17,
+  "bezel_out": 257.17
+ },
+ "hands": {
+  "hour": {"angle_deg": 302.3, "length_px": 115.5, "tail_px": 8.0},
+  "minute": {"angle_deg": 47.2, "length_px": 167.0, "tail_px": 8.0},
+  "seconds": {"angle_deg": 221.6, "length_px": 190.0, "tail_px": 10.0}
+ },
+ "hub_r": 12.5,
+ "crown": {"x0": 784.0, "x1": 837.6, "y0": 421.8, "y1": 503.2},
+ "tip_rows_px": [146, 782]
+}

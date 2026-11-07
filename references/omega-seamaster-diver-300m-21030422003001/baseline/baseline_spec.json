@@ -1,0 +1,1301 @@
+{
+ "model": "OMEGA Seamaster Diver 300M Co-Axial Master Chronometer 42 mm 210.30.42.20.03.001 (42 mm steel, blue dial with wave pattern, blue ceramic bezel, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). FOLLOWER of the Omega Diver 300M template (210.32.42.20.01.001): the photo is the same render camera with the whole watch 0.99577 times smaller, so the mm values of the case, ring, hands, crown and heights are the template's and only the px -> mm scale (12.8957 px/mm, left silhouette circle fit) and the pivot (514.37, 461.4) differ. New: blue wave dial map (own emission) and the three-link steel bracelet as nine columns (outer brushed, polished strip, inner brushed, polished strip, centre brushed, polished strip, inner brushed, polished strip, outer brushed).",
+ "trace": "config/watches/omega-diver300m-21030422003001-trace.json",
+ "dial_map": "outputs/watches/omega-diver300m-21030422003001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tops y 146 / bottoms y 782 px), including the helium escape valve at 10 o'clock and the crown housing shoulder; top and bottom slope toward the strap",
+  "tip_top": 24.25,
+  "tip_bottom": 24.75
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.3,
+  "chamfer_mm": 0.12,
+  "round_mm": 0.3,
+  "note": "black ceramic ring bezel_in..bezel_out (insert_out == bezel_out: no coin ring); numerals, minute dots, triangle and pip come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.29
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "seconds": [
+    [
+     -0.772,
+     0.116
+    ],
+    [
+     0.0,
+     0.131
+    ],
+    [
+     8.146,
+     0.116
+    ],
+    [
+     8.324,
+     0.116
+    ],
+    [
+     8.378,
+     0.345
+    ],
+    [
+     8.494,
+     0.525
+    ],
+    [
+     8.648,
+     0.665
+    ],
+    [
+     8.802,
+     0.75
+    ],
+    [
+     8.957,
+     0.796
+    ],
+    [
+     9.111,
+     0.811
+    ],
+    [
+     9.266,
+     0.796
+    ],
+    [
+     9.42,
+     0.75
+    ],
+    [
+     9.575,
+     0.665
+    ],
+    [
+     9.729,
+     0.525
+    ],
+    [
+     9.845,
+     0.345
+    ],
+    [
+     9.914,
+     0.154
+    ],
+    [
+     9.999,
+     0.089
+    ],
+    [
+     14.671,
+     0.077
+    ]
+   ]
+  },
+  "lume": {
+   "seconds": [
+    [
+     8.555,
+     0.0
+    ],
+    [
+     8.574,
+     0.144
+    ],
+    [
+     8.63,
+     0.278
+    ],
+    [
+     8.718,
+     0.393
+    ],
+    [
+     8.833,
+     0.481
+    ],
+    [
+     8.967,
+     0.537
+    ],
+    [
+     9.111,
+     0.556
+    ],
+    [
+     9.255,
+     0.537
+    ],
+    [
+     9.389,
+     0.481
+    ],
+    [
+     9.504,
+     0.393
+    ],
+    [
+     9.593,
+     0.278
+    ],
+    [
+     9.648,
+     0.144
+    ],
+    [
+     9.667,
+     0.0
+    ]
+   ]
+  },
+  "parts": {
+   "hour": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       0.0,
+       0.27
+      ],
+      [
+       1.39,
+       0.27
+      ],
+      [
+       1.621,
+       0.618
+      ],
+      [
+       1.853,
+       0.795
+      ],
+      [
+       2.123,
+       0.811
+      ],
+      [
+       2.123,
+       -0.811
+      ],
+      [
+       1.853,
+       -0.795
+      ],
+      [
+       1.621,
+       -0.618
+      ],
+      [
+       1.39,
+       -0.27
+      ],
+      [
+       0.0,
+       -0.27
+      ]
+     ]
+    },
+    {
+     "kind": "frame",
+     "mirror": true,
+     "poly": [
+      [
+       2.123,
+       0.811
+      ],
+      [
+       3.475,
+       0.927
+      ],
+      [
+       4.633,
+       1.042
+      ],
+      [
+       6.177,
+       1.259
+      ],
+      [
+       6.177,
+       0.463
+      ],
+      [
+       4.633,
+       0.347
+      ],
+      [
+       3.475,
+       0.232
+      ],
+      [
+       2.123,
+       0.077
+      ]
+     ]
+    },
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       6.177,
+       1.259
+      ],
+      [
+       6.718,
+       1.313
+      ],
+      [
+       7.876,
+       1.39
+      ],
+      [
+       8.107,
+       1.081
+      ],
+      [
+       8.339,
+       0.772
+      ],
+      [
+       8.571,
+       0.425
+      ],
+      [
+       8.802,
+       0.116
+      ],
+      [
+       8.918,
+       0.0
+      ],
+      [
+       8.802,
+       -0.116
+      ],
+      [
+       8.571,
+       -0.425
+      ],
+      [
+       8.339,
+       -0.772
+      ],
+      [
+       8.107,
+       -1.081
+      ],
+      [
+       7.876,
+       -1.39
+      ],
+      [
+       6.718,
+       -1.313
+      ],
+      [
+       6.177,
+       -1.259
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": true,
+     "poly": [
+      [
+       2.316,
+       0.533
+      ],
+      [
+       3.475,
+       0.649
+      ],
+      [
+       4.633,
+       0.803
+      ],
+      [
+       5.868,
+       0.996
+      ],
+      [
+       5.868,
+       1.166
+      ],
+      [
+       4.633,
+       0.973
+      ],
+      [
+       3.475,
+       0.818
+      ],
+      [
+       2.316,
+       0.703
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": false,
+     "poly": [
+      [
+       8.053,
+       0.0
+      ],
+      [
+       8.033,
+       0.182
+      ],
+      [
+       7.972,
+       0.355
+      ],
+      [
+       7.875,
+       0.51
+      ],
+      [
+       7.745,
+       0.64
+      ],
+      [
+       7.59,
+       0.737
+      ],
+      [
+       7.417,
+       0.798
+      ],
+      [
+       7.235,
+       0.818
+      ],
+      [
+       7.053,
+       0.798
+      ],
+      [
+       6.88,
+       0.737
+      ],
+      [
+       6.725,
+       0.64
+      ],
+      [
+       6.595,
+       0.51
+      ],
+      [
+       6.498,
+       0.355
+      ],
+      [
+       6.437,
+       0.182
+      ],
+      [
+       6.416,
+       0.0
+      ],
+      [
+       6.437,
+       -0.182
+      ],
+      [
+       6.498,
+       -0.355
+      ],
+      [
+       6.595,
+       -0.51
+      ],
+      [
+       6.725,
+       -0.64
+      ],
+      [
+       6.88,
+       -0.737
+      ],
+      [
+       7.053,
+       -0.798
+      ],
+      [
+       7.235,
+       -0.818
+      ],
+      [
+       7.417,
+       -0.798
+      ],
+      [
+       7.59,
+       -0.737
+      ],
+      [
+       7.745,
+       -0.64
+      ],
+      [
+       7.875,
+       -0.51
+      ],
+      [
+       7.972,
+       -0.355
+      ],
+      [
+       8.033,
+       -0.182
+      ]
+     ]
+    }
+   ],
+   "minute": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       0.0,
+       0.27
+      ],
+      [
+       1.39,
+       0.347
+      ],
+      [
+       1.621,
+       0.695
+      ],
+      [
+       1.853,
+       0.734
+      ],
+      [
+       2.316,
+       0.772
+      ],
+      [
+       2.316,
+       -0.772
+      ],
+      [
+       1.853,
+       -0.734
+      ],
+      [
+       1.621,
+       -0.695
+      ],
+      [
+       1.39,
+       -0.347
+      ],
+      [
+       0.0,
+       -0.27
+      ]
+     ]
+    },
+    {
+     "kind": "frame",
+     "mirror": true,
+     "poly": [
+      [
+       2.316,
+       0.772
+      ],
+      [
+       3.475,
+       0.865
+      ],
+      [
+       4.633,
+       1.004
+      ],
+      [
+       6.023,
+       1.127
+      ],
+      [
+       7.644,
+       1.344
+      ],
+      [
+       8.571,
+       1.498
+      ],
+      [
+       9.729,
+       1.668
+      ],
+      [
+       9.961,
+       1.699
+      ],
+      [
+       9.961,
+       0.618
+      ],
+      [
+       8.571,
+       0.54
+      ],
+      [
+       6.949,
+       0.425
+      ],
+      [
+       4.633,
+       0.232
+      ],
+      [
+       2.316,
+       0.077
+      ]
+     ]
+    },
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       9.961,
+       1.699
+      ],
+      [
+       10.269,
+       1.699
+      ],
+      [
+       10.656,
+       1.467
+      ],
+      [
+       10.887,
+       1.313
+      ],
+      [
+       11.119,
+       1.158
+      ],
+      [
+       11.35,
+       1.004
+      ],
+      [
+       11.582,
+       0.849
+      ],
+      [
+       11.814,
+       0.734
+      ],
+      [
+       12.045,
+       0.579
+      ],
+      [
+       12.277,
+       0.386
+      ],
+      [
+       12.509,
+       0.27
+      ],
+      [
+       12.74,
+       0.154
+      ],
+      [
+       12.895,
+       0.0
+      ],
+      [
+       12.74,
+       -0.154
+      ],
+      [
+       12.509,
+       -0.27
+      ],
+      [
+       12.277,
+       -0.386
+      ],
+      [
+       12.045,
+       -0.579
+      ],
+      [
+       11.814,
+       -0.734
+      ],
+      [
+       11.582,
+       -0.849
+      ],
+      [
+       11.35,
+       -1.004
+      ],
+      [
+       11.119,
+       -1.158
+      ],
+      [
+       10.887,
+       -1.313
+      ],
+      [
+       10.656,
+       -1.467
+      ],
+      [
+       10.269,
+       -1.699
+      ],
+      [
+       9.961,
+       -1.699
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": true,
+     "poly": [
+      [
+       2.625,
+       0.332
+      ],
+      [
+       4.633,
+       0.502
+      ],
+      [
+       6.949,
+       0.726
+      ],
+      [
+       9.652,
+       1.035
+      ],
+      [
+       9.652,
+       1.266
+      ],
+      [
+       6.949,
+       0.957
+      ],
+      [
+       4.633,
+       0.734
+      ],
+      [
+       2.625,
+       0.564
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": false,
+     "poly": [
+      [
+       10.501,
+       -0.911
+      ],
+      [
+       10.501,
+       0.911
+      ],
+      [
+       12.123,
+       0.0
+      ]
+     ]
+    }
+   ]
+  },
+  "note": "seconds: profile = [mm along the hand from the pivot (negative = tail), half width] tail to tip (last point at the traced length), lume = +w outline of the lollipop core mirrored about the axis. hour / minute: SKELETON hands as parts in the hand frame [mm along, lateral half width]: frame = base (stem + flare), two rails (mirror: +w outline, drawn on both sides, the window between them stays open) and the tip piece; lume = rail strips and the tip lume (round disc / triangle). Measured as silhouettes in rotated strips (thr 150 / 235) about the pivot. Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.62,
+  "cap_start_fraction": 0.78,
+  "fluted_to_mm": 23.73,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.75,
+  "base_chamfer_mm": 0.3,
+  "note": "fluted crown with a smaller chamfered cap; the crown housing shoulder (right silhouette x 806 px above and below the crown rows) belongs to the case silhouette"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns left to right (9 columns, each with its own pieces_mm list): the outer brushed links, the four polished strips and the inner brushed links share three staggered joint sets (outer, inner + polished, centre), read per column from the photo with brightness scans (dark joint = centroid of grey < 110 within +-7 rows; the inner hinge zone +-11 rows), top and bottom separately, listed as mm from the pivot (12.8957 px/mm, pivot (514.37, 461.4)). bounds_x_mm = the eight vertical column boundaries [|y|, x1 .. x8] (the edges of the four polished strips, grey > 225, linear fits per side over the rows of the strips); the outer edges come from the alpha silhouette. The outer columns start at the lug tips (24.25 top / 24.75 bottom), the other columns under the case at 20 mm; ends at the alpha ends (2 px inside).",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_oL": 3.4,
+   "z_oR": 3.4,
+   "z_iL": 3.45,
+   "z_iR": 3.45,
+   "z_p1": 3.5,
+   "z_p2": 3.5,
+   "z_p3": 3.5,
+   "z_p4": 3.5,
+   "z_c": 3.5,
+   "bevel": 0.1,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "oL",
+    "p1",
+    "iL",
+    "p2",
+    "c",
+    "p3",
+    "iR",
+    "p4",
+    "oR"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -7.008,
+      -6.31,
+      -4.216,
+      -3.518,
+      2.918,
+      3.616,
+      5.71,
+      6.408
+     ],
+     [
+      22.21,
+      -7.008,
+      -6.31,
+      -4.216,
+      -3.518,
+      2.918,
+      3.616,
+      5.71,
+      6.408
+     ],
+     [
+      33.84,
+      -6.698,
+      -6.077,
+      -4.061,
+      -3.441,
+      2.918,
+      3.538,
+      5.555,
+      6.175
+     ],
+     [
+      50.0,
+      -6.698,
+      -6.077,
+      -4.061,
+      -3.441,
+      2.918,
+      3.538,
+      5.555,
+      6.175
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -6.775,
+      -6.155,
+      -4.061,
+      -3.363,
+      3.073,
+      3.693,
+      5.787,
+      6.408
+     ],
+     [
+      21.99,
+      -6.775,
+      -6.155,
+      -4.061,
+      -3.363,
+      3.073,
+      3.693,
+      5.787,
+      6.408
+     ],
+     [
+      26.64,
+      -6.698,
+      -6.077,
+      -4.061,
+      -3.441,
+      2.996,
+      3.616,
+      5.632,
+      6.33
+     ],
+     [
+      33.62,
+      -6.698,
+      -6.0,
+      -3.906,
+      -3.441,
+      2.918,
+      3.538,
+      5.555,
+      6.175
+     ],
+     [
+      38.28,
+      -6.62,
+      -6.0,
+      -3.906,
+      -3.441,
+      2.84,
+      3.538,
+      5.632,
+      6.097
+     ],
+     [
+      60.0,
+      -6.62,
+      -6.0,
+      -3.906,
+      -3.441,
+      2.84,
+      3.538,
+      5.632,
+      6.097
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "oL": {
+     "top": [
+      [
+       24.25,
+       24.65
+      ],
+      [
+       24.65,
+       31.05
+      ],
+      [
+       31.05,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       24.75,
+       25.41
+      ],
+      [
+       25.41,
+       33.13
+      ],
+      [
+       33.13,
+       39.47
+      ],
+      [
+       39.47,
+       43.0
+      ]
+     ]
+    },
+    "p1": {
+     "top": [
+      [
+       20.0,
+       24.43
+      ],
+      [
+       24.43,
+       29.72
+      ],
+      [
+       29.72,
+       34.04
+      ],
+      [
+       34.04,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.64
+      ],
+      [
+       24.64,
+       30.9
+      ],
+      [
+       30.9,
+       37.98
+      ],
+      [
+       37.98,
+       43.0
+      ]
+     ]
+    },
+    "iL": {
+     "top": [
+      [
+       20.0,
+       24.39
+      ],
+      [
+       24.39,
+       29.73
+      ],
+      [
+       29.73,
+       34.04
+      ],
+      [
+       34.04,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.87
+      ],
+      [
+       24.87,
+       30.97
+      ],
+      [
+       30.97,
+       38.11
+      ],
+      [
+       38.11,
+       43.0
+      ]
+     ]
+    },
+    "p2": {
+     "top": [
+      [
+       20.0,
+       24.42
+      ],
+      [
+       24.42,
+       29.72
+      ],
+      [
+       29.72,
+       34.04
+      ],
+      [
+       34.04,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.74
+      ],
+      [
+       24.74,
+       30.95
+      ],
+      [
+       30.95,
+       37.93
+      ],
+      [
+       37.93,
+       43.0
+      ]
+     ]
+    },
+    "c": {
+     "top": [
+      [
+       20.0,
+       24.71
+      ],
+      [
+       24.71,
+       31.81
+      ],
+      [
+       31.81,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       25.64
+      ],
+      [
+       25.64,
+       33.84
+      ],
+      [
+       33.84,
+       40.39
+      ],
+      [
+       40.39,
+       43.0
+      ]
+     ]
+    },
+    "p3": {
+     "top": [
+      [
+       20.0,
+       24.36
+      ],
+      [
+       24.36,
+       29.65
+      ],
+      [
+       29.65,
+       34.04
+      ],
+      [
+       34.04,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.8
+      ],
+      [
+       24.8,
+       31.1
+      ],
+      [
+       31.1,
+       38.02
+      ],
+      [
+       38.02,
+       43.0
+      ]
+     ]
+    },
+    "iR": {
+     "top": [
+      [
+       20.0,
+       24.27
+      ],
+      [
+       24.27,
+       29.65
+      ],
+      [
+       29.65,
+       34.05
+      ],
+      [
+       34.05,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.77
+      ],
+      [
+       24.77,
+       31.05
+      ],
+      [
+       31.05,
+       38.13
+      ],
+      [
+       38.13,
+       43.0
+      ]
+     ]
+    },
+    "p4": {
+     "top": [
+      [
+       20.0,
+       24.26
+      ],
+      [
+       24.26,
+       29.63
+      ],
+      [
+       29.63,
+       34.04
+      ],
+      [
+       34.04,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       20.0,
+       24.71
+      ],
+      [
+       24.71,
+       31.12
+      ],
+      [
+       31.12,
+       37.94
+      ],
+      [
+       37.94,
+       43.0
+      ]
+     ]
+    },
+    "oR": {
+     "top": [
+      [
+       24.25,
+       30.95
+      ],
+      [
+       30.95,
+       35.25
+      ]
+     ],
+     "bottom": [
+      [
+       24.75,
+       25.52
+      ],
+      [
+       25.52,
+       33.26
+      ],
+      [
+       33.26,
+       39.56
+      ],
+      [
+       39.56,
+       43.0
+      ]
+     ]
+    }
+   },
+   "groove": 0.0
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-diver300m-21030422003001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  -0.19,
+  -0.015
+ ]
+}

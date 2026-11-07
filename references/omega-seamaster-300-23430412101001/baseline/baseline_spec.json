@@ -1,0 +1,1271 @@
+{
+ "model": "OMEGA Seamaster 300 Co-Axial Master Chronometer 41 mm 234.30.41.21.01.001 (41 mm steel, black dial, black ceramic bezel with steel coin ring, steel bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). Omega Seamaster 300: structure of the Omega Aqua Terra 41 build (watch_omega_aquaterra41, copied): round case with integral lugs from the alpha silhouette (scale from the knurled coin-ring tooth-tip circle = 41 mm), rotating bezel = black ceramic insert (bezel_in..insert_out) inside a steel knurled coin ring (insert_out..bezel_out, a little lower), vintage black dial from the 2x photo map (beige lume triangles, numerals 12 / 3 / 6 / 9, minute track and print stay in it, the polished steel inner flange r 212..226.5 px is part of the dial map), solid broad-arrow hour hand with a lume triangle, solid sword minute hand with a lume strip, thin seconds hand with a lume lollipop and a round counterweight boss, fluted crown with a rounded cap (no crown guards), three-column steel bracelet (polished outer links, brushed centre links).",
+ "trace": "config/watches/omega-seamaster300-23430412101001-trace.json",
+ "dial_map": "outputs/watches/omega-seamaster300-23430412101001/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "note": "integrated lugs: the case outline follows the photo silhouette (lug tips y 163 / 803.5 px, the knurled coin-ring teeth are in the silhouette), top and bottom slope toward the bracelet",
+  "tip_top": 22.75,
+  "tip_bottom": 24.75
+ },
+ "bezel": {
+  "z0": 7.0,
+  "z_inner": 7.9,
+  "z_insert": 8.3,
+  "z_coin": 8.1,
+  "chamfer_mm": 0.12,
+  "round_mm": 0.2,
+  "note": "black ceramic insert bezel_in..insert_out (flat, z_insert) inside the steel knurled coin ring insert_out..bezel_out (z_coin, a little lower, rounded outer edge); the numerals, minute marks, pip and the teeth come from the projected photo"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.9,
+  "dome": 0.3
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {},
+  "lume": {},
+  "parts": {
+   "hour": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       -2.602,
+       0.0
+      ],
+      [
+       -2.528,
+       0.074
+      ],
+      [
+       -2.305,
+       0.223
+      ],
+      [
+       -2.082,
+       0.297
+      ],
+      [
+       -1.859,
+       0.409
+      ],
+      [
+       -1.636,
+       0.52
+      ],
+      [
+       -1.413,
+       0.632
+      ],
+      [
+       -0.446,
+       0.855
+      ],
+      [
+       0.149,
+       1.041
+      ],
+      [
+       0.818,
+       1.115
+      ],
+      [
+       1.041,
+       0.967
+      ],
+      [
+       1.487,
+       0.929
+      ],
+      [
+       1.933,
+       0.892
+      ],
+      [
+       2.379,
+       0.818
+      ],
+      [
+       2.826,
+       0.781
+      ],
+      [
+       3.272,
+       0.744
+      ],
+      [
+       3.718,
+       0.706
+      ],
+      [
+       4.164,
+       0.669
+      ],
+      [
+       4.61,
+       0.595
+      ],
+      [
+       5.056,
+       0.558
+      ],
+      [
+       5.502,
+       0.52
+      ],
+      [
+       5.948,
+       0.483
+      ],
+      [
+       6.64,
+       0.446
+      ],
+      [
+       6.67,
+       1.933
+      ],
+      [
+       6.841,
+       1.859
+      ],
+      [
+       7.064,
+       1.785
+      ],
+      [
+       7.287,
+       1.636
+      ],
+      [
+       7.51,
+       1.524
+      ],
+      [
+       7.733,
+       1.413
+      ],
+      [
+       7.956,
+       1.301
+      ],
+      [
+       8.179,
+       1.19
+      ],
+      [
+       8.402,
+       1.078
+      ],
+      [
+       8.625,
+       0.967
+      ],
+      [
+       8.848,
+       0.855
+      ],
+      [
+       9.071,
+       0.744
+      ],
+      [
+       9.295,
+       0.595
+      ],
+      [
+       9.518,
+       0.483
+      ],
+      [
+       9.741,
+       0.372
+      ],
+      [
+       9.964,
+       0.26
+      ],
+      [
+       10.224,
+       0.0
+      ],
+      [
+       9.964,
+       -0.26
+      ],
+      [
+       9.741,
+       -0.372
+      ],
+      [
+       9.518,
+       -0.483
+      ],
+      [
+       9.295,
+       -0.595
+      ],
+      [
+       9.071,
+       -0.744
+      ],
+      [
+       8.848,
+       -0.855
+      ],
+      [
+       8.625,
+       -0.967
+      ],
+      [
+       8.402,
+       -1.078
+      ],
+      [
+       8.179,
+       -1.19
+      ],
+      [
+       7.956,
+       -1.301
+      ],
+      [
+       7.733,
+       -1.413
+      ],
+      [
+       7.51,
+       -1.524
+      ],
+      [
+       7.287,
+       -1.636
+      ],
+      [
+       7.064,
+       -1.785
+      ],
+      [
+       6.841,
+       -1.859
+      ],
+      [
+       6.67,
+       -1.933
+      ],
+      [
+       6.64,
+       -0.446
+      ],
+      [
+       5.948,
+       -0.483
+      ],
+      [
+       5.502,
+       -0.52
+      ],
+      [
+       5.056,
+       -0.558
+      ],
+      [
+       4.61,
+       -0.595
+      ],
+      [
+       4.164,
+       -0.669
+      ],
+      [
+       3.718,
+       -0.706
+      ],
+      [
+       3.272,
+       -0.744
+      ],
+      [
+       2.826,
+       -0.781
+      ],
+      [
+       2.379,
+       -0.818
+      ],
+      [
+       1.933,
+       -0.892
+      ],
+      [
+       1.487,
+       -0.929
+      ],
+      [
+       1.041,
+       -0.967
+      ],
+      [
+       0.818,
+       -1.115
+      ],
+      [
+       0.149,
+       -1.041
+      ],
+      [
+       -0.446,
+       -0.855
+      ],
+      [
+       -1.413,
+       -0.632
+      ],
+      [
+       -1.636,
+       -0.52
+      ],
+      [
+       -1.859,
+       -0.409
+      ],
+      [
+       -2.082,
+       -0.297
+      ],
+      [
+       -2.305,
+       -0.223
+      ],
+      [
+       -2.528,
+       -0.074
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": false,
+     "poly": [
+      [
+       6.952,
+       -1.301
+      ],
+      [
+       6.952,
+       1.301
+      ],
+      [
+       9.555,
+       0.0
+      ]
+     ]
+    }
+   ],
+   "minute": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       -0.446,
+       0.372
+      ],
+      [
+       0.0,
+       0.669
+      ],
+      [
+       0.446,
+       0.892
+      ],
+      [
+       1.041,
+       1.115
+      ],
+      [
+       1.338,
+       1.041
+      ],
+      [
+       1.636,
+       1.041
+      ],
+      [
+       2.231,
+       0.967
+      ],
+      [
+       3.123,
+       0.967
+      ],
+      [
+       3.42,
+       0.892
+      ],
+      [
+       4.313,
+       0.892
+      ],
+      [
+       4.61,
+       0.818
+      ],
+      [
+       5.502,
+       0.818
+      ],
+      [
+       5.8,
+       0.744
+      ],
+      [
+       6.692,
+       0.744
+      ],
+      [
+       7.287,
+       0.669
+      ],
+      [
+       7.882,
+       0.669
+      ],
+      [
+       8.477,
+       0.595
+      ],
+      [
+       9.071,
+       0.595
+      ],
+      [
+       9.369,
+       0.52
+      ],
+      [
+       10.559,
+       0.446
+      ],
+      [
+       11.748,
+       0.372
+      ],
+      [
+       13.235,
+       0.297
+      ],
+      [
+       14.723,
+       0.297
+      ],
+      [
+       14.983,
+       0.26
+      ],
+      [
+       14.983,
+       0.223
+      ],
+      [
+       14.871,
+       0.149
+      ],
+      [
+       14.425,
+       0.0
+      ],
+      [
+       13.533,
+       -0.074
+      ],
+      [
+       12.343,
+       -0.149
+      ],
+      [
+       11.153,
+       -0.223
+      ],
+      [
+       9.964,
+       -0.297
+      ],
+      [
+       9.071,
+       -0.372
+      ],
+      [
+       7.882,
+       -0.446
+      ],
+      [
+       6.692,
+       -0.52
+      ],
+      [
+       5.502,
+       -0.595
+      ],
+      [
+       4.61,
+       -0.669
+      ],
+      [
+       4.313,
+       -0.706
+      ],
+      [
+       3.123,
+       -0.744
+      ],
+      [
+       2.528,
+       -0.818
+      ],
+      [
+       1.636,
+       -0.818
+      ],
+      [
+       1.338,
+       -0.892
+      ],
+      [
+       1.041,
+       -0.892
+      ],
+      [
+       0.446,
+       -0.929
+      ],
+      [
+       0.0,
+       -0.669
+      ],
+      [
+       -0.446,
+       -0.372
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": false,
+     "poly": [
+      [
+       1.636,
+       -0.223
+      ],
+      [
+       4.61,
+       -0.26
+      ],
+      [
+       5.948,
+       -0.223
+      ],
+      [
+       7.733,
+       -0.074
+      ],
+      [
+       9.071,
+       0.0
+      ],
+      [
+       9.741,
+       0.045
+      ],
+      [
+       9.071,
+       0.149
+      ],
+      [
+       7.733,
+       0.297
+      ],
+      [
+       5.948,
+       0.372
+      ],
+      [
+       4.164,
+       0.52
+      ],
+      [
+       2.826,
+       0.595
+      ],
+      [
+       1.487,
+       0.744
+      ]
+     ]
+    }
+   ],
+   "seconds": [
+    {
+     "kind": "frame",
+     "mirror": false,
+     "poly": [
+      [
+       11.894,
+       -0.052
+      ],
+      [
+       11.943,
+       -0.182
+      ],
+      [
+       12.012,
+       -0.302
+      ],
+      [
+       12.1,
+       -0.409
+      ],
+      [
+       12.205,
+       -0.5
+      ],
+      [
+       12.322,
+       -0.574
+      ],
+      [
+       12.45,
+       -0.627
+      ],
+      [
+       12.585,
+       -0.659
+      ],
+      [
+       12.723,
+       -0.669
+      ],
+      [
+       12.861,
+       -0.657
+      ],
+      [
+       12.996,
+       -0.622
+      ],
+      [
+       13.122,
+       -0.566
+      ],
+      [
+       13.239,
+       -0.49
+      ],
+      [
+       13.341,
+       -0.397
+      ],
+      [
+       13.427,
+       -0.288
+      ],
+      [
+       13.494,
+       -0.166
+      ],
+      [
+       13.541,
+       -0.036
+      ],
+      [
+       13.566,
+       0.101
+      ],
+      [
+       13.568,
+       0.239
+      ],
+      [
+       13.548,
+       0.376
+      ],
+      [
+       13.507,
+       0.509
+      ],
+      [
+       13.444,
+       0.632
+      ],
+      [
+       13.362,
+       0.744
+      ],
+      [
+       13.264,
+       0.842
+      ],
+      [
+       13.15,
+       0.922
+      ],
+      [
+       13.026,
+       0.982
+      ],
+      [
+       12.893,
+       1.022
+      ],
+      [
+       12.755,
+       1.04
+      ],
+      [
+       12.617,
+       1.035
+      ],
+      [
+       12.481,
+       1.008
+      ],
+      [
+       12.351,
+       0.96
+      ],
+      [
+       12.231,
+       0.891
+      ],
+      [
+       12.123,
+       0.803
+      ],
+      [
+       12.031,
+       0.699
+      ],
+      [
+       11.957,
+       0.582
+      ],
+      [
+       11.903,
+       0.454
+      ],
+      [
+       11.87,
+       0.32
+      ],
+      [
+       -3.502,
+       0.32
+      ],
+      [
+       -3.544,
+       0.385
+      ],
+      [
+       -3.598,
+       0.442
+      ],
+      [
+       -3.661,
+       0.487
+      ],
+      [
+       -3.732,
+       0.52
+      ],
+      [
+       -3.807,
+       0.538
+      ],
+      [
+       -3.885,
+       0.542
+      ],
+      [
+       -3.962,
+       0.531
+      ],
+      [
+       -4.036,
+       0.506
+      ],
+      [
+       -4.103,
+       0.467
+      ],
+      [
+       -4.162,
+       0.416
+      ],
+      [
+       -4.21,
+       0.355
+      ],
+      [
+       -4.246,
+       0.286
+      ],
+      [
+       -4.268,
+       0.211
+      ],
+      [
+       -4.275,
+       0.134
+      ],
+      [
+       -4.268,
+       0.056
+      ],
+      [
+       -4.246,
+       -0.018
+      ],
+      [
+       -4.21,
+       -0.088
+      ],
+      [
+       -4.162,
+       -0.149
+      ],
+      [
+       -4.103,
+       -0.2
+      ],
+      [
+       -4.036,
+       -0.238
+      ],
+      [
+       -3.962,
+       -0.264
+      ],
+      [
+       -3.885,
+       -0.275
+      ],
+      [
+       -3.807,
+       -0.271
+      ],
+      [
+       -3.732,
+       -0.252
+      ],
+      [
+       -3.661,
+       -0.22
+      ],
+      [
+       -3.598,
+       -0.174
+      ],
+      [
+       -3.544,
+       -0.118
+      ],
+      [
+       -3.502,
+       -0.052
+      ]
+     ]
+    },
+    {
+     "kind": "lume",
+     "mirror": false,
+     "poly": [
+      [
+       13.362,
+       0.186
+      ],
+      [
+       13.34,
+       0.353
+      ],
+      [
+       13.275,
+       0.509
+      ],
+      [
+       13.172,
+       0.643
+      ],
+      [
+       13.038,
+       0.746
+      ],
+      [
+       12.882,
+       0.811
+      ],
+      [
+       12.715,
+       0.833
+      ],
+      [
+       12.547,
+       0.811
+      ],
+      [
+       12.391,
+       0.746
+      ],
+      [
+       12.257,
+       0.643
+      ],
+      [
+       12.155,
+       0.509
+      ],
+      [
+       12.09,
+       0.353
+      ],
+      [
+       12.068,
+       0.186
+      ],
+      [
+       12.09,
+       0.018
+      ],
+      [
+       12.155,
+       -0.138
+      ],
+      [
+       12.257,
+       -0.272
+      ],
+      [
+       12.391,
+       -0.374
+      ],
+      [
+       12.547,
+       -0.439
+      ],
+      [
+       12.715,
+       -0.461
+      ],
+      [
+       12.882,
+       -0.439
+      ],
+      [
+       13.038,
+       -0.374
+      ],
+      [
+       13.172,
+       -0.272
+      ],
+      [
+       13.275,
+       -0.138
+      ],
+      [
+       13.34,
+       0.018
+      ]
+     ]
+    }
+   ]
+  },
+  "note": "all three hands are solid signed outlines in the hand frame [mm along the hand from the pivot (negative = tail), lateral offset, + = right of the hand] measured per 2..4 px in rotated strips (grey > 65 on the black dial) about the pivot; the minute and seconds centre lines sit about 1.2 px off the pivot line (hands at different heights under the camera tilt) and keep their measured offset; lume = the beige triangle / strip / disc from the colour mask. Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.43
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.25,
+  "z": 4.2,
+  "cap_radius_fraction": 0.69,
+  "cap_start_fraction": 0.97,
+  "fluted_to_mm": 22.825,
+  "bevel": 0.3,
+  "note": "fluted crown (x 779..816 px) with a rounded cap ending at x 827.6; no crown guards, no housing shoulder"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.kind bracelet, three columns left to right (edge = polished outer link, centre = brushed centre link, edge): bounds_x_mm = [|y|, xl, xr] the two vertical joint lines (13.4488 px/mm about the pivot (509.03, 470.11)) from brightness scans (valley centroids, 5 row bands); pieces_mm = link ranges [y0, y1] (mm from the pivot, nearest the case first) between joint centres read from brightness scans of the column centres (x 480..540 / 405..430 / 595..620); the joint gaps between the pieces show the photographed pixels (backing_material steel_photo). Outer edges come from the alpha silhouette clamped at the lug tips (edge_from).",
+  "bracelet": {
+   "gap": 0.06,
+   "groove": 0.1,
+   "z0": 0.6,
+   "z_edge": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "backing_material": "steel_photo",
+   "columns": [
+    "edge",
+    "centre",
+    "edge"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.947,
+      5.478
+     ],
+     [
+      22.315,
+      -4.947,
+      5.478
+     ],
+     [
+      23.802,
+      -4.91,
+      5.448
+     ],
+     [
+      25.289,
+      -4.821,
+      5.351
+     ],
+     [
+      31.981,
+      -4.821,
+      5.351
+     ],
+     [
+      33.097,
+      -4.754,
+      5.262
+     ],
+     [
+      34.212,
+      -4.724,
+      5.24
+     ],
+     [
+      34.956,
+      -4.724,
+      5.24
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -5.177,
+      5.292
+     ],
+     [
+      26.016,
+      -5.177,
+      5.292
+     ],
+     [
+      27.132,
+      -5.11,
+      5.225
+     ],
+     [
+      31.965,
+      -5.11,
+      5.225
+     ],
+     [
+      33.08,
+      -5.036,
+      5.151
+     ],
+     [
+      36.426,
+      -5.036,
+      5.151
+     ],
+     [
+      38.285,
+      -4.984,
+      5.084
+     ],
+     [
+      41.631,
+      -4.984,
+      5.084
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "edge": {
+     "top": [
+      [
+       22.75,
+       23.62
+      ],
+      [
+       23.62,
+       28.41
+      ],
+      [
+       28.41,
+       32.35
+      ],
+      [
+       32.35,
+       34.06
+      ],
+      [
+       34.06,
+       34.5
+      ]
+     ],
+     "bottom": [
+      [
+       24.75,
+       25.66
+      ],
+      [
+       25.66,
+       31.56
+      ],
+      [
+       31.56,
+       36.58
+      ],
+      [
+       36.58,
+       40.14
+      ],
+      [
+       40.14,
+       40.5
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       20.4,
+       25.77
+      ],
+      [
+       25.77,
+       30.16
+      ],
+      [
+       30.16,
+       33.51
+      ],
+      [
+       33.51,
+       34.5
+      ]
+     ],
+     "bottom": [
+      [
+       20.2,
+       21.7
+      ],
+      [
+       21.7,
+       27.91
+      ],
+      [
+       27.91,
+       33.75
+      ],
+      [
+       33.75,
+       38.36
+      ],
+      [
+       38.36,
+       40.5
+      ]
+     ]
+    }
+   },
+   "edge_from": {
+    "top": 22.75,
+    "bottom": 24.75
+   }
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 1.0,
+   "specular": 0.0
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_map": "outputs/watches/omega-seamaster300-23430412101001/steel_photo.jpg",
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "ring_centre_mm": [
+  0.028,
+  0.231
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "note": "Pixel measurements for references/omega-seamaster-diver-300m-21030422003001/omega-21030422003001_original.png (1024 x 1024 px RGBA PNG, transparent background, no drop shadow; same catalogue render camera as 210.32.42.20.01.001 but the whole watch is 0.99577 times smaller about the hand pivot: left silhouette circle fit (rows 400..600, rms 0.39 px) r 270.81 px = 42 mm / 2 -> 12.896 px/mm vs 271.97 px / 12.951 px/mm of the rubber photo; an ECC affine fit of the dial / bezel features gives scale 0.9959..0.9962 and a pivot shift below 0.05 px; scaling the rubber photo's alpha by 0.99577 about its pivot reproduces this silhouette within 0.2 px over the case rows 150..780, crown included). Everything that is the same physical part (pivot, hands, rings, crown, hub, lug rows) is therefore the rubber photo's measurement scaled by 0.99577 about the pivot (rounded to 0.01 px): the mm values of the hands, rings and crown then equal the rubber build's. The photo-specific measurements are the blue dial emission and the steel bracelet (spec file). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES (pixel i spans [i, i+1]). Hands 10:09:36-ish (same pose as the rubber photo), crown at 3, helium escape valve at 10 o'clock.",
+ "pivot": [
+  514.37,
+  461.4
+ ],
+ "bezel_out_circle_px": [
+  512.31,
+  460.66,
+  270.81
+ ],
+ "rings": {
+  "dial_flat": 188.7,
+  "crystal_edge": 190.09,
+  "bezel_in": 190.19,
+  "insert_out": 256.08,
+  "bezel_out": 256.08
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 302.3,
+   "length_px": 115.01,
+   "tail_px": 7.97
+  },
+  "minute": {
+   "angle_deg": 47.2,
+   "length_px": 166.29,
+   "tail_px": 7.97
+  },
+  "seconds": {
+   "angle_deg": 221.6,
+   "length_px": 189.2,
+   "tail_px": 9.96
+  }
+ },
+ "hub_r": 12.45,
+ "crown": {
+  "x0": 782.83,
+  "x1": 836.2,
+  "y0": 421.97,
+  "y1": 503.02
+ },
+ "tip_rows_px": [
+  147.33,
+  780.64
+ ]
+}

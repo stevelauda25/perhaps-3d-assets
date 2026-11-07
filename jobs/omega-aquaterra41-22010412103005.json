@@ -1,0 +1,46 @@
+{
+ "id": "omega-aquaterra41-22010412103005",
+ "output": "outputs/jobs/omega-aquaterra41-22010412103005",
+ "asset_type": "watch",
+ "model": "OMEGA Seamaster Aqua Terra 150M Co-Axial Master Chronometer 41 mm 220.10.41.21.03.005",
+ "baseline": "First build (sets the Omega Aqua Terra 41 template): front relief from the catalogue photo at 41 mm (Omega Diver 300M structure with Aqua Terra measurements: cushion case from the silhouette, polished fixed bezel, blue teak dial photo map, solid sword hands with lume, three-column steel bracelet with measured links)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/omega-seamaster-aqua-terra-150m-41-22010412103005/REFERENCE_PLAN.md",
+  "config/watches/omega-aquaterra41-22010412103005.json",
+  "config/watches/omega-aquaterra41-22010412103005-trace.json",
+  "config/presets/watch_kit_white_front_omega_aquaterra41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_omega_aquaterra41",
+   "params": {
+    "spec": "config/watches/omega-aquaterra41-22010412103005.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/omega-aquaterra41-22010412103005/omega-aquaterra41-22010412103005.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_omega_aquaterra41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2048,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

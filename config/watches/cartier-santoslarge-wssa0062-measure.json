@@ -1,0 +1,220 @@
+{
+ "note": "Pixel measurements read from references/cartier-santos-large-wssa0062/cartier-wssa0062_original.jpg (750 x 750 JPEG, no alpha, background (247,249,250) at the corner), px of that image (pixel centres at integers). Same Santos de Cartier Large render as WSSA0018/0071 at another crop: the eight bezel screws (template matched against the blue 0071 photo, subpixel, least squares) give an isotropic scale of 1.0229 and offset (6.16, -8.02) relative to the 0071 photo (max residual 0.44 px), i.e. about 1.060 relative to silver; the 0071 template geometry (bezel outline quarter tl, opening, dial_rect, screws, guard, crown) mapped through it was checked on gridded 4x overlays at all four corners, the top and bottom bracelet and the crown (within about 1 px). Measured on this photo: pivot = least squares intersection of the three hand centre lines (PCA of bright pixels in each hand's band; residuals 0.1 / 0.4 / 0.4 px) at (379.3, 354.8); hands about 10:09, steel sword hands as on the blue: hour tip (slanted end) 326.0, 316.9 (65.4 px, 305.4 deg), minute tip on its centre line 451.2, 295.2 (93.5 px, 50.5 deg), seconds tip 321.2, 429.3 (94.6 px, 218.0 deg; the thin blade runs into the VII numeral) with the counterweight tail end 403.7, 324.2 (39.4 px, 38.6 deg). mask_tol 5 (6 removes the top bracelet edge here too: 3,663 px differ from 5, all at rows 73..671). Anchor: case width 39.8 mm = silhouette between the flanks on rows 262..288 (about 324 px, 8.14 px/mm); horn-to-horn about 49.9 mm against the listed 47.5 mm (same 4 percent as the other photos, recorded not asserted). pieces_px = bracelet joint rows (dark minima of the row profile averaged over x 350..410), listed outward from the case: top 196.0 / 156.0 / 125.0 / 98.3 / 82.0 (end 75.4 = silhouette), bottom 515.0 / 554.3 / 594.0 / 629.2 / 654.6 (end 669.5); end_link_x = the dark gap lines at the end link's left / right edge (290.0 / 469.0 top, 290.8 / 469.8 bottom). Crown, opening and dial rim: mapped, verified on overlays.",
+ "pivot": [
+  379.3,
+  354.8
+ ],
+ "anchor": {
+  "width_mm": 39.8,
+  "listed_lug_to_lug_mm": 47.5
+ },
+ "mask_tol": 5,
+ "width_rows": [
+  262,
+  288
+ ],
+ "horn": {
+  "top_y": 156.2,
+  "bottom_y": 562.3
+ },
+ "bezel": {
+  "cx": 380.7,
+  "cy": 358.9,
+  "tl": [
+   [
+    380.7,
+    204.2
+   ],
+   [
+    297.0,
+    204.2
+   ],
+   [
+    289.5,
+    207.9
+   ],
+   [
+    281.0,
+    217.4
+   ],
+   [
+    271.5,
+    223.3
+   ],
+   [
+    260.9,
+    228.6
+   ],
+   [
+    252.4,
+    233.9
+   ],
+   [
+    246.5,
+    241.9
+   ],
+   [
+    242.4,
+    252.4
+   ],
+   [
+    240.2,
+    266.2
+   ],
+   [
+    239.7,
+    287.4
+   ],
+   [
+    239.7,
+    358.9
+   ]
+  ]
+ },
+ "opening": {
+  "x0": 265.0,
+  "y0": 240.0,
+  "x1": 493.6,
+  "y1": 464.6,
+  "r": 25.6
+ },
+ "dial_rect": {
+  "x0": 271.6,
+  "y0": 248.2,
+  "x1": 492.1,
+  "y1": 461.0,
+  "r": 21.5
+ },
+ "screws": [
+  [
+   314.2,
+   216.7
+  ],
+  [
+   444.1,
+   216.2
+  ],
+  [
+   251.6,
+   290.9
+  ],
+  [
+   510.2,
+   290.0
+  ],
+  [
+   251.9,
+   419.8
+  ],
+  [
+   510.8,
+   420.2
+  ],
+  [
+   316.2,
+   494.4
+  ],
+  [
+   445.8,
+   493.9
+  ]
+ ],
+ "screw_r": 6.6,
+ "guard_x": 560.1,
+ "crown_rows": [
+  327,
+  384
+ ],
+ "crown": {
+  "centre_y": 356.1,
+  "profile_px": [
+   [
+    0.0,
+    536.5
+   ],
+   [
+    25.1,
+    536.5
+   ],
+   [
+    26.1,
+    538.1
+   ],
+   [
+    26.1,
+    559.6
+   ],
+   [
+    25.1,
+    562.1
+   ],
+   [
+    22.5,
+    564.7
+   ],
+   [
+    17.9,
+    568.8
+   ],
+   [
+    13.3,
+    571.8
+   ],
+   [
+    8.2,
+    573.9
+   ],
+   [
+    3.1,
+    574.9
+   ],
+   [
+    0.0,
+    575.1
+   ]
+  ]
+ },
+ "hub_r": 9.5,
+ "hour_tip": [
+  326.0,
+  316.9
+ ],
+ "minute_tip": [
+  451.2,
+  295.2
+ ],
+ "seconds_tip": [
+  321.2,
+  429.3
+ ],
+ "seconds_tail": [
+  403.7,
+  324.2
+ ],
+ "end_link_x": {
+  "top": [
+   290.0,
+   469.0
+  ],
+  "bottom": [
+   290.8,
+   469.8
+  ]
+ },
+ "pieces_px": {
+  "top": [
+   196.0,
+   156.0,
+   125.0,
+   98.3,
+   82.0
+  ],
+  "bottom": [
+   515.0,
+   554.3,
+   594.0,
+   629.2,
+   654.6
+  ]
+ }
+}
