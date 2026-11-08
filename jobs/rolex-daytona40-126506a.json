@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daytona40-126506a",
+ "output": "outputs/jobs/rolex-daytona40-126506a",
+ "asset_type": "watch",
+ "model": "ROLEX Cosmograph Daytona 126506A (40 mm 950 platinum, ICE BLUE dial with eight baguette diamond indices (diamond-set), brown Cerachrom tachymetre bezel, brown-ringed sub-dials, two screw-down chronograph pushers, platinum Oyster bracelet)",
+ "baseline": "Follower build of the Daytona 40 template (126500LN): same step / prep / kit preset read-only, per-photo measure / spec / job JSON only; hands, bracelet joints, bezel and crown / pushers verified by overlay",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-cosmograph-daytona-platinum-126506a/REFERENCE_PLAN.md",
+  "config/watches/rolex-daytona40-126506a.json",
+  "config/watches/rolex-daytona40-126506a-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daytona40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daytona40",
+   "params": {
+    "spec": "config/watches/rolex-daytona40-126506a.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daytona40-126506a/rolex-daytona40-126506a.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daytona40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

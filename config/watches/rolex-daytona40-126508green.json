@@ -1,0 +1,267 @@
+{
+ "model": "ROLEX Cosmograph Daytona 126508 green (40 mm yellow gold, green dial with champagne sub-dials, yellow gold tachymetre bezel, three sub-dials, two screw-down chronograph pushers, Oyster bracelet in yellow gold)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (hub screw). Daytona 40 follower of the 126500LN template (same camera, silhouette, bracelet joints and hands pose; this photo changes the dial, bezel, hands colours and the emissions): a fixed yellow gold bezel (geometry of the template ceramic ring; no coin edge) with the engraved tachymetre scale as texture, case slab from the photo silhouette (horns, crown guards, pusher barrels and crown included, one contour), three hands + three sub-dial hands as flat polygons (the printed dial with its sub-dials and the photographed hands is one native photo map), fluted crown and two screw-down pushers on radial axes, three-column Oyster bracelet whose joints are measured per column, top and bottom. Native 1920 x 2857 photo, 22.4625 px/mm (the 40 mm case flank is the anchor), no texture scaling.",
+ "trace": "config/watches/rolex-daytona40-126508green-trace.json",
+ "dial_map": "outputs/watches/rolex-daytona40-126508green/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-daytona40-126508green/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 48.08
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.0,
+  "tip_top": 22.93,
+  "tip_bottom": 25.15,
+  "note": "outline = contour of the photo silhouette between the lug rows (horn top y 910 = 22.93 mm, horn bottom y 1990 = 25.15 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "segments": 192,
+  "z0": 7.0,
+  "z_inner": 8.3,
+  "z_insert": 8.55,
+  "z_edge": 7.75,
+  "round_mm": 0.2,
+  "note": "bright chamfer bezel_in 16.10 .. insert_in 17.06 mm, ceramic ring to the ellipse ceramic_out (rx 19.67 mm, ry 19.38 mm, centre 0.37 mm lower than the flange), polished edge ring to the case flank ellipse (rx 20.0 mm); scale, numerals and reflections are the projected photo"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "sub_l": 7.45,
+   "sub_r": 7.45,
+   "sub_b": 7.45,
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.31,
+  "note": "hands = picked photo outlines (trace.hands[name].outline_mm) as flat polygons: hour and minute sword hands (black facet and lume strip are photo), chronograph seconds needle with arrow head and paddle tail, the three sub-dial needles with their hub discs; emission = dial emission so the polygons blend into the printed dial"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.75,
+  "bevel": 0.2,
+  "neck_radius_fraction": 0.6,
+  "neck_from_mm": 18.5,
+  "note": "fluted Rolex crown (the guards are in the case slab): flutes x 1405..1472 px, cap to 1496.5 px, axis 0.49 mm below the pivot, 16 coarse flutes"
+ },
+ "pushers": {
+  "teeth": 16,
+  "flute_depth": 0.25,
+  "z": 4.4,
+  "bevel": 0.12,
+  "cap_cylinder": true,
+  "note": "two screw-down pushers on radial axes through trace.pushers.origin_mm at +-28 deg: neck, fluted ring, narrower cylindrical cap (grooves are texture)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind. An Oysterflex strap is columns [\"strap\"] with one z_strap and a short chain per side.",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.467,
+      4.455
+     ],
+     [
+      20.7,
+      -4.467,
+      4.455
+     ],
+     [
+      27.4,
+      -4.424,
+      4.414
+     ],
+     [
+      31.6,
+      -4.384,
+      4.364
+     ],
+     [
+      34.0,
+      -4.384,
+      4.364
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.467,
+      4.459
+     ],
+     [
+      30.05,
+      -4.467,
+      4.459
+     ],
+     [
+      38.7,
+      -4.449,
+      4.436
+     ],
+     [
+      46.1,
+      -4.391,
+      4.38
+     ],
+     [
+      48.5,
+      -4.373,
+      4.384
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       22.927,
+       29.137
+      ],
+      [
+       29.137,
+       32.979
+      ]
+     ],
+     "bottom": [
+      [
+       25.153,
+       32.677
+      ],
+      [
+       32.677,
+       41.002
+      ],
+      [
+       41.002,
+       46.388
+      ],
+      [
+       46.388,
+       48.463
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       23.172
+      ],
+      [
+       23.172,
+       24.463
+      ],
+      [
+       24.463,
+       30.05
+      ],
+      [
+       30.05,
+       33.077
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       27.401
+      ],
+      [
+       27.401,
+       36.416
+      ],
+      [
+       36.416,
+       44.385
+      ],
+      [
+       44.385,
+       47.679
+      ],
+      [
+       47.679,
+       48.463
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet, three columns (outer brushed, centre polished). Joint rows (px, 22.4625 px/mm, pivot (960, 1425)), read from 4x crops and column-mean brightness runs, top and bottom separately: outer top 770.5, end 684.2 (steps in the alpha silhouette and the brushed break); outer bottom 2159 / 2346 / 2467, end 2513.6 (silhouette steps); centre top 904.5 / 875.5 / 750 (the thin dark band that precedes each bright plate), end 682.0; centre bottom 2040.5 / 2243 / 2422 / 2496 (dark bands before the bright plates; the broad black bands inside a plate are reflections), end 2513.6. Column lines x 861.65 / 1058.05 (y 715), 860.76 / 1059.17 (y 810), 859.78 / 1060.1 (y 960), 859.97 / 1060.13 (y 2100), 860.38 / 1059.61 (y 2295), 861.68 / 1058.36 (y 2460), 862.1 / 1058.46 (y 2505): gradient maxima on 30-100 row bands. The centre column starts at 18 mm under the case. Outer link edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.295,
+  "bezel_emission": 0.23
+ }
+}
