@@ -1,0 +1,366 @@
+{
+ "model": "ROLEX Oyster Perpetual 36 126000 (36 mm steel, lavender dial, Oyster bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Oyster Perpetual 36 126000, an adaptation of the Oyster Perpetual 41 template (same step, smaller case): case and lugs from the photo silhouette, smooth domed polished bezel, domed crystal, baton hands and a seconds needle, fluted crown and the three-column Oyster bracelet (outer / centre / outer) at the photo's joints; the dial, indices, print, minute track and the photographed hands come from one native photo map. Native 1920 x 2857 photo, 22.806 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-oysterperpetual36-126000-trace.json",
+ "dial_map": "outputs/watches/rolex-oysterperpetual36-126000/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-oysterperpetual36-126000/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 15.0,
+  "bevel": 0.35,
+  "tip_top": 20.5,
+  "tip_bottom": 22.4,
+  "note": "the case outline follows the photo silhouette (lug top y 956 = 20.52 mm, lug bottom y 1936 = 22.45 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "segs": 192,
+  "profile": [
+   [
+    0.0,
+    8.55
+   ],
+   [
+    0.08,
+    8.8
+   ],
+   [
+    0.25,
+    9.05
+   ],
+   [
+    0.5,
+    9.2
+   ],
+   [
+    0.75,
+    9.1
+   ],
+   [
+    0.9,
+    8.85
+   ],
+   [
+    0.97,
+    8.5
+   ],
+   [
+    1.0,
+    8.1
+   ]
+  ],
+  "note": "smooth domed polished bezel (no insert, no numerals): fractions of bezel_in..bezel_out (15.54..17.61 mm) from the inner edge to the outer edge"
+ },
+ "crystal": {
+  "z0": 8.6,
+  "z1": 8.75,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.32
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "lume_height": 0.03,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "profile": {
+   "hour": [
+    [
+     -2.6,
+     0.83
+    ],
+    [
+     -1.4,
+     0.8
+    ],
+    [
+     1.4,
+     0.73
+    ],
+    [
+     3.9,
+     0.68
+    ],
+    [
+     5.6,
+     0.64
+    ],
+    [
+     7.7,
+     0.6
+    ],
+    [
+     7.95,
+     0.58
+    ]
+   ],
+   "minute": [
+    [
+     -2.6,
+     0.72
+    ],
+    [
+     -1.2,
+     0.7
+    ],
+    [
+     1.3,
+     0.63
+    ],
+    [
+     4.5,
+     0.58
+    ],
+    [
+     9.0,
+     0.52
+    ],
+    [
+     12.0,
+     0.49
+    ],
+    [
+     12.3,
+     0.47
+    ]
+   ],
+   "seconds": [
+    [
+     -4.2,
+     0.33
+    ],
+    [
+     -1.5,
+     0.29
+    ],
+    [
+     0.0,
+     0.27
+    ],
+    [
+     1.5,
+     0.25
+    ],
+    [
+     8.0,
+     0.15
+    ],
+    [
+     11.5,
+     0.1
+    ],
+    [
+     13.4,
+     0.05
+    ]
+   ]
+  },
+  "lume": {},
+  "note": "profile = [mm along the hand from the pivot (negative = tail), half width] from tail to tip, from perpendicular edge scans on the photo (the silhouette includes the black side facet) plus 0.03 mm so the 3D hands hide the photographed ones; the last point sits at the measured length (flat tips). The lume strips and black facets stay in the projected photo. Hands and hub use the hands_photo material (the reference photo projected from the front)",
+  "material": "hands_photo",
+  "lume_material": "hands_photo",
+  "emission": 0.36
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "fluted_to_mm": 19.6,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "plain fluted Rolex crown, no guards: neck x 1360..1370, flutes to x 1407, rounded cap to 1424 (coronet is texture)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.4,
+      4.35
+     ],
+     [
+      22.0,
+      -4.38,
+      4.33
+     ],
+     [
+      30.5,
+      -4.33,
+      4.29
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.41,
+      4.36
+     ],
+     [
+      23.5,
+      -4.42,
+      4.38
+     ],
+     [
+      33.0,
+      -4.4,
+      4.38
+     ],
+     [
+      40.6,
+      -4.33,
+      4.32
+     ],
+     [
+      46.0,
+      -4.27,
+      4.27
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       20.5,
+       26.86
+      ],
+      [
+       26.86,
+       30.39
+      ]
+     ],
+     "bottom": [
+      [
+       21.0,
+       30.03
+      ],
+      [
+       30.03,
+       38.06
+      ],
+      [
+       38.06,
+       43.44
+      ],
+      [
+       43.44,
+       45.8
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       15.7,
+       21.62
+      ],
+      [
+       21.62,
+       28.65
+      ],
+      [
+       28.65,
+       30.47
+      ]
+     ],
+     "bottom": [
+      [
+       15.7,
+       23.37
+      ],
+      [
+       23.37,
+       32.56
+      ],
+      [
+       32.56,
+       39.95
+      ],
+      [
+       39.95,
+       44.35
+      ],
+      [
+       44.35,
+       45.82
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet: brushed outer links and a wider centre link. Joints (px, 22.806 px/mm, pivot (960, 1424)): outer top 811.5, bottom 2108.5 / 2292 / 2414.5; centre top 770.5 / 931, bottom 1957 / 2166.5 / 2335 / 2435.5; ends y 729..731 (top) and 2469 (bottom). The photo's own dark lines and shading stay in the projected texture. Column x lines about 860.5 / 1058.5 px (top), 859.5..862.5 / 1056.5..1060.5 (bottom). The centre column starts at the bezel inner edge; outer pieces start at the case tips. Outer link edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.285
+ }
+}

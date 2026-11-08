@@ -1,0 +1,34 @@
+{
+ "note": "Pixel measurements on references/rolex-oyster-perpetual-36-126000/rolex-126000_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw centre (960, 1424) (6x crop; hub disc radius about 19 px). Scale: case flank on the pivot row x 549 (alpha min over rows 1410..1450; 550 at most rows) and the case centre x 959.5 (centre of left / right flanks at rows 1250..1340 and 1520..1600: 959.5; the right flank is hidden by the crown) -> 36 mm = 821 px, 22.806 px/mm (lug to lug 982 px = 43.1 mm, whole watch 1741 px). rings = radii in px about ring_centre_px (the dial / bezel circle: circle fit on the saturation edge of the lavender dial gives (959.6, 1428.3) r 314.3, residual 0.85 px; the bezel's outer thin black edge line fits r 400.3 about (958.8, 1428.1), so the outer edge is about 401.5): dial_flat 314 (end of the lavender dial incl. minute track, rehaut with ROLEX text 314..351), crystal_edge 351 (bright ring), bezel_in 354.5 (thin black line 352..355 just inside it), bezel_out 401.5 (domed polished bezel; the case flank sticks out 8 px beyond it at 9 o'clock). hands (about 10:09:30, compass deg clockwise from 12): axis from edge-centre scans: hour 305.2 (flat tip 7.95 mm, tail 2.6), minute 63.2 (tip 12.3, tail 2.6), seconds 186.0 (needle to 13.4 mm, counterweight tail 4.2); half widths are in the spec (silhouette incl. black facet and a 2.6 px lateral offset for the hour hand). crown box x 1360..1424 (neck to 1370, flutes to 1407, cap to 1424), y 1367..1503 (centre 1435 = 0.5 mm below the pivot, radius 68 px = 2.98 mm). tip_rows_px = lug top y 956 and lug bottom y 1936 (alpha steps; lug top edge slants 953..961 over 48 px). Bracelet joints from silhouette steps and brightness scans, top and bottom separately; bracelet ends y 729 (centre, top) / 731 (outer, top) and 2469 / 2468.5. The photo has no drop shadow and no logo marks (single alpha component).",
+ "photo": "references/rolex-oyster-perpetual-36-126000/rolex-126000_original.png",
+ "case_mm": 36,
+ "pivot": [960, 1424],
+ "case_centre_x": 959.5,
+ "case_edge_left_x": 549,
+ "ring_centre_px": [959.6, 1428.3],
+ "rings": {
+  "dial_flat": 314,
+  "crystal_edge": 351,
+  "bezel_in": 354.5,
+  "bezel_out": 401.5
+ },
+ "hands": {
+  "hour": {"angle_deg": 305.2, "length_mm": 7.95, "tail_mm": 2.6},
+  "minute": {"angle_deg": 63.2, "length_mm": 12.3, "tail_mm": 2.6},
+  "seconds": {"angle_deg": 186.0, "length_mm": 13.4, "tail_mm": 4.2}
+ },
+ "hub_r": 19,
+ "crown": {"x0": 1360, "x1": 1424, "y0": 1367, "y1": 1503},
+ "tip_rows_px": [956, 1936],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) read from silhouette steps (outer) and brightness scans / 3x crops (centre), top and bottom separately",
+  "outer_top": [731, 811.5],
+  "centre_top": [729, 770.5, 931],
+  "outer_bottom": [2108.5, 2292, 2414.5, 2468.5],
+  "centre_bottom": [1957, 2166.5, 2335, 2435.5, 2469],
+  "column_x": {"top": [860.5, 1058.5], "bottom": [859.5, 1060]}
+ }
+}

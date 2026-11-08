@@ -1,0 +1,46 @@
+{
+ "id": "rolex-oysterperpetual36-126000",
+ "output": "outputs/jobs/rolex-oysterperpetual36-126000",
+ "asset_type": "watch",
+ "model": "ROLEX Oyster Perpetual 36 126000 lavender (36 mm steel, lavender dial, Oyster bracelet)",
+ "baseline": "First build: Oyster Perpetual 36 front relief (adapted from the 41 template step) from the 1920 x 2857 catalogue render at 36 mm (own prep / spec / kit scale, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-oyster-perpetual-36-126000/REFERENCE_PLAN.md",
+  "config/watches/rolex-oysterperpetual36-126000.json",
+  "config/watches/rolex-oysterperpetual36-126000-trace.json",
+  "config/presets/watch_kit_white_front_rolex_oysterperpetual36.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_oysterperpetual41",
+   "params": {
+    "spec": "config/watches/rolex-oysterperpetual36-126000.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-oysterperpetual36-126000/rolex-oysterperpetual36-126000.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_oysterperpetual36.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
