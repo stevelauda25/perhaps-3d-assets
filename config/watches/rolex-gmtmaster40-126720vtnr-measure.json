@@ -1,0 +1,319 @@
+{
+ "note": "GMT-Master II 40 LEFT-crown measure (126720VTNR 'Sprite', Oyster). START = the 126710BLNR measure: the render is the same camera and the same case mirrored left to right, with the SAME dial / hands (not mirrored: the dial print, hand angles, hub and GMT hand are identical to the blnr photo, only the GMT hand is green) and the date window with its Cyclops lens moved to 9 o'clock. Checked: the alpha mask of this photo mirrored about x (x' = 1919 - x) differs from the blnr alpha by 0 px (>60/255) over rows 1000..1900 (the head), 7634 px only in the bracelet rows and the lug tops; the right coin-edge tip at the pivot row is alpha 217 at x 1422 and 24 at x 1423 -> tip x 1422.9 (the blnr left tip 496.9), bracelet edges symmetric about x 960.0 (coverage sums at rows 1000..2500) -> 40 mm = 2 x (1422.9 - 960.0) = 925.8 px, 23.145 px/mm. Pivot: hub screw centre read on an 8x crop (960.7, 1424.3) -> int (960, 1424), as blnr. Crown on the left: fluted body x 492 (case side) .. 432, cap to 406, y 1359..1517 (axis 1438), the guard edge is the straight line x 447 (rows 1290..1346 / 1530..1590; crown rows 1350..1524 take it). Rings: the camera and bezel geometry are the blnr ones (full-circle fits on this photo: dial edge (960.0, 1427.9) r 309.1 and insert edge (960.1, 1424.5) r 435.8, the same as the fits of the blnr photo mirrored), ring centre (959.9, 1424.0).",
+ "photo": "references/rolex-gmt-master-ii-126720vtnr/rolex-126720vtnr_original.png",
+ "case_mm": 40,
+ "pivot": [
+  960,
+  1424
+ ],
+ "case_centre_x": 960.0,
+ "ring_centre_px": [
+  959.9,
+  1424.0
+ ],
+ "rings": {
+  "dial_flat": 309.3,
+  "crystal_edge": 351.0,
+  "bezel_in": 366.4,
+  "insert_out": 436.05,
+  "rim_out": 442.9,
+  "bezel_tip": 462.7
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      196,
+      -17,
+      17
+     ]
+    },
+    {
+     "circle": [
+      113,
+      1.0,
+      35
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "poly": [
+      [
+       -20,
+       -20
+      ],
+      [
+       225,
+       -20
+      ],
+      [
+       292,
+       -2.8
+      ],
+      [
+       292,
+       0
+      ],
+      [
+       240,
+       15
+      ],
+      [
+       225,
+       12
+      ],
+      [
+       -20,
+       12
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.4,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -95,
+       -1.0
+      ],
+      [
+       -25,
+       -1.5
+      ],
+      [
+       25,
+       -2.0
+      ],
+      [
+       100,
+       -2.5
+      ],
+      [
+       300,
+       -2.0
+      ],
+      [
+       307,
+       -0.8
+      ],
+      [
+       300,
+       0.5
+      ],
+      [
+       250,
+       1.5
+      ],
+      [
+       190,
+       3.0
+      ],
+      [
+       100,
+       3.5
+      ],
+      [
+       25,
+       3.5
+      ],
+      [
+       -25,
+       4.0
+      ],
+      [
+       -95,
+       4.0
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -102,
+      1.2,
+      10.5
+     ]
+    },
+    {
+     "circle": [
+      170,
+      -1.5,
+      17
+     ]
+    }
+   ]
+  },
+  "gmt": {
+   "angle_deg": 152.9,
+   "mode": "polygons_px",
+   "polygons_px": [
+    [
+     [
+      970.0,
+      1435.9
+     ],
+     [
+      961.5,
+      1440.3
+     ],
+     [
+      1064.1,
+      1640.5
+     ],
+     [
+      1072.6,
+      1636.2
+     ]
+    ],
+    [
+     [
+      1034.5,
+      1646.0
+     ],
+     [
+      1094.5,
+      1614.5
+     ],
+     [
+      1094.5,
+      1691.0
+     ]
+    ]
+   ],
+   "note": "blue shaft (rectangle along the principal axis of the blue pixels) + the triangle head (vertices picked on a 6x crop)"
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 492,
+  "x1": 406,
+  "y0": 1359,
+  "y1": 1517,
+  "fluted_x": 432
+ },
+ "crown_rows": {
+  "y0": 1350,
+  "y1": 1524,
+  "left_x": 447.0
+ },
+ "tip_rows_px": [
+  903.5,
+  1992.5
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "date": {
+  "note": "START = the blnr lens outline mirrored (x' = 1919 - x), to be corrected by overlay on a 5x crop; numeral and window stay texture",
+  "lens_px": [
+   [
+    796,
+    1355.0
+   ],
+   [
+    759,
+    1354.6
+   ],
+   [
+    698,
+    1355.2
+   ],
+   [
+    684,
+    1365
+   ],
+   [
+    674,
+    1377
+   ],
+   [
+    668,
+    1390
+   ],
+   [
+    665.4,
+    1406
+   ],
+   [
+    664.8,
+    1424
+   ],
+   [
+    666.4,
+    1440
+   ],
+   [
+    670,
+    1456
+   ],
+   [
+    676,
+    1470
+   ],
+   [
+    686,
+    1481
+   ],
+   [
+    697,
+    1487.4
+   ],
+   [
+    759,
+    1487.8
+   ],
+   [
+    796,
+    1487.2
+   ],
+   [
+    806,
+    1482
+   ],
+   [
+    816,
+    1472
+   ],
+   [
+    824,
+    1460
+   ],
+   [
+    829,
+    1444
+   ],
+   [
+    830.8,
+    1424
+   ],
+   [
+    830,
+    1406
+   ],
+   [
+    824,
+    1386
+   ],
+   [
+    814,
+    1370
+   ]
+  ]
+ },
+ "crown_side": "left",
+ "case_edge_right_x": 1422.9
+}

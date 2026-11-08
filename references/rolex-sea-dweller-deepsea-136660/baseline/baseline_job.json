@@ -1,0 +1,46 @@
+{
+ "id": "rolex-deepsea44-136660",
+ "output": "outputs/jobs/rolex-deepsea44-136660",
+ "asset_type": "watch",
+ "model": "ROLEX Sea-Dweller Deepsea 136660 D-Blue (44 mm steel, gradient dial, black ceramic bezel, date without Cyclops, Oyster bracelet)",
+ "baseline": "First build: Sea-Dweller Deepsea 44 front relief from the 1920 x 2857 catalogue render at 44 mm (ADAPT of the Sea-Dweller 43 step; prep copy only renamed; own kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-sea-dweller-deepsea-136660/REFERENCE_PLAN.md",
+  "config/watches/rolex-deepsea44-136660.json",
+  "config/watches/rolex-deepsea44-136660-trace.json",
+  "config/presets/watch_kit_white_front_rolex_deepsea44.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_seadweller43",
+   "params": {
+    "spec": "config/watches/rolex-deepsea44-136660.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-deepsea44-136660/rolex-deepsea44-136660.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_deepsea44.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,335 @@
+{
+ "note": "Pixel measurements on references/rolex-yacht-master-42-226627/rolex-226627_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). Pivot = hub screw (960.6, 1425.0) -> int (961, 1425) (same as the YM40 render). Scale: the toothed bezel edge (tips) is the 42 mm anchor, chosen the same way as for the YM40: silhouette radius at 165..195 deg 486.1..487.9 (alpha edge, the dark scoop gaps are opaque black), leftmost silhouette x 472.9 on rows 1395..1455 (alpha 234 at 473), ring centre x 959.5 -> radius 486.6 px = 21.0 mm -> 23.171 px/mm (the YM40 render has 23.0). Ring centre (959.5, 1425.2) from the ceramic outer edge (155 gradient points on a circle fit, r 465.3); the ceramic inner edge fits r 380.3. Rings (radial profiles at 100..330 deg): dial flat to 339, rehaut engraving 340..354, crystal edge 355, bright polished inner ring (titanium) 356..380 (modelled as the bezel chamfer), black ceramic band 380..465.3 (raised numerals, bars, triangle and scale are texture), polished ring 465.3..471, 60 scoops (scoop centred at 12 o'clock) 471..486.6; the scoop gaps are opaque in the alpha, so the real outline is a circle (flute_depth ~0.05 mm). Hands about 10:09:31 (same as the YM40): hour 304.8 deg Mercedes ring (centre s 138, w -2, r 41), minute 63.3 deg (tip s 308), seconds 186.0 deg SILVER needle (not cyan) from the tail disc (s -116, r 14) to the tip s 325, lollipop (s 181.5, r 25). Crown flutes x 1448..1519, cap to 1541, y 1357..1517 (axis 12.5 px below the pivot), guards to x 1488. Bracelet (titanium, all brushed) joints from brightness-step scans and 2x strip crops.",
+ "photo": "references/rolex-yacht-master-42-226627/rolex-226627_original.png",
+ "case_mm": 42,
+ "pivot": [
+  961,
+  1425
+ ],
+ "case_centre_x": 959.5,
+ "case_edge_left_x": 472.9,
+ "ring_centre_px": [
+  959.5,
+  1425.2
+ ],
+ "rings": {
+  "dial_flat": 339,
+  "crystal_edge": 355,
+  "bezel_in": 356,
+  "insert_out": 465.3,
+  "rim_out": 471,
+  "bezel_tip": 486.6
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 304.8,
+   "mode": "mask",
+   "thr": 110,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      212,
+      -21,
+      21
+     ]
+    },
+    {
+     "circle": [
+      138,
+      -2.0,
+      41
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.3,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -18,
+       -8
+      ],
+      [
+       10,
+       -8
+      ],
+      [
+       45,
+       -14
+      ],
+      [
+       60,
+       -15.5
+      ],
+      [
+       235,
+       -15.5
+      ],
+      [
+       250,
+       -14
+      ],
+      [
+       308,
+       0.4
+      ],
+      [
+       300,
+       2.2
+      ],
+      [
+       250,
+       12
+      ],
+      [
+       235,
+       13.5
+      ],
+      [
+       60,
+       13.5
+      ],
+      [
+       35,
+       12.5
+      ],
+      [
+       10,
+       8
+      ],
+      [
+       -18,
+       8
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.0,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -110,
+       -0.5
+      ],
+      [
+       210,
+       -0.5
+      ],
+      [
+       325,
+       0.2
+      ],
+      [
+       325,
+       2.4
+      ],
+      [
+       210,
+       4.6
+      ],
+      [
+       -110,
+       4.6
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -116,
+      2.3,
+      14
+     ]
+    },
+    {
+     "circle": [
+      181.5,
+      2.0,
+      25
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 1448,
+  "x1": 1541,
+  "y0": 1357,
+  "y1": 1517,
+  "fluted_x": 1519
+ },
+ "crown_rows": {
+  "y0": 1358,
+  "y1": 1516,
+  "right_x": 1488
+ },
+ "tip_rows_px": [
+  882,
+  2021
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px): outer top 882 (lug tip), 743, end 662; centre top 848 (hidden below), 706, end 659; outer bottom 2021 (lug tip), 2203, 2388, 2502.5, end 2537; centre bottom 2044, 2260, 2429.5, 2520, end 2537.5; column lines x 859 / 1063 top, 858.5 / 1062.5 bottom (the brushed titanium bracelet has no polished centre links)",
+  "outer_top": [
+   662,
+   743,
+   882
+  ],
+  "centre_top": [
+   659,
+   706,
+   850
+  ],
+  "outer_bottom": [
+   2021,
+   2203,
+   2388,
+   2502.5,
+   2537
+  ],
+  "centre_bottom": [
+   2044,
+   2260,
+   2429.5,
+   2520,
+   2537.5
+  ],
+  "column_x": {
+   "top": [
+    859,
+    1063
+   ],
+   "bottom": [
+    858.5,
+    1062.5
+   ]
+  }
+ },
+ "date": {
+  "note": "Cyclops lens outer frame outline picked on a 5x grid crop (+-1 px): flat top y 1354, flat bottom y 1487, bowed sides, widest x 1108 / 1276.4; numeral and window stay texture",
+  "lens_px": [
+   [
+    1143,
+    1354
+   ],
+   [
+    1171,
+    1353.6
+   ],
+   [
+    1215,
+    1353.8
+   ],
+   [
+    1241,
+    1354.4
+   ],
+   [
+    1252,
+    1362
+   ],
+   [
+    1262,
+    1376
+   ],
+   [
+    1270,
+    1390
+   ],
+   [
+    1274.4,
+    1404
+   ],
+   [
+    1276.4,
+    1420
+   ],
+   [
+    1276.4,
+    1436
+   ],
+   [
+    1274,
+    1450
+   ],
+   [
+    1270,
+    1462
+   ],
+   [
+    1262,
+    1474
+   ],
+   [
+    1252,
+    1482
+   ],
+   [
+    1243,
+    1486.4
+   ],
+   [
+    1215,
+    1487
+   ],
+   [
+    1171,
+    1487.2
+   ],
+   [
+    1148,
+    1486.4
+   ],
+   [
+    1143,
+    1483.6
+   ],
+   [
+    1132,
+    1476
+   ],
+   [
+    1122,
+    1466
+   ],
+   [
+    1115,
+    1452
+   ],
+   [
+    1110,
+    1436
+   ],
+   [
+    1108,
+    1416
+   ],
+   [
+    1109,
+    1400
+   ],
+   [
+    1113,
+    1386
+   ],
+   [
+    1120,
+    1372
+   ],
+   [
+    1130,
+    1360
+   ]
+  ]
+ }
+}

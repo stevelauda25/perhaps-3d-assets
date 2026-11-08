@@ -1,0 +1,46 @@
+{
+ "id": "rolex-yachtmaster40-126622",
+ "output": "outputs/jobs/rolex-yachtmaster40-126622",
+ "asset_type": "watch",
+ "model": "ROLEX Yacht-Master 40 126622 (40 mm steel / platinum, slate dial, date with Cyclops lens, Oyster bracelet)",
+ "baseline": "First build: Yacht-Master 40 front relief from the 1920 x 2857 catalogue render at 40 mm (variant-named prep / step copies of the Submariner Date 41 template, platinum toothed bezel, own kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-yacht-master-40-126622/REFERENCE_PLAN.md",
+  "config/watches/rolex-yachtmaster40-126622.json",
+  "config/watches/rolex-yachtmaster40-126622-trace.json",
+  "config/presets/watch_kit_white_front_rolex_yachtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_yachtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-yachtmaster40-126622.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-yachtmaster40-126622/rolex-yachtmaster40-126622.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_yachtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

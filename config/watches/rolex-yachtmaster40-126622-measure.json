@@ -1,0 +1,329 @@
+{
+ "note": "Pixel measurements on references/rolex-yacht-master-40-126622/rolex-126622_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). Pivot = hub screw (960.8, 1425.0) -> int (961, 1425). Scale: the toothed bezel edge (ridge / scoop tips) is the 40 mm anchor: horizontal radius 460 px from the ring centre (flute scoops start at x 499.6 on the 9 o'clock axis, 459..461 at 150 / 196 / 262 / 278 deg) -> 920 px = 40 mm -> 23.0 px/mm (the case flank beside the bezel reaches x 483.6, 20.7 mm radius at this scale: it is the lug body, not the bezel; the render is a 6 deg tilted view, so lower parts shift down: bezel inner edge centre y 1424.3 (vertical radius 350.8 vs horizontal 352.5), toothed edge centre y ~1427, flank centre y 1437). Ring centre (959.6, 1424.5) from the dark inner bezel edge line (x 607 / 1312 at row 1428 -> 959.5, r 352.5; y 1073.5 / 1775 -> 1424.3). Rings from radial profiles in clean sectors (centre 959.6 / 1424.5): dial_flat 310 (rehaut engraving starts), crystal_edge 351, bezel_in 352.6 (dark edge line), matte platinum band to 430, dark groove 431..433, polished ring to 437, 60 scoops (flute at 12 o'clock) from 437 to the tip 460. Hands about 10:09:31: hour 304.8 (Mercedes ring on the shaft, ring centre s 113 w 1), minute 63.3, seconds needle 186.0 through (959.4, 1425) (cyan, 5 px wide, tip y 1712, tail disc centre (970, 1322) r 13, lollipop (943, 1585) r 20). Crown flutes x 1425..1490, cap to 1513, y 1357..1513. Bracelet joints from brightness-step scans (columns 900..1020 centre, 770..840 outer) and 2.2-2.4x strip crops.",
+ "photo": "references/rolex-yacht-master-40-126622/rolex-126622_original.png",
+ "case_mm": 40,
+ "pivot": [
+  961,
+  1425
+ ],
+ "case_centre_x": 959.6,
+ "case_edge_left_x": 499.6,
+ "ring_centre_px": [
+  959.6,
+  1424.5
+ ],
+ "rings": {
+  "dial_flat": 310,
+  "crystal_edge": 351,
+  "bezel_in": 352.6,
+  "insert_out": 430,
+  "rim_out": 437,
+  "bezel_tip": 460
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 304.8,
+   "mode": "mask",
+   "thr": 150,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      196,
+      -17,
+      17
+     ]
+    },
+    {
+     "circle": [
+      113,
+      1.0,
+      34
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.3,
+   "mode": "mask",
+   "thr": 150,
+   "roi": [
+    {
+     "poly": [
+      [
+       -20,
+       -20
+      ],
+      [
+       48,
+       -20
+      ],
+      [
+       60,
+       -22
+      ],
+      [
+       100,
+       -19
+      ],
+      [
+       112,
+       -18.4
+      ],
+      [
+       212,
+       -18.4
+      ],
+      [
+       274,
+       -1.6
+      ],
+      [
+       279,
+       -0.4
+      ],
+      [
+       274,
+       1.2
+      ],
+      [
+       215,
+       9
+      ],
+      [
+       -20,
+       12
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.0,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -110,
+       -1.1
+      ],
+      [
+       210,
+       -1.1
+      ],
+      [
+       289,
+       0.3
+      ],
+      [
+       289,
+       2.9
+      ],
+      [
+       210,
+       4.3
+      ],
+      [
+       -110,
+       4.3
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -103.4,
+      1.8,
+      13.5
+     ]
+    },
+    {
+     "circle": [
+      161,
+      1.3,
+      20.5
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 1425,
+  "x1": 1513,
+  "y0": 1357,
+  "y1": 1513,
+  "fluted_x": 1490
+ },
+ "crown_rows": {
+  "y0": 1358,
+  "y1": 1514,
+  "right_x": 1466
+ },
+ "tip_rows_px": [
+  915,
+  1983
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px): bright-to-dark steps of the polished centre links (scan of columns 900..1020) and the sharp top edges of the overlapping brushed outer pieces (scan of columns 770..840); column lines x (gradient maxima over row bands) 860.5 / 1058.5 top, 859.5 / 1059.5 bottom",
+  "outer_top": [
+   682,
+   767,
+   915
+  ],
+  "centre_top": [
+   678,
+   731,
+   863
+  ],
+  "outer_bottom": [
+   1983,
+   2162.5,
+   2358,
+   2479,
+   2514
+  ],
+  "centre_bottom": [
+   1988,
+   2046,
+   2201,
+   2364,
+   2500,
+   2514
+  ],
+  "column_x": {
+   "top": [
+    860.5,
+    1058.5
+   ],
+   "bottom": [
+    859.5,
+    1059.5
+   ]
+  }
+ },
+ "date": {
+  "note": "Cyclops lens outline, polygon picked on a 5x crop (+-1 px): flat top y 1356.5, flat bottom y 1488, bowed sides, widest x 1088.6 / 1253 at y ~1420 (same place as the Submariner Date lens, a few px different); the date numeral and window stay texture",
+  "lens_px": [
+   [
+    1121,
+    1357
+   ],
+   [
+    1171,
+    1356.4
+   ],
+   [
+    1222,
+    1357
+   ],
+   [
+    1228,
+    1361
+   ],
+   [
+    1236,
+    1369
+   ],
+   [
+    1243,
+    1379
+   ],
+   [
+    1248.6,
+    1391
+   ],
+   [
+    1251.8,
+    1404
+   ],
+   [
+    1253,
+    1420
+   ],
+   [
+    1252.8,
+    1434
+   ],
+   [
+    1251,
+    1448
+   ],
+   [
+    1248,
+    1458
+   ],
+   [
+    1242.6,
+    1468
+   ],
+   [
+    1235,
+    1478
+   ],
+   [
+    1227,
+    1484.4
+   ],
+   [
+    1222,
+    1487.4
+   ],
+   [
+    1171,
+    1488
+   ],
+   [
+    1122,
+    1487.4
+   ],
+   [
+    1114,
+    1481
+   ],
+   [
+    1106,
+    1473
+   ],
+   [
+    1098.6,
+    1463
+   ],
+   [
+    1092.6,
+    1449
+   ],
+   [
+    1088.8,
+    1434
+   ],
+   [
+    1088.6,
+    1418
+   ],
+   [
+    1091,
+    1402
+   ],
+   [
+    1095,
+    1388
+   ],
+   [
+    1101,
+    1375
+   ],
+   [
+    1109,
+    1365
+   ],
+   [
+    1116,
+    1359.6
+   ]
+  ]
+ }
+}

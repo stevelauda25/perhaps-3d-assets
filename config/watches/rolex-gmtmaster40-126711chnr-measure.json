@@ -1,0 +1,318 @@
+{
+ "note": "126711CHNR (steel / Everose Rolesor, brown-black Root Beer bezel, Oyster): follower of the 126710BLNR template measure; the Everose GMT hand uses the 126713GRNR gold shaft + triangle polygons (re-verified by overlay). 126710BLRO FOLLOWER measure: every value copied from the 126710BLNR measure after verification on this photo (registration, hour / minute / seconds hands, GMT hand angle 152.907 deg with the red shaft, lens and rings are pixel-identical; the Oyster bracelet is in the spec). Original template note: GMT-Master II 40 template measure (126710BLNR first). Pixel measurements on references/rolex-gmt-master-ii-126710blnr/rolex-126710blnr_original.png (native 1920 x 2857 RGBA upright studio render, no working copy; same camera/pose family as the other Rolex renders, own scale). pivot = hub screw (960.4, 1424.0) -> int (960, 1424). Scale: the coin-edge bezel tips are the widest part of the head: left tip envelope at the pivot row x 496.9 (alpha 24/255 at x 496, 218 at 497; silhouette radius from the ring centre 461.1..463.4 over rows 1300..1560, median 462.8), case / bezel centre x 959.7 (bracelet edges symmetric about 959.7..960) -> 40 mm = 2 x (959.7 - 496.9) = 925.6 px, 23.14 px/mm (lug width 456-458 px = 19.8 mm, crown diameter 158 px = 6.8 mm, lug to lug rows 903.5..1992.5 = 47.1 mm: consistent with the real 126710BLNR). Rings (radial edge scans, gaussian 0.7, full-circle fits with outlier rejection about the ring centre (959.6, 1424.0)): dial edge r 309.3 (black chapter), rehaut engraving ring 311..326, flange / crystal edge r 351 (bright silver ring 327..351 then a dark inner bezel wall 356..366), bezel inner edge (rise of the chamfer) r 366.4, insert outer edge (rise to the polished rim) r 436.05 (rms 0.9), rim outer edge (fall into the flutes) r 442.9, coin edge 60 flutes (FFT harmonic 60 of the azimuth profile at r 450..459; the alpha silhouette shows no flutes, the case body is behind them) spanning r 442.9..462.7 (tips). Hands (about 10:09:30): hour 305.5 deg Mercedes, minute 63.55 deg, seconds 186.4 deg, GMT 152.9 deg (blue shaft width 9.4 px = 0.4 mm along the principal axis of the blue pixels, centre line 1.7 px beside the hub screw, triangular lume head with a vertical right edge at x 1094.5 drawn over the 5 o'clock index). Crown box: fluted body x 1428..1488, cap to 1514, y 1359..1517 (axis 1438 = 0.6 mm below the pivot, radius 79 px); the guard edge is the straight line x 1472 (rows 1290..1346 and 1530..1590, crown rows 1350..1524 take it). tip_rows_px = lug top y 903.5 and lug bottom y 1992.5. The photo has no drop shadow and no logo marks (single alpha component).",
+ "photo": "references/rolex-gmt-master-ii-126711chnr/rolex-126711chnr_original.png",
+ "case_mm": 40,
+ "pivot": [
+  960,
+  1424
+ ],
+ "case_centre_x": 959.7,
+ "case_edge_left_x": 496.9,
+ "ring_centre_px": [
+  959.6,
+  1424.0
+ ],
+ "rings": {
+  "dial_flat": 309.3,
+  "crystal_edge": 351.0,
+  "bezel_in": 366.4,
+  "insert_out": 436.05,
+  "rim_out": 442.9,
+  "bezel_tip": 462.7
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      196,
+      -17,
+      17
+     ]
+    },
+    {
+     "circle": [
+      113,
+      1.0,
+      35
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "poly": [
+      [
+       -20,
+       -20
+      ],
+      [
+       225,
+       -20
+      ],
+      [
+       292,
+       -2.8
+      ],
+      [
+       292,
+       0
+      ],
+      [
+       240,
+       15
+      ],
+      [
+       225,
+       12
+      ],
+      [
+       -20,
+       12
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.4,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -95,
+       -1.0
+      ],
+      [
+       -25,
+       -1.5
+      ],
+      [
+       25,
+       -2.0
+      ],
+      [
+       100,
+       -2.5
+      ],
+      [
+       300,
+       -2.0
+      ],
+      [
+       307,
+       -0.8
+      ],
+      [
+       300,
+       0.5
+      ],
+      [
+       250,
+       1.5
+      ],
+      [
+       190,
+       3.0
+      ],
+      [
+       100,
+       3.5
+      ],
+      [
+       25,
+       3.5
+      ],
+      [
+       -25,
+       4.0
+      ],
+      [
+       -95,
+       4.0
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -102,
+      1.2,
+      10.5
+     ]
+    },
+    {
+     "circle": [
+      170,
+      -1.5,
+      17
+     ]
+    }
+   ]
+  },
+  "gmt": {
+   "angle_deg": 152.9,
+   "mode": "polygons_px",
+   "polygons_px": [
+    [
+     [
+      969.2,
+      1436.4
+     ],
+     [
+      961.2,
+      1440.5
+     ],
+     [
+      1063.8,
+      1640.7
+     ],
+     [
+      1071.8,
+      1636.6
+     ]
+    ],
+    [
+     [
+      1034.2,
+      1645.5
+     ],
+     [
+      1094.5,
+      1615.0
+     ],
+     [
+      1095.0,
+      1691.0
+     ]
+    ]
+   ],
+   "note": "gold shaft (FWHM 7.3 px, silhouette ~9.0 px, same 27.13 deg axis as 126710BLNR, centre line shifted 0.65 px) + triangle head (vertices picked on a 9x crop, as 126710BLNR within 1 px)"
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 1428,
+  "x1": 1514,
+  "y0": 1359,
+  "y1": 1517,
+  "fluted_x": 1488
+ },
+ "crown_rows": {
+  "y0": 1350,
+  "y1": 1524,
+  "right_x": 1472
+ },
+ "tip_rows_px": [
+  903.5,
+  1992.5
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "date": {
+  "note": "Cyclops lens outline picked on a 5x crop (+-1 px); numeral and window stay texture",
+  "lens_px": [
+   [
+    1123,
+    1355.0
+   ],
+   [
+    1160,
+    1354.6
+   ],
+   [
+    1221,
+    1355.2
+   ],
+   [
+    1235,
+    1365
+   ],
+   [
+    1245,
+    1377
+   ],
+   [
+    1251,
+    1390
+   ],
+   [
+    1253.6,
+    1406
+   ],
+   [
+    1254.2,
+    1424
+   ],
+   [
+    1252.6,
+    1440
+   ],
+   [
+    1249,
+    1456
+   ],
+   [
+    1243,
+    1470
+   ],
+   [
+    1233,
+    1481
+   ],
+   [
+    1222,
+    1487.4
+   ],
+   [
+    1160,
+    1487.8
+   ],
+   [
+    1123,
+    1487.2
+   ],
+   [
+    1113,
+    1482
+   ],
+   [
+    1103,
+    1472
+   ],
+   [
+    1095,
+    1460
+   ],
+   [
+    1090,
+    1444
+   ],
+   [
+    1088.2,
+    1424
+   ],
+   [
+    1089,
+    1406
+   ],
+   [
+    1095,
+    1386
+   ],
+   [
+    1105,
+    1370
+   ]
+  ]
+ }
+}

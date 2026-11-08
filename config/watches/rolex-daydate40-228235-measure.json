@@ -1,0 +1,464 @@
+{
+ "note": "Pixel measurements on references/rolex-day-date-40-228235/rolex-228235_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw (960, 1424), hub disc radius 17 px. Scale: the 40 mm case = the fluted bezel's flank at the pivot row: alpha edge x 511.6 (alpha 89 of 255 at pixel 511) and the case centre x 960.0 (min / max+1 of all alpha rows outside the lugs and the crown give 960.0) -> 40 mm = 2 x (960 - 511.6) = 896.8 px, 22.42 px/mm (cross-checks: lug to lug rows 908.5..1982.5 = 47.9 mm; bracelet at the lugs 472..478 px = 21.1 mm like the other Rolex renders). rings (radii in px about the ring centre (959.1, 1424.4), circle fits on 1-deg rays): rehaut bright outer edge 352 (pink band to 362 is the bezel's inner bevel), grey polished flange 363..376.2 (flange_out = where the grey ends, rms 0.8 px over 199 rays), then the brown chamfer to the flutes' inner zig-zag and the FLUTED bezel: 76 flutes = 152 facets of 2.368 deg (boundary spacing from 87 edge peaks, resultant 0.957 at N = 152; a boundary sits exactly at 12 / 3 / 6 / 9 o'clock), boundaries alternate LONG (even index counted ccw from 12 o'clock: includes 9 and 12 o'clock) and SHORT: LONG inner end r 384.5 / outer end r 439.4, SHORT inner r 389.5 / outer r 436.1 (alternating ray measurements at +0.35 facet from each boundary, solved for the two parities); outside the facets a smooth case flank band to r 447.5 (the silhouette). dial edge r 339.5 (minute-track circle). hands (about 10:09:30 like every Rolex render): hour 305.5 deg, minute 63.55 deg, seconds 186.3 deg; the gold baton hands (bright face, dark facet and a thin bright rim line) are NOT separable from the chocolate dial by a threshold, so each is a polygon (s along the hand from the pivot, w perpendicular, clockwise side +) from edge scans at 7-9 positions along each hand: hour tail end s -58.3, tip 193.3, w -17 .. +12 at s 60 tapering to -14.6 .. +8.1; minute tail -58.3, tip 312.3, w -14.3 .. +15 (tail +17.3) tapering to -11.5 .. +9.2; seconds needle tail -100, tip 317, w -6.5 .. +8 tapering to -3.6 .. +3.2 (no lume dot, hollow counterweight tail). Cyclops: lens outline traced on a 5x crop (flat top y 1355.6, flat bottom y 1486, bowed sides, widest x 1110 / 1276), +-1 px. Day window (arc at 12), date numeral, Roman numerals / indices, coronet, print: texture. crown box x 1406..1467 (dark guard edge from x 1406, flutes to x 1450, cap to 1467), y 1367.5..1506.5 (centre y 1437 = 0.58 mm below the pivot, radius 69.5 px = 3.1 mm, 1 px inside the photo outline so no grey map fill shows as a halo; first pass 1410 / 1369..1505 was 2 px too small against the render overlay); crown rows 1366..1508 take the left flank mirrored about the case centre (no guards). tip rows: lug top y 908.5 (slanted edge 909..913) and lug bottom y 1982.5. The photo has no drop shadow (one alpha component).",
+ "photo": "references/rolex-day-date-40-228235/rolex-228235_original.png",
+ "case_mm": 40,
+ "pivot": [
+  960,
+  1424
+ ],
+ "case_centre_x": 960.0,
+ "case_edge_left_x": 511.6,
+ "ring_centre_px": [
+  959.1,
+  1424.4
+ ],
+ "bezel_centre_px": [
+  959.1,
+  1424.4
+ ],
+ "rings": {
+  "dial_flat": 339.5,
+  "crystal_edge": 352.0,
+  "flange_out": 376.2,
+  "flute_in_long": 384.5,
+  "flute_in_short": 389.5,
+  "flute_out_long": 439.4,
+  "flute_out_short": 436.1,
+  "case_flank": 447.5
+ },
+ "flutes": 76,
+ "hub_r": 17,
+ "crown": {
+  "x0": 1406,
+  "x1": 1466,
+  "y0": 1367.5,
+  "y1": 1506.5,
+  "fluted_x": 1449
+ },
+ "crown_rows": {
+  "y0": 1366,
+  "y1": 1508
+ },
+ "tip_rows_px": [
+  908.5,
+  1982.5
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -58.3,
+       -18.3
+      ],
+      [
+       -35,
+       -18.2
+      ],
+      [
+       -20,
+       -18
+      ],
+      [
+       20,
+       -17.5
+      ],
+      [
+       35,
+       -17.2
+      ],
+      [
+       60,
+       -17
+      ],
+      [
+       120,
+       -16.2
+      ],
+      [
+       190,
+       -14.7
+      ],
+      [
+       193.3,
+       -14.2
+      ],
+      [
+       193.3,
+       7.8
+      ],
+      [
+       190,
+       8.2
+      ],
+      [
+       120,
+       9.8
+      ],
+      [
+       60,
+       12
+      ],
+      [
+       35,
+       12.4
+      ],
+      [
+       20,
+       14.6
+      ],
+      [
+       -35,
+       14.6
+      ],
+      [
+       -58.3,
+       15
+      ]
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -58.3,
+       -14.5
+      ],
+      [
+       -35,
+       -14.3
+      ],
+      [
+       35,
+       -14.2
+      ],
+      [
+       100,
+       -12.6
+      ],
+      [
+       200,
+       -11.8
+      ],
+      [
+       260,
+       -11.5
+      ],
+      [
+       290,
+       -11.5
+      ],
+      [
+       312.3,
+       -11.4
+      ],
+      [
+       312.3,
+       9.0
+      ],
+      [
+       290,
+       9.2
+      ],
+      [
+       260,
+       9.8
+      ],
+      [
+       200,
+       10.8
+      ],
+      [
+       100,
+       13.5
+      ],
+      [
+       35,
+       14.8
+      ],
+      [
+       -35,
+       16.8
+      ],
+      [
+       -58.3,
+       17.3
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.3,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -100,
+       -6.5
+      ],
+      [
+       -80,
+       -7
+      ],
+      [
+       -50,
+       -6.3
+      ],
+      [
+       -30,
+       -6
+      ],
+      [
+       30,
+       -5.6
+      ],
+      [
+       100,
+       -4.6
+      ],
+      [
+       200,
+       -3.8
+      ],
+      [
+       300,
+       -3.6
+      ],
+      [
+       316,
+       -1.5
+      ],
+      [
+       317,
+       0
+      ],
+      [
+       316,
+       1.5
+      ],
+      [
+       300,
+       3.2
+      ],
+      [
+       200,
+       3.4
+      ],
+      [
+       100,
+       4.8
+      ],
+      [
+       30,
+       6.4
+      ],
+      [
+       -30,
+       7.2
+      ],
+      [
+       -50,
+       7.6
+      ],
+      [
+       -80,
+       8.4
+      ],
+      [
+       -100,
+       8.4
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "lens_px": [
+  [
+   1140,
+   1355.6
+  ],
+  [
+   1190,
+   1355.4
+  ],
+  [
+   1240,
+   1355.6
+  ],
+  [
+   1250,
+   1360
+  ],
+  [
+   1262,
+   1373
+  ],
+  [
+   1271,
+   1390
+  ],
+  [
+   1275,
+   1410
+  ],
+  [
+   1276,
+   1420
+  ],
+  [
+   1274,
+   1434
+  ],
+  [
+   1268,
+   1452
+  ],
+  [
+   1258,
+   1468
+  ],
+  [
+   1246,
+   1482
+  ],
+  [
+   1240,
+   1486
+  ],
+  [
+   1190,
+   1486.2
+  ],
+  [
+   1140,
+   1486
+  ],
+  [
+   1130,
+   1474
+  ],
+  [
+   1120,
+   1458
+  ],
+  [
+   1113,
+   1438
+  ],
+  [
+   1110,
+   1420
+  ],
+  [
+   1110,
+   1406
+  ],
+  [
+   1113,
+   1390
+  ],
+  [
+   1121,
+   1374
+  ],
+  [
+   1130,
+   1364
+  ]
+ ],
+ "bracelet_px": {
+  "note": "President bracelet: three columns (brushed semicircular outer links, polished centre links with dark gaps). Outer joints = rows of the silhouette steps (left x jumps by 3+ px) top 695.5 / 740 / 813.5, lug 904, bottom lug 1983 / 2103 / 2322 / 2405.5 / 2466.5 / 2506, end 2513; the top end strip 686..695.5. Centre column: the dark gap bands (grey < 45 on the centre column mean, x 900..1020): top 706..712, 752..760, 832..847 (the small dark grooves 718 / 721..725 etc. are inside a link), bottom 2001..2008, 2124..2135, 2234..2246, 2327..2344, 2395..2412, 2445..2465, 2489..2503, end 2513. Column lines x 858 / 1062 (gradient maxima on 7 row bands).",
+  "outer_top": [
+   686,
+   695.5,
+   740,
+   813.5,
+   908.5
+  ],
+  "outer_bottom": [
+   1982.5,
+   2103,
+   2322,
+   2405.5,
+   2466.5,
+   2506,
+   2513
+  ],
+  "centre_top_pieces": [
+   [
+    686,
+    706
+   ],
+   [
+    712.5,
+    752
+   ],
+   [
+    760.5,
+    832
+   ],
+   [
+    847.5,
+    908.5
+   ]
+  ],
+  "centre_bottom_pieces": [
+   [
+    1982.5,
+    2001
+   ],
+   [
+    2008.5,
+    2124
+   ],
+   [
+    2135.5,
+    2234
+   ],
+   [
+    2246.5,
+    2327
+   ],
+   [
+    2344.5,
+    2395
+   ],
+   [
+    2412.5,
+    2445
+   ],
+   [
+    2465.5,
+    2489
+   ],
+   [
+    2503.5,
+    2513
+   ]
+  ],
+  "column_x": {
+   "top": [
+    858,
+    1062
+   ],
+   "bottom": [
+    857.5,
+    1062
+   ]
+  }
+ }
+}

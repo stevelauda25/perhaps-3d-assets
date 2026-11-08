@@ -1,0 +1,237 @@
+{
+ "model": "ROLEX GMT-Master II 126711CHNR (40 mm steel and Everose gold Rolesor, black dial, brown and black Cerachrom 24 h 'Root Beer' bezel with Everose coin edge, date with Cyclops lens, Everose GMT hand, Oyster bracelet with Everose centre links)",
+ "note": "Follower of the GMT-Master II 40 template (126710BLNR) via the Oyster follower 126710BLRO: same step / prep / kit preset (read-only), per-photo measure / spec / job only. Everose parts (rim, coin edge, crown, centre links, hands) are photo pixels of the projected steel map: no separate material. Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. 40 mm, 60-flute coin edge, FOUR hands (Everose GMT shaft + triangle head as one traced polygon), three-column Oyster bracelet (outer / centre / outer). Native 1920 x 2857 photo, 23.14 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-gmtmaster40-126711chnr-trace.json",
+ "dial_map": "outputs/watches/rolex-gmtmaster40-126711chnr/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-gmtmaster40-126711chnr/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 47.06
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 22.49,
+  "tip_bottom": 24.57,
+  "note": "outline = photo silhouette (lug top y 903.5 = 22.49 mm, lug bottom y 1992.5 = 24.57 mm, crown guards to x 1472 = 22.13 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "teeth": 60,
+  "samples_per_tooth": 8,
+  "flute_depth": 0.55,
+  "flute_power": 1.0,
+  "z_inner": 8.2,
+  "z_insert": 8.6,
+  "z_rim": 8.65,
+  "z_coin_out": 7.8,
+  "chamfer_mm": 0.25,
+  "note": "24 h ceramic insert (bezel_in 15.83 .. insert_out 18.84 mm; blue / black split and numerals are texture), flat polished rim to rim_out 19.14, coin edge (60 flutes) from there to the tips at 20.0 mm sloping down to z_coin_out"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.28
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "gmt": 7.82,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.35,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons, the Everose GMT hand (shaft + triangle head) between hour and minute hand; lume, Mercedes lines, Everose colour and facets stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.72,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Rolex crown (guards are in the case slab): flutes x 1428..1488, cap to 1514, axis 0.6 mm below the pivot, 16 coarse flutes"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.3,
+      4.257
+     ],
+     [
+      40.0,
+      -4.3,
+      4.257
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.33,
+      4.28
+     ],
+     [
+      50.0,
+      -4.33,
+      4.28
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       22.494,
+       28.716
+      ],
+      [
+       28.716,
+       31.95
+      ]
+     ],
+     "bottom": [
+      [
+       24.568,
+       32.714
+      ],
+      [
+       32.714,
+       40.753
+      ],
+      [
+       40.753,
+       45.764
+      ],
+      [
+       45.764,
+       47.1
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       23.51
+      ],
+      [
+       23.51,
+       29.755
+      ],
+      [
+       29.755,
+       32.02
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       25.065
+      ],
+      [
+       25.065,
+       34.485
+      ],
+      [
+       34.485,
+       41.83
+      ],
+      [
+       41.83,
+       46.71
+      ],
+      [
+       46.71,
+       47.1
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet, three columns (outer brushed steel links, wide polished Everose centre link). Joint rows identical to 126710BLRO (same camera and bracelet): verified on this photo by column-profile cross-correlation against the 126710BLRO photo (best shift 0 px at the centre, left and right outer columns, top and bottom), centre dark bands read directly (top 728..742 and 879..884; bottom 2215..2228, 2374..2407), column lines by the R-B gradient maxima (x 860 / 1059 top, 859.5 / 1059.5 bottom). Rows px (23.14 px/mm, pivot (960, 1424)): outer top step 759.5, end 685; outer bottom 2181 / 2367 / 2483, end 2514; centre top 880 / 735.5, bottom 2004 / 2222 / 2392 / 2505. The dark bands and rolled strips are reflections and stay texture. Outer link edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.29,
+  "bezel_emission": 0.265
+ },
+ "date": {
+  "z0": 8.6,
+  "z_edge": 8.78,
+  "z_top": 8.9,
+  "rings": [
+   0.95,
+   0.88
+  ],
+  "emission": 0.26,
+  "note": "Cyclops lens: photographed outline (measure.date.lens_px) as a wall + two bevel rings + flat top above the crystal; photo projection; heights are scaled by pose.depth_scale like every part"
+ }
+}

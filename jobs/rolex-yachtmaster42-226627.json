@@ -1,0 +1,46 @@
+{
+ "id": "rolex-yachtmaster42-226627",
+ "output": "outputs/jobs/rolex-yachtmaster42-226627",
+ "asset_type": "watch",
+ "model": "ROLEX Yacht-Master 42 226627 (42 mm RLX titanium, black ceramic bezel insert, black dial, date with Cyclops lens, titanium Oyster bracelet)",
+ "baseline": "First build: Yacht-Master 42 front relief from the 1920 x 2857 catalogue render at 42 mm (follower of the Yacht-Master 40 template: step read-only, variant-named prep copy, own kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-yacht-master-42-226627/REFERENCE_PLAN.md",
+  "config/watches/rolex-yachtmaster42-226627.json",
+  "config/watches/rolex-yachtmaster42-226627-trace.json",
+  "config/presets/watch_kit_white_front_rolex_yachtmaster42.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_yachtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-yachtmaster42-226627.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-yachtmaster42-226627/rolex-yachtmaster42-226627.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_yachtmaster42.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

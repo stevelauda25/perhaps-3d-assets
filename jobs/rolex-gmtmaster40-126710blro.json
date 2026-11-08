@@ -1,0 +1,46 @@
+{
+ "id": "rolex-gmtmaster40-126710blro",
+ "output": "outputs/jobs/rolex-gmtmaster40-126710blro",
+ "asset_type": "watch",
+ "model": "ROLEX GMT-Master II 126710BLRO (40 mm, black dial, blue and red ceramic 24 h bezel, date with Cyclops lens, GMT hand, Oyster bracelet)",
+ "baseline": "First build: FOLLOWER of the GMT-Master II 40 template (126710BLNR): step, prep and kit preset reused read-only; own photo maps and an Oyster three-column bracelet measured on this 1920 x 2857 catalogue render at 40 mm (native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-gmt-master-ii-126710blro/REFERENCE_PLAN.md",
+  "config/watches/rolex-gmtmaster40-126710blro.json",
+  "config/watches/rolex-gmtmaster40-126710blro-trace.json",
+  "config/presets/watch_kit_white_front_rolex_gmtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_gmtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-gmtmaster40-126710blro.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-gmtmaster40-126710blro/rolex-gmtmaster40-126710blro.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_gmtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
