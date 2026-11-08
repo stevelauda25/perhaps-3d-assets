@@ -1,0 +1,34 @@
+{
+ "note": "Pixel measurements on references/rolex-oyster-perpetual-41-134300-sunburst-blue/rolex-134300-sunburst-blue_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw centre (961, 1424) (6x crop; hub disc x 940..981, radius 21 px). Scale: case flank on the pivot row x 512 (alpha min over rows 1410..1450) and the case centre x 959 (centre of left / right flanks at rows 1300, 1340, 1570: 959.0 / 959.0 / 958.5; the right flank is hidden by the crown) -> 41 mm = 894 px, 21.805 px/mm (lug to lug 1052 px = 48.2 mm). rings = radii in px about ring_centre_px (the dial / bezel circle: Hough + circle fit on the green dial gives (959.4, 1428.2) r 347.5; bezel outer top 440 / bottom 444 px from it): dial_flat 348 (end of the green dial incl. minute track), crystal_edge 391 (bright rehaut / crystal edge ring), bezel_in 394 (thin black gap line 396..402 is the bezel's inner edge), bezel_out 442 (domed polished bezel, outer edge; the case flank sticks out 4..5 px beyond it at 9 o'clock). hands: axis angle from edge-centre fits of perpendicular scans (hour 305.53 deg, minute 63.55 deg; seconds from the tip: 186.3 deg), lengths = flat tip s from the pivot (hour 9.65 mm, minute 14.85 mm, seconds needle 15.1 mm), tails (hour -2.95, minute -2.85, seconds counterweight -4.05 mm); half-width profiles are in the spec. crown box x 1399..1477 (fluted body to x 1455, cap to 1477), y 1357..1513 (centre 1435 = 0.5 mm below the pivot, radius 78 px = 3.58 mm). tip_rows_px = lug top y 918 and lug bottom y 1970 (alpha steps). The photo has no drop shadow and no logo marks (single alpha component).",
+ "photo": "references/rolex-oyster-perpetual-41-134300-sunburst-blue/rolex-134300-sunburst-blue_original.png",
+ "case_mm": 41,
+ "pivot": [961, 1424],
+ "case_centre_x": 959,
+ "case_edge_left_x": 512,
+ "ring_centre_px": [959.4, 1429.5],
+ "rings": {
+  "dial_flat": 348,
+  "crystal_edge": 391,
+  "bezel_in": 394,
+  "bezel_out": 442
+ },
+ "hands": {
+  "hour": {"angle_deg": 305.53, "length_mm": 9.65, "tail_mm": 2.95},
+  "minute": {"angle_deg": 63.55, "length_mm": 14.85, "tail_mm": 2.85},
+  "seconds": {"angle_deg": 186.3, "length_mm": 15.1, "tail_mm": 4.05}
+ },
+ "hub_r": 21,
+ "crown": {"x0": 1399, "x1": 1477, "y0": 1357, "y1": 1513},
+ "tip_rows_px": [918, 1970],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) read from brightness scans (outer column x 770..830, centre column x 880..1030) and 2x crops, top and bottom separately",
+  "outer_top": [676, 759.5, 923],
+  "centre_top": [673, 727, 868.5],
+  "outer_bottom": [1987, 2171, 2363, 2500, 2526],
+  "centre_bottom": [2025.5, 2236, 2410, 2507, 2526],
+  "column_x": {"top": [855.5, 1055.5, 1056], "bottom": [855.5, 1062]}
+ }
+}

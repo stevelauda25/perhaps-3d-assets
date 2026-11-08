@@ -1,0 +1,46 @@
+{
+ "id": "rolex-oysterperpetual41-134300-pistachio",
+ "output": "outputs/jobs/rolex-oysterperpetual41-134300-pistachio",
+ "asset_type": "watch",
+ "model": "ROLEX Oyster Perpetual 41 134300 pistachio (41 mm steel, pistachio dial, Oyster bracelet)",
+ "baseline": "First build: Oyster Perpetual 41 template front relief from the 1920 x 2857 catalogue render at 41 mm (own prep / step / spec / kit scale, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-oyster-perpetual-41-134300-pistachio/REFERENCE_PLAN.md",
+  "config/watches/rolex-oysterperpetual41-134300-pistachio.json",
+  "config/watches/rolex-oysterperpetual41-134300-pistachio-trace.json",
+  "config/presets/watch_kit_white_front_rolex_oysterperpetual41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_oysterperpetual41",
+   "params": {
+    "spec": "config/watches/rolex-oysterperpetual41-134300-pistachio.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-oysterperpetual41-134300-pistachio/rolex-oysterperpetual41-134300-pistachio.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_oysterperpetual41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

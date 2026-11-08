@@ -27,7 +27,10 @@ def sheet(base):
         return False
     x0, x1 = np.percentile(xs, [1, 99])
     y0, y1 = np.percentile(ys, [1, 99])
-    cx, cy, W = (x0 + x1) / 2, (y0 + y1) / 2, (x1 - x0)
+    mask = (255 - ren).max(axis=2) > 24
+    width = mask.sum(axis=1)  # the watch head is where the silhouette is widest (long straps and bracelets do not shift the crops)
+    wide = np.nonzero(width > 0.93 * width.max())[0]
+    cx, cy, W = (x0 + x1) / 2, float(np.median(wide)), (x1 - x0)
     half = int(0.19 * W)
     rows = []
     for dy in (-0.16, 0.0, 0.2):

@@ -1,0 +1,112 @@
+{
+ "model": "ROLEX Air-King 126900 (40 mm steel, black dial, domed polished bezel, Oyster bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (at hand height). The Rolex Air-King TEMPLATE (config key 126900): case slab from the alpha silhouette (lugs and crown guards included) between the end-link tips, domed polished bezel ring (ellipse outer edge, crest 1 mm inside it, fitted circular window edge, chamfer), flat polygon dial with the native photo map (print, minute track, numerals, rehaut ring and the photographed hands stay in the map), one fluted crown, Oyster bracelet = brushed outer-link rows + centre-link pieces from the trace, hands = traced photo outlines. Measured on the 126900 photo at 40 mm (scale 22.586 px/mm); tips, hands, hub, crown, bracelet and emissions are per variant. The photo's lighting is baked into the maps (emission), specular is zero on every photo part.",
+ "trace": "config/watches/rolex-airking-126900-trace.json",
+ "dial_map": "outputs/watches/rolex-airking-126900/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-airking-126900/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0
+ },
+ "case": {
+  "body_z": 6.6,
+  "tip_z": 3.6,
+  "ramp_from_y": 19.5,
+  "bevel": 0.35,
+  "bezel_z": 8.9,
+  "chamfer_z": 8.2,
+  "bezel_bevel": 0.04,
+  "silhouette_margin_mm": 0.1,
+  "rays": 180,
+  "note": "case slab = silhouette between the end-link tips (tip_top / tip_bottom, 0.25 mm grid, sum a multiple of 0.25), sloping toward the bracelet; bezel = ring (min of the measured ellipse and the silhouette less silhouette_margin_mm, by rays), outer edge at bezel_z - bezel_outer_dz, dome crest bezel_crest_mm inside the outer edge at bezel_z, window edge at bezel_z - bezel_inner_dz, then a chamfer ring down to the dial window at chamfer_z; rays = aperture.n = 180 (1.5 mm sagitta 0.003 mm at the 20 mm radius is not visible)",
+  "tip_top": 22.75,
+  "tip_bottom": 25.0,
+  "bezel_outer_dz": 0.08,
+  "bezel_inner_dz": 0.04,
+  "bezel_crest_mm": 1.0
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.6
+ },
+ "dial": {
+  "z": 7.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.30,
+  "note": "flat polygon (the window less the chamfer) with the native photo map: print, minute track, numerals, rehaut ring and the photographed hands stay in the map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.4,
+   "minute": 7.65,
+   "seconds": 7.9
+  },
+  "material": "hands_photo",
+  "emission": 0.4,
+  "note": "hands are the traced photo outlines (trace.hands[name].outline_mm, measured about the pivot in the strip frame of each hand: hour 304.6 deg, minute 63.1 deg, seconds 186.1 deg) as flat polygons; hands_photo = the reference photo projected from the front with its own emission, so lume, Mercedes lines and the green paint show as photographed"
+ },
+ "crown": {
+  "z": 5.0,
+  "bevel": 0.15,
+  "note": "crowns come from trace.crowns: a lathe about the axis (profile = [radius, mm along the axis] from the base point), flutes are texture"
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.285
+ },
+ "bracelet": {
+  "gap": 0.05,
+  "z0": 0.6,
+  "z_side": 3.3,
+  "lift": 0.15,
+  "piece_lift": 0.35,
+  "bevel": 0.1,
+  "piece_bevel": 0.1,
+  "inset": 0.03,
+  "emission_top": 0.275,
+  "emission_bottom": 0.29,
+  "note": "bracelet rows and centre-link pieces come from trace.bracelet (rows_mm / pieces_mm); rows follow the silhouette; pieces are rounded rectangles raised piece_lift over the rows; all carry the projected photo (steel_photo material); gap = dark joint between rows",
+  "backing_inset": 0.2,
+  "backing_z": [
+   0.2,
+   0.6
+  ]
+ }
+}
