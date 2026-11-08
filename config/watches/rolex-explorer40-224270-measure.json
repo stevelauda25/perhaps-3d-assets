@@ -1,0 +1,651 @@
+{
+ "note": "Pixel measurements read from references/rolex-explorer-40-224270/rolex-224270_original.png (1920 x 2857 RGBA PNG, upright studio render; the watch occupies x 514..1478, y 683..2513). ALL POSITIONS ARE CONTINUOUS PHOTO COORDINATES in the WORKING image (native, upscale 1). Pivot = centre of the hub (screw at (960.5, 1424.5), hub disc x 938..978) -> (959.2, 1425.0) (same camera and pivot as the Air-King render). Scale: listed 40 mm = left flank of the bezel (median alpha edge over rows 1400..1470, x 514.2) to the pivot 20 mm; the silhouette is symmetric about x 960.0 (left + right = 1920 at the bezel rows); the right flank is the crown notch line (mirror of the left flank, the crown barrel hides the bezel edge) in 4 segments. Bezel outer: ellipse centre (960.0, 1427.5) half axes 445.9 x 442.0 (left silhouette x 514.1; radial edges y 985.5 at 12 and y 1869.5 at 6). Bezel inner edge (the outer edge of the dark bevel line around the rehaut): left x 568.7, right x 1340.5, top y 1034.7, bottom y 1802.0 (rays: circle fit centre (955.1, 1419.1) r 385.6 on the upper half) -> circle centre (955.0, 1418.8) r 385.2 (the window ellipse is 5 px left of the pivot: render parallax). Crown: barrel x 1400 (chamfered left end, r 52 at x 1402) ..1451, rows 1356..1515 (axis y 1435.6, radius 79), chamfered end cap to x 1478.7 (half heights measured per column); the Explorer 40 has NO crown guards in the silhouette. Hands (10:09:30): traced by eye on rotated strips (hour 304.6 deg: shaft t -14.3..+12.2, Mercedes disc r 37.5 at s 117, arrowhead tip s 200.7; minute 63.1 deg: sword half width 13.5 to s 250, tip s 318.5; seconds 186.1 deg: line half width 3.2, tail disc r 13.7 at s -108.5, lume head disc r 21.2 at s 182.7, tip s 331); polygons = union of the shapes rasterised in the strip frame and rotated about the pivot. Bracelet: Oyster; outer-link joints (dark gap lines at an outer column) top 762.5, lug end 920, bottom lug end 1984, 2175.5, 2352.5, 2481, end 2514; centre-link joints top 728.5, 864.5, bottom 2056, 2233.5, 2395.5, 2497; centre links x 858..1062 (pieces inset 2 px).",
+ "reference_dir": "references/rolex-explorer-40-224270",
+ "upscale": 1,
+ "case_mm": 40.0,
+ "pivot": [
+  959.2,
+  1425.0
+ ],
+ "anchor": {
+  "rows": [
+   1400,
+   1470
+  ]
+ },
+ "crown_replace": [
+  {
+   "side": "right",
+   "y0": 1353,
+   "y1": 1380,
+   "x0": 1398.0,
+   "x1": 1402.0
+  },
+  {
+   "side": "right",
+   "y0": 1380,
+   "y1": 1430,
+   "x0": 1402.0,
+   "x1": 1405.9
+  },
+  {
+   "side": "right",
+   "y0": 1430,
+   "y1": 1480,
+   "x0": 1405.9,
+   "x1": 1403.7
+  },
+  {
+   "side": "right",
+   "y0": 1480,
+   "y1": 1517,
+   "x0": 1403.7,
+   "x1": 1398.5
+  }
+ ],
+ "bezel_outer": {
+  "centre_px": [
+   960.0,
+   1427.5
+  ],
+  "half_x_px": 445.9,
+  "half_y_px": 442.0,
+  "exponent": 2.0,
+  "bevel_px": 0
+ },
+ "aperture": {
+  "circle": {
+   "centre_px": [
+    955.0,
+    1418.8
+   ],
+   "r_px": 385.2
+  },
+  "chamfer_px": 8,
+  "n": 180
+ },
+ "steel_max_px": 2048,
+ "hands": {
+  "hour": {
+   "polygon_px": [
+    [
+     -164.98,
+     114.3
+    ],
+    [
+     -133.45,
+     73.35
+    ],
+    [
+     -134.08,
+     66.98
+    ],
+    [
+     -133.85,
+     61.85
+    ],
+    [
+     -132.91,
+     56.7
+    ],
+    [
+     -131.3,
+     51.82
+    ],
+    [
+     -128.8,
+     46.82
+    ],
+    [
+     -125.68,
+     42.36
+    ],
+    [
+     -122.62,
+     39.03
+    ],
+    [
+     -117.89,
+     35.16
+    ],
+    [
+     -113.85,
+     32.74
+    ],
+    [
+     -108.39,
+     30.43
+    ],
+    [
+     -103.11,
+     29.1
+    ],
+    [
+     -96.83,
+     28.53
+    ],
+    [
+     -91.08,
+     28.94
+    ],
+    [
+     -85.76,
+     30.13
+    ],
+    [
+     -80.46,
+     32.18
+    ],
+    [
+     -75.7,
+     34.85
+    ],
+    [
+     -5.65,
+     -13.47
+    ],
+    [
+     -4.77,
+     -12.38
+    ],
+    [
+     -0.17,
+     -14.34
+    ],
+    [
+     5.1,
+     -14.09
+    ],
+    [
+     8.68,
+     -12.43
+    ],
+    [
+     11.78,
+     -9.34
+    ],
+    [
+     13.56,
+     -5.35
+    ],
+    [
+     13.85,
+     -1.41
+    ],
+    [
+     12.21,
+     3.61
+    ],
+    [
+     8.74,
+     7.21
+    ],
+    [
+     9.4,
+     8.34
+    ],
+    [
+     -60.32,
+     56.44
+    ],
+    [
+     -59.32,
+     61.94
+    ],
+    [
+     -59.12,
+     67.51
+    ],
+    [
+     -59.96,
+     74.04
+    ],
+    [
+     -61.62,
+     79.56
+    ],
+    [
+     -64.39,
+     85.24
+    ],
+    [
+     -67.51,
+     89.7
+    ],
+    [
+     -70.56,
+     93.02
+    ],
+    [
+     -75.3,
+     96.89
+    ],
+    [
+     -79.34,
+     99.32
+    ],
+    [
+     -84.79,
+     101.62
+    ],
+    [
+     -90.07,
+     102.95
+    ],
+    [
+     -95.63,
+     103.51
+    ],
+    [
+     -100.77,
+     103.29
+    ],
+    [
+     -105.92,
+     102.35
+    ],
+    [
+     -115.35,
+     98.53
+    ]
+   ],
+   "note": "shaft + Mercedes disc (r 37.5) + arrowhead"
+  },
+  "minute": {
+   "polygon_px": [
+    [
+     -2.94,
+     5.8
+    ],
+    [
+     3.17,
+     -6.24
+    ],
+    [
+     17.05,
+     -1.33
+    ],
+    [
+     43.48,
+     6.69
+    ],
+    [
+     229.46,
+     100.71
+    ],
+    [
+     284.26,
+     143.65
+    ],
+    [
+     217.07,
+     125.15
+    ],
+    [
+     31.3,
+     30.91
+    ],
+    [
+     13.2,
+     13.99
+    ]
+   ],
+   "note": "sword with lume body"
+  },
+  "seconds": {
+   "polygon_px": [
+    [
+     -34.48,
+     -329.2
+    ],
+    [
+     -31.57,
+     -324.58
+    ],
+    [
+     -18.28,
+     -203.01
+    ],
+    [
+     -10.78,
+     -201.6
+    ],
+    [
+     -6.85,
+     -199.6
+    ],
+    [
+     -3.89,
+     -197.3
+    ],
+    [
+     -1.26,
+     -194.37
+    ],
+    [
+     0.69,
+     -191.16
+    ],
+    [
+     2.76,
+     -184.04
+    ],
+    [
+     2.24,
+     -176.64
+    ],
+    [
+     1.01,
+     -173.09
+    ],
+    [
+     -0.93,
+     -169.66
+    ],
+    [
+     -3.34,
+     -166.79
+    ],
+    [
+     -6.77,
+     -164.01
+    ],
+    [
+     -13.69,
+     -161.06
+    ],
+    [
+     13.3,
+     94.32
+    ],
+    [
+     17.35,
+     95.5
+    ],
+    [
+     21.04,
+     98.02
+    ],
+    [
+     23.87,
+     101.94
+    ],
+    [
+     25.15,
+     106.43
+    ],
+    [
+     24.85,
+     111.09
+    ],
+    [
+     22.91,
+     115.52
+    ],
+    [
+     18.43,
+     119.72
+    ],
+    [
+     12.99,
+     121.51
+    ],
+    [
+     8.33,
+     121.2
+    ],
+    [
+     3.9,
+     119.26
+    ],
+    [
+     -0.3,
+     114.78
+    ],
+    [
+     -2.09,
+     109.34
+    ],
+    [
+     -1.79,
+     104.68
+    ],
+    [
+     0.15,
+     100.25
+    ],
+    [
+     3.23,
+     97.01
+    ],
+    [
+     7.02,
+     94.89
+    ],
+    [
+     -20.19,
+     -160.66
+    ],
+    [
+     -27.54,
+     -162.69
+    ],
+    [
+     -33.31,
+     -166.8
+    ],
+    [
+     -37.33,
+     -172.41
+    ],
+    [
+     -39.4,
+     -179.53
+    ],
+    [
+     -38.88,
+     -186.93
+    ],
+    [
+     -36.14,
+     -193.25
+    ],
+    [
+     -31.37,
+     -198.49
+    ],
+    [
+     -24.42,
+     -202.15
+    ],
+    [
+     -36.53,
+     -323.95
+    ]
+   ],
+   "note": "line, tail disc, lume head disc, tip"
+  }
+ },
+ "hub_r_px": [
+  26.0,
+  19.5
+ ],
+ "crowns": [
+  {
+   "name": "crown_3",
+   "base_px": [
+    1400.0,
+    1435.6
+   ],
+   "angle_deg": 90.0,
+   "profile_px": [
+    [
+     0,
+     0
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     52.5,
+     2
+    ],
+    [
+     66,
+     8
+    ],
+    [
+     78.5,
+     14
+    ],
+    [
+     79,
+     16
+    ],
+    [
+     79,
+     51.5
+    ],
+    [
+     75,
+     53.5
+    ],
+    [
+     70,
+     56
+    ],
+    [
+     65.2,
+     60
+    ],
+    [
+     61.8,
+     64
+    ],
+    [
+     58.2,
+     70
+    ],
+    [
+     53,
+     72.5
+    ],
+    [
+     44,
+     74
+    ],
+    [
+     34,
+     76
+    ],
+    [
+     12,
+     78
+    ],
+    [
+     0,
+     78.7
+    ]
+   ]
+  }
+ ],
+ "bracelet": {
+  "rows_px": {
+   "top": [
+    [
+     762.5,
+     920
+    ],
+    [
+     686,
+     762.5
+    ]
+   ],
+   "bottom": [
+    [
+     1984,
+     2175.5
+    ],
+    [
+     2175.5,
+     2352.5
+    ],
+    [
+     2352.5,
+     2481
+    ],
+    [
+     2481,
+     2514
+    ]
+   ]
+  },
+  "pieces_px": [
+   {
+    "side": "top",
+    "y0": 683,
+    "y1": 726.5,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "top",
+    "y0": 730.5,
+    "y1": 862.5,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "top",
+    "y0": 866.5,
+    "y1": 1000,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "bottom",
+    "y0": 1860,
+    "y1": 2054,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "bottom",
+    "y0": 2058,
+    "y1": 2231.5,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "bottom",
+    "y0": 2235.5,
+    "y1": 2393.5,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "bottom",
+    "y0": 2397.5,
+    "y1": 2495,
+    "x0": 860,
+    "x1": 1060,
+    "r": 6
+   },
+   {
+    "side": "bottom",
+    "y0": 2499,
+    "y1": 2514,
+    "x0": 860,
+    "x1": 1060,
+    "r": 4
+   }
+  ]
+ }
+}

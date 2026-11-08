@@ -1,0 +1,46 @@
+{
+ "id": "rolex-gmtmaster40-126713grnr",
+ "output": "outputs/jobs/rolex-gmtmaster40-126713grnr",
+ "asset_type": "watch",
+ "model": "ROLEX GMT-Master II 126713GRNR (40 mm steel and yellow gold, black dial, grey and black ceramic 24 h bezel with gold coin edge, date with Cyclops lens, gold GMT hand, Jubilee bracelet)",
+ "baseline": "First build: follower of the GMT-Master II 40 template (126710BLNR) from the 1920 x 2857 catalogue render at 40 mm; template step / prep / kit preset read-only, own measure / spec / job",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-gmt-master-ii-126713grnr/REFERENCE_PLAN.md",
+  "config/watches/rolex-gmtmaster40-126713grnr.json",
+  "config/watches/rolex-gmtmaster40-126713grnr-trace.json",
+  "config/presets/watch_kit_white_front_rolex_gmtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_gmtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-gmtmaster40-126713grnr.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-gmtmaster40-126713grnr/rolex-gmtmaster40-126713grnr.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_gmtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

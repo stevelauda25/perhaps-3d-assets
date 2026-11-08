@@ -1,0 +1,60 @@
+# Baseline: ROLEX Submariner Date 126610LN (41 mm, black dial, black Cerachrom bezel, date with Cyclops lens, Oyster bracelet) (saved 2026-11-08, awaiting designer approval)
+
+Front-relief build on the 41 mm steel / black dial / black ceramic bezel catalogue render from the Rolex image host (1920 x 2857, native size). FOLLOWER of the Submariner 41 template (no-date 124060, `../../rolex-submariner-124060/baseline/BASELINE.md`) plus a Cyclops lens mesh: this is the Submariner Date 41 template (126610LV, 126613LB and 126613LN follow it). One build and one emission pass (date lens emission 0.28 -> 0.26, hands 0.36 -> 0.35); registration, hands, coin edge, crown and bracelet joints needed no correction. Approval is the designer's; this file is not a similarity score and says nothing about photorealism.
+
+| Item | Value |
+| --- | --- |
+| GLB | `models/watches/rolex-126610ln.glb`, 1,656,060 bytes, sha256 `75818a6803198b7e42cdaeb8ba28a2f1e87f70172a8079742cd37dc3f0773c7e` (GLB 2.0, declared length = file length, two embedded JPEG image bufferViews: steel map 1036 x 1863 and dial map 722 x 722, both NATIVE, scale 1.0, no external URIs) |
+| Geometry (glb_audit) | 15 meshes / primitives, 7 materials, 27,288 vertices, 30,527 triangles; size 45.1 x 81.3 x 3.1 mm (depth scaled 0.35); meshes: case (with crown guards), bezel (ceramic insert + rim ring), bezel_coin_edge (fluted ring), crystal, dial, date_cyclops (NEW: lens wall + two bevel rings + top, +503 triangles), hour / minute / seconds hands, hub, crown, crown neck, crown cap, bracelet links, bracelet backing |
+| Comparison render | `baseline_cmp-front_1280.png` (1280 px, white kit, 11.3927 px/mm, pivot at the frame centre; same pixel frame as the photo composited on white, pivot (960, 1424) moved to (1280, 1280) on a 2560 canvas and downscaled by 0.5 with INTER_AREA), sha256 `b73e05e5ff39957ba64ef94aa8dd96c2d67d91f6e8d990f5dcbb8d194c6afbc0` |
+| Side by side | `baseline_vs_reference.png` (left: reference in the 1280 frame, right: render), sha256 `a2b9cd5715d9662b1cd613a0b24ef1ed83ee4c23664b35b1d48c32c49265763e` |
+| Reference | `../rolex-126610ln_original.png` (1920 x 2857 RGBA, untouched; measuring and map source, no working copy; URL in `../sources.md`) |
+| Job / step / spec | `jobs/rolex-submarinerdate41-126610ln.json`, `pipeline/steps/watch_rolex_submarinerdate41.py` (NEW, copy of the Submariner 41 step + Cyclops), `pipeline/rolex_submarinerdate41_prep.py` (NEW, copy of the prep + lens outline), `config/watches/rolex-submarinerdate41-126610ln{,-measure,-trace}.json`, `baseline_spec.json`, `baseline_job.json` |
+| Kit preset | `config/presets/watch_kit_white_front_rolex_submariner41.json` reused READ-ONLY (pivot and scale identical: the alpha mask of this photo equals the 124060's, 0 px differ by more than 60/255) |
+
+Rebuild: `python3 -B -m pipeline.rolex_submarinerdate41_prep 126610ln && python3 -B -m pipeline.jobs run jobs/rolex-submarinerdate41-126610ln.json --force`, then `cp outputs/jobs/rolex-submarinerdate41-126610ln/rolex-submarinerdate41-126610ln.glb models/watches/rolex-126610ln.glb`.
+
+State: as the 124060 build (steel parts carry the photo projected from the front, emission 0.29, bezel insert / rim 0.27, hands 0.35 (traced photo outlines as flat polygons at z 7.7 / 7.95 / 8.2), dial map emission 0.28, crystal alpha 0.02, specular 0, no baked shadows beyond the photo) plus the Cyclops: the photographed lens outline (7.3 x 5.8 mm, centre 9.26 mm right of and 0.15 mm above the pivot; flat top y 1355.5 and bottom y 1487, bowed sides x 1087.5..1254.5) as a closed polygon (`measure.date.lens_px` -> `trace.date.lens_mm`), built as a vertical wall (z 8.6..8.78) and two offset rings (0.95 / 0.88 of the outline) up to a flat top at z 8.9 (crystal top there 8.68..8.75; heights scaled by 0.35 like all parts), material `date_photo` = the projected steel photo (bright frame, glass reflection, window and numeral as photographed) with emission 0.26. The date window and numeral stay in the dial map too, so the lens covers identical pixels. The silhouette is unchanged (the lens is inside the crystal outline).
+
+Registration checks (this photo vs the 124060 photo, native px): case silhouette identical; rings: 0 and 2 px differ by > 20 (sum of 3 channels) over r 357..470; the bracelet joints are in the same rows (the only differences are brushed-grain noise, 3x strip crops top and bottom); crown and coin edge identical; the hands are the same angles (305.5 / 63.55 / 186.3), overlays of the traced outlines on 3x crops follow the photographed hands; only the dial differs (no 3 o'clock index, OYSTER PERPETUAL DATE, date window).
+
+Region mean luminance (sRGB grey, 1280 frame, render : photo): whole watch 1.001, dial plate (hands and lens masked) 1.002 (67.7 vs 67.5), dial dark areas 1.032, dial bright features 0.950 (white indices / print clip a little, the usual bright-detail residue), rehaut ring 0.974, bezel insert 1.012 (white reflection 0.999, black ceramic floor 7.2 vs 4.7 grey levels), polished rim 0.999, coin edge 1.013, bracelet top 1.007, bracelet bottom 0.997, case lug top 1.012, lug bottom 0.977, crown 1.022, hands (traced polygons) hour 1.014 / minute 1.016 / seconds 1.019, Cyclops lens whole 1.012 (window white 0.980, dark glass 1.079: 64.5 vs 59.8, the kit's diffuse floor). Mean abs grey difference over the photo silhouette 5.5 (mostly 1 px edges of print, numerals and brushed grain). Silhouette IoU 0.989 (render not-background = flood fill from the frame over min channel >= 238, vs the photo's alpha; 903 px render-only, 2441 photo-only: the crude threshold eats the white bezel edge, the template's 0.995 used another tolerance). Emission trials: date lens 0.28 -> 0.26 (whole 1.021 -> 1.012, glass 1.090 -> 1.079), hands 0.36 -> 0.35 (hour 1.019 -> 1.014, minute 1.020 -> 1.016, seconds 1.023 -> 1.019); dial 0.28 kept (plate 1.003 -> 1.002).
+
+Known differences: the background and alpha rim are not part of the asset; the dial print, rehaut engraving, applied indices, date window and numeral, minute track, bezel numerals / scale / lume pearl and ceramic reflection, the lume strips and black facets of the hands, the coin edge shading, the crown flutes' shading and the bracelet's brushed grain and bevels are texture only (photo projection); the 3D hands (flat traced outlines), crown (16 coarse flutes), insert, rim, coin ring (120 flutes), crystal, dial plane, Cyclops lens (faceted polygon with two bevel steps, not a true magnifier: the photographed magnification is texture), bracelet links and case slab are geometry; the lens frame highlight and glass arc are texture, slightly softer than the half-size photo; the date lens does not magnify anything in 3D; case slab ends slope by a straight ramp; crown guards are flat case outline; no lume geometry; heights have no side view, back flat.
+
+## Zoom check
+
+`zoom_check.jpg` (3x crops of the 1280 frames, reference | render): upper dial (coronet, ROLEX, OYSTER PERPETUAL DATE, hour hand ring and the lens edge at the right), hands and hub with the lens, lower dial (SUBMARINER block, seconds lume ring, 6 bar, SWISS MADE, 30). A separate 5x crop of the lens and the minute hand tip (not in the sheet, the sheet cuts the lens at the right edge) was also checked. Sharp: the Mercedes hour hand, the minute hand with lume strip and black facet, the seconds needle, tail dot and lume ring, the hub, the indices and their polished frames, the dial print lines, the date numeral and window inside the lens, the lens outline (follows the photo's bowed shape to about 1 px, no gaps to the dial, no halos). Soft: dial print and indices are as soft as the half-size photo (the shipped textures are native, 2x sharper in the app); the lens frame highlight and the glass reflection arc are a little weaker than in the photo (INTER_AREA reference vs the render's pixel filter); the dark glass inside the lens is about 8 % light (kit floor); the minute hand's thin bright rim line next to the black facet is softer. No misplaced hand edges, dark gaps or stair-steps were visible.
+
+## Template for the next Submariner Date variants (126610LV green bezel, 126613LB blue two-tone, 126613LN black two-tone)
+
+Use this build as the template; the Cyclops, step and prep are done and generic (spec / measure / trace driven; the step and prep are variant-named for the Submariner Date family and are used read-only by key). Photos are in `references/rolex-submariner-date-<sku>/rolex-<sku>_original.png` (check the folder names with `ls references | grep submariner-date`).
+
+```sh
+k=126610lv; ref=rolex-submariner-date-$k; photo=$(ls references/$ref/*_original.png)   # k = 126610lv | 126613lb | 126613ln (lowercase)
+M=config/watches/rolex-submarinerdate41
+python3 - "$k" "$photo" <<'PY'
+import json, sys
+k, photo = sys.argv[1], sys.argv[2]
+m = json.load(open("config/watches/rolex-submarinerdate41-126610ln-measure.json")); m["photo"] = photo
+json.dump(m, open("config/watches/rolex-submarinerdate41-%s-measure.json" % k, "w"), indent=1)
+s = json.dumps(json.load(open("config/watches/rolex-submarinerdate41-126610ln.json"))).replace("126610ln", k)
+json.dump(json.loads(s), open("config/watches/rolex-submarinerdate41-%s.json" % k, "w"), indent=1)
+j = json.dumps(json.load(open("jobs/rolex-submarinerdate41-126610ln.json"))).replace("rolex-submarinerdate41-126610ln", "rolex-submarinerdate41-" + k).replace("rolex-submariner-date-126610ln", "rolex-submariner-date-" + k)
+json.dump(json.loads(j), open("jobs/rolex-submarinerdate41-%s.json" % k, "w"), indent=1)
+PY
+python3 -B -m pipeline.rolex_submarinerdate41_prep $k          # trace, dial_photo.jpg, steel_photo.jpg
+python3 -B -m pipeline.jobs validate jobs/rolex-submarinerdate41-$k.json   # needs references/$ref/REFERENCE_PLAN.md
+python3 -B -m pipeline.jobs run jobs/rolex-submarinerdate41-$k.json --force
+cp outputs/jobs/rolex-submarinerdate41-$k/rolex-submarinerdate41-$k.glb models/watches/<glb from rolex_map.json>
+```
+
+Edit the new spec's and job's `model` / `note` / `baseline` text by hand (the replace above only swaps the SKU / ids). The job's `kit_preset` and `references` keep pointing at the shared preset `config/presets/watch_kit_white_front_rolex_submariner41.json`.
+
+**Same for every Submariner Date variant (do not touch):** the step, the prep, the kit preset, the whole spec geometry (case, bezel, crystal, crown, hub, bracelet columns / bounds / pieces, pose, heights) and the `date` section's geometry (lens z 8.6 / 8.78 / 8.9, rings 0.95 / 0.88): the Date case, dial layout and lens are the same on all four (check: the alpha masks of 124060 and 126610LN are identical; test the variant's alpha against `rolex-126610ln_original.png`, a difference below ~60/255 means the template geometry holds).
+
+**Per photo (re-measure, never trust these numbers):**
+1. `measure.photo` (set by the snippet) and, by overlay of `config/watches/rolex-submarinerdate41-<k>-trace.json` on the photo at 3x (pivot, the five ring circles, the traced hand outlines, the lens polygon: see how it was done here, all drawn from `measure` / `trace`), the pivot, rings, hands and `date.lens_px` (the lens outline: polygon of 19 points picked on a 5x crop, +-1 px; re-pick only if the overlay shows more than 2 px).
+2. Emissions: dial (black 0.28: a green / blue / sunburst dial needs its own trial, plate mean within ~1 %, check centre vs rim), steel 0.29 and bezel 0.27 (a green insert: re-tune by insert / rim / coin / bracelet means; the two-tone 126613LB / LN has a yellow-gold bezel ring and gold centre links, `steel_photo` carries the gold, steel and bezel emission may need +0.02..0.04), `date.emission` 0.26 (the lens shows the dial, set it close to the dial value and check the lens region ratio), hands 0.35.
+3. Bracelet: two-tone has the same link layout with gold centre links; re-read joints only if they differ by more than 2 px in a 3x strip crop (here: identical).
+4. `sources.md` row text and the dial / bezel description in `REFERENCE_PLAN.md`; if the photo's colours differ from the tracker's variant, say so in the report.

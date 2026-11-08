@@ -1,0 +1,243 @@
+{
+ "model": "ROLEX Datejust 41 126334 (41 mm steel, white-gold fluted bezel, mint green dial, Cyclops date, Oyster bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Datejust 41 template (126331 Everose Rolesor / Jubilee slate Roman and 126333 Rolesor yellow / Jubilee slate change model, note, trace, dial_map, steel_map, emissions and what the BASELINE template section lists): case and lugs from the photo silhouette, polished flange + chamfer + 74 real flutes (148 flat facets with the photo's zig-zag in / out outline), domed crystal, Cyclops date lens, traced hand outlines, fluted crown and the three-column Oyster bracelet at the photo's joints; dial, indices, print, date numeral, rehaut engraving and the photographed hands come from one native photo map or the projected steel photo. Native 1920 x 2857 photo, 22.215 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-datejust41-126334-trace.json",
+ "dial_map": "outputs/watches/rolex-datejust41-126334/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-datejust41-126334/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0,
+  "lug_to_lug": 48.4
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 23.363,
+  "tip_bottom": 25.029,
+  "note": "outline = photo silhouette (lug top y 905, lug bottom y 1980, crown rows take the mirrored left flank); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "flutes": 74,
+  "long_parity": 1,
+  "crest_is_long": true,
+  "z0": 7.0,
+  "z_flange_in": 8.3,
+  "z_flange_out": 8.5,
+  "z_crest_in": 8.85,
+  "z_valley_in": 8.6,
+  "z_crest_out": 8.5,
+  "z_valley_out": 8.25,
+  "note": "boundary k = 0..147 counter-clockwise from 12 o'clock; long boundaries (odd k: one is exactly at 9 o'clock) reach r 17.41..20.06 mm, short ones 17.59..19.90 mm; flange 15.98..17.08 mm"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "lens": {
+  "z_base": 8.6,
+  "levels": [
+   [
+    0.0,
+    8.78
+   ],
+   [
+    0.18,
+    8.92
+   ],
+   [
+    0.55,
+    9.0
+   ]
+  ],
+  "emission": 0.3,
+  "note": "Cyclops: outline = trace.lens_mm (rim outer edge, barrel shaped, about 7.6 x 5.9 mm), rim chamfer 0.18 mm then a flat top inset 0.55 mm; shows the projected photo of the lens"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.36,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons; the lume, black facets and polished edges stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 18,
+  "flute_depth": 0.25,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Datejust crown (no guards): flutes x 1409..1459, cap to 1474, axis 0.52 mm below the pivot"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind. A Jubilee: columns outer / semi / centre / semi / outer, 4 boundaries per bounds row, pieces and z_semi per kind.",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.5,
+      4.46
+     ],
+     [
+      40.0,
+      -4.5,
+      4.46
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.52,
+      4.49
+     ],
+     [
+      50.0,
+      -4.52,
+      4.49
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       23.363,
+       30.228
+      ],
+      [
+       30.228,
+       33.739
+      ]
+     ],
+     "bottom": [
+      [
+       25.029,
+       34.122
+      ],
+      [
+       34.122,
+       42.54
+      ],
+      [
+       42.54,
+       47.896
+      ],
+      [
+       47.896,
+       49.652
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       25.074
+      ],
+      [
+       25.074,
+       31.421
+      ],
+      [
+       31.421,
+       33.852
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       27.279
+      ],
+      [
+       27.279,
+       36.733
+      ],
+      [
+       36.733,
+       44.205
+      ],
+      [
+       44.205,
+       48.572
+      ],
+      [
+       48.572,
+       49.652
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet: brushed outer links and a wider polished centre link. Joint rows (px, 22.215 px/mm, pivot (960, 1424)): outer top 752.5, ends 674.5 (rounded corners of the outer links) / 672 (centre link); outer bottom 2182 / 2369 / 2488, end 2527; centre top 867 / 726, end 672; centre bottom 2030 / 2240 / 2406 / 2503, end 2527; column lines x 859.5 / 1059 (top), 859 / 1059.5 (bottom). Outer link edges come from the alpha silhouette (the bracelet tapers from 21.0 mm at the lugs)."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.29
+ }
+}

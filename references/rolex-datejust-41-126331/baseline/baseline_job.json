@@ -1,0 +1,46 @@
+{
+ "id": "rolex-datejust41-126331",
+ "output": "outputs/jobs/rolex-datejust41-126331",
+ "asset_type": "watch",
+ "model": "ROLEX Datejust 41 126331 (41 mm steel and Everose Rolesor, fluted Everose bezel, slate dial with green Roman numerals, Cyclops date, Jubilee bracelet)",
+ "baseline": "First build: Datejust 41 126331 FOLLOWER of the 126334 template (slate Roman dial, Everose Rolesor, Jubilee bracelet; shared step and kit preset, variant prep copy for the hand trace)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-datejust-41-126331/REFERENCE_PLAN.md",
+  "config/watches/rolex-datejust41-126331.json",
+  "config/watches/rolex-datejust41-126331-trace.json",
+  "config/presets/watch_kit_white_front_rolex_datejust41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_datejust41",
+   "params": {
+    "spec": "config/watches/rolex-datejust41-126331.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-datejust41-126331/rolex-datejust41-126331.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_datejust41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

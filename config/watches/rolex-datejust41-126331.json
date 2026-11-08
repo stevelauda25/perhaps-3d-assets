@@ -1,0 +1,336 @@
+{
+ "model": "ROLEX Datejust 41 126331 (41 mm steel and Everose Rolesor, fluted Everose bezel, slate dial with green Roman numerals, Cyclops date, Jubilee bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Datejust 41 FOLLOWER of the 126334 template (geometry, step and kit preset unchanged; this variant: slate dial with green Roman numerals, Everose bezel and centre links from the photo, five-column Jubilee bracelet, rose-gold hands traced by a colour test in a variant prep copy): case and lugs from the photo silhouette, polished flange + chamfer + 74 real flutes (148 flat facets with the photo's zig-zag in / out outline), domed crystal, Cyclops date lens, traced hand outlines, fluted crown and the three-column Jubilee bracelet at the photo's joints; dial, indices, print, date numeral, rehaut engraving and the photographed hands come from one native photo map or the projected steel photo. Native 1920 x 2857 photo, 22.215 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-datejust41-126331-trace.json",
+ "dial_map": "outputs/watches/rolex-datejust41-126331/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-datejust41-126331/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0,
+  "lug_to_lug": 48.4
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 23.363,
+  "tip_bottom": 25.029,
+  "note": "outline = photo silhouette (lug top y 905, lug bottom y 1980, crown rows take the mirrored left flank); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "flutes": 74,
+  "long_parity": 1,
+  "crest_is_long": true,
+  "z0": 7.0,
+  "z_flange_in": 8.3,
+  "z_flange_out": 8.5,
+  "z_crest_in": 8.85,
+  "z_valley_in": 8.6,
+  "z_crest_out": 8.5,
+  "z_valley_out": 8.25,
+  "note": "boundary k = 0..147 counter-clockwise from 12 o'clock; long boundaries (odd k: one is exactly at 9 o'clock) reach r 17.41..20.06 mm, short ones 17.59..19.90 mm; flange 15.98..17.08 mm"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.3
+ },
+ "lens": {
+  "z_base": 8.6,
+  "levels": [
+   [
+    0.0,
+    8.78
+   ],
+   [
+    0.18,
+    8.92
+   ],
+   [
+    0.55,
+    9.0
+   ]
+  ],
+  "emission": 0.29,
+  "note": "Cyclops: outline = trace.lens_mm (rim outer edge, barrel shaped, about 7.6 x 5.9 mm), rim chamfer 0.18 mm then a flat top inset 0.55 mm; shows the projected photo of the lens"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.36,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons; the lume, black facets and polished edges stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 18,
+  "flute_depth": 0.25,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Datejust crown (no guards): flutes x 1409..1459, cap to 1474, axis 0.52 mm below the pivot"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind. A Jubilee: columns outer / semi / centre / semi / outer, 4 boundaries per bounds row, pieces and z_semi per kind.",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "semi",
+    "centre",
+    "semi",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.48,
+      -1.51,
+      1.48,
+      4.46
+     ],
+     [
+      40.0,
+      -4.48,
+      -1.51,
+      1.48,
+      4.46
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.52,
+      -1.53,
+      1.49,
+      4.49
+     ],
+     [
+      50.0,
+      -4.52,
+      -1.53,
+      1.49,
+      4.49
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       23.363,
+       27.752
+      ],
+      [
+       27.752,
+       31.241
+      ],
+      [
+       31.241,
+       33.235
+      ],
+      [
+       33.235,
+       33.739
+      ]
+     ],
+     "bottom": [
+      [
+       25.029,
+       30.732
+      ],
+      [
+       30.732,
+       36.134
+      ],
+      [
+       36.134,
+       40.933
+      ],
+      [
+       40.933,
+       44.912
+      ],
+      [
+       44.912,
+       47.986
+      ],
+      [
+       47.986,
+       49.585
+      ]
+     ]
+    },
+    "semi": {
+     "top": [
+      [
+       18.0,
+       25.254
+      ],
+      [
+       25.254,
+       29.373
+      ],
+      [
+       29.373,
+       32.074
+      ],
+      [
+       32.074,
+       33.739
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       29.17
+      ],
+      [
+       29.17,
+       34.392
+      ],
+      [
+       34.392,
+       38.938
+      ],
+      [
+       38.938,
+       42.63
+      ],
+      [
+       42.63,
+       46.051
+      ],
+      [
+       46.051,
+       48.437
+      ],
+      [
+       48.437,
+       49.787
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       23.228
+      ],
+      [
+       23.228,
+       27.482
+      ],
+      [
+       27.482,
+       30.948
+      ],
+      [
+       30.948,
+       32.884
+      ],
+      [
+       32.884,
+       33.739
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       26.514
+      ],
+      [
+       26.514,
+       31.241
+      ],
+      [
+       31.241,
+       36.553
+      ],
+      [
+       36.553,
+       40.356
+      ],
+      [
+       40.356,
+       44.475
+      ],
+      [
+       44.475,
+       48.527
+      ],
+      [
+       48.527,
+       49.585
+      ]
+     ]
+    }
+   },
+   "note": "Jubilee: outer (brushed steel) / semi (polished Everose) / centre (polished Everose) / semi / outer. Joint rows (px, 22.215 px/mm, pivot (960, 1424)) = the centre of the dark gap line before each new lit face of the polished columns, the sharp upper edge of the next piece for the outer links; outer top 905 / 807.5 / 730 / 685.7, end 674.5; semi top 863 / 771.5 / 711.5; centre top 908 / 813.5 / 736.5 / 693.5; outer bottom 1980 / 2106.7 / 2226.7 / 2333.3 / 2421.7 / 2490, end 2525.5; semi bottom 2072 / 2188 / 2289 / 2371 / 2447 / 2500, end 2530; centre bottom 2013 / 2118 / 2236 / 2320.5 / 2412 / 2502, end 2525.5; column lines x 860.2 / 926.5 / 992.8 / 1059 (top), 859.5 / 926 / 993 / 1059.5 (bottom). Outer link edges come from the alpha silhouette.",
+   "z_semi": 3.45
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.283
+ }
+}

@@ -1,0 +1,300 @@
+{
+ "note": "START = copy of the 124060 measure (same camera: alpha masks of the two photos are identical, 0 px differ by >60/255); to be verified by overlay per photo. Pixel measurements on references/rolex-submariner-124060/rolex-124060_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw (960.3, 1424.4) -> int (960, 1424). Scale: the coin-edge bezel tips are the widest part of the head: left tip envelope at the pivot row x 492.6 (silhouette radius 464.3..468.0 px from the ring centre over rows 1200..1650, median 467.2; the scalloped flutes show only +-1.8 px in the alpha), case / bezel centre x 959.7 (bracelet edges 725 / 1194 -> 959.5; ring fits below) -> 41 mm = 2 x (959.7 - 492.6) = 934.2 px, 22.785 px/mm (lug to lug rows 900..1988 = 1088 px = 47.8 mm, lug width / bracelet at the lugs 469 px = 20.6 mm, crown diameter 160 px = 7.0 mm: consistent with the real 124060). ring_centre_px / rings: iterative circle fits of radial edge scans (gaussian 0.7) about (960, 1424): flange outer edge (silver ring around the rehaut) centre (959.57, 1423.73) r 353.65 (rms 0.4); bezel insert outer edge (rise to the polished rim) centre (959.77, 1423.6) r 441.2 (rms 0.7); rim outer edge (fall into the flutes) centre (959.8, 1422.3) r 449.3; dial edge r 309.1 (black chapter line 311..313 px at 9 o'clock, rehaut with the ROLEX engraving 315..353). The coin edge (120 flutes, pitch 2.9 deg, depth about 4 px) spans r 449.3..467 (tips). Hands (about 10:09:30, the same time as the other Rolex renders): hour 305.5 deg (Mercedes ring centre s 113 px, r 32 px, stem 23.5 px wide, tip s 185), minute 63.55 deg (tip s 289 px = 12.7 mm, tip on the 2 o'clock dot), seconds 186.3 deg (tip s 307, tail dot s -102 r 10.5, lume ring s 170 r 17). Hand outlines are traced by the prep: mask = grey >= thr inside the ROI (hour, minute) or the ROI shapes themselves (seconds); coordinates s along the hand from the pivot, w perpendicular (+w = clockwise side). crown box x 1426..1520 (fluted body to x 1498, cap to 1520), y 1356..1516 (axis y 1436 = 0.6 mm below the pivot, radius 80 px = 3.5 mm); the guard edge is the straight line x 1466 (rows 1280..1350 and 1530..1600): crown rows 1350..1522 take it. tip_rows_px = lug top y 900 and lug bottom y 1988 (alpha steps). The photo has no drop shadow and no logo marks (single alpha component).",
+ "photo": "references/rolex-submariner-date-126610ln/rolex-126610ln_original.png",
+ "case_mm": 41,
+ "pivot": [
+  960,
+  1424
+ ],
+ "case_centre_x": 959.7,
+ "case_edge_left_x": 492.6,
+ "ring_centre_px": [
+  959.7,
+  1423.7
+ ],
+ "rings": {
+  "dial_flat": 309,
+  "crystal_edge": 353.7,
+  "bezel_in": 357,
+  "insert_out": 441.2,
+  "rim_out": 449.3,
+  "bezel_tip": 467.1
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      196,
+      -17,
+      17
+     ]
+    },
+    {
+     "circle": [
+      113,
+      1.0,
+      35
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "poly": [
+      [
+       -20,
+       -20
+      ],
+      [
+       225,
+       -20
+      ],
+      [
+       292,
+       -2.8
+      ],
+      [
+       292,
+       0
+      ],
+      [
+       240,
+       15
+      ],
+      [
+       225,
+       12
+      ],
+      [
+       -20,
+       12
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.3,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -95,
+       -1.0
+      ],
+      [
+       -25,
+       -1.5
+      ],
+      [
+       25,
+       -2.0
+      ],
+      [
+       100,
+       -2.5
+      ],
+      [
+       300,
+       -2.0
+      ],
+      [
+       307,
+       -0.8
+      ],
+      [
+       300,
+       0.5
+      ],
+      [
+       250,
+       1.5
+      ],
+      [
+       190,
+       3.0
+      ],
+      [
+       100,
+       3.5
+      ],
+      [
+       25,
+       3.5
+      ],
+      [
+       -25,
+       4.0
+      ],
+      [
+       -95,
+       4.0
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -102,
+      1.2,
+      10.5
+     ]
+    },
+    {
+     "circle": [
+      170,
+      -1.5,
+      17
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 1426,
+  "x1": 1520,
+  "y0": 1356,
+  "y1": 1516,
+  "fluted_x": 1498
+ },
+ "crown_rows": {
+  "y0": 1350,
+  "y1": 1522,
+  "right_x": 1466
+ },
+ "tip_rows_px": [
+  900,
+  1988
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) read from 3x strip crops with 10 px ticks (sharp edge of the overlapping piece) and brightness dips, top and bottom separately; column lines x 859 / 1061 (gradient maxima on 6 row bands: left 857..860, right 1060..1062)",
+  "outer_top": [
+   675,
+   756.7,
+   900
+  ],
+  "centre_top": [
+   671,
+   721,
+   864
+  ],
+  "outer_bottom": [
+   1988,
+   2181,
+   2366,
+   2485,
+   2525
+  ],
+  "centre_bottom": [
+   2028,
+   2240,
+   2409,
+   2502,
+   2525
+  ],
+  "column_x": {
+   "top": [
+    859,
+    1060.5
+   ],
+   "bottom": [
+    858,
+    1062
+   ]
+  }
+ },
+ "date": {
+  "note": "Cyclops lens outline, polygon picked on a 4-5x crop and verified by overlay (+-1 px): flat top y 1355.5 / flat bottom y 1487, bowed sides, widest x 1087.5 / 1254.5 at y ~1423; date numeral and window stay texture",
+  "lens_px": [
+   [
+    1114,
+    1357
+   ],
+   [
+    1160,
+    1355.5
+   ],
+   [
+    1220,
+    1355.5
+   ],
+   [
+    1235,
+    1370
+   ],
+   [
+    1247.5,
+    1385
+   ],
+   [
+    1254,
+    1402
+   ],
+   [
+    1254.5,
+    1420
+   ],
+   [
+    1252.5,
+    1437.5
+   ],
+   [
+    1247,
+    1457.5
+   ],
+   [
+    1235,
+    1475
+   ],
+   [
+    1222.5,
+    1486.5
+   ],
+   [
+    1160,
+    1487
+   ],
+   [
+    1117,
+    1486.5
+   ],
+   [
+    1102.5,
+    1470
+   ],
+   [
+    1092.5,
+    1450
+   ],
+   [
+    1087.5,
+    1425
+   ],
+   [
+    1089,
+    1407.5
+   ],
+   [
+    1095,
+    1387.5
+   ],
+   [
+    1105,
+    1370
+   ]
+  ]
+ }
+}
