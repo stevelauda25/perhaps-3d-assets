@@ -1,0 +1,46 @@
+{
+ "id": "rolex-gmtmaster40-126720vtnr",
+ "output": "outputs/jobs/rolex-gmtmaster40-126720vtnr",
+ "asset_type": "watch",
+ "model": "ROLEX GMT-Master II 126720VTNR (40 mm steel, black dial, green and black ceramic 24 h bezel, left crown, date with Cyclops lens at 9, GMT hand, Oyster bracelet)",
+ "baseline": "First build: left-crown GMT-Master II 40 front relief from the 1920 x 2857 catalogue render at 40 mm (ADAPT of the 126710BLNR template with a mirror option for the crown side: variant-named prep / step copies; Oyster bracelet from the Submariner Date layout re-measured; own measure / spec; shared kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-gmt-master-ii-126720vtnr/REFERENCE_PLAN.md",
+  "config/watches/rolex-gmtmaster40-126720vtnr.json",
+  "config/watches/rolex-gmtmaster40-126720vtnr-trace.json",
+  "config/presets/watch_kit_white_front_rolex_gmtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_gmtmaster40_left",
+   "params": {
+    "spec": "config/watches/rolex-gmtmaster40-126720vtnr.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-gmtmaster40-126720vtnr/rolex-gmtmaster40-126720vtnr.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_gmtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

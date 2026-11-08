@@ -1,0 +1,237 @@
+{
+ "model": "ROLEX Yacht-Master 40 126622 (40 mm Rolesium: steel case, platinum bidirectional bezel with raised engraved scale, slate dial, date with Cyclops lens, Oyster bracelet)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Yacht-Master 40 template (126622 first; the Yacht-Master 42 226627 follows): a copy of the Submariner Date 41 geometry spec adapted to the photo: case and lugs with crown guards from the photo silhouette, a PLATINUM bezel (no insert: one wide matte platinum band with the raised engraved scale / numerals / 12 o'clock triangle as texture, a narrow polished ring, then a 60-scoop toothed edge sloping down to the case; spec bezel.flute_phase 0.5 puts a scoop at 12 o'clock), domed crystal, Cyclops date lens, traced hand outlines (Mercedes hour hand, lume minute hand, cyan seconds hand with tail disc and lollipop), fluted crown and the three-column Oyster bracelet (polished centre links) at the photo's joints; dial, indices, print, date window, rehaut and the photographed hands come from one native photo map or the projected steel photo. Native 1920 x 2857 photo, 23.0 px/mm (toothed bezel edge diameter = 40 mm), no texture scaling.",
+ "trace": "config/watches/rolex-yachtmaster40-126622-trace.json",
+ "dial_map": "outputs/watches/rolex-yachtmaster40-126622/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-yachtmaster40-126622/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 46.44
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 22.174,
+  "tip_bottom": 24.261,
+  "note": "outline = photo silhouette (lug top y 915 = 22.17 mm, lug bottom y 1983 = 24.26 mm, crown guards to x 1466 = 21.96 mm); the slab slopes toward the bracelet; the case flank beside the bezel (x 484 = 20.7 mm radius) is part of the lug outline"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "teeth": 60,
+  "samples_per_tooth": 8,
+  "flute_depth": 0.3,
+  "flute_power": 0.6,
+  "z_inner": 8.2,
+  "z_insert": 8.6,
+  "z_rim": 8.65,
+  "z_coin_out": 7.8,
+  "chamfer_mm": 0.25,
+  "note": "platinum bezel: matte band bezel_in 15.33 .. insert_out 18.70 mm (raised numerals / scale / triangle = texture), polished ring to rim_out 19.0, toothed edge (60 scoops, one centred at 12 o'clock) from there to the tips at 20.0 mm sloping down to z_coin_out",
+  "flute_phase": 0.5
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.325
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.335,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons; Mercedes ring / lume / facets / cyan paint stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Rolex crown (guards are in the case slab): flutes x 1425..1490, cap to 1513, axis 0.44 mm below the pivot"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.37,
+      4.239
+     ],
+     [
+      40.0,
+      -4.37,
+      4.239
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.413,
+      4.283
+     ],
+     [
+      50.0,
+      -4.413,
+      4.283
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       22.174,
+       28.609
+      ],
+      [
+       28.609,
+       32.304
+      ]
+     ],
+     "bottom": [
+      [
+       24.261,
+       32.065
+      ],
+      [
+       32.065,
+       40.565
+      ],
+      [
+       40.565,
+       45.826
+      ],
+      [
+       45.826,
+       47.348
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       24.435
+      ],
+      [
+       24.435,
+       30.174
+      ],
+      [
+       30.174,
+       32.478
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       27.0
+      ],
+      [
+       27.0,
+       33.739
+      ],
+      [
+       33.739,
+       40.826
+      ],
+      [
+       40.826,
+       46.739
+      ],
+      [
+       46.739,
+       47.348
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet, flat three-piece links: brushed outer links, polished (mirror) centre links. Joint rows (px, 23.0 px/mm, pivot (961, 1425)): outer top 767 (end 682), outer bottom 2162.5 / 2358 / 2479 (end 2514); centre top 863 / 731 (end 678), centre bottom 2046 / 2201 / 2364 / 2500 (end 2514); column lines x 860.5 / 1058.5 (top), 859.5 / 1059.5 (bottom). Outer link edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.27,
+  "bezel_emission": 0.265
+ },
+ "date": {
+  "z0": 8.6,
+  "z_edge": 8.78,
+  "z_top": 8.9,
+  "rings": [
+   0.95,
+   0.88
+  ],
+  "emission": 0.255,
+  "note": "Cyclops lens: photographed outline (measure.date.lens_px, 7.2 x 5.7 mm, centre 9.1 mm right of the pivot) as a wall + two bevel rings + flat top above the crystal; photo projection, emission = dial; heights are scaled by pose.depth_scale like every part"
+ }
+}

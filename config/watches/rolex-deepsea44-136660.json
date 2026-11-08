@@ -1,0 +1,231 @@
+{
+ "model": "ROLEX Sea-Dweller Deepsea 136660 D-Blue (44 mm steel, black-to-deep-blue gradient dial, black Cerachrom Ringlock bezel with coin edge, date without Cyclops, Oyster bracelet with Glidelock end)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Sea-Dweller Deepsea 44: ADAPT of the Sea-Dweller 43 build (same step, spec driven; own prep copy only for the file-name prefix), everything re-measured on the 136660 photo (44 mm = coin-edge tip diameter, 22.59 px/mm, pivot (960, 1422)). Case and lugs with the crown guards from the photo silhouette, ceramic insert + polished rim + 60-flute coin-edge ring, domed crystal, traced hand outlines, fluted crown, the three-column Oyster bracelet at the photo's joints; NO Cyclops lens (the date window with the 28 is photo texture); dial (D-Blue gradient, DEEPSEA in green, indices, print), the bezel numerals / scale / lume pearl / reflection and the photographed hands come from one native photo map or the projected steel photo. The helium escape valve (9 o'clock flank) is not visible in this front render (nothing in the silhouette), so it has no mesh. Native 1920 x 2857 photo, no texture scaling.",
+ "trace": "config/watches/rolex-deepsea44-136660-trace.json",
+ "dial_map": "outputs/watches/rolex-deepsea44-136660/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-deepsea44-136660/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 44.0,
+  "lug_to_lug": 51.25
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 24.5,
+  "tip_bottom": 26.75,
+  "note": "outline = photo silhouette (lug tops slope from y 877 at x 648 to 863 at x 708 -> mean 869 = 24.5 mm; lug bottoms slope 2021..2035 -> mean 2026 = 26.75 mm; crown guards plateau x 1515 = 24.6 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "teeth": 60,
+  "samples_per_tooth": 16,
+  "flute_depth": 0.065,
+  "flute_power": 1.0,
+  "z_inner": 8.2,
+  "z_insert": 8.6,
+  "z_rim": 8.65,
+  "z_coin_out": 7.8,
+  "chamfer_mm": 0.25,
+  "note": "black ceramic insert (bezel_in 16.20 .. insert_out 20.41 mm) with the photographed reflection / numerals / scale, polished rim to rim_out 20.73, coin edge (60 flutes, ridge at 3.05 deg mod 6 deg, silhouette ripple about 1.4 px peak to peak) from there to the tips at 21.98 mm sloping down to z_coin_out",
+  "flute_phase_deg": 3.05
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.295
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.35,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons; the lume, Mercedes lines and black facets stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Rolex crown (the crown guards are in the case slab): flutes x 1460..1540, cap to 1565, axis 0.64 mm below the pivot, radius 4.0 mm"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.67,
+      4.639
+     ],
+     [
+      40.0,
+      -4.67,
+      4.639
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.67,
+      4.639
+     ],
+     [
+      48.9,
+      -4.67,
+      4.639
+     ],
+     [
+      50.4,
+      -4.626,
+      4.581
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       24.5,
+       30.853
+      ],
+      [
+       30.853,
+       34.682
+      ]
+     ],
+     "bottom": [
+      [
+       26.75,
+       34.682
+      ],
+      [
+       34.682,
+       42.982
+      ],
+      [
+       42.982,
+       48.493
+      ],
+      [
+       48.493,
+       50.396
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       25.608
+      ],
+      [
+       25.608,
+       32.557
+      ],
+      [
+       32.557,
+       34.815
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       27.932
+      ],
+      [
+       27.932,
+       36.763
+      ],
+      [
+       36.763,
+       45.151
+      ],
+      [
+       45.151,
+       49.334
+      ],
+      [
+       49.334,
+       50.396
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet (Glidelock end, the extension is not in the photo): brushed outer links and a wider centre link. Joint rows (px, 22.59 px/mm, pivot (960, 1422)), the sharp edge / dark dip of the overlapping piece on the mean column profiles: outer top 725, end 638.5; outer bottom 2205.5 / 2393 / 2517.5, end 2560.5; centre top 843.5 / 686.5, end 635.5; centre bottom 2053 / 2252.5 / 2442 / 2536.5, end 2560.5; column lines x 854.5 / 1064.8. Outer link edges come from the alpha silhouette (they taper toward the end)."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.29,
+  "bezel_emission": 0.27
+ }
+}

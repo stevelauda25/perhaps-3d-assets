@@ -1,0 +1,535 @@
+{
+ "note": "Pixel measurements on references/rolex-sky-dweller-336934/rolex-336934_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw (960, 1425) (8x crop of the hub). Scale: the 42 mm case flank is the widest part of the head at the pivot row: alpha edge x 479.3 (alpha 0.70 at pixel 479, rows 1440..1450; the flutes end inside it) and the case centre x 960.0 (min / max+1 of the alpha rows 700..1360 and 1540..2500 all give 960.0; the crown hides the right flank) -> 42 mm = 2 x (960 - 479.3) = 961.4 px, 22.890 px/mm (cross-checks: bracelet at the lugs 490 px = 21.4 mm; lug rows 880..2020 = 49.8 mm; crown diameter 6.9 mm). rings (px): dial edge = where the blue dial ends (B - R drops below 40; 56 rays, centre (959.5, 1429.7), r 355.5, rms 0.44), rehaut / flange bright line (grad max, centre (959.0, 1424.9), r 367.8, rms 0.6), flange outer edge = end of the bright flange, start of the black chamfer triangles (112 rays, centre (959.4, 1424.1), r 396.9, rms 0.5); the lower layers appear lower in the photo (camera a little above): dial 5.6 px lower than the flange, flute outer ends 6 px lower (outer circle of the facets: centre (958.8, 1430.2), r 466.9 incl. the edge bevel, rms 1.2). FLUTES: 70 flutes = 140 facets of 2.571 deg (FFT of the abs radial gradient at r 415..455: peak at N = 140, 58 vs <= 19 elsewhere; boundary grid offset from the 9 o'clock boundary -0.04 deg; a boundary lies exactly at 9 o'clock and 12 o'clock); alternate boundaries are LONG (reach further in): at 9 o'clock the long boundary inner tip r 398.5 / outer end 465.3 and the short ones inner notch r 412.0 / outer 463.4 (8x crops, about the circle centres above); at 12 o'clock the same (tip 398.3, notch 411.6). The inner zig-zag edge carries black triangles between the flange and the facets (photo texture). Case flank r 480.7. hands (the render time differs from the Datejust: hour 305.3 deg, minute 69.1, seconds 191.9): axes from symmetric edge fits (hour / minute) and a needle line fit (seconds, tail line 192.3); hour baton 34.5 px wide at s 48 tapering to 28.5 at s 204, tip s 215.5, tail s -61.5 (40 px wide); minute 34.5 -> 27.5, tip s 328.5, tail s -61 (37.5 wide); seconds needle 10.5 px at s 50 -> 5 at s 325, tip s 336, counterweight tail 12.5 px wide to s -88; masks = B - R < hand_br_thr inside the ROI polygons (edges of the measured runs plus 0.8 px; the numerals 20 / 24 and the 2 o'clock index touch the hands); seconds = its polygon. Cyclops: rim outer edge, barrel shaped (flat top and bottom, rounded corners), 56 points from ray fits (top / bottom / right) and hand placed points on the left where the 4 / 20 numerals disturb the rays, about 7.3 x 5.8 mm, centre (1211.5, 1422). crown box x 1441..1511 (flutes to x 1487.5, cap to 1511), y 1361..1519 (centre y 1440, radius 79 px = 3.45 mm); crown rows 1358..1522 take the left flank mirrored about the case centre. tip_rows_px = lug top 880 / bottom 2020 (alpha steps, same convention as the Datejust: last bracelet-width row on top, middle of the slope at the bottom). The photo has no drop shadow (alpha components: 1).",
+ "photo": "references/rolex-sky-dweller-336934/rolex-336934_original.png",
+ "case_mm": 42,
+ "pivot": [
+  960,
+  1425
+ ],
+ "case_centre_x": 960.0,
+ "case_edge_left_x": 479.3,
+ "ring_centre_px": [
+  959.5,
+  1429.7
+ ],
+ "bezel_centre_px": [
+  959.3,
+  1424.4
+ ],
+ "bezel_out_centre_px": [
+  958.8,
+  1430.2
+ ],
+ "rings": {
+  "dial_flat": 355.5,
+  "crystal_edge": 367.8,
+  "flange_out": 396.9,
+  "flute_in_long": 398.5,
+  "flute_in_short": 412.0,
+  "flute_out_long": 465.3,
+  "flute_out_short": 463.4,
+  "case_flank": 480.7
+ },
+ "flutes": 70,
+ "hand_br_thr": 30,
+ "hands": {
+  "hour": {
+   "angle_deg": 305.3,
+   "mode": "mask",
+   "thr": 128,
+   "roi": [
+    {
+     "poly": [
+      [
+       -63,
+       -24.5
+      ],
+      [
+       -30,
+       -24.0
+      ],
+      [
+       10,
+       -22.5
+      ],
+      [
+       48,
+       -20.3
+      ],
+      [
+       204,
+       -16.3
+      ],
+      [
+       218,
+       -16.0
+      ],
+      [
+       218,
+       13.6
+      ],
+      [
+       204,
+       13.8
+      ],
+      [
+       48,
+       16.8
+      ],
+      [
+       10,
+       19.5
+      ],
+      [
+       -30,
+       19.0
+      ],
+      [
+       -63,
+       19.0
+      ]
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 69.1,
+   "mode": "mask",
+   "thr": 128,
+   "roi": [
+    {
+     "poly": [
+      [
+       -63,
+       -19.5
+      ],
+      [
+       -30,
+       -19.5
+      ],
+      [
+       10,
+       -19.0
+      ],
+      [
+       36,
+       -17.3
+      ],
+      [
+       324,
+       -12.8
+      ],
+      [
+       332,
+       -12.7
+      ],
+      [
+       332,
+       14.2
+      ],
+      [
+       324,
+       14.3
+      ],
+      [
+       36,
+       18.8
+      ],
+      [
+       10,
+       20.0
+      ],
+      [
+       -30,
+       20.0
+      ],
+      [
+       -63,
+       20.0
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 191.9,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -88.5,
+       -6.3
+      ],
+      [
+       -29,
+       -5.7
+      ],
+      [
+       -23,
+       -5.0
+      ],
+      [
+       20,
+       -4.8
+      ],
+      [
+       50,
+       -4.6
+      ],
+      [
+       110,
+       -4.1
+      ],
+      [
+       170,
+       -3.2
+      ],
+      [
+       230,
+       -2.9
+      ],
+      [
+       290,
+       -1.6
+      ],
+      [
+       320,
+       -1.0
+      ],
+      [
+       334,
+       -0.5
+      ],
+      [
+       336.5,
+       1.5
+      ],
+      [
+       334,
+       3.5
+      ],
+      [
+       320,
+       4.0
+      ],
+      [
+       290,
+       4.1
+      ],
+      [
+       260,
+       5.0
+      ],
+      [
+       200,
+       5.1
+      ],
+      [
+       170,
+       5.1
+      ],
+      [
+       110,
+       5.6
+      ],
+      [
+       80,
+       5.7
+      ],
+      [
+       50,
+       6.1
+      ],
+      [
+       20,
+       6.4
+      ],
+      [
+       -23,
+       7.0
+      ],
+      [
+       -29,
+       6.6
+      ],
+      [
+       -88.5,
+       6.8
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 17.5,
+ "crown": {
+  "x0": 1441,
+  "x1": 1511,
+  "y0": 1361,
+  "y1": 1519,
+  "fluted_x": 1487.5
+ },
+ "crown_rows": {
+  "y0": 1358,
+  "y1": 1522
+ },
+ "tip_rows_px": [
+  880,
+  2020
+ ],
+ "lens_px": [
+  [
+   1172.8,
+   1354.9
+  ],
+  [
+   1181.5,
+   1354.6
+  ],
+  [
+   1189.5,
+   1354.2
+  ],
+  [
+   1197.1,
+   1354.3
+  ],
+  [
+   1204.4,
+   1354.4
+  ],
+  [
+   1211.5,
+   1354.2
+  ],
+  [
+   1218.6,
+   1354.4
+  ],
+  [
+   1225.9,
+   1354.3
+  ],
+  [
+   1233.5,
+   1354.2
+  ],
+  [
+   1241.6,
+   1354.4
+  ],
+  [
+   1250.2,
+   1354.9
+  ],
+  [
+   1260,
+   1355.3
+  ],
+  [
+   1267.5,
+   1359.8
+  ],
+  [
+   1273.7,
+   1366
+  ],
+  [
+   1279.1,
+   1372.9
+  ],
+  [
+   1283.8,
+   1380.2
+  ],
+  [
+   1287.8,
+   1388
+  ],
+  [
+   1290.7,
+   1396.3
+  ],
+  [
+   1293.2,
+   1404.6
+  ],
+  [
+   1294.5,
+   1413.3
+  ],
+  [
+   1295.2,
+   1424
+  ],
+  [
+   1294.2,
+   1435
+  ],
+  [
+   1290.4,
+   1447.6
+  ],
+  [
+   1287.1,
+   1455.7
+  ],
+  [
+   1283.2,
+   1463.4
+  ],
+  [
+   1278.4,
+   1470.6
+  ],
+  [
+   1272.8,
+   1477.2
+  ],
+  [
+   1266.7,
+   1483.3
+  ],
+  [
+   1258.7,
+   1486.9
+  ],
+  [
+   1249.4,
+   1487.6
+  ],
+  [
+   1240.8,
+   1487.8
+  ],
+  [
+   1232.9,
+   1487.9
+  ],
+  [
+   1225.5,
+   1488
+  ],
+  [
+   1218.5,
+   1488.1
+  ],
+  [
+   1211.5,
+   1488.2
+  ],
+  [
+   1204.5,
+   1488.4
+  ],
+  [
+   1197.4,
+   1488.3
+  ],
+  [
+   1190,
+   1488.1
+  ],
+  [
+   1182.1,
+   1488
+  ],
+  [
+   1173.6,
+   1487.6
+  ],
+  [
+   1164,
+   1487.3
+  ],
+  [
+   1155,
+   1482
+  ],
+  [
+   1146,
+   1474
+  ],
+  [
+   1137.5,
+   1463
+  ],
+  [
+   1131.5,
+   1451
+  ],
+  [
+   1128,
+   1438
+  ],
+  [
+   1127.2,
+   1424
+  ],
+  [
+   1128.6,
+   1410
+  ],
+  [
+   1132.5,
+   1394
+  ],
+  [
+   1139,
+   1378
+  ],
+  [
+   1146,
+   1366
+  ],
+  [
+   1156,
+   1359
+  ],
+  [
+   1162,
+   1356.2
+  ]
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) from 3x / 2x strip crops and dark-run scans down the centre column (x 920..1000): centre of the dark gap complexes of the polished centre links; outer links: sharp edge of the overlapping piece (gradient clusters at x 770..840 and 1090..1150). Column lines x 854.8 / 1063.5 (gradient maxima of vertical lines on row bands 690..720, 760..840, 2090..2160, 2290..2340, 2440..2480; same top and bottom). Oyster bracelet, 21.4 mm at the lugs.",
+  "outer_top": [
+   880,
+   748.5,
+   662
+  ],
+  "centre_top": [
+   659,
+   719,
+   861
+  ],
+  "outer_bottom": [
+   2020,
+   2187,
+   2368,
+   2484.5,
+   2537
+  ],
+  "centre_bottom": [
+   2045,
+   2244,
+   2406,
+   2520,
+   2537
+  ],
+  "column_x": {
+   "top": [
+    854.8,
+    1063.5
+   ],
+   "bottom": [
+    854.8,
+    1063.5
+   ]
+  }
+ }
+}

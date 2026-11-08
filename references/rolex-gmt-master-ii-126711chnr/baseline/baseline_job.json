@@ -1,0 +1,46 @@
+{
+ "id": "rolex-gmtmaster40-126711chnr",
+ "output": "outputs/jobs/rolex-gmtmaster40-126711chnr",
+ "asset_type": "watch",
+ "model": "ROLEX GMT-Master II 126711CHNR (40 mm steel and Everose gold, black dial, brown and black ceramic 24 h bezel with Everose coin edge, date with Cyclops lens, Everose GMT hand, Oyster bracelet with Everose centre links)",
+ "baseline": "First build: follower of the GMT-Master II 40 template (126710BLNR) and the Oyster follower 126710BLRO from the 1920 x 2857 catalogue render at 40 mm; template step / prep / kit preset read-only, own measure / spec / job",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-gmt-master-ii-126711chnr/REFERENCE_PLAN.md",
+  "config/watches/rolex-gmtmaster40-126711chnr.json",
+  "config/watches/rolex-gmtmaster40-126711chnr-trace.json",
+  "config/presets/watch_kit_white_front_rolex_gmtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_gmtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-gmtmaster40-126711chnr.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-gmtmaster40-126711chnr/rolex-gmtmaster40-126711chnr.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_gmtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
