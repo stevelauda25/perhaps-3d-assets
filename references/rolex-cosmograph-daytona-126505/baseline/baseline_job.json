@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daytona40-126505",
+ "output": "outputs/jobs/rolex-daytona40-126505",
+ "asset_type": "watch",
+ "model": "ROLEX Cosmograph Daytona 126505 (40 mm Everose gold, chocolate dial, Everose tachymetre bezel, three sub-dials, two pushers, Everose Oyster bracelet)",
+ "baseline": "First build: Daytona 40 follower of the 126500LN template (same step / prep / kit preset read-only; own measure, spec and maps)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-cosmograph-daytona-126505/REFERENCE_PLAN.md",
+  "config/watches/rolex-daytona40-126505.json",
+  "config/watches/rolex-daytona40-126505-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daytona40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daytona40",
+   "params": {
+    "spec": "config/watches/rolex-daytona40-126505.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daytona40-126505/rolex-daytona40-126505.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daytona40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

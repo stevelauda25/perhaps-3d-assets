@@ -1,0 +1,218 @@
+{
+ "model": "ROLEX Cosmograph Daytona 126519LN (40 mm white gold, METEORITE dial (grey Widmanstaetten pattern) with black sub-dials, black Cerachrom tachymetre bezel, three sub-dials, two white gold screw-down pushers, black Oysterflex rubber strap)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot (hub screw). Follower of the Daytona 126518LN (same Oysterflex strap) and the 126500LN template: same step / prep / kit preset read-only, own measure / spec / job. White gold case, crown and pushers come through the projected photo (no separate gold material); black ceramic bezel (bezel_emission); grey meteorite dial with bright black sub-dials; black Oysterflex strap as three flat rubber columns (flared outer sides lower, raised centre blade higher and a little longer). Native 1920 x 2857 photo, 22.4625 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-daytona40-126519ln-trace.json",
+ "dial_map": "outputs/watches/rolex-daytona40-126519ln/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-daytona40-126519ln/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 48.08
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.0,
+  "tip_top": 22.93,
+  "tip_bottom": 25.15,
+  "note": "outline = contour of the photo silhouette between the lug rows (horn top y 910 = 22.93 mm, horn bottom y 1990 = 25.15 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "segments": 192,
+  "z0": 7.0,
+  "z_inner": 8.3,
+  "z_insert": 8.55,
+  "z_edge": 7.75,
+  "round_mm": 0.2,
+  "note": "bright chamfer bezel_in 16.10 .. insert_in 17.06 mm, ceramic ring to the ellipse ceramic_out (rx 19.67 mm, ry 19.38 mm, centre 0.37 mm lower than the flange), polished edge ring to the case flank ellipse (rx 20.0 mm); scale, numerals and reflections are the projected photo"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.34
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "sub_l": 7.45,
+   "sub_r": 7.45,
+   "sub_b": 7.45,
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.33,
+  "note": "hands = picked photo outlines (trace.hands[name].outline_mm) as flat polygons: hour and minute sword hands (black facet and lume strip are photo), chronograph seconds needle with arrow head and paddle tail, the three sub-dial needles with their hub discs; emission = dial emission so the polygons blend into the printed dial"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.75,
+  "bevel": 0.2,
+  "neck_radius_fraction": 0.6,
+  "neck_from_mm": 18.5,
+  "note": "fluted Rolex crown (the guards are in the case slab): flutes x 1405..1472 px, cap to 1496.5 px, axis 0.49 mm below the pivot, 16 coarse flutes"
+ },
+ "pushers": {
+  "teeth": 16,
+  "flute_depth": 0.25,
+  "z": 4.4,
+  "bevel": 0.12,
+  "cap_cylinder": true,
+  "note": "two screw-down pushers on radial axes through trace.pushers.origin_mm at +-28 deg: neck, fluted ring, narrower cylindrical cap (grooves are texture)"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "Oysterflex rubber strap: columns outer / centre / outer (the photo shows a raised centre blade x 858..1060 px, 20 px longer than the flared sides); the single-column layout was not used because the centre blade ends beyond the sides.",
+  "bracelet": {
+   "gap": 0.015,
+   "z0": 0.6,
+   "z_outer": 2.8,
+   "z_centre": 3.0,
+   "bevel": 0.15,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.58,
+      4.48
+     ],
+     [
+      26.0,
+      -4.58,
+      4.48
+     ],
+     [
+      28.0,
+      -4.56,
+      4.46
+     ],
+     [
+      34.0,
+      -4.54,
+      4.45
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.62,
+      4.51
+     ],
+     [
+      31.0,
+      -4.62,
+      4.51
+     ],
+     [
+      38.0,
+      -4.6,
+      4.48
+     ],
+     [
+      42.0,
+      -4.57,
+      4.47
+     ],
+     [
+      49.5,
+      -4.53,
+      4.45
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       21.5,
+       32.9
+      ]
+     ],
+     "bottom": [
+      [
+       23.7,
+       48.4
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       33.63
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       49.15
+      ]
+     ]
+    }
+   },
+   "note": "Oysterflex strap, one rubber piece per column and side. Rows (px, 22.4625 px/mm, pivot (960, 1425)): outer sides end at row 685.0 (top) and 2514.0 (bottom, quantised to the 0.25 mm silhouette rows: 2 px short), centre blade ends at 670.4 (top) and 2528.4 (bottom); column lines x 857.3..858.1 / 1060.0..1060.7 (top rows 700..860), 856.3..858.1 / 1059.3..1061.5 (bottom rows 2060..2510): gradient maxima on 20-100 row bands. Outer edges come from the alpha silhouette."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.28,
+  "bezel_emission": 0.21
+ }
+}

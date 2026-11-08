@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daytona40-126500ln",
+ "output": "outputs/jobs/rolex-daytona40-126500ln",
+ "asset_type": "watch",
+ "model": "ROLEX Cosmograph Daytona 126500LN (40 mm steel, white dial, black ceramic tachymetre bezel, three sub-dials, two pushers, Oyster bracelet)",
+ "baseline": "First build: Daytona 40 front relief from the 1920 x 2857 catalogue render at 40 mm (variant-named prep / step copies of the GMT-Master II 40 and Submariner Date templates with the Tudor Black Bay Chrono crown / pusher code; own kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-cosmograph-daytona-126500ln/REFERENCE_PLAN.md",
+  "config/watches/rolex-daytona40-126500ln.json",
+  "config/watches/rolex-daytona40-126500ln-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daytona40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daytona40",
+   "params": {
+    "spec": "config/watches/rolex-daytona40-126500ln.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daytona40-126500ln/rolex-daytona40-126500ln.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daytona40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

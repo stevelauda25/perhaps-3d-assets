@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daytona40-126503",
+ "output": "outputs/jobs/rolex-daytona40-126503",
+ "asset_type": "watch",
+ "model": "ROLEX Cosmograph Daytona 126503 (40 mm Rolesor, champagne dial, yellow gold tachymetre bezel, three sub-dials, two pushers, Oyster bracelet with gold centre links)",
+ "baseline": "Follower of the 126500LN Daytona 40 template: same step / prep / kit preset read-only (by key), own measure / spec / job; gold parts come through the projected photo",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-cosmograph-daytona-126503/REFERENCE_PLAN.md",
+  "config/watches/rolex-daytona40-126503.json",
+  "config/watches/rolex-daytona40-126503-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daytona40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daytona40",
+   "params": {
+    "spec": "config/watches/rolex-daytona40-126503.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daytona40-126503/rolex-daytona40-126503.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daytona40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

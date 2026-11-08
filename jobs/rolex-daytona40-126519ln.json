@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daytona40-126519ln",
+ "output": "outputs/jobs/rolex-daytona40-126519ln",
+ "asset_type": "watch",
+ "model": "ROLEX Cosmograph Daytona 126519LN (40 mm white gold, METEORITE dial with black sub-dials, black ceramic tachymetre bezel, three sub-dials, two pushers, black Oysterflex strap)",
+ "baseline": "Follower of the Daytona 126518LN (Oysterflex strap, same camera and strap layout) and the 126500LN template: same step / prep / kit preset read-only (by key), own measure / spec / job; white gold parts come through the projected photo",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-cosmograph-daytona-126519ln/REFERENCE_PLAN.md",
+  "config/watches/rolex-daytona40-126519ln.json",
+  "config/watches/rolex-daytona40-126519ln-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daytona40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daytona40",
+   "params": {
+    "spec": "config/watches/rolex-daytona40-126519ln.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daytona40-126519ln/rolex-daytona40-126519ln.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daytona40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
