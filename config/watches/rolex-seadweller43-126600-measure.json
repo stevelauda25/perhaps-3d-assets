@@ -1,0 +1,308 @@
+{
+ "note": "START = the Submariner Date 126610LN measure (same camera family, Sea-Dweller 126600 re-measured on its own photo: see the BASELINE measure notes). Pixel measurements on references/rolex-sea-dweller-126600/rolex-126600_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy).",
+ "photo": "references/rolex-sea-dweller-126600/rolex-126600_original.png",
+ "case_mm": 43,
+ "pivot": [
+  960,
+  1423
+ ],
+ "case_centre_x": 959.6,
+ "case_edge_left_x": 465.1,
+ "ring_centre_px": [
+  959.5,
+  1421.7
+ ],
+ "rings": {
+  "dial_flat": 312,
+  "crystal_edge": 364.0,
+  "bezel_in": 367.3,
+  "insert_out": 460.5,
+  "rim_out": 466.8,
+  "bezel_tip": 494.5
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      196,
+      -17,
+      17
+     ]
+    },
+    {
+     "circle": [
+      113,
+      1.0,
+      35
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "mask",
+   "thr": 70,
+   "roi": [
+    {
+     "poly": [
+      [
+       -20,
+       -20
+      ],
+      [
+       225,
+       -20
+      ],
+      [
+       292,
+       -2.8
+      ],
+      [
+       292,
+       0
+      ],
+      [
+       240,
+       15
+      ],
+      [
+       225,
+       12
+      ],
+      [
+       -20,
+       12
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.3,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -95,
+       -1.0
+      ],
+      [
+       -25,
+       -1.5
+      ],
+      [
+       25,
+       -2.0
+      ],
+      [
+       100,
+       -2.5
+      ],
+      [
+       300,
+       -2.0
+      ],
+      [
+       307,
+       -0.8
+      ],
+      [
+       300,
+       0.5
+      ],
+      [
+       250,
+       1.5
+      ],
+      [
+       190,
+       3.0
+      ],
+      [
+       100,
+       3.5
+      ],
+      [
+       25,
+       3.5
+      ],
+      [
+       -25,
+       4.0
+      ],
+      [
+       -95,
+       4.0
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -102,
+      1.2,
+      10.5
+     ]
+    },
+    {
+     "circle": [
+      170,
+      -1.5,
+      17
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 18,
+ "crown": {
+  "x0": 1452,
+  "x1": 1544,
+  "y0": 1356,
+  "y1": 1516,
+  "fluted_x": 1522
+ },
+ "crown_rows": {
+  "y0": 1350,
+  "y1": 1522,
+  "right_x": 1499
+ },
+ "tip_rows_px": [
+  875,
+  2009
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) read like the Submariner template (sharp edge / dip of the overlapping piece, outer columns x 790..830, centre 900..1020), top and bottom separately; column lines x 854.8 / 1064.3 (top), 853.8 / 1064.8 (bottom)",
+  "outer_top": [
+   652,
+   736.5,
+   875
+  ],
+  "centre_top": [
+   649,
+   703,
+   842
+  ],
+  "outer_bottom": [
+   2009,
+   2206,
+   2386,
+   2502,
+   2548
+  ],
+  "centre_bottom": [
+   2059.5,
+   2264,
+   2428.5,
+   2517.5,
+   2548
+  ],
+  "column_x": {
+   "top": [
+    854.8,
+    1064.3
+   ],
+   "bottom": [
+    853.8,
+    1064.8
+   ]
+  }
+ },
+ "date": {
+  "note": "Cyclops lens outline picked on a 4x crop (first pass, verified by overlay)",
+  "lens_px": [
+   [
+    1119,
+    1352
+   ],
+   [
+    1160,
+    1351
+   ],
+   [
+    1221,
+    1351.5
+   ],
+   [
+    1235,
+    1367.5
+   ],
+   [
+    1247.5,
+    1385
+   ],
+   [
+    1254,
+    1405
+   ],
+   [
+    1255.5,
+    1420
+   ],
+   [
+    1254,
+    1440
+   ],
+   [
+    1249,
+    1455
+   ],
+   [
+    1239,
+    1470
+   ],
+   [
+    1227.5,
+    1480
+   ],
+   [
+    1220,
+    1482.5
+   ],
+   [
+    1160,
+    1483
+   ],
+   [
+    1124,
+    1482.5
+   ],
+   [
+    1114,
+    1476
+   ],
+   [
+    1100,
+    1460
+   ],
+   [
+    1091,
+    1440
+   ],
+   [
+    1087.5,
+    1420
+   ],
+   [
+    1089.5,
+    1400
+   ],
+   [
+    1095,
+    1382.5
+   ],
+   [
+    1105,
+    1366
+   ]
+  ]
+ }
+}

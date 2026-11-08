@@ -1,0 +1,46 @@
+{
+ "id": "rolex-submarinerdate41-126613lb",
+ "output": "outputs/jobs/rolex-submarinerdate41-126613lb",
+ "asset_type": "watch",
+ "model": "ROLEX Submariner Date 126613LB (41 mm steel and yellow-gold Rolesor, blue dial, blue Cerachrom bezel with gold coin edge, date with Cyclops lens, two-tone Oyster bracelet)",
+ "baseline": "First build: Submariner Date 41 follower for the two-tone blue 126613LB (reuses the 126610LN step / prep and the shared Submariner 41 kit preset read-only; own measure with re-traced gold hands; native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-submariner-date-126613lb/REFERENCE_PLAN.md",
+  "config/watches/rolex-submarinerdate41-126613lb.json",
+  "config/watches/rolex-submarinerdate41-126613lb-trace.json",
+  "config/presets/watch_kit_white_front_rolex_submariner41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_submarinerdate41",
+   "params": {
+    "spec": "config/watches/rolex-submarinerdate41-126613lb.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-submarinerdate41-126613lb/rolex-submarinerdate41-126613lb.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_submariner41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

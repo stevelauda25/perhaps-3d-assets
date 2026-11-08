@@ -1,0 +1,46 @@
+{
+ "id": "rolex-submarinerdate41-126610ln",
+ "output": "outputs/jobs/rolex-submarinerdate41-126610ln",
+ "asset_type": "watch",
+ "model": "ROLEX Submariner Date 126610LN (41 mm steel, black dial, black ceramic bezel, date with Cyclops lens, Oyster bracelet)",
+ "baseline": "First build: Submariner Date 41 front relief from the 1920 x 2857 catalogue render at 41 mm (variant-named prep / step copies of the Submariner 41 template plus the Cyclops lens; shared kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-submariner-date-126610ln/REFERENCE_PLAN.md",
+  "config/watches/rolex-submarinerdate41-126610ln.json",
+  "config/watches/rolex-submarinerdate41-126610ln-trace.json",
+  "config/presets/watch_kit_white_front_rolex_submariner41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_submarinerdate41",
+   "params": {
+    "spec": "config/watches/rolex-submarinerdate41-126610ln.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-submarinerdate41-126610ln/rolex-submarinerdate41-126610ln.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_submariner41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

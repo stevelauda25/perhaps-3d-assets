@@ -1,0 +1,46 @@
+{
+ "id": "rolex-submariner41-124060",
+ "output": "outputs/jobs/rolex-submariner41-124060",
+ "asset_type": "watch",
+ "model": "ROLEX Submariner 124060 (41 mm steel, black dial, black ceramic bezel, Oyster bracelet, no date)",
+ "baseline": "First build: Submariner 41 template front relief from the 1920 x 2857 catalogue render at 41 mm (own prep / step / spec / kit scale, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-submariner-124060/REFERENCE_PLAN.md",
+  "config/watches/rolex-submariner41-124060.json",
+  "config/watches/rolex-submariner41-124060-trace.json",
+  "config/presets/watch_kit_white_front_rolex_submariner41.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_submariner41",
+   "params": {
+    "spec": "config/watches/rolex-submariner41-124060.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-submariner41-124060/rolex-submariner41-124060.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_submariner41.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

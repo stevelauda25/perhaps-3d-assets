@@ -1,0 +1,46 @@
+{
+ "id": "rolex-gmtmaster40-126710blnr",
+ "output": "outputs/jobs/rolex-gmtmaster40-126710blnr",
+ "asset_type": "watch",
+ "model": "ROLEX GMT-Master II 126710BLNR (40 mm steel, black dial, blue and black ceramic 24 h bezel, date with Cyclops lens, GMT hand, Jubilee bracelet)",
+ "baseline": "First build: GMT-Master II 40 front relief from the 1920 x 2857 catalogue render at 40 mm (variant-named prep / step copies of the Submariner Date 41 template plus a fourth GMT hand and a Jubilee bracelet; own kit preset, native working size)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-gmt-master-ii-126710blnr/REFERENCE_PLAN.md",
+  "config/watches/rolex-gmtmaster40-126710blnr.json",
+  "config/watches/rolex-gmtmaster40-126710blnr-trace.json",
+  "config/presets/watch_kit_white_front_rolex_gmtmaster40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_gmtmaster40",
+   "params": {
+    "spec": "config/watches/rolex-gmtmaster40-126710blnr.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-gmtmaster40-126710blnr/rolex-gmtmaster40-126710blnr.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_gmtmaster40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

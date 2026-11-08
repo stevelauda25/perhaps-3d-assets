@@ -1,0 +1,46 @@
+{
+ "id": "rolex-explorer2-226570",
+ "output": "outputs/jobs/rolex-explorer2-226570",
+ "asset_type": "watch",
+ "model": "ROLEX Explorer II 226570 (42 mm steel, white dial, fixed matt 24 h bezel, crown guards, date with Cyclops, 4 hands incl. orange GMT hand, Oyster bracelet)",
+ "baseline": "First build: Explorer II 226570 (NEW MODEL, 4 hands, two-ellipse aperture) adapted from the Air-King / Explorer 40 template, native working size, from the 1920 x 2857 catalogue render at 42 mm",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-explorer-ii-226570/REFERENCE_PLAN.md",
+  "config/watches/rolex-explorer2-226570.json",
+  "config/watches/rolex-explorer2-226570-trace.json",
+  "config/presets/watch_kit_white_front_rolex_explorer2.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_explorer2",
+   "params": {
+    "spec": "config/watches/rolex-explorer2-226570.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-explorer2-226570/rolex-explorer2-226570.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_explorer2.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

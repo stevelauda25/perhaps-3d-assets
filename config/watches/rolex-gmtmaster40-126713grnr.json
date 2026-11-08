@@ -1,0 +1,334 @@
+{
+ "model": "ROLEX GMT-Master II 126713GRNR (40 mm steel and yellow gold Rolesor, black dial, grey and black Cerachrom 24 h bezel with gold coin edge, date with Cyclops lens, gold GMT hand, Jubilee bracelet with gold centre links)",
+ "note": "Follower of the GMT-Master II 40 template (126710BLNR): same step / prep / kit preset (read-only), per-photo measure / spec / job only. Gold parts (rim, coin edge, crown, centre links, hands) are photo pixels of the projected steel map: no separate material. Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. GMT-Master II 40 template (126710BLNR first; 126720VTNR left crown / Oyster, 126711CHNR Everose two-tone, 126713GRNR Jubilee, 126710BLRO Oyster follow: they change model, note, trace, dial_map, steel_map, emissions, the bracelet layout and, for 126720VTNR, a mirrored crown side): the Submariner Date 41 build (rotating coin-edge bezel with a flat polished rim, Cyclops lens at 3 o'clock) at 40 mm with a 60-flute coin edge, FOUR hands (the GMT hand = blue shaft + triangle head, one traced polygon between the hour and the minute hand) and a five-column Jubilee bracelet (outer / inner / centre / inner / outer) whose joints are measured per column, top and bottom. Case and lugs with crown guards from the photo silhouette; the ceramic insert (24 h scale, numerals, triangle and the blue / black split come from the projected steel photo), polished rim ring and fluted coin edge, domed crystal, traced hand outlines, fluted crown on its axis and the Jubilee links; dial, indices, print, date window and numeral and the photographed hands come from one native photo map or the projected steel photo. Native 1920 x 2857 photo, 23.14 px/mm, no texture scaling.",
+ "trace": "config/watches/rolex-gmtmaster40-126713grnr-trace.json",
+ "dial_map": "outputs/watches/rolex-gmtmaster40-126713grnr/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-gmtmaster40-126713grnr/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 47.06
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 22.49,
+  "tip_bottom": 24.57,
+  "note": "outline = photo silhouette (lug top y 903.5 = 22.49 mm, lug bottom y 1992.5 = 24.57 mm, crown guards to x 1472 = 22.13 mm); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "teeth": 60,
+  "samples_per_tooth": 8,
+  "flute_depth": 0.55,
+  "flute_power": 1.0,
+  "z_inner": 8.2,
+  "z_insert": 8.6,
+  "z_rim": 8.65,
+  "z_coin_out": 7.8,
+  "chamfer_mm": 0.25,
+  "note": "24 h ceramic insert (bezel_in 15.83 .. insert_out 18.84 mm; blue / black split and numerals are texture), flat polished rim to rim_out 19.14, coin edge (60 flutes) from there to the tips at 20.0 mm sloping down to z_coin_out"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.28
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "gmt": 7.82,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.35,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons, the GMT hand (blue shaft + triangle head) between hour and minute hand; the lume, Mercedes lines, blue colour and black facets stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.72,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Rolex crown (guards are in the case slab): flutes x 1428..1488, cap to 1514, axis 0.6 mm below the pivot, 16 coarse flutes"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "inner",
+    "centre",
+    "inner",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.287,
+      -1.461,
+      1.404,
+      4.252
+     ],
+     [
+      40.0,
+      -4.287,
+      -1.461,
+      1.404,
+      4.252
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -4.304,
+      -1.469,
+      1.448,
+      4.27
+     ],
+     [
+      50.0,
+      -4.304,
+      -1.469,
+      1.448,
+      4.27
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       22.494,
+       23.358
+      ],
+      [
+       23.358,
+       27.01
+      ],
+      [
+       27.01,
+       29.797
+      ],
+      [
+       29.797,
+       31.461
+      ],
+      [
+       31.461,
+       31.962
+      ]
+     ],
+     "bottom": [
+      [
+       24.568,
+       30.596
+      ],
+      [
+       30.596,
+       35.912
+      ],
+      [
+       35.912,
+       40.406
+      ],
+      [
+       40.406,
+       43.993
+      ],
+      [
+       43.993,
+       46.716
+      ],
+      [
+       46.716,
+       47.122
+      ]
+     ]
+    },
+    "inner": {
+     "top": [
+      [
+       18.0,
+       24.957
+      ],
+      [
+       24.957,
+       28.306
+      ],
+      [
+       28.306,
+       30.51
+      ],
+      [
+       30.51,
+       31.698
+      ],
+      [
+       31.698,
+       31.962
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       29.084
+      ],
+      [
+       29.084,
+       34.27
+      ],
+      [
+       34.27,
+       38.678
+      ],
+      [
+       38.678,
+       42.178
+      ],
+      [
+       42.178,
+       44.857
+      ],
+      [
+       44.857,
+       47.122
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       22.99
+      ],
+      [
+       22.99,
+       26.793
+      ],
+      [
+       26.793,
+       29.602
+      ],
+      [
+       29.602,
+       31.201
+      ],
+      [
+       31.201,
+       31.742
+      ],
+      [
+       31.742,
+       31.962
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       31.158
+      ],
+      [
+       31.158,
+       35.328
+      ],
+      [
+       35.328,
+       39.909
+      ],
+      [
+       39.909,
+       43.431
+      ],
+      [
+       43.431,
+       46.737
+      ],
+      [
+       46.737,
+       47.122
+      ]
+     ]
+    }
+   },
+   "note": "Jubilee bracelet, five columns (outer brushed, three polished: inner / centre / inner; the two inner columns share one piece list). Joint rows (px, 23.14 px/mm, pivot (960, 1424)), read from 4x crops with 10 px ticks and column-mean brightness runs, top and bottom separately: outer top 883.5 / 799 / 734.5 / 696 (the steps of the brushed links in the alpha silhouette, dark overlap lines in the photo), end 684.4; outer bottom 2132 / 2255 / 2359 / 2442 / 2505, end 2514.4; inner top 846.5 / 769 / 718 / 690.5 and bottom 2097 / 2217 / 2319 / 2400 / 2462 (the thin dark band that precedes each bright plate; the broad black bands inside a plate are reflections, not joints); centre top 892 / 804 / 739 / 702 / 689.5 and bottom 2145 / 2241.5 / 2347.5 / 2429 / 2505.5 (the centre links are staggered by half a pitch against the inner ones; the pitch grows by ~25 px per link toward the lugs). Column lines x 860.8 / 926.2 / 992.5 / 1058.4 (top) and 860.4 / 926 / 993.5 / 1058.8 (bottom): gradient maxima on 4-6 row bands. The inner and centre columns start at 18 mm under the case. Outer link edges come from the alpha silhouette (the nested rounded tops of the brushed links).",
+   "z_inner": 3.45
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.29,
+  "bezel_emission": 0.265
+ },
+ "date": {
+  "z0": 8.6,
+  "z_edge": 8.78,
+  "z_top": 8.9,
+  "rings": [
+   0.95,
+   0.88
+  ],
+  "emission": 0.26,
+  "note": "Cyclops lens: photographed outline (measure.date.lens_px) as a wall + two bevel rings + flat top above the crystal; photo projection; heights are scaled by pose.depth_scale like every part"
+ }
+}

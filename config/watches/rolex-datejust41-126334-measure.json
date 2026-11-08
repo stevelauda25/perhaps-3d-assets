@@ -1,0 +1,504 @@
+{
+ "note": "Pixel measurements on references/rolex-datejust-41-126334/rolex-126334_original.png (native 1920 x 2857 RGBA, upright studio render, no working copy). pivot = hub screw (960, 1424). Scale: the 41 mm case flank is the widest part of the head on the pivot row: alpha edge x 504.6 (alpha 0.42 at pixel 504, rows 1420..1460; the flutes touch it as an outer smooth flank band, bezel flute tips are inside it) and the case centre x 960.0 (min / max+1 of the alpha rows 700..1360 and 1560..2480 all give 960.0; the crown hides the right flank at the pivot row) -> 41 mm = 2 x (960 - 504.6) = 910.8 px, 22.215 px/mm (cross-checks: bracelet at the lugs 466 px = 20.98 mm; lug to lug rows 905..1980 = 48.4 mm). rings = radii in px: dial edge (centre (960.1, 1427.3), r 341.5, rms 0.33; the sunburst dial ends in the engraved rehaut), rehaut / flange bright line (centre (959.25, 1426.4), r 354.9, rms 0.24; modelled with the dial circle centre (959.7, 1426.9)), flange outer edge = start of the grey bezel chamfer (centre (960.0, 1422.8), r 379.5, rms 1.0), then the FLUTED bezel centred (959.9, 1423.1): 74 flutes = 148 facets of 2.432 deg (boundaries counted on 4 radii, resultant 0.94 at N = 148; a LONG boundary, i.e. the one reaching furthest in and out, sits at 12 o'clock +2.432 deg clockwise and at 9 o'clock exactly; the other boundaries are SHORT). Along the 9 o'clock row (7x crop): long boundary inner end r 386.7, outer end r 445.7; short boundary inner end r 390.7, outer end r 442.1. The facets are flat trapezoids (bright / dark pairs from the studio reflections); outside them the case flank shows as a grey band to the silhouette (r 455.4 = the 41 mm case). hands (about 10:09:30, the same render time as the other Rolex renders): hour 305.5 deg (tip s 192 px, tail s -58, width 29 px at s 30 tapering to 23 at s 190, black facet on the clockwise side), minute 63.55 deg (tip s 298, tail s -57, width 28 tapering to 23.5, tip touches the 2 o'clock index so the left ROI edge is held at w -11.9), seconds 186.3 deg (needle 10 px at s 30 tapering to 4 px at s 300 (tip s 322), counterweight tail to s -101 about 13 px wide, no lume dot); hands are traced by the prep: mask = pixels with r >= hand_ratio x g (the green dial has r / g about 0.75, silver / white / black hands have r / g about 1) inside the ROI shapes. date window with Cyclops: lens outline (rim outer edge, 60 ray fits about (1192.5, 1421.5)) is the barrel-shaped polygon lens_px; the date numeral window and the 3 o'clock index absence are in the dial map. crown box x 1409..1474 (flutes to x 1459, cap to 1474), y 1366..1505 (centre y 1435.5 = 0.5 mm below the pivot, radius 69.5 px = 3.1 mm); crown rows 1362..1510 take the left flank mirrored about the case centre (no guards on the Datejust). tip_rows_px = lug top y 905 and lug bottom y 1980 (alpha steps). The photo has no drop shadow and no logo marks (alpha components: 1).",
+ "photo": "references/rolex-datejust-41-126334/rolex-126334_original.png",
+ "case_mm": 41,
+ "pivot": [
+  960,
+  1424
+ ],
+ "case_centre_x": 960.0,
+ "case_edge_left_x": 504.6,
+ "ring_centre_px": [
+  959.7,
+  1426.9
+ ],
+ "bezel_centre_px": [
+  959.9,
+  1423.1
+ ],
+ "rings": {
+  "dial_flat": 341.5,
+  "crystal_edge": 354.9,
+  "flange_out": 379.5,
+  "flute_in_long": 386.7,
+  "flute_in_short": 390.7,
+  "flute_out_long": 445.7,
+  "flute_out_short": 442.1,
+  "case_flank": 455.4
+ },
+ "flutes": 74,
+ "hand_ratio": 0.87,
+ "hands": {
+  "hour": {
+   "angle_deg": 305.5,
+   "mode": "mask",
+   "thr": 128,
+   "roi": [
+    {
+     "poly": [
+      [
+       -62,
+       -19.5
+      ],
+      [
+       30,
+       -18.2
+      ],
+      [
+       190,
+       -16.0
+      ],
+      [
+       199,
+       -15.2
+      ],
+      [
+       199,
+       9.0
+      ],
+      [
+       190,
+       8.9
+      ],
+      [
+       30,
+       13.4
+      ],
+      [
+       -20,
+       15.8
+      ],
+      [
+       -62,
+       15.8
+      ]
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 63.55,
+   "mode": "mask",
+   "thr": 128,
+   "roi": [
+    {
+     "poly": [
+      [
+       -62,
+       -15.2
+      ],
+      [
+       25,
+       -14.8
+      ],
+      [
+       100,
+       -13.6
+      ],
+      [
+       150,
+       -12.9
+      ],
+      [
+       200,
+       -11.9
+      ],
+      [
+       300,
+       -11.9
+      ],
+      [
+       300,
+       8.0
+      ],
+      [
+       290,
+       10.4
+      ],
+      [
+       200,
+       12.2
+      ],
+      [
+       120,
+       14.0
+      ],
+      [
+       30,
+       15.6
+      ],
+      [
+       -62,
+       15.8
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 186.3,
+   "mode": "mask",
+   "thr": 128,
+   "roi": [
+    {
+     "poly": [
+      [
+       -104,
+       -7.0
+      ],
+      [
+       -30,
+       -7.0
+      ],
+      [
+       30,
+       -5.8
+      ],
+      [
+       100,
+       -5.2
+      ],
+      [
+       200,
+       -4.2
+      ],
+      [
+       300,
+       -3.5
+      ],
+      [
+       325,
+       -3.3
+      ],
+      [
+       325,
+       2.4
+      ],
+      [
+       300,
+       2.7
+      ],
+      [
+       200,
+       4.0
+      ],
+      [
+       130,
+       5.3
+      ],
+      [
+       30,
+       7.0
+      ],
+      [
+       -30,
+       8.2
+      ],
+      [
+       -104,
+       9.0
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 17,
+ "crown": {
+  "x0": 1409,
+  "x1": 1474,
+  "y0": 1366,
+  "y1": 1505,
+  "fluted_x": 1459
+ },
+ "crown_rows": {
+  "y0": 1362,
+  "y1": 1510
+ },
+ "tip_rows_px": [
+  905,
+  1980
+ ],
+ "lens_px": [
+  [
+   1192.5,
+   1354.0
+  ],
+  [
+   1199.6,
+   1354.0
+  ],
+  [
+   1206.9,
+   1353.8
+  ],
+  [
+   1214.5,
+   1353.8
+  ],
+  [
+   1222.5,
+   1354.1
+  ],
+  [
+   1231.0,
+   1354.8
+  ],
+  [
+   1240.8,
+   1355.0
+  ],
+  [
+   1248.6,
+   1359.2
+  ],
+  [
+   1254.9,
+   1365.3
+  ],
+  [
+   1260.2,
+   1372.3
+  ],
+  [
+   1265.0,
+   1379.6
+  ],
+  [
+   1268.9,
+   1387.5
+  ],
+  [
+   1271.9,
+   1395.7
+  ],
+  [
+   1274.7,
+   1404.0
+  ],
+  [
+   1275.9,
+   1412.7
+  ],
+  [
+   1276.2,
+   1421.5
+  ],
+  [
+   1277.8,
+   1430.5
+  ],
+  [
+   1274.1,
+   1438.9
+  ],
+  [
+   1271.8,
+   1447.3
+  ],
+  [
+   1268.1,
+   1455.2
+  ],
+  [
+   1264.1,
+   1462.8
+  ],
+  [
+   1259.3,
+   1470.1
+  ],
+  [
+   1254.0,
+   1476.8
+  ],
+  [
+   1247.9,
+   1483.0
+  ],
+  [
+   1239.6,
+   1486.4
+  ],
+  [
+   1230.3,
+   1487.0
+  ],
+  [
+   1221.8,
+   1487.2
+  ],
+  [
+   1213.9,
+   1487.5
+  ],
+  [
+   1206.5,
+   1487.2
+  ],
+  [
+   1199.5,
+   1487.7
+  ],
+  [
+   1192.5,
+   1487.8
+  ],
+  [
+   1185.5,
+   1487.7
+  ],
+  [
+   1178.5,
+   1487.2
+  ],
+  [
+   1171.0,
+   1487.7
+  ],
+  [
+   1163.3,
+   1487.1
+  ],
+  [
+   1154.7,
+   1486.9
+  ],
+  [
+   1145.2,
+   1486.7
+  ],
+  [
+   1136.9,
+   1483.2
+  ],
+  [
+   1130.8,
+   1477.1
+  ],
+  [
+   1125.0,
+   1470.6
+  ],
+  [
+   1120.0,
+   1463.4
+  ],
+  [
+   1115.9,
+   1455.6
+  ],
+  [
+   1112.4,
+   1447.5
+  ],
+  [
+   1110.0,
+   1439.0
+  ],
+  [
+   1108.3,
+   1430.3
+  ],
+  [
+   1107.4,
+   1421.5
+  ],
+  [
+   1108.2,
+   1412.6
+  ],
+  [
+   1109.4,
+   1403.8
+  ],
+  [
+   1112.1,
+   1395.4
+  ],
+  [
+   1115.2,
+   1387.1
+  ],
+  [
+   1119.0,
+   1379.1
+  ],
+  [
+   1124.0,
+   1371.7
+  ],
+  [
+   1129.6,
+   1364.9
+  ],
+  [
+   1136.0,
+   1358.7
+  ],
+  [
+   1144.1,
+   1355.0
+  ],
+  [
+   1154.0,
+   1354.9
+  ],
+  [
+   1162.4,
+   1354.0
+  ],
+  [
+   1170.5,
+   1353.8
+  ],
+  [
+   1178.2,
+   1354.0
+  ],
+  [
+   1185.4,
+   1354.0
+  ]
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) from 3x strip crops with 10 px ticks (sharp edge of the overlapping outer piece, centre of the dark gap complex of the polished centre links), top and bottom separately; column lines x 859.5 / 1059 (top) and 859 / 1059.5 (bottom), gradient maxima on row bands 690..880 / 2040..2300; the Oyster bracelet is the same as the Submariner / Oyster Perpetual 41 one (outer joints within 4 px of the Submariner's)",
+  "outer_top": [
+   674.5,
+   752.5,
+   905
+  ],
+  "centre_top": [
+   672,
+   726,
+   867
+  ],
+  "outer_bottom": [
+   1980,
+   2182,
+   2369,
+   2488,
+   2527
+  ],
+  "centre_bottom": [
+   2030,
+   2240,
+   2406,
+   2503,
+   2527
+  ],
+  "column_x": {
+   "top": [
+    859.5,
+    1059
+   ],
+   "bottom": [
+    859,
+    1059.5
+   ]
+  }
+ }
+}
