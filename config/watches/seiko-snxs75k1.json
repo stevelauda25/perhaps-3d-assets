@@ -1,0 +1,238 @@
+{
+ "model": "Seiko 5 Automatic SNXS75K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre of the straightened photo (pipeline/seiko_snxs75_rectify.py). Plan sizes from the trace (36.8 mm case, Irsyad); heights are the SNKL50K1/SNK607K1 values (no side view). Steel case and bracelet, gold indices, hands and day-date frame with lume. SEIKO, the 5 shield, the print, the minute ticks and the marker at 3 stay in the dial map.",
+ "trace": "config/watches/seiko-snxs75k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snxs75k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.8,
+  "bracelet_next_to_case": 17.53
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.6,
+    0
+   ],
+   [
+    18.2,
+    0.6
+   ],
+   [
+    18.4,
+    1.6
+   ],
+   [
+    18.4,
+    6.8
+   ],
+   [
+    18.3,
+    7.6
+   ],
+   [
+    17.7,
+    8.8
+   ],
+   [
+    16.9,
+    9.6
+   ],
+   [
+    15.85,
+    9.3
+   ],
+   [
+    15.85,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished",
+  "profile_note": "wide polished bezel: flat top to 16.9 mm, then a slope down to the gasket (the grey band in the photo)"
+ },
+ "gasket": {
+  "r_in": 15.06,
+  "r_out": 15.86,
+  "z0": 8.0,
+  "z1": 9.3
+ },
+ "crystal": {
+  "radius": 15.85,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 15.0,
+  "z": 8.0,
+  "rehaut_r": 15.06,
+  "rehaut_z": 8.3,
+  "map_half_mm": 15.84,
+  "roughness": 0.4,
+  "specular": 0.1
+ },
+ "daydate_frame": {
+  "wall": 0.4,
+  "height": 0.15
+ },
+ "indices": {
+  "height": 0.3,
+  "frame": 0.2,
+  "lume_height": 0.03,
+  "gap_12": 0.15
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "tail_half_width": 0.9,
+  "tip_length": 0.5,
+  "lume_half_width": 0.6,
+  "hub": {
+   "cap_height": 0.2
+  }
+ },
+ "crown": {
+  "radius": 1.6,
+  "flute_depth": 0.18,
+  "teeth": 16,
+  "r_from": 17.9,
+  "r_to": 19.6,
+  "z": 4.0
+ },
+ "lug": {
+  "inner_x": 9.9,
+  "from_y": 10.0,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3,
+  "from_y": 14.5
+ },
+ "bracelet": {
+  "pitch": 4.6,
+  "end_y": 36.9,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 21.5,
+  "bend_radius": 7.0,
+  "columns": [
+   [
+    0.0,
+    0.482,
+    0.5,
+    "steel_brushed"
+   ],
+   [
+    0.482,
+    1.0,
+    0.0,
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, row phase in pitches, material]: brushed centre links half a row off the brushed outer links (photo)",
+  "pitch_note": "first outer row next to the end link, 4.6 mm; later rows curve away in the photo and read shorter",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the lug tips, links bend with the curve",
+  "half_width": 9.9,
+  "half_width_note": "first row and end link both 19.8 mm in the photo (trace checks.end_link_width_mm); constant, no taper visible near the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "gold_polished": {
+   "color": [
+    0.1,
+    0.085,
+    0.044
+   ],
+   "metallic": 1.0,
+   "roughness": 0.4,
+   "note": "dark brass of the hands, index frames and day-date frame: model-viewer shows about sRGB 130/121/90 as in Irsyad's photo"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.55,
+    0.58,
+    0.52
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "pale grey-green lume as photographed (about sRGB 190/195/185)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines along the bracelet; bevels keep the polished material"
+  }
+ }
+}
