@@ -21,6 +21,7 @@ FRONT = ROOT / "references/seiko-snk361k1/front_3170x6256.png"
 OUT = ROOT / "config/watches/seiko-snk361k1-trace.json"
 CASE_MM = 36.0  # Irsyad, 2026-11-05
 BRACELET_MM = None  # no verified listing
+GASKET_DARK = 50  # grey level of the dark gasket ring between the dial and the bezel
 
 MANUAL_PX = {
     "hand_pivot": [1563, 3136],
@@ -74,7 +75,9 @@ def trace(path=FRONT, overlay=None):
     for a in np.arange(0, 360, 2.0):
         prof = [g[int(at(r, a)[1]), int(at(r, a)[0])] for r in np.arange(1010, 1250, 1.0)]
         first = next(i for i, v in enumerate(prof) if v > 120)
-        dark = next(i for i in range(first, len(prof)) if prof[i] < 50)
+        dark = next((i for i in range(first, len(prof)) if prof[i] < GASKET_DARK), None)
+        if dark is None:  # glare hides the gasket on this ray
+            continue
         bez = next(i for i in range(dark + 15, len(prof)) if prof[i] > 120)
         dial_edge.append(at(1010 + first, a))
         ring.append(at(1010 + bez, a))

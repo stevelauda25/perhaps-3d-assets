@@ -1,0 +1,46 @@
+{
+ "id": "seiko-snk357k1",
+ "output": "outputs/jobs/seiko-snk357k1",
+ "asset_type": "watch",
+ "model": "Seiko 5 Automatic SNK357K1",
+ "baseline": "Blue-dial version of SNK361K1: same build step, SNK357K1 trace and dial map, 38 mm case (spec sheet)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/seiko-snk357k1/REFERENCE_PLAN.md",
+  "config/watches/seiko-snk357k1.json",
+  "config/watches/seiko-snk357k1-trace.json",
+  "config/presets/watch_kit_white_front_seiko_snk357.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_seiko_snk361_front",
+   "params": {
+    "spec": "config/watches/seiko-snk357k1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/seiko-snk357k1/seiko-snk357k1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_seiko_snk357.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

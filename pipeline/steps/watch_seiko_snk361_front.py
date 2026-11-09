@@ -19,7 +19,7 @@ def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
     scene = bpy.context.scene
-    coll = bpy.data.collections.new("WATCH | Seiko 5 SNK361K1 front relief")
+    coll = bpy.data.collections.new(f"WATCH | {cfg['model']} front relief")
     scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d = cfg["dial"]
