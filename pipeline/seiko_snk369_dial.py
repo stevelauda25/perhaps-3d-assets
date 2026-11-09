@@ -29,6 +29,12 @@ ONE_OF_10 = ((1313, 1616), (1342, 1598))  # photo px: ends of the 1 of 10, hidde
 ONE_STROKE_PX = 7
 FIFTY = (665, 1615, 33)  # photo px: the 50 beside the hour hand's tip, kept out of the mask
 GRAIN_BOX = (840, 2160, 940, 2260)  # photo px: plain white dial; its fine grain is tiled over the filled areas
+KEEP_OUT = (ZERO_OF_10, FIFTY)  # print just clear of a hand: (x, y, r) photo px, never masked
+
+
+def plain_dial(out):
+    """Pixels of the plain dial (float BGR image) that may seed the fill: white here, no print, track, frame or bezel."""
+    return (out.min(2) > 215) & (out.max(2) - out.min(2) < 25)
 
 
 def hand_mask(t, shape):
@@ -74,7 +80,7 @@ def smooth_fill(img, todo, grain):
     """Fill masked white-dial pixels with the broad dial shade (normalised blur) plus the dial's own grain; inpainting leaves grey smears."""
     out = img.astype(np.float32)
     valid = cv2.dilate(todo.astype(np.uint8), np.ones((9, 9), np.uint8)) == 0  # skip the grey fringe
-    valid &= (out.min(2) > 215) & (out.max(2) - out.min(2) < 25)  # plain white dial only: no print, track, frame or bezel
+    valid &= plain_dial(out)
     valid = valid.astype(np.float32)
     left = todo.copy()
     for sigma in (24, 48, 96, 192):
@@ -99,7 +105,7 @@ def build(out=OUT, review=None):
     y0, y1, x0, x1 = py0 - R - pad, py0 + R + pad, px0 - R - pad, px0 + R + pad
     win = img[y0:y1, x0:x1].copy()
     mask = hand_mask(t, img.shape[:2])
-    for cx, cy, cr in (ZERO_OF_10, FIFTY):  # print just clear of a hand
+    for cx, cy, cr in KEEP_OUT:
         cv2.circle(mask.view(np.uint8), (cx, cy), cr, 0, -1)
     bx0, by0, bx1, by1 = t["manual_px"]["daydate_frame"]  # the frame is never under a hand, only near the shadow zone
     mask[by0 - 4:by1 + 4, bx0 - 4:bx1 + 4] = False
@@ -109,12 +115,12 @@ def build(out=OUT, review=None):
     rest = fill_track(filled, mask, t_win)
     gx0, gy0, gx1, gy1 = GRAIN_BOX
     filled = smooth_fill(filled, rest, img[gy0:gy1, gx0:gx1])
-    # the 1 of 10 lies under the seconds hand: redraw it as a stroke in the colour of the 0 beside it
-    zx, zy, zr = ZERO_OF_10
-    ring = win[zy - y0 - zr:zy - y0 + zr, zx - x0 - zr:zx - x0 + zr].reshape(-1, 3)
-    red = np.median(ring[ring.astype(int).sum(1) < 450], axis=0)
-    (ax, ay), (bx, by) = ONE_OF_10
-    cv2.line(filled, (ax - x0, ay - y0), (bx - x0, by - y0), [int(v) for v in red], ONE_STROKE_PX, cv2.LINE_AA)
+    if ONE_OF_10:  # the 1 of 10 lies under the seconds hand: redraw it as a stroke in the colour of the 0 beside it
+        zx, zy, zr = ZERO_OF_10
+        ring = win[zy - y0 - zr:zy - y0 + zr, zx - x0 - zr:zx - x0 + zr].reshape(-1, 3)
+        red = np.median(ring[ring.astype(int).sum(1) < 450], axis=0)
+        (ax, ay), (bx, by) = ONE_OF_10
+        cv2.line(filled, (ax - x0, ay - y0), (bx - x0, by - y0), [int(v) for v in red], ONE_STROKE_PX, cv2.LINE_AA)
     clean = filled[pad:-pad, pad:-pad]
     soft = cv2.GaussianBlur(clean, (0, 0), SHARPEN[0])
     crop = cv2.addWeighted(clean, 1 + SHARPEN[1], soft, -SHARPEN[1], 0)

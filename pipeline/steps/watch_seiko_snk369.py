@@ -21,7 +21,7 @@ def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
     scene = bpy.context.scene
-    coll = bpy.data.collections.new("WATCH | Seiko 5 SNK369K1 front relief")
+    coll = bpy.data.collections.new(f"WATCH | {cfg['model']} front relief")
     scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d = cfg["dial"]
@@ -115,11 +115,12 @@ def run(params):
     for cx_, cy_, w_, h_ in ((fx, fy + fh / 2 - wl / 2, fw, wl), (fx, fy - fh / 2 + wl / 2, fw, wl),
                              (fx - fw / 2 + wl / 2, fy, wl, fh - 2 * wl), (fx + fw / 2 - wl / 2, fy, wl, fh - 2 * wl)):
         g.prism(rect(cx_, cy_, w_, h_), d["z"], d["z"] + fr["height"])
-    add("daydate_frame", g, "steel_polished", bevel=0.05)
+    add("daydate_frame", g, fr.get("material", "steel_polished"), bevel=0.05)
 
     # ---- hands at the photo's time ----
     hs, th, t = cfg["hands"], cfg["hands"]["thickness"], tr["hands"]
     hub_r, cap_r, pin_r = tr["hub_radius_mm"]
+    hand_mat = {"outline": "hand_black", "hour_shaft": "lume", "seconds": "hand_red", **hs.get("materials", {})}  # SNK369 defaults
 
     def plate(name, poly, deg, z0, z1, mat, bevel=None):
         add(name, Geo().prism([rot(x, y, deg) for x, y in poly], z0, z1), mat, bevel=bevel)
@@ -127,26 +128,26 @@ def run(params):
     # hour: open arrow, black outline; lume in the head, white between the shaft rails
     h = t["hour"]
     L, hb, hhw, hw, o, deg, z = h["length_mm"], h["head_base_mm"], h["head_half_width_mm"], h["half_width_mm"], h["outline_mm"], h["angle_deg"], hs["z"]["hour"]
-    plate("hand_hour", [(-hw, -0.4), (hw, -0.4), (hw, hb), (hhw, hb), (0, L), (-hhw, hb), (-hw, hb)], deg, z, z + th, "hand_black", bevel=0.03)
+    plate("hand_hour", [(-hw, -0.4), (hw, -0.4), (hw, hb), (hhw, hb), (0, L), (-hhw, hb), (-hw, hb)], deg, z, z + th, hand_mat["outline"], bevel=0.03)
     side = math.hypot(hhw, L - hb)
     r_in = hhw * (L - hb) / (hhw + side)  # inradius of the head triangle; the lume is the triangle shrunk by the outline width
     k, cy = (r_in - o) / r_in, hb + r_in
     head = [(x * k, cy + (y - cy) * k) for x, y in ((-hhw, hb), (hhw, hb), (0, L))]
     plate("hand_hour_lume", head, deg, z + th, z + th + 0.03, "lume")
-    plate("hand_hour_centre", rect(0, (hub_r + hb) / 2, 2 * (hw - o), hb - hub_r), deg, z + th, z + th + 0.02, "lume")
+    plate("hand_hour_centre", rect(0, (hub_r + hb) / 2, 2 * (hw - o), hb - hub_r), deg, z + th, z + th + 0.02, hand_mat["hour_shaft"])
     # minute: black stick, square tip, lume window
     h = t["minute"]
     L, hw, o, deg, z = h["length_mm"], h["half_width_mm"], h["outline_mm"], h["angle_deg"], hs["z"]["minute"]
-    plate("hand_minute", rect(0, (L - 0.4) / 2, 2 * hw, L + 0.4), deg, z, z + th, "hand_black", bevel=0.03)
+    plate("hand_minute", rect(0, (L - 0.4) / 2, 2 * hw, L + 0.4), deg, z, z + th, hand_mat["outline"], bevel=0.03)
     a, b = h["lume_from_to_mm"]
     plate("hand_minute_lume", rect(0, (a + b) / 2, 2 * (hw - o), b - a), deg, z + th, z + th + 0.03, "lume")
     # seconds: thin red needle, wide red tail
     h = t["seconds"]
     L, tail, tw, sw, deg, z = h["length_mm"], h["tail_mm"], h["tail_half_width_mm"], max(h["half_width_mm"], 0.07), h["angle_deg"], hs["z"]["seconds"]
-    plate("hand_seconds", [(-tw, -tail), (tw, -tail), (tw, 0.6), (sw, 1.6), (sw, L), (-sw, L), (-sw, 1.6), (-tw, 0.6)], deg, z, z + th, "hand_red", bevel=0.02)
+    plate("hand_seconds", [(-tw, -tail), (tw, -tail), (tw, 0.6), (sw, 1.6), (sw, L), (-sw, L), (-sw, 1.6), (-tw, 0.6)], deg, z, z + th, hand_mat["seconds"], bevel=0.02)
     add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, z), (0, z)], segs=48), "steel_polished")
     zc = z + th
-    add("hub_cap", Geo().lathe([(0, zc), (cap_r, zc), (cap_r, zc + 0.1), (0, zc + 0.1)], segs=48), "hand_red")
+    add("hub_cap", Geo().lathe([(0, zc), (cap_r, zc), (cap_r, zc + 0.1), (0, zc + 0.1)], segs=48), hand_mat["seconds"])
     add("hub_pin", Geo().lathe([(0, zc), (pin_r, zc), (pin_r, zc + 0.2), (0, zc + 0.25)], segs=24), "steel_polished")
 
     # ---- crown: fluted cylinder on a radial axis at the traced angle (4 o'clock) ----
