@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z96905",
+  "output": "outputs/jobs/zeppelin-z96905",
+  "asset_type": "watch",
+  "model": "Zeppelin Mediterranée Z96905 (9690-5)",
+  "baseline": "First build: round polished case, stepped lugs, beige power-reserve dial with pulsometer flange and brown leather strap from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z96905/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z96905.json",
+    "config/watches/zeppelin-z96905-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z96905.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z96905",
+      "params": {
+        "spec": "config/watches/zeppelin-z96905.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z96905/zeppelin-z96905.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z96905.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

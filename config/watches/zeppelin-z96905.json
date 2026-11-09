@@ -1,0 +1,27 @@
+{
+ "model": "Zeppelin Mediterranée Z96905 (9690-5)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (42 mm case, listing; strap 21.1 mm measured, not listed). Heights before the house depth scale. Dial print, applied numerals, pulsometer flange and the strap leather come from one photo map.",
+ "trace": "config/watches/zeppelin-z96905-trace.json",
+ "photo_map": "outputs/watches/zeppelin-z96905/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.4, "strap_leather": 0.6},
+ "verified_mm": {"diameter": 42.0, "strap_width": 21.1},
+ "case": {"profile": [[18.0, 0.0], [20.4, 0.0], [21.0, 0.8], [21.0, 5.6], [20.8, 6.8], [20.5, 7.8], [20.0, 8.7], [19.26, 8.8], [19.26, 7.9], [19.0, 7.9]],
+          "note": "(r, z): polished flank rounding into the wide polished bezel (19.26-21 mm in the photo); inner lip covers the flange edge"},
+ "lug": {"gap": 0.1, "into_case": 1.5, "top_z_at_case": 6.2, "top_z_at_tip": 4.6, "step_down": 1.0, "bevel": 0.5,
+         "note": "stepped polished lugs: outer block, and a step 1 mm lower next to the strap (split at the traced step_x)"},
+ "crystal": {"z0": 8.3, "z1": 8.8, "dome": 0.6},
+ "dial": {"z": 7.0, "flange_top": [19.05, 7.8], "note": "flat dial to the flange's inner edge, then the pulsometer flange as a cone up to the bezel lip"},
+ "hands": {"thickness": 0.15, "z": {"sub": 7.2, "hour": 7.4, "minute": 7.6, "seconds": 7.8},
+           "hub_steps": [[1.0, 0.45], [0.85, 0.7], [0.55, 0.95], [0.15, 1.1]]},
+ "crown": {"teeth": 24, "flute_depth": 0.25, "z": 4.0},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "edge_inset": 0.05, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 39.3,
+           "note": "House curl (SUR419P1): bend at the lug tips (23.9 mm), 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "hand_black": {"color": [0.012, 0.012, 0.014], "metallic": 0.0, "roughness": 0.25, "note": "black lacquered hands and hubs (photo)"},
+  "gold": {"color": [0.9, 0.75, 0.45], "metallic": 1.0, "roughness": 0.2, "note": "pins in the centre and sub-dial hubs"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}
