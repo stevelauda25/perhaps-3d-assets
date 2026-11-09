@@ -1,0 +1,254 @@
+{
+ "model": "Seiko 5 Automatic SNKK65K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (38 mm case, spec sheet); heights are the SNKL41K1 values (same family, no orthographic side view). All steel: polished case, bezel, shoulders, indices, hands, crown and bracelet centre, brushed mid and outer links. SEIKO, the 5 shield, the print, the minute track, the index pips, the green gasket and SUN 5 stay in the dial map.",
+ "trace": "config/watches/seiko-snkk65k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snkk65k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.9,
+    0
+   ],
+   [
+    18.7,
+    0.6
+   ],
+   [
+    19.0,
+    1.6
+   ],
+   [
+    19.0,
+    3.8
+   ],
+   [
+    18.1,
+    4.2
+   ],
+   [
+    17.95,
+    4.2
+   ],
+   [
+    17.95,
+    6.6
+   ],
+   [
+    17.8,
+    7.1
+   ],
+   [
+    16.133,
+    9.6
+   ],
+   [
+    15.833,
+    9.6
+   ],
+   [
+    15.833,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished",
+  "note": "bezel 17.95 mm (inner line at 9 o'clock in the photo) on a 19 mm case middle that stays below the end link and shoulders"
+ },
+ "gasket": {
+  "r_in": 15.79,
+  "r_out": 15.9,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 15.833,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 14.93,
+  "z": 8.0,
+  "rehaut_r": 15.79,
+  "rehaut_z": 9.2,
+  "map_half_mm": 15.833,
+  "roughness": 0.3,
+  "note": "flat to the minute track, then the green gasket ring slopes up to the crystal, both from the photo"
+ },
+ "daydate_frame": {
+  "height": 0.25,
+  "material": "steel_polished"
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.15,
+  "gap_12": 0.0,
+  "inner_extend": 0.0,
+  "material": "steel_polished",
+  "taper_12": 0.8
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "tail_half_width": 0.3,
+  "widest_at": 0.9,
+  "lume_half_width": 0.62,
+  "hub": {
+   "cap_height": 0.2
+  },
+  "material": "steel_polished",
+  "lume_over_ridge": true,
+  "seconds_tail_taper": 0.7
+ },
+ "crown": {
+  "radius": 1.9,
+  "flute_depth": 0.22,
+  "teeth": 18,
+  "r_from": 18.75,
+  "r_to": 20.6,
+  "z": 4.1,
+  "material": "steel_polished"
+ },
+ "lug": {
+  "inner_x": 9.05,
+  "from_y": 12.5,
+  "tip_y": 21.0,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35,
+  "note": "square shoulders: outline from the silhouette; tip_y = top of the shoulders and of the outer end-link pieces"
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3,
+  "from_y": 15.0,
+  "past_tip": [
+   2.5,
+   2.5,
+   0.0
+  ],
+  "note": "per bracelet column: the centre and mid pieces run 2.5 mm past the lug tips (trace: 23.5 mm vs 20.7 mm)"
+ },
+ "bracelet": {
+  "pitch": 6.68,
+  "end_y": 38.9,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 23.5,
+  "bend_radius": 7.0,
+  "columns": [
+   [
+    0.0,
+    0.19,
+    0.626,
+    "steel_polished"
+   ],
+   [
+    0.19,
+    0.57,
+    0.626,
+    "steel_brushed"
+   ],
+   [
+    0.57,
+    1.0,
+    0.0,
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, row phase in pitches, material]: polished centre and brushed mid pieces in step, joints 2.5 mm past the outer joints (photo); brushed outer links",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius, starting at the end of the end-link tongue so the end link stays straight; end_y = bend_y + 2.2 R",
+  "row_gap": 0.4
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.92,
+    0.92,
+    0.9
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "white lume strip as photographed in daylight (jamtangan.com lume shot: it glows on both hands and the index ends)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}

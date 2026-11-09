@@ -1,0 +1,46 @@
+{
+  "id": "seiko-snk623k1",
+  "output": "outputs/jobs/seiko-snk623k1",
+  "asset_type": "watch",
+  "model": "Seiko 5 Automatic SNK623K1",
+  "baseline": "First build: all-steel front relief from the straightened front photo at 38 mm (owner spec sheet), applied 12 9 6, house depth, glass and bracelet curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/seiko-snk623k1/REFERENCE_PLAN.md",
+    "config/watches/seiko-snk623k1.json",
+    "config/watches/seiko-snk623k1-trace.json",
+    "config/presets/watch_kit_white_front_seiko_snk623.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_seiko_snk623",
+      "params": {
+        "spec": "config/watches/seiko-snk623k1.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/seiko-snk623k1/seiko-snk623k1.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_seiko_snk623.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2900,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

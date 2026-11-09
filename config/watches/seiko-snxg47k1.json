@@ -1,0 +1,203 @@
+{
+ "model": "Seiko 5 Automatic SNXG47K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (38 mm case, Irsyad); heights are the SNKM87K1 values (listed 12 mm thick). SEIKO, the 5 shield, the minute track, the print and the day-date wheel stay in the dial map.",
+ "trace": "config/watches/seiko-snxg47k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snxg47k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_gap": 20.34
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    18.0,
+    0
+   ],
+   [
+    18.7,
+    0.65
+   ],
+   [
+    19.0,
+    1.75
+   ],
+   [
+    19.0,
+    7.2
+   ],
+   [
+    18.85,
+    7.75
+   ],
+   [
+    17.55,
+    10.45
+   ],
+   [
+    17.25,
+    10.45
+   ],
+   [
+    17.25,
+    8.5
+   ],
+   [
+    0,
+    8.5
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 16.93,
+  "r_out": 17.3,
+  "z0": 9.5,
+  "z1": 10.45
+ },
+ "crystal": {
+  "radius": 17.1,
+  "z0": 10.15,
+  "z1": 10.6
+ },
+ "dial": {
+  "z": 8.7,
+  "rehaut_z": 9.5,
+  "roughness": 0.4
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.12
+ },
+ "daydate_frame": {
+  "height": 0.2
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 9.0,
+   "minute": 9.2,
+   "seconds": 9.4
+  },
+  "tip_round": 1.0
+ },
+ "crown": {
+  "radius": 2.0,
+  "flute_depth": 0.2,
+  "teeth": 18,
+  "r_from": 18.6,
+  "r_to": 20.6,
+  "z": 4.4,
+  "angle_deg": 113.7,
+  "note": "read from the straight photo (centre 19.4 mm right, 8.5 mm down)"
+ },
+ "lug": {
+  "from_y": 7.0,
+  "top_z_at_case": 7.6,
+  "top_z_at_tip": 5.6,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "from_y": 15.0,
+  "top_z": 5.6,
+  "bevel": 0.3,
+  "note": "the polished hood between the lugs, flush with the lug tips"
+ },
+ "bracelet": {
+  "end_y": 38.285,
+  "z0": 0.65,
+  "z1": 3.6,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.65
+  ],
+  "bend_radius": 7.0,
+  "bend_note": "Smooth curl like SUR419P1 (Irsyad, 2026-11-06): 7 mm radius from the lug tips (22.9 mm) to about 125 deg (end_y = tip + 2.2 R)"
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.9,
+    0.84
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "cream lume inside the hour and minute hands"
+  },
+  "gold": {
+   "color": [
+    0.86,
+    0.66,
+    0.36
+   ],
+   "metallic": 1.0,
+   "roughness": 0.15,
+   "note": "pale yellow-gold plating of the batons, hands, hub and day-date frame, as photographed"
+  }
+ }
+}

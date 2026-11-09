@@ -1,0 +1,46 @@
+{
+  "id": "seiko-snkk65k1",
+  "output": "outputs/jobs/seiko-snkk65k1",
+  "asset_type": "watch",
+  "model": "Seiko 5 Automatic SNKK65K1",
+  "baseline": "First build: all-steel front relief from the straight front photo at 38 mm, house depth, glass and bracelet curl (SNKL47K1 step copied: shoulder lugs, end-link tongue, sword hands)",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/seiko-snkk65k1/REFERENCE_PLAN.md",
+    "config/watches/seiko-snkk65k1.json",
+    "config/watches/seiko-snkk65k1-trace.json",
+    "config/presets/watch_kit_white_front_seiko_snkk65.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_seiko_snkk65",
+      "params": {
+        "spec": "config/watches/seiko-snkk65k1.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/seiko-snkk65k1/seiko-snkk65k1.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_seiko_snkk65.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 3198,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

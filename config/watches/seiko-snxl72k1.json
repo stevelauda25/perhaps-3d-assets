@@ -1,0 +1,227 @@
+{
+ "model": "Seiko 5 Automatic SNXL72K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straightened front photo (37 mm case, spec sheet); heights are the SNK607K1/SNKL50K1 values (no orthographic side view). Gold tone taken from the photo. SEIKO, the 5 shield, the print, the minute ticks, the lume dots and the day-date discs stay in the dial map.",
+ "trace": "config/watches/seiko-snxl72k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snxl72k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 37.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.4,
+    0
+   ],
+   [
+    18.2,
+    0.6
+   ],
+   [
+    18.5,
+    1.6
+   ],
+   [
+    18.5,
+    6.6
+   ],
+   [
+    18.35,
+    7.1
+   ],
+   [
+    15.6,
+    9.6
+   ],
+   [
+    15.3,
+    9.6
+   ],
+   [
+    15.3,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 14.4,
+  "r_out": 15.33,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 15.3,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 14.3,
+  "z": 8.0,
+  "rehaut_r": 14.4,
+  "rehaut_z": 9.0,
+  "map_half_mm": 15.321,
+  "roughness": 0.4
+ },
+ "daydate_frame": {
+  "wall": 0.48,
+  "height": 0.15,
+  "material": "steel_polished"
+ },
+ "indices": {
+  "height": 0.35,
+  "inlay_inset_end": 0.12,
+  "inlay_height": 0.03
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "lume_border": 0.3,
+  "hub": {
+   "cap_height": 0.2
+  }
+ },
+ "crown": {
+  "radius": 1.9,
+  "flute_depth": 0.22,
+  "teeth": 18,
+  "r_from": 18.3,
+  "r_to": 19.8,
+  "z": 4.1
+ },
+ "lug": {
+  "inner_x": 9.5,
+  "from_y": 12.0,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3,
+  "from_y": 15.0
+ },
+ "bracelet": {
+  "pitch": 3.761,
+  "end_y": 36.65,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 21.25,
+  "bend_radius": 7.0,
+  "columns": [
+   [
+    0.0,
+    0.432,
+    0.5,
+    "steel_brushed"
+   ],
+   [
+    0.432,
+    1.0,
+    0.0,
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, row phase in pitches, material]: rounded brushed centre links half a row off the brushed outer links (photo)",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the lug tips, links bend with the curve"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    1.0,
+    0.74,
+    0.29
+   ],
+   "metallic": 1.0,
+   "roughness": 0.1,
+   "note": "gold tone from the photo's polished bezel and bracelet (hue 1 : 0.74 : 0.29 bezel, 1 : 0.71 : 0.30 bracelet, linear)"
+  },
+  "steel_brushed": {
+   "color": [
+    0.9,
+    0.64,
+    0.27
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.014,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.25,
+   "note": "black painted hands and baton inlays"
+  },
+  "lume": {
+   "color": [
+    0.6,
+    0.6,
+    0.55
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "grey-white lume as photographed"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}
