@@ -40,8 +40,8 @@ base.MANUAL_PX = {
     "hour_head_base_r_px": 337,
     "hour_head_corners": [[1328, 2772], [1230, 2915]],
     "hour_shaft_width_px": 66,
-    "hour_outline_px": 18,
-    # minute: polished stick, square tip, lume from 285 px to the tip
+    "hour_outline_px": 20,
+    # minute: polished stick, pointed tip (0.4 mm taper, spec), lume from 285 px to the tip
     "minute_hand_tip": [2262, 2473],
     "minute_hand_width_px": 62,
     "minute_lume_r_px": [285, 893],
@@ -50,7 +50,7 @@ base.MANUAL_PX = {
     "seconds_hand_tip": [664, 2914],
     "seconds_hand_tail_end": [1894, 3102],
     "seconds_hand_width_px": [10, 26],
-    "hub_radius_px": [74, 55, 10],  # polished ring, yellow cap, pin
+    "hub_radius_px": [70, 50, 10],  # black ring, yellow cap, pin (the white rim outside is the hour hand collar)
     "daydate_frame": [1872, 2912, 2486, 3156],
     "crown_box": [2740, 3390, 2905, 3715],
     "index_r_px": [682, 950],

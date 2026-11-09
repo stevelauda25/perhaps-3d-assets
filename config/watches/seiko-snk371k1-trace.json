@@ -1682,7 +1682,7 @@
    "head_base_mm": 4.734,
    "head_half_width_mm": 1.217,
    "half_width_mm": 0.464,
-   "outline_mm": 0.253
+   "outline_mm": 0.281
   },
   "minute": {
    "angle_deg": 51.43,
@@ -1703,8 +1703,8 @@
   }
  },
  "hub_radius_mm": [
-  1.039,
-  0.773,
+  0.983,
+  0.702,
   0.14
  ],
  "daydate_frame": {
@@ -1789,7 +1789,7 @@
    ]
   ],
   "hour_shaft_width_px": 66,
-  "hour_outline_px": 18,
+  "hour_outline_px": 20,
   "minute_hand_tip": [
    2262,
    2473
@@ -1813,8 +1813,8 @@
    26
   ],
   "hub_radius_px": [
-   74,
-   55,
+   70,
+   50,
    10
   ],
   "daydate_frame": [

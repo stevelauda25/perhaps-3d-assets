@@ -87,10 +87,15 @@
    "seconds": 8.95
   },
   "materials": {
-   "outline": "steel_polished",
+   "outline": "hand_white",
    "hour_shaft": "hand_slot",
-   "seconds": "hand_yellow"
-  }
+   "seconds": "hand_yellow",
+   "hub": "gasket_black"
+  },
+  "hour_collar_mm": 0.1,
+  "minute_tip_mm": 0.4,
+  "minute_tip_flat_mm": 0.06,
+  "note": "Hands read white in the photo (polished steel lit by the white tent): white outline material, not the polished steel. Hour: open arrow, lume head, dark slot, round collar around the hub. Minute: pointed tip (0.4 mm taper), lume from 4 mm. Hub: yellow cap inside a black ring."
  },
  "crown": {
   "radius": 2.25,
@@ -188,23 +193,23 @@
   },
   "lume": {
    "color": [
-    0.78,
+    0.72,
     0.84,
-    0.86
+    0.8
    ],
    "metallic": 0.0,
    "roughness": 0.5,
-   "note": "white lume with a cool tint in the indices and hands, as photographed"
+   "note": "pale grey-green lume in the indices and hands (photo sRGB 225, 240, 237)"
   },
   "hand_slot": {
    "color": [
+    0.003,
     0.004,
-    0.005,
-    0.02
+    0.025
    ],
    "metallic": 0.0,
-   "roughness": 0.4,
-   "note": "dark slot between the polished rails of the hour hand"
+   "roughness": 0.9,
+   "note": "dark navy slot between the white rails of the hour hand; matte so web viewers do not light it grey"
   },
   "hand_yellow": {
    "color": [
@@ -215,6 +220,16 @@
    "metallic": 0.0,
    "roughness": 0.35,
    "note": "seconds hand and hub cap, sampled from the photo (sRGB 249, 221, 72)"
+  },
+  "hand_white": {
+   "color": [
+    0.86,
+    0.87,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3,
+   "note": "hand outlines and hour collar: the photo shows them white (sRGB 250, 250, 248), brighter than the lume"
   }
  }
 }
