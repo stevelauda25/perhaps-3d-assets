@@ -67,6 +67,23 @@ def feature_mask(t, shape, prints_only=False):
     return m.astype(bool)
 
 
+def frame_ring(t, shape, grow_px=4):
+    """Dark band of the day-date frame (outer edge grown by grow_px, inner edge = the 3D frame's inner wall)."""
+    S, (px0, py0), f = t["scale_px_per_mm"], t["origin_px"], t["daydate_frame"]
+    (left, top, right, bottom), c = f["x0_y0_x1_y1_mm"], f["corner_mm"]
+
+    def rr(inset):
+        r, pts = c - inset, []
+        for cx, cy, a0 in ((right - c, top - c, 0), (left + c, top - c, 90), (left + c, bottom + c, 180), (right - c, bottom + c, 270)):
+            pts += [(px0 + (cx + r * math.cos(math.radians(a0 + 9 * k))) * S, py0 - (cy + r * math.sin(math.radians(a0 + 9 * k))) * S) for k in range(11)]
+        return np.round(pts).astype(np.int32)
+
+    m = np.zeros(shape, np.uint8)
+    cv2.fillPoly(m, [rr(-grow_px / S)], 1)
+    cv2.fillPoly(m, [rr(f["wall_mm"])], 0)
+    return m.astype(bool)
+
+
 def build(out=OUT, review=None):
     t = json.loads(TRACE.read_text())
     S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
@@ -76,9 +93,11 @@ def build(out=OUT, review=None):
     win = img[sl].copy()
     prints = feature_mask(t, img.shape[:2], prints_only=True)
     mask = np.where(prints, hand_mask(t, img.shape[:2], (), 0.05), hand_mask(t, img.shape[:2]))[sl]  # print the hand only grazes stays
+    ring = frame_ring(t, img.shape[:2])[sl]  # the 3D frame replaces the photo's dark band; left in, it shows twice at an angle
+    mask |= ring
     glow = cv2.dilate(mask.astype(np.uint8), np.ones((13, 13), np.uint8)).astype(bool)  # hand glow is never a source
     bad = glow | feature_mask(t, img.shape[:2])[sl]
-    todo = mask.copy()
+    todo = mask & ~ring  # rotated copies would drag minute marks into the band: it takes the plain lighting below
     # the seconds needle crosses SEIKO and the 5 shield: inpaint that narrow strip from both sides so the logo stays whole
     logo = np.zeros(img.shape[:2], np.uint8)
     for k in ("logo_seiko", "logo_5_shield"):
@@ -111,6 +130,7 @@ def build(out=OUT, review=None):
             if not todo.any():
                 break
     unfilled = int(todo.sum())
+    win[ring] = np.clip(low[ring], 0, 255).astype(np.uint8)
     win[todo] = np.clip(low[todo], 0, 255).astype(np.uint8)
     # soften the seam: blend a 3 px band around the filled zone
     soft = cv2.GaussianBlur((mask | cv2.dilate(strip.astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool)).astype(np.float32), (0, 0), 1.5)[..., None]

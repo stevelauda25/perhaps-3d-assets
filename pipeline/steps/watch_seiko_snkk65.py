@@ -88,11 +88,25 @@ def run(params):
 
     # ---- wide polished day-date frame, applied steel batons with a ridge (the pip at each outer end stays in the dial map) ----
     fr, box = cfg["daydate_frame"], tr["daydate_frame"]
-    (fx, fy), (fw, fh), wl = box["centre_mm"], box["size_mm"], box["wall_mm"]
-    g = Geo()
-    for cx_, cy_, w_, h_ in ((fx, fy + fh / 2 - wl / 2, fw, wl), (fx, fy - fh / 2 + wl / 2, fw, wl),
-                             (fx - fw / 2 + wl / 2, fy, wl, fh - 2 * wl), (fx + fw / 2 - wl / 2, fy, wl, fh - 2 * wl)):
-        g.prism(rect(cx_, cy_, w_, h_), d["z"], d["z"] + fr["height"])
+    (fx, fy), (fw, fh), wl, rc = box["centre_mm"], box["size_mm"], box["wall_mm"], box["corner_mm"]
+
+    def rrect(inset, n=8):  # rounded rectangle, same point count for every inset so the rings pair up
+        r, pts = rc - inset, []
+        for sx, sy, a0 in ((1, 1, 0), (-1, 1, 90), (-1, -1, 180), (1, -1, 270)):
+            ccx, ccy = fx + sx * (fw / 2 - rc), fy + sy * (fh / 2 - rc)
+            pts += [(ccx + r * math.cos(math.radians(a0 + 90 * k / n)), ccy + r * math.sin(math.radians(a0 + 90 * k / n))) for k in range(n + 1)]
+        return pts
+
+    g, z0, z1 = Geo(), d["z"], d["z"] + fr["height"]
+    o, i = rrect(0), rrect(wl)
+    n = len(o)
+    g.v = [(x, y, z) for z in (z0, z1) for x, y in o] + [(x, y, z) for z in (z0, z1) for x, y in i]
+    O0, O1, I0, I1 = 0, n, 2 * n, 3 * n
+    for k in range(n):
+        j = (k + 1) % n
+        g.f += [(O1 + k, O1 + j, I1 + j, I1 + k), (O0 + k, I0 + k, I0 + j, O0 + j),  # top, bottom
+                (O0 + k, O0 + j, O1 + j, O1 + k), (I0 + k, I1 + k, I1 + j, I0 + j)]  # outer wall, inner wall
+    g.smooth = [False] * len(g.f)
     add("daydate_frame", g, fr["material"])
     ix, ti = cfg["indices"], tr["indices"]
     z0, top = d["z"], d["z"] + ix["height"]

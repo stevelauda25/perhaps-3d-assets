@@ -21,6 +21,7 @@ FRONT = ROOT / "references/seiko-snk369k1/front_2000x3708.png"
 OUT = ROOT / "config/watches/seiko-snk369k1-trace.json"
 CASE_MM = 37.0  # listings
 LUG_GAP_MM = 18.0  # listed band width
+CASE_RS_PX = (700, 950)  # radii searched for the left flank, photo px
 
 MANUAL_PX = {
     "hand_pivot": [991, 1819],
@@ -54,6 +55,17 @@ ARTEFACTS = ["bright arcs on the polished bezel and case: reflections, not shape
              "the seconds hand runs along the red track lines; its tip is read where the track begins"]
 
 
+def ring_radii(g, at):
+    """Crystal ring = outer edge of the dark gasket band; dial edge = its inner edge (white dial, left half where nothing is printed). Photo px."""
+    ring, inner = [], []
+    for a in np.arange(190, 350, 2.0):
+        prof = [g[int(at(r, a)[1]), int(at(r, a)[0])] for r in np.arange(590, 720, 1.0)]
+        dark = [i for i, v in enumerate(prof) if v < 150]
+        inner.append(590 + dark[0])
+        ring.append(590 + dark[-1])
+    return float(np.median(ring)), float(np.median(inner))
+
+
 def trace(path=FRONT, overlay=None):
     im = cv2.imread(str(path))
     gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY).astype(float)
@@ -67,21 +79,14 @@ def trace(path=FRONT, overlay=None):
     # case outline on the left flank only (see module note)
     edge = []
     for a in np.arange(260, 280.1, 1.0):
-        rs = np.arange(700, 950, 0.5)
+        rs = np.arange(*CASE_RS_PX, 0.5)
         xs, ys = (np.array(v) for v in at(rs, a))
         hit = np.nonzero(fg[ys.astype(int), xs.astype(int)])[0]
         edge.append((xs[hit[-1]], ys[hit[-1]]))
     edge = np.array(edge)
     case_r = float(np.median(np.hypot(edge[:, 0] - px0, edge[:, 1] - py0)))
     S = 2 * case_r / CASE_MM
-    # crystal ring = outer edge of the dark gasket band; dial edge = its inner edge (white dial, left half where nothing is printed)
-    ring, inner = [], []
-    for a in np.arange(190, 350, 2.0):
-        prof = [g[int(at(r, a)[1]), int(at(r, a)[0])] for r in np.arange(590, 720, 1.0)]
-        dark = [i for i, v in enumerate(prof) if v < 150]
-        inner.append(590 + dark[0])
-        ring.append(590 + dark[-1])
-    rr, rd = float(np.median(ring)), float(np.median(inner))
+    rr, rd = ring_radii(g, at)
     mm = lambda p: [round((p[0] - px0) / S, 3), round(-(p[1] - py0) / S, 3)]
     polar = lambda p: (round(math.hypot(*mm(p)), 3), round(math.degrees(math.atan2(*mm(p))) % 360, 2))
     out = {"source": str(path.relative_to(ROOT)), "scale_px_per_mm": round(S, 4), "origin_px": [px0, py0],

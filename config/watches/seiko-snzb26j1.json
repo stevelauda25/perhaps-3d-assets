@@ -94,7 +94,9 @@
   "seiko_height": 0.2,
   "shield_height": 0.25,
   "bevel": 0.03,
-  "note": "fitted from the SNZ450J1 trace (same applied logo)"
+  "note": "shapes from the SNZB26J1 trace so the plates sit on the dial map's own logo; satin pale gold as in the target photo (polished gold reads dark face-on)",
+  "shapes_trace": "config/watches/seiko-snzb26j1-trace.json",
+  "material": "logo_gold"
  },
  "indices": {
   "height": 0.35,
@@ -265,6 +267,16 @@
    "metallic": 0.0,
    "roughness": 0.5,
    "note": "cream lume as photographed"
+  },
+  "logo_gold": {
+   "color": [
+    1.0,
+    0.82,
+    0.48
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "applied SEIKO and 5 shield: pale satin gold, same tone as the dial in the target photo"
   }
  },
  "pose": {

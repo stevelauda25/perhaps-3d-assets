@@ -37,8 +37,9 @@ MANUAL_PX = {
     "seconds_hand_half_width_px": [3, 15],  # needle, tail at the hub (it narrows to 0.7 of that)
     "hub_radius_px": [25, 6],
     "hub_collar_px": 46,  # hour-hand collar round the hub
-    "daydate_frame": [1792, 1452, 2162, 1588],  # wide polished frame round both windows
-    "daydate_wall_px": 20,
+    "daydate_frame": [1790, 1430, 2168, 1583],  # outer edge of the dark polished frame round both windows
+    "daydate_wall_px": 16,
+    "daydate_corner_px": 32,
     "logo_seiko": [1458, 1180, 1737, 1240],
     "logo_5_shield": [1518, 1253, 1682, 1337],
     "print_automatic_21_jewels": [1478, 1742, 1722, 1802],
@@ -133,6 +134,7 @@ def trace(path=FRONT, overlay=None):
     for k in ("daydate_frame", "logo_seiko", "logo_5_shield", "print_automatic_21_jewels", "print_6", "crown_box"):
         out[k] = box(M[k])
     out["daydate_frame"]["wall_mm"] = round(M["daydate_wall_px"] / S, 3)
+    out["daydate_frame"]["corner_mm"] = round(M["daydate_corner_px"] / S, 3)
 
     row = M["bracelet_row_400"]
     c, hw = sum(row["edges"]) / 2, (row["edges"][1] - row["edges"][0]) / 2
