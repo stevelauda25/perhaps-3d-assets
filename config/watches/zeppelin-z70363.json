@@ -1,0 +1,28 @@
+{
+ "model": "Zeppelin LZ129 Hindenburg Z70363 (7036-3)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (40 mm case, listing; strap 20 mm measured, the listing's 10 mm lug width is wrong). Heights before the house depth scale. Dial print, sub-dials, moon window and the strap leather come from one photo map.",
+ "trace": "config/watches/zeppelin-z70363-trace.json",
+ "photo_map": "outputs/watches/zeppelin-z70363/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.4, "strap_leather": 0.55},
+ "verified_mm": {"diameter": 40.0, "strap_width": 20.0},
+ "case": {"profile": [[17.0, 0.0], [19.4, 0.0], [20.0, 0.8], [20.0, 5.6], [19.8, 6.8], [19.5, 7.7], [19.1, 8.7], [18.92, 8.8], [18.92, 7.3], [18.6, 7.3]],
+          "note": "(r, z): polished flank rounding into the thin sloped bezel (18.92-20 mm in the photo); inner lip covers the dial edge"},
+ "lug": {"gap": 0.1, "into_case": 1.5, "top_z_at_case": 6.0, "top_z_at_tip": 4.5, "bevel": 0.5, "note": "polished like the case (photo)"},
+ "crystal": {"z0": 8.3, "z1": 8.8, "dome": 0.6},
+ "dial": {"z": 7.0, "r": 18.6},
+ "hands": {"thickness": 0.15, "z": {"sub": 7.25, "hour": 7.45, "minute": 7.65, "week": 7.85, "seconds": 8.05},
+           "hub_steps": [[1.0, 0.5], [0.75, 0.85], [0.5, 1.1], [0.3, 1.3]]},
+ "crown": {"teeth": 24, "flute_depth": 0.25, "z": 4.0},
+ "pusher": {"z": 4.0},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "edge_inset": 0.05, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 37.4,
+           "note": "House curl (SUR419P1): bend at the lug tips, 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "hand_white": {"color": [0.82, 0.83, 0.84], "metallic": 0.0, "roughness": 0.3,
+                 "note": "the photo's hands read bright white; thin polished-steel needles reflected the dark surroundings and disappeared (Irsyad 2026-11-09)"},
+  "rose_gold": {"color": [0.93, 0.6, 0.47], "metallic": 1.0, "roughness": 0.2, "note": "hubs, seconds counterweight, week crescent"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission; black base colour so the dark dial is not hazed in model-viewer"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}
