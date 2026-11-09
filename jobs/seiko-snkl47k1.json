@@ -1,0 +1,46 @@
+{
+  "id": "seiko-snkl47k1",
+  "output": "outputs/jobs/seiko-snkl47k1",
+  "asset_type": "watch",
+  "model": "Seiko 5 Automatic SNKL47K1",
+  "baseline": "First build: two-tone front relief from the straightened front photo at 36.9 mm, house depth, glass and bracelet curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/seiko-snkl47k1/REFERENCE_PLAN.md",
+    "config/watches/seiko-snkl47k1.json",
+    "config/watches/seiko-snkl47k1-trace.json",
+    "config/presets/watch_kit_white_front_seiko_snkl47.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_seiko_snkl47",
+      "params": {
+        "spec": "config/watches/seiko-snkl47k1.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/seiko-snkl47k1/seiko-snkl47k1.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_seiko_snkl47.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

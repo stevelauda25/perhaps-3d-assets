@@ -1,0 +1,239 @@
+{
+ "model": "Seiko 5 Automatic SNKL47K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straightened front photo (36.9 mm case, spec sheet); heights are the SNK607K1/SNKL50K1 values (no orthographic side view). Two-tone: steel case and bracelet, gold indices, hands, crown and bracelet strips (gold from the photo). SEIKO, the 5 shield, the print, the minute ticks, the baton rings and the black square at 3 stay in the dial map; the day-date is redrawn there as clean type.",
+ "trace": "config/watches/seiko-snkl47k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snkl47k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 36.9
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.349999999999998,
+    0
+   ],
+   [
+    18.15,
+    0.6
+   ],
+   [
+    18.45,
+    1.6
+   ],
+   [
+    18.45,
+    6.6
+   ],
+   [
+    18.3,
+    7.1
+   ],
+   [
+    15.114,
+    9.6
+   ],
+   [
+    14.814,
+    9.6
+   ],
+   [
+    14.814,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 14.25,
+  "r_out": 14.844,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 14.814,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 14.25,
+  "z": 8.0,
+  "rehaut_r": 14.25,
+  "rehaut_z": 9.0,
+  "map_half_mm": 14.815,
+  "roughness": 0.35
+ },
+ "daydate_frame": {
+  "wall": 0.18,
+  "height": 0.1,
+  "material": "steel_polished"
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.15,
+  "gap_12": 0.0,
+  "inner_extend": 0.0,
+  "material": "gold_polished"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "tail_half_width": 0.42,
+  "widest_at": 0.25,
+  "lume_half_width": 0.5,
+  "hub": {
+   "cap_height": 0.2
+  },
+  "material": "gold_polished"
+ },
+ "crown": {
+  "radius": 1.75,
+  "flute_depth": 0.22,
+  "teeth": 18,
+  "r_from": 18.2,
+  "r_to": 19.9,
+  "z": 4.1,
+  "material": "gold_polished"
+ },
+ "lug": {
+  "inner_x": 9.6,
+  "from_y": 12.0,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3,
+  "from_y": 15.0
+ },
+ "bracelet": {
+  "pitch": 5.134,
+  "end_y": 36.53,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 21.125,
+  "bend_radius": 7.0,
+  "columns": [
+   [
+    0.0,
+    0.356,
+    0.5,
+    "steel_brushed"
+   ],
+   [
+    0.356,
+    0.484,
+    0.5,
+    "gold_polished"
+   ],
+   [
+    0.484,
+    1.0,
+    0.0,
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, row phase in pitches, material]: brushed steel centre, polished gold strips with it, brushed steel outer links half a row off (photo)",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the lug tips, links bend with the curve"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.83,
+    0.72
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "cream lume as photographed"
+  },
+  "gold_polished": {
+   "color": [
+    1.0,
+    0.7,
+    0.24
+   ],
+   "metallic": 1.0,
+   "roughness": 0.1,
+   "note": "gold tone from the photo's batons, strips and crown (hue 1 : 0.58-0.81 : 0.14-0.42, linear; middle value)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}
