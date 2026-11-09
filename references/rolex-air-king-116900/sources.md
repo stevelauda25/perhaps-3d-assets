@@ -1,0 +1,9 @@
+# Sources: ROLEX Air-King 116900 (40 mm steel, black dial, Oyster bracelet)
+
+| File | Source | Pixels | Notes |
+| --- | --- | --- | --- |
+| `rolex-116900_original.png` | Retailer product render, wristcheck.com listing "air-king-40-stainless-steel-black-dial-116900-0001", gallery image 1, taken by the lead with the user's approval (the Rolex image host has no file for the discontinued 116900): `https://res.cloudinary.com/wc-photo/image/upload/c_fill,w_3000,h_3000,g_auto/c_limit,w_2880/f_auto/q_auto/v1785727735/product/0b76a8cfc2050c5e459aed2aec089cc8/b937f9c6db59ae9d24a4c79be6f42ee4` | 2880 x 2880 (RGBA PNG with transparency; the watch occupies x 783..2184, y 204..2672, i.e. 1402 x 2469 px incl. the crown, not centred) | Original, untouched. Pre-owned-listing image, possibly the retailer's copyright; reference use only. |
+
+SOFT SOURCE: the render was strongly upscaled by the retailer. Edge transitions (dial print, hand edges, bracelet joints) are 8 to 10 px wide at 32.6 px/mm, which corresponds to a native size of roughly 300 to 400 px for the 2880 px frame (about 8x upscale); no real detail exists below about 8 px. Everything is measured and mapped at the native 2880 px size (no further enlargement); the comparison render is at half the native scale and compared with the photo downscaled by 0.5 (INTER_AREA). The steel map is capped at 2048 px on the long side (scale 0.827 of native); the dial map is a native 1122 px crop.
+
+Catalog 2 line (tracker row position 37): Rolex, Air-King, 116900, 40mm, steel, black dial, Oyster bracelet. The render shows a black dial with white Arabic numerals 3 / 6 / 9, the 5-minute numerals 55 / 5 / 50 / 10 / 40 / 20 / 35 / 25, a white triangle at 12, green ROLEX with a yellow crown, "OYSTER PERPETUAL", "Air-King" script, "SUPERLATIVE CHRONOMETER OFFICIALLY CERTIFIED", "SWISS MADE", a green seconds hand with a lume disc and a tail disc, and a smooth polished domed bezel; it agrees with the row (black dial).

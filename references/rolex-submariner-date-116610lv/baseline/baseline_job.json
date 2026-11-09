@@ -1,0 +1,46 @@
+{
+ "id": "rolex-submarinerdate40-116610lv",
+ "output": "outputs/jobs/rolex-submarinerdate40-116610lv",
+ "asset_type": "watch",
+ "model": "ROLEX Submariner Date 116610LV Hulk (40 mm steel, green dial, green ceramic bezel, date with Cyclops lens, Oyster bracelet)",
+ "baseline": "First build: Submariner Date 116610LV front relief from the retailer's 2880 x 2880 render at 40 mm (follower of the Submariner Date 41 template: step reused read-only, own prep copy / kit preset / measure)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-submariner-date-116610lv/REFERENCE_PLAN.md",
+  "config/watches/rolex-submarinerdate40-116610lv.json",
+  "config/watches/rolex-submarinerdate40-116610lv-trace.json",
+  "config/presets/watch_kit_white_front_rolex_submarinerdate40.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_submarinerdate40",
+   "params": {
+    "spec": "config/watches/rolex-submarinerdate40-116610lv.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-submarinerdate40-116610lv/rolex-submarinerdate40-116610lv.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_submarinerdate40.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1280,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

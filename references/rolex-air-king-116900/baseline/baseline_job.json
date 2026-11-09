@@ -1,0 +1,46 @@
+{
+ "id": "rolex-airking-116900",
+ "output": "outputs/jobs/rolex-airking-116900",
+ "asset_type": "watch",
+ "model": "ROLEX Air-King 116900 (40 mm steel, black dial, domed polished bezel, Oyster bracelet)",
+ "baseline": "Follower build: Rolex Air-King template (126900 step / prep) on the 2880 x 2880 retailer render at 40 mm (own measure / spec / kit preset, native working size, soft source)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-air-king-116900/REFERENCE_PLAN.md",
+  "config/watches/rolex-airking-116900.json",
+  "config/watches/rolex-airking-116900-trace.json",
+  "config/presets/watch_kit_white_front_rolex_airking116900.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_airking",
+   "params": {
+    "spec": "config/watches/rolex-airking-116900.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-airking-116900/rolex-airking-116900.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_airking116900.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1536,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

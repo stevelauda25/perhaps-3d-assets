@@ -1,0 +1,46 @@
+{
+ "id": "rolex-daydate40-228238",
+ "output": "outputs/jobs/rolex-daydate40-228238",
+ "asset_type": "watch",
+ "model": "ROLEX Day-Date 40 228238 (40 mm yellow gold, fluted bezel, green ombre dial, Cyclops date, President bracelet)",
+ "baseline": "First build: follower of the Day-Date 228235 template (own measure / spec / kit preset, the 2880 x 2880 retailer render at 36.053 px/mm, native working size, steel map capped at 2048 px)",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/rolex-day-date-40-228238-green/REFERENCE_PLAN.md",
+  "config/watches/rolex-daydate40-228238.json",
+  "config/watches/rolex-daydate40-228238-trace.json",
+  "config/presets/watch_kit_white_front_rolex_daydate40_228238.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_rolex_daydate40",
+   "params": {
+    "spec": "config/watches/rolex-daydate40-228238.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/rolex-daydate40-228238/rolex-daydate40-228238.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_rolex_daydate40_228238.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 1600,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
