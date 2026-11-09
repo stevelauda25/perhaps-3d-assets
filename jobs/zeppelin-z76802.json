@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z76802",
+  "output": "outputs/jobs/zeppelin-z76802",
+  "asset_type": "watch",
+  "model": "Zeppelin 100 Jahre Chronograph Z76802 (7680-2)",
+  "baseline": "First build: Z7680MB2 watch head posed at this photo time on a black leather strap from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z76802/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z76802.json",
+    "config/watches/zeppelin-z76802-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z76802.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z76802",
+      "params": {
+        "spec": "config/watches/zeppelin-z76802.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z76802/zeppelin-z76802.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z76802.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
