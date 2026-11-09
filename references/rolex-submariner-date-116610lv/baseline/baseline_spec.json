@@ -1,0 +1,232 @@
+{
+ "model": "ROLEX Submariner Date 116610LV Hulk (40 mm steel, green sunburst Maxi dial, green Cerachrom bezel, date with Cyclops lens, Oyster bracelet)",
+ "note": "Front relief of the Submariner Date 116610LV from the retailer's 2880 x 2880 render (35.6 px/mm: coin-edge tip diameter 40 mm), step / prep logic of the Submariner Date 41 template with its own measurements: case outline = photo silhouette (older 40 mm case, narrower lugs, old Oyster end links), green sunburst dial and green ceramic insert carried by the projected maps. The steel map is the photo downscaled by 0.8127 (2048 px cap). Flat back at z = 0, dial faces +z, mm, origin = hand pivot.",
+ "trace": "config/watches/rolex-submarinerdate40-116610lv-trace.json",
+ "dial_map": "outputs/watches/rolex-submarinerdate40-116610lv/dial_photo.jpg",
+ "steel_map": "outputs/watches/rolex-submarinerdate40-116610lv/steel_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0
+ },
+ "case": {
+  "body_z": 7.2,
+  "tip_z": 3.3,
+  "ramp_from_y": 17.0,
+  "bevel": 0.35,
+  "tip_top": 23.652,
+  "tip_bottom": 24.607,
+  "note": "outline = photo silhouette (lug tops slope over y 596..614, lug bottoms over y 2284..2302; tips taken where the silhouette is already the bracelet width: y 592 / 2310; crown guards to x 2220); the slab slopes toward the bracelet"
+ },
+ "bezel": {
+  "z0": 7.0,
+  "teeth": 120,
+  "samples_per_tooth": 8,
+  "flute_depth": 0.0,
+  "flute_power": 1.0,
+  "z_inner": 8.2,
+  "z_insert": 8.6,
+  "z_rim": 8.65,
+  "z_coin_out": 7.8,
+  "chamfer_mm": 0.25,
+  "note": "green ceramic insert (bezel_in 15.38 .. insert_out 18.89 mm), narrow rim to rim_out 19.04, coin edge ring from there to the tips at 20.0 mm sloping down to z_coin_out; the photographed silhouette of the coin edge is a smooth circle (scallops are inside the face and stay texture), so flute_depth 0"
+ },
+ "crystal": {
+  "z0": 8.5,
+  "z1": 8.62,
+  "dome": 0.2
+ },
+ "dial": {
+  "z": 7.3,
+  "rehaut_z": 8.0,
+  "roughness": 0.35,
+  "specular": 0.0,
+  "emission": 0.286
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 7.7,
+   "minute": 7.95,
+   "seconds": 8.2
+  },
+  "material": "hands_photo",
+  "emission": 0.35,
+  "note": "hands = traced photo outlines (trace.hands[name].outline_mm) as flat polygons; the lume, Mercedes lines and black facets stay in the projected photo"
+ },
+ "crown": {
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "z": 4.4,
+  "cap_radius_fraction": 0.8,
+  "bevel": 0.3,
+  "neck_radius_fraction": 0.6,
+  "note": "fluted Rolex crown: flutes x 2158..2262, cap to 2290, rows 1323..1568"
+ },
+ "strap": {
+  "kind": "bracelet",
+  "note": "strap.bracelet.columns lists the column kinds left to right; bounds_x_mm holds one boundary less; pieces_mm has top / bottom [y0, y1] chains per kind",
+  "bracelet": {
+   "gap": 0.06,
+   "z0": 0.6,
+   "z_outer": 3.4,
+   "z_centre": 3.5,
+   "bevel": 0.2,
+   "backing_z": [
+    0.2,
+    0.6
+   ],
+   "inset": 0.04,
+   "backing_inset": 0.4,
+   "columns": [
+    "outer",
+    "centre",
+    "outer"
+   ],
+   "bounds_x_mm": {
+    "top": [
+     [
+      0.0,
+      -4.888,
+      3.831
+     ],
+     [
+      50.0,
+      -3.388,
+      5.031
+     ]
+    ],
+    "bottom": [
+     [
+      0.0,
+      -5.093,
+      3.91
+     ],
+     [
+      50.0,
+      -3.264,
+      5.008
+     ]
+    ]
+   },
+   "pieces_mm": {
+    "outer": {
+     "top": [
+      [
+       23.652,
+       29.27
+      ],
+      [
+       29.27,
+       33.202
+      ],
+      [
+       33.202,
+       34.7
+      ]
+     ],
+     "bottom": [
+      [
+       24.607,
+       30.253
+      ],
+      [
+       30.253,
+       34.86
+      ],
+      [
+       34.86,
+       35.5
+      ]
+     ]
+    },
+    "centre": {
+     "top": [
+      [
+       18.0,
+       24.719
+      ],
+      [
+       24.719,
+       30.197
+      ],
+      [
+       30.197,
+       33.202
+      ],
+      [
+       33.202,
+       34.7
+      ]
+     ],
+     "bottom": [
+      [
+       18.0,
+       25.899
+      ],
+      [
+       25.899,
+       31.629
+      ],
+      [
+       31.629,
+       35.5
+      ]
+     ]
+    }
+   },
+   "note": "Oyster bracelet (older end links): brushed outer links and a wider centre link; joint rows measured on the photo (px, 35.6 px/mm, pivot (1435, 1434)): outer top 392 / 252, outer bottom 2511 / 2675; centre top 554 / 359 / 252, centre bottom 2356 / 2560; column lines drift with the case (x 1283 -> 1298 left, 1589 -> 1601 right toward the top end; bottom 1285 -> 1300 and 1593 -> 1602); the bracelet is cut by the photo at y 193 and 2705."
+  }
+ },
+ "materials": {
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "lume": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.02,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel": {
+  "roughness": 0.6,
+  "specular": 0.0,
+  "emission": 0.29,
+  "bezel_emission": 0.27
+ },
+ "date": {
+  "z0": 8.6,
+  "z_edge": 8.78,
+  "z_top": 8.9,
+  "rings": [
+   0.95,
+   0.88
+  ],
+  "emission": 0.26,
+  "note": "Cyclops lens: photographed outline (measure.date.lens_px, 7.1 x 5.6 mm, centre 8.4 mm right of the pivot) as a wall + two bevel rings + flat top above the crystal; photo projection, emission close to the dial; heights are scaled by pose.depth_scale"
+ },
+ "ring_y_scale": 1.012
+}

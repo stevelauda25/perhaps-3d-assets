@@ -1,0 +1,339 @@
+{
+ "note": "Measured on references/rolex-submariner-date-116610lv/rolex-116610lv_original.png (native 2880 x 2880 RGBA, retailer render, watch bbox x 722..2292, y 193..2705, NOT centred, somewhat soft/upscaled). Pivot = hub centre (3x/8x crop of the hub pin and disc), rings = x semi axes of RANSAC / ellipse fits to the green insert edges (inner 547.8, outer 672.0 px; the photo shows a 1 % y stretch of the rings, circles used) and a 4x edge crop at the pivot row; coin-edge tip radius 712 px = 40 mm / 2 -> 35.6 px/mm (the silhouette r(angle) over the left 110 deg is a smooth circle: the scallops are inside the face, flute_depth 0). Hands: angles from the lume strip PCA / tip-pivot lines; joint rows from brightness-gradient scans per column; lens polygon picked on 4x crops.",
+ "photo": "references/rolex-submariner-date-116610lv/rolex-116610lv_original.png",
+ "case_mm": 40,
+ "pivot": [
+  1435,
+  1434
+ ],
+ "case_centre_x": 1434.2,
+ "case_edge_left_x": 722.2,
+ "ring_centre_px": [
+  1434.2,
+  1430.3
+ ],
+ "rings": {
+  "dial_flat": 474,
+  "crystal_edge": 542.5,
+  "bezel_in": 547.5,
+  "insert_out": 672.5,
+  "rim_out": 678,
+  "bezel_tip": 712.0
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 305.3,
+   "mode": "mask",
+   "thr": 80,
+   "roi": [
+    {
+     "rect": [
+      -60,
+      300,
+      -20,
+      20
+     ]
+    },
+    {
+     "circle": [
+      172.5,
+      -0.8,
+      53
+     ]
+    }
+   ]
+  },
+  "minute": {
+   "angle_deg": 57.4,
+   "mode": "mask",
+   "thr": 80,
+   "roi": [
+    {
+     "poly": [
+      [
+       -40,
+       -30
+      ],
+      [
+       300,
+       -28
+      ],
+      [
+       360,
+       -14
+      ],
+      [
+       421,
+       -1
+      ],
+      [
+       421,
+       2
+      ],
+      [
+       360,
+       12
+      ],
+      [
+       300,
+       28
+      ],
+      [
+       -40,
+       28
+      ]
+     ]
+    }
+   ]
+  },
+  "seconds": {
+   "angle_deg": 212.5,
+   "mode": "shapes",
+   "roi": [
+    {
+     "poly": [
+      [
+       -190,
+       -4.0
+      ],
+      [
+       -30,
+       -4.5
+      ],
+      [
+       0,
+       -4.5
+      ],
+      [
+       300,
+       -4.0
+      ],
+      [
+       430,
+       -3.2
+      ],
+      [
+       445,
+       -1.5
+      ],
+      [
+       445,
+       1.5
+      ],
+      [
+       430,
+       3.2
+      ],
+      [
+       300,
+       4.0
+      ],
+      [
+       0,
+       4.5
+      ],
+      [
+       -30,
+       4.5
+      ],
+      [
+       -190,
+       4.0
+      ]
+     ]
+    },
+    {
+     "circle": [
+      -166,
+      0,
+      18
+     ]
+    },
+    {
+     "circle": [
+      249,
+      0,
+      26.5
+     ]
+    }
+   ]
+  }
+ },
+ "hub_r": 37,
+ "crown": {
+  "x0": 2158,
+  "x1": 2290,
+  "y0": 1323,
+  "y1": 1568,
+  "fluted_x": 2262
+ },
+ "crown_rows": {
+  "y0": 1318,
+  "y1": 1572,
+  "right_x": 2220
+ },
+ "tip_rows_px": [
+  592,
+  2310
+ ],
+ "steel_max_px": 2048,
+ "steel_quality": 95,
+ "dial_quality": 95,
+ "bracelet_px": {
+  "note": "joint rows (px) from per-column brightness-gradient scans (strongest bright->dark onsets of the shadow under each overlapping piece) top and bottom separately; column lines x from horizontal gradient maxima",
+  "outer_top": [
+   605,
+   392,
+   252,
+   195
+  ],
+  "centre_top": [
+   554,
+   359,
+   252,
+   195
+  ],
+  "outer_bottom": [
+   2292,
+   2511,
+   2675,
+   2705
+  ],
+  "centre_bottom": [
+   2356,
+   2560,
+   2705
+  ],
+  "column_x": {
+   "top": [
+    [
+     1283,
+     1589
+    ],
+    [
+     1298,
+     1601
+    ]
+   ],
+   "bottom": [
+    [
+     1285,
+     1593
+    ],
+    [
+     1300,
+     1602
+    ]
+   ]
+  }
+ },
+ "date": {
+  "note": "Cyclops lens outline picked on 4x crops (flat top y 1332, flat bottom y 1532, widest x 1634 / 1887.5 at y ~1425); numeral and window stay texture",
+  "lens_px": [
+   [
+    1702.5,
+    1333
+   ],
+   [
+    1760,
+    1332
+   ],
+   [
+    1831,
+    1332
+   ],
+   [
+    1850,
+    1342.5
+   ],
+   [
+    1865,
+    1360
+   ],
+   [
+    1876,
+    1382.5
+   ],
+   [
+    1884,
+    1405
+   ],
+   [
+    1887.5,
+    1427.5
+   ],
+   [
+    1886,
+    1450
+   ],
+   [
+    1881,
+    1470
+   ],
+   [
+    1871,
+    1490
+   ],
+   [
+    1857.5,
+    1510
+   ],
+   [
+    1842.5,
+    1527.5
+   ],
+   [
+    1830,
+    1531.5
+   ],
+   [
+    1760,
+    1532
+   ],
+   [
+    1695,
+    1532
+   ],
+   [
+    1682.5,
+    1529
+   ],
+   [
+    1667.5,
+    1514
+   ],
+   [
+    1652.5,
+    1495
+   ],
+   [
+    1641,
+    1472.5
+   ],
+   [
+    1635,
+    1450
+   ],
+   [
+    1634,
+    1422.5
+   ],
+   [
+    1636,
+    1397.5
+   ],
+   [
+    1644,
+    1375
+   ],
+   [
+    1655,
+    1354
+   ],
+   [
+    1673.75,
+    1337.5
+   ]
+  ]
+ }
+}
