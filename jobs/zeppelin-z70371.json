@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z70371",
+  "output": "outputs/jobs/zeppelin-z70371",
+  "asset_type": "watch",
+  "model": "Zeppelin LZ129 Hindenburg Z70371 (7037-1)",
+  "baseline": "First build: round polished case, silver moon-phase dial and black leather strap from the straightened 3/4 photo at 40 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z70371/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z70371.json",
+    "config/watches/zeppelin-z70371-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z70371.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z70371",
+      "params": {
+        "spec": "config/watches/zeppelin-z70371.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z70371/zeppelin-z70371.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z70371.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
