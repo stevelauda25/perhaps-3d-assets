@@ -24,7 +24,7 @@ def arc(r, a0, a1, n=12):
 def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
-    coll = bpy.data.collections.new("WATCH | Seiko 5 Sports SNZB24J1 front relief")
+    coll = bpy.data.collections.new("WATCH | %s front relief" % cfg["model"])
     bpy.context.scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d = cfg["dial"]
@@ -143,7 +143,10 @@ def run(params):
         add(k, plate(tr[k + "_shapes"], d["z"], d["z"] + hgt, P + k), "gold_polished", bevel=lg["bevel"])
 
     # ---- hands at the photo's time: gold sword hands with two lume windows; needle seconds with a lume disc on the tail ----
-    hs, th, t = cfg["hands"], cfg["hands"]["thickness"], tr["hands"]
+    hs, th, t = cfg["hands"], cfg["hands"]["thickness"], json.loads(json.dumps(tr["hands"]))
+    for name, deg in hs.get("pose_deg", {}).items():  # optional time from another photo (SNZB26J1 gold version); shapes stay traced
+        if name != "note":
+            t[name]["angle_deg"] = deg
     for name in ("hour", "minute"):
         h = t[name]
         L, tail, hw, deg, z = h["length_mm"], h["tail_mm"], h["half_width_mm"], h["angle_deg"], hs["z"][name]

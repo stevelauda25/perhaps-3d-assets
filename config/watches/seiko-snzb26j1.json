@@ -1,0 +1,282 @@
+{
+ "model": "Seiko 5 Sports SNZB26J1",
+ "note": "Gold version of SNZB24J1 (same case and dial layout, Irsyad 2026-11-09): built by watch_seiko_snzb24 from the SNZB24J1 trace; every metal part gold (polished case, pads, crystal ring, skirt, indices, hands, crown; satin bezel top; brushed links with polished stripes). Dial map from the SNZB26J1 photo (gold sunburst, MON 15). Hands at the time of the target photo front_target_1000x1672.png.",
+ "trace": "config/watches/seiko-snzb24j1-trace.json",
+ "dial_map": "outputs/watches/seiko-snzb26j1/dial_photo.jpg",
+ "verified_mm": {
+  "bezel_diameter": 40.0
+ },
+ "case": {
+  "r_in": 19.0,
+  "z_inner": 6.6,
+  "z_edge": 4.6,
+  "edge_round": 0.5,
+  "slope_power": 1.4,
+  "rings": 20,
+  "scoop": {},
+  "claw": {},
+  "material": "steel_polished",
+  "note": "round case under the bezel: only the lugs show; plain sloped top on the traced outline"
+ },
+ "bezel": {
+  "crystal_ring": {
+   "profile_rz": [
+    [
+     14.3,
+     7.75
+    ],
+    [
+     15.28,
+     8.75
+    ]
+   ],
+   "material": "gold_polished"
+  },
+  "top": {
+   "profile_rz": [
+    [
+     15.28,
+     8.75
+    ],
+    [
+     19.25,
+     8.75
+    ],
+    [
+     19.47,
+     8.55
+    ],
+    [
+     19.47,
+     7.9
+    ]
+   ],
+   "material": "steel_satin"
+  },
+  "z_bottom": 6.4,
+  "top_z": 8.75,
+  "skirt": {
+   "r_in": 19.0,
+   "r_out": 20.0,
+   "depth": 0.25,
+   "teeth": 120,
+   "z0": 6.4,
+   "z1": 8.0,
+   "material": "gold_polished"
+  },
+  "pad": {
+   "height": 0.35,
+   "bevel": 0.12,
+   "material": "gold_polished",
+   "note": "raised gold pads at 12, 3, 6, 9 (bezel at zero)"
+  },
+  "print_height": 0.02
+ },
+ "crystal": {
+  "radius": 14.3,
+  "z0": 7.5,
+  "z1": 7.85
+ },
+ "dial": {
+  "texture_edge_r": 14.22,
+  "z": 6.2,
+  "rehaut_r": 14.35,
+  "rehaut_z": 7.3,
+  "map_half_mm": 14.411,
+  "roughness": 0.4
+ },
+ "daydate_frame": {
+  "wall": 0.8,
+  "height": 0.15,
+  "material": "gold_polished"
+ },
+ "logo": {
+  "seiko_height": 0.2,
+  "shield_height": 0.25,
+  "bevel": 0.03,
+  "note": "fitted from the SNZ450J1 trace (same applied logo)"
+ },
+ "indices": {
+  "height": 0.35,
+  "point_ratio": 1.0,
+  "bevel": 0.06,
+  "groove_12": 0.12
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 6.65,
+   "minute": 6.82,
+   "seconds": 6.99
+  },
+  "tip_ratio": 1.3,
+  "frame": 0.12,
+  "hub": {
+   "cap_height": 0.2
+  },
+  "pose_deg": {
+   "hour": 304.6,
+   "minute": 54.1,
+   "seconds": 293.5,
+   "note": "10:09:49 read from references/seiko-snzb26j1/front_target_1000x1672.png, turned back 2.2 deg; seconds = needle, lume disc on its tail at 113.5 deg"
+  }
+ },
+ "crown": {
+  "radius": 2.3,
+  "flute_depth": 0.22,
+  "teeth": 14,
+  "r_from": 20.0,
+  "r_to": 23.7,
+  "z": 3.0
+ },
+ "end_link": {
+  "top_z": 4.4,
+  "bevel": 0.3,
+  "under_case": 4.0,
+  "stripe": [
+   0.38,
+   0.53
+  ]
+ },
+ "bracelet": {
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_radius": 7.0,
+  "half_width": [
+   [
+    23.29,
+    10.5
+   ],
+   [
+    26.0,
+    10.3
+   ],
+   [
+    45.0,
+    10.3
+   ]
+  ],
+  "half_width_note": "photo: 20.6-21.1 mm next to the case, about 20.5 mm past the first link (the rows further out curve away in the photo)",
+  "columns": [
+   [
+    0.0,
+    0.38,
+    "centre",
+    "steel_brushed"
+   ],
+   [
+    0.38,
+    0.53,
+    "centre",
+    "gold_polished"
+   ],
+   [
+    0.53,
+    1.0,
+    "outer",
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, joint set from the trace, material]: steel centre, gold stripes either side of it (moving with the centre links), steel outer links",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the first outer joint (lug tip), end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    1.0,
+    0.78,
+    0.34
+   ],
+   "metallic": 1.0,
+   "roughness": 0.1,
+   "note": "gold case (key kept from SNZB24J1)"
+  },
+  "steel_satin": {
+   "color": [
+    1.0,
+    0.78,
+    0.34
+   ],
+   "metallic": 1.0,
+   "roughness": 0.25,
+   "note": "satin gold bezel top: the polished pads stand out from it as in the target photo"
+  },
+  "steel_brushed": {
+   "color": [
+    0.9,
+    0.7,
+    0.3
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "brushed gold links"
+  },
+  "gold_polished": {
+   "color": [
+    1.0,
+    0.78,
+    0.34
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "yellow gold of the target photo"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission"
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.82,
+    0.7
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "cream lume as photographed"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}
