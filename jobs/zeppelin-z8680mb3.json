@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z8680mb3",
+  "output": "outputs/jobs/zeppelin-z8680mb3",
+  "asset_type": "watch",
+  "model": "Zeppelin 100 Jahre Chronograph Z8680MB3",
+  "baseline": "First build: round polished case, cream chronograph dial with black hands and three-column steel bracelet from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z8680mb3/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z8680mb3.json",
+    "config/watches/zeppelin-z8680mb3-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z8680mb3.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z8680mb3",
+      "params": {
+        "spec": "config/watches/zeppelin-z8680mb3.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z8680mb3/zeppelin-z8680mb3.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z8680mb3.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
