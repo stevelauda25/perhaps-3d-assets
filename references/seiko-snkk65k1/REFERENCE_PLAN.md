@@ -58,3 +58,4 @@ python3 -B -m pipeline.jobs run jobs/seiko-snkk65k1.json --force
 | Round | Date | Change |
 | --- | --- | --- |
 | 1 | 2026-11-09 | First front relief: all steel, shoulder lugs, end-link tongue, sword hands with lume, wide day-date frame, three-column bracelet with the 7 mm curl |
+| 2 | 2026-11-09 | Day-date frame matched to the photo outline: moved up 0.3 mm, rounded corners (0.72 mm), thinner wall (0.36 mm) |
