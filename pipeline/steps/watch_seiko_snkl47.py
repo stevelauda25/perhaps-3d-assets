@@ -1,6 +1,6 @@
 """watch_seiko_snkl47: build the Seiko 5 SNKL47K1 (two-tone, white dial) as a flat-backed front relief, like watch_seiko_snkl50.
 
-Params: spec (config/watches/seiko-snkl47k1.json). Same frame as watch_seiko_snkl50: mm, origin = hand pivot, dial faces +z,
+Params: spec (config/watches/seiko-snkl47k1.json; also seiko-snkl41k1.json, the all-steel version). Same frame as watch_seiko_snkl50: mm, origin = hand pivot, dial faces +z,
 back flat at z = 0, one pose empty `SKO | pose`, watch head depth scaled by pose.depth_scale, bracelet built at final depth with
 the smooth curl. Differences: steel case and bracelet with gold parts (indices, hands, crown, bracelet strips: the spec's
 `material` keys), single gold batons with a ridge (no marker at 3: the black square is printed), a thin raised steel day-date
@@ -20,7 +20,7 @@ from pipeline.steps.watch_speedmaster import Geo, ROOT, rect, rot
 def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
-    coll = bpy.data.collections.new("WATCH | Seiko 5 SNKL47K1 front relief")
+    coll = bpy.data.collections.new("WATCH | %s front relief" % cfg["model"])
     bpy.context.scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d = cfg["dial"]
@@ -126,7 +126,8 @@ def run(params):
         a, b = h["lume_from_to_mm"]
         lw = lambda y: hs["lume_half_width"] * hw * min(1.0, (L - y) / (L - wy)) * (1.0 if y >= wy else 0.75 + 0.25 * y / wy)
         lume = [(lw(y), y) for y in (a, wy, b)] + [(-lw(y), y) for y in (b, wy, a)]
-        add("hand_%s_lume" % name, Geo().prism([rot(x, y, deg) for x, y in lume], z + th, z + th + 0.03), "lume")
+        zl = z + th + (hs["ridge"] if hs.get("lume_over_ridge") else 0.0)  # under the ridge the strip hides inside the blade
+        add("hand_%s_lume" % name, Geo().prism([rot(x, y, deg) for x, y in lume], zl, zl + 0.03), "lume")
     h = t["seconds"]
     L, tail, deg, z = h["length_mm"], h["tail_mm"], h["angle_deg"], hs["z"]["seconds"]
     nw, cw = h["half_width_mm"], h["tail_half_width_mm"]
