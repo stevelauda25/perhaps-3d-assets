@@ -1,0 +1,46 @@
+{
+ "id": "seiko-snk369k1",
+ "output": "outputs/jobs/seiko-snk369k1",
+ "asset_type": "watch",
+ "model": "Seiko 5 Automatic SNK369K1",
+ "baseline": "First build: open-arrow hour hand, red seconds hand, red track kept in the dial map, seven-part bracelet rows with the SUR419P1 curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/seiko-snk369k1/REFERENCE_PLAN.md",
+  "config/watches/seiko-snk369k1.json",
+  "config/watches/seiko-snk369k1-trace.json",
+  "config/presets/watch_kit_white_front_seiko_snk369.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_seiko_snk369",
+   "params": {
+    "spec": "config/watches/seiko-snk369k1.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/seiko-snk369k1/seiko-snk369k1.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_seiko_snk369.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

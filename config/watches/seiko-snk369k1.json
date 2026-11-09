@@ -1,0 +1,214 @@
+{
+ "model": "Seiko 5 Automatic SNK369K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (37 mm case); heights are the SNK607K1/SNK381K1 values (front photo only). Minute numerals, red track, SEIKO letters, 5 shield and print stay in the dial map.",
+ "trace": "config/watches/seiko-snk369k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snk369k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 37.0,
+  "lug_gap": 18.18
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.4,
+    0
+   ],
+   [
+    18.2,
+    0.6
+   ],
+   [
+    18.5,
+    1.6
+   ],
+   [
+    18.5,
+    6.6
+   ],
+   [
+    18.35,
+    7.1
+   ],
+   [
+    15.58,
+    9.6
+   ],
+   [
+    15.28,
+    9.6
+   ],
+   [
+    15.28,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 14.4,
+  "r_out": 15.3,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 15.2,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "z": 8.0,
+  "edge_r": 13.83,
+  "rehaut_r": 14.4,
+  "rehaut_z": 9.0,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.35,
+  "wall": 0.17
+ },
+ "daydate_frame": {
+  "wall": 0.35,
+  "height": 0.15
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  }
+ },
+ "crown": {
+  "radius": 2.25,
+  "flute_depth": 0.25,
+  "teeth": 18,
+  "r_from": 18.2,
+  "r_to": 20.0,
+  "z": 4.1
+ },
+ "lug": {
+  "inner_x": 9.09,
+  "from_y": 8.5,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "from_y": 15.5,
+  "top_z": 4.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 36.5,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_y": 21.125,
+  "bend_radius": 7.0,
+  "bend_note": "Smooth curl like SUR419P1 (Irsyad, 2026-11-06): 7 mm radius from the lug tips (21.1 mm) to about 125 deg (end_y = tip + 2.2 R), links bend with the curve"
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.72,
+    0.78,
+    0.8
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "pale blue-grey lume in the indices and hands, as photographed"
+  },
+  "hand_black": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "black hour and minute hand outlines"
+  },
+  "hand_red": {
+   "color": [
+    0.16,
+    0.03,
+    0.06
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35,
+   "note": "seconds hand and hub cap, sampled from the photo (sRGB 112, 53, 79)"
+  }
+ }
+}
