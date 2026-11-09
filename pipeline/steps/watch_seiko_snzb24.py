@@ -139,8 +139,9 @@ def run(params):
 
     # ---- applied SEIKO and 5 shield: raised gold plates (shapes fitted in the trace) ----
     lg = cfg["logo"]
+    lt = json.loads((ROOT / lg["shapes_trace"]).read_text()) if "shapes_trace" in lg else tr  # trace of the dial-map photo
     for k, hgt in (("logo_seiko", lg["seiko_height"]), ("logo_5_shield", lg["shield_height"])):
-        add(k, plate(tr[k + "_shapes"], d["z"], d["z"] + hgt, P + k), "gold_polished", bevel=lg["bevel"])
+        add(k, plate(lt[k + "_shapes"], d["z"], d["z"] + hgt, P + k), lg.get("material", "gold_polished"), bevel=lg["bevel"])
 
     # ---- hands at the photo's time: gold sword hands with two lume windows; needle seconds with a lume disc on the tail ----
     hs, th, t = cfg["hands"], cfg["hands"]["thickness"], json.loads(json.dumps(tr["hands"]))
