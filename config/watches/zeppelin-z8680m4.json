@@ -1,0 +1,37 @@
+{
+ "model": "Zeppelin 100 Jahre Chronograph Z8680M4",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Same 42 mm 100 Jahre case as Z7680MB2: case, lugs, crown and pushers from its trace (this photo is taken from the left). Heights as Z7680MB2 (listing 11 mm here; kept for the shared case). Dial, flange, telemeter ring, sub-dials and date come from one photo map of the straightened photo. Bracelet as photographed: a solid end piece between the lugs, then Milanese mesh with a photo map tiled along it.",
+ "trace": "config/watches/zeppelin-z8680m4-trace.json",
+ "dial_map": "outputs/watches/zeppelin-z8680m4/dial_photo.jpg",
+ "mesh_map": "outputs/watches/zeppelin-z8680m4/mesh_photo.jpg",
+ "verified_mm": {"diameter": 42.0, "bracelet_width": 21.1},
+ "case": {"profile_rz": [[17.5, 0.0], [20.3, 0.0], [21.0, 0.8], [21.0, 6.4], [20.7, 7.0], [20.1, 7.0]],
+          "note": "(r, z): brushed case flank and the low band outside the bezel (20.1-21 mm in the photo) that carries the crown and pushers"},
+ "bezel": {"profile_rz": [[20.15, 6.9], [20.15, 7.9], [19.9, 8.7], [19.6, 9.0], [19.35, 9.0], [19.35, 7.7], [19.25, 7.7], [19.25, 6.9]],
+           "note": "(r, z): polished sloped bezel ring (19.35-20.1 mm); inner lip covers the dial edge"},
+ "crystal": {"z0": 8.6, "z1": 9.0, "dome": 0.4},
+ "dial": {"z": 7.4, "roughness": 0.4},
+ "hands": {"thickness": 0.15, "z": {"sub": 7.6, "hour": 7.8, "minute": 8.0, "chrono": 8.2}},
+ "crown": {"teeth": 16, "flute_depth": 0.3, "z": 4.0},
+ "pusher": {"z": 4.0},
+ "lug": {"into_case": 1.5, "top_z_at_case": 7.0, "top_z_at_tip": 5.0, "bevel": 0.35},
+ "bracelet": {"z0": 0.6, "z1": 3.8, "bevel": 0.3, "bend_radius": 7.0, "end_link_from_y": 17.0, "gap": 0.15,
+              "mesh_z": [0.8, 3.0], "mesh_bevel": 0.25, "mesh_roughness": 0.3, "mesh_metallic": 1.0,
+              "mesh_note": "metallic photo map: the steel reflects the scene like the case, the photo gives the weave and its dark gaps",
+              "end_note": "solid end piece across the bracelet from under the case to the lug tips (brushed, polished edges); mesh from the lug tips to end_y, photo map repeated every mesh_repeat_mm",
+              "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "hand_white": {"color": [0.82, 0.83, 0.84], "metallic": 0.0, "roughness": 0.3, "note": "white chronograph needle and sub-dial hands as photographed"},
+  "lume": {"color": [0.85, 0.86, 0.84], "metallic": 0.0, "roughness": 0.45},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission; black base colour so the black dial is not hazed in model-viewer"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                    "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines along the bracelet; bevels keep the polished material"}
+ }
+}

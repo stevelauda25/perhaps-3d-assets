@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z8680m4",
+  "output": "outputs/jobs/zeppelin-z8680m4",
+  "asset_type": "watch",
+  "model": "Zeppelin 100 Jahre Chronograph Z8680M4",
+  "baseline": "First build: shared 100 Jahre case from Z7680MB2, green chronograph dial from the straightened 3/4 photo, solid end pieces and Milanese mesh with a tiled photo map, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z8680m4/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z8680m4.json",
+    "config/watches/zeppelin-z8680m4-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z8680m4.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z8680m4",
+      "params": {
+        "spec": "config/watches/zeppelin-z8680m4.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z8680m4/zeppelin-z8680m4.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z8680m4.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
