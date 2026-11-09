@@ -1,0 +1,226 @@
+{
+ "model": "Seiko 5 Automatic SNKE61K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre (hands on it). Plan sizes from the trace of the straightened 3/4 front photo (38 mm case, owner's spec sheet); heights are the house SNK623K1 values (no orthographic side view). All steel: polished case, crown and hands, brushed lugs, end link and bracelet with polished bevels; applied batons with a lume insert. SEIKO, the 5 shield, the printed lume 12 9 6, the print, the minute track and the day-date window stay in the dial map.",
+ "trace": "config/watches/seiko-snke61k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snke61k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0,
+  "bracelet_width": 19.26
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    17.9,
+    0
+   ],
+   [
+    18.7,
+    0.6
+   ],
+   [
+    19.0,
+    1.6
+   ],
+   [
+    19.0,
+    6.6
+   ],
+   [
+    18.85,
+    7.1
+   ],
+   [
+    17.0,
+    9.2
+   ],
+   [
+    16.2,
+    9.6
+   ],
+   [
+    15.38,
+    9.6
+   ],
+   [
+    15.38,
+    7.8
+   ],
+   [
+    0,
+    7.8
+   ]
+  ],
+  "material": "steel_polished",
+  "note": "bezel from the photo: grey inner slope 15.4-16.8 mm, wide polished band sloping to the 19 mm edge"
+ },
+ "gasket": {
+  "r_in": 15.05,
+  "r_out": 15.4,
+  "z0": 8.0,
+  "z1": 9.7
+ },
+ "crystal": {
+  "radius": 15.38,
+  "z0": 9.35,
+  "z1": 9.75
+ },
+ "dial": {
+  "texture_edge_r": 13.781,
+  "z": 8.0,
+  "rehaut_r": 15.05,
+  "rehaut_z": 9.0,
+  "map_half_mm": 15.374,
+  "roughness": 0.35,
+  "note": "navy dial to 13.78 mm, then the grey rehaut slope (both from the photo map)"
+ },
+ "indices": {
+  "height": 0.3,
+  "lume_inset": 0.1,
+  "lume_height": 0.03,
+  "material": "steel_polished"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.45,
+   "minute": 8.7,
+   "seconds": 8.95
+  },
+  "lume_half_width": 0.55,
+  "seconds": {
+   "disc_lume_z": 0.03
+  },
+  "hub": {
+   "cap_height": 0.2
+  },
+  "material": "steel_polished"
+ },
+ "crown": {
+  "radius": 1.7,
+  "flute_depth": 0.22,
+  "teeth": 18,
+  "r_from": 18.75,
+  "r_to": 20.45,
+  "z": 4.1,
+  "material": "steel_polished"
+ },
+ "lug": {
+  "slope_from_y": 17.0,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35,
+  "end_link_from_y": 15.0
+ },
+ "bracelet": {
+  "pitch": 7.0,
+  "z0": 0.6,
+  "z1": 3.8,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_radius": 7.0,
+  "columns": [
+   [
+    0.0,
+    0.477,
+    "steel_brushed"
+   ],
+   [
+    0.477,
+    1.0,
+    "steel_brushed"
+   ]
+  ],
+  "columns_note": "[x0, x1 as a fraction of the half width, material]: end link across all three columns from under the case to the lug tips; outer links from the lug tips, centre links half a row later (first centre joint from the trace)",
+  "bend_note": "Smooth curl (house, from SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R, links bend with the curve",
+  "pitch_note": "photo: 6.4-6.8 mm centre and 7.5-8.1 mm outer on the first rows (they lean away from the camera); 7.0 used for both"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.78,
+    0.78,
+    0.74
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "light grey lume on the batons, hands and seconds disc as photographed"
+  },
+  "seconds_tip": {
+   "color": [
+    0.85,
+    0.35,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "orange-yellow seconds tip as photographed"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ }
+}
