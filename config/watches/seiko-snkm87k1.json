@@ -1,0 +1,201 @@
+{
+ "model": "Seiko 5 Automatic SNKM87K1",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (43 mm case); heights are the SNK369K1 values scaled to the listed 12 mm thickness (x1.09; front and 3/4 photos only). Minute track, numerals, SEIKO, 5 shield, print and the day-date wheel stay in the dial map.",
+ "trace": "config/watches/seiko-snkm87k1-trace.json",
+ "dial_map": "outputs/watches/seiko-snkm87k1/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 43.0,
+  "lug_gap": 20.92
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0,
+    0
+   ],
+   [
+    20.4,
+    0
+   ],
+   [
+    21.2,
+    0.65
+   ],
+   [
+    21.5,
+    1.75
+   ],
+   [
+    21.5,
+    7.2
+   ],
+   [
+    21.35,
+    7.75
+   ],
+   [
+    18.3,
+    10.45
+   ],
+   [
+    18.0,
+    10.45
+   ],
+   [
+    18.0,
+    8.5
+   ],
+   [
+    0,
+    8.5
+   ]
+  ],
+  "material": "steel_polished"
+ },
+ "gasket": {
+  "r_in": 17.95,
+  "r_out": 18.05,
+  "z0": 9.8,
+  "z1": 10.45
+ },
+ "crystal": {
+  "radius": 18.0,
+  "z0": 10.15,
+  "z1": 10.6
+ },
+ "dial": {
+  "z": 8.7,
+  "chapter_step_r": 13.75,
+  "chapter_step_z": 8.95,
+  "chapter_top_z": 9.9,
+  "roughness": 0.35,
+  "note": "flat patterned centre to the traced edge, then a sloped chapter ring up to the crystal"
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.15,
+  "block_z0": 8.95,
+  "block_height": 0.35,
+  "block_wall": 0.15
+ },
+ "daydate_frame": {
+  "wall": 0.3,
+  "height": 0.15
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.08,
+  "z": {
+   "hour": 9.15,
+   "minute": 9.4,
+   "seconds": 9.65
+  },
+  "lume_from": 0.22,
+  "lume_to": 0.88,
+  "lume_width": 0.6
+ },
+ "crown": {
+  "radius": 2.85,
+  "flute_depth": 0.25,
+  "teeth": 22,
+  "r_from": 21.0,
+  "r_to": 24.6,
+  "z": 4.4
+ },
+ "lug": {
+  "inner_x": 10.46,
+  "from_y": 15.0,
+  "top_z_at_case": 7.6,
+  "top_z_at_tip": 5.5,
+  "bevel": 0.35
+ },
+ "end_link": {
+  "from_y": 18.0,
+  "top_z": 4.8,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 40.36,
+  "z0": 0.65,
+  "z1": 4.1,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.2,
+   0.65
+  ],
+  "bend_radius": 7.0,
+  "bend_note": "Smooth curl like SUR419P1 (Irsyad, 2026-11-06): 7 mm radius from the lug tips (24.96 mm) to about 125 deg (end_y = tip + 2.2 R)"
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.88,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "white lume blocks at the hours"
+  }
+ }
+}
