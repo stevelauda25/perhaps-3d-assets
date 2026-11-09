@@ -1,0 +1,27 @@
+{
+ "model": "Zeppelin Mediterranee 1921 Z96645",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the trace of the straightened front photo (40 mm case, listing; strap between the lugs 19.7 mm measured; listing: 12 mm thick). Heights before the house depth scale. Dial print, applied numerals, minute ring and the day-date window come from the dial map; the strap leather from the strap map (12 o'clock strap of the photo, both sides).",
+ "trace": "config/watches/zeppelin-z96645-trace.json",
+ "dial_map": "outputs/watches/zeppelin-z96645/dial_photo.jpg",
+ "strap_map": "outputs/watches/zeppelin-z96645/strap_photo.jpg",
+ "photo_roughness": {"dial": 0.35, "strap_leather": 0.55},
+ "verified_mm": {"diameter": 40.0, "strap_width": 19.72},
+ "case": {"profile": [[17.0, 0.0], [19.4, 0.0], [20.0, 0.8], [20.0, 5.0], [19.9, 6.2], [19.6, 7.3], [19.1, 8.1], [18.6, 8.55], [18.25, 8.6], [18.25, 7.6], [18.0, 7.6]],
+          "note": "(r, z): polished flank rounding into the wide domed polished bezel (18.25-20 mm in the photo); inner lip over the minute ring"},
+ "lug": {"gap": 0.1, "groove": 0.3, "rail_short": 0.4, "into_case": 1.5, "lugs": [6.2, 4.6], "lug_rails": [5.0, 3.8], "bevel": 0.4,
+         "note": "stepped lugs: outer polished part (top z at the case, at the tip) and a lower inner rail beside the strap, groove between (photo)"},
+ "crystal": {"z0": 8.15, "z1": 8.55, "dome": 0.8},
+ "dial": {"z": 7.0, "flange_z": 7.6},
+ "hands": {"thickness": 0.15, "z": {"hour": 7.3, "minute": 7.5, "seconds": 7.7},
+           "hub_steps": [[1.0, 0.35], [0.75, 0.6], [0.5, 0.8], [0.3, 1.0]]},
+ "crown": {"teeth": 16, "flute_depth": 0.3, "z": 4.0},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "edge_inset": 0.05, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 37.65,
+           "note": "House curl (SUR419P1): bend at the lug tips (22.25 mm), 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "hand_black": {"color": [0.012, 0.012, 0.014], "metallic": 0.0, "roughness": 0.25, "note": "black hands, counterweight and hub (photo)"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour keeps the dial from hazing"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}

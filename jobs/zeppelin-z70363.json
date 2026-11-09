@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z70363",
+  "output": "outputs/jobs/zeppelin-z70363",
+  "asset_type": "watch",
+  "model": "Zeppelin LZ129 Hindenburg Z70363 (7036-3)",
+  "baseline": "First build: round polished case, blue moon-phase dial and blue leather strap from the straight front photo at 40 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z70363/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z70363.json",
+    "config/watches/zeppelin-z70363-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z70363.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z70363",
+      "params": {
+        "spec": "config/watches/zeppelin-z70363.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z70363/zeppelin-z70363.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z70363.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

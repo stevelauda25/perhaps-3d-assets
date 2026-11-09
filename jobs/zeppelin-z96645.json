@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z96645",
+  "output": "outputs/jobs/zeppelin-z96645",
+  "asset_type": "watch",
+  "model": "Zeppelin Mediterranee 1921 Z96645",
+  "baseline": "First build: round polished case with stepped lugs, cream day-date dial and brown leather strap from the straightened front photo at 40 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z96645/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z96645.json",
+    "config/watches/zeppelin-z96645-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z96645.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z96645",
+      "params": {
+        "spec": "config/watches/zeppelin-z96645.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z96645/zeppelin-z96645.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z96645.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
