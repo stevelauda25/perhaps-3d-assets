@@ -1,0 +1,46 @@
+{
+  "id": "hamilton-h32515135",
+  "output": "outputs/jobs/hamilton-h32515135",
+  "asset_type": "watch",
+  "model": "Hamilton Jazzmaster Viewmatic Auto H32515135",
+  "baseline": "Round 1, house method on Hamilton's official 2000 x 2000 straight front render",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/hamilton-h32515135/REFERENCE_PLAN.md",
+    "config/watches/hamilton-h32515135.json",
+    "config/watches/hamilton-h32515135-trace.json",
+    "config/presets/watch_kit_white_front_hamilton_h32515135.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_hamilton_scuba_pioneer",
+      "params": {
+        "spec": "config/watches/hamilton-h32515135.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/hamilton-h32515135/hamilton-h32515135.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_hamilton_h32515135.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

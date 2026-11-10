@@ -1,0 +1,205 @@
+{
+ "model": "Hamilton Khaki Field King Auto H64455523",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render (40 mm case silhouette, listing; lug gap 20.04 mm measured against 20 mm). Heights before the house depth scale (11.15 mm thick listing). House method: modelled brushed case with lugs and crown guards (one body from the traced outline), wide polished bezel, crown and hands with lume; photo maps only for the dial print (numerals, day-date, track) and the leather strap.",
+ "trace": "config/watches/hamilton-h64455523-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h64455523/dial.jpg",
+   "roughness": 0.35
+  },
+  "strap": {
+   "image": "outputs/watches/hamilton-h64455523/strap.jpg",
+   "roughness": 0.6
+  }
+ },
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_width": 20.0
+ },
+ "case": {
+  "top_z": 6.6,
+  "notch_radius": 20.0,
+  "note": "one brushed body: case, lugs and crown guards from the traced head outline"
+ },
+ "lug": {
+  "slope_from_y": 16.5,
+  "top_z_at_case": 6.6,
+  "top_z_at_tip": 4.8,
+  "bevel": 0.35
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    16.85,
+    6.4
+   ],
+   [
+    19.44,
+    6.4
+   ],
+   [
+    19.44,
+    7.0
+   ],
+   [
+    19.15,
+    7.45
+   ],
+   [
+    18.1,
+    7.9
+   ],
+   [
+    17.0,
+    8.15
+   ],
+   [
+    16.85,
+    8.05
+   ],
+   [
+    16.85,
+    6.4
+   ]
+  ],
+  "note": "wide smooth polished bezel sloping up to the crystal"
+ },
+ "crystal": {
+  "z0": 7.85,
+  "z1": 8.1
+ },
+ "dial": {
+  "z": 6.4,
+  "note": "flat beige dial, everything printed; black rehaut cone to the crystal"
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 6.7,
+   "minute": 6.92,
+   "seconds": 7.14
+  },
+  "materials": {
+   "metal": "steel_polished",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03
+  },
+  "polished_edge": [],
+  "note": "polished hour and minute hands with lume and needle tips, polished seconds hand with an arrow tip",
+  "hub_material": "steel_polished"
+ },
+ "crown": {
+  "z": 3.6,
+  "teeth": 12,
+  "flute_depth": 0.25,
+  "end": 0.6
+ },
+ "strap": {
+  "half_width": 9.85,
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "start_y": 14.0,
+  "uv_inset": 0.02,
+  "note": "brown leather with white stitching, 19.7 mm (render), house curl from the lug tips; each side samples the render's straight strap"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "black rehaut ring"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.8,
+    0.87,
+    0.78
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "pale green lume (render)"
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Brushed steel case with crown guards, beige day-date dial, brown leather strap. Front relief GLB.",
+  "specs": [
+   [
+    "40 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "48.9 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Built on Hamilton's official 2000 px front render. House method: case, lugs, crown guards, bezel, crown and hands are modelled; the photo is used only for the dial print (numerals, day and date) and the leather strap.",
+   "The strap curls under at both ends, like the other tracker watches. The buckle is left out."
+  ]
+ }
+}

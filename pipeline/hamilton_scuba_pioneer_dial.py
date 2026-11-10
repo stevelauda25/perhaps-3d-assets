@@ -27,6 +27,10 @@ SHADOWS_MM = ((0.15, -0.15), (0.3, -0.3))  # light from the upper left
 CFG = {
     # period bands: [r0 mm, r1 mm, deg]; the minute track repeats every hour (30 deg) between the indices
     "h82395331": {"period": [[12.6, 15.2, 30.0]], "strap_pad_px": 30, "near_mm": 0.3, "bright": 80, "print_free_mm": 12.6},
+    "h32515135": {"period": [[15.2, 17.1, 30.0]], "near_mm": 0.12, "margin_mm": 0.18, "shadows_mm": [[0.1, -0.1]], "bright": 150,
+                  "print_free_mm": 9.5, "rim_key": "bezel_in"},
+    "h64455523": {"period": [], "strap_pad_px": 20, "near_mm": 0.15, "margin_mm": 0.25, "shadows_mm": [[0.15, -0.15]], "bright": 225,
+                  "print_free_mm": 8.0, "rim_key": "bezel_in"},
     "h76255810": {"period": [[12.6, 15.15, 30.0]], "strap_pad_px": 20, "near_mm": 0.12, "margin_mm": 0.08, "shadows_mm": [[0.08, -0.08]], "dark_hands": True, "dark": 140, "print_free_mm": 9.8},
 }
 
@@ -41,7 +45,10 @@ def build(sku, review=None):
     c = CFG[sku]
     S, (px0, py0), pr = t["scale_px_per_mm"], t["origin_px"], t["photo_rot_deg"]
     P = lambda x, y: (lambda q: (px0 + q[0] * S, py0 - q[1] * S))(rot(x, y, pr))
-    img = cv2.imread(str(ROOT / t["source"]))
+    img = cv2.imread(str(ROOT / t["source"]), cv2.IMREAD_UNCHANGED)
+    if img.shape[2] == 4:  # official renders: transparent background -> white
+        a = img[..., 3:4] / 255.0
+        img = (img[..., :3] * a + 255 * (1 - a)).astype(np.uint8)
     out = ROOT / ("outputs/watches/hamilton-%s" % sku)
     out.mkdir(parents=True, exist_ok=True)
 
@@ -77,7 +84,7 @@ def build(sku, review=None):
             mask = np.where(sel, 0, mask)
 
     # ---- dial map: square to the bezel rim, native resolution ----
-    half = int(math.ceil(t["rings_mm"]["rim_in"] * S)) + 12
+    half = int(math.ceil(t["rings_mm"][c.get("rim_key", "rim_in")] * S)) + 12
     crop = clean[py0 - half:py0 + half, px0 - half:px0 + half]
     blur = cv2.GaussianBlur(crop, (0, 0), SHARPEN[0])
     crop = cv2.addWeighted(crop, 1 + SHARPEN[1], blur, -SHARPEN[1], 0)
@@ -85,6 +92,8 @@ def build(sku, review=None):
     meta = {"source": t["source"], "crop_px": [px0 - half, py0 - half], "scale": 1.0, "size_px": [2 * half, 2 * half]}
     (out / "dial.json").write_text(json.dumps(meta, indent=1) + "\n")
 
+    if "strap_mm" not in t:  # bracelet watch: no strap map
+        return meta, None
     # ---- strap map: the strap's columns, all rows ----
     xs = [P(x, 0)[0] for s in t["strap_mm"].values() for x in s["x"]]
     x0, x1 = int(min(xs)) - c["strap_pad_px"], int(max(xs)) + c["strap_pad_px"]

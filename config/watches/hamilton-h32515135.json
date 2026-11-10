@@ -1,0 +1,228 @@
+{
+ "model": "Hamilton Jazzmaster Viewmatic Auto H32515135",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render (40 mm case silhouette, listing; bracelet 20.26 mm measured against 20 mm lug width). Heights before the house depth scale (10.8 mm thick listing). House method: modelled polished case with lugs and crown-side flank (one body from the traced outline), two-step polished bezel, crown, applied faceted indices and numerals 12, 9, 6, hands and the five-column bracelet; the photo map serves only the dial print (waffle centre, minute track, logo, date).",
+ "trace": "config/watches/hamilton-h32515135-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h32515135/dial.jpg",
+   "roughness": 0.3
+  }
+ },
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_width": 20.0,
+  "strap_width": 20.0
+ },
+ "case": {
+  "top_z": 6.4,
+  "notch_radius": 20.0,
+  "material": "steel_polished",
+  "note": "one polished body: case, lugs and the crown-side flank from the traced head outline"
+ },
+ "lug": {
+  "slope_from_y": 17.0,
+  "top_z_at_case": 6.4,
+  "top_z_at_tip": 4.8,
+  "bevel": 0.35
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    17.49,
+    6.2
+   ],
+   [
+    19.36,
+    6.2
+   ],
+   [
+    19.36,
+    6.9
+   ],
+   [
+    19.05,
+    7.35
+   ],
+   [
+    18.3,
+    7.6
+   ],
+   [
+    18.24,
+    7.45
+   ],
+   [
+    17.75,
+    7.75
+   ],
+   [
+    17.49,
+    7.7
+   ],
+   [
+    17.49,
+    6.2
+   ]
+  ],
+  "note": "smooth polished bezel: outer slope to a step at 18.24 mm, inner ring to the crystal (render rings)"
+ },
+ "crystal": {
+  "z0": 7.45,
+  "z1": 7.7
+ },
+ "dial": {
+  "z": 6.0,
+  "note": "flat black dial: waffle centre, minute track, logo and the date window printed; black rehaut cone to the crystal"
+ },
+ "indices": {
+  "height": 0.35,
+  "note": "applied polished kite indices (traced) and numerals 12, 9, 6 (traced with their holes)"
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 6.4,
+   "minute": 6.62,
+   "seconds": 6.84
+  },
+  "materials": {
+   "metal": "steel_polished",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03
+  },
+  "polished_edge": [],
+  "note": "polished leaf-sword hour and minute hands with lume, polished seconds needle with a short counterweight",
+  "hub_material": "steel_polished"
+ },
+ "crown": {
+  "z": 3.6,
+  "teeth": 14,
+  "flute_depth": 0.22,
+  "end": 0.6
+ },
+ "end_link": {
+  "from_y": 14.0,
+  "top_z": 4.2,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "z0": 0.6,
+  "z1": 3.6,
+  "centre_raise": 0.2,
+  "gap": 0.15,
+  "pitch": 7.0,
+  "bevel": 0.3,
+  "backing_z": [
+   0.3,
+   0.7
+  ],
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "five columns: polished outer and centre links (joints at 24.3 mm + 7 mm pitch), brushed middle links half a row nearer the case (21.8 mm); house curl from the first outer joint"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "black rehaut ring"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.92,
+    0.92
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Polished steel case, black waffle dial, applied indices and numerals, steel bracelet. Front relief GLB.",
+  "specs": [
+   [
+    "40 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "49.6 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Built on Hamilton's official 2000 px front render. House method: case, lugs, bezel, crown, applied indices, numerals 12, 9 and 6, hands and the bracelet are modelled; the photo is used only for the dial print (waffle centre, minute track, logo, date).",
+   "The dial print in the render is turned about 1 degree; the model is straight.",
+   "The bracelet curls under at both ends, like the other tracker watches. The clasp is left out."
+  ]
+ }
+}
