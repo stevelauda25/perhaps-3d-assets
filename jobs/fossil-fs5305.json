@@ -1,0 +1,46 @@
+{
+  "id": "fossil-fs5305",
+  "output": "outputs/jobs/fossil-fs5305",
+  "asset_type": "watch",
+  "model": "Fossil The Minimalist FS5305",
+  "baseline": "First build: thin black IP round case and plain lugs, black dial photo map, black hands with beige lume, orange seconds and light brown leather strap from the straight front photo at 44 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/fossil-fs5305/REFERENCE_PLAN.md",
+    "config/watches/fossil-fs5305.json",
+    "config/watches/fossil-fs5305-trace.json",
+    "config/presets/watch_kit_white_front_fossil_fs5305.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_fossil_fs5305",
+      "params": {
+        "spec": "config/watches/fossil-fs5305.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/fossil-fs5305/fossil-fs5305.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_fossil_fs5305.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

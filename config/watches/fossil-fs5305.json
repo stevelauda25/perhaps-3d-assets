@@ -1,0 +1,167 @@
+{
+ "model": "Fossil The Minimalist FS5305",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (44 mm case, listing; strap 21.16 mm measured against 22 mm listed). Heights before the house depth scale (8 mm thick listing). Dial print, applied indices, logo, minute track and the strap leather come from one photo map.",
+ "trace": "config/watches/fossil-fs5305-trace.json",
+ "photo_map": "outputs/watches/fossil-fs5305/dial_photo.jpg",
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
+ },
+ "verified_mm": {
+  "diameter": 44.0,
+  "strap_width": 21.16
+ },
+ "case": {
+  "profile": [
+   [
+    18.0,
+    0.0
+   ],
+   [
+    21.3,
+    0.0
+   ],
+   [
+    22.0,
+    0.7
+   ],
+   [
+    22.0,
+    4.4
+   ],
+   [
+    21.8,
+    5.5
+   ],
+   [
+    21.3,
+    6.3
+   ],
+   [
+    20.4,
+    6.9
+   ],
+   [
+    19.4,
+    7.2
+   ],
+   [
+    18.62,
+    7.05
+   ],
+   [
+    18.62,
+    6.2
+   ],
+   [
+    18.3,
+    6.2
+   ]
+  ],
+  "note": "(r, z): black IP case, short flank rounding into the wide sloped polished bezel (18.62-22 mm in the photo); inner lip holds the crystal; 8 mm thick listing"
+ },
+ "lug": {
+  "gap": 0.1,
+  "into_case": 1.5,
+  "top_z_at_case": 5.4,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.4,
+  "note": "plain black lugs with a sloped top (front photo and 3/4 view)"
+ },
+ "crystal": {
+  "z0": 6.2,
+  "z1": 6.6,
+  "dome": 0.15
+ },
+ "dial": {
+  "z": 5.2,
+  "track_z": 5.5,
+  "note": "flat dial to the minute track's inner edge, the track a shallow cone up to the bezel lip"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume_raise": 0.08,
+  "z": {
+   "hour": 5.35,
+   "minute": 5.55,
+   "seconds": 5.8
+  },
+  "note": "black frames with a raised beige lume insert; orange seconds (photo; the listing says red)"
+ },
+ "crown": {
+  "flute_depth": 0.18,
+  "neck_radius": 1.2,
+  "z": 3.0,
+  "note": "small knurled black crown at 3"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "under_case": 0.8,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "end_y": 41.28,
+  "note": "House curl (SUR419P1): bend at the lug tips (25.875 mm), 7 mm radius, end_y = tip + 2.2 x radius",
+  "uv_edge_inset": 0.3,
+  "uv_end_inset": 1.0
+ },
+ "materials": {
+  "black_polished": {
+   "color": [
+    0.1,
+    0.1,
+    0.105
+   ],
+   "metallic": 1.0,
+   "roughness": 0.12,
+   "note": "black IP steel (gunmetal reflections in the photo): case, bezel, lugs, crown"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "hand_black": {
+   "color": [
+    0.06,
+    0.06,
+    0.065
+   ],
+   "metallic": 1.0,
+   "roughness": 0.15,
+   "note": "black hand frames and the hub collar"
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.78,
+    0.55
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "beige lume (photo)"
+  },
+  "hand_orange": {
+   "color": [
+    0.95,
+    0.15,
+    0.01
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3,
+   "note": "seconds hand and hub (photo)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ }
+}

@@ -1,0 +1,110 @@
+{
+  "name": "WATCH_KIT_WHITE_FOSSIL_FS5305",
+  "note": "White kit with a straight-on orthographic camera matching references/fossil-fs5305/front_2606x2606.png resized to 2000 px (hand pivot (1280, 1304)). Comparison only, not the presentation look.",
+  "ground": false,
+  "world": {
+    "top": [
+      1,
+      1,
+      1
+    ],
+    "bottom": [
+      1,
+      1,
+      1
+    ],
+    "gamma": 1.0,
+    "env_top": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "env_bottom": [
+      0.35,
+      0.35,
+      0.37
+    ],
+    "env_strength": 1.0
+  },
+  "cards": [
+    {
+      "name": "top soft",
+      "size": [
+        0.9,
+        0.9
+      ],
+      "az_deg": 0,
+      "el_deg": 20,
+      "distance_m": 0.7,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "strength": [
+        0.9,
+        1.6
+      ],
+      "feather": 0.4
+    },
+    {
+      "name": "key left",
+      "size": [
+        0.7,
+        0.9
+      ],
+      "az_deg": -70,
+      "el_deg": 30,
+      "distance_m": 0.6,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "strength": [
+        0.2,
+        5.0
+      ],
+      "feather": 0.3
+    },
+    {
+      "name": "fill right",
+      "size": [
+        0.6,
+        0.8
+      ],
+      "az_deg": 70,
+      "el_deg": 20,
+      "distance_m": 0.6,
+      "tint": [
+        1,
+        1,
+        1
+      ],
+      "strength": [
+        0.2,
+        3.0
+      ],
+      "feather": 0.3
+    }
+  ],
+  "flags": [],
+  "cameras": {
+    "front_ortho": {
+      "ortho": {
+        "scale_px_per_mm": 24.7366,
+        "center_px": [
+          982.35,
+          1000.77
+        ],
+        "size": 2000
+      }
+    }
+  },
+  "color_management": {
+    "view_transform": "Standard",
+    "exposure": 0.0
+  },
+  "post": {},
+  "feather": 0.28
+}
