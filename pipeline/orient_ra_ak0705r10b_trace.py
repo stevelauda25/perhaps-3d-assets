@@ -8,7 +8,7 @@ case centre (camera a little low, domed crystal): the model is centred on the pi
 mm, x right, y toward 12, origin = hand pivot. Hands, sub-dial hands, rings and lug tips: MANUAL_PX from gridded crops.
 Applied numerals, bars and the ORIENT letters: dark (or white) blobs of the photo, the hands cut out (they cover them).
 trace() takes another photo's MANUAL_PX (RA-AK0704N10B, same case): optional keys case_circle (fixed [cx, cy, R] px), rings_centre
-(px the dial rings are measured about, default the case centre), numeral_bright ([kernel, top-hat above, S below]: silver parts), numeral_min_area, exclude_circles
+(px the dial rings are measured about, default the case centre), numeral_bright ([kernel, top-hat above, S below]: silver parts), numeral_min_area, numeral_rect (batons as rectangles), numeral_colour ([S above, V above]: coloured parts on a grey dial), numeral_close (px), numeral_hull, exclude_circles
 ([x, y, r] px: sub-dial print) and lugs_from (trace json whose lug_mean is reused instead of this photo's lugs).
 """
 import json
@@ -171,15 +171,34 @@ def trace(path=FRONT, overlay=None, M=MANUAL_PX, case_mm=CASE_MM, artefacts=ARTE
     ann[dy0:dy1, dx0:dx1] = False
     for x, y, r in M.get("exclude_circles", []):
         ann &= np.hypot(xx - x, yy - y) > r
-    if "numeral_bright" in M:  # silver parts on a dial lit unevenly: brighter than the dial round them (top-hat)
+    if "numeral_colour" in M:  # rose gold on a grey dial: saturation above the dial's
+        smin, vmin = M["numeral_colour"]
+        dark = ((hsv[..., 1] > smin) & (hsv[..., 2] > vmin) & ann).astype(np.uint8)
+    elif "numeral_bright" in M:  # silver parts on a dial lit unevenly: brighter than the dial round them (top-hat)
         k, v, sat = M["numeral_bright"]
         top = cv2.morphologyEx(g, cv2.MORPH_TOPHAT, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
         dark = ((top > v) & (hsv[..., 1] < sat) & ann).astype(np.uint8)
     else:
         dark = ((hsv[..., 2] < M["numeral_dark"]) & ann).astype(np.uint8)
     dark = cv2.morphologyEx(dark, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+    if M.get("numeral_close"):  # faceted batons: the shaded facet joined to the lit one
+        dark = cv2.morphologyEx(dark, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (M["numeral_close"],) * 2))
     num = cv2.dilate(dark, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * (rim + 1) + 1,) * 2)) & (1 - hmask)
     out["numerals"] = blobs(num, M.get("numeral_min_area", 150), S, mm)
+    if M.get("numeral_hull"):  # convex batons: the hull of each outline, not its ragged edge
+        for sh in out["numerals"]:
+            h = cv2.convexHull(np.float32(sh["outer"]))[:, 0]
+            if cv2.contourArea(h, oriented=True) > 0:  # same winding as blobs()
+                h = h[::-1]
+            sh["outer"], sh["holes"] = [[round(float(x), 3), round(float(y), 3)] for x, y in h], []
+    if M.get("numeral_rect"):  # straight batons: the smallest rectangle round each outline, not its ragged edge
+        rects = []
+        for sh in out["numerals"]:
+            box = cv2.boxPoints(cv2.minAreaRect(np.float32(sh["outer"])))
+            if cv2.contourArea(np.float32(box), oriented=True) > 0:  # same winding as blobs() (ccw with y up)
+                box = box[::-1]
+            rects.append({"outer": [[round(float(x), 3), round(float(y), 3)] for x, y in box], "holes": []})
+        out["numerals"] = rects
     (bx0, by0), (bx1, by1) = M["logo_box"]
     logo = np.zeros_like(num)
     logo[by0:by1, bx0:bx1] = (g[by0:by1, bx0:bx1] > M["logo_white"]) & (hsv[by0:by1, bx0:bx1, 1] < 90)

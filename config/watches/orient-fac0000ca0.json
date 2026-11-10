@@ -1,0 +1,187 @@
+{
+ "model": "Orient FAC0000CA0",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the WatchNation front photo (40.5 mm case, Orient USA; strap 20.5 / 20.4 mm measured against 21 mm). Heights before the house depth scale (11.8 mm thick listing, domed crystal; side photo from Ocarat for the dome). House method: modelled polished steel case, bezel, lugs and crown, polished steel hands and batons; the photo map serves only the dial print, the ORIENT letters and the black leather strap.",
+ "trace": "config/watches/orient-fac0000ca0-trace.json",
+ "photo_map": "outputs/watches/orient-fac0000ca0/photo.jpg",
+ "verified_mm": {
+  "diameter": 40.5,
+  "strap_width": 21.0,
+  "photo_case_diameter": 40.5
+ },
+ "case": {
+  "radius": 20.25,
+  "step_deg": 2.0,
+  "rings": [
+   [
+    "case",
+    -0.45,
+    0.0
+   ],
+   [
+    "case",
+    0.0,
+    0.45
+   ],
+   [
+    "case",
+    0.0,
+    4.9
+   ],
+   [
+    "case",
+    -0.15,
+    5.6
+   ],
+   [
+    "case",
+    -0.55,
+    6.0
+   ],
+   [
+    "crystal",
+    0.35,
+    7.5
+   ],
+   [
+    "crystal",
+    0.0,
+    7.6
+   ],
+   [
+    "crystal",
+    0.0,
+    7.2
+   ],
+   [
+    "crystal",
+    -0.3,
+    7.2
+   ]
+  ],
+  "note": "[kind, offset, z]: round rings about the pivot, 'case' = offset from the 40.5 mm case radius, 'crystal' = offset from the crystal opening (18.21 mm radius, inner edge of the polished bezel in the photo). Flank, rounded shoulder, polished bezel rising inward to the crystal seat, inner lip"
+ },
+ "lug": {
+  "into_case": 1.5,
+  "slope_from_y": 18.0,
+  "top_z_at_case": 5.6,
+  "top_z_at_tip": 4.2,
+  "bevel": 0.4,
+  "note": "one lug, mirrored to all four: tip, inner edge and outer offset by depth below the tip from the trace (mean of the four photo lugs); top slopes down to the tip"
+ },
+ "rehaut": {
+  "z0": 6.0,
+  "z1": 7.2,
+  "note": "polished ring from the dial edge (16.85 mm) up to the crystal seat: the bright band inside the bezel in the photo"
+ },
+ "crystal": {
+  "z0": 7.6,
+  "z1": 8.6,
+  "dome": 3.0,
+  "note": "high domed crystal (Bambino): straight wall to 8.6 mm, dome to 11.6 mm at the centre (11.8 mm listed thickness)"
+ },
+ "dial": {
+  "z": 6.0,
+  "note": "flat dial to the dial edge; minute track, sub-dials, date and print in the photo map"
+ },
+ "applied": {
+  "height": 0.3,
+  "bevel": 0.05,
+  "logo_height": 0.12,
+  "material": "steel_polished",
+  "note": "batons: polished steel plates from the photo outlines; ORIENT letters: raised plates with the photo on them"
+ },
+ "hands": {
+  "thickness": 0.18,
+  "edge_fraction": 0.35,
+  "z": {
+   "hour": 6.5,
+   "minute": 6.8,
+   "seconds": 7.1
+  },
+  "hub_height": 0.25,
+  "hub_radius": 0.9,
+  "material": {
+   "hour": "steel_polished",
+   "minute": "steel_polished",
+   "hub": "steel_polished",
+   "seconds": "steel_polished"
+  },
+  "note": "rectangular (Bauhaus) hour and minute with square ends, seconds needle with a straight tail, ridge on the tip-tail axis: polished steel (photo)"
+ },
+ "crown": {
+  "radius": 2.35,
+  "gap": 0.2,
+  "length": 2.6,
+  "teeth": 20,
+  "z": 2.8,
+  "flute_depth": 0.18,
+  "neck_fraction": 0.6,
+  "note": "fluted crown on the 3 o'clock axis: 4.7 mm across, 2.6 mm from the case flank (photo)"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "uv_inset": 0.02,
+  "start_y": 15.0,
+  "photo_past_tip": 8.0,
+  "note": "21 mm smooth black leather, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case. UVs from the photo's straight strap: the case edge on the centre line (trace strap_mm case_y) to photo_past_tip past the lug tip, folded back and forth"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: case, bezel, rehaut, lugs, crown, hands and batons"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Bambino Version 3: polished steel, grey sunburst dial, silver batons and rectangular hands, date at 3, high domed crystal, black leather strap. Front relief GLB.",
+  "specs": [
+   [
+    "40.5 mm",
+    "Case diameter"
+   ],
+   [
+    "21 mm",
+    "Strap width"
+   ],
+   [
+    "46.8 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Round 1, house method: case, bezel, lugs and crown are modelled in the house polished steel; hands and batons are modelled polished steel; the photo is used only for the dial print, the ORIENT letters and the leather strap.",
+   "Front photo from a retailer (straight-on, 2000 px). The glare arc of the domed crystal across the top of the dial is part of the photo and stays on the dial print.",
+   "The buckle is left out. The strap curls under at both ends, like the other tracker watches."
+  ]
+ }
+}

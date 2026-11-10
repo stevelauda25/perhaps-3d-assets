@@ -140,6 +140,13 @@ def run(params):
             rr, rc = h["tail_round_mm"], tail[-1][0]
             tail = tail[:-1] + [(rc - rr * math.sin(a), rr * math.cos(a)) for a in [i * math.pi / 16 for i in range(9)]]
         st = sorted(tail + [tuple(s) for s in h["stations_mm"]] + [(h["length_mm"], 0.0)])
+        tipm = hs.get("tip_material", {}).get(name)  # FAC08003A0: red end on the seconds hand
+        if tipm:
+            r0 = tipm["from_mm"]
+            w0 = next(wa + (wb - wa) * (r0 - a) / (b - a) for (a, wa), (b, wb) in zip(st, st[1:]) if a <= r0 <= b)
+            add("hand_%s_tip" % name, ridge(Geo(), [(r0, w0)] + [q for q in st if q[0] > r0], hs["z"][name], th, ef, h["angle_deg"]),
+                tipm["material"], bevel=0.02)
+            st = [q for q in st if q[0] < r0] + [(r0, w0)]
         add("hand_" + name, ridge(Geo(), st, hs["z"][name], th, ef, h["angle_deg"]), hs["material"][name], bevel=0.02)
     for name in [n for n in ("sub_day", "sub_h24") if n in tr["hands"]]:  # RA-AC0E04L10B has none
         h, z = tr["hands"][name], hs["z"][name]

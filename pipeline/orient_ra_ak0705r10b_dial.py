@@ -79,13 +79,21 @@ def polar_fill(img, mask, centre, r_max, smooth_px=0):
     return np.clip(soft * back + (1 - soft) * img, 0, 255).astype(np.uint8)
 
 
-def build(out=OUT, review=None, trace=TRACE, spec=SPEC, margins=HAND_MARGIN_MM, shadows=SHADOWS_MM):
-    """trace, spec, margins, shadows: another photo's files and hand zones (RA-AK0704N10B)."""
+def build(out=OUT, review=None, trace=TRACE, spec=SPEC, margins=HAND_MARGIN_MM, shadows=SHADOWS_MM, fill_numerals=False):
+    """trace, spec, margins, shadows: another photo's files and hand zones (RA-AK0704N10B). fill_numerals: the applied parts
+    are filled too (the modelled plates cover them), so a bright baton beside a hand is not smeared into the hand's gap."""
     t = json.loads(trace.read_text())
     st = json.loads(spec.read_text())["strap"]
     S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
     img = cv2.imread(str(ROOT / t["source"]))
     mask = hand_mask(t, img.shape[:2], margins, shadows)
+    if fill_numerals:
+        num = np.zeros_like(mask)
+        for sh in t["numerals"]:
+            cv2.fillPoly(num, [np.round([(px0 + x * S, py0 - y * S) for x, y in sh["outer"]]).astype(np.int32)], 1)
+        num = cv2.dilate(num, np.ones((9, 9), np.uint8))  # their soft edges too
+        cv2.circle(num, (int(px0), int(py0)), int(t["dial_edge_mm"] * S) + 400, 0, 800)  # nothing past the dial edge: the fill stops there
+        mask |= num
     mask = cv2.dilate(mask, np.ones((3, 3), np.uint8))
     clean = polar_fill(img, mask, (float(px0), float(py0)), t["dial_edge_mm"] * S)
     keep = {k: t["strap_mm"][k]["tip_y"] + st["bend_radius"] + MARGIN_MM for k in ("top", "bottom")}
