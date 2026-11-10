@@ -1,31 +1,16 @@
 {
  "model": "Orient Star RE-AT0007N00B",
- "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the front photo (39.3 mm case, listing; strap 19.5 / 20.5 mm measured at the slanted top / bottom against 20 mm). Heights before the house depth scale (12.3 mm thick listing). The front photo is projected from the front on every part; the model only adds the side shape.",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the front photo (39.3 mm case, listing; strap 19.5 / 20.5 mm measured at the slanted top / bottom against 20 mm). Heights before the house depth scale (12.3 mm thick listing). House method: modelled steel case, bezel, lugs, crown and rose-gold hands; the photo map serves only the dial print and the leather strap.",
  "trace": "config/watches/orient-re-at0007n00b-trace.json",
  "photo_map": "outputs/watches/orient-re-at0007n00b/photo.jpg",
- "photo": {
-  "steel_photo": {
-   "roughness": 0.6,
-   "specular": 0.0,
-   "emission": 0.27
-  },
-  "dial_photo": {
-   "roughness": 0.35,
-   "specular": 0.0,
-   "emission": 0.34
-  },
-  "strap_photo": {
-   "roughness": 0.6,
-   "specular": 0.0,
-   "emission": 0.3
-  }
- },
  "verified_mm": {
   "diameter": 39.3,
-  "strap_width": 20.0
+  "strap_width": 20.0,
+  "photo_case_width": 39.3
  },
  "case": {
-  "uv_inset": 0.35,
+  "radius": 19.65,
+  "step_deg": 2.0,
   "rings": [
    [
     "case",
@@ -73,14 +58,87 @@
     9.15
    ]
   ],
-  "note": "[kind, offset, z]: 'case' = photo outline per angle + offset, 'crystal' = crystal ellipse + offset. Flank, rounded shoulder, wide polished bezel rising inward to the crystal ring, inner lip down to the crystal seat"
+  "note": "[kind, offset, z]: round rings about the pivot, 'case' = offset from the 39.3 mm case radius, 'crystal' = offset from the crystal opening (mean of the photo's crystal ellipse, 35.85 mm). Flank, rounded shoulder, wide polished bezel rising inward, inner lip down to the crystal seat"
  },
  "lug": {
-  "slope_from_r": 19.0,
+  "tip_y": 22.4,
+  "inner_x": 10.05,
+  "into_case": 1.5,
+  "slope_from_y": 15.0,
   "top_z_at_case": 7.0,
   "top_z_at_tip": 5.0,
   "bevel": 0.4,
-  "note": "short polished lugs curving down to the strap (photo); top slopes with the distance from the pivot"
+  "outer_offset_by_depth": [
+   [
+    0,
+    1.15
+   ],
+   [
+    0.7,
+    1.63
+   ],
+   [
+    1.4,
+    1.93
+   ],
+   [
+    2.1,
+    2.3
+   ],
+   [
+    2.8,
+    2.86
+   ],
+   [
+    3.5,
+    3.29
+   ],
+   [
+    4.2,
+    3.54
+   ],
+   [
+    4.9,
+    3.75
+   ],
+   [
+    5.6,
+    3.93
+   ],
+   [
+    6.3,
+    4.16
+   ],
+   [
+    7.0,
+    4.4
+   ],
+   [
+    7.7,
+    4.63
+   ],
+   [
+    8.4,
+    4.89
+   ],
+   [
+    9.1,
+    5.18
+   ],
+   [
+    9.8,
+    5.45
+   ],
+   [
+    10.5,
+    5.75
+   ],
+   [
+    11.2,
+    6.05
+   ]
+  ],
+  "note": "one lug, mirrored to all four: outer edge as [depth below the tip, offset out from the inner edge] in mm, mean of the TL, TR and BL lugs of the straight front photo (round 1 trace); tip at 22.4 mm (mean of the photos' 12 and 6 o'clock tips), inner edge 0.05 mm outside the 20 mm strap"
  },
  "crystal": {
   "z0": 9.15,
@@ -93,33 +151,63 @@
   "note": "flat dial (open heart and power reserve are print in the photo) to the minute track, the track a cone up to the crystal ring"
  },
  "hands": {
-  "thickness": 0.12,
+  "thickness": 0.18,
+  "edge_fraction": 0.35,
   "z": {
    "hour": 8.05,
-   "minute": 8.3,
-   "seconds": 8.55
+   "minute": 8.35,
+   "seconds": 8.65
   },
-  "note": "rose-gold dauphine hour and minute with tails, thin seconds needle; plates show the photographed hands"
+  "note": "faceted dauphine hour and minute with short tails, thin seconds needle with a counterweight tail, all rose gold (photo)"
  },
  "crown": {
+  "radius": 3.27,
+  "gap": 0.25,
+  "length": 3.4,
+  "teeth": 22,
   "z": 4.0,
   "flute_depth": 0.18,
   "neck_fraction": 0.6,
-  "note": "fluted crown at 3 (photo: 6.5 mm across, 3.4 mm long)"
+  "note": "fluted crown on the 3 o'clock axis: 6.5 mm across, 3.4 mm long (straight front photo)"
  },
  "strap": {
   "z0": 0.8,
   "z1": 4.4,
   "bevel": 0.35,
   "edge_inset": 0.05,
-  "start_y": 14.0,
   "bend_after_tip": 0.0,
   "bend_radius": 7.0,
   "arc_over_radius": 2.2,
-  "note": "House curl (SUR419P1): bend at each side's lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case",
-  "uv_inset": 0.3
+  "note": "20 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case. photo_case_edge: where the photo's strap leaves the case on the strap's centre line (mm); photo_past_tip: flat leather kept past the photo's lug tip",
+  "uv_inset": 0.02,
+  "photo_case_edge": {
+   "top": 20.0,
+   "bottom": 21.04
+  },
+  "start_y": 14.0,
+  "photo_past_tip": 2.5
  },
  "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: case, bezel, lugs, crown"
+  },
+  "rose_gold": {
+   "color": [
+    0.86,
+    0.6,
+    0.5
+   ],
+   "metallic": 1.0,
+   "roughness": 0.15,
+   "note": "rose-gold plated hands and hub (photo)"
+  },
   "crystal": {
    "color": [
     0.0,
@@ -136,9 +224,8 @@
   "z_m": 0.05,
   "depth_scale": 0.35
  },
- "photo_note": "Daytona values: the photo as base colour and emission, no specular, so the photographed reflections are not lit twice",
  "review": {
-  "subtitle": "Polished steel, grey open-heart dial with power reserve, rose-gold hands, black croc leather strap. The product photo is projected on the whole front; the side shape is 3D.",
+  "subtitle": "Polished steel, grey open-heart dial with power reserve, rose-gold hands, black croc leather strap. Front relief GLB.",
   "specs": [
    [
     "39.3 mm",
@@ -149,16 +236,19 @@
     "Strap width"
    ],
    [
-    "44.9 mm",
+    "44.8 mm",
     "Lug to lug"
    ]
   ],
   "notes": [
-   "Round 2: rebuilt on the sharper retailer photo (1000 x 1617 px) supplied by Irsyad.",
-   "Front: the product photo is projected straight from the front on every part (case, bezel, lugs, crown, dial, hands, strap), as on the Rolex Daytona. From the side the case, bezel, lugs, crown, hands and strap are real 3D.",
-   "The photo is taken a little from the right: the right side of the case and the crown's side show. The model follows the photo outline so the projection lines up.",
-   "The hands are also printed in the dial photo: from an angle a faint copy of the hands shows on the dial under the raised hands.",
+   "Round 3: back to the house method. Case, bezel, lugs and crown are modelled in the house polished steel; the hands are modelled rose-gold dauphines; the photo is used only for the dial print and the leather strap.",
+   "The model is the real round watch: 39.3 mm case, four equal lugs, crown on the 3 o'clock axis, 20 mm strap. The supplied photo is taken a little from the right, so the dial print is straightened from its slightly oval outline.",
+   "The applied indices and Roman numerals, the power reserve and the open heart are printed flat on the dial.",
    "The deployant buckle and the strap keeper are left out. The strap curls under at both ends, like the other tracker watches."
   ]
+ },
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
  }
 }

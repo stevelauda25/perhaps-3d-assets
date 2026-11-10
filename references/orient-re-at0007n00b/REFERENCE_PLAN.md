@@ -1,8 +1,8 @@
 # Reference plan: Orient Star RE-AT0007N00B (polished steel, grey sunburst open-heart dial, rose-gold hands, black leather strap)
 
-Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 2 for review.
-Method (Pasya, 2026-11-10): the front photo is cut out and projected on the whole 3D front, as the Rolex Daytona builds; the
-side view stays real 3D. Template: the FS4735 leather-strap build (case, lugs, crown, house curl) with the Daytona photo materials.
+Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 3 for review.
+Rounds 1-2 tried Pasya's photo-projected front (rejected by Irsyad: not precise). Round 3 is the house method: modelled polished
+steel case, bezel, lugs and crown, modelled rose-gold hands; the photo map only for the dial print and the leather strap.
 File name `orient-re-at0007n00b`: the tracker matches the first word of the title (`Orient`) plus the SKU.
 
 ## References held
@@ -44,3 +44,4 @@ python3 -B -m pipeline.jobs run jobs/orient-re-at0007n00b.json --force
 | --- | --- | --- |
 | 1 | 2026-11-10 | First front relief: photo projected on every part, round case with the wide bezel, photo lugs, raised hands, fluted crown, black leather strap with the 7 mm curl |
 | 2 | 2026-11-10 | Rebuilt on the sharper 1000 × 1617 photo from Irsyad: case lofted from the photo outline into the elliptic crystal ring, lugs from the photo silhouette, hands re-picked at 10:08 |
+| 3 | 2026-11-10 | House method: round 39.3 mm polished case and bezel, four mirrored lugs (outline from the straight round 1 photo), crown on the 3 o'clock axis, faceted rose-gold dauphine hands, dial map with the hands removed and straightened from the photo's crystal ellipse, 20 mm strap from the photo's flat leather |

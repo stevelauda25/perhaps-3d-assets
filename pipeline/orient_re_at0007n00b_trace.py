@@ -33,9 +33,9 @@ MANUAL_PX = {
     "crystal_ellipse": {"centre": [921, 1366], "rx": 770, "ry": 757},
     "dial_flat_px": 655,
     # hands: tip, tail end, half widths (widest at base_r px from the pivot)
-    "hands": {"hour": {"tip": [585, 1165], "tail": [1050, 1490], "half_base": 26, "base_r": 110, "half_hub": 18},
-              "minute": {"tip": [1448, 1035], "tail": [836, 1436], "half_base": 17, "base_r": 130, "half_hub": 15},
-              "seconds": {"tip": [660, 860], "tail": [975, 1525], "half_base": 4, "base_r": 40, "half_hub": 7}},
+    "hands": {"hour": {"tip": [583, 1143], "tail": [1062, 1490], "half_base": 32, "base_r": 110, "half_hub": 20},
+              "minute": {"tip": [1448, 1035], "tail": [830, 1446], "half_base": 22, "base_r": 110, "half_hub": 19},
+              "seconds": {"tip": [660, 860], "tail": [987, 1517], "half_base": 4.5, "base_r": 40, "half_hub": 7}},
     "hub_px": 12,
     # envelope: case disk and one quad per lug (inner edge and tip edge exact, outer side generous: the white background cuts it)
     "case_disk": {"centre": [921, 1375], "r": 905},
