@@ -1,0 +1,69 @@
+{
+ "model": "Emporio Armani Matteo AR11327",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the front photo (43 mm case, listing; the photo is turned ~13 deg, horizontal sizes divided by cos_tilt). Heights before the house depth scale. Dial print, eagle logo, minute marks, date window and the purple-grey flange come from the dial map; the mesh bracelet from a repeating photo tile.",
+ "trace": "config/watches/emporio-armani-ar11327-trace.json",
+ "photo_map": "outputs/watches/emporio-armani-ar11327/dial_photo.jpg",
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_mesh": 0.5
+ },
+ "verified_mm": {
+  "diameter": 43.0,
+  "end_cap_width": 20.15
+ },
+ "case": {
+  "profile": [[17.0, 0.0], [20.9, 0.0], [21.5, 0.6], [21.5, 4.6], [21.42, 5.8], [21.2, 6.7], [20.85, 7.5], [20.4, 8.1], [19.9, 8.4], [19.5, 8.3], [19.26, 7.9], [19.26, 6.0], [17.0, 6.0]],
+  "note": "(r, z): matte gold aluminium case, straight flank under a thick domed bezel (19.24-21.5 mm in the photo) that drops into the groove at the crystal"
+ },
+ "dial": {
+  "z": 6.4,
+  "flange_r": 18.2,
+  "flange_z": 7.3,
+  "note": "flat dial to 18.2 mm, then the purple-grey sloped flange up to the groove (photo map on both)"
+ },
+ "crystal": {"z0": 7.45, "z1": 7.75},
+ "hour_bars": {"height": 0.3, "bevel": 0.04, "note": "applied gold bars at every hour but 12 (the 12 mark is a short print under the logo)"},
+ "hands": {
+  "thickness": 0.12,
+  "root": 0.5,
+  "z": {"hour": 6.7, "minute": 6.95, "seconds": 7.2},
+  "note": "flat gold sticks with square ends, no tails; gold hub with a pin"
+ },
+ "arm": {
+  "into_case": 2.0,
+  "top_z_at_case": 4.6,
+  "top_z_at_tip": 4.1,
+  "bevel": 0.35,
+  "note": "open wire lugs: one arm on each side from the case flank to the end cap ends, outline from the left silhouette, window between arm and case"
+ },
+ "end_cap": {
+  "z0": 0.8,
+  "z1": 4.9,
+  "bevel": 0.7,
+  "note": "rectangular matte gold mesh clamp between the arm ends, 20.15 mm wide, 22.65-28.22 mm from the pivot"
+ },
+ "crown": {
+  "z": 3.0,
+  "tube_radius": 1.4,
+  "flute_depth": 0.2,
+  "note": "black knurled crown at 3"
+ },
+ "strap": {
+  "half_width": 9.2,
+  "start_y": 24.0,
+  "z0": 1.2,
+  "z1": 3.6,
+  "bevel": 0.25,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "end_y": 43.62,
+  "note": "Milanese-style gold mesh, photo tile repeating along the band; starts under the end cap. House curl (SUR419P1): bend at the end cap's outer edge (28.22 mm), 7 mm radius, end_y = tip + 2.2 x radius"
+ },
+ "materials": {
+  "gold_matte": {"color": [0.95, 0.6, 0.22], "metallic": 1.0, "roughness": 0.45, "note": "gold tone aluminium, matte: case, bezel, arms, end caps"},
+  "gold_polished": {"color": [0.95, 0.74, 0.4], "metallic": 1.0, "roughness": 0.15, "note": "pale gold hands, hub and applied hour bars"},
+  "crown_black": {"color": [0.02, 0.02, 0.025], "metallic": 0.0, "roughness": 0.35, "note": "black crown"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08, "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}

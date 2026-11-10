@@ -1,0 +1,46 @@
+{
+  "id": "emporio-armani-ar11327",
+  "output": "outputs/jobs/emporio-armani-ar11327",
+  "asset_type": "watch",
+  "model": "Emporio Armani Matteo AR11327",
+  "baseline": "First build: matte gold round case with a thick domed bezel, open wire lugs and end caps, teal photo dial with applied gold hour bars, gold stick hands, black knurled crown and the gold mesh bracelet from a repeating photo tile at 43 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/emporio-armani-ar11327/REFERENCE_PLAN.md",
+    "config/watches/emporio-armani-ar11327.json",
+    "config/watches/emporio-armani-ar11327-trace.json",
+    "config/presets/watch_kit_white_front_emporio_armani_ar11327.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_emporio_armani_ar11327",
+      "params": {
+        "spec": "config/watches/emporio-armani-ar11327.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/emporio-armani-ar11327/emporio-armani-ar11327.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_emporio_armani_ar11327.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
