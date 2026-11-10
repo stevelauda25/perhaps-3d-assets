@@ -136,5 +136,29 @@
   "z_m": 0.05,
   "depth_scale": 0.35
  },
- "photo_note": "Daytona values: the photo as base colour and emission, no specular, so the photographed reflections are not lit twice"
+ "photo_note": "Daytona values: the photo as base colour and emission, no specular, so the photographed reflections are not lit twice",
+ "review": {
+  "subtitle": "Polished steel, grey sunburst open-heart dial with power reserve, rose-gold hands, black leather strap. The product photo is projected on the whole front; the side shape is 3D.",
+  "specs": [
+   [
+    "39.3 mm",
+    "Case diameter"
+   ],
+   [
+    "20.2 mm",
+    "Strap width"
+   ],
+   [
+    "44.8 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Front: the product photo is projected straight from the front on every part (case, bezel, lugs, crown, dial, hands, strap), as on the Rolex Daytona. From the side the case, bezel, lugs, crown, hands and strap are real 3D.",
+   "The largest product photo found is 755 x 1126 px (official site: 328 px), so small dial print is soft when zoomed in.",
+   "The hands are also printed in the dial photo: from an angle a faint copy of the hands shows on the dial under the raised hands.",
+   "The photo is taken slightly from below, so the 6 o'clock lugs are longer than the 12 o'clock ones; the model follows the photo so the projection lines up.",
+   "The deployant clasp at 5 o'clock is left out. The strap curls under at both ends, like the other tracker watches."
+  ]
+ }
 }
