@@ -1,0 +1,187 @@
+{
+ "model": "Orient RA-AC0E04L10B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the Orient USA front photo (40.0 mm case, orient-watch.com; strap 20.25 / 20.43 mm measured against 20 mm). Heights before the house depth scale (11.9 mm thick listing, flat crystal, no side photo: estimated). House method: modelled polished steel case, bezel, lugs and crown, polished steel hands and batons; the photo map serves only the dial print, the rehaut's minute track, the ORIENT letters and the navy leather strap.",
+ "trace": "config/watches/orient-ra-ac0e04l10b-trace.json",
+ "photo_map": "outputs/watches/orient-ra-ac0e04l10b/photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "strap_width": 20.0,
+  "photo_case_diameter": 40.0
+ },
+ "case": {
+  "radius": 20.0,
+  "step_deg": 2.0,
+  "rings": [
+   [
+    "case",
+    -0.45,
+    0.0
+   ],
+   [
+    "case",
+    0.0,
+    0.45
+   ],
+   [
+    "case",
+    0.0,
+    5.6
+   ],
+   [
+    "case",
+    -0.2,
+    6.6
+   ],
+   [
+    "case",
+    -0.6,
+    7.4
+   ],
+   [
+    "crystal",
+    0.6,
+    8.9
+   ],
+   [
+    "crystal",
+    0.0,
+    9.1
+   ],
+   [
+    "crystal",
+    0.0,
+    8.7
+   ],
+   [
+    "crystal",
+    -0.3,
+    8.7
+   ]
+  ],
+  "note": "[kind, offset, z]: round rings about the pivot, 'case' = offset from the 40.0 mm case radius, 'crystal' = offset from the crystal opening (17.96 mm radius, inner edge of the polished bezel in the photo). Flank, rounded shoulder, wide polished bezel sloping up inward to the crystal seat, inner lip"
+ },
+ "lug": {
+  "into_case": 1.5,
+  "slope_from_y": 17.5,
+  "top_z_at_case": 6.4,
+  "top_z_at_tip": 4.8,
+  "bevel": 0.4,
+  "note": "one lug, mirrored to all four: tip, inner edge and outer offset by depth below the tip from the trace (mean of the four photo lugs); top slopes down to the tip"
+ },
+ "rehaut": {
+  "z0": 7.6,
+  "z1": 8.7,
+  "note": "sloped flange from the dial edge (16.91 mm) up to the crystal seat, minute track printed on it (photo)"
+ },
+ "crystal": {
+  "z0": 9.1,
+  "z1": 9.6,
+  "dome": 0.15,
+  "note": "flat crystal (listing), a hint of curve so the glass catches a highlight"
+ },
+ "dial": {
+  "z": 7.6,
+  "note": "flat navy sunburst dial to the dial edge; crest, Automatic, date window and print in the photo map"
+ },
+ "applied": {
+  "height": 0.3,
+  "bevel": 0.05,
+  "logo_height": 0.12,
+  "material": "steel_polished",
+  "note": "batons: polished steel plates from the photo outlines; ORIENT letters: raised plates with the photo on them"
+ },
+ "hands": {
+  "thickness": 0.18,
+  "edge_fraction": 0.35,
+  "z": {
+   "hour": 7.95,
+   "minute": 8.2,
+   "seconds": 8.45
+  },
+  "hub_height": 0.25,
+  "hub_radius": 0.85,
+  "material": {
+   "hour": "steel_polished",
+   "minute": "steel_polished",
+   "hub": "steel_polished",
+   "seconds": "steel_polished"
+  },
+  "note": "faceted sword hour and minute, seconds needle with a short round tail, ridge on the tip-tail axis: polished steel (photo)"
+ },
+ "crown": {
+  "radius": 2.72,
+  "gap": 0.2,
+  "length": 3.0,
+  "teeth": 20,
+  "z": 3.6,
+  "flute_depth": 0.2,
+  "neck_fraction": 0.6,
+  "note": "fluted crown on the 3 o'clock axis: 5.4 mm across, 3.3 mm from the case flank (photo)"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "uv_inset": 0.02,
+  "start_y": 15.0,
+  "photo_past_tip": 8.0,
+  "note": "20 mm navy croc leather, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case. UVs from the photo's straight strap: the case edge on the centre line (trace strap_mm case_y) to photo_past_tip past the lug tip, folded back and forth"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: case, bezel, rehaut, lugs, crown, hands and batons"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Contemporary: polished steel, navy sunburst dial, silver batons and hands, date at 3, navy croc leather strap. Front relief GLB.",
+  "specs": [
+   [
+    "40.0 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Strap width"
+   ],
+   [
+    "46.1 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Round 1, house method: case, bezel, lugs and crown are modelled in the house polished steel; hands and batons are modelled polished steel; the photo is used only for the dial print, the minute track, the ORIENT letters and the leather strap.",
+   "Front photo from Orient USA (straight-on, 1600 px wide, the watch about 650 px across): the dial print is softer than on the other tracker watches.",
+   "The crystal is flat (listing) and the thickness is estimated from the 11.9 mm listing; no side photo. The buckle is left out and the strap curls under at both ends."
+  ]
+ }
+}

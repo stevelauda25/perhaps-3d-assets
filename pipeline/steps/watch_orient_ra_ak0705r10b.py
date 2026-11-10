@@ -7,7 +7,7 @@ depth with the house curl. House method: case, bezel, rehaut, lugs and crown in 
 faceted black hands (gold seconds) and black applied numerals and bars; one photo map (pipeline/orient_ra_ak0705r10b_dial.py, hands removed)
 serves only the dial print, the raised ORIENT letters and the leather strap. The case is round about the pivot; the photo's
 case centre sits 0.38 mm below the pivot, so the dial UVs move from the pivot (centre) to the photo's rings (rim).
-Rebuild with --force after regenerating the photo map.
+Also builds RA-AK0704N10B (same case) and RA-AC0E04L10B (own case rings and lugs, no sub-dials), each from its own spec, trace and photo map. Rebuild with --force after regenerating the photo map.
 """
 import json
 import math
@@ -61,7 +61,7 @@ def run(params):
     cfg = json.loads((ROOT / params["spec"]).read_text())
     tr = json.loads((ROOT / cfg["trace"]).read_text())
     pm = json.loads((ROOT / cfg["photo_map"]).with_suffix(".json").read_text())
-    coll = bpy.data.collections.new("WATCH | Orient RA-AK0705R10B front relief")
+    coll = bpy.data.collections.new("WATCH | %s front relief" % cfg["model"])
     bpy.context.scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     for key, rough in cfg["photo_roughness"].items():  # one image, two surfaces: dial (and the raised letters) and strap
@@ -141,7 +141,7 @@ def run(params):
             tail = tail[:-1] + [(rc - rr * math.sin(a), rr * math.cos(a)) for a in [i * math.pi / 16 for i in range(9)]]
         st = sorted(tail + [tuple(s) for s in h["stations_mm"]] + [(h["length_mm"], 0.0)])
         add("hand_" + name, ridge(Geo(), st, hs["z"][name], th, ef, h["angle_deg"]), hs["material"][name], bevel=0.02)
-    for name in ("sub_day", "sub_h24"):
+    for name in [n for n in ("sub_day", "sub_h24") if n in tr["hands"]]:  # RA-AC0E04L10B has none
         h, z = tr["hands"][name], hs["z"][name]
         hub, hr, hw, L = h["hub_mm"], h["head_r_mm"], h["half_mm"], h["length_mm"]
         g = ridge(Geo(), [(hr * 0.5, hw), (hr * 0.9, hw * 0.95), (L * 0.75, hw * 0.55), (L, 0.0)], z, th, ef, h["angle_deg"], hub)

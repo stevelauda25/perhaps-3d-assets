@@ -1,0 +1,46 @@
+{
+  "id": "orient-ra-ac0e04l10b",
+  "output": "outputs/jobs/orient-ra-ac0e04l10b",
+  "asset_type": "watch",
+  "model": "Orient RA-AC0E04L10B",
+  "baseline": "Round 1, house method on the 1600 x 1067 Orient USA front photo: round polished steel case with a wide polished bezel, photo-outline lugs, fluted crown, flat crystal, polished steel faceted hands and batons, photo map for the dial (hands removed), ORIENT letters and the navy leather strap with the house curl, 40.0 mm",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-ra-ac0e04l10b/REFERENCE_PLAN.md",
+    "config/watches/orient-ra-ac0e04l10b.json",
+    "config/watches/orient-ra-ac0e04l10b-trace.json",
+    "config/presets/watch_kit_white_front_orient_ra_ac0e04l10b.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_ra_ak0705r10b",
+      "params": {
+        "spec": "config/watches/orient-ra-ac0e04l10b.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-ra-ac0e04l10b/orient-ra-ac0e04l10b.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_ra_ac0e04l10b.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

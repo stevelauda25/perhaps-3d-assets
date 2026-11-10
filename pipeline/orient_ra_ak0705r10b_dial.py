@@ -29,17 +29,17 @@ SHADOWS_MM = {"hour": ((0.25, 0.0), (0.5, -0.05)), "minute": ((0.25, 0.0), (0.5,
 THIN_SHADOWS_MM = ((0.12, 0.0),)
 
 
-def hand_mask(t, shape):
+def hand_mask(t, shape, margins=HAND_MARGIN_MM, shadows=SHADOWS_MM):
     S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
     P = lambda p, dx=0, dy=0: (px0 + (p[0] + dx) * S, py0 - (p[1] + dy) * S)
     m = np.zeros(shape, np.uint8)
     for name, h in t["hands"].items():
         one = np.zeros(shape, np.uint8)
-        for dx, dy in ((0, 0),) + SHADOWS_MM.get(name, THIN_SHADOWS_MM):
+        for dx, dy in ((0, 0),) + shadows.get(name, THIN_SHADOWS_MM):
             cv2.fillPoly(one, [np.round([P(p, dx, dy) for p in h["outline_mm"]]).astype(np.int32)], 1)
-        k = 2 * int(HAND_MARGIN_MM.get(name, THIN_MARGIN_MM) * S) + 1
+        k = 2 * int(margins.get(name, THIN_MARGIN_MM) * S) + 1
         m |= cv2.dilate(one, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
-    for dx, dy in ((0, 0),) + SHADOWS_MM["hour"]:
+    for dx, dy in ((0, 0),) + shadows["hour"]:
         cv2.circle(m, tuple(int(v) for v in P((0, 0), dx, dy)), int(t["hub_mm"]["black_r"] * S * 1.2), 1, -1)
     return m
 
@@ -79,12 +79,13 @@ def polar_fill(img, mask, centre, r_max, smooth_px=0):
     return np.clip(soft * back + (1 - soft) * img, 0, 255).astype(np.uint8)
 
 
-def build(out=OUT, review=None):
-    t = json.loads(TRACE.read_text())
-    st = json.loads(SPEC.read_text())["strap"]
+def build(out=OUT, review=None, trace=TRACE, spec=SPEC, margins=HAND_MARGIN_MM, shadows=SHADOWS_MM):
+    """trace, spec, margins, shadows: another photo's files and hand zones (RA-AK0704N10B)."""
+    t = json.loads(trace.read_text())
+    st = json.loads(spec.read_text())["strap"]
     S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
     img = cv2.imread(str(ROOT / t["source"]))
-    mask = hand_mask(t, img.shape[:2])
+    mask = hand_mask(t, img.shape[:2], margins, shadows)
     mask = cv2.dilate(mask, np.ones((3, 3), np.uint8))
     clean = polar_fill(img, mask, (float(px0), float(py0)), t["dial_edge_mm"] * S)
     keep = {k: t["strap_mm"][k]["tip_y"] + st["bend_radius"] + MARGIN_MM for k in ("top", "bottom")}

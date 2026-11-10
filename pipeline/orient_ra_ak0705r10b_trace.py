@@ -7,6 +7,9 @@ left out) = 40.5 mm (listing); the strap at the lug tips (21 mm listed) is the c
 case centre (camera a little low, domed crystal): the model is centred on the pivot, the dial UVs follow the photo's rings.
 mm, x right, y toward 12, origin = hand pivot. Hands, sub-dial hands, rings and lug tips: MANUAL_PX from gridded crops.
 Applied numerals, bars and the ORIENT letters: dark (or white) blobs of the photo, the hands cut out (they cover them).
+trace() takes another photo's MANUAL_PX (RA-AK0704N10B, same case): optional keys case_circle (fixed [cx, cy, R] px), rings_centre
+(px the dial rings are measured about, default the case centre), numeral_bright ([kernel, top-hat above, S below]: silver parts), numeral_min_area, exclude_circles
+([x, y, r] px: sub-dial print) and lugs_from (trace json whose lug_mean is reused instead of this photo's lugs).
 """
 import json
 import math
@@ -111,19 +114,19 @@ def blobs(mask, min_area, S, mm):
     return out
 
 
-def trace(path=FRONT, overlay=None):
+def trace(path=FRONT, overlay=None, M=MANUAL_PX, case_mm=CASE_MM, artefacts=ARTEFACTS):
     im = cv2.imread(str(path))
     g = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
-    M = MANUAL_PX
     px0, py0 = M["hand_pivot"]
     o = np.float32([px0, py0])
-    ccx, ccy, Rc = case_circle(g, M)
-    S = 2 * Rc / CASE_MM
+    ccx, ccy, Rc = M["case_circle"] if "case_circle" in M else case_circle(g, M)
+    rcx, rcy = M.get("rings_centre", (ccx, ccy))
+    S = 2 * Rc / case_mm
     mm = lambda p: [round((float(p[0]) - px0) / S, 3), round(-(float(p[1]) - py0) / S, 3)]
     out = {"source": str(path.relative_to(ROOT)), "scale_px_per_mm": round(S, 4), "origin_px": [px0, py0],
-           "anchor": f"circle fit on the case outline = {CASE_MM} mm (listing)", "case_circle_px": [round(ccx, 1), round(ccy, 1), round(Rc, 1)],
-           "case_centre_mm": mm((ccx, ccy)), "case_radius_mm": round(Rc / S, 3),
+           "anchor": f"case outline = {case_mm} mm (listing)", "case_circle_px": [round(ccx, 1), round(ccy, 1), round(Rc, 1)],
+           "case_centre_mm": mm((rcx, rcy)), "case_radius_mm": round(Rc / S, 3),
            "crystal_open_mm": round(M["crystal_open_r"] / S, 3), "dial_edge_mm": round(M["dial_edge_r"] / S, 3)}
 
     # ---- hands ----
@@ -166,10 +169,17 @@ def trace(path=FRONT, overlay=None):
     ann = (rr > M["numeral_r"][0]) & (rr < M["numeral_r"][1])
     (dx0, dy0), (dx1, dy1) = M["date_box"]
     ann[dy0:dy1, dx0:dx1] = False
-    dark = ((hsv[..., 2] < M["numeral_dark"]) & ann).astype(np.uint8)
+    for x, y, r in M.get("exclude_circles", []):
+        ann &= np.hypot(xx - x, yy - y) > r
+    if "numeral_bright" in M:  # silver parts on a dial lit unevenly: brighter than the dial round them (top-hat)
+        k, v, sat = M["numeral_bright"]
+        top = cv2.morphologyEx(g, cv2.MORPH_TOPHAT, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+        dark = ((top > v) & (hsv[..., 1] < sat) & ann).astype(np.uint8)
+    else:
+        dark = ((hsv[..., 2] < M["numeral_dark"]) & ann).astype(np.uint8)
     dark = cv2.morphologyEx(dark, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
     num = cv2.dilate(dark, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * (rim + 1) + 1,) * 2)) & (1 - hmask)
-    out["numerals"] = blobs(num, 150, S, mm)
+    out["numerals"] = blobs(num, M.get("numeral_min_area", 150), S, mm)
     (bx0, by0), (bx1, by1) = M["logo_box"]
     logo = np.zeros_like(num)
     logo[by0:by1, bx0:bx1] = (g[by0:by1, bx0:bx1] > M["logo_white"]) & (hsv[by0:by1, bx0:bx1, 1] < 90)
@@ -179,7 +189,7 @@ def trace(path=FRONT, overlay=None):
     # ---- lugs: outer edge = first non-background px from outside, per row from the tip to the case circle ----
     fg = (im.min(2) < 236).astype(np.uint8)
     lugs = {}
-    for key, L in M["lugs"].items():
+    for key, L in ({} if "lugs_from" in M else M["lugs"]).items():
         sx = -1 if key[1] == "l" else 1
         sy = 1 if key[0] == "t" else -1
         rows = []
@@ -196,13 +206,15 @@ def trace(path=FRONT, overlay=None):
         lugs[key] = {"tip_y_mm": round(abs(mm((0, L["tip_y"]))[1]), 3), "inner_x_mm": round(abs(mm((L["inner_x"], 0))[0]), 3),
                      "outer_by_depth": [[round(d, 3), round(w, 3)] for d, w in rows[::4]]}
     out["lugs"] = lugs
-    # one lug for all four: mean outer offset per 0.25 mm of depth below the tip, while every lug still has a row
-    dmax = min(v["outer_by_depth"][-1][0] for v in lugs.values())
-    grid = np.arange(0, dmax, 0.25)
-    mean = np.mean([np.interp(grid, *np.array(v["outer_by_depth"]).T) for v in lugs.values()], axis=0)
-    out["lug_mean"] = {"tip_y": round(float(np.mean([v["tip_y_mm"] for v in lugs.values()])), 3),
-                       "inner_x": round(float(np.mean([v["inner_x_mm"] for v in lugs.values()])), 3),
-                       "outer_offset_by_depth": [[round(float(d), 2), round(float(w), 3)] for d, w in zip(grid, mean)]}
+    if "lugs_from" in M:  # same case as another trace: its lugs, not this photo's
+        out["lug_mean"] = json.loads((ROOT / M["lugs_from"]).read_text())["lug_mean"]
+    else:  # one lug for all four: mean outer offset per 0.25 mm of depth below the tip, while every lug still has a row
+        dmax = min(v["outer_by_depth"][-1][0] for v in lugs.values())
+        grid = np.arange(0, dmax, 0.25)
+        mean = np.mean([np.interp(grid, *np.array(v["outer_by_depth"]).T) for v in lugs.values()], axis=0)
+        out["lug_mean"] = {"tip_y": round(float(np.mean([v["tip_y_mm"] for v in lugs.values()])), 3),
+                           "inner_x": round(float(np.mean([v["inner_x_mm"] for v in lugs.values()])), 3),
+                           "outer_offset_by_depth": [[round(float(d), 2), round(float(w), 3)] for d, w in zip(grid, mean)]}
     out["strap_mm"] = {k: {"x": [mm((x, 0))[0] for x in v["x"]], "case_y": abs(mm((0, v["case_y"]))[1]),
                            "tip_y": abs(mm((0, M["lugs"][{"top": "tl", "bottom": "bl"}[k]]["tip_y"]))[1])} for k, v in M["strap"].items()}
     out["checks"] = {"strap_width_mm": {k: round(v["x"][1] - v["x"][0], 2) for k, v in out["strap_mm"].items()},
@@ -212,14 +224,14 @@ def trace(path=FRONT, overlay=None):
     out["crown"] = {"centre_y_mm": mm((0, (yt + yb) / 2))[1], "radius_mm": round((yb - yt) / 2 / S, 3), "teeth": cr["teeth"],
                     "x_from_to_mm": [mm((x, 0))[0] for x in cr["x_from_to"]]}
     out["manual_px"] = M
-    out["artefacts_not_traced"] = ARTEFACTS
+    out["artefacts_not_traced"] = artefacts
 
     if overlay:
         ov = cv2.cvtColor(g, cv2.COLOR_GRAY2BGR) // 2 + 60
         Pp = lambda xy: (int(round(px0 + xy[0] * S)), int(round(py0 - xy[1] * S)))
         cv2.circle(ov, (int(ccx), int(ccy)), int(Rc), (0, 0, 255), 1)
         for r in (M["crystal_open_r"], M["dial_edge_r"]):
-            cv2.circle(ov, (int(ccx), int(ccy)), r, (255, 128, 0), 1)
+            cv2.circle(ov, (int(rcx), int(rcy)), r, (255, 128, 0), 1)
         for h in hands.values():
             cv2.polylines(ov, [np.array([Pp(q) for q in h["outline_mm"]])], True, (0, 200, 255), 1)
         for sh in out["numerals"] + out["logo"]:
