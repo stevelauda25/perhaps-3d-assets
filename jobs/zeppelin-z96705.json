@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z96705",
+  "output": "outputs/jobs/zeppelin-z96705",
+  "asset_type": "watch",
+  "model": "Zeppelin Mediterranee 1921 chronograph Z96705 (9670-5)",
+  "baseline": "First build: round polished case, cream chronograph dial with two sub-dials, rectangular pushers and brown leather strap from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z96705/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z96705.json",
+    "config/watches/zeppelin-z96705-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z96705.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z96705",
+      "params": {
+        "spec": "config/watches/zeppelin-z96705.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z96705/zeppelin-z96705.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z96705.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
