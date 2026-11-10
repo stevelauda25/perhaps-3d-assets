@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z86803",
+  "output": "outputs/jobs/zeppelin-z86803",
+  "asset_type": "watch",
+  "model": "Zeppelin 100 Jahre Chronograph Z86803 (8680-3)",
+  "baseline": "First build: Z8680MB3 watch head (cream dial, black hands) posed at this photo's time on a black leather strap from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z86803/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z86803.json",
+    "config/watches/zeppelin-z86803-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z86803.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z86803",
+      "params": {
+        "spec": "config/watches/zeppelin-z86803.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z86803/zeppelin-z86803.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z86803.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

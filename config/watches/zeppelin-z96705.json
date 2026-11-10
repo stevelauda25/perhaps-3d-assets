@@ -1,0 +1,26 @@
+{
+ "model": "Zeppelin Mediterranee 1921 chronograph Z96705 (9670-5)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (42 mm case, listing; strap 20.75 mm measured against 22 mm listed, the same gap as the other 42 mm Zeppelins). Heights before the house depth scale. Dial print, sub-dial scales, tachymeter, date window and the strap leather come from one photo map.",
+ "trace": "config/watches/zeppelin-z96705-trace.json",
+ "photo_map": "outputs/watches/zeppelin-z96705/dial_photo.jpg",
+ "photo_roughness": {"dial": 0.35, "strap_leather": 0.55},
+ "verified_mm": {"diameter": 42.0, "strap_width": 20.75},
+ "case": {"profile": [[18.0, 0.0], [20.4, 0.0], [21.0, 0.8], [21.0, 5.8], [20.8, 7.0], [20.5, 8.0], [20.1, 8.7], [19.66, 8.8], [19.66, 7.4], [19.0, 7.4]],
+          "note": "(r, z): polished flank rounding into the sloped polished bezel (19.66-21 mm in the photo); inner lip covers the dial edge"},
+ "lug": {"gap": 0.1, "into_case": 1.5, "top_z_at_case": 6.2, "top_z_at_tip": 4.5, "bevel": 0.5, "note": "polished like the case (photo)"},
+ "crystal": {"z0": 8.3, "z1": 8.8, "dome": 1.0, "note": "domed crystal (photo)"},
+ "dial": {"z": 6.9, "r": 19.0},
+ "hands": {"thickness": 0.15, "z": {"sub": 7.15, "hour": 7.35, "minute": 7.55, "seconds": 7.75},
+           "hub_steps": [[1.0, 0.45], [0.56, 0.85], [0.3, 1.05]]},
+ "crown": {"teeth": 20, "flute_depth": 0.35, "z": 4.0, "note": "fluted onion crown: collar, flutes, domed end"},
+ "pusher": {"z": 4.0, "half_height": 1.2, "corner": 0.5, "into_case": 1.6, "bevel": 0.15, "note": "rectangular pushers at 2 and 4 (photo)"},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "edge_inset": 0.05, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 39.9,
+           "note": "House curl (SUR419P1): bend at the lug tips, 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "hand_black": {"color": [0.012, 0.012, 0.014], "metallic": 0.0, "roughness": 0.25, "note": "black hands, counterweights and hubs (photo)"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission (house glass)"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}

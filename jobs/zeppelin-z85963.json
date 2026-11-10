@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z85963",
+  "output": "outputs/jobs/zeppelin-z85963",
+  "asset_type": "watch",
+  "model": "Zeppelin LZ126 Los Angeles GMT Z85963 (8596-3)",
+  "baseline": "First build: round polished case, silver and blue world-map GMT dial and blue leather strap from the straight front photo at 42 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z85963/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z85963.json",
+    "config/watches/zeppelin-z85963-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z85963.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z85963",
+      "params": {
+        "spec": "config/watches/zeppelin-z85963.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z85963/zeppelin-z85963.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z85963.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
