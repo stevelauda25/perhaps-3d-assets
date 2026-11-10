@@ -1,0 +1,255 @@
+{
+ "model": "Orient RA-AC0Q16N",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (39.9 mm bezel, listing; the end link measures 19.4 mm against the listed 20 mm lug width). Heights are a front-relief reading of the listed 12.8 mm (no side photo). The fume sunburst, minute track, logo, prints and the date disc stay in the dial map; the bezel's black-filled engravings are traced outlines built as black inlays.",
+ "trace": "config/watches/orient-ra-ac0q16n-trace.json",
+ "dial_map": "outputs/watches/orient-ra-ac0q16n/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 39.9,
+  "lug_to_lug": 45.75
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.1,
+    0
+   ],
+   [
+    19.55,
+    0.45
+   ],
+   [
+    19.7,
+    1.2
+   ],
+   [
+    19.7,
+    4.4
+   ],
+   [
+    19.5,
+    4.9
+   ],
+   [
+    14.6,
+    4.9
+   ],
+   [
+    14.6,
+    5.0
+   ],
+   [
+    0.0,
+    5.0
+   ]
+  ]
+ },
+ "crystal": {
+  "radius": 14.72,
+  "z0": 6.32,
+  "z1": 6.62
+ },
+ "bezel": {
+  "z0": 4.9,
+  "lip_z": 6.2,
+  "top_z": 6.8,
+  "rim_z": 6.55,
+  "rim_r": 19.95,
+  "slot_depth": 0.45,
+  "rim_bevel": 0.15,
+  "inlay_raise": 0.1
+ },
+ "dial": {
+  "z": 5.1,
+  "flat_r": 13.75,
+  "rehaut_r": 14.72,
+  "rehaut_z": 6.2,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.05,
+  "date_frame": 0.16
+ },
+ "hands": {
+  "thickness": 0.12,
+  "outline": 0.12,
+  "z": {
+   "hour": 5.6,
+   "minute": 5.78,
+   "seconds": 5.96
+  },
+  "hour_stem_half_width": 0.6,
+  "hour_notch": 0.7,
+  "minute_root_half_width": 0.3,
+  "minute_max_half_width": 0.62,
+  "seconds_tail_half_width": 0.48,
+  "note": "geometry widths; the trace's hand widths are the wider zones cut from the dial map"
+ },
+ "crown": {
+  "radius": 2.7,
+  "flute_depth": 0.16,
+  "teeth": 24,
+  "collar": [
+   19.0,
+   19.6
+  ],
+  "collar_r": 2.0,
+  "r_to": 22.8,
+  "z": 2.75
+ },
+ "lug": {
+  "inner_x": 9.71,
+  "from_y": 10.5,
+  "top_z_at_case": 5.0,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 16.0,
+  "half_width": 9.71,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.27,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "bezel_fill": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "seconds_orange": {
+   "color": [
+    0.55,
+    0.28,
+    0.12
+   ],
+   "metallic": 0.6,
+   "roughness": 0.25
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Orient diver, grey fume dial, steel bezel and bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "39.9 mm",
+    "bezel (listing)"
+   ],
+   [
+    "45.8 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "72",
+    "coin-edge slots"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: steel bezel (polished lip, brushed top, coin-edge rim), the bezel's black numerals, dots and triangle as traced black inlays, applied polished frames with lume, polished date frame, arrow hour hand, sword minute hand, seconds hand with orange-framed lume, fluted crown, brushed lugs with polished chamfer, three-column bracelet.",
+   "From the photo map: fume sunburst, minute track, logo, Automatic, Water Resistant 20 bar, the date disc.",
+   "Scale is the listed 39.9 mm. Heights are estimated (no side photo). The bezel's few larger grip recesses are not modelled yet."
+  ]
+ }
+}
