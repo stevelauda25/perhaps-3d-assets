@@ -1,0 +1,46 @@
+{
+  "id": "emporio-armani-ar11328",
+  "output": "outputs/jobs/emporio-armani-ar11328",
+  "asset_type": "watch",
+  "model": "Emporio Armani Matteo AR11328",
+  "baseline": "First build: blue anodised aluminium round case with open lug arms, green-to-black dial photo map with applied indices and date in the map, light blue baton hands, black crown, solid end caps and blue Milanese mesh photo map from the straight front photo at 43 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/emporio-armani-ar11328/REFERENCE_PLAN.md",
+    "config/watches/emporio-armani-ar11328.json",
+    "config/watches/emporio-armani-ar11328-trace.json",
+    "config/presets/watch_kit_white_front_emporio_armani_ar11328.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_emporio_armani_ar11328",
+      "params": {
+        "spec": "config/watches/emporio-armani-ar11328.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/emporio-armani-ar11328/emporio-armani-ar11328.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_emporio_armani_ar11328.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

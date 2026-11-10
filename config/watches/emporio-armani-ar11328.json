@@ -1,0 +1,92 @@
+{
+ "model": "Emporio Armani Matteo AR11328",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (43 mm case, listing; end cap 19.63 mm measured against the 20 mm listing). Heights before the house depth scale (10 mm thick listing). Dial print, applied indices, logo and date come from the dial photo map; the mesh weave from the mesh photo map.",
+ "trace": "config/watches/emporio-armani-ar11328-trace.json",
+ "dial_map": "outputs/watches/emporio-armani-ar11328/dial_photo.jpg",
+ "mesh_map": "outputs/watches/emporio-armani-ar11328/mesh_photo.jpg",
+ "verified_mm": {
+  "diameter": 43.0,
+  "cap_width": 19.63
+ },
+ "case": {
+  "profile": [[17.0, 0.0], [20.9, 0.0], [21.5, 0.6], [21.5, 4.8], [21.35, 6.0], [20.9, 7.0], [20.2, 7.7], [19.3, 8.0], [18.4, 7.9], [17.39, 7.5], [17.39, 7.1], [17.0, 7.1]],
+  "note": "(r, z): blue anodised aluminium case, straight flank rounding into a wide domed bezel (top near 19 mm, crystal opening 17.39 mm); 10 mm thick listing"
+ },
+ "lug": {
+  "gap": 0.1,
+  "into_case": 1.5,
+  "inner_into_case_y": 16.3,
+  "top_z_at_case": 6.2,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.5,
+  "note": "open lug arms: outer edge from the traced silhouette, inner edge along the window (straight line fitted on all four arms), beside the end cap from y 21.5 mm to the tip"
+ },
+ "crystal": {
+  "z0": 7.1,
+  "z1": 7.45,
+  "dome": 0.15
+ },
+ "dial": {
+  "z": 6.3,
+  "roughness": 0.35,
+  "note": "flat dial to the crystal opening; applied indices, logo, print and the date window stay in the photo map"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 6.45,
+   "minute": 6.65,
+   "seconds": 6.85
+  },
+  "note": "plain light blue batons with round tips, posed as photographed (hour 295.1, minute 51.6, seconds 207.5 deg)"
+ },
+ "crown": {
+  "flute_depth": 0.12,
+  "neck_radius": 1.3,
+  "z": 3.0,
+  "note": "black crown at 3 with fine flutes"
+ },
+ "bracelet": {
+  "cap_z": [0.8, 4.8],
+  "cap_bevel": 0.35,
+  "mesh_z": [1.4, 2.8],
+  "mesh_bevel": 0.2,
+  "mesh_under_case": 0.5,
+  "mesh_roughness": 0.35,
+  "mesh_metallic": 1.0,
+  "bend_after_cap": 0.0,
+  "bend_radius": 7.0,
+  "note": "Solid blue end cap between the lug arms (photo: 22.31-28.64 mm, rigid), Milanese mesh 17.63 mm wide from under the case through the cap, house curl (SUR419P1) from the cap's outer end: 7 mm radius, end_y = bend_y + 2.2 R. Built at final depth."
+ },
+ "materials": {
+  "blue_alu": {
+   "color": [0.038, 0.223, 0.753],
+   "metallic": 1.0,
+   "roughness": 0.35,
+   "note": "matte blue anodised aluminium (photo, sRGB about 55/130/225): case, bezel, lug arms, end caps"
+  },
+  "hand_blue": {
+   "color": [0.188, 0.456, 0.753],
+   "metallic": 1.0,
+   "roughness": 0.15,
+   "note": "polished light blue hands and hub (photo)"
+  },
+  "crown_black": {
+   "color": [0.02, 0.02, 0.022],
+   "metallic": 0.8,
+   "roughness": 0.3,
+   "note": "black crown (photo)"
+  },
+  "crystal": {
+   "color": [0.0, 0.0, 0.0],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ }
+}
