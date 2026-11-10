@@ -1,6 +1,6 @@
 # Reference plan: Fossil Grant Chronograph FS4735 (polished steel, cream Roman-numeral chronograph dial, brown leather strap)
 
-Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 built 2026-11-10, waiting for designer review.
+Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 approved 2026-11-10.
 Template: the FS5305 leather-strap build (round case lathe, photo map for dial and strap, house curl), with this watch's own parts.
 
 ## References held
@@ -49,3 +49,4 @@ python3 -B -m pipeline.jobs run jobs/fossil-fs4735.json --force
 | Round | Date | Change |
 | --- | --- | --- |
 | 1 | 2026-11-10 | First front relief: polished case with crown guard and pushers, photo dial, steel hands with white lume, steel chronograph and subdial needles, knurled crown, brown leather strap with the 7 mm curl |
+| 1 | 2026-11-10 | Approved by Irsyad; GLB in `models/watches/fossil-fs4735.glb` |
