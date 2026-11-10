@@ -1,0 +1,46 @@
+{
+ "id": "hamilton-h69439940",
+ "output": "outputs/jobs/hamilton-h69439940",
+ "asset_type": "watch",
+ "model": "Hamilton H69439940",
+ "baseline": "Round 1: modelled front relief from the supplied straight front photo (1869 x 2909, native) at the official 38 mm case, house depth, glass, steel and strap curl; dial and NATO strap from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/hamilton-h69439940/REFERENCE_PLAN.md",
+  "config/watches/hamilton-h69439940.json",
+  "config/watches/hamilton-h69439940-trace.json",
+  "config/presets/watch_kit_white_front_hamilton_h69439940.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_hamilton_h69439940",
+   "params": {
+    "spec": "config/watches/hamilton-h69439940.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/hamilton-h69439940/hamilton-h69439940.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_hamilton_h69439940.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

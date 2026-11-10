@@ -1,0 +1,222 @@
+{
+ "model": "Hamilton H69439940",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (38 mm case and 20 mm lug width official, 47 mm lug to lug from reviews; the photo reads 46.7 mm). Heights before the house depth scale are a front-relief reading of the official 9.5 mm (no side photo). Built with the watch_hamilton_h69439940 step. House method: modelled bead-blasted case, sloped bezel, lugs, crown and the white lume-filled hands; photo maps only for the dial print and the NATO strap.",
+ "trace": "config/watches/hamilton-h69439940-trace.json",
+ "dial_map": "outputs/watches/hamilton-h69439940/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h69439940/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_to_lug": 47.0,
+  "strap_width": 20.0
+ },
+ "case": {
+  "material": "steel_blasted",
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    18.55,
+    0.0
+   ],
+   [
+    19.0,
+    0.45
+   ],
+   [
+    19.0,
+    5.2
+   ],
+   [
+    18.85,
+    5.75
+   ],
+   [
+    18.55,
+    6.05
+   ],
+   [
+    18.28,
+    6.2
+   ],
+   [
+    18.28,
+    4.5
+   ],
+   [
+    0.0,
+    4.5
+   ]
+  ],
+  "note": "Bead-blasted round flank up to the ridge at r 18.28 (photo step); inner top below the dial"
+ },
+ "bezel": {
+  "material": "steel_blasted",
+  "profile_rz": [
+   [
+    16.56,
+    5.6
+   ],
+   [
+    18.28,
+    5.6
+   ],
+   [
+    18.28,
+    6.2
+   ],
+   [
+    16.56,
+    5.95
+   ]
+  ],
+  "note": "Wide bead-blasted ring sloping in to the crystal (photo: 16.56-18.28 mm); slope direction inferred"
+ },
+ "gasket": {
+  "r_in": 16.46,
+  "r_out": 16.56,
+  "z0": 5.4,
+  "z1": 5.9
+ },
+ "crystal": {
+  "radius": 16.5,
+  "z0": 5.75,
+  "z1": 6.25,
+  "note": "flat sapphire just above the bezel's inner edge"
+ },
+ "dial": {
+  "z": 4.6,
+  "rehaut_r": 16.45,
+  "rehaut_z": 5.5,
+  "roughness": 0.35
+ },
+ "hands": {
+  "material": "hand_white",
+  "thickness": 0.12,
+  "lume_height": 0.06,
+  "z": {
+   "hour": 5.0,
+   "minute": 5.2,
+   "seconds": 5.4
+  }
+ },
+ "crown": {
+  "material": "steel_blasted",
+  "z": 3.0,
+  "neck": 0.0,
+  "flute_depth": 0.18
+ },
+ "lug": {
+  "material": "steel_blasted",
+  "into_case": 0.6,
+  "slope_from_y": 18.0,
+  "top_z_at_case": 5.6,
+  "top_z_at_tip": 4.4,
+  "bevel": 0.35
+ },
+ "strap": {
+  "z0": 1.0,
+  "z1": 2.4,
+  "bevel": 0.3,
+  "edge_inset": 0.1,
+  "roughness": 0.85,
+  "uv_inset": 0.02,
+  "note": "20 mm blue NATO (official lug width), house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case",
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "steel_blasted": {
+   "color": [
+    0.72,
+    0.72,
+    0.73
+   ],
+   "metallic": 1.0,
+   "roughness": 0.42,
+   "note": "bead-blasted matte steel (photo): case, bezel, lugs, crown"
+  },
+  "hand_white": {
+   "color": [
+    0.86,
+    0.86,
+    0.84
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35,
+   "note": "white painted hands (photo)"
+  },
+  "lume_hands": {
+   "color": [
+    0.9,
+    0.76,
+    0.5
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "cream lume (photo)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Field Mechanical 38 mm, blue dial, blue NATO strap",
+  "specs": [
+   [
+    "38 mm",
+    "Case (official)"
+   ],
+   [
+    "47 mm",
+    "Lug to lug (listed)"
+   ],
+   [
+    "20 mm",
+    "Strap (official)"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front photo is the straight-on image you supplied (1869 x 2909 px).",
+   "Case, sloped bezel, lugs and crown are modelled in matte bead-blasted steel as in the photo; the white hands with their cream lume, the round seconds counterweight and the lume arrow are modelled too. The dial print and the NATO strap come from the photo.",
+   "Heights are estimated from the official 9.5 mm (no side photo); the NATO buckle beside the top strap is not modelled."
+  ]
+ }
+}

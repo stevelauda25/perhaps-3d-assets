@@ -1,0 +1,230 @@
+{
+ "model": "Hamilton H70405710",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (38 mm case and 20 mm lug width official, 44.7 mm lug to lug from retailers; the photo reads 44.0 mm because the lugs curve down). Heights before the house depth scale are a front-relief reading of the listed 11.1 mm (no side photo). Built with the watch_hamilton_h69439940 step. House method: modelled brushed case flank, polished bezel, brushed lugs, polished crown and the polished hands with their lume; photo maps only for the dial print and the leather strap.",
+ "trace": "config/watches/hamilton-h70405710-trace.json",
+ "dial_map": "outputs/watches/hamilton-h70405710/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h70405710/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_to_lug": 44.7,
+  "strap_width": 20.0
+ },
+ "case": {
+  "material": "steel_satin",
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    18.55,
+    0.0
+   ],
+   [
+    19.0,
+    0.45
+   ],
+   [
+    19.0,
+    5.8
+   ],
+   [
+    18.85,
+    6.2
+   ],
+   [
+    18.23,
+    6.3
+   ],
+   [
+    18.23,
+    5.5
+   ],
+   [
+    0.0,
+    5.5
+   ]
+  ],
+  "note": "Brushed round flank with a narrow flat top to r 18.23 (photo step); inner top below the dial"
+ },
+ "bezel": {
+  "material": "steel_polished",
+  "profile_rz": [
+   [
+    16.47,
+    6.0
+   ],
+   [
+    18.23,
+    6.0
+   ],
+   [
+    18.23,
+    6.3
+   ],
+   [
+    17.6,
+    6.9
+   ],
+   [
+    16.47,
+    7.3
+   ]
+  ],
+  "note": "Wide polished bezel rising in a curve to the crystal (photo: 16.47-18.23 mm)"
+ },
+ "gasket": {
+  "r_in": 16.05,
+  "r_out": 16.3,
+  "z0": 6.6,
+  "z1": 7.2
+ },
+ "crystal": {
+  "radius": 16.4,
+  "z0": 7.0,
+  "z1": 7.7,
+  "note": "domed sapphire built as a flat disc at its mean height"
+ },
+ "dial": {
+  "z": 5.6,
+  "rehaut_r": 16.05,
+  "rehaut_z": 6.6,
+  "roughness": 0.4
+ },
+ "hands": {
+  "material": "steel_polished",
+  "thickness": 0.12,
+  "lume_height": 0.06,
+  "z": {
+   "hour": 6.0,
+   "minute": 6.2,
+   "seconds": 6.4
+  }
+ },
+ "crown": {
+  "material": "steel_polished",
+  "z": 3.3,
+  "neck": 0.0,
+  "flute_depth": 0.2
+ },
+ "lug": {
+  "material": "steel_brushed",
+  "polished_bevel": true,
+  "into_case": 0.6,
+  "slope_from_y": 17.0,
+  "top_z_at_case": 6.0,
+  "top_z_at_tip": 4.4,
+  "bevel": 0.35
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 3.6,
+  "bevel": 0.35,
+  "edge_inset": 0.1,
+  "roughness": 0.35,
+  "uv_inset": 0.02,
+  "note": "20 mm black croc-pattern leather (official lug width), house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case",
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_satin": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "brushed round flank: plain satin, the normal map's straight lines would cross the ring"
+  },
+  "lume_hands": {
+   "color": [
+    0.85,
+    0.78,
+    0.58
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "cream lume (photo)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Field Murph 38 mm, white dial, black leather strap",
+  "specs": [
+   [
+    "38 mm",
+    "Case (official)"
+   ],
+   [
+    "44.7 mm",
+    "Lug to lug (listed)"
+   ],
+   [
+    "20 mm",
+    "Strap (official)"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front photo is the straight-on image you supplied (1650 x 2539 px).",
+   "Brushed case flank and lugs, the wide polished bezel and the polished crown are modelled; the leaf hour hand with its four lume petals, the minute hand with three lume segments and its needle point, and the seconds needle are modelled in polished steel and cream lume. The dial print and the leather come from the photo.",
+   "Heights are estimated from the listed 11.1 mm (no side photo); the domed crystal is built flat at its mean height."
+  ]
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the strap; bevels keep the plain polished material"
+  }
+ }
+}
