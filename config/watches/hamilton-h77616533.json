@@ -1,0 +1,201 @@
+{
+ "model": "Hamilton H77616533",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the official front render (44 mm case at the bezel, official; the lug gap measures 21.2 mm against the official 22 mm). The render's lugs are foreshortened: the official 54 mm lug to lug is used, symmetric. Heights are a front-relief reading of the official 15.55 mm (the 3/4 photo shows the stacked bezel and the strap rivets). The printed inner rotating ring, subdials, numerals, lume dots, day-date and prints stay in the dial map; the bezel's engraved scale is traced and built as black inlays.",
+ "trace": "config/watches/hamilton-h77616533-trace.json",
+ "dial_map": "outputs/watches/hamilton-h77616533/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h77616533/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 44.24,
+  "lug_to_lug": 54.0,
+  "strap_width": 20.77
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    21.6,
+    0.0
+   ],
+   [
+    22.0,
+    0.45
+   ],
+   [
+    22.0,
+    4.7
+   ],
+   [
+    0.0,
+    4.7
+   ]
+  ],
+  "note": "round body under the bezel; flanks, lobes and lugs are the silhouette slab"
+ },
+ "bezel": {
+  "z0": 4.7,
+  "top_z": 7.2,
+  "chamfer": 0.35,
+  "print_raise": 0.03
+ },
+ "crystal": {
+  "radius": 18.567,
+  "z0": 6.1,
+  "z1": 6.35
+ },
+ "dial": {
+  "z": 4.9,
+  "roughness": 0.5
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "subdial": 5.0,
+   "hour": 5.2,
+   "minute": 5.38,
+   "chrono": 5.56
+  }
+ },
+ "crown": {
+  "z": 3.2,
+  "flute_depth": 0.25,
+  "pusher_teeth": 14
+ },
+ "lug": {
+  "slope_from_y": 21.0,
+  "top_z_at_case": 4.6,
+  "top_z_at_tip": 3.9,
+  "bevel": 0.4,
+  "note": "top below the dial (4.9): the slab runs under the bezel into the dial area"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.7,
+  "uv_inset": 0.02,
+  "start_y": 18.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "22 mm tan leather with rivets (official lug width), house curl from the lug tips; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "print_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Aviation X-Wind Auto Chrono 44 mm, black dial, tan leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "44 mm",
+    "case (official)"
+   ],
+   [
+    "54 mm",
+    "lug to lug (official)"
+   ],
+   [
+    "21.2 mm",
+    "lug gap in the render (22 official)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Hamilton's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference).",
+   "Modelled: polished bezel with its engraved scale as black inlays, case and lugs from the outline, sword hour and minute hands with lume, white chrono seconds needle, three subdial hands, fluted crown at 9 and pushers at 2 and 4, tan leather strap with the house curl.",
+   "From the photo map: black dial, printed inner rotating ring (drift angles, for CROSS WIND), the three subdials, numerals and lume dots, HAMILTON, the day-date window (8 SAT), Khaki Automatic X-Wind; the strap leather with rivets and stitching.",
+   "Heights are estimated from the official 15.55 mm (no side photo)."
+  ]
+ }
+}
