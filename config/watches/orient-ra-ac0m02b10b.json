@@ -1,0 +1,185 @@
+{
+ "model": "Orient RA-AC0M02B10B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the trace of Orient USA's front image of RA-AC0M02B30B (same dial, case and strap as B10B; 38.4 mm case, listings; the image reads 43.7 mm lug to lug against the listed 44 mm). Heights are a front-relief reading of the listed 12.5 mm with its domed crystal (no side photo). House method: modelled polished case, bezel, lugs, crown, applied markers and hands; photo maps only for the dial print and the leather strap.",
+ "trace": "config/watches/orient-ra-ac0m02b10b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-ac0m02b10b/dial_photo.jpg",
+ "strap_map": "outputs/watches/orient-ra-ac0m02b10b/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.4,
+  "lug_to_lug": 44.0,
+  "strap_width": 20.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    18.7,
+    0.0
+   ],
+   [
+    19.2,
+    0.5
+   ],
+   [
+    19.2,
+    5.2
+   ],
+   [
+    19.1,
+    6.0
+   ],
+   [
+    18.8,
+    6.8
+   ],
+   [
+    18.2,
+    7.6
+   ],
+   [
+    17.4,
+    8.2
+   ],
+   [
+    16.73,
+    8.45
+   ],
+   [
+    16.63,
+    8.45
+   ],
+   [
+    16.63,
+    7.4
+   ],
+   [
+    0.0,
+    7.4
+   ]
+  ],
+  "note": "flank to r 19.2, rounded shoulder, polished bezel sloping in to the crystal ring at 16.63"
+ },
+ "gasket": {
+  "r_in": 16.43,
+  "r_out": 16.63,
+  "z0": 7.8,
+  "z1": 8.4
+ },
+ "crystal": {
+  "radius": 16.619999999999997,
+  "z0": 8.35,
+  "z1": 8.45,
+  "dome": 1.6,
+  "note": "domed crystal"
+ },
+ "dial": {
+  "z": 7.5,
+  "rehaut_r": 16.58,
+  "rehaut_z": 8.1,
+  "roughness": 0.25
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.15
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.12,
+  "z": {
+   "hour": 7.95,
+   "minute": 8.13,
+   "seconds": 8.31
+  }
+ },
+ "crown": {
+  "z": 3.4,
+  "r_from": 19.3,
+  "cap": 0.35,
+  "flute_depth": 0.18
+ },
+ "lug": {
+  "into_case": 0.6,
+  "tip_outer_x": 11.45,
+  "slope_from_y": 16.0,
+  "top_z_at_case": 6.6,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.4
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.6,
+  "uv_inset": 0.02,
+  "start_y": 15.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "20 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Orient Bambino 38, black dial, black croc leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "38.4 mm",
+    "Case (listing)"
+   ],
+   [
+    "44 mm",
+    "Lug to lug"
+   ],
+   [
+    "20 mm",
+    "Strap"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front reference: Orient USA's own product image of RA-AC0M02B30B, the same watch (the photo supplied is angled).",
+   "Case, sloped bezel, domed crystal, lugs, crown, the faceted lancet markers (a pair at 12) and the faceted dauphine hands are modelled in the house polished steel; the dial print (minute track, logo, date) and the strap leather come from the photo.",
+   "Heights are estimated from the listed 12.5 mm thickness (no side photo)."
+  ]
+ }
+}

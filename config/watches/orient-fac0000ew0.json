@@ -1,0 +1,192 @@
+{
+ "model": "Orient FAC0000EW0",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial ring centre. Plan sizes from the trace of Orient USA's front image of TAC0000EW0 (the US code of the same watch), stretched 1.0416x vertically so the dial ring is round (40.5 mm case, listings; the stretched image reads 46.4 mm lug to lug against the listed 46.5 mm). Heights are a front-relief reading of the listed 11.8 mm with its domed crystal (no side photo). House method: modelled polished case, bezel, lugs, crown, applied batons and hands; photo maps only for the dial print and the leather strap.",
+ "trace": "config/watches/orient-fac0000ew0-trace.json",
+ "dial_map": "outputs/watches/orient-fac0000ew0/dial_photo.jpg",
+ "strap_map": "outputs/watches/orient-fac0000ew0/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.5,
+  "lug_to_lug": 46.5,
+  "strap_width": 21.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    19.75,
+    0.0
+   ],
+   [
+    20.25,
+    0.5
+   ],
+   [
+    20.25,
+    5.0
+   ],
+   [
+    20.15,
+    5.8
+   ],
+   [
+    19.85,
+    6.5
+   ],
+   [
+    19.3,
+    7.2
+   ],
+   [
+    18.514,
+    7.6
+   ],
+   [
+    18.364,
+    7.6
+   ],
+   [
+    18.364,
+    6.6
+   ],
+   [
+    0.0,
+    6.6
+   ]
+  ],
+  "note": "flank to r 20.25, rounded shoulder, thin polished bezel sloping in to the crystal ring at 18.36"
+ },
+ "gasket": {
+  "r_in": 18.164,
+  "r_out": 18.364,
+  "z0": 7.0,
+  "z1": 7.55
+ },
+ "crystal": {
+  "radius": 18.354,
+  "z0": 7.5,
+  "z1": 7.6,
+  "dome": 1.4,
+  "note": "domed mineral crystal"
+ },
+ "dial": {
+  "z": 6.7,
+  "rehaut_r": 18.314,
+  "rehaut_z": 7.3,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.3,
+  "ridge": 0.12
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.0,
+  "z": {
+   "hour": 7.1,
+   "minute": 7.28,
+   "seconds": 7.46
+  },
+  "material": "steel_satin",
+  "note": "flat satin baton hands (the photo shows them matte grey, not faceted)"
+ },
+ "crown": {
+  "z": 3.1,
+  "r_from": 20.35,
+  "cap": 0.35,
+  "flute_depth": 0.16
+ },
+ "lug": {
+  "into_case": 0.6,
+  "tip_outer_x": 11.45,
+  "slope_from_y": 17.0,
+  "top_z_at_case": 6.0,
+  "top_z_at_tip": 4.6,
+  "bevel": 0.4
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.6,
+  "uv_inset": 0.07,
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "21 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "steel_satin": {
+   "color": [
+    0.5,
+    0.5,
+    0.51
+   ],
+   "metallic": 1.0,
+   "roughness": 0.32
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Orient Bambino version 3, white dial, brown leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "40.5 mm",
+    "Case (listing)"
+   ],
+   [
+    "46.5 mm",
+    "Lug to lug"
+   ],
+   [
+    "21 mm",
+    "Strap"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front reference: Orient USA's own product image of TAC0000EW0, the US code of this watch (the photo supplied is angled).",
+   "Case, thin sloped bezel, domed crystal, lugs, crown, the four applied batons are modelled in the house polished steel, the flat baton hands in satin steel; the dial print (hour lines, minute track, logo, date) and the strap leather come from the photo.",
+   "Heights are estimated from the listed 11.8 mm thickness (no side photo)."
+  ]
+ }
+}
