@@ -1,0 +1,217 @@
+{
+ "model": "Hamilton H70515137",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the official front render (42 mm case, official; the lug gap measures 21.0 mm against the official 22 mm). The render's lugs are foreshortened (51.7 mm): the official 53 mm lug to lug is used, symmetric. Heights are a front-relief reading of the official 11 mm. The chapter ring, 1-12 and 13-24 numerals, date window and prints stay in the dial map.",
+ "trace": "config/watches/hamilton-h70515137-trace.json",
+ "dial_map": "outputs/watches/hamilton-h70515137/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0,
+  "lug_to_lug": 53.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.6,
+    0.0
+   ],
+   [
+    21.0,
+    0.45
+   ],
+   [
+    21.0,
+    4.2
+   ],
+   [
+    20.6,
+    4.9
+   ],
+   [
+    19.6,
+    5.6
+   ],
+   [
+    18.539,
+    5.95
+   ],
+   [
+    18.539,
+    4.6
+   ],
+   [
+    0.0,
+    4.6
+   ]
+  ],
+  "note": "flank to r 21, rounded shoulder, wide polished bezel sloping in to the crystal edge (18.5 mm)"
+ },
+ "crystal": {
+  "z0": 5.7,
+  "z1": 5.95
+ },
+ "dial": {
+  "z": 4.8,
+  "rehaut_z": 5.3,
+  "roughness": 0.45
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 5.0,
+   "minute": 5.18,
+   "seconds": 5.36
+  },
+  "seconds_half_width": 0.09,
+  "seconds_red_half_width": 0.22
+ },
+ "crown": {
+  "z": 3.0,
+  "flute_depth": 0.22
+ },
+ "lug": {
+  "from_y": 0.0,
+  "slope_from_y": 18.0,
+  "top_z_at_case": 4.6,
+  "top_z_at_tip": 3.9,
+  "bevel": 0.4
+ },
+ "end_link": {
+  "from_y": 17.0,
+  "half_width": 10.514,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 41.9,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "seconds_red": {
+   "color": [
+    0.62,
+    0.03,
+    0.03
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Field Auto 42 mm, black dial, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "42 mm",
+    "case (official)"
+   ],
+   [
+    "53 mm",
+    "lug to lug (official)"
+   ],
+   [
+    "21.0 mm",
+    "lug gap in the render (22 official)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Hamilton's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference).",
+   "Modelled: polished case with the wide sloped bezel, sword hour and minute hands with lume, white seconds hand with a red tip and tail disc, fluted crown, brushed lugs, three-column bracelet with the house curl.",
+   "From the photo map: black dial, chapter ring, 1-12 and 13-24 numerals, the date window (8), Hamilton logo, Khaki Automatic, Swiss Made.",
+   "The minute hand covers 14 and the hour hand the H of HAMILTON in the render; both are drawn again from the same dial. Heights are estimated (no side photo)."
+  ]
+ }
+}

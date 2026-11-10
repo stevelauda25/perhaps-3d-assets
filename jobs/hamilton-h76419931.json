@@ -1,0 +1,46 @@
+{
+ "id": "hamilton-h76419931",
+ "output": "outputs/jobs/hamilton-h76419931",
+ "asset_type": "watch",
+ "model": "Hamilton H76419931",
+ "baseline": "Round 1: modelled front relief from Hamilton's official 1200 x 1200 front render at the official 33 mm case width, house depth, glass, steel and strap curl; dial and NATO strap from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/hamilton-h76419931/REFERENCE_PLAN.md",
+  "config/watches/hamilton-h76419931.json",
+  "config/watches/hamilton-h76419931-trace.json",
+  "config/presets/watch_kit_white_front_hamilton_h76419931.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_hamilton_h76419931",
+   "params": {
+    "spec": "config/watches/hamilton-h76419931.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/hamilton-h76419931/hamilton-h76419931.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_hamilton_h76419931.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
