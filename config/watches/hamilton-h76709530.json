@@ -1,0 +1,206 @@
+{
+ "model": "Hamilton H76709530",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the official front render (43 mm case at the bezel scallop tips, official; the lug gap measures 19.4 mm against the official 20 mm; lug to lug 53.2 mm in the render against 52 mm official, render used). Heights are a front-relief reading of the official 13 mm (the 3/4 photo shows the bezel and crown). Bronze colours are medians of the render. The grained dial, numerals, railway track, small seconds ring and prints stay in the dial map; the insert's beige prints are traced and built as inlays.",
+ "trace": "config/watches/hamilton-h76709530-trace.json",
+ "dial_map": "outputs/watches/hamilton-h76709530/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h76709530/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 43.0,
+  "lug_to_lug": 53.2,
+  "strap_width": 19.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    21.0,
+    0.0
+   ],
+   [
+    21.4,
+    0.45
+   ],
+   [
+    21.4,
+    4.6
+   ],
+   [
+    0.0,
+    4.6
+   ]
+  ],
+  "note": "round body under the bezel"
+ },
+ "bezel": {
+  "z0": 4.6,
+  "insert_z": 6.6,
+  "rim_z": 6.75,
+  "rim_bevel": 0.1,
+  "print_raise": 0.03,
+  "scallop_depth": 0.4
+ },
+ "crystal": {
+  "z0": 6.3,
+  "z1": 6.55
+ },
+ "dial": {
+  "z": 4.8,
+  "rehaut_z": 5.6,
+  "roughness": 0.55
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "small_seconds": 4.95,
+   "hour": 5.1,
+   "minute": 5.28
+  }
+ },
+ "crown": {
+  "z": 3.0,
+  "flute_depth": 0.3
+ },
+ "lug": {
+  "slope_from_y": 20.0,
+  "top_z_at_case": 4.5,
+  "top_z_at_tip": 3.8,
+  "bevel": 0.4,
+  "note": "top below the dial (4.8): the slab runs under the bezel"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.75,
+  "uv_inset": 0.02,
+  "start_y": 18.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "20 mm dark brown leather (official lug width), house curl from the lug tips; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "bronze_polished": {
+   "color": [
+    0.6866,
+    0.3814,
+    0.1978
+   ],
+   "metallic": 1.0,
+   "roughness": 0.18,
+   "note": "render median of the bezel ring (linear)"
+  },
+  "bronze_brushed": {
+   "color": [
+    0.6866,
+    0.4078,
+    0.2234
+   ],
+   "metallic": 1.0,
+   "roughness": 0.32,
+   "note": "render median of the case flanks (linear)"
+  },
+  "insert_black": {
+   "color": [
+    0.012,
+    0.012,
+    0.013
+   ],
+   "metallic": 0.0,
+   "roughness": 0.12,
+   "note": "glossy black insert"
+  },
+  "print_beige": {
+   "color": [
+    0.7162,
+    0.4682,
+    0.2234
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "lume": {
+   "color": [
+    0.7162,
+    0.4682,
+    0.2234
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "beige vintage lume, same as the prints"
+  }
+ },
+ "bevel_material": "bronze_polished",
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "bronze_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Aviation Pilot Pioneer Mechanical Bronze 43 mm, black dial, dark brown leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "43 mm",
+    "case (official)"
+   ],
+   [
+    "53.2 mm",
+    "lug to lug in the render (52 official)"
+   ],
+   [
+    "19.4 mm",
+    "lug gap in the render (20 official)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Hamilton's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference).",
+   "Modelled: bronze bezel with a scalloped grip edge, glossy black insert with its beige triangle, numerals and bars as traced inlays, bronze case and lugs from the outline, bronze hour hand with the lume bulb and minute hand with lume, small seconds hand, large fluted crown at 3, dark brown leather strap with the house curl.",
+   "From the photo map: grained black dial, beige numerals, railway track, Hamilton logo, Mechanical, the small seconds ring, Swiss Made; the strap leather and stitching.",
+   "The hour hand's tip covers part of the 0 of 10 in the render; that 0 is drawn again. Bronze colours are taken from the render. Heights are estimated (no side photo)."
+  ]
+ }
+}

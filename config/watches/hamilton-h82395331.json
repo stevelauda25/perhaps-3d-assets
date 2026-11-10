@@ -1,0 +1,214 @@
+{
+ "model": "Hamilton Khaki Navy Scuba Auto H82395331",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (40 mm outer bezel, listing; lug gap 19.84 mm measured against 20 mm listed). Heights before the house depth scale (12.95 mm thick listing). House method: modelled brushed case, lugs and crown guards, polished coin-edge bezel and crown, applied polished indices with lume, modelled hands; photo maps only for the dial with the bezel insert, and for the rubber strap.",
+ "trace": "config/watches/hamilton-h82395331-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h82395331/dial.jpg",
+   "roughness": 0.35
+  },
+  "strap": {
+   "image": "outputs/watches/hamilton-h82395331/strap.jpg",
+   "roughness": 0.55
+  }
+ },
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_width": 20.0
+ },
+ "case": {
+  "radius": 20.0,
+  "top_z": 8.2,
+  "note": "brushed middle case ring: its flank is the outer silhouette at 9 o'clock (the anchor), just outside the bezel teeth; crown guards from the photo silhouette at 3 o'clock, top falling from 7.8 mm at r 20 to 3.6 mm at r 23",
+  "guard_top": [
+   [
+    20.0,
+    7.8
+   ],
+   [
+    23.0,
+    3.6
+   ]
+  ]
+ },
+ "lug": {
+  "slope_from_y": 16.0,
+  "top_z_at_case": 8.0,
+  "top_z_at_tip": 5.4,
+  "bevel": 0.35,
+  "note": "outline from the trace (mean of the four lugs, offset out from the inner edge per depth below the tip); brushed top sloping to the tip, polished edges"
+ },
+ "bezel": {
+  "z0": 8.0,
+  "skirt_h": 0.9,
+  "top_z": 10.0,
+  "chamfer": 0.25,
+  "insert_z": [
+   9.75,
+   9.9
+  ],
+  "note": "90 rounded teeth (bevelled lobes, a little below the polished flat) over a dark skirt so the notches read as shadow; polished flat to the black insert; insert photo-mapped, rising a little outward",
+  "teeth_drop": 0.25,
+  "teeth_bevel": 0.22
+ },
+ "crystal": {
+  "z0": 9.45,
+  "z1": 9.72
+ },
+ "dial": {
+  "z": 7.0,
+  "note": "flat dial with the orange minute track (print), short wall up to the crystal ring"
+ },
+ "indices": {
+  "height": 0.4,
+  "lume_height": 0.04,
+  "note": "applied: polished frame (lume outline grown by 5 px) with lume, trapezoids at 12, 3, 6, 9 and bars"
+ },
+ "hands": {
+  "thickness": 0.18,
+  "z": {
+   "hour": 7.75,
+   "minute": 8.05,
+   "seconds": 8.35
+  },
+  "materials": {
+   "metal": "steel_polished",
+   "black": "hand_black",
+   "colour": "seconds_colour",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03,
+   "black": 0.02,
+   "metal": 0.045
+  },
+  "polished_edge": [
+   "black"
+  ],
+  "note": "sword hour and minute hands: polished frame, lume, black tails with polished edges; black seconds hand with an orange arrow and lume, rectangular tail"
+ },
+ "crown": {
+  "z": 4.6,
+  "teeth": 18,
+  "flute_depth": 0.2,
+  "end": 0.7,
+  "note": "screw-down crown, 6.5 mm across, flutes along the axis, rounded end"
+ },
+ "strap": {
+  "half_width": 9.7,
+  "z0": 0.6,
+  "z1": 4.6,
+  "bevel": 0.6,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "start_y": 14.0,
+  "uv_inset": 0.02,
+  "note": "orange rubber, 19.4 mm (photo), house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case; each side samples the photo's straight strap with the lug tips aligned"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "lume": {
+   "color": [
+    0.95,
+    0.97,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "white lume with a cool tint (photo)"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "seconds_colour": {
+   "color": [
+    0.95,
+    0.22,
+    0.03
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "orange seconds arrow (photo)"
+  },
+  "bezel_shadow": {
+   "color": [
+    0.04,
+    0.04,
+    0.045
+   ],
+   "metallic": 1.0,
+   "roughness": 0.4,
+   "note": "inside of the bezel notches"
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Brushed steel case, black and orange dial, black diver's bezel, orange rubber strap. Front relief GLB.",
+  "specs": [
+   [
+    "40 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "48.5 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "House method: case, lugs, crown guards, coin-edge bezel and crown are modelled in the house steel; the applied indices and the hands are modelled too. The photo is used only for the dial print, the bezel insert and the rubber strap.",
+   "The photo is turned about 1 degree; the model is straight and the print is mapped through that turn.",
+   "The strap curls under at both ends, like the other tracker watches. The buckle is left out."
+  ]
+ }
+}

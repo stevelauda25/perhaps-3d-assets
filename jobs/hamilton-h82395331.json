@@ -1,0 +1,46 @@
+{
+  "id": "hamilton-h82395331",
+  "output": "outputs/jobs/hamilton-h82395331",
+  "asset_type": "watch",
+  "model": "Hamilton Khaki Navy Scuba Auto H82395331",
+  "baseline": "Round 1, house method on the 1786 x 2751 straight front photo (straightened 0.96 deg): 40 mm coin-edge bezel with the photo insert, brushed case, traced lugs and crown guards, applied indices, modelled hands, dial map with the hands removed, orange rubber strap from the photo with the 7 mm curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/hamilton-h82395331/REFERENCE_PLAN.md",
+    "config/watches/hamilton-h82395331.json",
+    "config/watches/hamilton-h82395331-trace.json",
+    "config/presets/watch_kit_white_front_hamilton_h82395331.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_hamilton_scuba_pioneer",
+      "params": {
+        "spec": "config/watches/hamilton-h82395331.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/hamilton-h82395331/hamilton-h82395331.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_hamilton_h82395331.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
