@@ -1,10 +1,10 @@
 """watch_orient_ra_ak0705r10b: build the Orient RA-AK0705R10B (polished steel case, burgundy sunburst dial with day and 24-hour
-sub-dials, gold-tone hands and applied numerals, brown croc leather strap) as a flat-backed front relief.
+sub-dials, black hands and applied numerals, gold seconds, brown croc leather strap) as a flat-backed front relief.
 
 Params: spec (config/watches/orient-ra-ak0705r10b.json). Frame as watch_orient_re_at0007n00b: mm, origin = hand pivot, dial
 faces +z, back flat at z = 0, one pose empty `SKO | pose`, watch head depth scaled by pose.depth_scale, strap built at final
 depth with the house curl. House method: case, bezel, rehaut, lugs and crown in the house polished steel, house glass, modelled
-faceted gold hands and gold applied numerals and bars; one photo map (pipeline/orient_ra_ak0705r10b_dial.py, hands removed)
+faceted black hands (gold seconds) and black applied numerals and bars; one photo map (pipeline/orient_ra_ak0705r10b_dial.py, hands removed)
 serves only the dial print, the raised ORIENT letters and the leather strap. The case is round about the pivot; the photo's
 case centre sits 0.38 mm below the pivot, so the dial UVs move from the pivot (centre) to the photo's rings (rim).
 Rebuild with --force after regenerating the photo map.
@@ -126,12 +126,12 @@ def run(params):
     dome += [ring(R_open * f, cr["z1"] + cr["dome"] * (1 - f * f)) for f in (0.92, 0.8, 0.65, 0.48, 0.3, 0.12)]
     add("crystal", loft(dome, top_cap=True), "crystal")
 
-    # ---- applied: gold Roman numerals and bars, raised ORIENT letters with the photo on them ----
+    # ---- applied: Roman numerals and bars (material from the spec), raised ORIENT letters with the photo on them ----
     ap = cfg["applied"]
-    add("numerals", plate(tr["numerals"], d["z"], d["z"] + ap["height"], P + "numerals"), "gold_polished", bevel=ap["bevel"])
+    add("numerals", plate(tr["numerals"], d["z"], d["z"] + ap["height"], P + "numerals"), ap["material"], bevel=ap["bevel"])
     add("logo", plate(tr["logo"], d["z"], d["z"] + ap["logo_height"], P + "logo"), "dial", uv_of=dial_uv)
 
-    # ---- hands at the photo's time: faceted gold, ridge on the axis ----
+    # ---- hands at the photo's time: faceted, ridge on the axis, material per hand from the spec ----
     hs, th, ef = cfg["hands"], cfg["hands"]["thickness"], cfg["hands"]["edge_fraction"]
     for name in ("hour", "minute", "seconds"):
         h = tr["hands"][name]
@@ -140,7 +140,7 @@ def run(params):
             rr, rc = h["tail_round_mm"], tail[-1][0]
             tail = tail[:-1] + [(rc - rr * math.sin(a), rr * math.cos(a)) for a in [i * math.pi / 16 for i in range(9)]]
         st = sorted(tail + [tuple(s) for s in h["stations_mm"]] + [(h["length_mm"], 0.0)])
-        add("hand_" + name, ridge(Geo(), st, hs["z"][name], th, ef, h["angle_deg"]), "gold_polished", bevel=0.02)
+        add("hand_" + name, ridge(Geo(), st, hs["z"][name], th, ef, h["angle_deg"]), hs["material"][name], bevel=0.02)
     for name in ("sub_day", "sub_h24"):
         h, z = tr["hands"][name], hs["z"][name]
         hub, hr, hw, L = h["hub_mm"], h["head_r_mm"], h["half_mm"], h["length_mm"]
@@ -148,10 +148,10 @@ def run(params):
         m = Matrix.Translation((hub[0], hub[1], 0.0))
         g.lathe([(0, z), (hr, z), (hr, z + th * 0.8), (0, z + th * 0.8)], segs=48, m=m)
         g.lathe([(0, z), (0.2, z), (0.2, z + th + 0.12), (0, z + th + 0.16)], segs=24, m=m)
-        add("hand_" + name, g, "gold_polished", bevel=0.02)
+        add("hand_" + name, g, hs["material"][name], bevel=0.02)
     zt, hub_r = hs["z"]["seconds"] + th, cfg["hands"]["hub_radius"]
     add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, zt + 0.06), (hub_r * 0.6, zt + hs["hub_height"]), (0, zt + hs["hub_height"])], segs=48),
-        "gold_polished", smooth=True)
+        hs["material"]["hub"], smooth=True)
 
     # ---- crown on the 3 o'clock axis: neck, fluted body, rounded end ----
     cw = cfg["crown"]
