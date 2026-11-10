@@ -1,0 +1,46 @@
+{
+  "id": "armani-ax1903",
+  "output": "outputs/jobs/armani-ax1903",
+  "asset_type": "watch",
+  "model": "Armani Exchange AX1903",
+  "baseline": "First build: 16-sided polished steel case with crown guard and red 12 o'clock stripes, white dial photo map, white sword hands with the black AX fork, black seconds needle and brown leather strap from the straight front photo at 44 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/armani-ax1903/REFERENCE_PLAN.md",
+    "config/watches/armani-ax1903.json",
+    "config/watches/armani-ax1903-trace.json",
+    "config/presets/watch_kit_white_front_armani_ax1903.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_armani_ax1903",
+      "params": {
+        "spec": "config/watches/armani-ax1903.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/armani-ax1903/armani-ax1903.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_armani_ax1903.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+ "model": "Armani Exchange AX1903",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (44 mm across the 9-3 flats, listing; strap 21.91 mm measured). Heights before the house depth scale (11 mm thick listing). Dial print, indices, logo, minute track and the strap leather come from one photo map.",
+ "trace": "config/watches/armani-ax1903-trace.json",
+ "photo_map": "outputs/watches/armani-ax1903/dial_photo.jpg",
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
+ },
+ "verified_mm": {
+  "across_flats": 44.0,
+  "strap_width": 21.91
+ },
+ "case": {
+  "step_deg": 2.5,
+  "rings": [
+   [
+    "poly",
+    0.6,
+    0.0
+   ],
+   [
+    "poly",
+    0.0,
+    0.6
+   ],
+   [
+    "poly",
+    0.0,
+    5.8
+   ],
+   [
+    "poly",
+    0.35,
+    6.3
+   ],
+   [
+    "poly",
+    2.17,
+    9.1
+   ],
+   [
+    "poly",
+    3.46,
+    9.35
+   ],
+   [
+    "round",
+    17.84,
+    9.05
+   ],
+   [
+    "round",
+    17.15,
+    8.75
+   ],
+   [
+    "round",
+    17.15,
+    8.4
+   ],
+   [
+    "round",
+    16.85,
+    8.4
+   ]
+  ],
+  "note": "[kind, inset from the 16-gon (poly) or radius (round), z]: flank, small top chamfer, sloped outer bezel band (photo grey band), near-flat bezel top to the inner polygon edge, round inner bevel down to the crystal seat"
+ },
+ "guard": {
+  "into_case": 0.6,
+  "z": 6.0,
+  "slope": 0.55,
+  "bevel": 0.35,
+  "note": "crown guard shoulder (right silhouette), its top falling toward the crown (dark in the photo)"
+ },
+ "marker": {
+  "raise": 0.1,
+  "note": "two red stripes on the bezel at 12 (photo), following the sloped bezel top"
+ },
+ "lug": {
+  "gap": 0.1,
+  "into_case": 1.5,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.6,
+  "bevel": 0.4,
+  "note": "wide polished lugs with a sloped top and a slanted tip (front photo and 3/4 view)"
+ },
+ "crystal": {
+  "z0": 8.4,
+  "z1": 8.75,
+  "dome": 0.25
+ },
+ "dial": {
+  "z": 7.4,
+  "track_z": 7.8,
+  "note": "flat dial to the minute track dots, then a shallow cone up to the crystal seat"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume_raise": 0.05,
+  "z": {
+   "hour": 7.55,
+   "minute": 7.75,
+   "fork": 7.95,
+   "seconds": 8.15
+  },
+  "note": "white sword hands with grey edges and black tips (hour: round-ended needle, minute: lance), the black AX fork over both, black seconds needle with a white stripe and red tip"
+ },
+ "crown": {
+  "flute_depth": 0.2,
+  "z": 4.2,
+  "note": "steel crown at 3: smooth collar, fluted body, chamfered end"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "under_case": 0.8,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "end_y": 40.9,
+  "note": "House curl (SUR419P1): bend at the lug tips (25.5 mm), 7 mm radius, end_y = tip + 2.2 x radius"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: crown, hand bodies, hub"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "brushed steel (photo: matte grey case, bezel, lugs and guard), house brushed roughness without the bracelet normal map"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "lume": {
+   "color": [
+    0.92,
+    0.92,
+    0.9
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "white hand tops and the seconds stripe (photo)"
+  },
+  "paint_black": {
+   "color": [
+    0.012,
+    0.012,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35,
+   "note": "black hand tips, AX fork, seconds needle"
+  },
+  "marker_red": {
+   "color": [
+    0.55,
+    0.02,
+    0.03
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "red bezel stripes at 12 and seconds tip"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ }
+}
