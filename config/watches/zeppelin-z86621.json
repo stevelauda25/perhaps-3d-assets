@@ -1,0 +1,30 @@
+{
+ "model": "Zeppelin New Captain's Line Z86621",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the trace of the straightened front photo (43 mm case, listing; strap between the lugs 21.3 mm measured, listing 22 mm; listing: 13 mm thick). Heights before the house depth scale. Dial print, sub-dial rings and tracks, gold 24 h batons, logo and the rehaut come from the dial map; the strap leather from the strap map (12 o'clock strap of the photo, both sides).",
+ "trace": "config/watches/zeppelin-z86621-trace.json",
+ "dial_map": "outputs/watches/zeppelin-z86621/dial_photo.jpg",
+ "strap_map": "outputs/watches/zeppelin-z86621/strap_photo.jpg",
+ "photo_roughness": {"dial": 0.4, "strap_leather": 0.55},
+ "verified_mm": {"diameter": 43.0, "strap_width": 21.28},
+ "case": {"profile": [[17.5, 0.0], [20.9, 0.0], [21.5, 0.9], [21.5, 5.6], [21.4, 6.6], [21.15, 7.4], [20.8, 7.9], [20.3, 8.15], [19.8, 8.2], [19.8, 7.55], [19.7, 7.55]],
+          "note": "(r, z): polished flank rounding into the thin polished bezel (19.8-20.9 mm in the photo); inner lip over the rehaut"},
+ "lug": {"gap": 0.1, "into_case": 1.5, "top_z": [6.6, 4.6], "bevel": 0.7, "square_tip": 1.2,
+         "note": "plain polished lugs from the traced silhouette, top sloping down from the case to the tip; wide edge radius for the rounded outer flank of the photo; end cut square over the last 1.2 mm (photo)"},
+ "crystal": {"z0": 8.2, "z1": 8.5, "dome": 1.2, "note": "high domed crystal sitting on the bezel top (photo: strong edge glare)"},
+ "dial": {"z": 7.0, "flange_z": 7.5},
+ "hands": {"thickness": 0.15, "ridge": 0.5, "z": {"hour": 7.25, "minute": 7.4, "sub": 7.05},
+           "note": "ridge before the depth scale: about 12 deg facets after it, enough to split light and dark like the photo; minute ridge top 8.05 under the collet top (8.1) and the crystal (8.2)",
+           "collet_top": 8.1, "cap": [0.62, 0.5, 8.18], "sub_pin": 0.23},
+ "crown": {"teeth": 14, "flute_depth": 0.35, "neck_radius": 2.0, "z": 4.0},
+ "strap": {"z0": 0.8, "z1": 4.0, "bevel": 0.35, "edge_inset": 0.05, "under_case": 0.8, "bend_after_tip": 0.0, "bend_radius": 7.0, "end_y": 39.76,
+           "note": "House curl (SUR419P1): bend at the lug tips (24.36 mm), 7 mm radius, end_y = tip + 2.2 x radius"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "hand_dark": {"color": [0.03, 0.035, 0.05], "metallic": 1.0, "roughness": 0.18, "note": "faceted dark steel hour and minute hands: one facet near black, the other grey in the photo"},
+  "hub_grey": {"color": [0.32, 0.32, 0.34], "metallic": 1.0, "roughness": 0.3, "note": "centre collet and cap: mid grey in the photo, polished ring at the cap edge"},
+  "hand_black": {"color": [0.012, 0.012, 0.014], "metallic": 0.0, "roughness": 0.25, "note": "black sub-dial needles and hubs (photo)"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass. Black base colour keeps the dial from hazing"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35}
+}

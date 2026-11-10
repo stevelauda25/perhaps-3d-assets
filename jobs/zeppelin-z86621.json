@@ -1,0 +1,46 @@
+{
+  "id": "zeppelin-z86621",
+  "output": "outputs/jobs/zeppelin-z86621",
+  "asset_type": "watch",
+  "model": "Zeppelin New Captain's Line Z86621",
+  "baseline": "First build: round polished case with plain lugs, white dial with 24 h and small seconds sub-dials, faceted dark hands and brown leather strap from the straightened front photo at 43 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/zeppelin-z86621/REFERENCE_PLAN.md",
+    "config/watches/zeppelin-z86621.json",
+    "config/watches/zeppelin-z86621-trace.json",
+    "config/presets/watch_kit_white_front_zeppelin_z86621.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_zeppelin_z86621",
+      "params": {
+        "spec": "config/watches/zeppelin-z86621.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/zeppelin-z86621/zeppelin-z86621.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_zeppelin_z86621.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
