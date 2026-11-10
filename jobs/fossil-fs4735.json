@@ -1,0 +1,46 @@
+{
+  "id": "fossil-fs4735",
+  "output": "outputs/jobs/fossil-fs4735",
+  "asset_type": "watch",
+  "model": "Fossil Grant Chronograph FS4735",
+  "baseline": "First build: round polished steel case with crown guard and pushers, cream chronograph dial photo map, steel hands with white lume, steel chronograph and subdial needles and brown leather strap from the straight front photo at 44 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/fossil-fs4735/REFERENCE_PLAN.md",
+    "config/watches/fossil-fs4735.json",
+    "config/watches/fossil-fs4735-trace.json",
+    "config/presets/watch_kit_white_front_fossil_fs4735.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_fossil_fs4735",
+      "params": {
+        "spec": "config/watches/fossil-fs4735.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/fossil-fs4735/fossil-fs4735.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_fossil_fs4735.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
