@@ -1,0 +1,241 @@
+{
+ "model": "Orient FAA02004B9",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (41.5 mm bezel, listing; the end link measures 21.3 mm against the listed 22 mm lug width). Heights are a front-relief reading of the listed 13 mm (no side photo). The black dial, minute track and chapter ring print, logo, prints, the day-date wheels and the black bezel insert with its print are one photo map.",
+ "trace": "config/watches/orient-faa02004b9-trace.json",
+ "dial_map": "outputs/watches/orient-faa02004b9/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.5,
+  "lug_to_lug": 46.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    20.0,
+    0
+   ],
+   [
+    20.45,
+    0.45
+   ],
+   [
+    20.55,
+    1.2
+   ],
+   [
+    20.55,
+    4.3
+   ],
+   [
+    20.2,
+    4.9
+   ],
+   [
+    19.0,
+    4.9
+   ],
+   [
+    19.0,
+    5.0
+   ],
+   [
+    0.0,
+    5.0
+   ]
+  ]
+ },
+ "crystal": {
+  "z0": 6.32,
+  "z1": 6.62
+ },
+ "bezel": {
+  "z0": 4.9,
+  "rim_z": 6.7,
+  "insert_z": [
+   6.4,
+   6.55
+  ],
+  "notch_depth": 0.15,
+  "rim_bevel": 0.12
+ },
+ "dial": {
+  "z": 5.1,
+  "rehaut_z": 5.9,
+  "roughness": 0.3
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.05,
+  "date_frame": 0.16
+ },
+ "hands": {
+  "thickness": 0.12,
+  "outline": 0.1,
+  "z": {
+   "hour": 5.6,
+   "minute": 5.78,
+   "seconds": 5.96
+  }
+ },
+ "crown": {
+  "flute_depth": 0.16,
+  "teeth": 24,
+  "z": 3.0,
+  "guard_top_z": 4.4
+ },
+ "lug": {
+  "inner_x": 10.66,
+  "from_y": 10.5,
+  "top_z_at_case": 5.0,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 16.0,
+  "half_width": 10.66,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.4,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R",
+  "narrow_raise": 0.05
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "bezel_fill": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "seconds_red": {
+   "color": [
+    0.75,
+    0.04,
+    0.03
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Orient Ray II diver, black dial, black bezel insert, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "41.5 mm",
+    "bezel (listing)"
+   ],
+   [
+    "46.0 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "60",
+    "bezel ring notches"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: case with crown guards, polished steel bezel ring with notches, polished ring at the crystal, applied polished frames with lume (dots, trapezoid at 12, bars at 6 and 9), polished day-date frame, hour and minute hands with a black inside and lume, seconds hand with the hollow red arrow, fluted crown, brushed lugs with polished chamfer, bracelet with polished strips on the centre links.",
+   "From the photo map: black dial, minute track and chapter ring, logo, Automatic, Water Resist 200m, the day-date wheels, and the black bezel insert with its print.",
+   "Scale is the listed 41.5 mm. Heights are estimated (no side photo). The bezel notches are cut into its edge; on the watch they are recesses in the top."
+  ]
+ }
+}

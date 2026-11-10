@@ -1,0 +1,46 @@
+{
+ "id": "orient-faa02004b9",
+ "output": "outputs/jobs/orient-faa02004b9",
+ "asset_type": "watch",
+ "model": "Orient FAA02004B9",
+ "baseline": "Round 1: modelled front relief from the 1811 x 2956 retailer photo (native) at the listed 41.5 mm bezel, house depth, glass, steel and bracelet curl; dial and black bezel insert from one photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-faa02004b9/REFERENCE_PLAN.md",
+  "config/watches/orient-faa02004b9.json",
+  "config/watches/orient-faa02004b9-trace.json",
+  "config/presets/watch_kit_white_front_orient_faa02004b9.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_faa02004b9",
+   "params": {
+    "spec": "config/watches/orient-faa02004b9.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-faa02004b9/orient-faa02004b9.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_faa02004b9.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
