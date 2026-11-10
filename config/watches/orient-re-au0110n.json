@@ -1,0 +1,239 @@
+{
+ "model": "Orient Star RE-AU0110N",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (38.5 mm case, shared part sizes read on the RE-AU0110N photo); heights scaled to the listed 12.3 mm thickness (no side view of this model). The dial print, lume dots, minute track, date, logo and the power reserve scale stay in the dial map.",
+ "trace": "config/watches/orient-re-au0110n-trace.json",
+ "dial_map": "outputs/watches/orient-re-au0110n/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.5,
+  "lug_to_lug": 46.6
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    18.75,
+    0
+   ],
+   [
+    19.15,
+    0.4
+   ],
+   [
+    19.25,
+    1.2
+   ],
+   [
+    19.25,
+    6.3
+   ],
+   [
+    19.15,
+    6.9
+   ],
+   [
+    19.0,
+    7.3
+   ],
+   [
+    18.8,
+    7.6
+   ],
+   [
+    17.6,
+    9.7
+   ],
+   [
+    17.38,
+    9.86
+   ],
+   [
+    17.25,
+    9.82
+   ],
+   [
+    17.25,
+    8.2
+   ],
+   [
+    0.0,
+    8.2
+   ]
+  ],
+  "note": "thin case flank to 19.25, wide polished bezel sloping from 19.0 to the crystal ring at 17.25"
+ },
+ "gasket": {
+  "r_in": 17.05,
+  "r_out": 17.25,
+  "z0": 8.35,
+  "z1": 9.5
+ },
+ "crystal": {
+  "radius": 17.25,
+  "z0": 9.56,
+  "z1": 9.82
+ },
+ "dial": {
+  "z": 8.3,
+  "rehaut_r": 17.1,
+  "rehaut_z": 9.15,
+  "roughness": 0.35
+ },
+ "pr_arc": {
+  "height": 0.3,
+  "bevel": 0.06
+ },
+ "indices": {
+  "height": 0.35,
+  "ridge": 0.28,
+  "groove": 0.12
+ },
+ "numerals": {
+  "height": 0.35,
+  "bevel": 0.04
+ },
+ "hands": {
+  "thickness": 0.1,
+  "ridge": 0.18,
+  "z": {
+   "pr": 8.68,
+   "hour": 8.78,
+   "minute": 9.1,
+   "seconds": 9.42
+  }
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.22,
+  "z": 3.7
+ },
+ "lug": {
+  "tip": 23.3,
+  "from_y": 7.75,
+  "inner_x": 10.0,
+  "case_r_in": 18.6,
+  "top_z_at_case": 7.2,
+  "top_z_at_tip": 5.4,
+  "facet_width": 1.9,
+  "facet_drop": 1.3,
+  "bevel": 0.3,
+  "note": "tip 23.3 mm: photo 22.7 / 23.8 at 12 / 6 (RE-AU0110N), listed lug to lug 46.9"
+ },
+ "end_link": {
+  "from_y": 15.5,
+  "half_width": 9.95,
+  "top_z": 4.6,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.7,
+  "z0": 0.5,
+  "z1": 3.4,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "house curl: 7 mm radius from the lug tips, end_y = tip + 2.2 R, about 125 deg so the ends roll under the watch"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.05,
+    0.05,
+    0.055
+   ],
+   "metallic": 1.0,
+   "roughness": 0.18,
+   "note": "seconds and power reserve hands: dark polished steel"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Steel case and three-link bracelet, grey sunburst dial with power reserve and date. Front relief GLB.",
+  "specs": [
+   [
+    "38.5 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "46.6 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Round 1. House method: case, wide polished bezel, faceted lugs, crown, bracelet, indices, Roman XII and VI and all hands are modelled in the house steel; the photo is used only for the dial print.",
+   "Lugs have a brushed top and a polished outer facet. The bracelet has brushed centre and outer links with narrow polished rails between them; the centre joints sit about 1.3 mm nearer the case, as in the photo.",
+   "The power reserve crescent is a raised part carrying its own print (50 / 25 / 0 and ticks). Seconds and power reserve hands are dark steel.",
+   "The bracelet curls under at both ends like the other tracker watches; the clasp is left out.",
+   "Heights follow the listed 12.3 mm thickness; no side photo of this model was available."
+  ]
+ }
+}

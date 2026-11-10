@@ -1,0 +1,46 @@
+{
+  "id": "orient-re-au0108g",
+  "output": "outputs/jobs/orient-re-au0108g",
+  "asset_type": "watch",
+  "model": "Orient Star RE-AU0108G",
+  "baseline": "Round 1: round steel case with a wide sloped polished bezel, faceted lugs, fluted crown, applied batons, XII and VI, raised power reserve crescent, dauphine hands, copper dial photo map, three-link bracelet with polished rails and the house curl, 38.5 mm",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-re-au0108g/REFERENCE_PLAN.md",
+    "config/watches/orient-re-au0108g.json",
+    "config/watches/orient-re-au0108g-trace.json",
+    "config/presets/watch_kit_white_front_orient_re_au0108g.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_re_au01",
+      "params": {
+        "spec": "config/watches/orient-re-au0108g.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-re-au0108g/orient-re-au0108g.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_re_au0108g.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
