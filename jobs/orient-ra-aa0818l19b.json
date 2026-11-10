@@ -1,0 +1,46 @@
+{
+ "id": "orient-ra-aa0818l19b",
+ "output": "outputs/jobs/orient-ra-aa0818l19b",
+ "asset_type": "watch",
+ "model": "Orient RA-AA0818L19B",
+ "baseline": "Round 1: modelled front relief from the 1700 x 2715 retailer photo at the listed 41.8 mm case, house depth, glass, steel and bracelet curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-ra-aa0818l19b/REFERENCE_PLAN.md",
+  "config/watches/orient-ra-aa0818l19b.json",
+  "config/watches/orient-ra-aa0818l19b-trace.json",
+  "config/presets/watch_kit_white_front_orient_ra_aa0818l19b.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_ra_aa0818l19b",
+   "params": {
+    "spec": "config/watches/orient-ra-aa0818l19b.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-ra-aa0818l19b/orient-ra-aa0818l19b.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_ra_aa0818l19b.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
