@@ -1,0 +1,46 @@
+{
+  "id": "hamilton-h76255810",
+  "output": "outputs/jobs/hamilton-h76255810",
+  "asset_type": "watch",
+  "model": "Hamilton Khaki Aviation Pilot Pioneer Auto H76255810",
+  "baseline": "Round 1, house method on the 1209 x 1982 straight front photo (straightened 0.28 deg): 38 mm coin-edge bezel with the photo's green insert, brushed case, traced lugs, onion crown, black leaf, baton and needle hands with lume, dial map with the hands removed, green leather strap from the photo with the 7 mm curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/hamilton-h76255810/REFERENCE_PLAN.md",
+    "config/watches/hamilton-h76255810.json",
+    "config/watches/hamilton-h76255810-trace.json",
+    "config/presets/watch_kit_white_front_hamilton_h76255810.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_hamilton_scuba_pioneer",
+      "params": {
+        "spec": "config/watches/hamilton-h76255810.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/hamilton-h76255810/hamilton-h76255810.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_hamilton_h76255810.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

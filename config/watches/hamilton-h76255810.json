@@ -1,0 +1,196 @@
+{
+ "model": "Hamilton Khaki Aviation Pilot Pioneer Auto H76255810",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (38 mm outer bezel, listing; lug gap 18.20 mm measured against 18 mm listed). Heights before the house depth scale (11.4 mm thick listing). House method: modelled brushed case and lugs, polished coin-edge bezel and onion crown, modelled black leaf hour, baton minute and needle seconds hands with lume; photo maps only for the dial with the green bezel insert, and for the leather strap.",
+ "trace": "config/watches/hamilton-h76255810-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h76255810/dial.jpg",
+   "roughness": 0.35
+  },
+  "strap": {
+   "image": "outputs/watches/hamilton-h76255810/strap.jpg",
+   "roughness": 0.6
+  }
+ },
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_width": 18.0
+ },
+ "case": {
+  "radius": 19.0,
+  "top_z": 7.4,
+  "note": "brushed middle case ring: its flank is the outer silhouette at 9 o'clock (the anchor), just outside the bezel teeth (no crown guards)"
+ },
+ "lug": {
+  "slope_from_y": 15.5,
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 4.8,
+  "bevel": 0.3,
+  "note": "outline from the trace (mean of the four lugs); brushed top sloping to the tip, polished edges"
+ },
+ "bezel": {
+  "z0": 7.2,
+  "skirt_h": 0.6,
+  "top_z": 8.9,
+  "teeth_drop": 0.12,
+  "teeth_bevel": 0.08,
+  "chamfer": 0.15,
+  "insert_z": [
+   8.6,
+   8.75
+  ],
+  "note": "120 fine teeth over a dark skirt, polished flat to the green insert; insert photo-mapped"
+ },
+ "crystal": {
+  "z0": 8.3,
+  "z1": 8.62
+ },
+ "dial": {
+  "z": 6.3,
+  "note": "flat cream dial with the printed numerals and railroad track, short wall up to the crystal ring"
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 6.6,
+   "minute": 6.85,
+   "seconds": 7.1
+  },
+  "materials": {
+   "metal": "hand_black_gloss",
+   "black": "hand_black_gloss",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03,
+   "black": 0.02,
+   "metal": 0.045
+  },
+  "polished_edge": [],
+  "note": "black hands (photo: black frames with light edge highlights): leaf hour hand with a spine, baton minute hand with three lume panels, needle seconds hand with a lozenge counterweight"
+ },
+ "crown": {
+  "z": 4.0,
+  "teeth": 16,
+  "flute_depth": 0.3,
+  "end": 0.5,
+  "note": "onion crown: neck at the bezel, cone out to 7.1 mm, fluted barrel, rounded end (trace profile)"
+ },
+ "strap": {
+  "half_width": 8.85,
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "start_y": 13.0,
+  "uv_inset": 0.02,
+  "note": "green leather, 17.7 mm (photo), house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; each side samples the photo's straight strap (keepers included) with the lug tips aligned"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "bezel_shadow": {
+   "color": [
+    0.3,
+    0.3,
+    0.31
+   ],
+   "metallic": 1.0,
+   "roughness": 0.35,
+   "note": "inside of the fine bezel notches (lighter than the Scuba's: the photo's coin edge reads light)"
+  },
+  "lume": {
+   "color": [
+    0.78,
+    0.8,
+    0.56
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "cream-green lume on the hands (photo)"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "hand_black_gloss": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.12,
+   "note": "glossy black hands"
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Brushed steel case, eggshell dial with Arabic numerals, moss green bezel, green leather strap. Front relief GLB.",
+  "specs": [
+   [
+    "38 mm",
+    "Case diameter"
+   ],
+   [
+    "18 mm",
+    "Lug width"
+   ],
+   [
+    "45.3 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "House method: case, lugs, coin-edge bezel and onion crown are modelled in the house steel; the hands are modelled in glossy black with lume, as in the photo. The photo is used only for the dial print, the green bezel insert and the leather strap.",
+   "The numerals and the railroad minute track are printed flat on the dial.",
+   "The strap keepers come from the photo. The strap curls under at both ends, like the other tracker watches; the buckle is left out."
+  ]
+ }
+}
