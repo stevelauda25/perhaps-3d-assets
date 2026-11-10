@@ -1,6 +1,6 @@
 {
   "name": "WATCH_KIT_WHITE_ORIENT_RE_AT0007N00B",
-  "note": "White kit with a straight-on orthographic camera matching references/orient-re-at0007n00b/front_2x_1510x2252.png padded white to a 2252 px square centred on the hand pivot (720, 986) and resized to 2000 px. Comparison only, not the presentation look.",
+  "note": "White kit with a straight-on orthographic camera matching references/orient-re-at0007n00b/front_2x_2000x3234.png padded white to a 2800 px square centred on the hand pivot (920, 1382) and resized to 2000 px. Comparison only, not the presentation look.",
   "ground": false,
   "world": {
     "top": [
@@ -92,7 +92,7 @@
   "cameras": {
     "front_ortho": {
       "ortho": {
-        "scale_px_per_mm": 30.548,
+        "scale_px_per_mm": 30.4253,
         "center_px": [
           1000.0,
           1000.0

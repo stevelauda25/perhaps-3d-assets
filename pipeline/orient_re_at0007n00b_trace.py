@@ -2,12 +2,16 @@
 
     python3 -B -m pipeline.orient_re_at0007n00b_trace [out.json] [overlay.png]   # default config/watches/orient-re-at0007n00b-trace.json
 
-Working reference: the 755 x 1126 retailer copy of the official render, enlarged 2x (Lanczos) as WATCH_PRODUCTION_WORKFLOW 0.2.
-Anchor: case circle fitted on both flanks clear of the lugs and crown = 39.3 mm (listing); the strap between the lugs
-(20.3 mm measured, 20 mm listed) is the check. mm, x right, y toward 12, origin = hand pivot.
-The render is taken slightly from below: the case circle sits 0.9 mm below the pivot and the 6 o'clock lugs reach further
-than the 12 o'clock ones. The model keeps the photo's own outline (the photo is projected on it from the front).
-Hands, crown, rings, lug tips and strap edges are read from 20 px gridded crops (MANUAL_PX, about +-0.1 mm).
+Working reference: the 1000 x 1617 retailer photo supplied by Irsyad, enlarged 2x (Lanczos) as WATCH_PRODUCTION_WORKFLOW 0.2.
+The photo is taken a little from the right and above: the right case flank and the crown's side show, the crystal ring is
+an ellipse. The model follows the photo's own outline (the photo is projected on it from the front), so the outline is the
+photo silhouette, not a circle:
+  - head mask = not background, not black strap, the component holding the bezel, clipped to an envelope (case disk, four lug
+    quads, crown box) that cuts the strap highlights away; the crown is cut out and built as its own part;
+  - case outline = the mask edge per angle about the pivot; across the lugs and the crown it is interpolated;
+  - lugs = the mask inside each lug quad; their inner (strap side) and tip edges are the quad edges read from gridded crops.
+Anchor: case width through the pivot row (left flank to the right flank under the crown) = 39.3 mm (listing); the strap between
+the lugs (20 mm listed) is the check. mm, x right, y toward 12, origin = hand pivot. Hands, crown, rings: MANUAL_PX (+-0.1 mm).
 """
 import json
 import math
@@ -18,78 +22,109 @@ import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-FRONT = ROOT / "references/orient-re-at0007n00b/front_2x_1510x2252.png"
+FRONT = ROOT / "references/orient-re-at0007n00b/front_2x_2000x3234.png"
 OUT = ROOT / "config/watches/orient-re-at0007n00b-trace.json"
 CASE_MM = 39.3  # listing: case diameter 39.3 mm
+STEP_DEG = 2.0  # case outline samples
 
 MANUAL_PX = {
-    "hand_pivot": [720, 986],
-    # dial flat edge (inner edge of the black minute track), crystal edge (inner edge of the polished bezel), about the pivot
-    "ring_radius_px": {"dial_flat": 514, "crystal": 604},
-    # hands: tip, tail end, half widths (base = widest point at base_r px from the pivot, hub = at the pivot)
-    "hands": {"hour": {"tip": [452, 810], "tail": [822, 1062], "half_base": 21, "base_r": 90, "half_hub": 16},
-              "minute": {"tip": [1112, 692], "tail": [660, 1040], "half_base": 15, "base_r": 110, "half_hub": 13},
-              "seconds": {"tip": [428, 1424], "tail": [796, 869], "half_base": 3.5, "base_r": 30, "half_hub": 5}},
-    "hub_px": 15,
-    # per lug: tip row and inner (strap side) x; the outer edge is the silhouette
-    "lugs": {"tl": {"tip_y": 270, "inner_x": 395}, "tr": {"tip_y": 288, "inner_x": 1091},
-             "bl": {"tip_y": 1812, "inner_x": 365}, "br": {"tip_y": 1830, "inner_x": 1062}},
-    # the deployant clasp hangs past the 4-5 o'clock lug: its outer edge is this line instead of the silhouette
-    "br_outer_line": [[1200, 1640], [1150, 1830]],
-    # crown at 3: y top / bottom, x where it leaves the case and of its end
-    "crown": {"y_top_bottom": [912, 1135], "x_from_to": [1385, 1502], "teeth": 22},
+    "hand_pivot": [920, 1382],
+    # crystal opening (inner edge of the polished bezel) is an ellipse in this photo; dial flat edge (inner edge of the black track)
+    "crystal_ellipse": {"centre": [921, 1366], "rx": 770, "ry": 757},
+    "dial_flat_px": 655,
+    # hands: tip, tail end, half widths (widest at base_r px from the pivot)
+    "hands": {"hour": {"tip": [585, 1165], "tail": [1050, 1490], "half_base": 26, "base_r": 110, "half_hub": 18},
+              "minute": {"tip": [1448, 1035], "tail": [836, 1436], "half_base": 17, "base_r": 130, "half_hub": 15},
+              "seconds": {"tip": [660, 860], "tail": [975, 1525], "half_base": 4, "base_r": 40, "half_hub": 7}},
+    "hub_px": 12,
+    # envelope: case disk and one quad per lug (inner edge and tip edge exact, outer side generous: the white background cuts it)
+    "case_disk": {"centre": [921, 1375], "r": 905},
+    "lug_quads": {"tl": [[417, 470], [598, 470], [552, 690], [200, 900]],
+                  "tr": [[1415, 490], [1640, 490], [1760, 1050], [1420, 700]],
+                  "bl": [[150, 1900], [600, 2030], [455, 2100], [470, 2365], [300, 2365]],
+                  "br": [[1330, 2120], [1600, 1980], [1465, 2425], [1335, 2425]]},
+    # strap between the lugs at the tips: x of the left / right lug inner edges, tip row
+    "strap": {"top": {"x": [586, 1418], "tip_y": 480}, "bottom": {"x": [462, 1334], "tip_y": 2392}},
+    # crown at 3: y top / bottom, x where it leaves the case flank and of its end
+    "crown": {"y_top_bottom": [1318, 1600], "x_from_to": [1782, 1935], "teeth": 22},
 }
 ARTEFACTS = ["Roman numerals, applied indices, minute track, power reserve scale and hand, open-heart movement and the logo stay in the photo map (flat)",
-             "hands are needles from the picked tips, tails and half widths; the photo shows on them, so a px of outline error shows dial pixels at the edge"]
+             "hands are needles from the picked tips, tails and half widths; the photo shows on them, so a px of outline error shows dial pixels at the edge",
+             "the deployant buckle and the strap keeper are not modelled"]
+
+
+def head_mask(im, M):
+    g = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    cand = ((im.min(2) < 238) & (g >= 80)).astype(np.uint8)  # not white background, not black leather
+    env = np.zeros(g.shape, np.uint8)
+    cd = M["case_disk"]
+    cv2.circle(env, tuple(cd["centre"]), cd["r"], 1, -1)
+    for q in M["lug_quads"].values():
+        cv2.fillPoly(env, [np.int32(q)], 1)
+    cr = M["crown"]
+    crown_box = np.zeros_like(env)
+    cv2.rectangle(crown_box, (cr["x_from_to"][0], cr["y_top_bottom"][0] - 10), (g.shape[1] - 1, cr["y_top_bottom"][1] + 10), 1, -1)
+    cand = cv2.morphologyEx(cand & env & (1 - crown_box), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    _, lab = cv2.connectedComponents(cand)
+    px0, py0 = M["hand_pivot"]
+    k = lab[py0, px0 - 800]  # the polished bezel at 9 o'clock
+    cnt = max(cv2.findContours((lab == k).astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea)
+    head = np.zeros_like(env)
+    cv2.drawContours(head, [cnt], -1, 1, -1)  # dial, strap shadows inside the outline: filled
+    return cv2.morphologyEx(head, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
 
 
 def trace(path=FRONT, overlay=None):
     im = cv2.imread(str(path))
-    fg = im.min(2) < 235
     M = MANUAL_PX
     px0, py0 = M["hand_pivot"]
-    pts = [(np.nonzero(fg[y])[0].min(), y) for y in range(760, 1240, 6)]
-    pts += [(np.nonzero(fg[y])[0].max(), y) for y in list(range(760, 830, 6)) + list(range(1160, 1240, 6))]
-    P_ = np.array(pts, float)
-    A = np.c_[2 * P_[:, 0], 2 * P_[:, 1], np.ones(len(P_))]
-    cx, cy, c = np.linalg.lstsq(A, (P_ ** 2).sum(1), rcond=None)[0]
-    rad = math.sqrt(c + cx * cx + cy * cy)
-    S = 2 * rad / CASE_MM
+    head = head_mask(im, M)
+    xs = np.nonzero(head[py0])[0]
+    S = (xs.max() - xs.min() + 1) / CASE_MM
     mm = lambda p: [round((p[0] - px0) / S, 3), round(-(p[1] - py0) / S, 3)]
     out = {"source": str(path.relative_to(ROOT)), "scale_px_per_mm": round(S, 4), "origin_px": [px0, py0],
-           "anchor": f"case circle fit x2 = {CASE_MM} mm (listing)", "case_circle_px": [round(cx, 1), round(cy, 1), round(rad, 1)],
-           "case_centre_mm": mm((cx, cy)), "case_radius_mm": CASE_MM / 2}
-    out["rings_mm"] = {k: round(v / S, 3) for k, v in M["ring_radius_px"].items()}
-    circle_x = lambda y, sx: cx + sx * math.sqrt(max(rad * rad - (y - cy) ** 2, 0))
+           "anchor": f"case width through the pivot row = {CASE_MM} mm (listing)", "case_row_px": [int(xs.min()), int(xs.max())]}
 
-    # ---- lugs: silhouette outer edge from the tip row to where it meets the case circle; straight inner edge ----
-    (bx0, by0), (bx1, by1) = M["br_outer_line"]
+    # ---- case outline: mask edge per angle about the pivot, interpolated across the lugs and the crown ----
+    env_lugs = np.zeros_like(head)
+    for q in M["lug_quads"].values():
+        cv2.fillPoly(env_lugs, [np.int32(q)], 1)
+    cr = M["crown"]
+    angs = np.arange(0, 360, STEP_DEG)
+    r_edge, blocked = [], []
+    for deg in angs:
+        a = math.radians(deg)
+        rr = np.arange(500, 1000)
+        xx = np.clip(np.round(px0 + rr * math.sin(a)).astype(int), 0, im.shape[1] - 1)
+        yy = np.clip(np.round(py0 - rr * math.cos(a)).astype(int), 0, im.shape[0] - 1)
+        inside = head[yy, xx] > 0
+        r_edge.append(float(rr[np.argmin(inside)]) if not inside.all() else 999.0)  # first px outside the head
+        e = min(int(r_edge[-1]) - 502, 499)  # just inside the edge: a lug edge, not the case edge
+        lug = env_lugs[yy[e], xx[e]] > 0
+        crown = cr["y_top_bottom"][0] - 30 <= py0 - 850 * math.cos(a) <= cr["y_top_bottom"][1] + 30 and math.sin(a) > 0.8
+        blocked.append(bool(lug or crown))
+    r_edge, blocked = np.array(r_edge), np.array(blocked)
+    ok = np.nonzero(~blocked)[0]
+    r_case = np.interp(np.arange(len(angs)), np.r_[ok - len(angs), ok, ok + len(angs)], np.r_[r_edge[ok], r_edge[ok], r_edge[ok]])
+    r_case = np.convolve(np.r_[r_case[-2:], r_case, r_case[:2]], np.ones(5) / 5, mode="valid")  # 10 deg mean drops the edge noise
+    out["case_polar_mm"] = {"step_deg": STEP_DEG, "r": [round(float(r) / S, 3) for r in r_case]}
+    ce = M["crystal_ellipse"]
+    out["crystal_ellipse_mm"] = {"centre": mm(ce["centre"]), "rx": round(ce["rx"] / S, 3), "ry": round(ce["ry"] / S, 3)}
+    out["dial_flat_mm"] = round(M["dial_flat_px"] / S, 3)
+
+    # ---- lugs: the head mask inside each quad ----
     lugs = {}
-    for key, lg in M["lugs"].items():
-        sx, sy = (-1 if key[1] == "l" else 1), (1 if key[0] == "t" else -1)
-        rows = range(lg["tip_y"], int(cy), 2) if sy > 0 else range(lg["tip_y"], int(cy), -2)
-        edge = []
-        for y in rows:
-            xs = np.nonzero(fg[y])[0]
-            x = xs.min() if sx < 0 else xs.max()
-            if key == "br" and y > by0:
-                x = min(x, bx0 + (bx1 - bx0) * (y - by0) / (by1 - by0))
-            edge.append((float(x), y))
-            if sx * (x - circle_x(y, sx)) < 2:  # back on the case circle
-                break
-        xs_ = np.array([p[0] for p in edge])
-        xs_ = np.convolve(np.pad(xs_, 3, mode="edge"), np.ones(7) / 7, mode="valid")  # 14 px mean drops the rendering noise
-        edge = [(x, y) for x, (_, y) in zip(xs_, edge)]
-        y_end = edge[-1][1]
-        into = [(circle_x(y_end + sy * k * 10, sx) - sx * 4, y_end + sy * k * 10) for k in range(1, 6)]  # 1.5 mm into the case
-        poly = [(lg["inner_x"], lg["tip_y"])] + edge + into + [(lg["inner_x"], into[-1][1])]
-        lugs[key] = {"outline_mm": [mm(p) for p in poly], "tip_y_mm": mm((0, lg["tip_y"]))[1], "inner_x_mm": mm((lg["inner_x"], 0))[0],
-                     "meets_case_y_mm": mm((0, y_end))[1]}
+    for key, q in M["lug_quads"].items():
+        qm = np.zeros_like(head)
+        cv2.fillPoly(qm, [np.int32(q)], 1)
+        part = (head & qm).astype(np.uint8)
+        cnt = max(cv2.findContours(part, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea)
+        poly = cv2.approxPolyDP(cnt, 1.0, True)[:, 0]
+        d = [math.hypot(x - px0, y - py0) for x, y in poly]
+        lugs[key] = {"outline_mm": [mm(p) for p in poly[::-1]], "r_max_mm": round(max(d) / S, 3)}  # image y down -> ccw in mm
     out["lugs"] = lugs
-    out["strap_mm"] = {side: {"x": [lugs[side[0] + "l"]["inner_x_mm"], lugs[side[0] + "r"]["inner_x_mm"]],
-                              "tip_y": round((abs(lugs[side[0] + "l"]["tip_y_mm"]) + abs(lugs[side[0] + "r"]["tip_y_mm"])) / 2, 3)}
-                       for side in ("top", "bottom")}
-    out["checks"] = {"strap_width_mm": {s: round(v["x"][1] - v["x"][0], 2) for s, v in out["strap_mm"].items()},
+    out["strap_mm"] = {k: {"x": [mm((x, 0))[0] for x in v["x"]], "tip_y": abs(mm((0, v["tip_y"]))[1])} for k, v in M["strap"].items()}
+    out["checks"] = {"strap_width_mm": {k: round(v["x"][1] - v["x"][0], 2) for k, v in out["strap_mm"].items()},
                      "lug_to_lug_mm": round(out["strap_mm"]["top"]["tip_y"] + out["strap_mm"]["bottom"]["tip_y"], 2)}
 
     # ---- hands: needles from tip to tail, widest at base_r ----
@@ -108,7 +143,6 @@ def trace(path=FRONT, overlay=None):
     out["hands"] = hands
     out["hub_mm"] = round(M["hub_px"] / S, 3)
 
-    cr = M["crown"]
     yt, yb = cr["y_top_bottom"]
     out["crown"] = {"centre_y_mm": mm((0, (yt + yb) / 2))[1], "radius_mm": round((yb - yt) / 2 / S, 3), "teeth": cr["teeth"],
                     "x_from_to_mm": [mm((x, 0))[0] for x in cr["x_from_to"]]}
@@ -118,13 +152,14 @@ def trace(path=FRONT, overlay=None):
     if overlay:
         ov = cv2.cvtColor(cv2.cvtColor(im, cv2.COLOR_BGR2GRAY), cv2.COLOR_GRAY2BGR) // 2 + 60
         Pp = lambda xy: (int(round(px0 + xy[0] * S)), int(round(py0 - xy[1] * S)))
-        cv2.circle(ov, (int(cx), int(cy)), int(rad), (0, 0, 255), 2)
-        for r in M["ring_radius_px"].values():
-            cv2.circle(ov, (px0, py0), r, (255, 128, 0), 2)
+        case_pts = [Pp((r * math.sin(math.radians(a)), r * math.cos(math.radians(a)))) for a, r in zip(angs, out["case_polar_mm"]["r"])]
+        cv2.polylines(ov, [np.array(case_pts)], True, (0, 0, 255), 2)
+        cv2.ellipse(ov, tuple(ce["centre"]), (ce["rx"], ce["ry"]), 0, 0, 360, (255, 128, 0), 2)
+        cv2.circle(ov, (px0, py0), M["dial_flat_px"], (255, 128, 0), 1)
         for p in [v["outline_mm"] for v in lugs.values()] + [v["outline_mm"] for v in hands.values()]:
             cv2.polylines(ov, [np.array([Pp(q) for q in p])], True, (0, 200, 255), 2)
-        for side, sy in (("top", 1), ("bottom", -1)):
-            s = out["strap_mm"][side]
+        for k, sy in (("top", 1), ("bottom", -1)):
+            s = out["strap_mm"][k]
             cv2.line(ov, Pp((s["x"][0], sy * s["tip_y"])), Pp((s["x"][1], sy * s["tip_y"])), (0, 255, 0), 2)
         k = out["crown"]
         for x in k["x_from_to_mm"]:
@@ -137,7 +172,8 @@ if __name__ == "__main__":
     dest = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT
     data = trace(overlay=Path(sys.argv[2]) if len(sys.argv) > 2 else None)
     dest.write_text(json.dumps(data, indent=1, default=float) + "\n")
-    print(json.dumps({k: data[k] for k in ("scale_px_per_mm", "case_circle_px", "case_centre_mm", "rings_mm", "strap_mm", "checks", "crown")},
+    print(json.dumps({k: data[k] for k in ("scale_px_per_mm", "case_row_px", "crystal_ellipse_mm", "dial_flat_mm", "strap_mm", "checks", "crown")},
                      default=float), "->", dest)
-    print({k: (v["angle_deg"], v["length_mm"]) for k, v in data["hands"].items()},
-          {k: (v["tip_y_mm"], v["meets_case_y_mm"], len(v["outline_mm"])) for k, v in data["lugs"].items()})
+    r = data["case_polar_mm"]["r"]
+    print({k: (v["angle_deg"], v["length_mm"]) for k, v in data["hands"].items()}, {k: (v["r_max_mm"], len(v["outline_mm"])) for k, v in data["lugs"].items()},
+          "case r", min(r), max(r))

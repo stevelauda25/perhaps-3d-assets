@@ -3,7 +3,7 @@
   "output": "outputs/jobs/orient-re-at0007n00b",
   "asset_type": "watch",
   "model": "Orient Star RE-AT0007N00B",
-  "baseline": "First build: the front photo projected on every part (case, bezel, lugs, crown, dial, hands, strap) as the Rolex Daytona builds, own side shape: round case on the photo's case circle with the wide polished bezel, photo lugs, raised hands, fluted crown, black leather strap with the house curl, 39.3 mm",
+  "baseline": "Round 2 on the 1000 x 1617 retailer photo: the front photo projected on every part (case, bezel, lugs, crown, dial, hands, strap) as the Rolex Daytona builds; own side shape lofted from the photo outline into the elliptic crystal ring, photo lugs, raised hands, fluted crown, black leather strap with the house curl, 39.3 mm",
   "input": "assets/watches/baseline/empty_base.blend",
   "references": [
     "references/orient-re-at0007n00b/REFERENCE_PLAN.md",

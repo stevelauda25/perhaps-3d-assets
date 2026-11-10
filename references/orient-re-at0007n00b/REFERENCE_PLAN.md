@@ -1,6 +1,6 @@
 # Reference plan: Orient Star RE-AT0007N00B (polished steel, grey sunburst open-heart dial, rose-gold hands, black leather strap)
 
-Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 for review.
+Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 2 for review.
 Method (Pasya, 2026-11-10): the front photo is cut out and projected on the whole 3D front, as the Rolex Daytona builds; the
 side view stays real 3D. Template: the FS4735 leather-strap build (case, lugs, crown, house curl) with the Daytona photo materials.
 File name `orient-re-at0007n00b`: the tracker matches the first word of the title (`Orient`) plus the SKU.
@@ -9,7 +9,7 @@ File name `orient-re-at0007n00b`: the tracker matches the first word of the titl
 
 | # | View | File | Status |
 | --- | --- | --- | --- |
-| 1 | Front, straight-on, white background, 755 × 1126 | `front_755x1126.jpg` (+ 2× working copy) | HAVE, primary for everything. GAP: under the 2000 px target, no larger official render found |
+| 1 | Front, white background, 1000 × 1617, taken a little from the right | `front_1000x1617.png` (+ 2× working copy) | HAVE, primary for everything since round 2 (supplied by Irsyad). Under the 2000 px target |
 | 2 | 3/4 from the crown side | `three_quarter_738x492.webp` | HAVE, heights and part shapes only |
 | 3 | Back | `back_750x750.webp` | HAVE, not needed (flat back) |
 
@@ -17,15 +17,15 @@ File name `orient-re-at0007n00b`: the tracker matches the first word of the titl
 
 | Decision | Answer |
 | --- | --- |
-| Case size | **39.3 mm** (listing). Check: strap between the lugs 20.23 / 20.26 mm measured against 20 mm |
-| Origin | Hand pivot (720, 986) on the 2× copy; 34.397 px/mm |
-| Photo angle | The render is taken slightly from below: case circle centre 0.9 mm below the pivot, 6 o'clock lug tips at 24.3 mm against 20.6 mm at 12. The model follows the photo outline so the projection lines up |
-| Case | Round, lofted rings: flank and shoulder on the photo's case circle, wide polished bezel rising inward to the crystal ring (17.56 mm about the pivot) |
-| Lugs | One slab each from the photo outline, top sloping 7.0 → 5.0 mm toward the tip |
+| Case size | **39.3 mm** (listing) across the pivot row. Check: strap between the lugs 19.5 / 20.5 mm (slanted strap, mean 20.0) against 20 mm |
+| Origin | Hand pivot (920, 1382) on the 2× copy; 42.595 px/mm |
+| Photo angle | Taken a little from the right and above: the right case flank and the crown's side show, the crystal ring is an ellipse (18.08 × 17.77 mm). The model follows the photo outline so the projection lines up |
+| Case | Lofted from the photo outline (per 2° about the pivot, interpolated across lugs and crown) into the crystal ellipse: flank, shoulder, wide polished bezel rising inward |
+| Lugs | One slab each: the photo silhouette inside a hand-read quad (inner and tip edges against the strap), top sloping 7.0 → 5.0 mm with the distance from the pivot |
 | Dial | Flat to the minute track (14.94 mm), track cone up to the crystal ring. Open heart, power reserve, indices and numerals are print in the photo |
 | Hands | Rose-gold dauphine hour and minute with tails, thin seconds needle: raised plates with the photographed hands on them (the hands stay in the dial print too) |
-| Crown | Fluted, 3.24 mm radius, 19.3 → 22.7 mm along the 3 o'clock axis, 1.1 mm below the pivot (photo) |
-| Strap | Black croc leather from the photo, house 7 mm curl from each side's lug tips; the clasp at 5 o'clock is left out |
+| Crown | Fluted, 3.31 mm radius, 20.2 → 23.8 mm along the 3 o'clock axis, 1.8 mm below the pivot (photo) |
+| Strap | Black croc leather from the photo (white gaps beside the slanted strap filled from the leather), house 7 mm curl from each side's lug tips (21.2 / 23.7 mm); buckle and keeper left out |
 
 ## Phase 1 outputs
 
@@ -43,3 +43,4 @@ python3 -B -m pipeline.jobs run jobs/orient-re-at0007n00b.json --force
 | Round | Date | Change |
 | --- | --- | --- |
 | 1 | 2026-11-10 | First front relief: photo projected on every part, round case with the wide bezel, photo lugs, raised hands, fluted crown, black leather strap with the 7 mm curl |
+| 2 | 2026-11-10 | Rebuilt on the sharper 1000 × 1617 photo from Irsyad: case lofted from the photo outline into the elliptic crystal ring, lugs from the photo silhouette, hands re-picked at 10:08 |
