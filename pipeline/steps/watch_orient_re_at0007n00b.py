@@ -1,0 +1,159 @@
+"""watch_orient_re_at0007n00b: build the Orient Star RE-AT0007N00B (polished steel case, grey sunburst open-heart dial with
+power reserve, rose-gold hands, black croc leather strap) as a flat-backed front relief.
+
+Params: spec (config/watches/orient-re-at0007n00b.json). Frame as watch_fossil_fs4735: mm, origin = hand pivot, dial faces
++z, back flat at z = 0, one pose empty `SKO | pose`, watch head depth scaled by pose.depth_scale, strap built at final depth
+with the house curl. As the Rolex Daytona builds, the front photo is projected straight from the front on every part (case,
+bezel, lugs, crown, dial, hands, strap), with emission so the photographed shading reads in any viewer light; only the shape
+seen from the side is modelled. Case: loft of rings, the outer ones on the photo's case circle (0.9 mm below the pivot: the
+render is taken slightly from below), the bezel rising inward to the crystal ring about the pivot. Lugs: one slab each from
+the photo outline, sloping down to the tip. Hands: raised needle plates at the photo's time. Strap: each side from its own lug
+tip (the 6 o'clock tips reach further in the photo). Rebuild with --force after regenerating the photo map.
+"""
+import json
+import math
+
+import bpy
+from mathutils import Matrix
+
+from pipeline.steps.watch_seiko_front import P, curl, photo_material, principled, slab
+from pipeline.steps.watch_speedmaster import Geo, ROOT
+
+
+def loft(rings, step_deg):
+    """Closed solid of revolution through rings (cx, cy, r, z), each about its own centre; flat cap on the first ring."""
+    angs = [math.radians(k * step_deg) for k in range(int(round(360 / step_deg)))]
+    N, g = len(angs), Geo()
+    pts = lambda cx, cy, r, z: [(cx + r * math.sin(a), cy + r * math.cos(a), z) for a in angs]
+    for lo, hi in zip(rings, rings[1:]):
+        base = len(g.v)
+        g.v += pts(*lo) + pts(*hi)
+        for k in range(N):
+            kk = (k + 1) % N
+            g.f.append((base + kk, base + k, base + N + k, base + N + kk))
+            g.smooth.append(True)
+    g.v += pts(*rings[0])
+    g.f.append(tuple(range(len(g.v) - N, len(g.v))))  # flat back
+    g.smooth.append(False)
+    return g
+
+
+def run(params):
+    cfg = json.loads((ROOT / params["spec"]).read_text())
+    tr = json.loads((ROOT / cfg["trace"]).read_text())
+    pm = json.loads((ROOT / cfg["photo_map"]).with_suffix(".json").read_text())
+    coll = bpy.data.collections.new("WATCH | Orient Star RE-AT0007N00B front relief")
+    bpy.context.scene.collection.children.link(coll)
+    mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
+    for key, v in cfg["photo"].items():  # one image, own roughness / emission per surface
+        m = mats[key] = photo_material(key, ROOT / cfg["photo_map"], v["roughness"])
+        b = next(n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+        b.inputs["Specular IOR Level"].default_value = v["specular"]
+        m.node_tree.links.new(next(n for n in m.node_tree.nodes if n.type == "TEX_IMAGE").outputs["Color"], b.inputs["Emission Color"])
+        b.inputs["Emission Strength"].default_value = v["emission"]
+
+    pose = bpy.data.objects.new(P + "pose", None)
+    coll.objects.link(pose)
+    pose.rotation_euler, pose.location, pose.scale = (math.pi / 2, 0, 0), (0, 0, cfg["pose"]["z_m"]), (0.001,) * 3
+    ds = cfg["pose"]["depth_scale"]
+    S, (px0, py0) = tr["scale_px_per_mm"], tr["origin_px"]
+    k_map, (mw, mh) = pm["scale"], pm["size_px"]
+    photo_uv = lambda x, y: ((px0 + x * S) * k_map / mw, 1 - (py0 - y * S) * k_map / mh)
+
+    def add(name, geo, mat, bevel=None, uv_of=None, smooth=None):
+        me = geo.mesh(P + name, True if bevel else smooth) if isinstance(geo, Geo) else geo
+        o = bpy.data.objects.new(P + name, me)
+        coll.objects.link(o)
+        o.parent = pose
+        me.materials.append(mats[mat])
+        if mat in cfg["photo"]:  # the photo straight from the front, or the strap's own mapping
+            f = uv_of or (lambda x, y, z: photo_uv(x, y))
+            uv = me.uv_layers.new(name="UVMap")
+            for loop in me.loops:
+                uv.data[loop.index].uv = f(*me.vertices[loop.vertex_index].co)
+        if bevel:
+            m = o.modifiers.new("Edge radius", "BEVEL")
+            m.width, m.segments, m.limit_method, m.angle_limit = bevel, 2, "ANGLE", math.radians(35)
+            o.modifiers.new("Weighted normals", "WEIGHTED_NORMAL").keep_sharp = True
+        if not name.startswith("strap"):
+            o.scale = (1, 1, ds)
+        return o
+
+    rg = tr["rings_mm"]
+    cx, cy = tr["case_centre_mm"]
+    Rc = tr["case_radius_mm"]
+
+    # ---- case and bezel: rings [on "case" circle or about the "pivot", radius offset or absolute, z] ----
+    c = cfg["case"]
+    rings = [(cx, cy, Rc + v, z) if on == "case" else (0.0, 0.0, v, z) for on, v, z in c["rings"]]
+    def case_uv(x, y, z):  # flank vertices sample the photo just inside the outline, not the white background past it
+        dx, dy = x - cx, y - cy
+        r = math.hypot(dx, dy)
+        f = min(1.0, (Rc - c["uv_inset"]) / r) if r > 1e-6 else 1.0
+        return photo_uv(cx + dx * f, cy + dy * f)
+    add("case", loft(rings, c["step_deg"]), "steel_photo", uv_of=case_uv)
+
+    # ---- lugs: photo outline, top sloping from the case down to the tip ----
+    lg = cfg["lug"]
+    g = Geo()
+    for key, t in tr["lugs"].items():
+        y0, y1 = abs(t["meets_case_y_mm"]), abs(t["tip_y_mm"])
+        top = lambda x, y, y0=y0, y1=y1: lg["top_z_at_case"] + (lg["top_z_at_tip"] - lg["top_z_at_case"]) * min(1.0, max(0.0, (abs(y) - y0) / (y1 - y0)))
+        slab(g, [tuple(p) for p in t["outline_mm"]], 0.0, top)
+    add("lugs", g, "steel_photo", bevel=lg["bevel"])
+
+    # ---- crystal (alpha glass, no transmission); dial with the minute track rising to the crystal ring ----
+    cr, d = cfg["crystal"], cfg["dial"]
+    R_open = rg["crystal"]
+    add("crystal", Geo().lathe([(0, cr["z0"]), (R_open, cr["z0"]), (R_open, cr["z1"]), (R_open * 0.7, cr["z1"] + cr["dome"] * 0.5),
+                                (0, cr["z1"] + cr["dome"])], segs=192), "crystal")
+    add("dial", Geo().lathe([(0, d["z"]), (rg["dial_flat"], d["z"]), (R_open + 0.05, d["track_z"]), (R_open + 0.05, d["z"] - 0.3)], segs=192),
+        "dial_photo", smooth=True)
+
+    # ---- hands at the photo's time: raised plates showing the photographed hands ----
+    hs, th = cfg["hands"], cfg["hands"]["thickness"]
+    for name, z in hs["z"].items():
+        add("hand_" + name, slab(Geo(), [tuple(p) for p in tr["hands"][name]["outline_mm"]], z, lambda x, y, z=z: z + th), "dial_photo", bevel=0.02)
+    zt, hub_r = max(hs["z"].values()) + th, tr["hub_mm"]
+    add("hub", Geo().lathe([(0, d["z"]), (hub_r, d["z"]), (hub_r, zt + 0.06), (hub_r * 0.7, zt + 0.1), (0, zt + 0.11)], segs=48), "dial_photo", smooth=True)
+
+    # ---- crown on the 3 o'clock axis: neck, fluted body, rounded end ----
+    cw, tc = cfg["crown"], tr["crown"]
+    m = Matrix(((0, -1, 0), (0, 0, 1), (1, 0, 0))).transposed().to_4x4()  # local z along +x, local y up
+    m.translation = (0.0, tc["centre_y_mm"], cw["z"])
+    R0, (r1, r2) = tc["radius_mm"], tc["x_from_to_mm"]
+    add("crown_neck", Geo().lathe([(0, Rc - 1.0), (R0 * cw["neck_fraction"], Rc - 1.0), (R0 * cw["neck_fraction"], r1 + 0.1), (0, r1 + 0.1)], segs=48, m=m),
+        "steel_photo", smooth=True)
+    star = [((R0 if i % 2 == 0 else R0 - cw["flute_depth"]) * math.cos(math.pi * i / tc["teeth"]),
+             (R0 if i % 2 == 0 else R0 - cw["flute_depth"]) * math.sin(math.pi * i / tc["teeth"])) for i in range(tc["teeth"] * 2)]
+    add("crown", Geo().prism(star, r1, r2 - 0.35, m), "steel_photo", bevel=0.08)
+    add("crown_end", Geo().lathe([(0, r2 - 0.35), (R0 - 0.15, r2 - 0.35), (R0 - 0.6, r2), (0, r2)], segs=48, m=m), "steel_photo", smooth=True)
+
+    # ---- leather strap: the photo's strap along its length, house curl from each side's lug tips ----
+    st = cfg["strap"]
+    zm, R = ds * (st["z0"] + st["z1"]) / 2, st["bend_radius"]
+    g = Geo()
+    ends, maps = pm["strap_end_mm"], {}
+    for side, sy in (("top", 1), ("bottom", -1)):
+        s = tr["strap_mm"][side]
+        bend_y = s["tip_y"] + st["bend_after_tip"]
+        box = curl(bend_y, R, zm)
+        box(g, s["x"][0] + st["edge_inset"], s["x"][1] - st["edge_inset"], st["start_y"], bend_y + R * st["arc_over_radius"], ds * st["z0"], ds * st["z1"], sy)
+        maps[sy] = (bend_y, ends[side], s["x"][0] + st["uv_inset"], s["x"][1] - st["uv_inset"])
+
+    def strap_uv(x, y, z):
+        bend_y, end, xa, xb = maps[1 if y > 0 else -1]
+        x = min(max(x, xa), xb)  # side walls take the strap's own edge pixels
+        s = abs(y) if abs(y) <= bend_y + 1e-6 else bend_y + R * math.atan2(abs(y) - bend_y, z - (zm - R))
+        return photo_uv(x, math.copysign(s if s <= end else max(2 * end - s, 0.0), y))  # past the photo's strap end: mirrored back, no streaks
+    add("strap", g, "strap_photo", bevel=st["bevel"], uv_of=strap_uv)
+
+    # ---- checks against the anchors ----
+    out = {"diameter": round(2 * Rc, 3), "strap_width": round(min(v["x"][1] - v["x"][0] for v in tr["strap_mm"].values()), 3)}
+    for key, want in cfg["verified_mm"].items():
+        assert abs(out[key] - want) < 0.4, "%s %.3f != %.3f" % (key, out[key], want)
+    for o in coll.objects:
+        o["export_product"] = True
+    bpy.context.view_layer.update()
+    return {"measured_mm": out, "lug_tip_y_mm": {k: v["tip_y"] for k, v in tr["strap_mm"].items()},
+            "objects": len(coll.objects), "polygons": sum(len(o.data.polygons) for o in coll.objects if o.type == "MESH")}

@@ -1,0 +1,140 @@
+{
+ "model": "Orient Star RE-AT0007N00B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (39.3 mm case, listing; strap 20.23 mm measured against 20 mm). Heights before the house depth scale (12.3 mm thick listing). The front photo is projected from the front on every part; the model only adds the side shape.",
+ "trace": "config/watches/orient-re-at0007n00b-trace.json",
+ "photo_map": "outputs/watches/orient-re-at0007n00b/photo.jpg",
+ "photo": {
+  "steel_photo": {
+   "roughness": 0.6,
+   "specular": 0.0,
+   "emission": 0.27
+  },
+  "dial_photo": {
+   "roughness": 0.35,
+   "specular": 0.0,
+   "emission": 0.34
+  },
+  "strap_photo": {
+   "roughness": 0.6,
+   "specular": 0.0,
+   "emission": 0.3
+  }
+ },
+ "verified_mm": {
+  "diameter": 39.3,
+  "strap_width": 20.0
+ },
+ "case": {
+  "step_deg": 2.0,
+  "rings": [
+   [
+    "case",
+    -0.45,
+    0.0
+   ],
+   [
+    "case",
+    0.0,
+    0.45
+   ],
+   [
+    "case",
+    0.0,
+    6.2
+   ],
+   [
+    "case",
+    -0.15,
+    7.0
+   ],
+   [
+    "case",
+    -0.5,
+    7.6
+   ],
+   [
+    "pivot",
+    17.95,
+    9.6
+   ],
+   [
+    "pivot",
+    17.56,
+    9.7
+   ],
+   [
+    "pivot",
+    17.56,
+    9.15
+   ],
+   [
+    "pivot",
+    17.2,
+    9.15
+   ]
+  ],
+  "note": "[on, radius, z]: 'case' = offset from the photo's case circle, 'pivot' = radius about the pivot. Flank, rounded shoulder, wide polished bezel rising inward to the crystal ring, inner lip down to the crystal seat",
+  "uv_inset": 0.35
+ },
+ "lug": {
+  "top_z_at_case": 7.0,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.4,
+  "note": "short polished lugs curving down to the strap (3/4 view)"
+ },
+ "crystal": {
+  "z0": 9.15,
+  "z1": 9.45,
+  "dome": 0.35
+ },
+ "dial": {
+  "z": 7.8,
+  "track_z": 8.9,
+  "note": "flat dial (open heart and power reserve are print in the photo) to the minute track, the track a cone up to the crystal ring"
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 8.05,
+   "minute": 8.3,
+   "seconds": 8.55
+  },
+  "note": "rose-gold dauphine hour and minute with tails, thin seconds needle; plates show the photographed hands"
+ },
+ "crown": {
+  "z": 4.0,
+  "flute_depth": 0.18,
+  "neck_fraction": 0.6,
+  "note": "fluted crown at 3 (photo: 6.5 mm across, 3.4 mm long)"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.4,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "start_y": 14.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "House curl (SUR419P1): bend at each side's lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case",
+  "uv_inset": 0.3
+ },
+ "materials": {
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "photo_note": "Daytona values: the photo as base colour and emission, no specular, so the photographed reflections are not lit twice"
+}
