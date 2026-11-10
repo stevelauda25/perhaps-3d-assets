@@ -1,0 +1,215 @@
+{
+ "model": "Hamilton H76305530",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (39 mm case, official; the lug gap measures 19.5 mm against the official 20 mm). Lug to lug 45.1 mm in the photo, used symmetric about the pivot. Heights are a front-relief reading of the official 11.6 mm (no side photo). Numerals, markers, the chapter ring, logo and prints stay in the dial map.",
+ "trace": "config/watches/hamilton-h76305530-trace.json",
+ "dial_map": "outputs/watches/hamilton-h76305530/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h76305530/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 39.0,
+  "lug_to_lug": 45.1,
+  "strap_width": 19.13
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    19.0,
+    0.0
+   ],
+   [
+    19.5,
+    0.5
+   ],
+   [
+    19.5,
+    5.6
+   ],
+   [
+    19.35,
+    6.05
+   ],
+   [
+    18.9,
+    6.2
+   ],
+   [
+    17.379,
+    6.25
+   ],
+   [
+    17.379,
+    4.4
+   ],
+   [
+    0.0,
+    4.4
+   ]
+  ],
+  "bevel_rz": [
+   [
+    16.606,
+    4.4
+   ],
+   [
+    17.399,
+    4.4
+   ],
+   [
+    17.399,
+    6.26
+   ],
+   [
+    16.606,
+    5.72
+   ]
+  ],
+  "note": "brushed flank and flat bezel (17.4-19.5 mm), polished inner bevel down to the chapter ring (16.6-17.4 mm)"
+ },
+ "crystal": {
+  "radius": 16.606,
+  "z0": 5.55,
+  "z1": 5.78
+ },
+ "dial": {
+  "z": 4.6,
+  "rehaut_r": 16.606,
+  "rehaut_z": 5.5,
+  "roughness": 0.5
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 4.92,
+   "minute": 5.1,
+   "seconds": 5.28
+  }
+ },
+ "crown": {
+  "z": 3.0,
+  "r_from": 19.6,
+  "cap": 0.6,
+  "flute_depth": 0.28
+ },
+ "lug": {
+  "into_case": 0.6,
+  "tip_outer_x": 11.0,
+  "slope_from_y": 17.0,
+  "top_z_at_case": 4.4,
+  "top_z_at_tip": 3.8,
+  "bevel": 0.4,
+  "note": "top below the dial (4.6): the lug slab runs under the case into the dial area"
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.75,
+  "uv_inset": 0.02,
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "20 mm brown leather (official lug width), house curl from the lug tips; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Aviation Pilot Auto 39 mm, black dial, brown leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "39 mm",
+    "case (official)"
+   ],
+   [
+    "45.1 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "19.5 mm",
+    "lug gap in the photo (20 official)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: brushed case with a wide flat bezel and polished inner bevel, skeleton sword hands with lume (open tip on the hour hand, open root on the minute hand) and polished paddle tails, seconds hand with a lume arrow and a ring on its tail, large fluted crown, brushed lugs, brown leather strap with the house curl.",
+   "From the photo map: black dial, 05-55 and 1-12 numerals, the 12 triangle and 3 6 9 bars, the grey chapter ring with its marks, Hamilton logo, Automatic, Swiss Made; the strap leather and stitching.",
+   "The dial shows through the open parts of the hands, as on the real watch.",
+   "Scale is the official 39 mm case. Heights are estimated (no side photo)."
+  ]
+ }
+}
