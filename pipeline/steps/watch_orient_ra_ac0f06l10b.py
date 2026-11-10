@@ -24,7 +24,7 @@ def run(params):
     tr = json.loads((ROOT / cfg["trace"]).read_text())
     dm = json.loads((ROOT / cfg["dial_map"]).with_suffix(".json").read_text())
     sm = json.loads((ROOT / cfg["strap_map"]).with_suffix(".json").read_text())
-    coll = bpy.data.collections.new("WATCH | Orient RA-AC0F06L10B front relief")
+    coll = bpy.data.collections.new("WATCH | " + cfg["model"] + " front relief")  # also builds RA-AC0P03L10B (Bambino)
     bpy.context.scene.collection.children.link(coll)
     mats = {k: principled(k, v) for k, v in cfg["materials"].items()}
     d, st = cfg["dial"], cfg["strap"]
@@ -177,7 +177,7 @@ def run(params):
     def strap_uv(x, y, z):
         u = min(max((x + hw) / (2 * hw), st["uv_inset"]), 1 - st["uv_inset"])  # side walls take the strap's own edge pixels
         s = abs(y) if abs(y) <= bend_y + 1e-6 else bend_y + R * math.atan2(abs(y) - bend_y, z - (zm - R))
-        s = max(s, lo)
+        # under the case and lugs the strip is folded, not clamped (a clamp streaks where the lugs leave the strap visible)
         k_, w = divmod(s - lo, hi - lo)
         sp = lo + w if int(k_) % 2 == 0 else hi - w
         row = (sp - lo) / (hi - lo) * (len(rows) - 1)

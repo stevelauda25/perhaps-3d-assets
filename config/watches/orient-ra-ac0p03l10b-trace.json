@@ -1,0 +1,580 @@
+{
+ "source": "references/orient-ra-ac0p03l10b/front_2000x2000.jpg",
+ "scale_px_per_mm": 27.9048,
+ "origin_px": [
+  958,
+  827
+ ],
+ "hand_pivot_px": [
+  960,
+  815
+ ],
+ "hand_pivot_mm": [
+  0.072,
+  0.43
+ ],
+ "anchor": "case width = 42.0 mm (Orient official)",
+ "case": {
+  "radius_mm": 21.0,
+  "height_mm_in_photo": 41.14
+ },
+ "bezel_inner_mm": 18.922,
+ "rehaut_mm": 17.918,
+ "lug": {
+  "tip_mm": 24.5,
+  "photo_lug_to_lug_mm": 47.3,
+  "inner_x_mm": 11.0,
+  "half_width_by_depth_mm": [
+   [
+    0.25,
+    12.811
+   ],
+   [
+    0.5,
+    12.883
+   ],
+   [
+    0.75,
+    12.91
+   ],
+   [
+    1.0,
+    12.982
+   ],
+   [
+    1.25,
+    13.017
+   ],
+   [
+    1.5,
+    13.053
+   ],
+   [
+    1.75,
+    13.125
+   ],
+   [
+    2.0,
+    13.179
+   ],
+   [
+    2.25,
+    13.215
+   ],
+   [
+    2.5,
+    13.277
+   ],
+   [
+    2.75,
+    13.349
+   ],
+   [
+    3.0,
+    13.412
+   ],
+   [
+    3.25,
+    13.483
+   ],
+   [
+    3.5,
+    13.555
+   ],
+   [
+    3.75,
+    13.618
+   ],
+   [
+    4.0,
+    13.698
+   ],
+   [
+    4.25,
+    13.77
+   ],
+   [
+    4.5,
+    13.851
+   ],
+   [
+    4.75,
+    13.94
+   ],
+   [
+    5.0,
+    14.021
+   ],
+   [
+    5.25,
+    14.119
+   ],
+   [
+    5.5,
+    14.227
+   ],
+   [
+    5.75,
+    14.352
+   ],
+   [
+    6.0,
+    14.433
+   ],
+   [
+    6.25,
+    14.532
+   ],
+   [
+    6.5,
+    14.639
+   ],
+   [
+    6.75,
+    14.773
+   ],
+   [
+    7.0,
+    14.845
+   ],
+   [
+    7.25,
+    15.015
+   ],
+   [
+    7.5,
+    15.114
+   ],
+   [
+    7.75,
+    15.257
+   ],
+   [
+    8.0,
+    15.392
+   ],
+   [
+    8.25,
+    15.472
+   ],
+   [
+    8.5,
+    15.634
+   ],
+   [
+    8.75,
+    15.759
+   ],
+   [
+    9.0,
+    15.884
+   ],
+   [
+    9.25,
+    16.028
+   ],
+   [
+    9.5,
+    16.216
+   ],
+   [
+    9.75,
+    16.35
+   ],
+   [
+    10.0,
+    16.494
+   ],
+   [
+    10.25,
+    16.664
+   ],
+   [
+    10.5,
+    16.807
+   ],
+   [
+    10.75,
+    16.951
+   ],
+   [
+    11.0,
+    17.103
+   ],
+   [
+    11.25,
+    17.291
+   ],
+   [
+    11.5,
+    17.461
+   ],
+   [
+    11.75,
+    17.622
+   ],
+   [
+    12.0,
+    17.766
+   ],
+   [
+    12.25,
+    17.927
+   ],
+   [
+    12.5,
+    18.115
+   ],
+   [
+    12.75,
+    18.241
+   ],
+   [
+    13.0,
+    18.393
+   ],
+   [
+    13.25,
+    18.536
+   ],
+   [
+    13.5,
+    18.689
+   ],
+   [
+    13.75,
+    18.814
+   ],
+   [
+    14.0,
+    18.957
+   ]
+  ]
+ },
+ "checks": {
+  "lug_to_lug_mm": 47.3,
+  "strap_width_past_tips_mm": {
+   "120": 21.11,
+   "160": 21.57,
+   "1600": 22.72,
+   "1690": 21.54,
+   "1840": 20.07
+  },
+  "listed": {
+   "lug_to_lug_mm": 49.0,
+   "strap_width_mm": 22.0,
+   "thickness_mm": 12.0
+  }
+ },
+ "indices": {
+  "baton_mm": {
+   "inner": 11.718,
+   "outer": 16.843,
+   "half_inner": 0.143,
+   "half_outer": 0.358
+  },
+  "index_12_mm": {
+   "inner": 11.826,
+   "outer": 16.735,
+   "half_inner": 0.824,
+   "half_outer": 1.075
+  },
+  "index_3_inner_mm": 13.474,
+  "layout": "faceted tapered batons at 1-11 (3 shortened by the date), wide double-ridge trapezoid at 12"
+ },
+ "date_window": {
+  "x0_y0_x1_y1_mm": [
+   8.78,
+   1.577,
+   13.116,
+   -1.613
+  ],
+  "size_mm": [
+   4.336,
+   3.189
+  ],
+  "centre_mm": [
+   10.948,
+   -0.018
+  ],
+  "frame_mm": 0.323
+ },
+ "logo": {
+  "x0_y0_x1_y1_mm": [
+   -3.154,
+   9.568,
+   3.655,
+   3.655
+  ],
+  "size_mm": [
+   6.809,
+   5.913
+  ],
+  "centre_mm": [
+   0.251,
+   6.612
+  ]
+ },
+ "print_wr": {
+  "x0_y0_x1_y1_mm": [
+   -4.229,
+   -7.633,
+   4.372,
+   -9.138
+  ],
+  "size_mm": [
+   8.601,
+   1.505
+  ],
+  "centre_mm": [
+   0.072,
+   -8.386
+  ]
+ },
+ "print_6": {
+  "x0_y0_x1_y1_mm": [
+   -2.795,
+   -16.951,
+   3.297,
+   -18.205
+  ],
+  "size_mm": [
+   6.092,
+   1.254
+  ],
+  "centre_mm": [
+   0.251,
+   -17.578
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 302.75,
+   "length_mm": 9.672,
+   "outline_mm": [
+    [
+     -0.896,
+     0.215
+    ],
+    [
+     0.538,
+     0.323
+    ],
+    [
+     3.404,
+     0.34
+    ],
+    [
+     7.167,
+     0.179
+    ],
+    [
+     9.389,
+     0.072
+    ],
+    [
+     9.819,
+     0.0
+    ]
+   ]
+  },
+  "minute": {
+   "angle_deg": 53.54,
+   "length_mm": 14.765,
+   "outline_mm": [
+    [
+     -0.896,
+     0.215
+    ],
+    [
+     0.717,
+     0.251
+    ],
+    [
+     4.659,
+     0.305
+    ],
+    [
+     9.317,
+     0.197
+    ],
+    [
+     12.901,
+     0.09
+    ],
+    [
+     14.765,
+     0.0
+    ]
+   ]
+  },
+  "seconds": {
+   "angle_deg": 215.95,
+   "length_mm": 16.193,
+   "tail_mm": 3.942,
+   "half_width_mm": 0.072,
+   "tail_half_width_mm": 0.108
+  }
+ },
+ "hub_radius_mm": [
+  1.075,
+  0.43
+ ],
+ "crown": {
+  "from_mm": 20.857,
+  "to_mm": 23.903,
+  "radius_mm": 3.118,
+  "teeth": 22
+ },
+ "manual_px": {
+  "dial_centre": [
+   958,
+   827
+  ],
+  "hand_pivot": [
+   960,
+   815
+  ],
+  "case_x": [
+   368,
+   1540
+  ],
+  "case_y": [
+   280,
+   1428
+  ],
+  "bezel_centre": [
+   958,
+   827
+  ],
+  "bezel_inner_r": 528,
+  "rehaut_r": 500,
+  "hour_hand_tip": [
+   733,
+   669
+  ],
+  "hour_profile_px": [
+   [
+    -25,
+    6
+   ],
+   [
+    15,
+    9
+   ],
+   [
+    95,
+    9.5
+   ],
+   [
+    200,
+    5
+   ],
+   [
+    262,
+    2
+   ],
+   [
+    274,
+    0
+   ]
+  ],
+  "minute_angle_deg": 53.54,
+  "minute_profile_px": [
+   [
+    -25,
+    6
+   ],
+   [
+    20,
+    7
+   ],
+   [
+    130,
+    8.5
+   ],
+   [
+    260,
+    5.5
+   ],
+   [
+    360,
+    2.5
+   ],
+   [
+    412,
+    0
+   ]
+  ],
+  "seconds_hand_tip": [
+   695,
+   1181
+  ],
+  "seconds_tail_px": [
+   110,
+   2,
+   3
+  ],
+  "seconds_angle_deg": 215.95,
+  "hub_radius_px": [
+   30,
+   12
+  ],
+  "index_px": {
+   "inner": 327,
+   "outer": 470,
+   "half_inner": 4,
+   "half_outer": 10
+  },
+  "index_12_px": {
+   "inner": 330,
+   "outer": 467,
+   "half_inner": 23,
+   "half_outer": 30
+  },
+  "index_3_inner_px": 376,
+  "date_window": [
+   1203,
+   783,
+   1324,
+   872
+  ],
+  "date_frame_px": 9,
+  "logo": [
+   870,
+   560,
+   1060,
+   725
+  ],
+  "print_wr": [
+   840,
+   1040,
+   1080,
+   1082
+  ],
+  "print_6": [
+   880,
+   1300,
+   1050,
+   1335
+  ],
+  "crown_x": [
+   1540,
+   1625
+  ],
+  "crown_radius_px": 87,
+  "crown_teeth": 22,
+  "lug_inner_x_mm": 11.0,
+  "lug_tips_y": [
+   220,
+   1540
+  ]
+ },
+ "artefacts_not_traced": [
+  "the Bambino lugs curve down strongly: the photo's lug to lug reads short (foreshortened); the official 49 mm is used",
+  "the domed crystal shifts the crystal ring in the photo; the model is a round case about the index ring centre",
+  "the photo is taken a little from below: lugs, crown and strap sit 0.5-1.5 mm lower than the dial in the photo; the model is symmetric about the index ring centre and uses the official lug to lug",
+  "the strap runs a little to the right in the photo; its leather is resampled row by row between its own edges",
+  "logo, minute track and prints stay in the photo map"
+ ]
+}
