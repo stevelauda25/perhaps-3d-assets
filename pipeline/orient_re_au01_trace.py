@@ -4,9 +4,9 @@
     -> config/watches/orient-re-<sku>-trace.json
 
 Both watches are the same Contemporary power reserve model (38.5 mm case, F6N43) with a different dial colour, so the part
-sizes read from gridded crops of the sharper RE-AU0110N photo are shared (SHARED_MM); each photo gives its own scale, pivot,
-silhouette, lug tips and hand angles (MANUAL_PX on the 2x working copy, about +-5 px = +-0.1 mm). mm, x right, y toward 12,
-origin = hand pivot. Anchor: case width on the flanks = 38.5 mm (orient-watch.com); check: gap between the lugs = 20 mm.
+sizes read in mm from gridded crops of the round 1 RE-AU0110N photo are shared (SHARED_MM); each photo gives its own scale, pivot,
+silhouette, lug tips and hand angles (PHOTOS, on Orient's official 2000 px renders since round 2). mm, x right, y toward 12,
+origin = case centre (hands about their own pivot). Anchor: case width on the flanks = 38.5 mm (orient-watch.com); check: gap between the lugs = 20 mm.
 """
 import json
 import math
@@ -23,27 +23,21 @@ ROOT = Path(__file__).resolve().parents[1]
 CASE_MM = 38.5
 LISTED = {"lug_width_mm": 20.0, "lug_to_lug_mm": 46.9, "thickness_mm": 12.3}
 
+# Orient's official straight front renders (2000 x 2000, same render for both dial colours, time 10:08:36). Replaced the
+# retailer photos (2x working copies) of round 1.
 PHOTOS = {
-    "au0110n": {
-        "front": "references/orient-re-au0110n/front_2x_2502x4164.png",
-        "hand_pivot": [1197, 2075],
-        "hour_hand_tip": [782, 1802],
-        "minute_hand_tip": [1708, 1572],
-        "seconds_hand_tip": [538, 1764],
-        "pr_pivot": [1190, 1603],
-        "pr_hand_tip": [1405, 1693],
-        "lug_inner_x": [697, 1697],  # inner lug edges (gap between the lugs)
-    },
-    "au0108g": {
-        "front": "references/orient-re-au0108g/front_2x_2370x4168.png",
-        "hand_pivot": [1122, 1984],
-        "hour_hand_tip": [722, 1735],
-        "minute_hand_tip": [1480, 1530],  # a point on the hand's centre line (the tip fades into the 2 o'clock baton)
-        "seconds_hand_tip": [588, 2465],
-        "pr_pivot": [1124, 1527],
-        "pr_hand_tip": [1340, 1612],
-        "lug_inner_x": [643, 1603],
-    },
+    sku: {
+        "front": f"references/orient-re-{sku}/front_official_2000x2000.webp",
+        "hand_pivot": [957, 867],
+        "hour_hand_tip": [728, 727],
+        "minute_hand_tip": [1265, 613],
+        "seconds_hand_tip": [726, 1183],
+        "pr_pivot": [956, 623],
+        "pr_hand_tip": [898, 735],
+        "lug_inner_x": [695, 1240],  # end link edges between the lugs (6 o'clock row 1560)
+        "case_r_px": [400, 600],  # search range for the case flank about the pivot
+    }
+    for sku in ("au0108g", "au0110n")
 }
 
 # Read on the RE-AU0110N 2x copy (49.998 px/mm, pivot 1197, 2075) and converted; same parts on both watches.
@@ -90,7 +84,7 @@ NUMERALS = {
 
 ARTEFACTS = ["bright arcs on the polished bezel and crystal: reflections, not shape",
              "the bracelet sits about 0.7 mm right of the pivot (watch slightly turned): the build centres it",
-             "RE-AU0108G: case centre about 0.4 mm below the pivot in the photo (camera a little low); the build keeps the pivot centred"]
+             "the bracelet joints in SHARED_MM were read on the round 1 retailer photo (2x copy) and are not used by the build"]
 
 
 def numeral_shapes(spec, res=0.01):
@@ -133,15 +127,19 @@ def trace(sku, overlay=None):
     # case outline on the flanks only: lugs flare out above 70 / below 110 deg, the crown sits at 80-100 deg
     edge = []
     for a in list(np.arange(72, 79, 1.0)) + list(np.arange(102, 109, 1.0)) + list(np.arange(246, 295, 1.0)):
-        rs = np.arange(800, 1150, 0.5)
+        rs = np.arange(*ph["case_r_px"], 0.5)
         xs, ys = (np.array(v) for v in at(rs, a))
         hit = np.nonzero(fg[ys.astype(int), xs.astype(int)])[0]
         edge.append((xs[hit[-1]], ys[hit[-1]]))
     ccx, ccy, case_r = fit_circle(np.array(edge))
     S = 2 * case_r / CASE_MM
-    mm = lambda p: [round((p[0] - px0) / S, 3), round(-(p[1] - py0) / S, 3)]
-    polar = lambda p: (round(math.hypot(*mm(p)), 3), round(math.degrees(math.atan2(*mm(p))) % 360, 2))
-    out = {"source": ph["front"], "scale_px_per_mm": round(S, 4), "origin_px": [px0, py0],
+    # origin = case centre: in Orient's renders the hands sit about 0.7 mm above it (camera a little low, hands raised), while
+    # case, dial print, indices and lugs are centred on it; hand angles are read about the hand pivot itself
+    hx, hy = px0, py0
+    px0, py0 = int(round(ccx)), int(round(ccy))
+    mm = lambda p, c=(px0, py0): [round((p[0] - c[0]) / S, 3), round(-(p[1] - c[1]) / S, 3)]
+    polar = lambda p: (round(math.hypot(*mm(p, (hx, hy))), 3), round(math.degrees(math.atan2(*mm(p, (hx, hy)))) % 360, 2))
+    out = {"source": ph["front"], "scale_px_per_mm": round(S, 4), "origin_px": [px0, py0], "hand_pivot_px": [hx, hy],
            "anchor": f"case width on the flanks = {CASE_MM} mm (orient-watch.com)",
            "case": {"radius_mm": round(case_r / S, 3), "centre_mm": mm((ccx, ccy))}}
     out.update({k: v for k, v in SHARED_MM.items()})

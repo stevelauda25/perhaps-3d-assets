@@ -2,6 +2,7 @@
 
 | File | Size | Source | Shows |
 | --- | --- | --- | --- |
+| `front_official_2000x2000.webp` | 2000 × 2000, white background | Orient's official product render via the Watchello listing (RE-AT0007N00B), downloaded 2026-11-10: <https://watchello.com/products/orient-contemporary-semi-skeleton-re-at0007n00b> | Straight front, time 10:08. Primary for everything since round 4 |
 | `front_1000x1617.png` | 1000 × 1617, white background | Supplied by Irsyad on 2026-11-10 (retailer photo) | Front, taken a little from the right and above (right case flank and crown side show), buckle at 4-5 o'clock, strap keeper at the bottom. Primary since round 2 |
 | `front_2x_2000x3234.png` | 2000 × 3234 | `front_1000x1617.png` enlarged 2× with OpenCV Lanczos (WATCH_PRODUCTION_WORKFLOW 0.2) | Working reference: trace and photo map. Enlargement adds no detail |
 | `three_quarter_738x492.webp` | 738 × 492 | orient-watch.com product page (`RE-AT0007N_01.webp`) | 3/4 view from the crown side: wide polished bezel, short curved lugs, fluted crown |
@@ -13,6 +14,7 @@ Listing: stainless steel, 39.3 mm (some retailers round to 39 mm), 12.3 mm thick
 
 SHA-256:
 
+- `front_official_2000x2000.webp`: `dfe055115b0ae3b5f696a422d2a5a2890f3d46afa0bfe5a76db013c4a5f50f77`
 - `front_1000x1617.png`: `1d2c6be0c77ca2efe7f49ca4a6301af4e0d5b632b3125253a3a921569934f975`
 - `front_2x_2000x3234.png`: `379e825a065c3bad1e59365f6f55a1c1437d5dd6f915b4deef87eb495e549a57`
 - `three_quarter_738x492.webp`: `bb782095f2cbe93154cc3f5b2a180eecbb3465e996774e5ed2dc0df740c82a08`

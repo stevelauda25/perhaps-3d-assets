@@ -214,7 +214,7 @@ def run(params):
 
     def half(y):
         ys = [sil[k] for k in (round(y, 2), round(-y, 2)) if k in sil]
-        return sum((p[2] - p[1]) / 2 for p in ys) / len(ys)
+        return max((p[2] - p[1]) / 2 for p in ys)  # the wider side: past the shorter photo lug tip the other side is bracelet
 
     tip = lg["tip"]
     rows_top, rows_facet = [], []

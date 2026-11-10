@@ -1,6 +1,6 @@
 {
   "name": "WATCH_KIT_WHITE_ORIENT_RE_AU0108G",
-  "note": "White kit with a straight-on orthographic camera matching references/orient-re-au0108g/ (front_2x_2370x4168.png) composited on white, cropped to a 4000 px square centred on the hand pivot (1122, 1984) and resized to 2000 px. Comparison only, not the presentation look.",
+  "note": "White kit with a straight-on orthographic camera matching references/orient-re-au0108g/front_official_2000x2000.webp (Orient's render) cropped to a 1700 px square centred on the case centre (961, 887) and resized to 2000 px. Comparison only, not the presentation look.",
   "ground": false,
   "world": {
     "top": [
@@ -92,7 +92,7 @@
   "cameras": {
     "front_ortho": {
       "ortho": {
-        "scale_px_per_mm": 24.6213,
+        "scale_px_per_mm": 32.287,
         "center_px": [
           1000.0,
           1000.0

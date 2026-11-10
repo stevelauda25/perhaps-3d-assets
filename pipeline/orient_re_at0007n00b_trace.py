@@ -2,9 +2,8 @@
 
     python3 -B -m pipeline.orient_re_at0007n00b_trace [out.json] [overlay.png]   # default config/watches/orient-re-at0007n00b-trace.json
 
-Working reference: the 1000 x 1617 retailer photo supplied by Irsyad, enlarged 2x (Lanczos) as WATCH_PRODUCTION_WORKFLOW 0.2.
-The photo is taken a little from the right and above: the right case flank and the crown's side show, the crystal ring is
-an ellipse. The model follows the photo's own outline (the photo is projected on it from the front), so the outline is the
+Working reference since round 4: Orient's official straight front render (2000 x 2000, sharper than the 1000 x 1617 retailer
+photo of rounds 2-3). The crystal ring is still read as an ellipse (it is nearly round here). The model follows the photo's own outline (the photo is projected on it from the front), so the outline is the
 photo silhouette, not a circle:
   - head mask = not background, not black strap, the component holding the bezel, clipped to an envelope (case disk, four lug
     quads, crown box) that cuts the strap highlights away; the crown is cut out and built as its own part;
@@ -22,31 +21,32 @@ import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-FRONT = ROOT / "references/orient-re-at0007n00b/front_2x_2000x3234.png"
+FRONT = ROOT / "references/orient-re-at0007n00b/front_official_2000x2000.webp"
 OUT = ROOT / "config/watches/orient-re-at0007n00b-trace.json"
 CASE_MM = 39.3  # listing: case diameter 39.3 mm
 STEP_DEG = 2.0  # case outline samples
 
+# Orient's official straight front render (2000 x 2000, time 10:08:37); read from gridded crops and rotated hand strips.
+# Hand half widths are the round 3 values in mm (same watch) at this photo's scale.
 MANUAL_PX = {
-    "hand_pivot": [920, 1382],
-    # crystal opening (inner edge of the polished bezel) is an ellipse in this photo; dial flat edge (inner edge of the black track)
-    "crystal_ellipse": {"centre": [921, 1366], "rx": 770, "ry": 757},
-    "dial_flat_px": 655,
-    # hands: tip, tail end, half widths (widest at base_r px from the pivot)
-    "hands": {"hour": {"tip": [583, 1143], "tail": [1062, 1490], "half_base": 32, "base_r": 110, "half_hub": 20},
-              "minute": {"tip": [1448, 1035], "tail": [830, 1446], "half_base": 22, "base_r": 110, "half_hub": 19},
-              "seconds": {"tip": [660, 860], "tail": [987, 1517], "half_base": 4.5, "base_r": 40, "half_hub": 7}},
-    "hub_px": 12,
+    "hand_pivot": [950, 877],
+    # crystal opening (inner edge of the polished bezel): 452 / 1447 on the pivot row, 378 / 1360 on the pivot column
+    "crystal_ellipse": {"centre": [950, 869], "rx": 497, "ry": 491},
+    "dial_flat_px": 415,  # inner edge of the black chapter ring
+    "hands": {"hour": {"tip": [724, 721], "tail": [1036, 937], "half_base": 21, "base_r": 71, "half_hub": 13},
+              "minute": {"tip": [1284, 636], "tail": [845, 953], "half_base": 14, "base_r": 71, "half_hub": 12},
+              "seconds": {"tip": [679, 1239], "tail": [1040, 757], "half_base": 3, "base_r": 26, "half_hub": 4.5}},
+    "hub_px": 8,
     # envelope: case disk and one quad per lug (inner edge and tip edge exact, outer side generous: the white background cuts it)
-    "case_disk": {"centre": [921, 1375], "r": 905},
-    "lug_quads": {"tl": [[417, 470], [598, 470], [552, 690], [200, 900]],
-                  "tr": [[1415, 490], [1640, 490], [1760, 1050], [1420, 700]],
-                  "bl": [[150, 1900], [600, 2030], [455, 2100], [470, 2365], [300, 2365]],
-                  "br": [[1330, 2120], [1600, 1980], [1465, 2425], [1335, 2425]]},
+    "case_disk": {"centre": [950, 884], "r": 590},
+    "lug_quads": {"tl": [[590, 284], [684, 284], [684, 430], [400, 720]],
+                  "tr": [[1252, 284], [1350, 284], [1580, 700], [1252, 430]],
+                  "bl": [[400, 1040], [659, 1330], [659, 1555], [590, 1555]],
+                  "br": [[1234, 1330], [1580, 1040], [1350, 1565], [1234, 1565]]},
     # strap between the lugs at the tips: x of the left / right lug inner edges, tip row
-    "strap": {"top": {"x": [586, 1418], "tip_y": 480}, "bottom": {"x": [462, 1334], "tip_y": 2392}},
+    "strap": {"top": {"x": [683, 1252], "tip_y": 285}, "bottom": {"x": [659, 1234], "tip_y": 1555}},
     # crown at 3: y top / bottom, x where it leaves the case flank and of its end
-    "crown": {"y_top_bottom": [1318, 1600], "x_from_to": [1782, 1935], "teeth": 22},
+    "crown": {"y_top_bottom": [804, 997], "x_from_to": [1497, 1591], "teeth": 22},
 }
 ARTEFACTS = ["Roman numerals, applied indices, minute track, power reserve scale and hand, open-heart movement and the logo stay in the photo map (flat)",
              "hands are needles from the picked tips, tails and half widths; the photo shows on them, so a px of outline error shows dial pixels at the edge",
@@ -67,7 +67,7 @@ def head_mask(im, M):
     cand = cv2.morphologyEx(cand & env & (1 - crown_box), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
     _, lab = cv2.connectedComponents(cand)
     px0, py0 = M["hand_pivot"]
-    k = lab[py0, px0 - 800]  # the polished bezel at 9 o'clock
+    k = lab[py0, px0 - int(0.86 * M["case_disk"]["r"])]  # the polished bezel at 9 o'clock
     cnt = max(cv2.findContours((lab == k).astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea)
     head = np.zeros_like(env)
     cv2.drawContours(head, [cnt], -1, 1, -1)  # dial, strap shadows inside the outline: filled
@@ -94,14 +94,14 @@ def trace(path=FRONT, overlay=None):
     r_edge, blocked = [], []
     for deg in angs:
         a = math.radians(deg)
-        rr = np.arange(500, 1000)
+        rr = np.arange(int(0.55 * M["case_disk"]["r"]), int(1.1 * M["case_disk"]["r"]))
         xx = np.clip(np.round(px0 + rr * math.sin(a)).astype(int), 0, im.shape[1] - 1)
         yy = np.clip(np.round(py0 - rr * math.cos(a)).astype(int), 0, im.shape[0] - 1)
         inside = head[yy, xx] > 0
         r_edge.append(float(rr[np.argmin(inside)]) if not inside.all() else 999.0)  # first px outside the head
-        e = min(int(r_edge[-1]) - 502, 499)  # just inside the edge: a lug edge, not the case edge
+        e = min(int(r_edge[-1]) - rr[0] - 2, len(rr) - 1)  # just inside the edge: a lug edge, not the case edge
         lug = env_lugs[yy[e], xx[e]] > 0
-        crown = cr["y_top_bottom"][0] - 30 <= py0 - 850 * math.cos(a) <= cr["y_top_bottom"][1] + 30 and math.sin(a) > 0.8
+        crown = cr["y_top_bottom"][0] - 30 <= py0 - 0.95 * M["case_disk"]["r"] * math.cos(a) <= cr["y_top_bottom"][1] + 30 and math.sin(a) > 0.8
         blocked.append(bool(lug or crown))
     r_edge, blocked = np.array(r_edge), np.array(blocked)
     ok = np.nonzero(~blocked)[0]
