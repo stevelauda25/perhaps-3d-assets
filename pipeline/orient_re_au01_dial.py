@@ -2,10 +2,11 @@
 
     python3 -B -m pipeline.orient_re_au01_dial <sku> [review.png]     # -> outputs/watches/orient-re-<sku>/dial_photo.jpg
 
-The dial is concentric (sunburst centre, grooved ring), so in polar coordinates about the pivot each radius is interpolated
-across the hand's angles from the clean dial on both sides (not printed or applied parts); inside the hub one flat colour.
-Hand pixels on the power reserve crescent are copied from its mirror image about the crescent's vertical axis first.
-Square map centred on the hand pivot out to the crystal ring, 2x working copy, light unsharp mask, JPEG.
+The dial is concentric (sunburst centre, grooved ring) and the minute track repeats every 6 deg, so each hand pixel is copied
+from the same radius 6, 12, 18 ... deg away about the pivot over a polar lighting estimate (pipeline/orient_ra_wj0002l_dial.py);
+the hub zone keeps the smooth lighting. Hand pixels on the power reserve crescent are copied from its mirror image about the
+crescent's vertical axis first. Square map centred on the hand pivot out to the crystal ring, native resolution of Orient's
+2000 px render, light unsharp mask, JPEG.
 Hand outlines are the build's (config/watches/orient-re-<sku>-trace.json). Rebuild with --force after regenerating.
 """
 import json
@@ -16,11 +17,16 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+from pipeline.orient_ra_wj0002l_dial import fill, lighting, streaks
+
 ROOT = Path(__file__).resolve().parents[1]
 SHARPEN = (1.2, 0.6)
 JPEG_QUALITY = 93
-MARGIN_MM = 0.3
-SHADOWS_MM = ((0.3, -0.3), (0.55, -0.55), (0.8, -0.75), (1.05, -0.95), (1.3, -1.1), (-0.3, 0.3), (-0.5, 0.5))  # light from the upper left: shadows fall right and down (seconds up to 1 mm)
+MARGIN_MM = 0.2
+SHADOWS_MM = ((0.15, -0.15), (0.3, -0.3))  # Orient's renders: short soft shadows right and down
+PERIOD_DEG = 6
+PLAIN_SUNBURST_MM = 9.4  # the grooved ring starts at 9.6 mm
+STEEL_SAT = 60  # HSV saturation: steel hands below, copper dial about 90-115
 
 
 def hand_polys(t):
@@ -48,7 +54,7 @@ def rot(x, y, deg):
 
 
 def hand_mask(t, shape, shadows=SHADOWS_MM, margin=MARGIN_MM):
-    S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
+    S, (px0, py0) = t["scale_px_per_mm"], t.get("hand_pivot_px", t["origin_px"])  # hands about their own pivot
     P = lambda x, y: (px0 + x * S, py0 - y * S)
     m = np.zeros(shape, np.uint8)
     for dx, dy in ((0, 0),) + tuple(shadows):
@@ -87,40 +93,6 @@ def feature_mask(t, shape):
     return m.astype(bool)
 
 
-PLAIN_SUNBURST_MM = 9.6  # plain sunburst inside the grooved ring
-RADIUS_MM = [17.2]  # map half size in mm (set by build)
-
-
-def polar_fill(win, todo, bad, R):
-    """Fill `todo` by linear interpolation along the angle at each radius between the nearest clean (not `bad`) samples.
-    Radii with no clean sample (inside the hub) take the nearest clean radius outward."""
-    n_r, n_a = R, int(2 * math.pi * R)
-    flags = cv2.WARP_POLAR_LINEAR
-    pol = cv2.warpPolar(win, (n_r, n_a), (R, R), R, flags | cv2.INTER_LINEAR).astype(np.float32)
-    ok = cv2.warpPolar((~bad).astype(np.uint8) * 255, (n_r, n_a), (R, R), R, flags | cv2.INTER_NEAREST) > 127
-    ok &= cv2.warpPolar((~todo).astype(np.uint8) * 255, (n_r, n_a), (R, R), R, flags | cv2.INTER_NEAREST) > 127
-    ang = np.arange(n_a)
-    inner = None
-    for j in range(n_r):  # inside the hub nearly every angle is a hand: one flat colour from the first mostly clean radius
-        if ok[:, j].mean() > 0.12:
-            inner = j
-            break
-    flat = np.median(pol[ok[:, inner], inner], axis=0)
-    for j in range(n_r):
-        idx = np.nonzero(ok[:, j])[0]
-        if j < inner:
-            pol[:, j] = flat
-            continue
-        for ch in range(3):
-            pol[:, j, ch] = np.interp(ang, idx, pol[idx, j, ch], period=n_a)
-    # soften the per-radius banding in the plain sunburst (the grooved ring outside keeps its sharp radii)
-    plain = int(PLAIN_SUNBURST_MM * R / RADIUS_MM[0])
-    pol[:, :plain] = cv2.GaussianBlur(pol[:, :plain], (0, 0), sigmaX=6, sigmaY=0.1)
-    copied = inner
-    back = cv2.warpPolar(pol, (2 * R, 2 * R), (R, R), R, flags | cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP)
-    return np.clip(back, 0, 255).astype(np.uint8), copied
-
-
 def build(sku, review=None):
     t = json.loads((ROOT / f"config/watches/orient-re-{sku}-trace.json").read_text())
     out = ROOT / f"outputs/watches/orient-re-{sku}/dial_photo.jpg"
@@ -134,7 +106,13 @@ def build(sku, review=None):
     keep = np.zeros(mask.shape, np.uint8)  # prints a hand or its shadow only grazes: mask the bare hand there, keep the print
     for b in [t[k] for k in ("pr_zero_box", "logo_box", "print_6_box", "date_window")] + [t[k]["x0_y0_x1_y1_mm"] for k in ("numeral_12", "numeral_6")]:
         cv2.rectangle(keep, S_(b[0], max(b[1], b[3])), S_(b[2], min(b[1], b[3])), 1, -1)
-    mask = np.where(keep.astype(bool), hand_mask(t, img.shape[:2], (), 0.05), mask)[sl]
+    mask = np.where(keep.astype(bool), hand_mask(t, img.shape[:2], (), 0.05), mask)
+    # both renders share one template and hand pose: the steel hands are the unsaturated pixels of the copper RE-AU0108G
+    # render near the traced outlines (the grey RE-AU0110N dial cannot be told from steel by colour)
+    ref = cv2.cvtColor(cv2.imread(str(ROOT / "references/orient-re-au0108g/front_official_2000x2000.webp")), cv2.COLOR_BGR2HSV)
+    zone = hand_mask(t, img.shape[:2], SHADOWS_MM, 0.9) & ~feature_mask(t, img.shape[:2])
+    steel = cv2.dilate(((ref[..., 1] < STEEL_SAT) & zone).astype(np.uint8), np.ones((7, 7), np.uint8)).astype(bool)
+    mask = (mask | (steel & ~keep.astype(bool)))[sl]
     bad = mask | feature_mask(t, img.shape[:2])[sl]
     todo = mask.copy()
 
@@ -151,11 +129,15 @@ def build(sku, review=None):
     todo &= ~take
     mirrored = int(take.sum())
 
-    # 2) everything else: in polar coordinates about the pivot, interpolate each radius across the masked angles from the
-    #    clean dial on both sides (the sunburst, grooved ring and track are concentric, so they continue along the angle)
-    RADIUS_MM[0] = R / S
-    filled, rows_copied = polar_fill(win, todo, bad, R)
-    win[todo] = filled[todo]
+    # 2) everything else: the same radius 6, 12, 18 ... deg away about the pivot (sunburst, grooved ring and minute track are
+    #    concentric and the track repeats every 6 deg) over a polar lighting estimate; the hub zone keeps the smooth lighting
+    low = lighting(win, bad, (R, R))
+    plain = np.hypot(xx - R, yy - R) < PLAIN_SUNBURST_MM * S  # inside the grooved ring: plain sunburst, lighting plus grain
+    ring = todo & ~plain
+    fill(win, ring, bad, low, [(sg * k * PERIOD_DEG, 1.0) for k in range(1, 30) for sg in (1, -1)], (R, R))
+    rest = ring | (todo & plain)
+    rows_copied = int(rest.sum())
+    win[rest] = np.clip(low[rest] + streaks(win, ~bad, (R, R))[rest], 0, 255).astype(np.uint8)
     soft = cv2.GaussianBlur(mask.astype(np.float32), (0, 0), 1.5)[..., None]
     win = (soft * win + (1 - soft) * img[sl]).astype(np.uint8)
     blur = cv2.GaussianBlur(win, (0, 0), SHARPEN[0])
@@ -163,7 +145,7 @@ def build(sku, review=None):
     out.parent.mkdir(parents=True, exist_ok=True)
     cv2.imwrite(str(out), crop, [cv2.IMWRITE_JPEG_QUALITY, JPEG_QUALITY])
     meta = {"source": t["source"], "centre_px": [px0, py0], "half_size_mm": round(R / S, 3), "size_px": crop.shape[0],
-            "masked_px": int(mask.sum()), "mirrored_on_crescent_px": mirrored, "radii_without_clean_dial": rows_copied}
+            "masked_px": int(mask.sum()), "mirrored_on_crescent_px": mirrored, "lighting_only_px": rows_copied}
     out.with_suffix(".json").write_text(json.dumps(meta, indent=1) + "\n")
     if review:
         shown = img[sl].copy()

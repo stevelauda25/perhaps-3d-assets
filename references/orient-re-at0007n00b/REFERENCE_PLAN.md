@@ -45,3 +45,5 @@ python3 -B -m pipeline.jobs run jobs/orient-re-at0007n00b.json --force
 | 1 | 2026-11-10 | First front relief: photo projected on every part, round case with the wide bezel, photo lugs, raised hands, fluted crown, black leather strap with the 7 mm curl |
 | 2 | 2026-11-10 | Rebuilt on the sharper 1000 × 1617 photo from Irsyad: case lofted from the photo outline into the elliptic crystal ring, lugs from the photo silhouette, hands re-picked at 10:08 |
 | 3 | 2026-11-10 | House method: round 39.3 mm polished case and bezel, four mirrored lugs (outline from the straight round 1 photo), crown on the 3 o'clock axis, faceted rose-gold dauphine hands, dial map with the hands removed and straightened from the photo's crystal ellipse, 20 mm strap from the photo's flat leather |
+| 4 | 2026-11-10 | Rebuilt on Orient's official 2000 px straight front render: hands, rings, crown and strap re-read, hand zones inpainted (rose-gold pixels added to the mask), 20 mm strap from the render's flat leather |
+| 4 | 2026-11-10 | Approved and delivered to `models/watches/orient-re-at0007n00b.glb` |

@@ -50,3 +50,5 @@ python3 -B -m pipeline.jobs run jobs/orient-re-au0108g.json --force
 | Round | Date | Change |
 | --- | --- | --- |
 | 1 | 2026-11-10 | First front relief, house method |
+| 2 | 2026-11-10 | Rebuilt on Orient's official 2000 px straight front render: trace origin at the case centre (hands sit 0.7 mm higher in the render), dial map by 6 deg copies with the hands masked by colour, lugs from the wider photo side |
+| 2 | 2026-11-10 | Approved and delivered to `models/watches/orient-re-au0108g.glb` |

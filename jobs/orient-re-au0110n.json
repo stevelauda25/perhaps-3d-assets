@@ -3,7 +3,7 @@
   "output": "outputs/jobs/orient-re-au0110n",
   "asset_type": "watch",
   "model": "Orient Star RE-AU0110N",
-  "baseline": "Round 1: round steel case with a wide sloped polished bezel, faceted lugs, fluted crown, applied batons, XII and VI, raised power reserve crescent, dauphine hands, grey dial photo map, three-link bracelet with polished rails and the house curl, 38.5 mm",
+  "baseline": "Round 2: rebuilt on Orient's official 2000 x 2000 front render; round steel case with a wide sloped polished bezel, faceted lugs, fluted crown, applied batons, XII and VI, raised power reserve crescent, dauphine hands, grey dial photo map, three-link bracelet with polished rails and the house curl, 38.5 mm",
   "input": "assets/watches/baseline/empty_base.blend",
   "references": [
     "references/orient-re-au0110n/REFERENCE_PLAN.md",

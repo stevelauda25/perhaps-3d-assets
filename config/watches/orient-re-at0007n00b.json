@@ -178,14 +178,14 @@
   "bend_after_tip": 0.0,
   "bend_radius": 7.0,
   "arc_over_radius": 2.2,
-  "note": "20 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case. photo_case_edge: where the photo's strap leaves the case on the strap's centre line (mm); photo_past_tip: flat leather kept past the photo's lug tip",
+  "note": "20 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case. photo_case_edge: where the official render's strap leaves the case on the strap's centre line (mm); photo_past_tip: flat leather kept past the photo's lug tip",
   "uv_inset": 0.02,
   "photo_case_edge": {
-   "top": 20.0,
-   "bottom": 21.04
+   "top": 19.6,
+   "bottom": 20.1
   },
   "start_y": 14.0,
-  "photo_past_tip": 2.5
+  "photo_past_tip": 1.0
  },
  "materials": {
   "steel_polished": {
@@ -241,8 +241,8 @@
    ]
   ],
   "notes": [
-   "Round 3: back to the house method. Case, bezel, lugs and crown are modelled in the house polished steel; the hands are modelled rose-gold dauphines; the photo is used only for the dial print and the leather strap.",
-   "The model is the real round watch: 39.3 mm case, four equal lugs, crown on the 3 o'clock axis, 20 mm strap. The supplied photo is taken a little from the right, so the dial print is straightened from its slightly oval outline.",
+   "Round 4: rebuilt on Orient's official straight front render (2000 px, sharper and straight on). House method: case, bezel, lugs and crown in the house polished steel, modelled rose-gold dauphine hands; the photo is used only for the dial print and the leather strap.",
+   "The model is the real round watch: 39.3 mm case, four equal lugs, crown on the 3 o'clock axis, 20 mm strap.",
    "The applied indices and Roman numerals, the power reserve and the open heart are printed flat on the dial.",
    "The deployant buckle and the strap keeper are left out. The strap curls under at both ends, like the other tracker watches."
   ]

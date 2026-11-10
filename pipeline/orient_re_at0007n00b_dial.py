@@ -25,11 +25,15 @@ SHARPEN = (1.2, 0.6)
 JPEG_QUALITY = 93
 MAX_PX = 2048
 DARK = 110  # black leather; the steel buckle and the white background are brighter
-REACH_PX = 80  # strap search band outside the box edges (keeps the buckle out)
+REACH_PX = 30  # strap search band outside the box edges (keeps the buckle out; the official render has exact lug edges)
 MARGIN_MM = 2.0  # rows kept past the strap's front-visible end (tip + bend radius)
 HAND_MARGIN_MM = 0.35  # the traced needles sit within about 0.15 mm of the photographed hands; the rest is their soft edge
 SHADOWS_MM = ((0.15, -0.15), (0.3, -0.3))  # soft short shadows down-right of the hands (light from the upper left)
 FILL_SIGMAS_PX = (30, 6)  # coarse fill for the wide hands, fine fill keeps the dial print running under the thin seconds
+
+
+HAND_COLOUR_R_MM = 11.0  # the applied indices start at about 11.5 mm
+OPEN_HEART_PX = (688, 890, 175)  # centre and outer ring radius on the official render
 
 
 def hand_mask(t, shape):
@@ -44,6 +48,11 @@ def hand_mask(t, shape):
 
 
 def fill(img, mask):
+    """Inpaint the hand zones from their edges (Telea), as pipeline/orient_re_av00_dial.py; the modelled hands cover them."""
+    return cv2.inpaint(img, mask.astype(np.uint8) * 255, 6, cv2.INPAINT_TELEA)
+
+
+def blur_fill(img, mask):  # rounds 2-3: normalised blur of the unmasked pixels (left a grey smear on the 2000 px render)
     valid = (1 - mask).astype(np.float32)[..., None]
     est = None
     for sig in FILL_SIGMAS_PX:  # normalised blur of the unmasked pixels: smooth dial colour, no streaks from the hand edges
@@ -60,6 +69,15 @@ def build(out=OUT, review=None):
     S, (px0, py0) = t["scale_px_per_mm"], t["origin_px"]
     img = cv2.imread(str(ROOT / t["source"]))
     mask = hand_mask(t, img.shape[:2])
+    # the traced needles are narrower than the faceted rose-gold hands: add the hand-coloured pixels (rose gold or bright
+    # facets) near them, inside the applied indices' radius
+    zone = cv2.dilate(mask, np.ones((int(1.2 * S) | 1,) * 2, np.uint8)).astype(bool)
+    yy, xx = np.mgrid[0:img.shape[0], 0:img.shape[1]]
+    near = np.hypot(xx - px0, yy - py0) < HAND_COLOUR_R_MM * S
+    b, g_, r = (img[..., k].astype(int) for k in range(3))
+    heart = np.hypot(xx - OPEN_HEART_PX[0], yy - OPEN_HEART_PX[1]) < OPEN_HEART_PX[2]  # its polished ring is bright too
+    hand_col = ((r - b > 18) & (r > 110)) | ((img.min(2) > 200) & ~heart)
+    mask = (mask.astype(bool) | cv2.dilate((hand_col & zone & near).astype(np.uint8), np.ones((5, 5), np.uint8)).astype(bool)).astype(np.uint8)
     clean = fill(img, mask)
     grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     ends, rows_kept = {}, {}
