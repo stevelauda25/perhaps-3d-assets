@@ -1,0 +1,46 @@
+{
+  "id": "orient-ra-wj0004y",
+  "output": "outputs/jobs/orient-ra-wj0004y",
+  "asset_type": "watch",
+  "model": "Orient RA-WJ0004Y",
+  "baseline": "Round 1, house method on the 1855 x 3183 straight front photo: brushed case plate from the photo silhouette, polished bezel ring with the photo insert, applied lume indices and numerals, sword hands with lume, dark seconds with an orange tip, fluted crown, three-column bracelet with the house curl, 39.9 mm",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-ra-wj0004y/REFERENCE_PLAN.md",
+    "config/watches/orient-ra-wj0004y.json",
+    "config/watches/orient-ra-wj0004y-trace.json",
+    "config/presets/watch_kit_white_front_orient_ra_wj0004y.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_ra_wj0004y",
+      "params": {
+        "spec": "config/watches/orient-ra-wj0004y.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-ra-wj0004y/orient-ra-wj0004y.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_ra_wj0004y.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

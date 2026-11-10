@@ -1,0 +1,39 @@
+{
+ "model": "Orient RA-WJ0004Y",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (39.9 mm case, listing; bracelet between the lugs 19.6 mm measured against 20 mm). Heights before the house depth scale; thickness not listed and no side photo: estimated (about 12 mm). House method: modelled brushed case and bracelet, polished bezel ring, applied indices and numerals with lume, hands; the photo map serves the dial print, the rehaut, the bezel insert print and the raised ORIENT letters.",
+ "trace": "config/watches/orient-ra-wj0004y-trace.json",
+ "photo_map": "outputs/watches/orient-ra-wj0004y/photo.jpg",
+ "photo_roughness": {"dial": 0.3, "bezel_insert": 0.4},
+ "verified_mm": {"diameter": 39.9, "lug_width": 20.0},
+ "case": {"top_z": 7.0, "opening_r": 15.7, "bevel": 0.8, "note": "one brushed plate from the photo silhouette (both edges about the bezel centre, top and bottom averaged), lugs either side of the bracelet, polished rounded edges"},
+ "bezel": {"z0": 6.8, "ring_top_z": 8.5, "insert_top_z": [8.7, 8.55], "note": "polished steel ring to the bezel's outer edge, beige aluminium insert from the photo (sloping down outward), crystal inside it"},
+ "crystal": {"z0": 8.1, "z1": 8.45},
+ "dial": {"z": 5.6, "rehaut_z": 8.0, "note": "flat sunburst dial to 14.62 mm, then the rehaut as a cone up to the insert's inner edge, both from the photo"},
+ "applied": {"height": 0.35, "lume_height": 0.05, "logo_height": 0.12, "frame_bevel": 0.05},
+ "hands": {"thickness": 0.15, "lume_height": 0.04, "z": {"hour": 6.1, "minute": 6.45, "seconds": 6.8}, "seconds_disc_r": 1.2, "hub_cap_height": 0.25,
+           "note": "sword hour and minute: polished frames with lume; seconds: dark steel needle with a round counterweight and an orange tip"},
+ "crown": {"teeth": 20, "flute_depth": 0.2, "gap": 0.15, "z": 3.6, "neck_fraction": 0.62, "note": "fluted crown on the 3 o'clock axis, 5.9 mm across, 3.4 mm long (photo)"},
+ "end_link": {"top_z": 4.4},
+ "bracelet": {"z0": 0.6, "z1": 3.6, "gap": 0.15, "bevel": 0.3, "backing_z": [0.2, 0.6], "bend_radius": 7.0, "bend_after_tip": 0.0, "arc_over_radius": 2.2,
+              "note": "house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius. Three columns (centre 0.49 of the width, photo); outer links from 22.8 mm, centre links from 22.4 mm (photo); end links from the case edge between the lugs"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "steel_dark": {"color": [0.12, 0.14, 0.17], "metallic": 1.0, "roughness": 0.2, "note": "dark blue-grey seconds hand (photo)"},
+  "lume": {"color": [0.95, 0.95, 0.92], "metallic": 0.0, "roughness": 0.45, "note": "white lume (photo)"},
+  "orange": {"color": [1.0, 0.32, 0.04], "metallic": 0.0, "roughness": 0.35, "note": "seconds tip (photo)"},
+  "crystal": {"color": [0.0, 0.0, 0.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08, "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"}
+ },
+ "steel_textures": {"steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0, "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"}},
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "review": {
+  "subtitle": "Mako Solar: brushed steel case and bracelet, beige bezel, brown sunburst dial, applied lume indices. Front relief GLB.",
+  "specs": [["39.9 mm", "Case diameter"], ["20 mm", "Bracelet width"], ["46.5 mm", "Lug to lug"]],
+  "notes": [
+   "Round 1, house method: case, bezel ring, lugs, crown and bracelet are modelled in the house steel; the applied indices, the 12, 6 and 9 and the hands are modelled with white lume; the photo is used for the dial print, the bezel insert print and the ORIENT letters.",
+   "The bracelet has three columns like the photo, outer and centre links starting almost level at the lugs, and curls under at both ends like the other tracker watches.",
+   "Only a front photo was available and the thickness is not listed: case, bezel and bracelet heights are estimated."
+  ]
+ }
+}
