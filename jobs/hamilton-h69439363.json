@@ -1,0 +1,46 @@
+{
+ "id": "hamilton-h69439363",
+ "output": "outputs/jobs/hamilton-h69439363",
+ "asset_type": "watch",
+ "model": "Hamilton H69439363",
+ "baseline": "Round 1: modelled front relief from Hamilton's official straight front render (2100 x 2054, native) at the official 38 mm case, house depth, glass, steel and strap curl; dial and canvas strap from photo maps; build step shared with H69439940",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/hamilton-h69439363/REFERENCE_PLAN.md",
+  "config/watches/hamilton-h69439363.json",
+  "config/watches/hamilton-h69439363-trace.json",
+  "config/presets/watch_kit_white_front_hamilton_h69439363.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_hamilton_h69439940",
+   "params": {
+    "spec": "config/watches/hamilton-h69439363.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/hamilton-h69439363/hamilton-h69439363.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_hamilton_h69439363.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

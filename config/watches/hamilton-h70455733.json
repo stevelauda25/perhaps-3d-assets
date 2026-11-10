@@ -1,0 +1,254 @@
+{
+ "model": "Hamilton H70455733",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render (38 mm case, 47 mm lug to lug and 20 mm lug width official; the render reads 47.3 mm). Heights before the house depth scale are a front-relief reading of the official 11 mm (no side photo). Built with the watch_hamilton_h69439940 step. House method: modelled brushed case flank, polished bezel, brushed lugs, polished crown, polished date frame and the polished pencil hands with their lume; photo maps only for the dial print and the leather strap.",
+ "trace": "config/watches/hamilton-h70455733-trace.json",
+ "dial_map": "outputs/watches/hamilton-h70455733/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h70455733/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_to_lug": 47.0,
+  "strap_width": 20.0
+ },
+ "case": {
+  "material": "steel_satin",
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    18.55,
+    0.0
+   ],
+   [
+    19.0,
+    0.45
+   ],
+   [
+    19.0,
+    5.8
+   ],
+   [
+    18.85,
+    6.2
+   ],
+   [
+    18.46,
+    6.3
+   ],
+   [
+    18.46,
+    5.5
+   ],
+   [
+    0.0,
+    5.5
+   ]
+  ],
+  "note": "Brushed round flank with a narrow flat top to r 18.46 (render step); inner top below the dial"
+ },
+ "bezel": {
+  "material": "steel_polished",
+  "profile_rz": [
+   [
+    16.86,
+    6.0
+   ],
+   [
+    18.46,
+    6.0
+   ],
+   [
+    18.46,
+    6.3
+   ],
+   [
+    17.8,
+    6.85
+   ],
+   [
+    16.86,
+    7.2
+   ]
+  ],
+  "note": "Wide polished bezel rising in a curve to the crystal (render: 16.86-18.46 mm)"
+ },
+ "gasket": {
+  "r_in": 16.7,
+  "r_out": 16.86,
+  "z0": 6.6,
+  "z1": 7.1
+ },
+ "crystal": {
+  "radius": 16.8,
+  "z0": 7.0,
+  "z1": 7.5,
+  "note": "flat sapphire"
+ },
+ "dial": {
+  "z": 5.6,
+  "rehaut_r": 16.7,
+  "rehaut_z": 6.6,
+  "roughness": 0.4
+ },
+ "hands": {
+  "material": "steel_polished",
+  "thickness": 0.12,
+  "lume_height": 0.06,
+  "z": {
+   "hour": 6.0,
+   "minute": 6.2,
+   "seconds": 6.4
+  }
+ },
+ "crown": {
+  "material": "steel_polished",
+  "z": 3.3,
+  "neck": 0.0,
+  "flute_depth": 0.18
+ },
+ "lug": {
+  "material": "steel_brushed",
+  "polished_bevel": true,
+  "into_case": 0.6,
+  "slope_from_y": 18.0,
+  "top_z_at_case": 6.0,
+  "top_z_at_tip": 4.4,
+  "bevel": 0.35
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 3.6,
+  "bevel": 0.35,
+  "edge_inset": 0.1,
+  "roughness": 0.35,
+  "uv_inset": 0.02,
+  "note": "20 mm black leather with light stitching (official lug width), house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case",
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_satin": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.3,
+   "note": "brushed round flank: plain satin, the normal map's straight lines would cross the ring"
+  },
+  "lume_hands": {
+   "color": [
+    0.62,
+    0.67,
+    0.73
+   ],
+   "metallic": 0.0,
+   "roughness": 0.5,
+   "note": "pale grey-blue lume (render)"
+  },
+  "hand_white": {
+   "color": [
+    0.86,
+    0.86,
+    0.84
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35,
+   "note": "white painted seconds hand"
+  },
+  "seconds_red": {
+   "color": [
+    0.7,
+    0.03,
+    0.03
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "red seconds tip"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Field Auto 38 mm, black dial with date, black leather strap",
+  "specs": [
+   [
+    "38 mm",
+    "Case (official)"
+   ],
+   [
+    "47 mm",
+    "Lug to lug (official)"
+   ],
+   [
+    "20 mm",
+    "Strap (official)"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front reference is Hamilton's official straight-on product render (2100 x 2054 px, from the Bucherer listing); the photo you supplied is the 3/4 view.",
+   "Brushed case flank and lugs, the wide polished bezel, the polished crown and date frame are modelled; the pencil hour and minute hands with lume and thin points, the white seconds hand with its red tip and small counterweight are modelled too. The dial print and the leather come from the render.",
+   "Heights are estimated from the official 11 mm (no side photo)."
+  ]
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the strap; bevels keep the plain polished material"
+  }
+ },
+ "date_frame": {
+  "material": "steel_polished",
+  "height": 0.15
+ }
+}

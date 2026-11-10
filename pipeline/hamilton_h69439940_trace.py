@@ -93,9 +93,11 @@ def trace(path, M, case_mm, listed, artefacts, overlay=None, hands_px=HANDS_PX):
     t0, t1 = M["lug_tips_y"]
     half = lambda row: (np.nonzero(fg[row])[0].max() - np.nonzero(fg[row])[0].min()) / 2 / S
     depth = []
+    tip_mm, photo_tip = listed["lug_to_lug_mm"] / 2, (t1 - t0) / 2 / S
     for d in np.arange(0.0, M["lug_depth_mm"] + 0.01, 0.25):
         k = int(round(d * S))
-        depth.append([round(float(d), 2), round((half(t0 + k + 1) + half(t1 - k - 1)) / 2, 3)])
+        # stretched about the pivot so the photo's tip lands on the listed tip and the case junction stays in place
+        depth.append([round(float(tip_mm - (photo_tip - d) * tip_mm / photo_tip), 3), round((half(t0 + k + 1) + half(t1 - k - 1)) / 2, 3)])
     out["lug"] = {"tip_mm": round(listed["lug_to_lug_mm"] / 2, 3), "photo_lug_to_lug_mm": round((t1 - t0) / S, 2),
                   "photo_tips_mm": [round((hy - t0) / S, 2), round((t1 - hy) / S, 2)],
                   "inner_x_mm": M["lug_inner_x_mm"], "half_width_by_depth_mm": depth}
@@ -113,6 +115,9 @@ def trace(path, M, case_mm, listed, artefacts, overlay=None, hands_px=HANDS_PX):
     cx0, cx1 = M["crown_x"]
     out["crown"] = {"from_mm": round((cx0 - hx) / S, 3), "to_mm": round((cx1 - hx) / S, 3), "cap_from_mm": round((M["crown_cap_x"] - hx) / S, 3),
                     "radius_mm": round(M["crown_radius_px"] / S, 3), "teeth": M["crown_teeth"]}
+    if "date_window" in M:  # applied frame around the date window (outer edge in px, frame width in px)
+        b = M["date_window"]
+        out["date_window"] = {"x0_y0_x1_y1_mm": mm(b[:2]) + mm(b[2:]), "frame_mm": round(M["date_frame_px"] / S, 3)}
     out["manual_px"] = M
     out["artefacts_not_traced"] = artefacts
 

@@ -10,7 +10,7 @@ numerals and the logo inside the minute track are never used as a source, so onl
 only the hand itself is replaced, inpainted from the print around it (print under a wide hand is not rebuilt: the 3D hands
 cover it, posed at the photo's time). The square map is centred on the hand pivot and
 reaches the bezel's inner edge. Strap: the bottom strap's rows past the lug tips resampled between its own edges
-(pipeline/orient_re_av00_dial.strap_strip); strap_photo.json lists the photo row of every map row. Native resolution, light
+(the row's outermost non-white pixels near the strap centre, so light stitching does not cut a row); strap_photo.json lists the photo row of every map row. Native resolution, light
 unsharp mask, JPEG. build() is shared with pipeline/hamilton_h70405710_dial.py.
 """
 import json
@@ -21,7 +21,6 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from pipeline.orient_re_av00_dial import strap_strip
 from pipeline.orient_ra_wj0002l_dial import fill, lighting
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +57,23 @@ def hand_mask(t, shape, margin, shadows, hub_zone):
     return cv2.dilate(m, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k))).astype(bool)
 
 
+def strap_strip(img, rows, centre_x, width):
+    """Each photo row's strap (outermost non-white pixels within 0.75 strap widths of the centre) resampled to `width`; the
+    strip ends at the first row narrower than 0.8 strap widths after it has started."""
+    fg = (765 - img.astype(int).sum(2)) > 30
+    out, used = [], []
+    for y in rows:
+        xs = np.nonzero(fg[y, max(centre_x - int(0.75 * width), 0):centre_x + int(0.75 * width)])[0] + max(centre_x - int(0.75 * width), 0)
+        if len(xs) == 0 or xs.max() - xs.min() < 0.8 * width:
+            if out:
+                break
+            continue
+        x0, x1 = int(xs.min()), int(xs.max())
+        out.append(cv2.resize(img[y:y + 1, x0:x1 + 1], (width, 1), interpolation=cv2.INTER_AREA))
+        used.append(int(y))
+    return np.vstack(out), used
+
+
 def build(cfg, out, review=None):
     t = json.loads(cfg["trace"].read_text())
     S, (px, py) = t["scale_px_per_mm"], t["hand_pivot_px"]
@@ -67,7 +83,7 @@ def build(cfg, out, review=None):
     sl = np.s_[cy - R:cy + R, cx - R:cx + R]
     win = img[sl].copy()
     full = hand_mask(t, img.shape[:2], cfg["margin_mm"], cfg["shadows_mm"], cfg["hub_zone_mm"])[sl]
-    tight = hand_mask(t, img.shape[:2], 0.04, (), cfg["hub_zone_mm"])[sl]
+    tight = hand_mask(t, img.shape[:2], cfg.get("tight_mm", 0.04), (), cfg["hub_zone_mm"])[sl]
     near = hand_mask(t, img.shape[:2], 0.3, (), cfg["hub_zone_mm"])[sl]  # the hands' own bright edge is not print
     yy, xx = np.mgrid[-R:R, -R:R]
     feats = cfg["feature"](win) & (np.hypot(xx, yy) < cfg["feature_r_mm"] * S) & ~near
@@ -77,6 +93,10 @@ def build(cfg, out, review=None):
     todo, bad = mask.copy(), mask | feats
     low = lighting(win, bad, (R, R))
     moves = [(sgn * k * PERIOD_DEG, 1.0) for k in range(1, 30) for sgn in (1, -1)]
+    inner = np.hypot(xx, yy) < cfg.get("copy_from_r_mm", 0.0) * S  # plain dial inside: inpainted from around, no copies
+    if inner.any():
+        win = cv2.inpaint(win, ((todo & inner) * 255).astype(np.uint8), 6, cv2.INPAINT_NS)
+    todo &= ~inner
     used = fill(win, todo, bad, low, moves, (R, R))
     unfilled = int(todo.sum())
     win[todo] = np.clip(low[todo], 0, 255).astype(np.uint8)

@@ -93,6 +93,18 @@ def run(params):
         me.update()
     add("dial", me, "dial", uv_of=lambda x, y, z: (0.5 + x / (2 * H), 0.5 + y / (2 * H)))
 
+    # ---- applied frame around the date window (the window and its numeral stay in the dial map) ----
+    if "date_window" in tr:
+        x0, y0, x1, y1 = tr["date_window"]["x0_y0_x1_y1_mm"]
+        k = tr["date_window"]["frame_mm"]
+        outer = [(x0, y1), (x1, y1), (x1, y0), (x0, y0)]
+        inner = [(x0 + k, y1 + k), (x1 - k, y1 + k), (x1 - k, y0 - k), (x0 + k, y0 - k)]
+        g = Geo()
+        for i in range(4):
+            j = (i + 1) % 4
+            g.prism([outer[i], outer[j], inner[j], inner[i]], d["z"], d["z"] + cfg["date_frame"]["height"])
+        add("date_frame", g, cfg["date_frame"]["material"], bevel=0.03)
+
     # ---- hands at the photo's time from the traced parts: body (layer 0), lume on top (layer 1) ----
     hs, th = cfg["hands"], cfg["hands"]["thickness"]
     for name, h in tr["hands"].items():
