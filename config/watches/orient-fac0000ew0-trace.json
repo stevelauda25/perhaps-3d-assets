@@ -1,0 +1,446 @@
+{
+ "source": "references/orient-fac0000ew0/front_2x_rect_3200x2223.png",
+ "scale_px_per_mm": 32.0741,
+ "origin_px": [
+  1609,
+  932
+ ],
+ "hand_pivot_px": [
+  1600,
+  922
+ ],
+ "hand_pivot_mm": [
+  -0.281,
+  0.312
+ ],
+ "anchor": "case width = 40.5 mm (listings)",
+ "stretch_y": [
+  1.0415913200723328,
+  932
+ ],
+ "case": {
+  "radius_mm": 20.25,
+  "height_mm_in_photo": 36.104
+ },
+ "bezel_inner_mm": 18.364,
+ "rehaut_mm": 17.771,
+ "lug": {
+  "tip_mm": 23.25,
+  "photo_lug_to_lug_mm": 46.42,
+  "inner_x_mm": 10.6,
+  "half_width_by_depth_mm": [
+   [
+    0.25,
+    11.528
+   ],
+   [
+    0.5,
+    11.879
+   ],
+   [
+    0.75,
+    12.089
+   ],
+   [
+    1.0,
+    12.198
+   ],
+   [
+    1.25,
+    12.284
+   ],
+   [
+    1.5,
+    12.354
+   ],
+   [
+    1.75,
+    12.409
+   ],
+   [
+    2.0,
+    12.471
+   ],
+   [
+    2.25,
+    12.541
+   ],
+   [
+    2.5,
+    12.596
+   ],
+   [
+    2.75,
+    12.658
+   ],
+   [
+    3.0,
+    12.713
+   ],
+   [
+    3.25,
+    12.775
+   ],
+   [
+    3.5,
+    12.837
+   ],
+   [
+    3.75,
+    12.908
+   ],
+   [
+    4.0,
+    12.962
+   ],
+   [
+    4.25,
+    13.025
+   ],
+   [
+    4.5,
+    13.079
+   ],
+   [
+    4.75,
+    13.141
+   ],
+   [
+    5.0,
+    13.212
+   ],
+   [
+    5.25,
+    13.274
+   ],
+   [
+    5.5,
+    13.336
+   ],
+   [
+    5.75,
+    13.414
+   ],
+   [
+    6.0,
+    13.484
+   ],
+   [
+    6.25,
+    13.555
+   ],
+   [
+    6.5,
+    13.633
+   ],
+   [
+    6.75,
+    13.71
+   ],
+   [
+    7.0,
+    13.812
+   ],
+   [
+    7.25,
+    13.905
+   ],
+   [
+    7.5,
+    14.022
+   ],
+   [
+    7.75,
+    14.139
+   ],
+   [
+    8.0,
+    14.287
+   ],
+   [
+    8.25,
+    14.443
+   ],
+   [
+    8.5,
+    14.583
+   ],
+   [
+    8.75,
+    14.732
+   ],
+   [
+    9.0,
+    14.872
+   ]
+  ]
+ },
+ "checks": {
+  "lug_to_lug_mm": 46.42,
+  "strap_width_past_tips_mm": {
+   "153": 21.36,
+   "193": 21.58,
+   "1802": 22.39,
+   "1892": 22.01,
+   "2042": 21.26
+  },
+  "listed": {
+   "lug_to_lug_mm": 46.5,
+   "strap_width_mm": 21.0,
+   "thickness_mm": 11.8
+  }
+ },
+ "indices": {
+  "baton_mm": {
+   "inner": 11.224,
+   "outer": 16.368,
+   "half_inner": 0.312,
+   "half_outer": 0.312
+  },
+  "index_12_mm": {
+   "inner": 11.224,
+   "outer": 16.368,
+   "half_inner": 0.312,
+   "half_outer": 0.312
+  },
+  "index_3_inner_mm": 12.939,
+  "layout": "faceted tapered batons at 1-11 (3 shortened by the date), wide double-ridge trapezoid at 12"
+ },
+ "date_window": {
+  "x0_y0_x1_y1_mm": [
+   9.135,
+   1.091,
+   12.097,
+   -0.842
+  ],
+  "size_mm": [
+   2.962,
+   1.933
+  ],
+  "centre_mm": [
+   10.616,
+   0.125
+  ],
+  "frame_mm": 0.0
+ },
+ "logo": {
+  "x0_y0_x1_y1_mm": [
+   -2.619,
+   8.169,
+   3.305,
+   3.648
+  ],
+  "size_mm": [
+   5.924,
+   4.521
+  ],
+  "centre_mm": [
+   0.343,
+   5.908
+  ]
+ },
+ "print_wr": {
+  "x0_y0_x1_y1_mm": [
+   -4.022,
+   -6.267,
+   4.708,
+   -8.044
+  ],
+  "size_mm": [
+   8.73,
+   1.777
+  ],
+  "centre_mm": [
+   0.343,
+   -7.155
+  ]
+ },
+ "print_6": {
+  "x0_y0_x1_y1_mm": [
+   -4.957,
+   -16.493,
+   5.02,
+   -17.46
+  ],
+  "size_mm": [
+   9.977,
+   0.967
+  ],
+  "centre_mm": [
+   0.031,
+   -16.976
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 303.81,
+   "length_mm": 8.742,
+   "outline_mm": [
+    [
+     -0.779,
+     0.468
+    ],
+    [
+     8.667,
+     0.468
+    ]
+   ]
+  },
+  "minute": {
+   "angle_deg": 51.34,
+   "length_mm": 13.219,
+   "outline_mm": [
+    [
+     -0.779,
+     0.374
+    ],
+    [
+     13.219,
+     0.374
+    ]
+   ]
+  },
+  "seconds": {
+   "angle_deg": 215.36,
+   "length_mm": 13.816,
+   "tail_mm": 3.897,
+   "half_width_mm": 0.094,
+   "tail_half_width_mm": 0.125
+  }
+ },
+ "hub_radius_mm": [
+  0.935,
+  0.312
+ ],
+ "crown": {
+  "from_mm": 20.266,
+  "to_mm": 22.697,
+  "radius_mm": 2.494,
+  "teeth": 24
+ },
+ "manual_px": {
+  "dial_centre": [
+   1609,
+   932
+  ],
+  "hand_pivot": [
+   1600,
+   922
+  ],
+  "case_x": [
+   970,
+   2269
+  ],
+  "case_y": [
+   353,
+   1511
+  ],
+  "bezel_centre": [
+   1619,
+   932
+  ],
+  "bezel_inner_r": 589,
+  "rehaut_r": 570,
+  "hour_hand_tip": [
+   1367,
+   766
+  ],
+  "hour_profile_px": [
+   [
+    -25,
+    15
+   ],
+   [
+    278,
+    15
+   ]
+  ],
+  "minute_angle_deg": 51.34,
+  "minute_hand_tip": [
+   1935,
+   654
+  ],
+  "minute_profile_px": [
+   [
+    -25,
+    12
+   ],
+   [
+    424,
+    12
+   ]
+  ],
+  "seconds_hand_tip": [
+   1343,
+   1283
+  ],
+  "seconds_tail_end": [
+   1673,
+   818
+  ],
+  "seconds_tail_px": [
+   125,
+   3,
+   4
+  ],
+  "seconds_angle_deg": 215.36,
+  "hub_radius_px": [
+   30,
+   10
+  ],
+  "index_px": {
+   "inner": 360,
+   "outer": 525,
+   "half_inner": 10,
+   "half_outer": 10
+  },
+  "index_12_px": {
+   "inner": 360,
+   "outer": 525,
+   "half_inner": 10,
+   "half_outer": 10
+  },
+  "index_3_inner_px": 415,
+  "date_window": [
+   1902,
+   897,
+   1997,
+   959
+  ],
+  "date_frame_px": 0,
+  "logo": [
+   1525,
+   670,
+   1715,
+   815
+  ],
+  "print_wr": [
+   1480,
+   1133,
+   1760,
+   1190
+  ],
+  "print_6": [
+   1450,
+   1461,
+   1770,
+   1492
+  ],
+  "crown_x": [
+   2269,
+   2347
+  ],
+  "crown_radius_px": 80,
+  "crown_teeth": 24,
+  "lug_inner_x_mm": 10.6,
+  "lug_tips_y": [
+   253,
+   1742
+  ]
+ },
+ "artefacts_not_traced": [
+  "Orient USA image of TAC0000EW0 (same watch, US code); stretched vertically 1.0416 so the dial ring is round",
+  "the domed crystal bends the batons a little: one inner and outer radius for all four",
+  "printed hour lines, minute track, logo and prints stay in the photo map"
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "model": "Orient RA-AC0P03L10B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = index ring centre. Plan sizes from the trace of the straight front photo (42 mm case, Orient UK official; lug to lug 49 mm official, the photo reads 47.3 mm because the Bambino lugs curve down). Heights before the house depth scale are a front-relief reading of the official 12 mm and the domed crystal (no side photo). Built with the watch_orient_ra_ac0f06l10b step. House method: modelled polished case, thin bezel, lugs, crown, lance batons, coffin 12, date frame and dauphine hands; photo maps only for the dial print and the suede strap.",
+ "trace": "config/watches/orient-ra-ac0p03l10b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-ac0p03l10b/dial_photo.jpg",
+ "strap_map": "outputs/watches/orient-ra-ac0p03l10b/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 42.0,
+  "lug_to_lug": 49.0,
+  "strap_width": 21.6
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.5,
+    0.0
+   ],
+   [
+    21.0,
+    0.5
+   ],
+   [
+    21.0,
+    5.0
+   ],
+   [
+    20.9,
+    5.8
+   ],
+   [
+    20.6,
+    6.5
+   ],
+   [
+    20.1,
+    7.2
+   ],
+   [
+    19.5,
+    7.7
+   ],
+   [
+    19.0,
+    7.9
+   ],
+   [
+    18.93,
+    7.9
+   ],
+   [
+    18.93,
+    6.6
+   ],
+   [
+    0.0,
+    6.6
+   ]
+  ],
+  "note": "Flank to r 21, rounded shoulder, thin polished bezel sloping in to the crystal ring (photo: 18.9-21 mm)"
+ },
+ "gasket": {
+  "r_in": 18.75,
+  "r_out": 18.93,
+  "z0": 7.4,
+  "z1": 7.85
+ },
+ "crystal": {
+  "radius": 18.92,
+  "z0": 7.8,
+  "z1": 8.6,
+  "note": "domed in the real watch; built as a flat disc at the dome's mean height"
+ },
+ "dial": {
+  "z": 6.7,
+  "rehaut_r": 18.85,
+  "rehaut_z": 7.4,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.34,
+  "ridge": 0.12,
+  "date_frame_height": 0.2
+ },
+ "hands": {
+  "thickness": 0.12,
+  "ridge": 0.1,
+  "z": {
+   "hour": 7.1,
+   "minute": 7.3,
+   "seconds": 7.5
+  }
+ },
+ "crown": {
+  "z": 3.4,
+  "r_from": 21.2,
+  "cap": 0.4,
+  "flute_depth": 0.2
+ },
+ "lug": {
+  "into_case": 0.6,
+  "tip_outer_x": 12.2,
+  "slope_from_y": 18.0,
+  "top_z_at_case": 6.0,
+  "top_z_at_tip": 4.2,
+  "bevel": 0.4
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "edge_inset": 0.2,
+  "roughness": 0.8,
+  "uv_inset": 0.02,
+  "start_y": 16.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "22 mm suede (official lug width), house curl from the lug tips; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Orient Bambino 42 mm (version 4), blue-grey sunburst dial, brown suede strap",
+  "specs": [
+   [
+    "42 mm",
+    "Case (official)"
+   ],
+   [
+    "49 mm",
+    "Lug to lug (official)"
+   ],
+   [
+    "22 mm",
+    "Strap (official)"
+   ],
+   [
+    "Front relief",
+    "Method"
+   ]
+  ],
+  "notes": [
+   "Front photo is the straight-on retailer image (2000 px) of the same reference; the photo you supplied is the 3/4 view.",
+   "Case, thin polished bezel, curved lugs, crown, lance batons, coffin-shaped 12, date frame and dauphine hands are modelled in the house polished steel; the dial print and the suede come from the photo.",
+   "The domed crystal is built flat at its mean height, and heights are estimated from the official 12 mm (no side photo)."
+  ]
+ }
+}

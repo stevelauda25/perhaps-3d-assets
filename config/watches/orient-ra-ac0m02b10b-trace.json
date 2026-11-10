@@ -1,0 +1,513 @@
+{
+ "source": "references/orient-ra-ac0m02b10b/front_2x_white_3200x2134.png",
+ "scale_px_per_mm": 33.0729,
+ "origin_px": [
+  1590,
+  920
+ ],
+ "hand_pivot_px": [
+  1594,
+  913
+ ],
+ "hand_pivot_mm": [
+  0.121,
+  0.212
+ ],
+ "anchor": "case width = 38.4 mm (listings)",
+ "stretch_y": [
+  1.0,
+  920
+ ],
+ "case": {
+  "radius_mm": 19.2,
+  "height_mm_in_photo": 38.4
+ },
+ "bezel_inner_mm": 16.63,
+ "rehaut_mm": 15.572,
+ "lug": {
+  "tip_mm": 22.0,
+  "photo_lug_to_lug_mm": 43.69,
+  "inner_x_mm": 10.2,
+  "half_width_by_depth_mm": [
+   [
+    0.25,
+    11.535
+   ],
+   [
+    0.5,
+    11.906
+   ],
+   [
+    0.75,
+    12.034
+   ],
+   [
+    1.0,
+    12.094
+   ],
+   [
+    1.25,
+    12.155
+   ],
+   [
+    1.5,
+    12.246
+   ],
+   [
+    1.75,
+    12.306
+   ],
+   [
+    2.0,
+    12.359
+   ],
+   [
+    2.25,
+    12.427
+   ],
+   [
+    2.5,
+    12.495
+   ],
+   [
+    2.75,
+    12.563
+   ],
+   [
+    3.0,
+    12.631
+   ],
+   [
+    3.25,
+    12.692
+   ],
+   [
+    3.5,
+    12.737
+   ],
+   [
+    3.75,
+    12.835
+   ],
+   [
+    4.0,
+    12.903
+   ],
+   [
+    4.25,
+    12.971
+   ],
+   [
+    4.5,
+    13.024
+   ],
+   [
+    4.75,
+    13.077
+   ],
+   [
+    5.0,
+    13.145
+   ],
+   [
+    5.25,
+    13.236
+   ],
+   [
+    5.5,
+    13.304
+   ],
+   [
+    5.75,
+    13.364
+   ],
+   [
+    6.0,
+    13.432
+   ],
+   [
+    6.25,
+    13.523
+   ],
+   [
+    6.5,
+    13.584
+   ],
+   [
+    6.75,
+    13.659
+   ],
+   [
+    7.0,
+    13.757
+   ],
+   [
+    7.25,
+    13.826
+   ],
+   [
+    7.5,
+    13.894
+   ],
+   [
+    7.75,
+    14.03
+   ],
+   [
+    8.0,
+    14.196
+   ],
+   [
+    8.25,
+    14.332
+   ],
+   [
+    8.5,
+    14.483
+   ],
+   [
+    8.75,
+    14.642
+   ],
+   [
+    9.0,
+    14.808
+   ]
+  ]
+ },
+ "checks": {
+  "lug_to_lug_mm": 43.69,
+  "strap_width_past_tips_mm": {
+   "150": 19.87,
+   "190": 20.11,
+   "1755": 20.2,
+   "1845": 19.87,
+   "1995": 19.2
+  },
+  "listed": {
+   "lug_to_lug_mm": 44.0,
+   "strap_width_mm": 20.0,
+   "thickness_mm": 12.5
+  }
+ },
+ "indices": {
+  "baton_mm": {
+   "inner": 10.341,
+   "outer": 14.816,
+   "half_inner": 0.393,
+   "half_outer": 0.423,
+   "tip": 0.544
+  },
+  "index_12_mm": {
+   "inner": 10.069,
+   "outer": 14.392,
+   "half_inner": 0.786,
+   "half_outer": 0.847,
+   "tip": 0.484
+  },
+  "index_3_inner_mm": 13.304,
+  "layout": "faceted tapered batons at 1-11 (3 shortened by the date), wide double-ridge trapezoid at 12"
+ },
+ "date_window": {
+  "x0_y0_x1_y1_mm": [
+   9.555,
+   1.179,
+   12.488,
+   -0.907
+  ],
+  "size_mm": [
+   2.933,
+   2.086
+  ],
+  "centre_mm": [
+   11.021,
+   0.136
+  ],
+  "frame_mm": 0.0
+ },
+ "logo": {
+  "x0_y0_x1_y1_mm": [
+   -2.721,
+   6.954,
+   3.024,
+   3.024
+  ],
+  "size_mm": [
+   5.745,
+   3.931
+  ],
+  "centre_mm": [
+   0.151,
+   4.989
+  ]
+ },
+ "print_wr": {
+  "x0_y0_x1_y1_mm": [
+   -4.173,
+   -5.594,
+   4.838,
+   -6.954
+  ],
+  "size_mm": [
+   9.01,
+   1.361
+  ],
+  "centre_mm": [
+   0.333,
+   -6.274
+  ]
+ },
+ "print_6": {
+  "x0_y0_x1_y1_mm": [
+   -5.14,
+   -14.211,
+   5.14,
+   -15.269
+  ],
+  "size_mm": [
+   10.28,
+   1.058
+  ],
+  "centre_mm": [
+   0.0,
+   -14.74
+  ]
+ },
+ "hands": {
+  "hour": {
+   "angle_deg": 303.87,
+   "length_mm": 10.633,
+   "outline_mm": [
+    [
+     -1.875,
+     0.0
+    ],
+    [
+     -1.058,
+     0.454
+    ],
+    [
+     -0.151,
+     0.333
+    ],
+    [
+     1.663,
+     0.635
+    ],
+    [
+     6.047,
+     0.363
+    ],
+    [
+     10.522,
+     0.0
+    ]
+   ]
+  },
+  "minute": {
+   "angle_deg": 51.51,
+   "length_mm": 14.332,
+   "outline_mm": [
+    [
+     -1.875,
+     0.0
+    ],
+    [
+     -1.058,
+     0.484
+    ],
+    [
+     -0.151,
+     0.393
+    ],
+    [
+     1.814,
+     0.665
+    ],
+    [
+     9.676,
+     0.333
+    ],
+    [
+     14.332,
+     0.0
+    ]
+   ]
+  },
+  "seconds": {
+   "angle_deg": 213.94,
+   "length_mm": 15.465,
+   "tail_mm": 3.931,
+   "half_width_mm": 0.091,
+   "tail_half_width_mm": 0.181
+  }
+ },
+ "hub_radius_mm": [
+  0.847,
+  0.302
+ ],
+ "crown": {
+  "from_mm": 19.14,
+  "to_mm": 21.619,
+  "radius_mm": 2.57,
+  "teeth": 22
+ },
+ "manual_px": {
+  "dial_centre": [
+   1590,
+   920
+  ],
+  "hand_pivot": [
+   1594,
+   913
+  ],
+  "case_x": [
+   953,
+   2223
+  ],
+  "case_y": [
+   285,
+   1555
+  ],
+  "bezel_centre": [
+   1590,
+   920
+  ],
+  "bezel_inner_r": 550,
+  "rehaut_r": 515,
+  "hour_hand_tip": [
+   1302,
+   717
+  ],
+  "hour_profile_px": [
+   [
+    -62,
+    0
+   ],
+   [
+    -35,
+    15
+   ],
+   [
+    -5,
+    11
+   ],
+   [
+    55,
+    21
+   ],
+   [
+    200,
+    12
+   ],
+   [
+    348,
+    0
+   ]
+  ],
+  "minute_angle_deg": 51.51,
+  "minute_hand_tip": [
+   1965,
+   618
+  ],
+  "minute_profile_px": [
+   [
+    -62,
+    0
+   ],
+   [
+    -35,
+    16
+   ],
+   [
+    -5,
+    13
+   ],
+   [
+    60,
+    22
+   ],
+   [
+    320,
+    11
+   ],
+   [
+    474,
+    0
+   ]
+  ],
+  "seconds_hand_tip": [
+   1305,
+   1335
+  ],
+  "seconds_tail_end": [
+   1663,
+   803
+  ],
+  "seconds_tail_px": [
+   130,
+   3,
+   6
+  ],
+  "seconds_angle_deg": 213.94,
+  "hub_radius_px": [
+   28,
+   10
+  ],
+  "index_px": {
+   "inner": 342,
+   "outer": 490,
+   "half_inner": 13,
+   "half_outer": 14,
+   "tip": 18
+  },
+  "index_12_px": {
+   "inner": 333,
+   "outer": 476,
+   "half_inner": 26,
+   "half_outer": 28,
+   "tip": 16
+  },
+  "index_3_inner_px": 440,
+  "date_window": [
+   1906,
+   881,
+   2003,
+   950
+  ],
+  "date_frame_px": 0,
+  "logo": [
+   1500,
+   690,
+   1690,
+   820
+  ],
+  "print_wr": [
+   1452,
+   1105,
+   1750,
+   1150
+  ],
+  "print_6": [
+   1420,
+   1390,
+   1760,
+   1425
+  ],
+  "crown_x": [
+   2223,
+   2305
+  ],
+  "crown_radius_px": 85,
+  "crown_teeth": 22,
+  "lug_inner_x_mm": 10.2,
+  "lug_tips_y": [
+   250,
+   1695
+  ]
+ },
+ "artefacts_not_traced": [
+  "Orient USA image of RA-AC0M02B30B (same watch, packaging variant); a little from below: the pivot sits 0.2 mm above the case centre",
+  "printed minute track, logo and prints stay in the photo map"
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "model": "Orient RA-AC0F06L10B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = index ring centre. Plan sizes from the trace of the straight front photo (41.6 mm case, Orient official; the photo's lug to lug reads 48.31 mm against the official 48.3 mm). Heights before the house depth scale are a front-relief reading of the official 11.7 mm (no side photo). House method: modelled polished case, bezel, lugs, crown, indices, date frame and hands; photo maps only for the dial print and the leather strap.",
+ "trace": "config/watches/orient-ra-ac0f06l10b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-ac0f06l10b/dial_photo.jpg",
+ "strap_map": "outputs/watches/orient-ra-ac0f06l10b/strap_photo.jpg",
+ "verified_mm": {"diameter": 41.6, "lug_to_lug": 48.3, "strap_width": 22.0},
+ "case": {
+  "profile_rz": [[0.0, 0.0], [20.3, 0.0], [20.8, 0.5], [20.8, 5.4], [20.75, 6.2], [20.55, 6.9], [20.1, 7.7], [19.5, 8.5], [19.05, 8.95], [18.96, 8.95], [18.96, 6.9], [0.0, 6.9]],
+  "note": "Flank to r 20.8, rounded shoulder, wide polished bezel sloping up and in to the crystal ring (photo: 18.96-20.8 mm bright band)"
+ },
+ "gasket": {"r_in": 18.75, "r_out": 18.96, "z0": 8.2, "z1": 8.75},
+ "crystal": {"radius": 18.95, "z0": 8.7, "z1": 9.0},
+ "dial": {"z": 7.0, "rehaut_r": 18.9, "rehaut_z": 8.2, "roughness": 0.35},
+ "indices": {"height": 0.32, "ridge": 0.12, "date_frame_height": 0.22},
+ "hands": {"thickness": 0.12, "ridge": 0.1, "z": {"hour": 7.45, "minute": 7.65, "seconds": 7.85}},
+ "crown": {"z": 3.2, "r_from": 21.05, "cap": 0.35, "flute_depth": 0.18},
+ "lug": {"into_case": 0.6, "tip_outer_x": 12.1, "slope_from_y": 18.0, "top_z_at_case": 6.4, "top_z_at_tip": 4.8, "bevel": 0.4},
+ "strap": {
+  "z0": 0.8, "z1": 4.2, "bevel": 0.35, "edge_inset": 0.2, "roughness": 0.6, "uv_inset": 0.02, "start_y": 16.0,
+  "bend_after_tip": 0.0, "bend_radius": 7.0, "arc_over_radius": 2.2,
+  "note": "22 mm, house curl (SUR419P1): bend at the lug tips, 7 mm radius, end = tip + 2.2 x radius; starts under the case"
+ },
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "gasket_black": {"color": [0.01, 0.01, 0.012], "metallic": 0.0, "roughness": 0.4},
+  "crystal": {"color": [1.0, 1.0, 1.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08, "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "review": {
+  "subtitle": "Orient Contemporary automatic, blue sunburst dial, blue croc leather strap",
+  "specs": [["41.6 mm", "Case (official)"], ["48.3 mm", "Lug to lug"], ["22 mm", "Strap"], ["Front relief", "Method"]],
+  "notes": [
+   "Front photo is the straight-on retailer image (2000 px) of the same reference; the photo you supplied is the 3/4 view.",
+   "Case, wide sloped bezel, lugs, crown, batons, date frame and hands are modelled in the house polished steel; the dial print and the strap leather come from the photo.",
+   "Heights are estimated from the official 11.7 mm thickness (no side photo)."
+  ]
+ }
+}

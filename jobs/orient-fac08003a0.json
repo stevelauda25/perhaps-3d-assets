@@ -1,0 +1,46 @@
+{
+  "id": "orient-fac08003a0",
+  "output": "outputs/jobs/orient-fac08003a0",
+  "asset_type": "watch",
+  "model": "Orient FAC08003A0",
+  "baseline": "Round 1, house method on the 1077 x 1557 Orient UK front photo: round 42 mm polished steel case, high domed crystal, photo-outline lugs, fluted crown, polished rose gold tone dauphine hands and batons, red-tipped seconds, photo map for the dial (hands and batons removed), ORIENT letters and the brown suede strap with the house curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-fac08003a0/REFERENCE_PLAN.md",
+    "config/watches/orient-fac08003a0.json",
+    "config/watches/orient-fac08003a0-trace.json",
+    "config/presets/watch_kit_white_front_orient_fac08003a0.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_ra_ak0705r10b",
+      "params": {
+        "spec": "config/watches/orient-fac08003a0.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-fac08003a0/orient-fac08003a0.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_fac08003a0.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

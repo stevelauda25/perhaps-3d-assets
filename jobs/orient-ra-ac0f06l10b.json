@@ -1,0 +1,46 @@
+{
+ "id": "orient-ra-ac0f06l10b",
+ "output": "outputs/jobs/orient-ra-ac0f06l10b",
+ "asset_type": "watch",
+ "model": "Orient RA-AC0F06L10B",
+ "baseline": "Round 1: modelled front relief from the 2000 x 2000 straight front retailer photo (native) at the official 41.6 mm case, house depth, glass, steel and strap curl; dial and strap leather from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-ra-ac0f06l10b/REFERENCE_PLAN.md",
+  "config/watches/orient-ra-ac0f06l10b.json",
+  "config/watches/orient-ra-ac0f06l10b-trace.json",
+  "config/presets/watch_kit_white_front_orient_ra_ac0f06l10b.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_ra_ac0f06l10b",
+   "params": {
+    "spec": "config/watches/orient-ra-ac0f06l10b.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-ra-ac0f06l10b/orient-ra-ac0f06l10b.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_ra_ac0f06l10b.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

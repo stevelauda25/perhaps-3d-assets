@@ -1,0 +1,46 @@
+{
+ "id": "orient-ra-ac0m02b10b",
+ "output": "outputs/jobs/orient-ra-ac0m02b10b",
+ "asset_type": "watch",
+ "model": "Orient RA-AC0M02B10B",
+ "baseline": "Round 1: modelled front relief from the Orient USA front image of RA-AC0M02B30B (2x) at the listed 38.4 mm, house depth, glass, steel and strap curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-ra-ac0m02b10b/REFERENCE_PLAN.md",
+  "config/watches/orient-ra-ac0m02b10b.json",
+  "config/watches/orient-ra-ac0m02b10b-trace.json",
+  "config/presets/watch_kit_white_front_orient_ra_ac0m02b10b.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_ra_ac0m02b10b",
+   "params": {
+    "spec": "config/watches/orient-ra-ac0m02b10b.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-ra-ac0m02b10b/orient-ra-ac0m02b10b.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_ra_ac0m02b10b.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

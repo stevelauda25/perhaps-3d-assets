@@ -1,0 +1,46 @@
+{
+ "id": "orient-re-av0004n00b",
+ "output": "outputs/jobs/orient-re-av0004n00b",
+ "asset_type": "watch",
+ "model": "Orient Star RE-AV0004N00B",
+ "baseline": "Round 1: modelled front relief from Orient's official 2000 x 2000 straight front render (native) at the official 41 mm case, house depth, glass, steel and curl; dial from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-re-av0004n00b/REFERENCE_PLAN.md",
+  "config/watches/orient-re-av0004n00b.json",
+  "config/watches/orient-re-av0004n00b-trace.json",
+  "config/presets/watch_kit_white_front_orient_re_av0004n00b.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_re_av00",
+   "params": {
+    "spec": "config/watches/orient-re-av0004n00b.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-re-av0004n00b/orient-re-av0004n00b.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_re_av0004n00b.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

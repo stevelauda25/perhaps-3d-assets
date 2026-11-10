@@ -1,0 +1,242 @@
+{
+ "model": "Orient RA-AC0E01B10B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the Orient USA front image (40 mm case, listing; the end link measures 19.6 mm against the 20 mm lug width of the sibling RA-AC0E01B10A). Lug tips at 23.05 mm (lug to lug 46.1 mm, AC0E family listing): the photo is shot a little from below, so its 12 o'clock side reads 20.9 and its 6 o'clock side 23.6. Heights from the Orient USA side image, read as a front relief. The black dial, minute track, logo, movement print and the date disc stay in the dial map.",
+ "trace": "config/watches/orient-ra-ac0e01b10b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-ac0e01b10b/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 46.1
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.5,
+    0
+   ],
+   [
+    19.9,
+    0.4
+   ],
+   [
+    20.0,
+    1.2
+   ],
+   [
+    20.0,
+    5.6
+   ],
+   [
+    19.9,
+    6.2
+   ],
+   [
+    19.7,
+    6.6
+   ],
+   [
+    19.45,
+    6.9
+   ],
+   [
+    18.578,
+    8.6
+   ],
+   [
+    18.378,
+    8.72
+   ],
+   [
+    18.278000000000002,
+    8.68
+   ],
+   [
+    18.278000000000002,
+    7.4
+   ],
+   [
+    0.0,
+    7.4
+   ]
+  ],
+  "note": "thin case flank to 20.0, wide polished bezel sloping from 19.45 to the crystal ring at 18.43"
+ },
+ "gasket": {
+  "r_in": 18.078,
+  "r_out": 18.278000000000002,
+  "z0": 7.55,
+  "z1": 8.4
+ },
+ "crystal": {
+  "radius": 18.278000000000002,
+  "z0": 8.45,
+  "z1": 8.68
+ },
+ "dial": {
+  "z": 7.5,
+  "rehaut_r": 18.128,
+  "rehaut_z": 8.2,
+  "roughness": 0.3
+ },
+ "indices": {
+  "height": 0.3,
+  "ridge": 0.22,
+  "date_frame": 0.0,
+  "date_frame_height": 0.15
+ },
+ "hands": {
+  "thickness": 0.1,
+  "ridge": 0.16,
+  "width_scale": 1.0,
+  "z": {
+   "hour": 7.95,
+   "minute": 8.1,
+   "seconds": 8.25
+  },
+  "note": "faceted sticks at the traced widths"
+ },
+ "crown": {
+  "teeth": 20,
+  "flute_depth": 0.2,
+  "z": 3.4,
+  "r_from": 19.6,
+  "flute_to": 21.5,
+  "cap_to": 21.9,
+  "radius": 2.7,
+  "cap_radius": 2.2
+ },
+ "lug": {
+  "tip": 23.05,
+  "from_y": 7.5,
+  "inner_x": 9.8,
+  "case_r_in": 19.4,
+  "top_z_at_case": 6.6,
+  "top_z_at_tip": 5.0,
+  "facet_width": 1.6,
+  "facet_drop": 1.1,
+  "bevel": 0.3,
+  "note": "tip 23.05 mm from the listed lug to lug 46.1 (photo 20.9 / 23.6 at 12 / 6)"
+ },
+ "end_link": {
+  "from_y": 16.0,
+  "half_width": 9.802,
+  "top_z": 4.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.45,
+  "z0": 0.5,
+  "z1": 3.2,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "house curl: 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.05,
+    0.05,
+    0.055
+   ],
+   "metallic": 1.0,
+   "roughness": 0.18,
+   "note": "seconds and power reserve hands: dark polished steel"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL 1K; lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Orient Contemporary, black dial, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "40 mm",
+    "case (listing)"
+   ],
+   [
+    "46.1 mm",
+    "lug to lug (listing)"
+   ],
+   [
+    "12",
+    "applied batons"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Front reference: Orient USA's own product image of this model (the photo supplied was angled); the angled photo and Orient's side image were used for the case and bezel shape.",
+   "Modelled: case with a wide sloped polished bezel, faceted applied batons, faceted stick hour and minute hands, polished seconds hand with a paddle counterweight, fluted crown, lugs with a brushed top and polished facet, three-column bracelet.",
+   "From the photo map: black dial, minute track, Orient logo and Automatic, movement print, the date disc.",
+   "Scale is the listed 40 mm case and 46.1 mm lug to lug. Heights are read from the side image, not measured."
+  ]
+ }
+}

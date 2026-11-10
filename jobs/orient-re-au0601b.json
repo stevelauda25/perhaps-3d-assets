@@ -1,0 +1,46 @@
+{
+ "id": "orient-re-au0601b",
+ "output": "outputs/jobs/orient-re-au0601b",
+ "asset_type": "watch",
+ "model": "Orient Star RE-AU0601B",
+ "baseline": "Round 1: modelled front relief from the 1264 x 2000 retailer photo (2x working copy) at the listed 41.0 mm, house depth, glass, steel and bracelet curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-re-au0601b/REFERENCE_PLAN.md",
+  "config/watches/orient-re-au0601b.json",
+  "config/watches/orient-re-au0601b-trace.json",
+  "config/presets/watch_kit_white_front_orient_re_au0601b.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_re_au0601b",
+   "params": {
+    "spec": "config/watches/orient-re-au0601b.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-re-au0601b/orient-re-au0601b.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_re_au0601b.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

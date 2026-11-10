@@ -1,0 +1,46 @@
+{
+ "id": "orient-ra-ac0q17y",
+ "output": "outputs/jobs/orient-ra-ac0q17y",
+ "asset_type": "watch",
+ "model": "Orient RA-AC0Q17Y",
+ "baseline": "Round 1: modelled front relief from the 1241 x 2048 retailer photo (2x working copy) at the listed 39.9 mm, house depth, glass, steel and bracelet curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/orient-ra-ac0q17y/REFERENCE_PLAN.md",
+  "config/watches/orient-ra-ac0q17y.json",
+  "config/watches/orient-ra-ac0q17y-trace.json",
+  "config/presets/watch_kit_white_front_orient_ra_ac0q17y.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_orient_ra_ac0q17y",
+   "params": {
+    "spec": "config/watches/orient-ra-ac0q17y.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/orient-ra-ac0q17y/orient-ra-ac0q17y.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_orient_ra_ac0q17y.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

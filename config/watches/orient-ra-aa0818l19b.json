@@ -1,0 +1,283 @@
+{
+ "model": "Orient RA-AA0818L19B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (41.8 mm case width at 3 and 9, listing; the scalloped bezel is 40.4 mm; the end link measures 21.6 mm against the listed 22 mm lug width). Heights are a front-relief reading of the listed 12.8 mm (no side photo). The sunburst, minute track, logo, prints and the day and date stay in the dial map; the insert's white prints and the applied numerals are traced outlines built as geometry.",
+ "trace": "config/watches/orient-ra-aa0818l19b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-aa0818l19b/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.8,
+  "lug_to_lug": 45.75
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.5,
+    0
+   ],
+   [
+    19.9,
+    0.45
+   ],
+   [
+    20.0,
+    1.2
+   ],
+   [
+    20.0,
+    4.4
+   ],
+   [
+    19.8,
+    4.9
+   ],
+   [
+    15.4,
+    4.9
+   ],
+   [
+    15.4,
+    5.0
+   ],
+   [
+    0.0,
+    5.0
+   ]
+  ],
+  "note": "round body under the bezel (40.1 mm); the flanks at 3 and 9 that reach 41.8 mm are part of the lug slab from the silhouette"
+ },
+ "crystal": {
+  "radius": 15.45,
+  "z0": 6.22,
+  "z1": 6.5
+ },
+ "bezel": {
+  "z0": 4.9,
+  "lip_z": 6.3,
+  "insert_z": 6.55,
+  "rim_z": 6.8,
+  "rim_bevel": 0.08,
+  "print_raise": 0.04,
+  "light_from_pip_deg": [
+   0.0,
+   90.0
+  ],
+  "note": "insert light blue from the 12 triangle (pip) to the 15 mark, read from the photo at 1-85 deg about the bezel centre",
+  "scallop_depth": 1.2,
+  "scallop_z": 0.45
+ },
+ "dial": {
+  "z": 5.1,
+  "flat_r": 14.3,
+  "rehaut_r": 15.45,
+  "rehaut_z": 6.2,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.04,
+  "date_frame": 0.14
+ },
+ "hands": {
+  "thickness": 0.12,
+  "outline": 0.1,
+  "z": {
+   "hour": 5.6,
+   "minute": 5.78,
+   "seconds": 5.96
+  },
+  "hour_root_half_width": 0.32,
+  "hour_max_half_width": 1.3,
+  "minute_root_half_width": 0.28,
+  "minute_max_half_width": 0.85,
+  "note": "geometry widths (polished outline included); the trace's widths are the zones cut from the dial map",
+  "hour_lume_inset": 0.42,
+  "minute_lume_inset": 0.22
+ },
+ "crown": {
+  "radius": 3.15,
+  "flute_depth": 0.16,
+  "teeth": 28,
+  "collar": [
+   20.5,
+   21.4
+  ],
+  "collar_r": 2.4,
+  "r_to": 24.3,
+  "z": 3.2
+ },
+ "lug": {
+  "inner_x": 10.8,
+  "from_y": 0.0,
+  "top_z_at_case": 4.8,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 17.0,
+  "half_width": 10.8,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.28,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "insert_light": {
+   "color": [
+    0.2311,
+    0.6175,
+    0.905
+   ],
+   "metallic": 0.3,
+   "roughness": 0.35,
+   "note": "anodised aluminium, photo median of the light sector (linear)"
+  },
+  "insert_dark": {
+   "color": [
+    0.013,
+    0.0357,
+    0.1414
+   ],
+   "metallic": 0.3,
+   "roughness": 0.35,
+   "note": "photo median of the dark part (linear)"
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "seconds_yellow": {
+   "color": [
+    0.85,
+    0.58,
+    0.08
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Orient Mako III, blue sunburst dial, two-tone blue insert, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "41.8 mm",
+    "case (listing)"
+   ],
+   [
+    "45.8 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "110",
+    "bezel grip scallops"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: scalloped steel bezel, aluminium insert in two blues (light from 12 to 15), its white numerals, dots and bars as traced inlays, lume pip at 12, applied white numerals 12 6 9, white bars with polished edges, polished day-date frame, leaf hour and sword minute hands with lume, seconds hand with a yellow tip and black counterweight, fluted crown, brushed lugs, three-column tapering bracelet.",
+   "From the photo map: blue sunburst, minute track, logo, Automatic, Water Resistant 20 bar, the movement print, SAT 11.",
+   "The minute hand hides the top of SAT 11 in the photo, so the day and date are drawn again in a similar bold type.",
+   "Scale is the listed 41.8 mm case. Heights are estimated (no side photo)."
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "orient-re-at0007n00b",
+  "output": "outputs/jobs/orient-re-at0007n00b",
+  "asset_type": "watch",
+  "model": "Orient Star RE-AT0007N00B",
+  "baseline": "Round 3, house method on the 1000 x 1617 photo: polished steel case lofted from the photo outline into the elliptic crystal ring, photo-outline lugs, fluted crown, faceted rose-gold hands, photo map for the dial (hands removed) and the black leather strap with the house curl, 39.3 mm",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-re-at0007n00b/REFERENCE_PLAN.md",
+    "config/watches/orient-re-at0007n00b.json",
+    "config/watches/orient-re-at0007n00b-trace.json",
+    "config/presets/watch_kit_white_front_orient_re_at0007n00b.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_re_at0007n00b",
+      "params": {
+        "spec": "config/watches/orient-re-at0007n00b.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-re-at0007n00b/orient-re-at0007n00b.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_re_at0007n00b.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

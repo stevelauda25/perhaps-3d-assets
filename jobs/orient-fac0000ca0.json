@@ -1,0 +1,46 @@
+{
+  "id": "orient-fac0000ca0",
+  "output": "outputs/jobs/orient-fac0000ca0",
+  "asset_type": "watch",
+  "model": "Orient FAC0000CA0",
+  "baseline": "Round 1, house method on the 2000 x 2000 front photo: round polished steel case and bezel, photo-outline lugs, fluted crown, high domed crystal, polished steel rectangular hands and batons, photo map for the dial (hands removed), ORIENT letters and the black leather strap with the house curl, 40.5 mm",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/orient-fac0000ca0/REFERENCE_PLAN.md",
+    "config/watches/orient-fac0000ca0.json",
+    "config/watches/orient-fac0000ca0-trace.json",
+    "config/presets/watch_kit_white_front_orient_fac0000ca0.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_orient_ra_ak0705r10b",
+      "params": {
+        "spec": "config/watches/orient-fac0000ca0.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/orient-fac0000ca0/orient-fac0000ca0.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_orient_fac0000ca0.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
