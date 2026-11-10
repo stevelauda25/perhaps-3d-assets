@@ -1,6 +1,6 @@
 # Reference plan: Emporio Armani Matteo AR11327 (matte gold aluminium, teal dial, gold mesh bracelet)
 
-Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 committed 2026-11-10 (`models/watches/emporio-armani-ar11327.glb`).
+Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 committed 2026-11-10 (`models/watches/emporio-ar11327.glb`).
 Template: the FS4735 round-case build (lathe, photo dial map, house curl), with this watch's own parts.
 
 ## References held
@@ -28,7 +28,7 @@ Template: the FS4735 round-case build (lathe, photo dial map, house curl), with 
 | Crown | Black knurled crown at 3, radius 2.86 mm, 22.27-25.87 mm |
 | Bracelet | Gold mesh: photo tile (two weave rows, 139 px with a 26 px sideways step sheared out) repeating along the band, 18.4 mm wide; house 7 mm curl from the end caps' outer edge |
 | Materials | Matte gold (roughness 0.45) for case, bezel, arms and end caps instead of the house steel; pale polished gold for hands, hub and bars |
-| Branch, file | `main` (as the Fossil watches); `models/watches/emporio-armani-ar11327.glb` |
+| Branch, file | `main` (as the Fossil watches); `models/watches/emporio-ar11327.glb` |
 
 ## Phase 1 outputs
 

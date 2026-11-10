@@ -1,6 +1,6 @@
 # Reference plan: Emporio Armani Matteo AR11328 (blue anodised case, green-to-black dial, blue Milanese mesh)
 
-Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 committed 2026-11-10 (`models/watches/emporio-armani-ar11328.glb`).
+Written 2026-11-10 (Phase 0 of [WATCH_PRODUCTION_WORKFLOW.md](../../docs/3d/WATCH_PRODUCTION_WORKFLOW.md)). Status: round 1 committed 2026-11-10 (`models/watches/emporio-ar11328.glb`).
 Template: the Fossil FS5305 three-hand build (round case lathe, photo dial, house curl) with the Zeppelin Z8680M4 mesh map; lug arms and end caps are this watch's own construction.
 
 ## References held
