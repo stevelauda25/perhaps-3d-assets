@@ -1,0 +1,46 @@
+{
+  "id": "hamilton-h76419941",
+  "output": "outputs/jobs/hamilton-h76419941",
+  "asset_type": "watch",
+  "model": "Hamilton Khaki Aviation Pilot Pioneer Mechanical H76419941",
+  "baseline": "Round 1, house method on Hamilton's official 2000 x 2000 straight front render",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/hamilton-h76419941/REFERENCE_PLAN.md",
+    "config/watches/hamilton-h76419941.json",
+    "config/watches/hamilton-h76419941-trace.json",
+    "config/presets/watch_kit_white_front_hamilton_h76419941.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_hamilton_scuba_pioneer",
+      "params": {
+        "spec": "config/watches/hamilton-h76419941.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/hamilton-h76419941/hamilton-h76419941.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_hamilton_h76419941.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}

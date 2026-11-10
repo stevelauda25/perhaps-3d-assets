@@ -31,6 +31,12 @@ CFG = {
                   "print_free_mm": 9.5, "rim_key": "bezel_in"},
     "h64455523": {"period": [], "strap_pad_px": 20, "near_mm": 0.15, "margin_mm": 0.25, "shadows_mm": [[0.15, -0.15]], "bright": 225,
                   "print_free_mm": 8.0, "rim_key": "bezel_in"},
+    "h76419941": {"period": [[11.0, 12.5, 30.0]], "strap_pad_px": 20, "near_mm": 0.15, "margin_mm": 0.15, "shadows_mm": [[0.1, -0.1]],
+                  "bright": 150, "print_free_mm": 8.0, "rim_key": "bezel_in"},
+    "h36205130": {"period": [[14.7, 15.6, 30.0]], "near_mm": 0.12, "margin_mm": 0.15, "shadows_mm": [[0.1, -0.1]], "bright": 120,
+                  "print_free_mm": 10.5, "rim_key": "insert_out"},
+    "h70215880": {"period": [], "strap_pad_px": 20, "near_mm": 0.15, "margin_mm": 0.12, "shadows_mm": [[0.1, -0.1]], "dark_hands": True,
+                  "dark": 60, "print_free_mm": 9.5, "rim_key": "bezel_in"},
     "h76255810": {"period": [[12.6, 15.15, 30.0]], "strap_pad_px": 20, "near_mm": 0.12, "margin_mm": 0.08, "shadows_mm": [[0.08, -0.08]], "dark_hands": True, "dark": 140, "print_free_mm": 9.8},
 }
 

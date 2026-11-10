@@ -1,0 +1,211 @@
+{
+ "model": "Hamilton Khaki Field Titanium Auto H70215880",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render (38 mm case silhouette, listing; strap 20.3 mm against 20 mm). Heights before the house depth scale (11.45 mm thick listing). House method: modelled black PVD titanium case (one body from the traced outline), bezel and crown, black hands with lume; photo maps only for the grey dial print and the suede strap.",
+ "trace": "config/watches/hamilton-h70215880-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h70215880/dial.jpg",
+   "roughness": 0.45
+  },
+  "strap": {
+   "image": "outputs/watches/hamilton-h70215880/strap.jpg",
+   "roughness": 0.85
+  }
+ },
+ "verified_mm": {
+  "diameter": 38.0,
+  "lug_width": 20.0
+ },
+ "case": {
+  "top_z": 6.4,
+  "notch_radius": 19.0,
+  "material": "pvd_black"
+ },
+ "lug": {
+  "slope_from_y": 16.5,
+  "top_z_at_case": 6.4,
+  "top_z_at_tip": 4.8,
+  "bevel": 0.35
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    16.5,
+    6.2
+   ],
+   [
+    19.0,
+    6.2
+   ],
+   [
+    19.0,
+    6.8
+   ],
+   [
+    18.6,
+    7.3
+   ],
+   [
+    17.2,
+    7.65
+   ],
+   [
+    16.6,
+    7.7
+   ],
+   [
+    16.5,
+    6.2
+   ]
+  ],
+  "material": "pvd_black",
+  "note": "smooth black PVD bezel sloping up to the crystal"
+ },
+ "crystal": {
+  "z0": 7.45,
+  "z1": 7.7
+ },
+ "dial": {
+  "z": 6.2
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 6.5,
+   "minute": 6.72,
+   "seconds": 6.94
+  },
+  "hub_material": "hand_black",
+  "materials": {
+   "metal": "hand_black",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03
+  },
+  "polished_edge": [],
+  "note": "black hands with cream lume and needle tips; black seconds hand with a lume tip"
+ },
+ "crown": {
+  "z": 3.6,
+  "teeth": 16,
+  "flute_depth": 0.25,
+  "end": 0.6,
+  "material": "pvd_black"
+ },
+ "strap": {
+  "half_width": 10.1,
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.4,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "start_y": 14.0,
+  "uv_inset": 0.02,
+  "note": "khaki suede strap from the render, house curl from the lug tips"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "black rehaut ring"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.87,
+    0.72
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "pvd_black": {
+   "color": [
+    0.05,
+    0.05,
+    0.055
+   ],
+   "metallic": 1.0,
+   "roughness": 0.4,
+   "note": "black PVD titanium"
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Black PVD titanium case, grey dial with lume numerals, khaki suede strap. Front relief GLB.",
+  "specs": [
+   [
+    "38 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "45.4 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Built on Hamilton's official 2000 px front render. House method: case, bezel, crown and hands are modelled in black; the photo is used only for the dial print and the suede strap.",
+   "The strap curls under at both ends, like the other tracker watches. The buckle is left out."
+  ]
+ }
+}

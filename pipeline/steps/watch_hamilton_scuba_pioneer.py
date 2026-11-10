@@ -122,9 +122,13 @@ def run(params):
         tip, xi = tr["lug"]["tip_y_mm"], tr["lug"]["inner_x_mm"]
         ed = {k: (lambda pts: lambda y: float(np.interp(abs(y), [q[0] for q in pts], [q[1] for q in pts])))(v) for k, v in ho.items()}
         ys = [k * 0.25 for k in range(int(tip / 0.25) + 1)] + [tip]
-        rn = c["notch_radius"]
-        yc = math.sqrt(rn * rn - xi * xi)
-        arc = lambda sy: [(-xi + 2 * xi * k / 16, sy * math.sqrt(rn * rn - (-xi + 2 * xi * k / 16) ** 2)) for k in range(17)]
+        if "notch_y" in c:  # straight case edge between the horns (cushion case, strap through fixed bars)
+            yc = c["notch_y"]
+            arc = lambda sy: [(-xi, sy * yc), (xi, sy * yc)]
+        else:
+            rn = c["notch_radius"]
+            yc = math.sqrt(rn * rn - xi * xi)
+            arc = lambda sy: [(-xi + 2 * xi * k / 16, sy * math.sqrt(rn * rn - (-xi + 2 * xi * k / 16) ** 2)) for k in range(17)]
         right = [(ed["right"](y), y) for y in reversed(ys)] + [(ed["right"](y), -y) for y in ys[1:]]  # top tip -> bottom tip
         left = [(-ed["left"](y), -y) for y in reversed(ys)] + [(-ed["left"](y), y) for y in ys[1:]]  # bottom tip -> top tip
         outline = right + [(xi, -tip), (xi, -yc)] + arc(-1)[::-1] + [(-xi, -yc), (-xi, -tip)] + left + [(-xi, tip), (-xi, yc)] + arc(1) + [(xi, yc), (xi, tip)]
@@ -186,9 +190,13 @@ def run(params):
         add("crystal", Geo().lathe([(0, cr["z0"]), (rg["insert_in"], cr["z0"]), (rg["insert_in"], cr["z1"]), (0, cr["z1"])], segs=192), "crystal")
 
     else:  # smooth polished bezel from the spec profile; black rehaut ring from the dial edge up to the crystal
-        add("bezel", Geo().lathe([tuple(q) for q in bz["profile_rz"]], segs=256), "steel_polished", smooth=True)
+        add("bezel", Geo().lathe([tuple(q) for q in bz["profile_rz"]], segs=256), bz.get("material", "steel_polished"), smooth=True)
+        if "insert_z" in bz:  # photo-mapped insert ring between the polished rings (dial map)
+            zi0, zi1 = bz["insert_z"]
+            add("bezel_insert", Geo().lathe([(rg["insert_in"], zi0 - 0.3), (rg["insert_out"], zi0 - 0.3), (rg["insert_out"], zi1),
+                                             (rg["insert_in"], zi0), (rg["insert_in"], zi0 - 0.3)], segs=256), "dial", smooth=True)
         add("rehaut", Geo().lathe([(rg["dial"] - 0.02, d["z"]), (rg["bezel_in"] + 0.02, cr["z0"] - 0.05), (rg["bezel_in"] + 0.02, cr["z0"])], segs=256),
-            "gasket_black", smooth=True)
+            d.get("rehaut_material", "gasket_black"), smooth=True)
         add("crystal", Geo().lathe([(0, cr["z0"]), (rg["bezel_in"] + 0.02, cr["z0"]), (rg["bezel_in"] + 0.02, cr["z1"]), (0, cr["z1"])], segs=192), "crystal")
 
     # ---- dial: flat to the crystal ring, short wall up to the crystal seat (photo map) ----
@@ -247,7 +255,8 @@ def run(params):
     R0, (r1, r2) = tc["radius_mm"], tc["r_from_to_mm"]
     star = [((R0 if i % 2 == 0 else R0 - cw["flute_depth"]) * math.cos(math.pi * i / cw["teeth"]),
              (R0 if i % 2 == 0 else R0 - cw["flute_depth"]) * math.sin(math.pi * i / cw["teeth"])) for i in range(cw["teeth"] * 2)]
-    add("crown_tube", Geo().lathe([(0, r1 - 1.5), (R0 * 0.55, r1 - 1.5), (R0 * 0.55, r1 + 0.2), (0, r1 + 0.2)], segs=48, m=m), "steel_polished", smooth=True)
+    cmat = cw.get("material", "steel_polished")
+    add("crown_tube", Geo().lathe([(0, r1 - 1.5), (R0 * 0.55, r1 - 1.5), (R0 * 0.55, r1 + 0.2), (0, r1 + 0.2)], segs=48, m=m), cmat, smooth=True)
     prof = tc["profile_mm"][:-1] if "profile_mm" in tc else [[r1, R0], [r2 - cw["end"], R0]]  # traced: its last station is the end
     g = Geo()
     for k, (ax, rad) in enumerate(prof):  # star rings scaled to the profile, flat shaded so each flute catches its own light
@@ -258,14 +267,14 @@ def run(params):
             g.smooth += [False] * nst
     g.f += [tuple(range(len(star) - 1, -1, -1)), tuple(range(len(g.v) - len(star), len(g.v)))]
     g.smooth += [False, False]
-    add("crown", g, "steel_polished", bevel=0.08)
+    add("crown", g, cmat, bevel=0.08)
     ze, re_ = prof[-1][0], prof[-1][1]
     add("crown_end", Geo().lathe([(0, ze), (re_ - 0.15, ze), (re_ - 0.6, ze + cw["end"] * 0.7), (re_ - 1.2, r2), (0, r2)],
-                                 segs=64, m=m), "steel_polished", smooth=True)
+                                 segs=64, m=m), cmat, smooth=True)
 
     if "bracelet" in cfg:
         br, bt = cfg["bracelet"], tr["bracelet_mm"]
-        e0, e1, e2 = bt["edges"]  # centre / middle / outer column edges (|x| mm)
+        edges = bt["edges"]  # centre / (middle /) outer column edges (|x| mm)
         gap, pitch = br["gap"], br["pitch"]
         zm, R = ds * (br["z0"] + br["z1"]) / 2, br["bend_radius"]
         j_outer, j_mid = bt["joints_outer"][0], bt["joints_mid"][0]
@@ -273,9 +282,15 @@ def run(params):
         box = curl(bend_y, R, zm)
         end_y = bend_y + R * br["arc_over_radius"]
         za, zb = ds * br["z0"], ds * br["z1"]
-        cols = {"outer": [(e1 + gap, e2), (-e2, -e1 - gap)], "mid": [(e0 + gap, e1), (-e1, -e0 - gap)], "centre": [(-e0, e0)]}
-        phase = {"outer": j_outer, "centre": j_outer, "mid": j_mid}
-        mats_ = {"outer": "steel_polished", "mid": "steel_brushed", "centre": "steel_polished"}
+        if len(edges) == 3:  # five columns: polished outer and centre links, brushed middle links half a row nearer the case
+            e0, e1, e2 = edges
+            cols = {"outer": [(e1 + gap, e2), (-e2, -e1 - gap)], "mid": [(e0 + gap, e1), (-e1, -e0 - gap)], "centre": [(-e0, e0)]}
+            phase = {"outer": j_outer, "centre": j_outer, "mid": j_mid}
+        else:  # three columns: centre link half a row nearer the case
+            e0, e2 = edges
+            cols = {"outer": [(e0 + gap, e2), (-e2, -e0 - gap)], "centre": [(-e0, e0)]}
+            phase = {"outer": j_outer, "centre": j_mid}
+        mats_ = dict({"outer": "steel_polished", "mid": "steel_brushed", "centre": "steel_polished"}, **br.get("materials", {}))
         geos = {k: Geo() for k in cols}
         ends = {k: Geo() for k in cols}
         back = Geo()
