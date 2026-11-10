@@ -1,0 +1,200 @@
+{
+ "model": "Hamilton Khaki Aviation Pilot Pioneer Mechanical H76419941",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render. The listing gives 36 x 33 mm for the cushion case; the render is taller than wide, so the width is 33 mm (anchor) and the height comes out 37.6 mm. Heights before the house depth scale (9.95 mm thick listing). House method: modelled brushed cushion case (one body from the traced outline, straight edge between the horns where the strap passes), polished bezel ring, crown and lume hands; photo maps only for the dial print and the NATO strap.",
+ "trace": "config/watches/hamilton-h76419941-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h76419941/dial.jpg",
+   "roughness": 0.4
+  },
+  "strap": {
+   "image": "outputs/watches/hamilton-h76419941/strap.jpg",
+   "roughness": 0.7
+  }
+ },
+ "verified_mm": {
+  "diameter": 33.0
+ },
+ "case": {
+  "top_z": 5.6,
+  "notch_y": 14.5,
+  "note": "one brushed cushion body from the traced outline; straight edge between the horns at 14.5 mm (render: 14.3 / 15.1 mm)"
+ },
+ "lug": {
+  "slope_from_y": 15.0,
+  "top_z_at_case": 5.6,
+  "top_z_at_tip": 4.4,
+  "bevel": 0.35
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    12.9,
+    5.4
+   ],
+   [
+    14.4,
+    5.4
+   ],
+   [
+    14.4,
+    5.9
+   ],
+   [
+    14.1,
+    6.4
+   ],
+   [
+    13.3,
+    6.8
+   ],
+   [
+    12.95,
+    6.75
+   ],
+   [
+    12.9,
+    5.4
+   ]
+  ],
+  "note": "polished bezel ring sloping up to the crystal"
+ },
+ "crystal": {
+  "z0": 6.55,
+  "z1": 6.95
+ },
+ "dial": {
+  "z": 5.2
+ },
+ "hands": {
+  "thickness": 0.14,
+  "z": {
+   "hour": 5.45,
+   "minute": 5.65,
+   "seconds": 5.85
+  },
+  "hub_material": "steel_polished",
+  "materials": {
+   "metal": "steel_polished",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03
+  },
+  "polished_edge": [],
+  "note": "polished sword hour and minute hands with cream lume, polished seconds needle with a short counterweight"
+ },
+ "crown": {
+  "z": 3.0,
+  "teeth": 18,
+  "flute_depth": 0.2,
+  "end": 0.5
+ },
+ "strap": {
+  "half_width": 8.4,
+  "z0": 0.6,
+  "z1": 2.6,
+  "bevel": 0.25,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "start_y": 12.0,
+  "uv_inset": 0.02,
+  "note": "blue NATO strap from the render (keeper rings included), house curl from the horn tips"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "black rehaut ring"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.85,
+    0.86,
+    0.72
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "cream lume (render)"
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Brushed steel cushion case, blue dial with Arabic numerals, blue NATO strap. Front relief GLB.",
+  "specs": [
+   [
+    "33 mm",
+    "Case width"
+   ],
+   [
+    "18 mm",
+    "Lug width (listing)"
+   ],
+   [
+    "37.6 mm",
+    "Case height"
+   ]
+  ],
+  "notes": [
+   "Built on Hamilton's official 2000 px front render. House method: case, bezel ring, crown and hands are modelled; the photo is used only for the dial print and the NATO strap.",
+   "Scale: Hamilton lists the case as 36 x 33 mm. The render is taller than wide, so the model is 33 mm wide and 37.6 mm tall. Please confirm against the real watch.",
+   "The strap curls under at both ends, like the other tracker watches."
+  ]
+ }
+}

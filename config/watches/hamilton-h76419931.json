@@ -1,0 +1,142 @@
+{
+ "model": "Hamilton H76419931",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the official front render (33 mm case width, official '36 x 33 mm'; the cushion measures 37.3 mm long in the render, kept). The NATO strap measures 16.7 mm (18 mm official lug width). Heights are a front-relief reading of the official 9.95 mm. The printed numerals, markers, chapter ring, polished ring and prints stay in the dial map.",
+ "trace": "config/watches/hamilton-h76419931-trace.json",
+ "dial_map": "outputs/watches/hamilton-h76419931/dial_photo.jpg",
+ "strap_map": "outputs/watches/hamilton-h76419931/strap_photo.jpg",
+ "verified_mm": {
+  "diameter": 33.0,
+  "lug_to_lug": 37.22,
+  "strap_width": 16.75
+ },
+ "case": {
+  "top_z": 4.6,
+  "bevel": 0.45,
+  "lip_out": 14.7,
+  "lip_z": 5.3,
+  "note": "brushed cushion slab with a polished edge; polished lip round the crystal"
+ },
+ "crystal": {
+  "z0": 5.15,
+  "z1": 5.4
+ },
+ "dial": {
+  "z": 4.4,
+  "rehaut_z": 4.9,
+  "roughness": 0.5
+ },
+ "hands": {
+  "thickness": 0.1,
+  "z": {
+   "hour": 4.6,
+   "minute": 4.76,
+   "seconds": 4.92
+  },
+  "seconds_half_width": 0.09
+ },
+ "crown": {
+  "z": 2.8,
+  "flute_depth": 0.2
+ },
+ "strap": {
+  "z0": 0.2,
+  "z1": 1.6,
+  "bevel": 0.2,
+  "roughness": 0.85,
+  "uv_inset": 0.02,
+  "start_y": 0.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "NATO band under the case (starts at the pivot), house curl from the case ends"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.78,
+    0.42,
+    0.27
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "beige-orange vintage lume of the render (linear)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Hamilton Khaki Aviation Pilot Pioneer Mechanical 36 x 33 mm, black dial, grey NATO strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "33 mm",
+    "case width (official)"
+   ],
+   [
+    "37.2 mm",
+    "case length in the render (36 official)"
+   ],
+   [
+    "16.7 mm",
+    "NATO strap in the render (18 official)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Hamilton's official straight-on render (the supplied photo is small; it is kept as a second front reference).",
+   "Modelled: brushed cushion case with a polished edge and a polished lip round the crystal, lance hour and needle minute hands with beige lume, polished seconds needle, fluted crown, grey NATO strap running under the case with the house curl.",
+   "From the photo map: black grained dial, printed white numerals, beige triangle, bars and dots, white chapter ring, Hamilton logo, Mechanical, Swiss Made; the strap weave.",
+   "The hour hand covers the 0 of 10 in the render; its covered half is mirrored from the visible half. Heights are estimated (no side photo)."
+  ]
+ }
+}

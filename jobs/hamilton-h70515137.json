@@ -1,0 +1,46 @@
+{
+ "id": "hamilton-h70515137",
+ "output": "outputs/jobs/hamilton-h70515137",
+ "asset_type": "watch",
+ "model": "Hamilton H70515137",
+ "baseline": "Round 1: modelled front relief from Hamilton's official 2000 x 2000 front render at the official 42 mm case, house depth, glass, steel and bracelet curl; dial from a photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/hamilton-h70515137/REFERENCE_PLAN.md",
+  "config/watches/hamilton-h70515137.json",
+  "config/watches/hamilton-h70515137-trace.json",
+  "config/presets/watch_kit_white_front_hamilton_h70515137.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_hamilton_h70515137",
+   "params": {
+    "spec": "config/watches/hamilton-h70515137.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/hamilton-h70515137/hamilton-h70515137.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_hamilton_h70515137.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

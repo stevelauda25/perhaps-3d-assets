@@ -1,0 +1,234 @@
+{
+ "model": "Hamilton Jazzmaster Performer Auto H36205130",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Hamilton's official straight front render (38 mm case silhouette, listing; bracelet 19.2 mm at the case against 20 mm lug width). House method: modelled brushed case (one body from the traced outline), polished bezel rims with the photo's black insert, crown, applied batons (double at 12), hands and the three-column bracelet; the dial map serves the dial print, the silver rehaut track and the insert.",
+ "trace": "config/watches/hamilton-h36205130-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/hamilton-h36205130/dial.jpg",
+   "roughness": 0.3
+  }
+ },
+ "verified_mm": {
+  "diameter": 38.0
+ },
+ "case": {
+  "top_z": 6.6,
+  "notch_radius": 19.0
+ },
+ "lug": {
+  "slope_from_y": 17.0,
+  "top_z_at_case": 6.6,
+  "top_z_at_tip": 5.0,
+  "bevel": 0.35
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    15.55,
+    6.4
+   ],
+   [
+    19.0,
+    6.4
+   ],
+   [
+    19.0,
+    7.1
+   ],
+   [
+    18.75,
+    7.55
+   ],
+   [
+    18.44,
+    7.6
+   ],
+   [
+    18.44,
+    7.3
+   ],
+   [
+    16.17,
+    7.3
+   ],
+   [
+    16.17,
+    7.75
+   ],
+   [
+    15.6,
+    7.85
+   ],
+   [
+    15.55,
+    6.4
+   ]
+  ],
+  "insert_z": [
+   7.55,
+   7.62
+  ],
+  "note": "polished outer rim and inner ring, the black insert between them photo-mapped"
+ },
+ "crystal": {
+  "z0": 7.7,
+  "z1": 7.95
+ },
+ "dial": {
+  "z": 6.2,
+  "rehaut_material": "dial",
+  "note": "black dial; the printed silver rehaut track is a cone up to the crystal ring (dial map)"
+ },
+ "indices": {
+  "height": 0.35
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "hour": 6.65,
+   "minute": 6.87,
+   "seconds": 7.09
+  },
+  "hub_material": "steel_polished",
+  "materials": {
+   "metal": "steel_polished",
+   "lume": "lume"
+  },
+  "inlay": {
+   "lume": 0.03
+  },
+  "polished_edge": []
+ },
+ "crown": {
+  "z": 3.6,
+  "teeth": 18,
+  "flute_depth": 0.22,
+  "end": 0.6
+ },
+ "end_link": {
+  "from_y": 15.0,
+  "top_z": 4.2,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "z0": 0.6,
+  "z1": 3.6,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "pitch": 9.0,
+  "bevel": 0.35,
+  "backing_z": [
+   0.3,
+   0.7
+  ],
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "materials": {
+   "outer": "steel_brushed",
+   "centre": "steel_brushed"
+  },
+  "note": "three brushed columns: outer links (joints 20.9 mm + 9 mm pitch), wide centre link half a row nearer the case (18.0 mm); house curl from the first outer joint"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08,
+   "note": "house polished steel: bezel, crown, index frames, hands, bevels"
+  },
+  "steel_brushed": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "house brushed steel: case, lugs, crown guards"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission"
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "black rehaut ring"
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.017
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.92,
+    0.92
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  }
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "strength": 1.0,
+   "tile_mm": 20.0
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "review": {
+  "subtitle": "Steel case, black bezel insert, black dial with applied batons, steel bracelet. Front relief GLB.",
+  "specs": [
+   [
+    "38 mm",
+    "Case diameter"
+   ],
+   [
+    "20 mm",
+    "Lug width"
+   ],
+   [
+    "43.2 mm",
+    "Lug to lug"
+   ]
+  ],
+  "notes": [
+   "Built on Hamilton's official 2000 px front render. House method: case, bezel rims, crown, applied batons, hands and the bracelet are modelled; the photo is used only for the dial print, the silver track and the black insert.",
+   "The bracelet curls under at both ends, like the other tracker watches. The clasp is left out."
+  ]
+ }
+}

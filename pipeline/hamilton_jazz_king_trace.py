@@ -80,8 +80,88 @@ MANUAL_PX = {
         },
         "hub": {"disc": 30, "pin": 7},
     },
+    "h76419941": {
+        "front": "references/hamilton-h76419941/front_official_2000x2000.png",
+        "pivot": [979, 921],
+        # cushion case: listing "36 x 33 mm"; the render is taller than wide (1028 x 887 px), so 33 mm is the width
+        "case_left_px": 446, "case_mm": 33.0, "lug_width_mm": 18.0,
+        "rings": {"case": 446, "bezel_out": 389, "bezel_in": 349, "dial": 337},
+        "lug_inner_x": [749, 1205],
+        "tips_y": [432, 1448],  # horn tops; the NATO keeper rings above and below are wider than the strap
+        "strap": {"top": {"x": [748, 1203]}, "bottom": {"x": [750, 1203]}},
+        "crown": {"y_top_bottom": [873, 1003], "x_from_to": [1410, 1466], "teeth": 18},
+        "crown_rows_cap": [866, 1010, 1420],
+        "hands": {
+            "hour": {"angle": 302.88, "parts": [
+                ["base", "metal", [[2, 215], [12, 203], [13, 195], [9, 120], [5, 40], [5, 15], [-5, 15], [-5, 40], [-9, 120], [-13, 195], [-12, 203], [-2, 215]]],
+                ["top", "lume", [[9, 195], [7, 120], [3, 50], [-3, 50], [-7, 120], [-9, 195]]]]},
+            "minute": {"angle": 53.47, "parts": [
+                ["base", "metal", [[0, 335], [8, 295], [7, 200], [5, 60], [4, 15], [-4, 15], [-5, 60], [-7, 200], [-8, 295]]],
+                ["top", "lume", [[4, 288], [4, 60], [-4, 60], [-4, 288]]]]},
+            "seconds": {"angle": 222.48, "parts": [
+                ["base", "metal", [[-1.5, -60], [1.5, -60], [1, 330], [-1, 330]]],
+                ["base", "metal", [[-5, -55], [5, -55], [5, -95], [-5, -95]]]]},
+        },
+        "hub": {"disc": 22, "pin": 5},
+    },
+    "h36205130": {
+        "front": "references/hamilton-h36205130/front_official_2000x2000.png",
+        "pivot": [959, 937],
+        "case_left_px": 442, "case_mm": 38.0, "lug_width_mm": 20.0,
+        # case edge, polished rim, black insert (photo), inner polished ring, printed silver rehaut, dial
+        "rings": {"case": 442, "insert_out": 429, "insert_in": 376, "bezel_in": 362, "dial": 342},
+        "lug_inner_x": [743, 1190],
+        "crown": {"y_top_bottom": [882, 1012], "x_from_to": [1400, 1475], "teeth": 18},
+        "crown_rows_cap": [875, 1020, 1404],
+        "bracelet": {"centre_x": 966, "edges": [106, 223.5], "joints_outer": [486], "joints_mid": [418]},
+        "hands": {
+            "hour": {"angle": 304.6, "parts": [
+                ["base", "metal", [[6.5, 225], [26, 30], [26, 12], [-26, 12], [-26, 30], [-6.5, 225]]],
+                ["top", "lume", [[2.5, 195], [6, 40], [-6, 40], [-2.5, 195]]]]},
+            "minute": {"angle": 55.6, "parts": [
+                ["base", "metal", [[6, 350], [14, 30], [14, 12], [-14, 12], [-14, 30], [-6, 350]]],
+                ["top", "lume", [[2.5, 330], [3.5, 45], [-3.5, 45], [-2.5, 330]]]]},
+            "seconds": {"angle": 223.03, "parts": [
+                ["base", "metal", [[-2.5, -110], [2.5, -110], [1.2, 345], [-1.2, 345]]],
+                ["base", "metal", [[0, 228], [10, 244], [0, 290], [-10, 244]]]]},
+        },
+        "hub": {"disc": 16, "pin": 5},
+        "indices": {"band": [255, 345], "grow_px": 1, "groups": {"bar": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "double": [12]}, "parts": {"double": 2}},
+        "applied_min": 120,
+    },
+    "h70215880": {
+        "front": "references/hamilton-h70215880/front_official_2000x2000.png",
+        "pivot": [961, 940],
+        "case_left_px": 464, "case_mm": 38.0, "lug_width_mm": 20.0,
+        "rings": {"case": 464, "bezel_in": 404, "dial": 390},
+        "lug_inner_x": [713, 1208],  # strap edges (the render shows no gap between strap and lugs)
+        "strap": {"top": {"x": [713, 1208]}, "bottom": {"x": [715, 1209]}},
+        "crown": {"y_top_bottom": [875, 1020], "x_from_to": [1428, 1502], "teeth": 16},
+        "crown_rows_cap": [868, 1027, 1432],
+        "hands": {
+            "hour": {"angle": 304.8, "parts": [
+                ["base", "metal", [[1, 242], [1.5, 195], [4, 190], [14, 160], [11, 60], [7, 25], [7, 10], [-7, 10], [-7, 25], [-11, 60], [-14, 160], [-4, 190], [-1.5, 195], [-1, 242]]],
+                ["top", "lume", [[2, 185], [11, 158], [8, 60], [4, 42], [-4, 42], [-8, 60], [-11, 158], [-2, 185]]]]},
+            "minute": {"angle": 52.67, "parts": [
+                ["base", "metal", [[1, 350], [1.5, 288], [4, 282], [13, 250], [9, 80], [6, 25], [6, 10], [-6, 10], [-6, 25], [-9, 80], [-13, 250], [-4, 282], [-1.5, 288], [-1, 350]]],
+                ["top", "lume", [[2, 275], [10, 248], [6, 80], [3, 48], [-3, 48], [-6, 80], [-10, 248], [-2, 275]]]]},
+            "seconds": {"angle": 222.28, "parts": [
+                ["base", "metal", [[-2, -130], [2, -130], [1.2, 360], [-1.2, 360]]],
+                ["base", "metal", [[-9, 345], [9, 345], [0, 278]]],
+                ["top", "lume", [[-7, 340], [7, 340], [0, 286]]]]},
+        },
+        "hub": {"disc": 28, "pin": 7},
+    },
 }
 ARTEFACTS = {
+    "h76419941": ["printed lume numerals, the triangle at 12, the minute track and the logo stay in the photo map",
+                  "the listing gives 36 x 33 mm for the cushion case; the render is 1.16 times taller than wide, so the model uses 33 mm wide (37.8 mm tall)",
+                  "the NATO strap's keeper ring stays in the strap photo map"],
+    "h36205130": ["the black bezel insert print, the silver rehaut track, the logo and the dial print stay in the photo map",
+                  "the bracelet tapers in the render (19.5 mm at the case, 18.1 mm at the photo edge): the model keeps the width at the case"],
+    "h70215880": ["printed lume numerals, 24-hour ring, minute track, the logo and the dial texture stay in the photo map",
+                  "the suede strap's stitching stays in the strap photo map"],
+
     "h32515135": ["the waffle pattern, minute track, logo, 'viewmatic' and the date window stay in the photo map",
                   "the render's bracelet sits 0.4 mm right of the hand pivot: the model bracelet is centred on the pivot",
                   "the bottom bracelet joints are lit differently in the render: the top side's joint rows are mirrored"],
@@ -120,6 +200,8 @@ def trace(sku, overlay=None):
     for y in range(0, alpha.shape[0]):
         xs = np.nonzero(head[y])[0]
         if not len(xs) or xs.min() > xl - 6 or xs.max() < xr + 6:  # only the strap or bracelet: past the lug tips
+            continue
+        if "tips_y" in M and not M["tips_y"][0] <= y <= M["tips_y"][1]:  # strap keepers wider than the strap: not the head
             continue
         rows.append((y, int(xs.min()), int(xs.max())))
     y_top, y_bot = rows[0][0], rows[-1][0]
@@ -186,20 +268,24 @@ def trace(sku, overlay=None):
 
     hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
     bright = ((im.min(2) > M.get("applied_min", 150)) & (hsv[..., 1] < 50)).astype(np.uint8)
-    if "indices" in M:  # mean of the bar hours turned to 12: the dial pattern averages out, the index stays
+    if "indices" in M:  # mean of each group's hours turned to 12: the dial pattern averages out, the index stays
         ix = M["indices"]
         r0, r1 = ix["band"]
         win = np.s_[py0 - r1:py0 - r0, px0 - 60:px0 + 61]
-        acc = np.zeros((r1 - r0, 121), np.float32)
-        for hr in ix["hours"]:
-            Mr = cv2.getRotationMatrix2D((float(px0), float(py0)), 30.0 * hr + pr, 1.0)
-            acc += cv2.warpAffine(bright.astype(np.float32), Mr, (im.shape[1], im.shape[0]), flags=cv2.INTER_LINEAR)[win]
-        acc = (acc + acc[:, ::-1]) / 2 / len(ix["hours"])
-        m = cv2.morphologyEx((acc > 0.5).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
-        m = cv2.dilate(m, np.ones((2 * ix["grow_px"] + 1,) * 2, np.uint8))
-        cnt = max(cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea)
-        poly = cv2.approxPolyDP(cnt, 0.8, True)[:, 0]
-        out["indices"] = {"bar": {"outline_mm": [[round((x - 60) / S, 3), round((r1 - y) / S, 3)] for x, y in poly[::-1]], "hours": ix["hours"]}}
+        out["indices"] = {}
+        for group, hours in ix.get("groups", {"bar": ix.get("hours")}).items():
+            acc = np.zeros((r1 - r0, 121), np.float32)
+            for hr in hours:
+                Mr = cv2.getRotationMatrix2D((float(px0), float(py0)), 30.0 * hr + pr, 1.0)
+                acc += cv2.warpAffine(bright.astype(np.float32), Mr, (im.shape[1], im.shape[0]), flags=cv2.INTER_LINEAR)[win]
+            acc = (acc + acc[:, ::-1]) / 2 / len(hours)
+            m = cv2.morphologyEx((acc > 0.5).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+            m = cv2.dilate(m, np.ones((2 * ix["grow_px"] + 1,) * 2, np.uint8))
+            cnts = sorted(cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0], key=cv2.contourArea, reverse=True)
+            for k, cnt in enumerate(cnts[:ix.get("parts", {}).get(group, 1)]):  # a double index has two parts
+                poly = cv2.approxPolyDP(cnt, 0.8, True)[:, 0]
+                out["indices"]["%s_%d" % (group, k)] = {"outline_mm": [[round((x - 60) / S, 3), round((r1 - y) / S, 3)] for x, y in poly[::-1]],
+                                                        "hours": hours}
     if "numerals" in M:  # applied numerals: outline and holes per glyph
         nums = {}
         for key, (x0, y0, x1, y1) in M["numerals"].items():
