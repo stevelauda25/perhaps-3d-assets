@@ -1,0 +1,46 @@
+{
+  "id": "fossil-fs4812",
+  "output": "outputs/jobs/fossil-fs4812",
+  "asset_type": "watch",
+  "model": "Fossil Grant chronograph FS4812",
+  "baseline": "First build: round polished case with a wide sloped bezel, plain lugs, crown-side lobe, two pushers, knurled crown, black Roman chronograph dial and black leather strap from the straight front photo at 44 mm, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/fossil-fs4812/REFERENCE_PLAN.md",
+    "config/watches/fossil-fs4812.json",
+    "config/watches/fossil-fs4812-trace.json",
+    "config/presets/watch_kit_white_front_fossil_fs4812.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_fossil_fs4812",
+      "params": {
+        "spec": "config/watches/fossil-fs4812.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/fossil-fs4812/fossil-fs4812.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_fossil_fs4812.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
