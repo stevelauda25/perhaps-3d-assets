@@ -1,0 +1,97 @@
+{
+ "model": "Fossil Carraway FS6012",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (30 mm case width, listing; strap 22.3 mm measured against 22 mm listed). Heights before the house depth scale (9.6 mm thick listing). Dial print, Roman numerals, raised centre panel and the strap leather come from one photo map.",
+ "trace": "config/watches/fossil-fs6012-trace.json",
+ "photo_map": "outputs/watches/fossil-fs6012/dial_photo.jpg",
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.55
+ },
+ "verified_mm": {
+  "width": 30.0,
+  "strap_width": 22.33
+ },
+ "case": {
+  "flank_z": 5.5,
+  "flank_bevel": 0.4,
+  "brancard_z": 8.2,
+  "brancard_bevel": 0.6,
+  "bar_z": 7.6,
+  "bar_bevel": 0.6,
+  "overlap": 0.3,
+  "note": "outer flank lower than the brancards (the side step in the photo); bezel slab = top bar, frame and bottom bar in one polished piece, its bevel stands in for the sloped frame walls"
+ },
+ "dial": {
+  "z": 5.6,
+  "under_frame": 0.3
+ },
+ "crystal": {
+  "z0": 7.0,
+  "z1": 7.25
+ },
+ "hands": {
+  "thickness": 0.15,
+  "lume_raise": 0.05,
+  "z": {
+   "hour": 6.0,
+   "minute": 6.25,
+   "seconds": 6.5
+  }
+ },
+ "crown": {
+  "teeth": 10,
+  "flute_depth": 0.3,
+  "z": 4.0
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.15,
+  "under_case": 1.0,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "end_y": 36.0,
+  "note": "House curl (SUR419P1): bend at the mean horn tip (20.62 mm), 7 mm radius, end_y = tip + 2.2 x radius"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [0.75, 0.75, 0.76],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [0.75, 0.75, 0.76],
+   "metallic": 1.0,
+   "roughness": 0.28,
+   "note": "brancard tops (brushed in the photo)"
+  },
+  "case_dark": {
+   "color": [0.02, 0.02, 0.02],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [0.0, 0.0, 0.0],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "hand_black": {
+   "color": [0.03, 0.03, 0.03],
+   "metallic": 1.0,
+   "roughness": 0.25,
+   "note": "black hands and hub (photo)"
+  },
+  "lume": {
+   "color": [0.86, 0.85, 0.78],
+   "metallic": 0.0,
+   "roughness": 0.5
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ }
+}

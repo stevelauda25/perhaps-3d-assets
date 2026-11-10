@@ -1,0 +1,46 @@
+{
+  "id": "fossil-fs6012",
+  "output": "outputs/jobs/fossil-fs6012",
+  "asset_type": "watch",
+  "model": "Fossil Carraway FS6012",
+  "baseline": "First build: rectangular steel case (lower flank, brushed brancards into the horns, polished bars and frame), cream sunray Roman-numeral dial and brown leather strap from the straight front photo at 30 mm wide, black lume hands, house depth, glass and curl",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/fossil-fs6012/REFERENCE_PLAN.md",
+    "config/watches/fossil-fs6012.json",
+    "config/watches/fossil-fs6012-trace.json",
+    "config/presets/watch_kit_white_front_fossil_fs6012.json"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "watch_fossil_fs6012",
+      "params": {
+        "spec": "config/watches/fossil-fs6012.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/fossil-fs6012/fossil-fs6012.glb"
+      }
+    },
+    {
+      "name": "kit",
+      "step": "watch_kit",
+      "params": {
+        "kit_preset": "config/presets/watch_kit_white_front_fossil_fs6012.json",
+        "pose": "SKO | pose"
+      }
+    },
+    {
+      "name": "cmp-front",
+      "render": {
+        "camera": "CAM | front_ortho",
+        "resolution": 2000,
+        "profile": "comparison"
+      }
+    }
+  ]
+}
