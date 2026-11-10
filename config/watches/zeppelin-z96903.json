@@ -1,0 +1,180 @@
+{
+ "model": "Zeppelin Mediterranée Z96903 (9690-3)",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straight front photo (42 mm case, listing; strap 21.52 mm measured against 22 mm listed, the same gap as the other 42 mm Zeppelins). Heights before the house depth scale. Dial print, applied numerals, pulsometer flange and the strap leather come from one photo map.",
+ "trace": "config/watches/zeppelin-z96903-trace.json",
+ "photo_map": "outputs/watches/zeppelin-z96903/dial_photo.jpg",
+ "photo_roughness": {
+  "dial": 0.35,
+  "strap_leather": 0.6
+ },
+ "verified_mm": {
+  "diameter": 42.0,
+  "strap_width": 21.52
+ },
+ "case": {
+  "profile": [
+   [
+    18.0,
+    0.0
+   ],
+   [
+    20.4,
+    0.0
+   ],
+   [
+    21.0,
+    0.8
+   ],
+   [
+    21.0,
+    6.0
+   ],
+   [
+    20.8,
+    7.2
+   ],
+   [
+    20.5,
+    8.2
+   ],
+   [
+    20.0,
+    9.1
+   ],
+   [
+    19.4,
+    9.2
+   ],
+   [
+    19.4,
+    8.3
+   ],
+   [
+    19.1,
+    8.3
+   ]
+  ],
+  "note": "(r, z): polished flank rounding into the wide polished bezel (19.4-21 mm in the photo); inner lip covers the flange edge; 14 mm thick listing"
+ },
+ "lug": {
+  "gap": 0.1,
+  "into_case": 1.5,
+  "top_z_at_case": 6.2,
+  "top_z_at_tip": 4.6,
+  "step_down": 1.0,
+  "bevel": 0.5,
+  "note": "stepped polished lugs: outer block, and a step 1 mm lower next to the strap (split at the traced step_x)"
+ },
+ "crystal": {
+  "z0": 8.7,
+  "z1": 9.2,
+  "dome": 0.8
+ },
+ "dial": {
+  "z": 7.0,
+  "flange_top": [
+   19.15,
+   8.2
+  ],
+  "note": "flat dial to the flange's inner edge, then the pulsometer flange as a cone up to the bezel lip"
+ },
+ "hands": {
+  "thickness": 0.15,
+  "z": {
+   "sub": 7.2,
+   "hour": 7.4,
+   "minute": 7.6,
+   "seconds": 7.8
+  },
+  "hub_steps": [
+   [
+    1.0,
+    0.45
+   ],
+   [
+    0.85,
+    0.7
+   ],
+   [
+    0.55,
+    0.95
+   ],
+   [
+    0.15,
+    1.1
+   ]
+  ]
+ },
+ "crown": {
+  "teeth": 24,
+  "flute_depth": 0.25,
+  "z": 4.0
+ },
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.05,
+  "under_case": 0.8,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "end_y": 38.9,
+  "note": "House curl (SUR419P1): bend at the lug tips (23.5 mm), 7 mm radius, end_y = tip + 2.2 x radius"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "gold": {
+   "color": [
+    0.9,
+    0.75,
+    0.45
+   ],
+   "metallic": 1.0,
+   "roughness": 0.2,
+   "note": "centre and sub-dial hubs, seconds counterweight"
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"
+  },
+  "hand_white": {
+   "color": [
+    0.82,
+    0.83,
+    0.84
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3,
+   "note": "white hands (photo)"
+  },
+  "hand_red": {
+   "color": [
+    0.62,
+    0.03,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3,
+   "note": "24 h pointer"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ }
+}
