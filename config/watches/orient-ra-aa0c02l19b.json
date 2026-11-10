@@ -1,0 +1,50 @@
+{
+ "model": "Orient RA-AA0C02L19B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = index ring centre. Plan sizes from the trace of the straight front photo (41.9 mm case, Orient official; the photo's lug to lug reads 47.0 mm against the official 48.0 mm, the photo is taken a little from below, so the official value is used). Heights before the house depth scale are a front-relief reading of the official 11.7 mm (no side photo). House method: modelled case, bezel, guards, lugs, crown, indices, day-date frame, hands and bracelet; one photo map for the dial print.",
+ "trace": "config/watches/orient-ra-aa0c02l19b-trace.json",
+ "dial_map": "outputs/watches/orient-ra-aa0c02l19b/dial_photo.jpg",
+ "verified_mm": {"diameter": 41.9, "lug_to_lug": 48.0, "end_link_width": 22.0},
+ "case": {
+  "profile_rz": [[0.0, 0.0], [20.5, 0.0], [20.95, 0.5], [20.95, 6.7], [20.7, 6.7], [20.7, 6.5], [0.0, 6.5]],
+  "note": "Polished flank under the bezel (hidden from the front)"
+ },
+ "bezel": {
+  "profile_rz": [[18.64, 6.6], [20.95, 6.6], [20.95, 7.5], [20.78, 8.05], [20.45, 8.25], [18.64, 8.25]],
+  "note": "Flat brushed bezel flush with the case, rounded outer edge (photo: 18.64-20.95 mm matte band)"
+ },
+ "gasket": {"r_in": 18.4, "r_out": 18.64, "z0": 7.8, "z1": 8.2},
+ "crystal": {"radius": 18.64, "z0": 8.1, "z1": 8.4},
+ "dial": {"z": 6.8, "rehaut_r": 18.6, "rehaut_z": 7.9, "roughness": 0.35},
+ "indices": {"height": 0.32, "ridge": 0.12, "lume_recess": 0.05},
+ "hands": {"thickness": 0.12, "lume_height": 0.1, "z": {"hour": 7.2, "minute": 7.4, "seconds": 7.6}},
+ "crown": {"z": 3.2, "r_from": 21.3, "flute_depth": 0.18},
+ "crown_guard": {
+  "outline_mm": [[19.5, 2.97], [22.5, 2.97], [22.83, 3.3], [22.83, 5.3], [22.2, 6.0], [20.6, 6.9], [19.0, 7.3]],
+  "top_z": 5.6, "bevel": 0.35,
+  "note": "Upper guard about the 3 o'clock axis (photo: 90-200 px from the crown axis, outer edge at x 22.8 mm), mirrored below"
+ },
+ "lug": {"into_case": 0.6, "tip_outer_x": 12.3, "slope_from_y": 18.0, "top_z_at_case": 6.4, "top_z_at_tip": 4.8, "bevel": 0.4},
+ "end_link": {"from_y": 16.0, "half_width": 11.0, "top_z": 4.6, "bevel": 0.3},
+ "bracelet": {"end_y": 39.4, "z0": 0.5, "z1": 3.6, "centre_raise": 0.1, "gap": 0.15, "bevel": 0.35, "backing_z": [0.15, 0.5], "bend_radius": 7.0, "bend_after_tip": 0.0, "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"},
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_satin": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.3, "note": "brushed bezel: plain satin, the bracelet normal map's straight lines would cross the ring"},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "gasket_black": {"color": [0.01, 0.01, 0.012], "metallic": 0.0, "roughness": 0.4},
+  "lume_index": {"color": [0.36, 0.37, 0.35], "metallic": 0.0, "roughness": 0.5, "note": "grey lume in the bars (photo)"},
+  "lume_hands": {"color": [0.74, 0.78, 0.7], "metallic": 0.0, "roughness": 0.45},
+  "crystal": {"color": [1.0, 1.0, 1.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08, "note": "alpha-blended, not transmission: web viewers blur the dial behind transmission glass"}
+ },
+ "steel_textures": {"steel_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0, "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"}},
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "review": {
+  "subtitle": "Orient Contemporary automatic, blue sunburst day-date dial, steel bracelet",
+  "specs": [["41.9 mm", "Case (official)"], ["48.0 mm", "Lug to lug"], ["22 mm", "Bracelet"], ["Front relief", "Method"]],
+  "notes": [
+   "Front photo is the straight-on retailer image (2000 px) of the same reference; the photo you supplied is the 3/4 view.",
+   "Case, brushed bezel, crown guards, lugs, crown, bars, day-date frame, hands and three-column bracelet are modelled in the house steel; the dial print comes from the photo.",
+   "Heights are estimated from the official 11.7 mm thickness (no side photo)."
+  ]
+ }
+}
