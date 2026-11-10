@@ -1,0 +1,257 @@
+{
+ "model": "Orient Star RE-AU0601B",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (41.0 mm bezel, listing; the end link measures 19.2 mm against the listed 20 mm lug width). Heights are a front-relief reading of the listed 14.3 mm (no side photo). The gloss black dial, minute track, logo, power reserve print and the date disc stay in the dial map; the insert's white prints are traced outlines built as geometry.",
+ "trace": "config/watches/orient-re-au0601b-trace.json",
+ "dial_map": "outputs/watches/orient-re-au0601b/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0,
+  "lug_to_lug": 48.5
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.3,
+    0
+   ],
+   [
+    19.7,
+    0.45
+   ],
+   [
+    19.8,
+    1.2
+   ],
+   [
+    19.8,
+    4.4
+   ],
+   [
+    19.6,
+    4.9
+   ],
+   [
+    15.133,
+    4.9
+   ],
+   [
+    15.133,
+    5.0
+   ],
+   [
+    0.0,
+    5.0
+   ]
+  ]
+ },
+ "crystal": {
+  "radius": 15.183,
+  "z0": 6.3,
+  "z1": 6.75
+ },
+ "bezel": {
+  "z0": 4.9,
+  "lip_z": 6.3,
+  "insert_z": 6.7,
+  "rim_z": 6.95,
+  "slot_depth": 0.35,
+  "slot_power": 2.0,
+  "rim_bevel": 0.05,
+  "print_raise": 0.04
+ },
+ "dial": {
+  "z": 5.1,
+  "flat_r": 14.265,
+  "rehaut_r": 15.183,
+  "rehaut_z": 6.3,
+  "roughness": 0.2
+ },
+ "indices": {
+  "height": 0.4,
+  "lume_recess": 0.05
+ },
+ "hands": {
+  "thickness": 0.12,
+  "outline": 0.12,
+  "z": {
+   "hour": 5.65,
+   "minute": 5.83,
+   "seconds": 6.01
+  },
+  "pr_z": 0.15,
+  "hour_stem_half_width": 0.45,
+  "hour_tip_half_width": 0.55,
+  "minute_root_half_width": 0.35,
+  "minute_max_half_width": 0.72,
+  "minute_lume_inset": 0.14,
+  "note": "geometry widths; the trace's widths are the zones cut from the dial map"
+ },
+ "crown": {
+  "radius": 3.25,
+  "flute_depth": 0.18,
+  "teeth": 30,
+  "collar": [
+   19.6,
+   20.4
+  ],
+  "collar_r": 2.6,
+  "r_to": 23.9,
+  "z": 3.2
+ },
+ "lug": {
+  "inner_x": 9.6,
+  "from_y": 0.0,
+  "top_z_at_case": 4.8,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 19.0,
+  "half_width": 9.593,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 39.65,
+  "z0": 0.5,
+  "z1": 3.4,
+  "polished_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "insert_black": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.25,
+   "note": "black insert"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Orient Star Diver 1964 2nd edition, black dial, black insert, five-link bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "41.0 mm",
+    "bezel (listing)"
+   ],
+   [
+    "48.5 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "228",
+    "coin-edge teeth"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: coin-edge steel bezel, black insert with its white numerals, bars and dots as traced inlays, lume pip at 12, applied lume dots in polished cups, bars at 6 and 9, trapezoid at 12, square at 3, polished date frame, lollipop hour hand, sword minute hand, seconds hand with a lume disc, power reserve hand at 12, fluted crown, lugs, five-column bracelet (polished middle rows).",
+   "From the photo map: gloss black dial, minute track, Orient Star logo, AUTOMATIC DIVER'S 200m, power reserve scale, the date disc.",
+   "Scale is the listed 41 mm. Heights are estimated (no side photo)."
+  ]
+ },
+ "crown_zone_mm": 4.5
+}
