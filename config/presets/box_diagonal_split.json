@@ -1,0 +1,70 @@
+{
+  "name": "diagonal-split",
+  "note": "Diagonal Split (designer sketch, 2026-11-11): 100 mm cube. The top 25 mm is a lid cut corner to corner along the top diagonal into two triangular trays. Each tray swings up on a hinge along one outer top edge. Base shell 75 mm with a white inner tray rising 12 mm into the lid. Kraft outside, white inside (lid cavities, base cavity, inner tray). Finger notches (radius 10 mm) in the base rim at the two corners where the trays meet. Edge hinges (2026-11-11 sketch): one brass butt hinge per tray on the outer top edge that runs from its outer corner to the back cut corner, centred `hinge_from_corner` mm from the outer corner; leaves flat on the face, lid leaf above the seam, base leaf below, three knuckles (middle on the lid).",
+  "geometry_mm": {
+    "size": 100.0,
+    "lid_depth": 25.0,
+    "wall": 2.5,
+    "lid_top": 3.0,
+    "base_floor": 3.0,
+    "seam": 0.3,
+    "seat_gap": 0.05,
+    "edge_radius": 0.6,
+    "edge_segments": 3,
+    "insert_clearance": 0.3,
+    "insert_wall": 1.5,
+    "insert_floor": 2.0,
+    "insert_rise": 12.0,
+    "grip_radius": 10.0,
+    "hinge_length": 24.0,
+    "hinge_height": 9.0,
+    "hinge_leaf": 0.8,
+    "knuckle_radius": 1.8,
+    "knuckle_gap": 0.25,
+    "hinge_from_corner": 25.0
+  },
+  "materials": {
+    "note": "glTF-safe stock for the GLB: plain colour + Paper002 fibre relief (normal, roughness) at 1K. Renders swap in library paper via config/presets/box_diagonal_split_look.json.",
+    "grain": {
+      "dir": "textures/sources/ambientcg_paper002_2k",
+      "normal": "Paper002_2K-JPG_NormalGL.jpg",
+      "roughness": "Paper002_2K-JPG_Roughness.jpg",
+      "tile_mm": 300,
+      "px": 1024,
+      "normal_strength": 1.0
+    },
+    "exterior": {
+      "note": "kraft, Paper006 measured mean sRGB 166/130/99",
+      "color_linear": [
+        0.381,
+        0.223,
+        0.125
+      ]
+    },
+    "accent": {
+      "note": "white interior, sRGB 236/231/222",
+      "color_linear": [
+        0.838,
+        0.799,
+        0.73
+      ]
+    },
+    "hinge": {
+      "note": "brushed brass, plain glTF metal; the look stage leaves it as built",
+      "color_linear": [
+        0.62,
+        0.45,
+        0.22
+      ],
+      "roughness": 0.35
+    }
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "open_deg": 60,
+    "frames": 30
+  }
+}

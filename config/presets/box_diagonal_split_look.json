@@ -1,0 +1,29 @@
+{
+  "tier": "diagonal-split",
+  "builder": "paperboard",
+  "surface": "Render look for Diagonal Split: library Paper006 kraft outside, Paper002 stock in white inside (lid cavities, base cavity, inner tray).",
+  "roles": {
+    "exterior": {
+      "library": "paperboard.ambientcg-paper006"
+    },
+    "accent": {
+      "library": "paperboard.ambientcg-paper002",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "hue": 0.5,
+          "saturation": 0.35,
+          "value": 1.15
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Diagonal Split | exterior": "exterior",
+    "Diagonal Split | accent": "accent"
+  }
+}
