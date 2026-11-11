@@ -1,0 +1,263 @@
+{
+ "model": "Citizen BJ7150-50W",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Citizen's official 1295 x 2048 front render at the listed 39.5 mm case width (= the steel bezel); the bracelet then measures 20.1 mm at the lug tips against the listed 20 mm. Heights are a front-relief reading of the listed 13.5 mm (side render). The textured dial, its printed lume numerals, the date and the flange stay in the dial map; the bezel's black numerals are traced inlays.",
+ "trace": "config/watches/citizen-bj7150-50w-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/citizen-bj7150-50w/dial_photo.jpg",
+   "roughness": 0.5
+  }
+ },
+ "verified_mm": {
+  "bezel_width": 39.5,
+  "end_link_width": 20.12,
+  "lug_to_lug": 45.8
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.9,
+    0
+   ],
+   [
+    20.3,
+    0.4
+   ],
+   [
+    20.4,
+    1.1
+   ],
+   [
+    20.4,
+    4.2
+   ],
+   [
+    20.1,
+    4.6
+   ],
+   [
+    16.3,
+    4.6
+   ],
+   [
+    16.3,
+    4.1
+   ],
+   [
+    0.0,
+    4.1
+   ]
+  ],
+  "note": "round body under the bezel; the flanks are part of the lug slab from the silhouette"
+ },
+ "crystal": {
+  "z0": 5.62,
+  "z1": 5.82
+ },
+ "bezel": {
+  "z0": 4.6,
+  "top_z": 6.05,
+  "chamfer": 0.35,
+  "print_raise": 0.03
+ },
+ "dial": {
+  "z": 4.75,
+  "flange_z": 5.45
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume": 0.05,
+  "z": {
+   "hour": 4.95,
+   "minute": 5.1,
+   "gmt": 5.25,
+   "seconds": 5.4
+  },
+  "material": {
+   "hour": "steel_polished",
+   "minute": "steel_polished",
+   "gmt": "gmt_yellow",
+   "seconds": "hand_white"
+  },
+  "note": "traced polygons (trace manual_px)"
+ },
+ "crown": {
+  "flute_depth": 0.2,
+  "collar": [
+   19.5,
+   20.4
+  ],
+  "collar_r": 1.8,
+  "end": 0.5,
+  "z": 2.8
+ },
+ "crown_guard": {
+  "top_z": 4.4,
+  "bevel": 0.4
+ },
+ "lug": {
+  "from_y": 0.0,
+  "top_z_at_case": 4.6,
+  "top_z_at_tip": 4.0,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 18.0,
+  "top_z": 3.6,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "z0": 0.5,
+  "z1": 3.2,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.4,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "arc_over_radius": 2.2,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "steel_satin": {
+   "color": [
+    0.74,
+    0.74,
+    0.75
+   ],
+   "metallic": 1.0,
+   "roughness": 0.2,
+   "note": "bezel: finer satin than the brushed lugs"
+  },
+  "print_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "hand_dark": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "hand_white": {
+   "color": [
+    0.86,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "gmt_yellow": {
+   "color": [
+    0.92,
+    0.52,
+    0.04
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35,
+   "note": "render median of the GMT hand, linear"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Citizen Promaster Land GMT, 39.5 mm, red textured dial, steel 24-hour bezel, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "39.5 mm",
+    "case (Citizen)"
+   ],
+   [
+    "45.8 mm",
+    "lug to lug in the render"
+   ],
+   [
+    "20.1 mm",
+    "bracelet at the lugs (20 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: satin steel bezel with the black 24-hour numerals and marks as traced inlays, hour and minute hands with lume panels in polished frames, white seconds hand with an oval counterweight, yellow GMT hand with an outlined lume triangle, black hub, knurled crown, brushed lugs, three-column bracelet (brushed outer links, polished centre links).",
+   "From the photo map: red textured dial with the printed lume numerals, triangle and bars, CITIZEN, Eco-Drive GMT, the date (7) and the red flange with its minute marks.",
+   "Under the hands the dial is filled from the same texture a few degrees away; it is covered by the 3D hands.",
+   "Scale is Citizen's 39.5 mm case width from the official straight-on render. Heights are a front-relief reading of the listed 13.5 mm."
+  ]
+ }
+}

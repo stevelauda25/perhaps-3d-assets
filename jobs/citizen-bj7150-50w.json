@@ -1,0 +1,46 @@
+{
+ "id": "citizen-bj7150-50w",
+ "output": "outputs/jobs/citizen-bj7150-50w",
+ "asset_type": "watch",
+ "model": "Citizen BJ7150-50W",
+ "baseline": "Round 1: modelled front relief from Citizen's official 1295 x 2048 front render at the listed 39.5 mm case width, house depth, glass, steel and bracelet curl; dial from a photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/citizen-bj7150-50w/REFERENCE_PLAN.md",
+  "config/watches/citizen-bj7150-50w.json",
+  "config/watches/citizen-bj7150-50w-trace.json",
+  "config/presets/watch_kit_white_front_citizen_bj7150.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_citizen_bj7150",
+   "params": {
+    "spec": "config/watches/citizen-bj7150-50w.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/citizen-bj7150-50w/citizen-bj7150-50w.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_citizen_bj7150.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "model": "Bulova 96A225",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Bulova's official 1208 x 2048 front render at the listed 45 mm case width (left flank mirrored); the strap then measures 19.7 mm against the listed 20 mm lug width and the case length 52.3 mm against 52.8 mm. Heights are a front-relief reading of the listed 10.3 mm (side render). The dial, subdials, flange, tachymeter ring and prints stay in the dial map; the NATO strap is a photo map rolled under with the house curl.",
+ "trace": "config/watches/bulova-96a225-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/bulova-96a225/dial_photo.jpg",
+   "roughness": 0.35
+  },
+  "strap": {
+   "image": "outputs/watches/bulova-96a225/strap.jpg",
+   "roughness": 0.8
+  }
+ },
+ "verified_mm": {
+  "case_width": 45.0,
+  "case_length": 52.33
+ },
+ "case": {
+  "top_z": 4.2,
+  "edge_z": 1.8,
+  "dome_power": 1.6,
+  "note": "polished cushion: domed from the bezel to the silhouette along every ray"
+ },
+ "bezel": {
+  "z0": 4.0,
+  "inner_z": 5.2,
+  "top_z": 5.5,
+  "outer_z": 4.9
+ },
+ "crystal": {
+  "z0": 5.25,
+  "z1": 5.6
+ },
+ "dial": {
+  "z": 4.35,
+  "flange_z": 4.75,
+  "tach_z": 5.0
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.05
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume": 0.05,
+  "z": {
+   "subdial": 4.5,
+   "hour": 4.7,
+   "minute": 4.85,
+   "chrono": 5.0
+  },
+  "material": {
+   "hour": "steel_polished",
+   "minute": "steel_polished",
+   "chrono": "hand_white"
+  },
+  "note": "traced polygons (trace manual_px)"
+ },
+ "crown": {
+  "flute_depth": 0.25,
+  "radius_factor": 0.92,
+  "collar": [
+   21.5,
+   22.4
+  ],
+  "collar_r": 2.2,
+  "end": 0.7,
+  "z": 2.6
+ },
+ "strap": {
+  "from_y": 20.0,
+  "z0": 0.4,
+  "z1": 1.6,
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "arc_over_radius": 2.2,
+  "uv_inset": 0.02,
+  "note": "House curl (SUR419P1): 7 mm radius from the case edges, end_y = edge + 2.2 R; NATO width from the render"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "hand_dark": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "hand_white": {
+   "color": [
+    0.88,
+    0.88,
+    0.87
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Bulova Lunar Pilot chronograph, 45 mm, black dial, tachymeter, black NATO strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "45 mm",
+    "case (Bulova)"
+   ],
+   [
+    "52.3 mm",
+    "case length in the render (52.8 listed)"
+   ],
+   [
+    "19.7 mm",
+    "strap in the render (20 listed)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: polished cushion case with the pushers at 2 and 4, polished bezel ring, applied indices with polished frames and lume (double bar at 12, wide at 3, 6 and 9), white lume hour and minute batons in polished frames, white chrono hand with a lozenge, white subdial hands, fluted crown, NATO strap with the house curl.",
+   "From the photo maps: black dial with BULOVA, the three subdials with their grooves and numerals, 262 kHz, the minute-track flange and the black tachymeter ring; the NATO strap texture with its keepers.",
+   "Under the hands and indices the dial is filled from the dial around them; it is covered by the 3D parts.",
+   "Scale is Bulova's 45 mm case width from the official straight-on render. Heights are a front-relief reading of the listed 10.3 mm."
+  ]
+ }
+}

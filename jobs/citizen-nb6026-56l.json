@@ -1,0 +1,46 @@
+{
+ "id": "citizen-nb6026-56l",
+ "output": "outputs/jobs/citizen-nb6026-56l",
+ "asset_type": "watch",
+ "model": "Citizen NB6026-56L",
+ "baseline": "Round 1: modelled front relief from Citizen's official 1324 x 2048 front render at the listed 41 mm case width, house depth, glass, steel and bracelet curl; dial from a photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/citizen-nb6026-56l/REFERENCE_PLAN.md",
+  "config/watches/citizen-nb6026-56l.json",
+  "config/watches/citizen-nb6026-56l-trace.json",
+  "config/presets/watch_kit_white_front_citizen_nb6026.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_citizen_nb6026",
+   "params": {
+    "spec": "config/watches/citizen-nb6026-56l.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/citizen-nb6026-56l/citizen-nb6026-56l.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_citizen_nb6026.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "bulova-96a225",
+ "output": "outputs/jobs/bulova-96a225",
+ "asset_type": "watch",
+ "model": "Bulova 96A225",
+ "baseline": "Round 1: modelled front relief from Bulova's official 1208 x 2048 front render at the listed 45 mm case width, house depth, glass, steel and strap curl; dial and NATO strap from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/bulova-96a225/REFERENCE_PLAN.md",
+  "config/watches/bulova-96a225.json",
+  "config/watches/bulova-96a225-trace.json",
+  "config/presets/watch_kit_white_front_bulova_96a225.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_bulova_96a225",
+   "params": {
+    "spec": "config/watches/bulova-96a225.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/bulova-96a225/bulova-96a225.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_bulova_96a225.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

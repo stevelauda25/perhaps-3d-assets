@@ -1,0 +1,257 @@
+{
+ "model": "Citizen NB6026-56L",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Citizen's official 1324 x 2048 front render at the listed 41 mm case width (= the coin-edge bezel, which overhangs the case); the bracelet then measures 19.4 mm at the lug tips against the listed 20 mm lug width. Heights are a front-relief reading of the listed 12.2 mm (side render). The dial, its prints, the date and the minute track stay in the dial map; the insert's silver prints are traced inlays.",
+ "trace": "config/watches/citizen-nb6026-56l-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/citizen-nb6026-56l/dial_photo.jpg",
+   "roughness": 0.35
+  }
+ },
+ "verified_mm": {
+  "bezel_width": 41.0,
+  "end_link_width": 19.41,
+  "lug_to_lug": 47.68
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.3,
+    0
+   ],
+   [
+    19.7,
+    0.4
+   ],
+   [
+    19.8,
+    1.1
+   ],
+   [
+    19.8,
+    4.0
+   ],
+   [
+    19.5,
+    4.4
+   ],
+   [
+    15.0,
+    4.4
+   ],
+   [
+    15.0,
+    4.3
+   ],
+   [
+    0.0,
+    4.3
+   ]
+  ],
+  "note": "round body under the bezel; the flanks are part of the lug slab from the silhouette"
+ },
+ "crystal": {
+  "z0": 5.6,
+  "z1": 5.85
+ },
+ "bezel": {
+  "z0": 4.4,
+  "insert_z": 5.95,
+  "rim_z": 6.1,
+  "rim_bevel": 0.08,
+  "print_raise": 0.04,
+  "scallop_depth": 0.35,
+  "scallop_z": 0.25,
+  "notch_fraction": 0.6
+ },
+ "dial": {
+  "z": 4.6,
+  "edge_z": 5.3
+ },
+ "indices": {
+  "height": 0.45,
+  "lume_recess": 0.05
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume": 0.05,
+  "z": {
+   "hour": 5.2,
+   "minute": 5.35,
+   "seconds": 5.5
+  },
+  "material": {
+   "hour": "steel_polished",
+   "minute": "steel_polished",
+   "seconds": "steel_polished"
+  },
+  "note": "traced polygons and circles (trace manual_px)"
+ },
+ "crown": {
+  "flute_depth": 0.2,
+  "collar": [
+   19.6,
+   20.4
+  ],
+  "collar_r": 1.7,
+  "end": 0.6,
+  "z": 2.8
+ },
+ "lug": {
+  "from_y": 0.0,
+  "top_z_at_case": 4.4,
+  "top_z_at_tip": 3.8,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 18.5,
+  "top_z": 3.5,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "z0": 0.5,
+  "z1": 3.2,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.4,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "arc_over_radius": 2.2,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.78,
+    0.82,
+    0.74
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45,
+   "note": "pale green lume"
+  },
+  "hand_dark": {
+   "color": [
+    0.012,
+    0.012,
+    0.014
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "bezel_blue": {
+   "color": [
+    0.03,
+    0.2,
+    0.42
+   ],
+   "metallic": 1.0,
+   "roughness": 0.2,
+   "note": "blue anodised ring, render median (linear)"
+  },
+  "insert_black": {
+   "color": [
+    0.008,
+    0.008,
+    0.009
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "print_silver": {
+   "color": [
+    0.6,
+    0.6,
+    0.61
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4,
+   "note": "grained silver numerals"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Citizen Promaster Fujitsubo, 41 mm titanium, blue dial, black insert in a blue coin-edge bezel, titanium bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "41 mm",
+    "case (Citizen)"
+   ],
+   [
+    "47.7 mm",
+    "lug to lug in the render"
+   ],
+   [
+    "19.4 mm",
+    "bracelet at the lugs (20 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: blue coin-edge bezel ring, black insert with the silver numerals, bars, dots and triangle as traced inlays and a lume pip, applied rectangular indices with polished frames and lume, hour hand with a three-spoke lume ring and lume tip, minute hand with a lume panel, seconds hand with a lume dot, polished hub, fluted crown, brushed lugs, three-column bracelet (brushed outer links, polished centre links).",
+   "From the photo map: blue gradient dial with CITIZEN AUTOMATIC, DIVER'S 200m TITANIUM, the date (7) and the minute track; the crystal edge reflections near the rim are part of the photo.",
+   "Under the hands and indices the dial is a smooth fill of the gradient; it is covered by the 3D parts.",
+   "Scale is Citizen's 41 mm case width from the official straight-on render. Heights are a front-relief reading of the listed 12.2 mm. Titanium is shown with the house steel materials."
+  ]
+ }
+}
