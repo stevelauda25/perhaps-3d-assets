@@ -1,0 +1,255 @@
+{
+ "model": "Tissot T120.607.11.041.00",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace (46 mm case width at 3 and 9, listing; the end link measures 21.9 mm against the listed 22 mm lug width). Heights are a front-relief reading of the listed 15.8 mm (no side photo). The wave dial, prints, date and the flange minute track stay in the dial map; the insert's white prints are traced outlines built as geometry. The helium valve at 10 sits on the case side and is not visible from the front.",
+ "trace": "config/watches/tissot-t120.607.11.041.00-trace.json",
+ "dial_map": "outputs/watches/tissot-t120.607.11.041.00/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 45.85,
+  "lug_to_lug": 49.5
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    22.2,
+    0
+   ],
+   [
+    22.6,
+    0.5
+   ],
+   [
+    22.7,
+    1.3
+   ],
+   [
+    22.7,
+    5.0
+   ],
+   [
+    22.5,
+    5.5
+   ],
+   [
+    17.0,
+    5.5
+   ],
+   [
+    17.0,
+    5.6
+   ],
+   [
+    0.0,
+    5.6
+   ]
+  ],
+  "note": "round body under the bezel; the flanks at 3 and 9 are part of the lug slab from the silhouette"
+ },
+ "crystal": {
+  "radius": 17.2,
+  "z0": 7.0,
+  "z1": 7.3
+ },
+ "bezel": {
+  "z0": 5.5,
+  "lip_z": 7.05,
+  "insert_z": 7.35,
+  "rim_z": 7.75,
+  "rim_bevel": 0.08,
+  "print_raise": 0.04,
+  "scallop_depth": 0.55,
+  "scallop_z": 0.35,
+  "notch_fraction": 0.5
+ },
+ "dial": {
+  "z": 5.8,
+  "flat_r": 15.3,
+  "rehaut_r": 16.82,
+  "rehaut_z": 6.95,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.4,
+  "lume_recess": 0.05
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 6.25,
+   "minute": 6.45,
+   "seconds": 6.65
+  },
+  "note": "shapes from hand-aligned crops (trace manual_px)"
+ },
+ "crown": {
+  "radius": 3.86,
+  "flute_depth": 0.22,
+  "collar": [
+   22.3,
+   23.3
+  ],
+  "collar_r": 2.4,
+  "r_to": 27.5,
+  "z": 3.7
+ },
+ "crown_guard": {
+  "top_z": 5.2,
+  "bevel": 0.35
+ },
+ "lug": {
+  "inner_x": 10.95,
+  "from_y": 0.0,
+  "top_z_at_case": 5.4,
+  "top_z_at_tip": 4.6,
+  "bevel": 0.5
+ },
+ "end_link": {
+  "from_y": 19.5,
+  "half_width": 10.95,
+  "top_z": 4.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 40.15,
+  "z0": 0.5,
+  "z1": 3.6,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.45,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "insert_ceramic": {
+   "color": [
+    0.011,
+    0.0143,
+    0.0253
+   ],
+   "metallic": 0.0,
+   "roughness": 0.15,
+   "note": "polished ceramic, photo median of the insert (linear)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Tissot Seastar 2000 Professional Powermatic 80, 46 mm, blue wave dial, dark ceramic insert, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "46 mm",
+    "case (listing)"
+   ],
+   [
+    "49.5 mm",
+    "lug to lug in the photo"
+   ],
+   [
+    "21.9 mm",
+    "end link in the photo (22 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: steel bezel with a 90-notch coin edge, dark ceramic insert with the white triangle, numerals and minute bars as traced inlays, polished inner lip, applied indices with polished frames and lume (round dots, triangle at 12, bars at 3, 9 and 6), sword hour hand with lume blade, black cross guard and pommel, minute hand with arrow tip and stepped tail, black seconds needle with a lume dot, fluted crown between two crown guards, brushed lugs, three-column bracelet.",
+   "From the photo map: blue gradient dial with the wave relief, TISSOT 1853, SEASTAR, PROFESSIONAL 600M / 2000FT, POWERMATIC 80, SWISS MADE, the date window (31) and the black flange with its minute track.",
+   "Under the hands the dial is a smooth fill (the wave relief does not repeat); it is covered by the 3D hands.",
+   "Scale is the listed 46 mm case. Heights are estimated from the listed 15.8 mm (no side photo). The helium valve sits on the case side at 10 and is not visible from the front."
+  ]
+ }
+}

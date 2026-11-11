@@ -1,0 +1,266 @@
+{
+ "model": "Bulova 98A329",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of the straightened photo (43.5 mm case width, Bulova; 20 mm lug width and 50 mm lug to lug listed). Heights are a front-relief reading of the listed 13 mm (no side photo). The Timascus dial, white subdials, minute track flange, tachymeter ring, BULOVA plate and prints are the photo map; indices, numerals, hands, bezel, case, crown, pushers and bracelet are modelled.",
+ "trace": "config/watches/bulova-98a329-trace.json",
+ "dial_map": "outputs/watches/bulova-98a329/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 43.5,
+  "lug_to_lug": 50.0
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    20.3,
+    0
+   ],
+   [
+    20.65,
+    0.45
+   ],
+   [
+    20.75,
+    1.2
+   ],
+   [
+    20.75,
+    4.4
+   ],
+   [
+    20.6,
+    4.9
+   ],
+   [
+    15.0,
+    4.9
+   ],
+   [
+    15.0,
+    5.0
+   ],
+   [
+    0.0,
+    5.0
+   ]
+  ],
+  "note": "round body under the bezel; the cushion flanks and lug horns are one slab from the silhouette"
+ },
+ "crystal": {
+  "radius": 19.0,
+  "z0": 6.3,
+  "z1": 6.55
+ },
+ "bezel": {
+  "z0": 4.9,
+  "top_z": 6.85,
+  "inner_z": 6.35,
+  "outer_z": 6.3,
+  "crown_r": 20.2,
+  "groove_z": 6.0
+ },
+ "dial": {
+  "z": 5.1,
+  "flange_z": 6.0,
+  "tach_z": 6.15,
+  "roughness": 0.45
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.04
+ },
+ "numerals": {
+  "height": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "z": {
+   "hour": 5.6,
+   "minute": 5.78,
+   "chrono": 5.96,
+   "subdial": 5.3
+  },
+  "note": "hour and minute: white lume in a polished frame; chrono: white needle; subdial: black needles"
+ },
+ "crown": {
+  "flute_depth": 0.2,
+  "z": 4.0,
+  "note": "fluted, sized from the photo (8 mm across, ends 25.6 mm from the pivot)"
+ },
+ "pushers": {
+  "z0": 1.2,
+  "z1": 4.2,
+  "bevel": 0.35,
+  "note": "blue pusher blocks at 2 and 4: outer edge from the photo silhouette, 3.5 mm wide, starting under the case flank (top below the flank top, so only the part outside the flank shows), round ends"
+ },
+ "lug": {
+  "top_z_at_case": 4.8,
+  "top_z_at_tip": 4.0,
+  "slope_from_y": 17.0,
+  "bevel": 0.45,
+  "shoulder_mm": 3.5
+ },
+ "end_link": {
+  "from_y": 18.0,
+  "half_width": 10.0,
+  "top_z": 3.9,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 40.4,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.45,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "half_width": [
+   9.95,
+   9.6
+  ],
+  "pitch": 5.65,
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R. Pitch from the first top joints (5.5 / 5.8 mm); the later and the bottom joints are foreshortened by the curl and the camera angle"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "gasket_black": {
+   "color": [
+    0.01,
+    0.01,
+    0.012
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "hand_dark": {
+   "color": [
+    0.02,
+    0.02,
+    0.025
+   ],
+   "metallic": 0.0,
+   "roughness": 0.3
+  },
+  "lume": {
+   "color": [
+    0.88,
+    0.89,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  },
+  "print_white": {
+   "color": [
+    0.86,
+    0.87,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "bezel_blue": {
+   "color": [
+    0.0283,
+    0.0497,
+    0.0952
+   ],
+   "metallic": 0.3,
+   "roughness": 0.3,
+   "note": "blue anodised bezel, photo median (linear)"
+  },
+  "pusher_blue": {
+   "color": [
+    0.0628,
+    0.1219,
+    0.2792
+   ],
+   "metallic": 0.3,
+   "roughness": 0.3,
+   "note": "blue pushers, photo median (linear)"
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Bulova Lunar Pilot Timascus 43.5 mm chronograph, blue Timascus dial, blue bezel and pushers, steel bracelet. Front relief GLB, round 2.",
+  "specs": [
+   [
+    "43.5 mm",
+    "case (Bulova)"
+   ],
+   [
+    "50.0 mm",
+    "lug to lug (listed; 50.8 in the photo)"
+   ],
+   [
+    "20.3 mm",
+    "end link in the photo (20 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: cushion steel case with lug horns, blue anodised bezel ring and black groove, applied white bar indices in polished frames (long at 12, wide at 3 6 9), applied white numerals traced from the photo, white hour and minute batons in polished frames, white chrono needle with a lozenge, black subdial needles, fluted crown, blue paddle pushers at 2 and 4, three-column brushed bracelet.",
+   "From the photo map: the blue Timascus dial, the white subdials and their scales, the minute track, the tachymeter ring, the BULOVA plate and 262 kHz.",
+   "The photo was turned 1.9 degrees; it was straightened first. Hands and applied parts were removed from the dial map by copying the same row left or right, since the waves run across the dial.",
+   "Scale is the listed 43.5 mm case. Heights are estimated (no side photo). The camera sits slightly toward 6 in the photo, so the case outline is the average of the top and bottom halves."
+  ]
+ }
+}
