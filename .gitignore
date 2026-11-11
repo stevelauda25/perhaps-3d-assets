@@ -7,6 +7,8 @@ outputs/
 delivery/
 *.blend
 *.blend[0-9]*
+!Final Blender/
+!Final Blender/*.blend
 *.glb
 *.gltf
 *.fbx
