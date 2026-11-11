@@ -1,0 +1,151 @@
+{
+ "model": "Tissot T137.207.11.091.00",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Tissot's official front render (35 mm case width, official; case length 34.0 mm in the render against the official 35 mm). Heights are a front-relief reading of the official 10.93 mm and the official side render. Waffle dial, prints, minute track and the date disc stay in the dial map.",
+ "trace": "config/watches/tissot-t137.207.11.091.00-trace.json",
+ "dial_map": "outputs/watches/tissot-t137.207.11.091.00/dial_photo.jpg",
+ "verified_mm": {
+  "case_width": 35.0,
+  "case_length": 33.98
+ },
+ "case": {
+  "top_z": 6.0,
+  "bevel": 0.6,
+  "note": "brushed case top running into the bracelet, polished edge radius"
+ },
+ "bezel": {
+  "outer_z": 6.3,
+  "top_z": 6.8
+ },
+ "crystal": {
+  "z0": 6.6,
+  "z1": 6.9
+ },
+ "dial": {
+  "z": 5.2,
+  "rehaut_z": 5.9,
+  "roughness": 0.4
+ },
+ "indices": {
+  "height": 0.35,
+  "bevel": 0.03,
+  "date_height": 0.3,
+  "date_bevel": 0.05
+ },
+ "hands": {
+  "z": {
+   "hour": 5.62,
+   "minute": 5.86,
+   "seconds": 6.1
+  },
+  "thickness": 0.1,
+  "ridge": 0.1,
+  "lume_raise": 0.02
+ },
+ "crown": {
+  "z": 3.2,
+  "flute_depth": 0.15
+ },
+ "bracelet": {
+  "end_y": 32.39,
+  "z0": 0.6,
+  "z1": 3.6,
+  "centre_raise": 0.1,
+  "gap": 0.15,
+  "bevel": 0.25,
+  "backing_z": [
+   0.2,
+   0.6
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the case edge, end_y = tip + 2.2 R. Integrated H-link bracelet tapering from the case; brushed with polished edges"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur anything behind transmission glass"
+  },
+  "lume": {
+   "color": [
+    0.78,
+    0.8,
+    0.76
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Tissot PRX Powermatic 80 35 mm, green waffle dial, integrated steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "35 mm",
+    "case width (official)"
+   ],
+   [
+    "34.0 mm",
+    "case length (render)"
+   ],
+   [
+    "10.93 mm",
+    "thickness (official)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Tissot's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference).",
+   "Modelled: brushed case running into the bracelet with a polished edge, wide polished bezel, applied polished batons (double at 12) with a lume inset, polished date frame, faceted hour and minute hands with lume strips, seconds hand with counterweight, fluted crown, integrated tapering H-link bracelet with the house curl.",
+   "From the photo map: green waffle dial, minute track, TISSOT 1853, PRX Powermatic 80, Swiss Made and the date disc. The white print is redrawn sharp at 4x the render's resolution.",
+   "Heights are a front-relief reading of the official 10.93 mm case."
+  ]
+ }
+}

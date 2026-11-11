@@ -1,0 +1,173 @@
+{
+ "model": "Bulova 96B258",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Bulova's official front render (45 mm case, official; bracelet 19.8 mm in the render against the official 20 mm lug width; lug to lug 52.2 mm in the render, not listed). Heights are a front-relief reading of the official side render. Dial, chapter ring, tachymeter, subdial tracks, date and prints stay in the dial map.",
+ "trace": "config/watches/bulova-96b258-trace.json",
+ "dial_map": "outputs/watches/bulova-96b258/dial_photo.jpg",
+ "verified_mm": {
+  "case_width": 45.0,
+  "lug_to_lug": 52.16,
+  "bracelet_width": 19.82
+ },
+ "case": {
+  "top_z": 8.6,
+  "bevel": 0.9,
+  "note": "brushed case and horns, wide polished edge radius"
+ },
+ "shoulders": {
+  "z0": 1.5,
+  "z1": 6.5,
+  "overlap": 0.6,
+  "bevel": 0.4
+ },
+ "bezel": {
+  "outer_z": 8.9,
+  "top_z": 9.9
+ },
+ "crystal": {
+  "z0": 9.6,
+  "z1": 9.9
+ },
+ "dial": {
+  "z": 7.6,
+  "chapter_z": 8.1,
+  "flange_z": 8.3,
+  "roughness": 0.45
+ },
+ "indices": {
+  "height": 0.3,
+  "lume_drop": 0.04,
+  "bevel": 0.03
+ },
+ "hands": {
+  "z": {
+   "sub": 7.7,
+   "hour": 7.95,
+   "minute": 8.12,
+   "chrono": 8.3
+  },
+  "thickness": 0.1,
+  "lume_raise": 0.02
+ },
+ "crown": {
+  "z": 4.3,
+  "flute_depth": 0.18,
+  "end": 0.6
+ },
+ "end_link": {
+  "under": 0.6,
+  "top_z": 5.8,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 41.48,
+  "z0": 0.5,
+  "z1": 3.6,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R. Three brushed columns, joints of the centre column offset from the outer ones"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur anything behind transmission glass"
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.91,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "hand_white": {
+   "color": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Bulova Lunar Pilot chronograph 45 mm, black dial, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "45 mm",
+    "case (official)"
+   ],
+   [
+    "52.2 mm",
+    "lug to lug (render)"
+   ],
+   [
+    "19.8 mm",
+    "bracelet in the render (20 official)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Bulova's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference). The US product page was down; the render comes from Bulova Canada's page for the same reference.",
+   "Modelled: brushed case with integrated horns and a polished edge, pusher shoulders at 2 and 4, polished sloped bezel, applied polished index frames with white lume, lume hour and minute hands in a polished frame, white chronograph hand with counterweight, three white subdial needles, fluted crown, three-column bracelet with the house curl.",
+   "From the photo map: black dial, chapter ring, tachymeter scale, subdial tracks, date, BULOVA and 262 kHz. The white print is redrawn sharp at 4x the render's resolution.",
+   "Heights are a front-relief reading of the official side render."
+  ]
+ }
+}
