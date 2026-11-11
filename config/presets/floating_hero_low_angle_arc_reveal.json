@@ -1,0 +1,37 @@
+{
+  "name": "floating_hero_low_angle_arc_reveal",
+  "note": "floating_hero_low_angle scaled for the 100 mm Arc Reveal cube (pivot at its centre, distance x 100/140); camera keeps the shared name so cinematic_studio accepts it.",
+  "pose": {
+    "pivot_m": [
+      0,
+      0,
+      0.05
+    ],
+    "yaw_deg": -18
+  },
+  "camera": {
+    "azimuth_deg": -14,
+    "elevation_deg": -22,
+    "distance_m": 0.8,
+    "lens_mm": 90,
+    "roll_deg": 2.5,
+    "target_m": [
+      0,
+      0,
+      0.05
+    ],
+    "shift": [
+      0,
+      0
+    ]
+  },
+  "frame": {
+    "resolution": 2048,
+    "border": [
+      0.0,
+      1.0,
+      0.1667,
+      0.8333
+    ]
+  }
+}

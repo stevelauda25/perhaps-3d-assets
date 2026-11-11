@@ -1,0 +1,63 @@
+{
+  "tier": "arc-reveal",
+  "builder": "paperboard",
+  "surface": "Render look for Arc Reveal: library leather039 grain, black outside, grey accent (arch panels + lining). Smooth leather: no suede nap layer.",
+  "roles": {
+    "exterior": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "hue": 0.5,
+          "saturation": 0.3,
+          "value": 0.06
+        },
+        "roughness": {
+          "range": [
+            0.45,
+            0.7
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.1,
+          "sheen_roughness": 0.4,
+          "specular_ior_level": 0.35
+        }
+      }
+    },
+    "accent": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 0.2
+        },
+        "roughness": {
+          "range": [
+            0.45,
+            0.7
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.1,
+          "sheen_roughness": 0.4,
+          "specular_ior_level": 0.35
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Arc Reveal | exterior": "exterior",
+    "Arc Reveal | accent": "accent"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "arc-reveal",
+  "note": "07 Arc Reveal (references/packaging/07_arc_reveal.png): 100 mm cube, lift-off lid with a semicircular arch cut at the foot of each side, base with flush arch panels that fill the cuts when closed. Lid body above the arch apex = 66 % of the height, base rim = 35 %. Black leather outside; grey leather accent on the arch panels and the whole lining (compartment, lid inside, insert, cushion).",
+  "geometry_mm": {
+    "size": 100.0,
+    "lid_wall": 2.5,
+    "lid_top": 3.0,
+    "fit_clearance": 0.3,
+    "seat_gap": 0.05,
+    "plinth_height": 4.0,
+    "base_height": 35.0,
+    "base_wall": 2.0,
+    "base_floor": 3.0,
+    "arch_radius": 30.0,
+    "arch_gap": 0.4,
+    "arch_segments": 96,
+    "edge_radius": 0.6,
+    "edge_segments": 3,
+    "insert_height": 18.0,
+    "insert_clearance": 0.3,
+    "trough_depth": 10.0,
+    "cushion": [
+      64.0,
+      34.0,
+      30.0
+    ],
+    "cushion_radius": 12.0,
+    "cushion_segments": 8
+  },
+  "materials": {
+    "note": "glTF-safe stock for the GLB: plain colour + leather039 grain (normal, roughness) at 1K. Renders swap in library leather via config/presets/box_arc_reveal_look.json.",
+    "grain": {
+      "dir": "textures/sources/ambientcg_leather039_2k",
+      "normal": "Leather039_2K-JPG_NormalGL.jpg",
+      "roughness": "Leather039_2K-JPG_Roughness.jpg",
+      "tile_mm": 160,
+      "px": 1024,
+      "normal_strength": 1.0
+    },
+    "exterior": {
+      "color_linear": [
+        0.012,
+        0.011,
+        0.011
+      ]
+    },
+    "accent": {
+      "color_linear": [
+        0.19,
+        0.19,
+        0.19
+      ]
+    }
+  },
+  "scene": {
+    "note": "House values from config/studio_private_reference.json; world black like the floating tier scenes.",
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "lift_mm": 75,
+    "frames": 30
+  }
+}
