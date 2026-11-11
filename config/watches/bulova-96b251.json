@@ -1,0 +1,167 @@
+{
+ "model": "Bulova 96B251",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Bulova's official front render (45 mm case, official; the same head as the 96B258 render at 1.17x). Heights are a front-relief reading of the official side render. Dial and strap from photo maps.",
+ "trace": "config/watches/bulova-96b251-trace.json",
+ "dial_map": "outputs/watches/bulova-96b251/dial_photo.jpg",
+ "verified_mm": {
+  "case_width": 45.0,
+  "lug_to_lug": 52.19,
+  "strap_width": 19.82
+ },
+ "case": {
+  "top_z": 8.6,
+  "bevel": 0.9,
+  "note": "brushed case and horns, wide polished edge radius"
+ },
+ "shoulders": {
+  "z0": 1.5,
+  "z1": 6.5,
+  "overlap": 0.6,
+  "bevel": 0.4
+ },
+ "bezel": {
+  "outer_z": 8.9,
+  "top_z": 9.9
+ },
+ "crystal": {
+  "z0": 9.6,
+  "z1": 9.9
+ },
+ "dial": {
+  "z": 7.6,
+  "chapter_z": 8.1,
+  "flange_z": 8.3,
+  "roughness": 0.45
+ },
+ "indices": {
+  "height": 0.3,
+  "lume_drop": 0.04,
+  "bevel": 0.03
+ },
+ "hands": {
+  "z": {
+   "sub": 7.7,
+   "hour": 7.95,
+   "minute": 8.12,
+   "chrono": 8.3
+  },
+  "thickness": 0.1,
+  "lume_raise": 0.02
+ },
+ "crown": {
+  "z": 4.3,
+  "flute_depth": 0.18,
+  "end": 0.6
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers blur anything behind transmission glass"
+  },
+  "lume": {
+   "color": [
+    0.9,
+    0.91,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "hand_white": {
+   "color": [
+    0.9,
+    0.9,
+    0.88
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Bulova Lunar Pilot chronograph 45 mm, black dial, black leather strap. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "45 mm",
+    "case (official)"
+   ],
+   [
+    "52.2 mm",
+    "lug to lug (render)"
+   ],
+   [
+    "20 mm",
+    "strap (official lug width)"
+   ],
+   [
+    "7 mm",
+    "strap curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Bulova's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference). The head is the same render as the 96B258 (bracelet) at 1.17x, so it uses the same measured parts.",
+   "Modelled: brushed case with integrated horns and a polished edge, pusher shoulders at 2 and 4, polished sloped bezel, applied polished index frames with white lume, lume hour and minute hands in a polished frame, white chronograph hand with counterweight, three white subdial needles, fluted crown, 20 mm leather strap with the house curl.",
+   "From the photo maps: black dial, chapter ring, tachymeter scale, subdial tracks, date (18), BULOVA and 262 kHz (white print redrawn sharp at 4x); the strap leather with its embossed pattern and stitching from the render.",
+   "Heights are a front-relief reading of the official side render."
+  ]
+ },
+ "strap_map": "outputs/watches/bulova-96b251/strap_photo.jpg",
+ "strap": {
+  "z0": 0.8,
+  "z1": 4.0,
+  "bevel": 0.35,
+  "edge_inset": 0.1,
+  "roughness": 0.75,
+  "uv_inset": 0.02,
+  "start_y": 18.75,
+  "bend_after_tip": 0.0,
+  "bend_radius": 7.0,
+  "arc_over_radius": 2.2,
+  "note": "20 mm black leather (official lug width) from the render's strap rows; straight in the recess between the horns, house curl from the horn tips"
+ }
+}

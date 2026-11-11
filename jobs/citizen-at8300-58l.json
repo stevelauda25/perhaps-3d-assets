@@ -1,0 +1,46 @@
+{
+ "id": "citizen-at8300-58l",
+ "output": "outputs/jobs/citizen-at8300-58l",
+ "asset_type": "watch",
+ "model": "Citizen AT8300-58L",
+ "baseline": "Round 1: modelled front relief from Citizen's official 1366 x 2048 front render at the listed 41 mm case, house depth, glass, steel and bracelet curl; dial from a photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/citizen-at8300-58l/REFERENCE_PLAN.md",
+  "config/watches/citizen-at8300-58l.json",
+  "config/watches/citizen-at8300-58l-trace.json",
+  "config/presets/watch_kit_white_front_citizen_at8300.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_citizen_at8300",
+   "params": {
+    "spec": "config/watches/citizen-at8300-58l.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/citizen-at8300-58l/citizen-at8300-58l.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_citizen_at8300.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

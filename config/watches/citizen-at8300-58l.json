@@ -1,0 +1,197 @@
+{
+ "model": "Citizen AT8300-58L",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the trace of Citizen's official front render (41 mm case = the bezel, Citizen listing; the bracelet then measures 21.0 mm at the case against 21 mm listed). Heights are a front-relief reading of the official side view scaled to the listed 11.87 mm. The dial, city ring, both slide rules, subdials with their needles, the date and all print stay in the dial map.",
+ "trace": "config/watches/citizen-at8300-58l-trace.json",
+ "dial_map": "outputs/watches/citizen-at8300-58l/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 41.0,
+  "horn_to_horn": 45.36,
+  "bracelet_width": 21.0
+ },
+ "case": {
+  "top_z": 8.9,
+  "bevel": 0.6,
+  "recess_from_y": 18.3,
+  "guard_z": [
+   0.0,
+   8.4
+  ],
+  "guard_bevel": 0.35,
+  "note": "brushed case and horns, polished edge radius; the end link sits in a recess between the horns from y 18.3 mm"
+ },
+ "bezel": {
+  "lip_z": 9.6,
+  "chamfer": 0.35,
+  "top_z": 10.4,
+  "round": 0.6
+ },
+ "crystal": {
+  "z0": 9.9,
+  "z1": 10.3
+ },
+ "dial": {
+  "z": 8.6,
+  "inner_rule_z": 8.72,
+  "outer_rule_z": 8.85,
+  "roughness": 0.4
+ },
+ "indices": {
+  "height": 0.3,
+  "lume_raise": 0.02
+ },
+ "hands": {
+  "z": {
+   "hour": 8.98,
+   "minute": 9.12,
+   "chrono": 9.28
+  },
+  "thickness": 0.1,
+  "lume_raise": 0.02
+ },
+ "crowns": {
+  "z": 5.0,
+  "flute_depth": 0.15
+ },
+ "end_link": {
+  "under": 0.6,
+  "top_z": 6.0,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 38.73,
+  "half_at_tip": 10.5,
+  "half_at_end": 9.9,
+  "z0": 0.5,
+  "z1": 3.8,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the end link tips, end_y = tip + 2.2 R; 21 mm at the case tapering as in the render"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_satin": {
+   "color": [
+    0.72,
+    0.72,
+    0.73
+   ],
+   "metallic": 1.0,
+   "roughness": 0.2,
+   "note": "bezel top and crowns (circular satin: no linear normal map)"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.82,
+    0.83,
+    0.82
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "hand_white": {
+   "color": [
+    0.88,
+    0.89,
+    0.9
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  },
+  "hand_black": {
+   "color": [
+    0.015,
+    0.015,
+    0.018
+   ],
+   "metallic": 0.0,
+   "roughness": 0.35
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "brushed_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL at 1K; lines run along the bracelet; bevels keep the polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Citizen Promaster Navihawk A-T, 41 mm, blue dial with slide rule, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "41 mm",
+    "case (Citizen)"
+   ],
+   [
+    "11.87 mm",
+    "thickness (Citizen)"
+   ],
+   [
+    "45.4 mm",
+    "horn to horn (render)"
+   ],
+   [
+    "21 mm",
+    "bracelet at the case (21 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Built from Citizen's official straight-on render (sharper than the supplied photo, same model and layout); the supplied photo is kept as a reference.",
+   "Modelled: brushed case with broad horns and the end link in a recess, crown guard on the right and a shoulder by the left crown, satin bezel with polished chamfers, applied polished batons and small squares with lume, hour and minute hands traced from the render (polished outline, lume inlay), white chronograph needle with its black hooked counterweight, black hub, knurled crowns at 3 and 8, pushers at 2 and 4, three-column bracelet with the house curl.",
+   "From the photo map: blue dial, grey city ring, both slide rules, the three subdials with their needles and rims, the date (7) and all print.",
+   "The hand stack shows 0.2 mm off the dial centre in the render (parallax); the hands are placed on the dial centre."
+  ]
+ }
+}

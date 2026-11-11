@@ -1,0 +1,46 @@
+{
+ "id": "bulova-96b251",
+ "output": "outputs/jobs/bulova-96b251",
+ "asset_type": "watch",
+ "model": "Bulova 96B251",
+ "baseline": "Round 1: modelled front relief from Bulova's official 1293 x 2048 front render at the official 45 mm case (the 96B258 render at 1.17x), house depth, glass, steel and strap curl; dial and strap from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/bulova-96b251/REFERENCE_PLAN.md",
+  "config/watches/bulova-96b251.json",
+  "config/watches/bulova-96b251-trace.json",
+  "config/presets/watch_kit_white_front_bulova_96b251.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_bulova_96b251",
+   "params": {
+    "spec": "config/watches/bulova-96b251.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/bulova-96b251/bulova-96b251.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_bulova_96b251.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
