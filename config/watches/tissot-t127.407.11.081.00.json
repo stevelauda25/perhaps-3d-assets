@@ -1,0 +1,72 @@
+{
+ "model": "Tissot T127.407.11.081.00",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Tissot's official front render (40 mm case, official; lug gap 20.6 mm against the official 21 mm; lug to lug 47.5 mm in the render, not listed). Heights are a front-relief reading of the official 11.5 mm and the official side render. Sunray dial, prints, lume dots, minute track and the open-heart movement stay in the dial map.",
+ "trace": "config/watches/tissot-t127.407.11.081.00-trace.json",
+ "dial_map": "outputs/watches/tissot-t127.407.11.081.00/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "lug_to_lug": 47.53
+ },
+ "case": {
+  "profile_rz": [[0.0, 0.0], [19.6, 0.0], [20.0, 0.45], [20.0, 3.9], [19.75, 4.6], [19.0, 5.3], [18.0, 5.75], [17.285, 5.9], [17.285, 4.6], [0.0, 4.6]],
+  "note": "flank to r 20, rounded shoulder, wide polished bezel curving in to the crystal edge (17.3 mm)"
+ },
+ "crystal": {"z0": 5.72, "z1": 5.9},
+ "dial": {"z": 4.8, "rehaut_z": 5.3, "roughness": 0.4},
+ "indices": {"height": 0.38, "channel_depth": 0.2, "bevel": 0.03},
+ "hands": {
+  "z": {"hour": 5.0, "minute": 5.2, "seconds": 5.42},
+  "thickness": 0.1,
+  "ridge": 0.1,
+  "lume_raise": 0.02
+ },
+ "crown": {"z": 3.0, "flute_depth": 0.22},
+ "lug": {"from_y": 0.0, "slope_from_y": 17.0, "top_z_at_case": 4.6, "top_z_at_tip": 3.9, "bevel": 0.4},
+ "end_link": {"from_y": 16.5, "top_z": 3.9, "bevel": 0.3},
+ "bracelet": {
+  "end_y": 39.17,
+  "z0": 0.5,
+  "z1": 3.4,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.3,
+  "backing_z": [0.15, 0.5],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R. Brushed outer links, polished centre pieces (Gentleman bracelet)"
+ },
+ "materials": {
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "steel_brushed": {"color": [0.7, 0.7, 0.71], "metallic": 1.0, "roughness": 0.28},
+  "steel_channel": {"color": [0.4, 0.4, 0.41], "metallic": 1.0, "roughness": 0.38},
+  "steel_gap": {"color": [0.02, 0.02, 0.02], "metallic": 0.0, "roughness": 0.6},
+  "crystal": {"color": [1.0, 1.0, 1.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"},
+  "lume": {"color": [0.86, 0.87, 0.84], "metallic": 0.0, "roughness": 0.45}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  },
+  "steel_channel": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Tissot Gentleman Powermatic 80 Open Heart 40 mm, grey dial, steel bracelet. Front relief GLB, round 2: dial print redrawn sharp at 4x, batons with a sloped frame and brushed channel.",
+  "specs": [["40 mm", "case (official)"], ["47.5 mm", "lug to lug (render)"], ["20.6 mm", "lug gap in the render (21 official)"], ["7 mm", "bracelet curl radius"]],
+  "notes": [
+   "Built from Tissot's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference). The official render shows the dial grey-taupe; the supplied photo looks more champagne under warmer light.",
+   "Modelled: polished case with the wide curved bezel, applied batons (polished frame sloping into a darker brushed channel), faceted hour and minute hands with lume strips and kite tails, thin seconds hand, fluted crown, brushed lugs, bracelet with brushed outer links and polished centre pieces, house curl.",
+   "From the photo map: sunray dial, minute track, lume dots, TISSOT 1853, Powermatic 80, Swiss Made and the open-heart movement. Round 2: the black print is redrawn sharp at 4x the render's resolution (2720 px map), so it stays crisp in the dial close-up.",
+   "Heights are a front-relief reading of the official 11.5 mm case."
+  ]
+ }
+}

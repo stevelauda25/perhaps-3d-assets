@@ -1,0 +1,20 @@
+{
+ "id": "tissot-t127.407.11.081.00",
+ "output": "outputs/jobs/tissot-t127.407.11.081.00",
+ "asset_type": "watch",
+ "model": "Tissot T127.407.11.081.00",
+ "baseline": "Round 1: modelled front relief from Tissot's official 1680 x 1680 front render at the official 40 mm case, house depth, glass, steel and bracelet curl; dial and open-heart movement from a photo map",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/tissot-t127.407.11.081.00/REFERENCE_PLAN.md",
+  "config/watches/tissot-t127.407.11.081.00.json",
+  "config/watches/tissot-t127.407.11.081.00-trace.json",
+  "config/presets/watch_kit_white_front_tissot_t127407.json"
+ ],
+ "stages": [
+  {"name": "build", "step": "watch_tissot_t127407", "params": {"spec": "config/watches/tissot-t127.407.11.081.00.json"}},
+  {"name": "export", "step": "watch_export_glb", "params": {"glb": "outputs/jobs/tissot-t127.407.11.081.00/tissot-t127.407.11.081.00.glb"}},
+  {"name": "kit", "step": "watch_kit", "params": {"kit_preset": "config/presets/watch_kit_white_front_tissot_t127407.json", "pose": "SKO | pose"}},
+  {"name": "cmp-front", "render": {"camera": "CAM | front_ortho", "resolution": 2000, "profile": "comparison"}}
+ ]
+}
