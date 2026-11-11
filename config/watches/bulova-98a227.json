@@ -1,0 +1,48 @@
+{
+ "model": "Bulova 98A227",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Bulova's official front render (44 mm case width, official, across the blue ring at 9 o'clock; strap 23.8 mm against the official 24 mm lug width; lug to lug 50.1 mm in the render, not listed). Heights are a front-relief reading of the official 12 mm and the official side render. The ridged dial, chapter ring, prints, sub-seconds track and the open-heart movement stay in the dial map; the strap is a photo map.",
+ "trace": "config/watches/bulova-98a227-trace.json",
+ "verified_mm": {"width_flats": 44.0, "lug_width": 24.0},
+ "case": {"notch_radius": 21.6},
+ "lug": {"slope_from_y": 19.0, "top_z_at_case": 4.4, "top_z_at_tip": 3.4, "bevel": 0.35},
+ "blue_ring": {"z0": 3.6, "top_z": 4.9, "bevel": 0.45},
+ "bezel": {"z0": 4.4, "top_z": 5.6, "inner_z": 5.25, "chamfer": 0.45, "edge_bevel": 0.2},
+ "dial": {"z": 4.0, "rehaut_z": 5.0},
+ "crystal": {"z0": 5.05, "z1": 5.25},
+ "applied": {"height": 0.3, "bevel": 0.03, "ring_height": 0.3},
+ "hands": {"thickness": 0.12, "lume_raise": 0.03, "z": {"sub": 4.12, "hour": 4.35, "minute": 4.5}},
+ "crown": {"z": 2.6, "flute_depth": 0.25, "end": 0.9},
+ "strap": {"start_y": 17.0, "z0": 0.4, "z1": 3.6, "bend_radius": 7.0, "bend_after_tip": 0.0, "arc_over_radius": 2.2, "bevel": 0.5, "uv_inset": 0.02,
+           "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end = tip + 2.2 R"},
+ "photo_maps": {
+  "dial": {"image": "outputs/watches/bulova-98a227/dial_photo.jpg", "roughness": 0.4},
+  "strap": {"image": "outputs/watches/bulova-98a227/strap_photo.jpg", "roughness": 0.55}
+ },
+ "materials": {
+  "gold_polished": {"color": [0.86, 0.56, 0.44], "metallic": 1.0, "roughness": 0.1},
+  "gold_brushed": {"color": [0.82, 0.52, 0.4], "metallic": 1.0, "roughness": 0.3},
+  "blue_ring": {"color": [0.015, 0.05, 0.16], "metallic": 0.5, "roughness": 0.3},
+  "blue_screw": {"color": [0.02, 0.06, 0.18], "metallic": 0.7, "roughness": 0.15},
+  "gasket_black": {"color": [0.02, 0.02, 0.025], "metallic": 0.0, "roughness": 0.6},
+  "steel_polished": {"color": [0.75, 0.75, 0.76], "metallic": 1.0, "roughness": 0.08},
+  "crystal": {"color": [1.0, 1.0, 1.0], "metallic": 0.0, "roughness": 0.05, "alpha": 0.08,
+              "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"},
+  "lume": {"color": [0.86, 0.87, 0.84], "metallic": 0.0, "roughness": 0.45},
+  "hand_red": {"color": [0.75, 0.03, 0.03], "metallic": 0.0, "roughness": 0.35}
+ },
+ "pose": {"z_m": 0.05, "depth_scale": 0.35},
+ "brushed_textures": {
+  "gold_brushed": {"normal": "textures/derived/metal009_normalgl_1k.jpg", "tile_mm": 20, "strength": 1.0,
+                   "note": "ambientCG Metal009 (CC0) NormalGL at 1K, the house brushed steel lines on the rose-gold tone case and bezel"}
+ },
+ "review": {
+  "subtitle": "Bulova Marine Star automatic 44 mm, rose-gold tone case, blue ring and dial, blue silicone strap. Front relief GLB, round 1.",
+  "specs": [["44 mm", "case width (official)"], ["24 mm", "lug width (official)"], ["50.1 mm", "lug to lug (render)"], ["7 mm", "strap curl radius"]],
+  "notes": [
+   "Built from Bulova's official straight-on render (the supplied photo is angled; it is kept as the 3/4 reference).",
+   "Modelled: rose-gold case with faceted lugs and crown guards, blue 24-sided outer ring, brushed rose-gold bezel with the 24 V notches on its edge and six blue screws, applied Roman numerals and logo (traced from the render), rings round the sub-seconds and the open heart, sword hands with lume and the open slot, red sub-seconds hand, fluted crown.",
+   "From the photo maps: ridged blue dial, chapter ring with minutes, BULOVA, Marine Star, 200 m, Automatic 21 Jewels, the sub-seconds track, the open-heart movement and the blue silicone strap with the house curl.",
+   "Heights are a front-relief reading of the official 12 mm case."
+  ]
+ }
+}

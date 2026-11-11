@@ -1,0 +1,46 @@
+{
+ "id": "bulova-98a227",
+ "output": "outputs/jobs/bulova-98a227",
+ "asset_type": "watch",
+ "model": "Bulova 98A227",
+ "baseline": "Round 1: modelled front relief from Bulova's official 1390 x 2048 front render at the official 44 mm case width, house depth, glass and strap curl; dial, open-heart movement and strap from photo maps",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/bulova-98a227/REFERENCE_PLAN.md",
+  "config/watches/bulova-98a227.json",
+  "config/watches/bulova-98a227-trace.json",
+  "config/presets/watch_kit_white_front_bulova_98a227.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_bulova_98a227",
+   "params": {
+    "spec": "config/watches/bulova-98a227.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/bulova-98a227/bulova-98a227.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_bulova_98a227.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}
