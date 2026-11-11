@@ -1,0 +1,240 @@
+{
+ "model": "Tissot T120.410.11.051.00",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = hand pivot. Plan sizes from the trace of Tissot's official 1680 x 1680 front render at the official 40 mm case width (coin-edge bezel at 3 and 9); the end link measures 20.4 mm against the listed 20 mm lug width. Heights are a front-relief reading of the official 9.97 mm (side render). The dial, its prints, the date and the grey flange with its minute track stay in the dial map; the insert's white prints are traced outlines built as inlays.",
+ "trace": "config/watches/tissot-t120.410.11.051.00-trace.json",
+ "photo_maps": {
+  "dial": {
+   "image": "outputs/watches/tissot-t120.410.11.051.00/dial_photo.jpg",
+   "roughness": 0.35
+  }
+ },
+ "verified_mm": {
+  "case_width": 40.0,
+  "end_link_width": 20.37,
+  "lug_to_lug": 45.27
+ },
+ "case": {
+  "profile_rz": [
+   [
+    0.0,
+    0
+   ],
+   [
+    19.2,
+    0
+   ],
+   [
+    19.6,
+    0.4
+   ],
+   [
+    19.7,
+    1.1
+   ],
+   [
+    19.7,
+    3.8
+   ],
+   [
+    19.5,
+    4.2
+   ],
+   [
+    15.0,
+    4.2
+   ],
+   [
+    15.0,
+    4.3
+   ],
+   [
+    0.0,
+    4.3
+   ]
+  ],
+  "note": "round body under the bezel; the flanks are part of the lug slab from the silhouette"
+ },
+ "crystal": {
+  "z0": 5.4,
+  "z1": 5.65
+ },
+ "bezel": {
+  "z0": 4.2,
+  "lip_z": 5.35,
+  "insert_z": 5.65,
+  "rim_z": 5.95,
+  "rim_bevel": 0.08,
+  "print_raise": 0.04,
+  "scallop_depth": 0.45,
+  "scallop_z": 0.25,
+  "notch_fraction": 0.45,
+  "note": "coin edge: 90 square teeth"
+ },
+ "dial": {
+  "z": 4.4,
+  "rehaut_z": 5.3
+ },
+ "indices": {
+  "height": 0.35,
+  "lume_recess": 0.05,
+  "date_frame_height": 0.3
+ },
+ "hands": {
+  "thickness": 0.12,
+  "lume": 0.05,
+  "z": {
+   "hour": 4.85,
+   "minute": 5.0,
+   "seconds": 5.15
+  },
+  "note": "shapes from axis profiles and gridded crops (trace manual_px)"
+ },
+ "crown": {
+  "flute_depth": 0.22,
+  "collar": [
+   19.0,
+   19.5
+  ],
+  "collar_r": 2.0,
+  "end": 0.7,
+  "z": 2.9
+ },
+ "crown_guard": {
+  "top_z": 4.0,
+  "bevel": 0.35
+ },
+ "lug": {
+  "from_y": 0.0,
+  "inside": 0.0,
+  "top_z_at_case": 4.2,
+  "top_z_at_tip": 3.6,
+  "bevel": 0.45
+ },
+ "end_link": {
+  "from_y": 17.5,
+  "top_z": 3.4,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "z0": 0.5,
+  "z1": 3.1,
+  "centre_raise": 0.15,
+  "gap": 0.15,
+  "bevel": 0.4,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "arc_over_radius": 2.2,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers (model-viewer/three.js) render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  },
+  "insert_ceramic": {
+   "color": [
+    0.006,
+    0.006,
+    0.009
+   ],
+   "metallic": 0.0,
+   "roughness": 0.25,
+   "note": "black insert (render median near black)"
+  },
+  "print_white": {
+   "color": [
+    0.85,
+    0.86,
+    0.86
+   ],
+   "metallic": 0.0,
+   "roughness": 0.4
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "steel_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL downscaled to 1K (keeps the GLB under 10 MB); lines run along the bracelet; bevels keep the plain polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Tissot Seastar 1000 Quartz, 40 mm, black dial, black insert, steel bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "40 mm",
+    "case (official)"
+   ],
+   [
+    "45.3 mm",
+    "lug to lug in the render"
+   ],
+   [
+    "20.4 mm",
+    "end link in the render (20 listed)"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: steel bezel with a 90-tooth coin edge, black insert with the white triangle, numerals and minute marks as traced inlays, polished inner lip, applied indices with polished frames and lume (round dots, triangle at 12, bars at 3 and 9), polished date frame, baton hour and minute hands with lume panels, polished seconds hand with a lume dot and T-shaped counterweight, fluted crown in its crown guard, brushed lugs, three-column bracelet (brushed outer links, polished centre links).",
+   "From the photo map: black dial with TISSOT 1853, SEASTAR, 30 bar (300m / 1000 ft), SWISS MADE, the date (8) and the grey flange with its minute track.",
+   "Under the hands and indices the dial is a smooth fill; it is covered by the 3D parts.",
+   "Scale is the official 40 mm case from Tissot's straight-on render (the supplied photo is angled). Heights are a front-relief reading of the official 9.97 mm."
+  ]
+ }
+}
