@@ -1,0 +1,46 @@
+{
+ "id": "citizen-nk0024-54x",
+ "output": "outputs/jobs/citizen-nk0024-54x",
+ "asset_type": "watch",
+ "model": "Citizen NK0024-54X",
+ "baseline": "Round 1: modelled front relief from the 960 x 1769 retailer photo at the listed 40 mm case, heights from the official side view, house depth, glass, steel and bracelet curl",
+ "input": "assets/watches/baseline/empty_base.blend",
+ "references": [
+  "references/citizen-nk0024-54x/REFERENCE_PLAN.md",
+  "config/watches/citizen-nk0024-54x.json",
+  "config/watches/citizen-nk0024-54x-trace.json",
+  "config/presets/watch_kit_white_front_citizen_nk0024.json"
+ ],
+ "stages": [
+  {
+   "name": "build",
+   "step": "watch_citizen_nk0024",
+   "params": {
+    "spec": "config/watches/citizen-nk0024-54x.json"
+   }
+  },
+  {
+   "name": "export",
+   "step": "watch_export_glb",
+   "params": {
+    "glb": "outputs/jobs/citizen-nk0024-54x/citizen-nk0024-54x.glb"
+   }
+  },
+  {
+   "name": "kit",
+   "step": "watch_kit",
+   "params": {
+    "kit_preset": "config/presets/watch_kit_white_front_citizen_nk0024.json",
+    "pose": "SKO | pose"
+   }
+  },
+  {
+   "name": "cmp-front",
+   "render": {
+    "camera": "CAM | front_ortho",
+    "resolution": 2000,
+    "profile": "comparison"
+   }
+  }
+ ]
+}

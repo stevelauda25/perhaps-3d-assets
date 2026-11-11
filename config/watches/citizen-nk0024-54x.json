@@ -1,0 +1,220 @@
+{
+ "model": "Citizen NK0024-54X",
+ "note": "Front relief: flat back at z = 0, dial faces +z. mm, origin = dial centre. Plan sizes from the trace (40 mm case width, Citizen listing; the bracelet then measures 21.6 mm at the case). Heights from Citizen's side view scaled to the listed 10.9 mm. The patterned dial, CITIZEN, AUTOMATIC, the date and the printed minute track stay in the dial map.",
+ "trace": "config/watches/citizen-nk0024-54x-trace.json",
+ "dial_map": "outputs/watches/citizen-nk0024-54x/dial_photo.jpg",
+ "verified_mm": {
+  "diameter": 40.0,
+  "case_to_case": 44.75
+ },
+ "case": {
+  "top_z": 8.3,
+  "step_y": 18.7,
+  "end_z_at_step": 7.3,
+  "end_z_at_tip": 6.9,
+  "bevel": 0.45,
+  "end_bevel": 0.35,
+  "note": "one brushed steel body from the silhouette; past step_y (the horizontal edge at 12 and 6 in the photo) the lower end pieces run to the bracelet"
+ },
+ "bezel": {
+  "profile_rz": [
+   [
+    16.985,
+    9.6
+   ],
+   [
+    17.105,
+    10.7
+   ],
+   [
+    17.385,
+    10.86
+   ],
+   [
+    18.319,
+    10.9
+   ],
+   [
+    18.649,
+    10.72
+   ],
+   [
+    18.769,
+    10.3
+   ],
+   [
+    18.769,
+    8.25
+   ],
+   [
+    16.985,
+    8.25
+   ]
+  ],
+  "note": "polished gold-tone ring with a broad flat top and rounded edges, as the bright band in the photo"
+ },
+ "rehaut": {
+  "r_top": 16.834,
+  "z_top": 8.75
+ },
+ "crystal": {
+  "radius": 17.005,
+  "z0": 10.2,
+  "z1": 10.6
+ },
+ "cyclops": {
+  "z_top": 11.4,
+  "chamfer": 0.25,
+  "corner_r": 0.9
+ },
+ "dial": {
+  "z": 8.4,
+  "roughness": 0.35
+ },
+ "indices": {
+  "height": 0.45,
+  "lume_raise": 0.02
+ },
+ "hands": {
+  "thickness": 0.1,
+  "z": {
+   "hour": 8.95,
+   "minute": 9.1,
+   "seconds": 9.25
+  },
+  "note": "shapes from colour profiles along each hand (trace manual_px)"
+ },
+ "crown": {
+  "flute_depth": 0.2,
+  "collar_r": 1.9,
+  "z": 4.85,
+  "band_y": [
+   -15.0,
+   -10.0
+  ]
+ },
+ "end_link": {
+  "from_y": 17.0,
+  "half_width": 10.8,
+  "top_z": 4.3,
+  "bevel": 0.3
+ },
+ "bracelet": {
+  "end_y": 37.77,
+  "z0": 0.5,
+  "z1": 3.6,
+  "gold_raise": 0.25,
+  "gap": 0.15,
+  "bevel": 0.35,
+  "gold_bevel": 0.3,
+  "backing_z": [
+   0.15,
+   0.5
+  ],
+  "bend_radius": 7.0,
+  "bend_after_tip": 0.0,
+  "note": "House curl (SUR419P1): 7 mm radius from the lug tips, end_y = tip + 2.2 R"
+ },
+ "materials": {
+  "steel_polished": {
+   "color": [
+    0.75,
+    0.75,
+    0.76
+   ],
+   "metallic": 1.0,
+   "roughness": 0.08
+  },
+  "steel_brushed": {
+   "color": [
+    0.7,
+    0.7,
+    0.71
+   ],
+   "metallic": 1.0,
+   "roughness": 0.28
+  },
+  "gold_polished": {
+   "color": [
+    0.95,
+    0.77,
+    0.4
+   ],
+   "metallic": 1.0,
+   "roughness": 0.1,
+   "note": "gold-tone plating, polished: bezel, rehaut, index frames, hands, crown, semi and centre links"
+  },
+  "steel_gap": {
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "metallic": 0.0,
+   "roughness": 0.6
+  },
+  "crystal": {
+   "color": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "metallic": 0.0,
+   "roughness": 0.05,
+   "alpha": 0.08,
+   "note": "alpha-blended, not transmission: web viewers render transmission from a low-resolution buffer and blur the dial"
+  },
+  "lume": {
+   "color": [
+    0.86,
+    0.87,
+    0.85
+   ],
+   "metallic": 0.0,
+   "roughness": 0.45
+  }
+ },
+ "pose": {
+  "z_m": 0.05,
+  "depth_scale": 0.35
+ },
+ "brushed_textures": {
+  "steel_brushed": {
+   "normal": "textures/derived/metal009_normalgl_1k.jpg",
+   "tile_mm": 20,
+   "strength": 1.0,
+   "note": "ambientCG Metal009 (CC0) NormalGL at 1K; lines run along the bracelet; bevels keep the polished material"
+  }
+ },
+ "review": {
+  "subtitle": "Citizen Tsuyosa 60 automatic, 40 mm, green patterned dial, gold-tone bezel, two-tone bracelet. Front relief GLB, round 1.",
+  "specs": [
+   [
+    "40 mm",
+    "case width (Citizen)"
+   ],
+   [
+    "10.9 mm",
+    "thickness (Citizen)"
+   ],
+   [
+    "44.8 mm",
+    "case to case in the photo"
+   ],
+   [
+    "21.6 mm",
+    "bracelet at the case in the photo"
+   ],
+   [
+    "7 mm",
+    "bracelet curl radius"
+   ]
+  ],
+  "notes": [
+   "Modelled: brushed steel case from the photo outline with the lower end pieces at 12 and 6, domed polished gold bezel, gold rehaut, applied gold-framed lume bars (pairs at 12 and 6), cyclops over the date, gold baton hands with lume, gold seconds needle, fluted gold crown at 4, five-column bracelet with steel outer links and gold semi and centre links.",
+   "From the photo map: the green patterned dial, CITIZEN, AUTOMATIC, the date (17) and the printed minute track.",
+   "The hand stack shows 0.25 mm above the dial centre in the photo (taken slightly from below); the hands are placed on the dial centre.",
+   "Scale is the listed 40 mm case; heights come from Citizen's side view scaled to the listed 10.9 mm."
+  ]
+ }
+}
