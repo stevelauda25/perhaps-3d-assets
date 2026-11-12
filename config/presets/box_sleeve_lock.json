@@ -1,6 +1,6 @@
 {
   "name": "sleeve-lock",
-  "note": "10 Signature Sleeve Lock, v002 sketch (references/packaging/10_sleeve_lock_v002.png, 2026-11-12): 100 mm cube, lift-off lid ('lift along shape'). The seam is level at seam_side_z on the sides and back and drops in a V across the front to seam_low_z at the centre. Along the seam a `reveal` gap shows the lid's velvet lining, which hangs below the lid as a skirt (inset from the faces, half sizes `skirt`) down to the base rim; inside it a thick velvet collar on the base rises collar_rise above the seam; a half-round gold bead runs along the lid's lower edge and another along the base rim. A strap runs up the front, over the lid and down the back; a plain gold clasp on the lid sits on the strap at the V tip, across the reveal. Inside the collar a velvet ring pad of two rounded rolls. The perhaps wordmark in gold foil on the lid ceiling. Select colours: designer rib jacquard outside in the Select green, green leather strap, Select | interior lining.",
+  "note": "10 Signature Sleeve Lock, v002 sketch (references/packaging/10_sleeve_lock_v002.png, 2026-11-12): 100 mm cube, lift-off lid ('lift along shape'). The seam is level at seam_side_z on the sides and back and drops in a V across the front to seam_low_z at the centre. Along the seam a `reveal` gap shows the lid's velvet lining, which hangs below the lid as a skirt (inset from the faces, half sizes `skirt`) down to the base rim; inside it a thick velvet collar on the base rises collar_rise above the seam; no gold beads along the seam (bead_height 0 since v004). A strap runs up the front, over the lid and down the back; a plain gold clasp on the lid sits on the strap at the V tip, across the reveal. Inside the collar a velvet ring pad of two rounded rolls. The perhaps wordmark in gold foil on the lid ceiling. Select colours: designer rib jacquard outside in the Select green, green leather strap, Select | interior lining.",
   "geometry_mm": {
     "size": 100.0,
     "seam_side_z": 68.0,
@@ -9,7 +9,7 @@
     "wall": 3.0,
     "lid_top": 3.0,
     "base_floor": 3.0,
-    "bead_height": 3.0,
+    "bead_height": 0.0,
     "bead_proud": 1.4,
     "bead_radius": 1.3,
     "collar_rise": 12.0,
@@ -47,7 +47,7 @@
   "materials": {
     "note": "glTF-safe stand-ins for the GLB (the jacquard swatch as colour on the cloth); renders swap in the library look via config/presets/box_sleeve_lock_look.json.",
     "swatch": "textures/sources/designer_rib_jacquard/rib_jacquard_select_green_color.png",
-    "swatch_tile_mm": 80,
+    "swatch_tile_mm": 45,
     "exterior": {
       "color_linear": [
         1.0,

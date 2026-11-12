@@ -1,10 +1,18 @@
 {
   "tier": "sleeve-lock",
   "builder": "paperboard",
-  "surface": "Render look for Signature Sleeve Lock in the Select colours: designer rib jacquard outside, coloured to the Select | exterior mean; smooth leather strap in the same green; the lining (collar, skirt, pad, lid inside) gets Select | interior itself in the select-look stage; plain pale brushed champagne-gold beads, clasp and wordmark.",
+  "surface": "Render look for Signature Sleeve Lock in the Select colours: designer rib jacquard outside at a finer scale (45 mm tile, about 1.2 mm ribs), coloured to the Select | exterior mean; smooth leather strap in the same green; the lining (collar, skirt, pad, lid inside) gets Select | interior itself in the select-look stage; plain pale brushed champagne-clasp and wordmark.",
   "roles": {
     "exterior": {
-      "library": "fabric.designer-rib-jacquard-select-green"
+      "library": "fabric.designer-rib-jacquard-select-green",
+      "overrides": {
+        "mapping": {
+          "tile_width_mm": 45
+        },
+        "height": {
+          "bump_distance_mm": 0.09
+        }
+      }
     },
     "strap": {
       "library": "suede.ambientcg-leather039",

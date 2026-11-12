@@ -135,8 +135,9 @@ def run(params):
         boolean(o, block("cut", -sw - 0.4, sw + 0.4, -a - 5, a + 5, -10, size + 10), "DIFFERENCE")
         bevel(o, g["bead_radius"], 4)
         return o
-    bead_lid = bead("Box | Bead lid", half, half + bh)
-    bead_base = bead("Box | Bead base", -half - bh, -half)
+    beads = bh > 0  # bead_height 0 = no gold beads
+    bead_lid = bead("Box | Bead lid", half, half + bh) if beads else None
+    bead_base = bead("Box | Bead base", -half - bh, -half) if beads else None
 
     # strap: up the front, over the lid, down the back; lid and base parts end at the reveal
     def strap(name, offset, below):
@@ -181,8 +182,8 @@ def run(params):
     ceiling = size - g["lid_top"] - 0.01 - g["wordmark_thickness"] / 2
     wordmark.data.transform(Matrix.Translation(Vector((0, g["wordmark_center_y"], ceiling)) * MM) @ Matrix.Rotation(math.pi, 4, "X"))
 
-    lid_group = [lid, skirt, bead_lid, strap_lid, clasp, wordmark]
-    base_group = [base, bead_base, strap_base, collar, pad]
+    lid_group = [o for o in (lid, skirt, bead_lid, strap_lid, clasp, wordmark) if o]
+    base_group = [o for o in (base, bead_base, strap_base, collar, pad) if o]
     parts = lid_group + base_group
 
     # metric UVs (dominant-axis projection), shifted uv_offset_mm so each 100 mm face sits inside one swatch tile
