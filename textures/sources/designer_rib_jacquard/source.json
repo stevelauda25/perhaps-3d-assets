@@ -1,12 +1,28 @@
 {
   "asset": "Rib jacquard (designer photo, 2026-11-12)",
   "author": "supplied by the designer in chat",
-  "note": "source_photo.png is the photo as sent. The maps come from its flattest area (rows 520-865), turned 17.5 deg so the ribs run level, lighting divided out (28 px blur), 420 x 196 px kept, mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237) baked from Final Blender/Perhaps_Select_Box.blend; height = the relief. rib_jacquard_black_color.png: the same relief times black (0.012, 0.0115, 0.011). rib_jacquard_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.16 mm render relief (for the GLB; web viewers light it harder). rib_jacquard_navy_color.png: the same relief times a near-black midnight navy (0.0028, 0.0042, 0.0165).",
+  "note": "source_photo.png is the photo as sent. The maps come from its flattest area (rows 520-865), turned 17.5 deg so the ribs run level, lighting divided out (28 px blur), 420 x 196 px kept, mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237) baked from Final Blender/Perhaps_Select_Box.blend; height = the relief. rib_jacquard_black_color.png: the same relief times black (0.012, 0.0115, 0.011). rib_jacquard_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.16 mm render relief (for the GLB; web viewers light it harder). rib_jacquard_navy_color.png: the same relief times a near-black midnight navy (0.0028, 0.0042, 0.0165). rib_jacquard_bottle_green_color.png: the same relief times bottle green (0.0195, 0.0401, 0.029), the central-80 % mean of green_reference_photo.png (a dark green leather photo supplied as the colour reference, #263830). rib_jacquard_deep_green_color.png: the relief at half contrast (1 + 0.5 (r - 1), a thinner rib) times a very dark bottle green (0.0035, 0.0125, 0.0068), Sleeve Lock v010. rib_jacquard_deep_navy_color.png: the same full relief times the Arc Band v011 render navy (0.0017, 0.0027, 0.0162), for its GLB.",
   "rib_period_px": 23,
   "files": {
+    "green_reference_photo.png": {
+      "bytes": 1290177,
+      "sha256": "76a555d94a76d564da77ba0ab569e2c90657bc6aac15419ab6355d71e472cb0b"
+    },
     "rib_jacquard_black_color.png": {
       "bytes": 218914,
       "sha256": "52311a39c14531f45cdd59c3f738eb92d5c5169b41140c3797986c3b80b5399a"
+    },
+    "rib_jacquard_bottle_green_color.png": {
+      "bytes": 254267,
+      "sha256": "00d108f5e5126a3a7339fa5dbf4fa328409bb27634d506a5c9303b18b7394897"
+    },
+    "rib_jacquard_deep_green_color.png": {
+      "bytes": 162250,
+      "sha256": "b83605402c62c4623e72037cb69d7195c625c34559ec41e26251c86b9b5f693a"
+    },
+    "rib_jacquard_deep_navy_color.png": {
+      "bytes": 204823,
+      "sha256": "a824f456d9a26336f93139fbde1a9b5f9c9cbbc63f5239a59ea85b622435cd3d"
     },
     "rib_jacquard_height.png": {
       "bytes": 204757,

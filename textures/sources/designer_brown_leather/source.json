@@ -1,0 +1,41 @@
+{
+  "asset": "Dark brown grained leather (designer photo, 2026-11-12)",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the photo as sent (736 x 1308, draped with folds). Maps use rows 860-1260 only (the flattest, evenly lit band): linear colour per channel divided by a 60 px blur and multiplied back to the mean colour, mirrored 2 x 2 so it repeats without a seam (1472 x 800). The crop mean (linear [0.0254, 0.0122, 0.0074], luminance 0.0147) is lifted, same hue, to luminance 0.022 so the box does not vanish on black: colour map mean [0.0381, 0.0183, 0.0112] (sRGB about #37251B). Height = the luminance relief, softened 1 px, stretched 0.5-99.5 percentile to 0-1. brown_leather_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.1 mm render relief. Scale assumed: the photo spans 100 mm, so the tile is 200 x 109 mm. brown_leather_color_glb.jpg: the colour map as JPEG q90 for the GLB swatch.",
+  "crop_rows": [
+    860,
+    1260
+  ],
+  "measured_mean_linear_rgb": [
+    0.0254,
+    0.0122,
+    0.0074
+  ],
+  "map_mean_linear_rgb": [
+    0.0381,
+    0.0183,
+    0.0112
+  ],
+  "files": {
+    "brown_leather_color.png": {
+      "bytes": 2002971,
+      "sha256": "35c46ea55457693fbda93274d9c11eac7e3fa2b183b58da89b6eecc2aed31df8"
+    },
+    "brown_leather_color_glb.jpg": {
+      "bytes": 372067,
+      "sha256": "a00c42e812d5c39ff563f7b86b3f1995b1d72685ee4d1e27ec6f58458d6c2af0"
+    },
+    "brown_leather_height.png": {
+      "bytes": 790069,
+      "sha256": "351921879faf64a29eb8a9da146adca62a447375ae3fcf8f40b48a4788d6e1d1"
+    },
+    "brown_leather_normal_gl.png": {
+      "bytes": 849778,
+      "sha256": "d731f19c1f35007a80cd6be026e5209b4d135ff4db1bad913634c86d5235c658"
+    },
+    "source_photo.png": {
+      "bytes": 1131835,
+      "sha256": "8db786808ff7ee0ba08cb6e726fdb13a7209c557bb893f9ba0ff385392b408d5"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "sleeve-lock-v010",
+  "output": "outputs/jobs/sleeve-lock-v010",
+  "asset_type": "packaging",
+  "model": "10 Signature Sleeve Lock (bottle green): 100 mm cube in bottle-green rib jacquard, lift-off lid with a V seam on the front, light brown suede collar in a 4 mm reveal, smooth bottle-green leather strap with a champagne-gold diamond clasp at the V tip, light brown cushion",
+  "baseline": "v009 with a very dark bottle green (#0C1E15 mean), a thinner rib (35 mm tile, 0.045 mm relief, half-contrast colour relief), a darker strap, and moodier light (lower key/side/bounce, stronger edge strip). GLB stand-ins match the render colours. Interior brown, shape and clasp as v009.",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/packaging/10_sleeve_lock_v002.png",
+    "textures/sources/designer_brown_leather/source_photo.png",
+    "config/presets/box_sleeve_lock_v008.json",
+    "config/presets/box_sleeve_lock_v008_look.json",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_sleeve_lock",
+      "params": {
+        "spec": "config/presets/box_sleeve_lock_v010.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/sleeve-lock-v010/sleeve-lock.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_sleeve_lock_v010_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "light",
+      "step": "light_adjust",
+      "params": {
+        "edit": {
+          "PCS2 | 01 Grazing key": {
+            "power_w": 0.22
+          },
+          "PCS2 | 02 Upper edge strip": {
+            "power_w": 22.0
+          },
+          "PCS2 | 03 Side definition": {
+            "power_w": 0.03
+          },
+          "PCS2 | 04 Underside bounce": {
+            "power_w": 0.02
+          }
+        }
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.55,
+            -0.7,
+            0.45
+          ],
+          "target": [
+            0,
+            0,
+            0.05
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "open",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "preview-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.55,
+            -0.72,
+            0.62
+          ],
+          "target": [
+            0,
+            0,
+            0.08
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}

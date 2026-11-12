@@ -1,0 +1,68 @@
+{
+  "id": "leather.designer-brown",
+  "category": "leather",
+  "name": "Dark brown grained leather (designer photo)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/designer_brown_leather",
+    "url": null,
+    "license": "supplied by the designer for Perhaps packaging"
+  },
+  "maps": {
+    "color": "brown_leather_color.png",
+    "roughness": null,
+    "normal": null,
+    "height": "brown_leather_height.png"
+  },
+  "mapping": {
+    "mode": "uv",
+    "tile_width_mm": 200,
+    "uv_map": "Metric UV",
+    "uv_mm_per_unit": 1000
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.52
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.1,
+    "bump_strength": 1.0,
+    "note": "grain and creases; distance chosen, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.35,
+    "sheen_weight": 0.08,
+    "sheen_roughness": 0.4
+  },
+  "measured": {
+    "mean_linear_rgb": [
+      0.0381,
+      0.0183,
+      0.0112
+    ],
+    "note": "photo crop mean [0.0254, 0.0122, 0.0074] lifted to luminance 0.022 (same hue), sRGB about #37251B"
+  },
+  "limitations": [
+    "Built from one draped photo: relief is the lighting-flattened luminance of rows 860-1260 only, not a height scan.",
+    "Mirrored 2 x 2: the tile is 200 x 109 mm, so a 100 mm face shows one horizontal mirror line.",
+    "Physical scale assumed: 100 mm across the photo.",
+    "Mean lifted about 1.5x above the photo's own so the box reads on black."
+  ],
+  "selected_for": "sleeve-lock (candidate)"
+}

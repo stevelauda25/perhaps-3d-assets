@@ -1,0 +1,92 @@
+{
+  "name": "sleeve-lock-leather",
+  "note": "10 Signature Sleeve Lock, v002 sketch (references/packaging/10_sleeve_lock_v002.png, 2026-11-12): 100 mm cube, lift-off lid ('lift along shape'). The seam is level at seam_side_z on the sides and back and drops in a V across the front to seam_low_z at the centre. Along the seam a `reveal` gap shows the lid's velvet lining, which hangs below the lid as a skirt (inset from the faces, half sizes `skirt`) down to the base rim; inside it a thick velvet collar on the base rises collar_rise above the seam; no gold beads along the seam (bead_height 0 since v004). A strap runs up the front, over the lid and down the back; a plain gold clasp on the lid sits on the strap at the V tip, across the reveal. Inside the collar a velvet ring pad of two rounded rolls. The perhaps wordmark in gold foil on the lid ceiling. Leather look (v005 brief, 2026-11-12): fine-grain matte leather in forest green #123B2D outside and on the strap, muted lavender suede #C3A6CD lining (collar, skirt, cushion, lid inside) showing in a 4 mm reveal along the V seam, a smaller thinner brushed champagne-gold clasp #C3AA7C, a softer rounded cushion, and a small tone-on-tone lavender perhaps wordmark raised on the lid ceiling.",
+  "geometry_mm": {
+    "size": 100.0,
+    "seam_side_z": 68.0,
+    "seam_low_z": 42.0,
+    "reveal": 4.0,
+    "wall": 3.0,
+    "lid_top": 3.0,
+    "base_floor": 3.0,
+    "bead_height": 0.0,
+    "bead_proud": 1.4,
+    "bead_radius": 1.3,
+    "collar_rise": 12.0,
+    "collar_wall": 3.5,
+    "collar_clearance": 0.3,
+    "collar_radius": 1.5,
+    "strap_width": 22.0,
+    "strap_thickness": 1.2,
+    "clasp": [
+      11.0,
+      11.0,
+      2.2
+    ],
+    "clasp_radius": 1.5,
+    "pad_top_z": 44.0,
+    "pad_slot": [
+      3.5,
+      9.0
+    ],
+    "pad_radius": 7.0,
+    "wordmark_width": 28.0,
+    "wordmark_center_y": 0.0,
+    "wordmark_thickness": 0.4,
+    "uv_offset_mm": 60.0,
+    "field_step": 1.0,
+    "edge_radius": 0.8,
+    "edge_segments": 3,
+    "skirt": [
+      47.0,
+      49.0
+    ],
+    "skirt_gap": 0.3,
+    "wordmark_role": "accent"
+  },
+  "wordmark_svg": "references/brand/perhaps-wordmark-v2.clean.svg",
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (plain colours: green leather, lavender suede, champagne gold); renders swap in config/presets/box_sleeve_lock_leather_look.json.",
+    "exterior": {
+      "color_linear": [
+        0.006,
+        0.0437,
+        0.0262
+      ],
+      "roughness": 0.65
+    },
+    "accent": {
+      "color_linear": [
+        0.5457,
+        0.3813,
+        0.6105
+      ],
+      "roughness": 0.85
+    },
+    "strap": {
+      "color_linear": [
+        0.0051,
+        0.0371,
+        0.0223
+      ],
+      "roughness": 0.55
+    },
+    "gold": {
+      "color_linear": [
+        0.5457,
+        0.402,
+        0.2016
+      ],
+      "roughness": 0.45,
+      "metallic": 1.0
+    }
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "lift_mm": 60,
+    "frames": 30
+  }
+}

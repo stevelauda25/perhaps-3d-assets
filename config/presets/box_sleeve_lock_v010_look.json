@@ -1,0 +1,125 @@
+{
+  "tier": "sleeve-lock-leather",
+  "builder": "paperboard",
+  "surface": "Sleeve Lock v010: very dark bottle green thin rib jacquard (#0C1E15 mean, 35 mm tile, 0.045 mm relief) and a slightly darker smooth strap, low sheen; brown suede inside as v009; champagne gold.",
+  "roles": {
+    "exterior": {
+      "library": "fabric.designer-rib-jacquard-deep-green",
+      "overrides": {
+        "mapping": {
+          "tile_width_mm": 35
+        },
+        "height": {
+          "bump_distance_mm": 0.045
+        },
+        "color": {
+          "tint_linear": [
+            1,
+            1,
+            1
+          ],
+          "hue": 0.5,
+          "saturation": 1.0,
+          "value": 1.0
+        },
+        "bsdf": {
+          "sheen_weight": 0.04,
+          "specular_ior_level": 0.15
+        }
+      }
+    },
+    "strap": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 1.0,
+          "tint_linear": [
+            0.00298,
+            0.01062,
+            0.00578
+          ]
+        },
+        "roughness": {
+          "range": [
+            0.45,
+            0.6
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.05,
+          "sheen_roughness": 0.4,
+          "specular_ior_level": 0.2
+        }
+      }
+    },
+    "accent": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            0.075,
+            0.034,
+            0.017
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 1.0,
+          "contrast": 0.3
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 0.6,
+          "sheen_roughness": 0.3,
+          "sheen_tint": [
+            0.45,
+            0.32,
+            0.24
+          ],
+          "specular_ior_level": 0.1
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.3,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.12,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "gold": {
+      "metal": {
+        "color_linear": [
+          0.5457,
+          0.402,
+          0.2016
+        ],
+        "roughness": 0.45,
+        "brush_bump": {
+          "scale_per_mm": 2.0,
+          "strength": 0.1,
+          "distance_mm": 0.02
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Sleeve Lock | exterior": "exterior",
+    "Sleeve Lock | strap": "strap",
+    "Sleeve Lock | accent": "accent",
+    "Sleeve Lock | gold": "gold"
+  }
+}

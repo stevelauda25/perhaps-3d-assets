@@ -1,0 +1,111 @@
+{
+  "tier": "sleeve-lock-leather",
+  "builder": "paperboard",
+  "surface": "Render look for Signature Sleeve Lock v008: designer rib jacquard outside at the finer v004 scale (45 mm tile), recoloured to bottle green #263830; smooth leather strap in that green 15 % darker; interior suede a step lighter brown #5A3E2C with the velvet nap (as v007); brushed champagne-gold #C3AA7C diamond clasp.",
+  "roles": {
+    "exterior": {
+      "library": "fabric.designer-rib-jacquard-bottle-green",
+      "overrides": {
+        "mapping": {
+          "tile_width_mm": 45
+        },
+        "height": {
+          "bump_distance_mm": 0.09
+        }
+      }
+    },
+    "strap": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 1.0,
+          "tint_linear": [
+            0.0166,
+            0.0341,
+            0.0247
+          ]
+        },
+        "roughness": {
+          "range": [
+            0.45,
+            0.6
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.15,
+          "sheen_roughness": 0.4,
+          "specular_ior_level": 0.4
+        }
+      }
+    },
+    "accent": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            0.1022,
+            0.0482,
+            0.0252
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 1.0,
+          "contrast": 0.3
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 1.0,
+          "sheen_roughness": 0.3,
+          "sheen_tint": [
+            0.6,
+            0.45,
+            0.35
+          ],
+          "specular_ior_level": 0.1
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.3,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.12,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "gold": {
+      "metal": {
+        "color_linear": [
+          0.5457,
+          0.402,
+          0.2016
+        ],
+        "roughness": 0.45,
+        "brush_bump": {
+          "scale_per_mm": 2.0,
+          "strength": 0.1,
+          "distance_mm": 0.02
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Sleeve Lock | exterior": "exterior",
+    "Sleeve Lock | strap": "strap",
+    "Sleeve Lock | accent": "accent",
+    "Sleeve Lock | gold": "gold"
+  }
+}

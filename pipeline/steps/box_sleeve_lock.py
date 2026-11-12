@@ -26,7 +26,8 @@ def run(params):
     g = spec["geometry_mm"]
     scene = bpy.context.scene
     size, a, w = g["size"], g["size"] / 2, g["wall"]
-    half, st, sw = g["reveal"] / 2, g["strap_thickness"], g["strap_width"] / 2
+    half, sw = g["reveal"] / 2, g["strap_width"] / 2
+    st = g["strap_thickness"] if g.get("strap", True) else 0.0  # strap false: plain box, clasp straight on the lid
     hi, lo = g["seam_side_z"], g["seam_low_z"]
 
     def seam(x, y):
@@ -146,15 +147,29 @@ def run(params):
         boolean(o, field(offset, below), "INTERSECT")
         bevel(o, 0.4, 2)
         return o
-    strap_lid = strap("Box | Strap lid", half, False)
-    strap_base = strap("Box | Strap base", -half, True)
+    strap_lid = strap("Box | Strap lid", half, False) if st else None
+    strap_base = strap("Box | Strap base", -half, True) if st else None
 
     # clasp: plain gold square on the lid strap at the V tip, bridging the reveal in front of the base strap
     cw_, ch, cd = g["clasp"]
-    clasp = block("Box | Clasp", -cw_ / 2, cw_ / 2, -a - st - 0.05 - cd, -a - st - 0.05, lo - ch / 2, lo + ch / 2)
-    bevel(clasp, g["clasp_radius"], 4)
+    cy = -a - st - 0.05  # clasp back face, just in front of the strap
+    if g.get("clasp_shape", "square") == "diamond":  # rhombus (w, h = diagonals) with a short girdle and a 4-facet crown to a 40 % table
+        bm = bmesh.new()
+        rings = [[bm.verts.new((x * k * MM, y_ * MM, (lo + z * k) * MM)) for x, z in ((cw_ / 2, 0), (0, ch / 2), (-cw_ / 2, 0), (0, -ch / 2))]
+                 for k, y_ in ((1, cy), (1, cy - 0.35 * cd), (0.4, cy - cd))]
+        bm.faces.new(rings[0])
+        bm.faces.new(rings[2][::-1])
+        for r0, r1 in zip(rings, rings[1:]):
+            for k in range(4):
+                bm.faces.new((r0[k], r0[(k + 1) % 4], r1[(k + 1) % 4], r1[k]))
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        clasp = link("Box | Clasp", bm)
+        bevel(clasp, g["clasp_radius"], 2)
+    else:
+        clasp = block("Box | Clasp", -cw_ / 2, cw_ / 2, cy - cd, cy, lo - ch / 2, lo + ch / 2)
+        bevel(clasp, g["clasp_radius"], 4)
 
-    # wordmark: gold foil on the lid ceiling, reading upright from below with the front edge as top
+    # wordmark on the lid ceiling (gold foil, or raised in the lining: wordmark_role), reading upright from below with the front edge as top
     subpaths = parse_svg((ROOT / spec["wordmark_svg"]).read_text())
     xs = [q[0] for s in subpaths for seg in s for q in seg]
     ys = [q[1] for s in subpaths for seg in s for q in seg]
@@ -207,8 +222,9 @@ def run(params):
 
     # glTF-safe stand-ins (the swatch as colour on the cloth); renders swap in the library look
     ms = spec["materials"]
-    swatch = bpy.data.images.load(str(ROOT / ms["swatch"]))
-    swatch.pack()
+    swatch = bpy.data.images.load(str(ROOT / ms["swatch"])) if ms.get("swatch") else None  # no swatch = plain colour (leather look)
+    if swatch:
+        swatch.pack()
     mats = {}
     for role in ("exterior", "accent", "strap", "gold"):
         mat = mats[role] = bpy.data.materials.new("Sleeve Lock | " + role)
@@ -218,7 +234,7 @@ def run(params):
         bsdf.inputs["Base Color"].default_value = (*ms[role]["color_linear"], 1)
         bsdf.inputs["Roughness"].default_value = ms[role]["roughness"]
         bsdf.inputs["Metallic"].default_value = ms[role].get("metallic", 0.0)
-        if role == "exterior":
+        if role == "exterior" and swatch:
             uvn = nodes.new("ShaderNodeUVMap")
             uvn.uv_map = "Metric UV"
             mp = nodes.new("ShaderNodeMapping")
@@ -232,7 +248,8 @@ def run(params):
     t = 0.01
     inside = {lid: lambda q: abs(q.x) < (a - w + t) * MM and abs(q.y) < (a - w + t) * MM and q.z < (size - g["lid_top"] + t) * MM,
               base: lambda q: abs(q.x) < (a - w + t) * MM and abs(q.y) < (a - w + t) * MM and q.z > (g["base_floor"] - t) * MM}
-    role_of = {strap_lid: "strap", strap_base: "strap", collar: "accent", pad: "accent", skirt: "accent"}
+    role_of = {strap_lid: "strap", strap_base: "strap", collar: "accent", pad: "accent", skirt: "accent",
+               wordmark: g.get("wordmark_role", "gold")}  # "accent" = tone-on-tone emboss in the lining
     for o in parts:
         o.data.materials.clear()  # boolean bakes leave an empty first slot that would shift every index
         if o in inside:

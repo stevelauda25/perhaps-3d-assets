@@ -1,0 +1,67 @@
+{
+  "id": "fabric.designer-rib-jacquard-deep-green",
+  "category": "fabric",
+  "name": "Rib jacquard (designer photo) in very dark bottle green, thin rib",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/designer_rib_jacquard",
+    "url": null,
+    "license": "supplied by the designer for Perhaps packaging"
+  },
+  "maps": {
+    "color": "rib_jacquard_deep_green_color.png",
+    "roughness": null,
+    "normal": null,
+    "height": "rib_jacquard_height.png"
+  },
+  "mapping": {
+    "mode": "uv",
+    "tile_width_mm": 35,
+    "uv_map": "Metric UV",
+    "uv_mm_per_unit": 1000
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.6
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.045,
+    "bump_strength": 1.0,
+    "note": "thinner rib: half the 0.09 mm Sleeve Lock relief; colour relief at half contrast"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.25,
+    "sheen_weight": 0.12,
+    "sheen_roughness": 0.45
+  },
+  "measured": {
+    "mean_linear_rgb": [
+      0.0035,
+      0.0125,
+      0.0068
+    ],
+    "note": "colour map mean set to the Sleeve Lock v010 green"
+  },
+  "limitations": [
+    "Built from one draped photo: relief is the lighting-flattened luminance, not a height scan.",
+    "Mirrored 2 x 2 to repeat without a seam, so the jacquard blocks repeat symmetrically every 40 mm.",
+    "Physical scale assumed: 2.2 mm rib pitch (23 px)."
+  ],
+  "selected_for": "sleeve-lock (candidate)"
+}
