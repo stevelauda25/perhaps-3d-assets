@@ -1,0 +1,66 @@
+{
+  "name": "wave",
+  "note": "09 Wave (references/packaging/09_wave.png, designer sketch 2026-11-12): 100 mm cube, lift-off lid. seam_profile is the seam height above seam_low_z (mm) at s = 0, 0.1 ... 1 along each face, s = 0 at a side corner (x = y = opposite signs) and s = 1 at the front / back corner, measured from the sketch (closed box and lifted lid agree within ~2 mm): level at the side corners, crest ~15 mm just before mid-face, a small dip near 80 %, rising again to ~9 mm at the front / back corner. Off the walls s = acos(q) / pi with q = -sin(pi x / size) sin(pi y / size), interpolated Catmull-Rom. A `reveal` gap along the wave shows a cream inner collar, set back by the lid wall, that rises `collar_rise` above the wave into the lid. Wave edges rounded with edge_radius. Outside and lining get the Select look in the job.",
+  "geometry_mm": {
+    "size": 100.0,
+    "seam_low_z": 40.0,
+    "seam_profile": [
+      0.0,
+      1.8,
+      7.6,
+      12.3,
+      14.5,
+      14.5,
+      11.8,
+      8.1,
+      6.3,
+      7.1,
+      9.2
+    ],
+    "reveal": 6.0,
+    "wall": 2.5,
+    "lid_top": 3.0,
+    "base_floor": 3.0,
+    "fit_clearance": 0.3,
+    "collar_wall": 1.5,
+    "collar_floor": 2.0,
+    "collar_rise": 7.0,
+    "seat_gap": 0.05,
+    "field_step": 1.0,
+    "edge_radius": 1.0,
+    "edge_segments": 4
+  },
+  "materials": {
+    "note": "glTF-safe placeholders (kraft outside, white inside, Paper002 grain); the job swaps in the Select look for the GLB and the renders.",
+    "grain": {
+      "dir": "textures/sources/ambientcg_paper002_2k",
+      "normal": "Paper002_2K-JPG_NormalGL.jpg",
+      "roughness": "Paper002_2K-JPG_Roughness.jpg",
+      "tile_mm": 300,
+      "px": 1024,
+      "normal_strength": 1.0
+    },
+    "exterior": {
+      "color_linear": [
+        0.381,
+        0.223,
+        0.125
+      ]
+    },
+    "accent": {
+      "color_linear": [
+        0.838,
+        0.799,
+        0.73
+      ]
+    }
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "lift_mm": 75,
+    "frames": 30
+  }
+}
