@@ -110,7 +110,7 @@ def run(params):
         return o
 
     # base: stationary floor and four faceted walls; the front wall sits back behind the front flap
-    base = faceted("Box | Base", -a, a, yb, a, 0, zb, {"front", "right", "back", "left"})
+    base = faceted("Box | Base", -a, a, yb, a, 0, zb, {"front", "right", "back", "left"} if d > 0 else set())
     ox0, ox1, oy0, oy1 = -a + w, a - w, yb + w, a - w  # compartment opening
     boolean(base, block("cut", ox0, ox1, oy0, oy1, g["base_floor"], H + 5), "DIFFERENCE")
     lb = g["liner_border"]
@@ -130,7 +130,7 @@ def run(params):
     bevel(top, 0.4, 2)
 
     # front panel: the whole closed front face, faceted, with the star on its centre crossing
-    front = faceted("Box | Front", -a, a, -a, -a + tf, 0, H, {"front"})
+    front = faceted("Box | Front", -a, a, -a, -a + tf, 0, H, {"front"} if d > 0 else set())  # facet_depth 0 = plain sides
     s = g["star"]
     pts = []
     for i in range(96):  # sparkle outline |x|^p + |z|^p = tip^p
@@ -146,7 +146,7 @@ def run(params):
         bm.faces.new((f0[k], f0[(k + 1) % len(pts)], f1[(k + 1) % len(pts)], f1[k]))
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     star = link("Box | Star", bm)
-    bevel(star, 0.25, 2)
+    bevel(star, s.get("bevel", 0.25), s.get("bevel_segments", 2))
 
     # card under the top panel, centred on the compartment opening, thumb notch on the right
     ccx, ccy = 0.0, (oy0 + oy1) / 2
@@ -160,13 +160,15 @@ def run(params):
     bevel(card, 0.3, 2)
 
     def lettering(name, t):
-        """Gold foil set in a font (t: text, font, width mm), centred on the origin in the XY plane, +y up."""
+        """Gold set in a font (t: text, font, width mm, optional thickness / bevel mm for a raised emboss), centred on the origin in the XY plane, +y up."""
         font = Path(t["font"])
         assert font.exists(), "font not found: %s" % font
         cu = bpy.data.curves.new(name, "FONT")
         cu.body, cu.font = t["text"], bpy.data.fonts.load(str(font))
         cu.align_x, cu.align_y = "CENTER", "CENTER"
-        cu.extrude = g["lettering_thickness"] / 2 * MM
+        th, bv = t.get("thickness", g["lettering_thickness"]), t.get("bevel", 0.0)
+        assert th / 2 > bv, "bevel must be under half the lettering thickness"
+        cu.extrude, cu.bevel_depth, cu.bevel_resolution = (th / 2 - bv) * MM, bv * MM, 2
         tmp = bpy.data.objects.new(name, cu)
         scene.collection.objects.link(tmp)
         bpy.context.view_layer.update()
@@ -183,7 +185,7 @@ def run(params):
     card_text = lettering("Box | Card text", g["card_text"])  # reads upright when the top panel stands open (up = its front edge)
     card_text.data.transform(Matrix.Translation(Vector((ccx, ccy, zt - ct - 0.01 - lt / 2)) * MM) @ Matrix.Rotation(math.pi, 4, "X"))
     top_text = lettering("Box | Top text", g["top_text"])     # reads upright from the front of the closed box
-    top_text.data.transform(Matrix.Translation(Vector((0, (-a + tf + a) / 2, H + 0.01 + lt / 2)) * MM))
+    top_text.data.transform(Matrix.Translation(Vector((0, (-a + tf + a) / 2, H + 0.01 + g["top_text"].get("thickness", lt) / 2)) * MM))
 
     top_group = [top, card, card_text, top_text]
     front_group = [front, star]

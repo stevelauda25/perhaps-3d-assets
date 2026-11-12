@@ -1,0 +1,67 @@
+{
+  "id": "felt.designer-fret-black",
+  "category": "felt",
+  "name": "Embossed fret felt (designer photo) in black",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/designer_fret_felt",
+    "url": null,
+    "license": "supplied by the designer for Perhaps packaging"
+  },
+  "maps": {
+    "color": "fret_felt_black_color.png",
+    "roughness": null,
+    "normal": null,
+    "height": "fret_felt_height.png"
+  },
+  "mapping": {
+    "mode": "uv",
+    "tile_width_mm": 180,
+    "uv_map": "Metric UV",
+    "uv_mm_per_unit": 1000
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.85
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.2,
+    "bump_strength": 1.0,
+    "note": "embossed lines read about 0.3 mm deep in the photo; chosen, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.2,
+    "sheen_weight": 0.05,
+    "sheen_roughness": 0.5
+  },
+  "measured": {
+    "mean_linear_rgb": [
+      0.012,
+      0.0115,
+      0.011
+    ],
+    "note": "colour map mean set to the Facet Fold black"
+  },
+  "limitations": [
+    "Built from one photo: relief is the lighting-flattened luminance, not a height scan.",
+    "Mirrored 2 x 2, so the fret repeats symmetrically every 90 mm.",
+    "Physical scale assumed: 90 mm across the photo."
+  ],
+  "selected_for": "facet-fold (candidate)"
+}

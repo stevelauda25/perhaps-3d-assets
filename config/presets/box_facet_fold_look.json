@@ -1,10 +1,10 @@
 {
   "tier": "facet-fold",
   "builder": "paperboard",
-  "surface": "Render look for Facet Fold (black, Facet Star look): designer rib jacquard in black outside, black velvet lining (Leather039 with the velvet nap), matte black card, plain pale brushed champagne-gold star and wordmark.",
+  "surface": "Render look for Facet Fold (black, Facet Star look): thin embossed designer fret felt in black outside, black velvet lining (Leather039 with the velvet nap), matte black card, plain pale brushed champagne-gold star and wordmark.",
   "roles": {
     "exterior": {
-      "library": "fabric.designer-rib-jacquard-black"
+      "library": "felt.designer-fret-black"
     },
     "accent": {
       "library": "suede.ambientcg-leather039",

@@ -1,0 +1,221 @@
+{
+  "id": "facet-fold-v007",
+  "output": "outputs/jobs/facet-fold-v007",
+  "asset_type": "packaging",
+  "model": "12 Facet Fold (plain sides): 140 mm cube, Facet Star look, magnetic-flap cover (top panel plus front flap as one L on the back hinge) that is the top and the front face",
+  "baseline": "v006 with the thin designer fret felt (embossed maze, felt.designer-fret-black) on the outside instead of plain matte black. Geometry, star, lettering, lining, lights and views as v006.",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "textures/sources/designer_fret_felt/source_photo.png",
+    "references/packaging/12_facet_fold_proportions.png",
+    "references/packaging/11_facet_star_v003.png",
+    "config/presets/box_facet_fold.json",
+    "config/presets/box_facet_fold_look.json",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_facet_fold",
+      "params": {
+        "spec": "config/presets/box_facet_fold.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/facet-fold-v007/facet-fold.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_facet_fold_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "hero",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.75,
+            -0.98,
+            0.58
+          ],
+          "target": [
+            0,
+            0,
+            0.07
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "seq-4-closed",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f7",
+      "step": "scene_frame",
+      "params": {
+        "frame": 7
+      }
+    },
+    {
+      "name": "seq-3-almost-closed",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f18",
+      "step": "scene_frame",
+      "params": {
+        "frame": 18
+      }
+    },
+    {
+      "name": "seq-2-closing",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f30",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "seq-1-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}
