@@ -1,0 +1,84 @@
+{
+  "name": "medallion",
+  "note": "14 Medallion (provisional name; brief 2026-11-12: the form of references/packaging/14_medallion.png, charcoal colour from references/packaging/14_medallion_charcoal.png). Square ring box, 90 x 90 mm, 66 mm tall. Base (0 to base_top) and lid (base_top + reveal to height) are separate shells; a lighter charcoal suede collar inside the base rises collar_rise above the lid's lower edge, so it shows as a recessed band in the reveal all round. The lid is hinged at its outer back edge at the lid's lower edge and opens to open_deg. At the front centre the base wall has a U notch; a tab on the lid's front wall drops into it with clearance, and a domed rounded-square champagne-gold medallion on the tab straddles the reveal. Inside: lined tray, ring pad with one slit, Perhaps in gold serif on the lid lining.",
+  "geometry_mm": {
+    "size": 90.0,
+    "height": 66.0,
+    "base_top": 28.0,
+    "reveal": 3.0,
+    "wall": 3.5,
+    "lid_top": 3.0,
+    "base_floor": 3.0,
+    "edge_radius": 0.6,
+    "edge_segments": 3,
+    "collar_rise": 5.0,
+    "collar_wall": 2.0,
+    "collar_clearance": 0.4,
+    "collar_radius": 1.0,
+    "notch": [
+      18.0,
+      9.0
+    ],
+    "tab_clearance": 0.4,
+    "medallion": {
+      "size": [
+        15.0,
+        13.0
+      ],
+      "power": 4.0,
+      "dome": 2.2,
+      "center_z": 29.5
+    },
+    "pad_top_z": 20.0,
+    "pad_slot": [
+      3.0,
+      7.0
+    ],
+    "pad_radius": 5.0,
+    "lettering_thickness": 0.08,
+    "lid_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 22.0,
+      "center_y": -24.0
+    }
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (charcoal twill colour swatch, lighter charcoal suede, champagne gold); renders swap in config/presets/box_medallion_look.json.",
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.75
+    },
+    "accent": {
+      "color_linear": [
+        0.05,
+        0.052,
+        0.055
+      ],
+      "roughness": 0.85
+    },
+    "gold": {
+      "color_linear": [
+        0.5457,
+        0.402,
+        0.2016
+      ],
+      "roughness": 0.45,
+      "metallic": 1.0
+    },
+    "swatch": "textures/sources/charcoal_twill/charcoal_twill_color_glb.jpg",
+    "swatch_tile_mm": 80
+  },
+  "lid_animation": {
+    "frames": 30,
+    "open_deg": 75.0
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": 0.0
+  }
+}

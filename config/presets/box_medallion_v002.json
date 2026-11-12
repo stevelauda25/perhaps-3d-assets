@@ -1,0 +1,93 @@
+{
+  "name": "medallion",
+  "note": "14 Medallion v002 (feedback 2026-11-12): the size of Final Blender/Perhaps_Select_Box.blend (outer 176.4 x 176.4 mm, 140 mm tall, measured from its Base and Lid shells), umber fine linen outside (textures/sources/designer_umber_linen), lighter umber suede collar, pad and lid lining, the official perhaps wordmark debossed tone-on-tone into the lid top with a softened rim, and a sharp flat rectangular champagne-gold clasp instead of the domed cushion. Form otherwise as v001: base and lid shells with a recessed collar band in the reveal, back-hinged lid, U notch and tab at the front centre, ring pad with one slit, Perhaps in gold on the lid lining.",
+  "geometry_mm": {
+    "size": 176.4,
+    "height": 140.0,
+    "base_top": 60.0,
+    "reveal": 4.0,
+    "wall": 4.0,
+    "lid_top": 4.0,
+    "base_floor": 4.0,
+    "edge_radius": 0.8,
+    "edge_segments": 3,
+    "collar_rise": 8.0,
+    "collar_wall": 2.5,
+    "collar_clearance": 0.5,
+    "collar_radius": 1.2,
+    "notch": [
+      35.0,
+      16.0
+    ],
+    "tab_clearance": 0.5,
+    "medallion": {
+      "shape": "rect",
+      "size": [
+        30.0,
+        26.0
+      ],
+      "thickness": 2.5,
+      "chamfer": 0.15,
+      "center_z": 62.0
+    },
+    "pad_top_z": 42.0,
+    "pad_slot": [
+      4.0,
+      10.0
+    ],
+    "pad_radius": 8.0,
+    "lettering_thickness": 0.08,
+    "lid_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 40.0,
+      "center_y": -47.0
+    },
+    "lid_deboss": {
+      "svg": "references/brand/perhaps-wordmark.svg",
+      "width": 66.0,
+      "depth": 0.6,
+      "lip": 0.3,
+      "center_y": 0.0
+    }
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (umber linen colour and normal swatch, lighter umber suede, champagne gold); renders swap in config/presets/box_medallion_v002_look.json.",
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.75
+    },
+    "accent": {
+      "color_linear": [
+        0.034,
+        0.021,
+        0.0135
+      ],
+      "roughness": 0.85
+    },
+    "gold": {
+      "color_linear": [
+        0.5457,
+        0.402,
+        0.2016
+      ],
+      "roughness": 0.45,
+      "metallic": 1.0
+    },
+    "swatch": "textures/sources/designer_umber_linen/umber_linen_color_glb.jpg",
+    "swatch_tile_mm": 256,
+    "swatch_normal": "textures/sources/designer_umber_linen/umber_linen_normal_gl.png"
+  },
+  "lid_animation": {
+    "frames": 30,
+    "open_deg": 75.0
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": 0.0
+  }
+}

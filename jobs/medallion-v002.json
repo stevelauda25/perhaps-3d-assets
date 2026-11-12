@@ -1,0 +1,198 @@
+{
+  "id": "medallion-v002",
+  "output": "outputs/jobs/medallion-v002",
+  "asset_type": "packaging",
+  "model": "14 Medallion v002: Select-box size (176.4 x 176.4 x 140 mm) square box, back-hinged lid, umber linen, debossed perhaps on the lid top, sharp rectangular gold clasp",
+  "baseline": "v001 scaled to the Select box (176.4 x 176.4 x 140 mm, walls and reveal 4 mm), umber fine linen instead of charcoal twill, perhaps debossed 0.6 mm into the lid top, rectangular flat clasp 30 x 26 x 2.5 mm.",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/packaging/14_medallion.png",
+    "textures/sources/designer_umber_linen/source_photo.png",
+    "textures/sources/designer_umber_linen/umber_swatch.png",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_medallion",
+      "params": {
+        "spec": "config/presets/box_medallion_v002.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/medallion-v002/medallion.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_medallion_v002_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "light",
+      "step": "light_adjust",
+      "params": {
+        "edit": {
+          "PCS2 | 01 Grazing key": {
+            "power_w": 0.3
+          },
+          "PCS2 | 02 Upper edge strip": {
+            "power_w": 12.0
+          },
+          "PCS2 | 03 Side definition": {
+            "power_w": 0.05
+          },
+          "PCS2 | 04 Underside bounce": {
+            "power_w": 0.03
+          }
+        },
+        "add": [
+          {
+            "name": "MD01 | back rim",
+            "size": [
+              0.4,
+              0.4
+            ],
+            "position": [
+              0.6,
+              0.7,
+              0.5
+            ],
+            "target": [
+              0,
+              0,
+              0.04
+            ],
+            "power_w": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "name": "closed",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.98,
+            -1.29,
+            0.82
+          ],
+          "target": [
+            0,
+            0,
+            0.07
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f10",
+      "step": "scene_frame",
+      "params": {
+        "frame": 10
+      }
+    },
+    {
+      "name": "slightly-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.98,
+            -1.29,
+            0.82
+          ],
+          "target": [
+            0,
+            0,
+            0.085
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f30",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.98,
+            -1.33,
+            1.08
+          ],
+          "target": [
+            0,
+            0,
+            0.11
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}

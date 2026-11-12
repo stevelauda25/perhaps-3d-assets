@@ -1,0 +1,56 @@
+{
+  "asset": "Umber linen (designer photos, 2026-11-12)",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the linen weave photo as sent (1200 x 2000, light beige); umber_swatch.png the colour card as sent (labelled 'Umber #D6CCA8', but #D6CCA8 is a light khaki, the label text colour; the swatch itself is dark brown). Umber = mean linear colour of the swatch over x 40-480, y 30-300 (text excluded): (0.0227, 0.0139, 0.0088), about sRGB #2A1F18. Maps: central 1024 x 1024 crop of the photo, lighting divided out (60 px blur), mirrored 2 x 2 to 2048 x 2048 so it repeats without a seam. Physical scale assumed: the photo spans 150 mm (0.125 mm/px, weave pitch about 4.5 px = 0.56 mm), so the tile is 256 mm. Colour = relief times umber (mean checked within 5 %); umber_linen_color_glb.jpg the same as JPEG q90 for the GLB; height = relief stretched 0-1, softened 0.6 px; umber_linen_normal_gl.png OpenGL normal from the height at 35 % of the 0.05 mm render relief. umber_linen_deep_color.png (+ _glb.jpg, q92 4:4:4): the same relief times a deeper umber, 0.6 x the swatch mean = linear (0.0136, 0.0083, 0.0053), about sRGB #1F1712 (Medallion v003); means within 5 % on red/green and ~10 % on blue, which sits near sRGB code 18 where one 8-bit step is ~8 %. navy_linen_color_glb.jpg (Arc Band v014 GLB): the same relief (colour map / umber mean, channel-averaged) times navy linear (0.0029, 0.0054, 0.034), JPEG q92 4:4:4.",
+  "measured": {
+    "umber_linear": [
+      0.0227,
+      0.0139,
+      0.0088
+    ],
+    "color_map_mean_linear": [
+      0.0227,
+      0.0139,
+      0.0088
+    ],
+    "weave_pitch_px": 4.5
+  },
+  "files": {
+    "source_photo.png": {
+      "bytes": 3218004,
+      "sha256": "4ea003afe480e593c3a12ef7399bdf20afc8b8b1324f84b695f88bfe2ea547fc"
+    },
+    "umber_linen_color.png": {
+      "bytes": 4576685,
+      "sha256": "722971e17b768432f6a50e2af352fa264e49c407855530913acb425a107fcd15"
+    },
+    "umber_linen_color_glb.jpg": {
+      "bytes": 549420,
+      "sha256": "45aaaa72e6571d09c92fbd24a93d462acae8be647defd454aa84eafae7199320"
+    },
+    "umber_linen_deep_color.png": {
+      "bytes": 4236910,
+      "sha256": "a3dc915baadf29d52e6853533d9dd39516e4753c2cc710e3aa41ef5631ab0380"
+    },
+    "umber_linen_deep_color_glb.jpg": {
+      "bytes": 601384,
+      "sha256": "1798dedeb7896c4bc157ee79fb60c1c3c9c0b16e46b5023e639481ed691dcd45"
+    },
+    "umber_linen_height.png": {
+      "bytes": 3157121,
+      "sha256": "380ae9df9e204b2fabc1f018ec5873c0abf6a4640a427223c74991e3e04cf1a6"
+    },
+    "umber_linen_normal_gl.png": {
+      "bytes": 2854541,
+      "sha256": "4f8359dcecaf5502f03b8fd86792ad307064926f1689b1cb8160fbd5374e146d"
+    },
+    "umber_swatch.png": {
+      "bytes": 74373,
+      "sha256": "43e7bd672916ae43816d332993081040d51868f2fcd86dcc6697d505b9d7c827"
+    },
+    "navy_linen_color_glb.jpg": {
+      "bytes": 634033,
+      "sha256": "1c87ce45f5a390b0dc90a464dc8fa11a1921359992139673ecd0a82fc938549a"
+    }
+  }
+}

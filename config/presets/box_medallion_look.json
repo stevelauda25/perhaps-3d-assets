@@ -1,0 +1,106 @@
+{
+  "tier": "medallion",
+  "builder": "paperboard",
+  "surface": "Render look for 14 Medallion v001: charcoal twill outside (ambientCG Fabric077 desaturated, weave contrast lowered, cool charcoal, low sheen), lighter charcoal suede collar, pad and lid lining, champagne gold medallion and lettering.",
+  "roles": {
+    "exterior": {
+      "library": "denim.ambientcg-fabric077",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            0.95,
+            0.97,
+            1.0
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 0.0877,
+          "contrast": -0.4
+        },
+        "mapping": {
+          "tile_width_mm": 80
+        },
+        "height": {
+          "bump_distance_mm": 0.08
+        },
+        "roughness": {
+          "range": [
+            0.62,
+            0.8
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.08,
+          "sheen_roughness": 0.5,
+          "specular_ior_level": 0.2
+        }
+      }
+    },
+    "accent": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            0.95,
+            0.97,
+            1.0
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 0.05,
+          "contrast": 0.3
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 0.5,
+          "sheen_roughness": 0.3,
+          "sheen_tint": [
+            0.6,
+            0.62,
+            0.66
+          ],
+          "specular_ior_level": 0.1
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.3,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.12,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "gold": {
+      "metal": {
+        "color_linear": [
+          0.96,
+          0.72,
+          0.46
+        ],
+        "roughness": 0.4,
+        "brush_bump": {
+          "scale_per_mm": 2.0,
+          "strength": 0.1,
+          "distance_mm": 0.02
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Medallion | exterior": "exterior",
+    "Medallion | accent": "accent",
+    "Medallion | gold": "gold"
+  }
+}

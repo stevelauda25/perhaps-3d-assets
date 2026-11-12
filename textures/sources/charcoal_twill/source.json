@@ -1,0 +1,18 @@
+{
+  "asset": "Charcoal twill (GLB stand-in swatch for box 14 Medallion, 2026-11-12)",
+  "author": "derived from ambientCG Fabric077 (CC0-1.0), textures/sources/ambientcg_fabric077_2k",
+  "note": "Fabric077 colour map at 1024 px, contrast -0.4 (0.6 x linear + 0.2), desaturated to its max channel, scaled to a mean linear 0.028 and tinted cool (0.95, 0.97, 1.0): the same chain as the medallion render look, so the 3D preview matches the renders. Colour reference: references/packaging/14_medallion_charcoal.png (designer image, too small to be a texture).",
+  "measured": {
+    "mean_linear_rgb": [
+      0.0266,
+      0.0272,
+      0.028
+    ]
+  },
+  "files": {
+    "charcoal_twill_color_glb.jpg": {
+      "bytes": 194093,
+      "sha256": "5ca5a0e995cf6d1f34d1090f3e468c15a24ca3d6f59f079ae90f7d59803e6b98"
+    }
+  }
+}
