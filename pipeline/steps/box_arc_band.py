@@ -91,14 +91,14 @@ def run(params):
         lower[sx] = curve_pts(Vector((x_edge, g["ribbon_inset"])), Vector((x_edge, hug)),
                               mid(sx) + Vector((0, zc + lo)), Vector((sx * (pw / 2 + 0.3), zc + lo)), n)
 
-    def strip(name, pts):
-        left, right = [], []
+    def strip(name, pts, hw=hw, y0=-a - g["ribbon_proud"], y1=-a - 0.02):  # default: stands just off the cloth, lid and base parts never touch
+        left, right, m = [], [], len(pts) - 1
         for i, p in enumerate(pts):
-            d = (pts[min(i + 1, n)] - pts[max(i - 1, 0)]).normalized()
+            d = (pts[min(i + 1, m)] - pts[max(i - 1, 0)]).normalized()
             nrm = Vector((-d.y, d.x)) * hw
             left.append(tuple(p + nrm))
             right.append(tuple(p - nrm))
-        return prism_xz(name, left + right[::-1], -a - g["ribbon_proud"], -a - 0.02)  # stands just off the cloth: lid and base parts never touch
+        return prism_xz(name, left + right[::-1], y0, y1)
 
     def block(name, x0, x1, y0, y1, z0, z1):
         bm = bmesh.new()
@@ -108,9 +108,9 @@ def run(params):
                     ((z0 + z1) / 2 + v.co.z * (z1 - z0)) * MM)
         return link(name, bm)
 
-    def boolean(o, cutter, op):
+    def boolean(o, cutter, op, self_=False):
         m = o.modifiers.new("Cut", "BOOLEAN")
-        m.operation, m.solver, m.object = op, "EXACT", cutter
+        m.operation, m.solver, m.object, m.use_self = op, "EXACT", cutter, self_
         bake(o, m)
         bpy.data.meshes.remove(cutter.data)
 
@@ -121,25 +121,68 @@ def run(params):
         o.name = o.data.name = name
         bevel(o, 0.35, 2, angle=60)
         return o
-    ribbons_lid = joined("Box | Ribbons lid", [strip("ribbon", upper[-1]), strip("ribbon", upper[1])])
-    bridge = prism_xz("ribbon", [(-(pw / 2 + 0.6), zc + lo - hw), (pw / 2 + 0.6, zc + lo - hw), (pw / 2 + 0.6, zc + lo + hw), (-(pw / 2 + 0.6), zc + lo + hw)],
-                      -a - g["ribbon_proud"], -a - 0.02)  # joins the lower ribbons behind the plate, so they stay one line when the lid lifts
-    ribbons = joined("Box | Ribbons", [strip("ribbon", lower[-1]), strip("ribbon", lower[1]), bridge])
+    # v014 relief: shallow recesses on the front (x, z) whose soft steps draw the arcs; "faces" also repeats a recess on the
+    # left and top faces by the 3-fold turn about the front-left-top corner, so one band runs on round three faces
+    turn = Matrix.Translation(Vector((0, 0, a)) * MM) @ Matrix(((0, 1, 0, 0), (0, 0, -1, 0), (-1, 0, 0, 0), (0, 0, 0, 1))) @ Matrix.Translation(Vector((0, 0, -a)) * MM)
+    A = a * MM
+    faces_m = {"front": Matrix(), "left": turn, "top": turn @ turn,  # right / back: the front pattern turned about z
+               "right": Matrix.Rotation(math.pi / 2, 4, "Z"), "back": Matrix.Rotation(math.pi, 4, "Z"),
+               # v016: each side the mirror of its neighbour across their shared edge, so every arc meets its partner there
+               "mirror_right": Matrix(((0, -1, 0, 0), (-1, 0, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1))),
+               "mirror_left": Matrix(((0, 1, 0, 0), (1, 0, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1))),
+               # top_xy: the curve's (u, v) read as (x, y + a) on the top, depth downward
+               "top_xy": Matrix(((1, 0, 0, 0), (0, 0, 1, -A), (0, -1, 0, A), (0, 0, 0, 1)))}
+    rel = g.get("relief")
+    if rel:
+        for rc in rel["recesses"]:
+            # the recess lies right of the walk; its wall is a ramp ramp_mm wide, so the step shades softly instead of a dark groove
+            pts = [q for k, seg in enumerate(rc["bezier"]) for q in curve_pts(*map(Vector, seg), n)[k > 0:]]
+            if (pts[-1] - pts[0]).length < 1e-6:  # a closed outline (no close points)
+                pts.pop()
+            dep, m = rc["depth"], len(pts) - 1
+            grow = rc["ramp_mm"] * (dep + 1) / dep  # the cutter's front ring sits 1 mm in front of the cloth
+            nrm = [(lambda d: Vector((-d.y, d.x)))((pts[min(i + 1, m)] - pts[max(i - 1, 0)]).normalized()) for i in range(m + 1)]
+            rings = [[q.to_tuple() for q in pts] + [tuple(c) for c in rc["close"]],
+                     [(q + v * grow).to_tuple() for q, v in zip(pts, nrm)] + [tuple(c) for c in rc["close"]]]
+            for face in rc["faces"]:
+                bm = bmesh.new()
+                r0 = [bm.verts.new((x * MM, (-a + dep) * MM, z * MM)) for x, z in rings[0]]
+                r1 = [bm.verts.new((x * MM, (-a - 1) * MM, z * MM)) for x, z in rings[1]]
+                bm.faces.new(r0)
+                bm.faces.new(r1[::-1])
+                for i in range(len(r0)):
+                    j = (i + 1) % len(r0)
+                    bm.faces.new((r0[i], r0[j], r1[j], r1[i]))
+                bm.transform(faces_m[face])
+                bmesh.ops.recalc_face_normals(bm, faces=bm.faces)  # after the transform: the mirrors flip the winding
+                boolean(body, link("cut", bm), "DIFFERENCE")
+    trim = g.get("gold_trim", True)  # false: no ribbons, bands or bridge; the flap seam stays, the plate sits just off the cloth
+    ribbons_lid = ribbons = band = band_base = None
+    if trim:
+        ribbons_lid = joined("Box | Ribbons lid", [strip("ribbon", upper[-1]), strip("ribbon", upper[1])])
+        bridge = prism_xz("ribbon", [(-(pw / 2 + 0.6), zc + lo - hw), (pw / 2 + 0.6, zc + lo - hw), (pw / 2 + 0.6, zc + lo + hw), (-(pw / 2 + 0.6), zc + lo + hw)],
+                          -a - g["ribbon_proud"], -a - 0.02)  # joins the lower ribbons behind the plate, so they stay one line when the lid lifts
+        ribbons = joined("Box | Ribbons", [strip("ribbon", lower[-1]), strip("ribbon", lower[1]), bridge])
 
     # lid = the top lid_height plus a front flap shaped like a shield: everything on the front above the upper ribbons
     # (their centre lines are the flap edge, the ribbons cover the seam). Offset half the gap each way so the parts never touch.
     seam, gap, w = size - g["lid_height"], g["seam_gap"], g["wall"]
+    # v013: the flap edge is one free curve (cubic segments, left corner -> right edge) instead of the ribbon shield
+    seam_pts = [q for k, seg in enumerate(g.get("seam_bezier") or []) for q in curve_pts(*map(Vector, seg), n)[k > 0:]]
 
     def lid_region(off):
         """Solid: z above the seam, plus the front wall inside the shield; off > 0 shrinks it (lid), < 0 grows it (base cut)."""
+        top = block("cut", -a - 10, a + 10, -a - 10, a + 10, seam + off, size + 10)
+        if not g.get("front_flap", True):  # v015: a plain lid, the seam runs straight round at lid_height
+            return top
         outline = []
-        for sx, pts in ((-1, upper[-1]), (1, upper[1][::-1])):  # walk left curve top->plate, right curve plate->top
+        for pts in [seam_pts] if seam_pts else [upper[-1], upper[1][::-1]]:  # walk left -> right
+            m = len(pts) - 1
             for i, p in enumerate(pts):
-                d = (pts[min(i + 1, n)] - pts[max(i - 1, 0)]).normalized()
+                d = (pts[min(i + 1, m)] - pts[max(i - 1, 0)]).normalized()
                 outline.append(tuple(p + Vector((-d.y, d.x)) * off))  # +normal points into the shield on both walks
         outline += [(outline[-1][0], size + 10), (outline[0][0], size + 10)]
         flap = prism_xz("cut", outline, -a - 10, -a + w + 1 - off)  # the gap also on the inner face, inside the side walls
-        top = block("cut", -a - 10, a + 10, -a - 10, a + 10, seam + off, size + 10)
         boolean(top, flap, "UNION")
         return top
     lid = body.copy()
@@ -152,26 +195,34 @@ def run(params):
     base = body
     boolean(base, lid_region(-gap / 2), "DIFFERENCE")
     boolean(base, block("cut", -a + w, a - w, -a + w, a - w, g["base_floor"], size + 5), "DIFFERENCE")
+    for gr in g.get("grooves", []):  # tone-on-tone panel lines cut into the base front; they run out through the soft edges
+        pts = [q for k, seg in enumerate(gr["bezier"]) for q in curve_pts(*map(Vector, seg), n)[k > 0:]]
+        boolean(base, strip("cut", pts, gr["width"] / 2, -a - 1, -a + gr["depth"]), "DIFFERENCE")
 
     # gold band round the lid's top edge, the same section as the ribbons, so the ribbons run into it at the front corners
     bp, bh = g["ribbon_proud"], g["ribbon_width"]
-    band = block("Box | Band", -a - bp, a + bp, -a - bp, a + bp, size - bh, size)
-    boolean(band, block("cut", -a + 0.6, a - 0.6, -a + 0.6, a - 0.6, size - bh - 1, size + 1), "DIFFERENCE")
-    bevel(band, 0.35, 2, angle=60)
-    band_base = block("Box | Band base", -a - bp, a + bp, -a - bp, a + bp, 0, bh)  # the same band round the bottom edge, joined to the lower ribbons
-    boolean(band_base, block("cut", -a + 0.6, a - 0.6, -a + 0.6, a - 0.6, -1, bh + 1), "DIFFERENCE")
-    bevel(band_base, 0.35, 2, angle=60)
+    if trim:
+        band = block("Box | Band", -a - bp, a + bp, -a - bp, a + bp, size - bh, size)
+        boolean(band, block("cut", -a + 0.6, a - 0.6, -a + 0.6, a - 0.6, size - bh - 1, size + 1), "DIFFERENCE")
+        bevel(band, 0.35, 2, angle=60)
+        band_base = block("Box | Band base", -a - bp, a + bp, -a - bp, a + bp, 0, bh)  # the same band round the bottom edge, joined to the lower ribbons
+        boolean(band_base, block("cut", -a + 0.6, a - 0.6, -a + 0.6, a - 0.6, -1, bh + 1), "DIFFERENCE")
+        bevel(band_base, 0.35, 2, angle=60)
 
     # nameplate: rounded gold bar standing off the front, the ribbons tucked under its sides
+    deboss = g.get("wordmark_deboss")
+    owner = lid if g.get("front_flap", True) else base  # the part the debossed wordmark is cut into  # mm: no plate, Perhaps. is pressed into the flap cloth
+    plate = text = None
     r = g["plate_radius"]
     outline = []
     for cx, cz, a0 in ((pw / 2 - r, zc + ph / 2 - r, 0), (-pw / 2 + r, zc + ph / 2 - r, 90), (-pw / 2 + r, zc - ph / 2 + r, 180), (pw / 2 - r, zc - ph / 2 + r, 270)):
         for k in range(9):
             t = math.radians(a0 + k * 90 / 8)
             outline.append((cx + r * math.cos(t), cz + r * math.sin(t)))
-    stand = g["ribbon_proud"] + 0.05  # the plate stands off the cloth over the ribbons (and the bridge behind it)
-    plate = prism_xz("Box | Plate", outline, -a - stand - pt, -a - stand)  # on the flap, lifts with the lid
-    bevel(plate, 0.8, 4, angle=60)
+    stand = (g["ribbon_proud"] if trim else 0) + 0.05  # the plate stands off the cloth over the ribbons (and the bridge behind it)
+    if not deboss:
+        plate = prism_xz("Box | Plate", outline, -a - stand - pt, -a - stand)  # on the flap, lifts with the lid
+        bevel(plate, 0.8, 4, angle=60)
 
     # print: Perhaps. in a dark serif on the plate face
     t = g["plate_text"]
@@ -180,7 +231,9 @@ def run(params):
     cu = bpy.data.curves.new("plate text", "FONT")
     cu.body, cu.font = t["text"], bpy.data.fonts.load(str(font))
     cu.align_x, cu.align_y = "CENTER", "CENTER"
-    cu.extrude = g["text_thickness"] / 2 * MM
+    cu.fill_mode = "BOTH"
+    depth = deboss + 1 if deboss else g["text_thickness"]  # a deboss cutter starts 1 mm in front of the cloth
+    cu.extrude = depth / 2 * MM
     tmp = bpy.data.objects.new("plate text", cu)
     scene.collection.objects.link(tmp)
     bpy.context.view_layer.update()
@@ -191,12 +244,24 @@ def run(params):
     k = t["width"] * MM / (max(xs) - min(xs))
     me.transform(Matrix.Diagonal((k, k, 1, 1)) @ Matrix.Translation(Vector((-(max(xs) + min(xs)) / 2, -(max(ys) + min(ys)) / 2, 0))))
     # face the front: text up -> +z, its normal -> -y; sit on the plate face
-    me.transform(Matrix.Translation(Vector((0, -a - stand - pt - 0.01 - g["text_thickness"] / 2, zc)) * MM) @ Matrix.Rotation(math.pi / 2, 4, "X"))
-    text = bpy.data.objects.new("Box | Plate text", me)
-    scene.collection.objects.link(text)
+    wm = (t.get("x", 0), zc, t["width"] / 2 + 0.5, (max(ys) - min(ys)) * k / MM / 2 + 0.5)  # x, z, half sizes (mm) round the letters
+    y = -a - 1 + depth / 2 if deboss else -a - stand - pt - 0.01 - depth / 2
+    me.transform(Matrix.Translation(Vector((t.get("x", 0), y, zc)) * MM) @ Matrix.Rotation(math.pi / 2, 4, "X"))
+    if deboss:
+        bm = bmesh.new()
+        bm.from_mesh(me)
+        bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-7)  # glyph conversion leaves split seams
+        bm.to_mesh(me)
+        bm.free()
+        cutter = bpy.data.objects.new("cut", me)
+        scene.collection.objects.link(cutter)
+        boolean(owner, cutter, "DIFFERENCE")
+    else:
+        text = bpy.data.objects.new("Box | Plate text", me)
+        scene.collection.objects.link(text)
 
-    lid_group = [lid, band, ribbons_lid, plate, text]
-    base_group = [base, ribbons, band_base]
+    lid_group = [o for o in (lid, band, ribbons_lid, plate, text) if o]
+    base_group = [o for o in (base, ribbons, band_base) if o]
     parts = lid_group + base_group
     rr = g["edge_radius"]
     L, C = 2 * (a - rr), rr * math.pi / 2
@@ -279,7 +344,7 @@ def run(params):
                     links.new(nm.outputs["Normal"], bsdf.inputs["Normal"])
                 else:
                     links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
-    for o, role in ((ribbons, "gold"), (ribbons_lid, "gold"), (band, "gold"), (band_base, "gold"), (plate, "gold"), (text, "ink")):
+    for o, role in ((o, r) for o, r in ((ribbons, "gold"), (ribbons_lid, "gold"), (band, "gold"), (band_base, "gold"), (plate, "gold"), (text, "ink")) if o):
         o.data.materials.clear()
         o.data.materials.append(mats[role])
     t = 0.01
@@ -291,6 +356,15 @@ def run(params):
         o.data.materials.append(mats["accent"])
         for f in o.data.polygons:
             f.material_index = 1 if all(inside[o](o.data.vertices[i].co) for i in f.vertices) else 0
+    if deboss and g.get("wordmark_ink"):  # letter walls and floors (a vertex within 0.25 mm of the floor) take the darker ink
+        owner.data.materials.append(mats["ink"])
+        vs = owner.data.vertices
+        for f in owner.data.polygons:
+            co = [vs[i].co / MM for i in f.vertices]
+            if (all(abs(c.x - wm[0]) < wm[2] and abs(c.z - wm[1]) < wm[3] and c.y < -a + w - 0.5 for c in co)
+                    and max(c.y for c in co) > -a + deboss - 0.25):
+                f.material_index = 2
+        assert any(f.material_index == 2 for f in owner.data.polygons), "no wordmark faces found"
     assert all(sum(f.material_index for f in o.data.polygons) for o in (lid, base)), "lining faces missing"
 
     ctrl = {}

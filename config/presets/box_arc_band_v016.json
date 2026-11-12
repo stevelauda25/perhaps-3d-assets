@@ -1,0 +1,226 @@
+{
+  "name": "arc-band",
+  "note": "13 Arc Band (references/packaging/13_arc_band.png, concept 2026-11-12): a closed 140 mm cube (the size of Final Blender/Perhaps_Select_Box.blend) in deep midnight navy rib jacquard (designer photo) with softly rounded edges. On the front, four flat gold ribbons run from the four corners: each hugs the vertical edge for a while, then sweeps in and meets a centred gold nameplate from the side (the upper pair just above the plate's middle, the lower pair just below). The nameplate is a rounded gold bar with Perhaps. printed in dark serif. A gold band of the ribbon's section runs round the lid's top edge, and another round the base's bottom edge; the ribbons meet them at the top and bottom front corners (designer note 2026-11-12: the gold must join up). The lid is the top lid_height plus a shield-shaped front flap bounded by the two upper ribbons (designer note 2026-11-12: Perhaps lifts with the lid); it is hinged on the back edge of the seam and opens 100 deg onto a navy velvet-lined compartment. The lower ribbons and the bottom band stay on the base. A straight bar of the same section joins the two lower ribbons behind the plate, so the base's gold line is unbroken when the lid is open; the plate stands just off the cloth over it. Cloth UVs wrap continuously round the vertical edges (seam mid-back); 3 mm soft edges. Walls 3.3 mm, just under the ribbon inset, so the flap cut never notches the side walls. v012 (designer note): no gold borders; ribbons, top and bottom bands and the bridge are gone, the shield flap seam stays, the Perhaps. plate sits 0.05 mm off the cloth on the flap. v013 (designer concept references/packaging/13_arc_band_v013.png): no gold at all; the flap seam is one sweeping curve, high at the left front corner, lowest just left of centre, rising to the right edge; Perhaps. is blind-debossed 0.35 mm into the cloth on the flap; one tone-on-tone groove sweeps from the right edge down to the bottom on the base front. v014 (designer feedback: not close enough, Perhaps. invisible, must be centred): the arcs are 1 mm steps with a 1.5 mm ramp between cloth panels, not thin lines. Arc 1 runs bottom-left to top-right corner on the front and, turned about the front-left-top corner, on round the left and top faces, so the corner cap stands proud of one band; arc 2 (right edge to the bottom) steps the lower-right panel a further 1 mm down. The flap seam follows arc 2 from the right edge to x 38 mm (hidden in that step), then curves under the wordmark up to the top-left corner. Perhaps. is centred on the front (40 mm wide), 0.6 mm deep into the band, its walls and floor in a darker navy. Cloth: fine linen weave in navy instead of rib jacquard; the v013 groove is gone. v015 (designer feedback): the right and back faces carry the front pattern too (both arcs, turned about the vertical axis); the lid is a plain top lid, the seam straight round at lid_height 12 mm, hinged at the back; Perhaps. stays centred on the front, on the base. v016 (designer feedback: the right side did not join the others): each side is now the mirror of its neighbour across the shared edge (front, right mirrored, back = front turned 180 deg, left mirrored), so arc 1 zigzags round the four sides corner to corner and arc 2 meets its partner at 64 mm on the front-right and back-left edges; recess depths match across every edge. The top carries a 30 mm recessed lens between the two top corners where the side arcs meet (back-left and front-right).",
+  "geometry_mm": {
+    "size": 140.0,
+    "edge_radius": 3.0,
+    "edge_segments": 6,
+    "ribbon_width": 2.4,
+    "ribbon_proud": 0.9,
+    "ribbon_inset": 3.4,
+    "ribbon_samples": 72,
+    "ribbon_meet": [
+      2.5,
+      -4.0
+    ],
+    "ribbon_hug": 0.33,
+    "plate": [
+      48.0,
+      20.0,
+      3.0
+    ],
+    "plate_radius": 3.5,
+    "plate_center_z": 70.0,
+    "plate_text": {
+      "text": "Perhaps.",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 40.0,
+      "x": 0.0
+    },
+    "text_thickness": 0.06,
+    "lid_height": 12.0,
+    "lid_top": 3.0,
+    "seam_gap": 0.05,
+    "wall": 3.3,
+    "base_floor": 5.0,
+    "gold_trim": false,
+    "wordmark_deboss": 1.6,
+    "relief": {
+      "recesses": [
+        {
+          "bezier": [
+            [
+              [
+                -72,
+                -2
+              ],
+              [
+                -52,
+                75
+              ],
+              [
+                5,
+                125
+              ],
+              [
+                72,
+                142
+              ]
+            ]
+          ],
+          "close": [
+            [
+              95,
+              160
+            ],
+            [
+              95,
+              -20
+            ],
+            [
+              -72,
+              -20
+            ]
+          ],
+          "depth": 1.0,
+          "faces": [
+            "front",
+            "mirror_right",
+            "back",
+            "mirror_left"
+          ],
+          "ramp_mm": 1.5
+        },
+        {
+          "bezier": [
+            [
+              [
+                -48,
+                -5
+              ],
+              [
+                -15,
+                18
+              ],
+              [
+                30,
+                45
+              ],
+              [
+                75,
+                64
+              ]
+            ]
+          ],
+          "close": [
+            [
+              95,
+              64
+            ],
+            [
+              95,
+              -20
+            ],
+            [
+              -48,
+              -20
+            ]
+          ],
+          "depth": 2.0,
+          "faces": [
+            "front",
+            "mirror_right",
+            "back",
+            "mirror_left"
+          ],
+          "ramp_mm": 1.5
+        },
+        {
+          "bezier": [
+            [
+              [
+                -72,
+                142
+              ],
+              [
+                -10.0,
+                108.0
+              ],
+              [
+                38.0,
+                60.0
+              ],
+              [
+                72,
+                -2
+              ]
+            ],
+            [
+              [
+                72,
+                -2
+              ],
+              [
+                10.0,
+                32.0
+              ],
+              [
+                -38.0,
+                80.0
+              ],
+              [
+                -72,
+                142
+              ]
+            ]
+          ],
+          "close": [],
+          "depth": 1.0,
+          "ramp_mm": 1.5,
+          "faces": [
+            "top_xy"
+          ]
+        }
+      ]
+    },
+    "wordmark_ink": true,
+    "front_flap": false
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (navy fine linen colour and normal maps on the cloth, darker navy letters); renders swap in config/presets/box_arc_band_v014_look.json.",
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.72
+    },
+    "gold": {
+      "color_linear": [
+        0.98,
+        0.74,
+        0.44
+      ],
+      "roughness": 0.3,
+      "metallic": 1.0
+    },
+    "ink": {
+      "color_linear": [
+        0.0016,
+        0.003,
+        0.017
+      ],
+      "roughness": 0.85
+    },
+    "accent": {
+      "color_linear": [
+        0.01,
+        0.012,
+        0.03
+      ],
+      "roughness": 0.9
+    },
+    "swatch": "textures/sources/designer_umber_linen/navy_linen_color_glb.jpg",
+    "swatch_normal": "textures/sources/designer_umber_linen/umber_linen_normal_gl.png",
+    "swatch_tile_mm": 256
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "open_deg": 100,
+    "frames": 30
+  }
+}
