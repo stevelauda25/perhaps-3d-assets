@@ -1,7 +1,7 @@
 {
   "asset": "Rib jacquard (designer photo, 2026-11-12)",
   "author": "supplied by the designer in chat",
-  "note": "source_photo.png is the photo as sent. The maps come from its flattest area (rows 520-865), turned 17.5 deg so the ribs run level, lighting divided out (28 px blur), 420 x 196 px kept, mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237) baked from Final Blender/Perhaps_Select_Box.blend; height = the relief. rib_jacquard_black_color.png: the same relief times black (0.012, 0.0115, 0.011). rib_jacquard_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.16 mm render relief (for the GLB; web viewers light it harder).",
+  "note": "source_photo.png is the photo as sent. The maps come from its flattest area (rows 520-865), turned 17.5 deg so the ribs run level, lighting divided out (28 px blur), 420 x 196 px kept, mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237) baked from Final Blender/Perhaps_Select_Box.blend; height = the relief. rib_jacquard_black_color.png: the same relief times black (0.012, 0.0115, 0.011). rib_jacquard_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.16 mm render relief (for the GLB; web viewers light it harder). rib_jacquard_navy_color.png: the same relief times a near-black midnight navy (0.0028, 0.0042, 0.0165).",
   "rib_period_px": 23,
   "files": {
     "rib_jacquard_black_color.png": {
@@ -11,6 +11,10 @@
     "rib_jacquard_height.png": {
       "bytes": 204757,
       "sha256": "5d4889c8b37e771ea7356a1b389a4e7f0ac6a3beed22845877b4db9a985c6311"
+    },
+    "rib_jacquard_navy_color.png": {
+      "bytes": 220766,
+      "sha256": "0966dfdd849853fd0ec24b00db2aca204c1cd02da0bde65db42ac6f7da642374"
     },
     "rib_jacquard_normal_gl.png": {
       "bytes": 363822,
