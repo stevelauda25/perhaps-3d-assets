@@ -1,0 +1,93 @@
+{
+  "name": "facet-star",
+  "note": "11 Facet Star (references/packaging/11_facet_star_v003.png, sketch 2026-11-12): 100 x 100 mm footprint, 85 mm tall closed (the sketch is wider than tall). Thick-walled base whose four sides are split into a facet_grid of cells, each a shallow inverted pyramid (centre facet_depth in from the face, ridges on the cube plane). A gold four-point star sits on the centre crossing of the front. A thin lid, hinged at the back, opening 105 deg; the upper lid_trim of its edge is gold, the rest black. Under it a card with a thumb notch on the right and Perhaps set in gold serif (card_text). Black velvet lining; the compartment has a thick border (liner_border wide, liner_drop below the rim). Black version: fine black leather grain outside, black velvet lining, black card.",
+  "geometry_mm": {
+    "size": 100.0,
+    "height": 85.0,
+    "lid_thickness": 7.0,
+    "seam_gap": 0.05,
+    "wall": 8.0,
+    "base_floor": 6.0,
+    "facet_grid": [
+      4,
+      2
+    ],
+    "facet_depth": 4.0,
+    "edge_radius": 0.5,
+    "edge_segments": 3,
+    "card_half": 41.0,
+    "card_thickness": 1.5,
+    "card_notch_radius": 7.0,
+    "star": {
+      "tip": 11.0,
+      "power": 0.62,
+      "thickness": 1.2,
+      "x": 0.0,
+      "z": null
+    },
+    "wordmark_width": 34.0,
+    "wordmark_thickness": 0.08,
+    "lid_trim": 5.5,
+    "liner_border": 5.0,
+    "liner_drop": 2.0,
+    "liner_radius": 1.0,
+    "card_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 36.0,
+      "note": "as the designer's lid detail (2026-11-12): Perhaps in a classic serif; the macOS Georgia outline is baked to a mesh at build time, the font file is not shipped"
+    },
+    "lid_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 40.0,
+      "y": 0.0,
+      "note": "designer request 2026-11-12: Perhaps on the lid top, same gold serif as the card"
+    }
+  },
+  "wordmark_svg": "references/brand/perhaps-wordmark-v2.clean.svg",
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB; renders swap in the library look via config/presets/box_facet_star_look.json.",
+    "exterior": {
+      "color_linear": [
+        0.014,
+        0.013,
+        0.013
+      ],
+      "roughness": 0.6
+    },
+    "accent": {
+      "color_linear": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "roughness": 0.9
+    },
+    "card": {
+      "color_linear": [
+        0.012,
+        0.012,
+        0.012
+      ],
+      "roughness": 0.75
+    },
+    "gold": {
+      "color_linear": [
+        0.96,
+        0.72,
+        0.46
+      ],
+      "roughness": 0.5,
+      "metallic": 1.0
+    }
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "open_deg": 105,
+    "frames": 30
+  }
+}

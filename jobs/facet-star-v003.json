@@ -1,0 +1,219 @@
+{
+  "id": "facet-star-v003",
+  "output": "outputs/jobs/facet-star-v003",
+  "asset_type": "packaging",
+  "model": "11 Facet Star (black): 100 x 100 x 85 mm box, 4 x 2 faceted thick-walled base with a centred gold four-point star, thin back-hinged lid with a gold edge band, card with thumb notch and perhaps wordmark, black velvet lining with a thick border",
+  "baseline": "Rebuilt from the v003 sketch (2026-11-12): 100 x 100 x 85 mm, 4 x 2 facets, larger centred star, 7 mm lid whose upper 5.5 mm edge is gold, black leather grain outside, black velvet lining, black card. Lights and light paths copied from Final Blender/Perhaps_Select_Box.blend. Perhaps in gold serif on the lid top too. Closing sequence renders: open 105 deg, rotating forward (frame 14, about 47 deg), approaching (frame 6, about 18 deg).",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/packaging/11_facet_star_v003.png",
+    "config/presets/box_facet_star.json",
+    "config/presets/box_facet_star_look.json",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_facet_star",
+      "params": {
+        "spec": "config/presets/box_facet_star.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/facet-star-v003/facet-star.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_facet_star_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.55,
+            -0.7,
+            0.45
+          ],
+          "target": [
+            0,
+            0,
+            0.05
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "open",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "preview-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.45,
+            -0.78,
+            0.55
+          ],
+          "target": [
+            0,
+            0,
+            0.07
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "seq-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.42,
+            -0.8,
+            0.42
+          ],
+          "target": [
+            0,
+            0,
+            0.06
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "seq-rotate-frame",
+      "step": "scene_frame",
+      "params": {
+        "frame": 14
+      }
+    },
+    {
+      "name": "seq-rotate",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.42,
+            -0.8,
+            0.42
+          ],
+          "target": [
+            0,
+            0,
+            0.06
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "seq-approach-frame",
+      "step": "scene_frame",
+      "params": {
+        "frame": 6
+      }
+    },
+    {
+      "name": "seq-approach",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.42,
+            -0.8,
+            0.42
+          ],
+          "target": [
+            0,
+            0,
+            0.06
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}

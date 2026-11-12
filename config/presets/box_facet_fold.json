@@ -1,0 +1,90 @@
+{
+  "name": "facet-fold",
+  "note": "12 Facet Fold (written brief 2026-11-12, Facet Star look): 100 x 100 mm box, 60 mm tall (proportions of the designer's green magnetic box photo), closed by a magnetic-flap cover. The top panel is hinged on the box's top back edge; the front panel is the cover's front flap, folded at 90 deg to the top panel along the top front edge. Closed, the top panel is the top and the front panel the whole front face, carrying the 4 x 2 facets and the gold four-point star. Open (as the reference video, a magnetic flap box), the cover swings as one L: the top panel stands at 100 deg and the front flap becomes a canopy over the box. The base (floor and four walls, the front one set back behind the flap) never moves; all four walls carry the facets. Designer rib jacquard in black outside, black velvet lining with a thick border, black card under the top panel with a thumb notch and Perhaps in gold serif; Perhaps also on the top panel. Thin 3 mm cover; facets 2 mm deep everywhere so the flap can carry them. No gold on the cover edges.",
+  "geometry_mm": {
+    "size": 100.0,
+    "height": 60.0,
+    "top_thickness": 3.0,
+    "front_thickness": 3.0,
+    "gap": 0.05,
+    "wall": 6.0,
+    "base_floor": 5.0,
+    "facet_grid": [
+      4,
+      2
+    ],
+    "facet_depth": 2.0,
+    "edge_radius": 0.5,
+    "edge_segments": 3,
+    "card_margin": 2.0,
+    "card_thickness": 1.5,
+    "card_notch_radius": 7.0,
+    "liner_border": 5.0,
+    "liner_drop": 2.0,
+    "liner_radius": 1.0,
+    "star": {
+      "tip": 9.0,
+      "power": 0.62,
+      "thickness": 1.2
+    },
+    "lettering_thickness": 0.08,
+    "card_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 36.0
+    },
+    "top_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 40.0
+    }
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (the black rib jacquard colour and normal maps on the cloth); renders swap in config/presets/box_facet_fold_look.json.",
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.6
+    },
+    "accent": {
+      "color_linear": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "roughness": 0.9
+    },
+    "card": {
+      "color_linear": [
+        0.012,
+        0.012,
+        0.012
+      ],
+      "roughness": 0.75
+    },
+    "gold": {
+      "color_linear": [
+        0.96,
+        0.72,
+        0.46
+      ],
+      "roughness": 0.5,
+      "metallic": 1.0
+    },
+    "swatch": "textures/sources/designer_rib_jacquard/rib_jacquard_black_color.png",
+    "swatch_normal": "textures/sources/designer_rib_jacquard/rib_jacquard_normal_gl.png",
+    "swatch_tile_mm": 80
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "note": "as the reference video (magnetic flap box): the cover swings as one L on the back hinge; frame 1 closed, last frame open",
+    "open_deg": 100,
+    "frames": 30
+  }
+}
