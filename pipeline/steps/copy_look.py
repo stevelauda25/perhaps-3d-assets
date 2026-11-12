@@ -34,7 +34,7 @@ def run(params):
             if slot.material and slot.material.name in params["materials"]:
                 slot.material = mats[params["materials"][slot.material.name]]
                 swapped += 1
-    assert swapped, "no slot matched %s" % sorted(params["materials"])
+    assert swapped or not params["materials"], "no slot matched %s" % sorted(params["materials"])  # {} = lights only
 
     for o in [o for o in scene.objects if o.name.startswith(prefix)]:
         bpy.data.objects.remove(o)

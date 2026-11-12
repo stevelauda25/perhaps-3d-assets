@@ -1,0 +1,93 @@
+{
+  "name": "sleeve-lock",
+  "note": "10 Signature Sleeve Lock, v002 sketch (references/packaging/10_sleeve_lock_v002.png, 2026-11-12): 100 mm cube, lift-off lid ('lift along shape'). The seam is level at seam_side_z on the sides and back and drops in a V across the front to seam_low_z at the centre. Along the seam a `reveal` gap shows the lid's velvet lining, which hangs below the lid as a skirt (inset from the faces, half sizes `skirt`) down to the base rim; inside it a thick velvet collar on the base rises collar_rise above the seam; a half-round gold bead runs along the lid's lower edge and another along the base rim. A strap runs up the front, over the lid and down the back; a plain gold clasp on the lid sits on the strap at the V tip, across the reveal. Inside the collar a velvet ring pad of two rounded rolls. The perhaps wordmark in gold foil on the lid ceiling. Select colours: designer rib jacquard outside in the Select green, green leather strap, Select | interior lining.",
+  "geometry_mm": {
+    "size": 100.0,
+    "seam_side_z": 68.0,
+    "seam_low_z": 42.0,
+    "reveal": 7.0,
+    "wall": 3.0,
+    "lid_top": 3.0,
+    "base_floor": 3.0,
+    "bead_height": 3.0,
+    "bead_proud": 1.4,
+    "bead_radius": 1.3,
+    "collar_rise": 12.0,
+    "collar_wall": 3.5,
+    "collar_clearance": 0.3,
+    "collar_radius": 1.5,
+    "strap_width": 22.0,
+    "strap_thickness": 1.2,
+    "clasp": [
+      16.0,
+      16.0,
+      4.0
+    ],
+    "clasp_radius": 1.2,
+    "pad_top_z": 44.0,
+    "pad_slot": [
+      3.5,
+      9.0
+    ],
+    "pad_radius": 4.0,
+    "wordmark_width": 40.0,
+    "wordmark_center_y": 0.0,
+    "wordmark_thickness": 0.04,
+    "uv_offset_mm": 60.0,
+    "field_step": 1.0,
+    "edge_radius": 0.8,
+    "edge_segments": 3,
+    "skirt": [
+      47.0,
+      49.0
+    ],
+    "skirt_gap": 0.3
+  },
+  "wordmark_svg": "references/brand/perhaps-wordmark-v2.clean.svg",
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (the jacquard swatch as colour on the cloth); renders swap in the library look via config/presets/box_sleeve_lock_look.json.",
+    "swatch": "textures/sources/designer_rib_jacquard/rib_jacquard_select_green_color.png",
+    "swatch_tile_mm": 80,
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.664
+    },
+    "accent": {
+      "color_linear": [
+        0.7125,
+        0.6538,
+        0.5366
+      ],
+      "roughness": 0.78
+    },
+    "strap": {
+      "color_linear": [
+        0.0088,
+        0.0594,
+        0.0237
+      ],
+      "roughness": 0.52
+    },
+    "gold": {
+      "color_linear": [
+        0.96,
+        0.72,
+        0.46
+      ],
+      "roughness": 0.5,
+      "metallic": 1.0
+    }
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "lift_mm": 60,
+    "frames": 30
+  }
+}

@@ -104,8 +104,8 @@ def build(preset, overrides=None, pack=False, name=None):
     if p["maps"].get("roughness"):
         rough = tex("roughness", (-500, 100))
         rm = node("ShaderNodeMapRange", "Calibrated roughness", (-250, 100)); rm.clamp = True
-        for k, v in zip(("From Min", "From Max", "To Min", "To Max"), (*r["source_range"], *r["range"])):
-            rm.inputs[k].default_value = v
+        for name, v in zip(("From Min", "From Max", "To Min", "To Max"), (*r["source_range"], *r["range"])):  # not k: k is the mm scale the nap layers use
+            rm.inputs[name].default_value = v
         links.new(rough.outputs["Color"], rm.inputs["Value"])
         links.new(rm.outputs["Result"], bsdf.inputs["Roughness"])
     else:

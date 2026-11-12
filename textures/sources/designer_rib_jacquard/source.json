@@ -1,0 +1,20 @@
+{
+  "asset": "Rib jacquard (designer photo, 2026-11-12)",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the photo as sent. The maps come from its flattest area (rows 520-865), turned 17.5 deg so the ribs run level, lighting divided out (28 px blur), 420 x 196 px kept, mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237) baked from Final Blender/Perhaps_Select_Box.blend; height = the relief.",
+  "rib_period_px": 23,
+  "files": {
+    "rib_jacquard_height.png": {
+      "bytes": 204757,
+      "sha256": "5d4889c8b37e771ea7356a1b389a4e7f0ac6a3beed22845877b4db9a985c6311"
+    },
+    "rib_jacquard_select_green_color.png": {
+      "bytes": 268130,
+      "sha256": "6e1d456c31f1ae63ac1e1f83080da17f412ba1d758e4c12fd01faca075016965"
+    },
+    "source_photo.png": {
+      "bytes": 619368,
+      "sha256": "e2e86c19b8d68833be703da8f01b13e0335760111a7753f192aa945ee78bce30"
+    }
+  }
+}
