@@ -1,0 +1,15 @@
+{
+  "asset": "Ivory jacquard (designer swatch, 2026-11-12)",
+  "author": "supplied by the designer in chat",
+  "note": "Colour is the swatch as sent; height is its luminance stretched to full range (no separate scan).",
+  "files": {
+    "ivory_jacquard_color.png": {
+      "bytes": 1289612,
+      "sha256": "0e173e54350337ca361db9307eb051af0924d5293bec5b0d897eb241e47c1584"
+    },
+    "ivory_jacquard_height.png": {
+      "bytes": 562433,
+      "sha256": "e543002f8b25c4c63827320075ca0df8a62167a1e67f2a8c37cdb5d4a2427542"
+    }
+  }
+}

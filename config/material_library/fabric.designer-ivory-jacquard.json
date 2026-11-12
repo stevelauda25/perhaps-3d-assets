@@ -1,0 +1,66 @@
+{
+  "id": "fabric.designer-ivory-jacquard",
+  "category": "fabric",
+  "name": "Ivory jacquard weave (designer swatch, broken horizontal ribs)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/designer_ivory_jacquard",
+    "url": null,
+    "license": "supplied by the designer for Perhaps packaging"
+  },
+  "maps": {
+    "color": "ivory_jacquard_color.png",
+    "roughness": null,
+    "normal": null,
+    "height": "ivory_jacquard_height.png"
+  },
+  "mapping": {
+    "mode": "uv",
+    "tile_width_mm": 120,
+    "uv_map": "Metric UV",
+    "uv_mm_per_unit": 1000
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.78
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.12,
+    "bump_strength": 1.0,
+    "note": "distance chosen for a soft woven relief, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.25,
+    "sheen_weight": 0.35,
+    "sheen_roughness": 0.5
+  },
+  "measured": {
+    "mean_linear_rgb": [
+      0.85,
+      0.81,
+      0.723
+    ],
+    "note": "colour map mean"
+  },
+  "limitations": [
+    "Single swatch photo, not tileable: the build offsets its metric UVs so every 100 mm face sits inside one 120 x 180 mm tile, with no seam on a face.",
+    "Physical scale assumed (120 mm across the swatch)."
+  ],
+  "selected_for": "sleeve-lock (candidate)"
+}
