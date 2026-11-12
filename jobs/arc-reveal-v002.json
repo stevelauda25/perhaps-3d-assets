@@ -1,0 +1,150 @@
+{
+  "id": "arc-reveal-v002",
+  "output": "outputs/jobs/arc-reveal-v002",
+  "asset_type": "packaging",
+  "model": "07 Arc Reveal: 100 mm cube, lift-off lid with arch cuts, base with flush arch panels, insert, cushion",
+  "baseline": "arc-reveal-v001 geometry with the exact Select look: materials (Select | exterior, Select | interior), the four PCS2 lights and light-path settings copied verbatim from Final Blender/Perhaps_Select_Box.blend. The cushion is removed (the insert trough stays).",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/packaging/07_arc_reveal.png",
+    "config/presets/box_arc_reveal.json",
+    "config/presets/box_arc_reveal_look.json",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_arc_reveal",
+      "params": {
+        "spec": "config/presets/box_arc_reveal.json"
+      }
+    },
+    {
+      "name": "drop-cushion",
+      "step": "delete_objects",
+      "params": {
+        "names": [
+          "Box | Cushion"
+        ]
+      }
+    },
+    {
+      "name": "logo",
+      "step": "box_logo_stamp",
+      "params": {
+        "object": "Box | Lid",
+        "svg": "references/brand/perhaps-wordmark-v2.clean.svg",
+        "width_mm": 54.0,
+        "center_z_mm": 85.0,
+        "front_y_mm": -50.0,
+        "depth_mm": 0.32,
+        "shoulder_mm": 0.45,
+        "shoulder_round": 0.3,
+        "coarse_mm": 0.4,
+        "fine_div": 4,
+        "uv": "Metric UV"
+      }
+    },
+    {
+      "name": "export",
+      "step": "glb_bake_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {
+          "Arc Reveal | exterior": "Select | exterior",
+          "Arc Reveal | accent": "Select | interior",
+          "Arc Reveal | exterior | stamped": "Select | exterior"
+        },
+        "tile_mm": 200,
+        "px": 1024,
+        "uv": "Metric UV",
+        "glb": "outputs/jobs/arc-reveal-v002/arc-reveal.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_arc_reveal_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-look",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {
+          "Arc-Reveal | exterior": "Select | exterior",
+          "Arc-Reveal | accent": "Select | interior",
+          "Arc Reveal | exterior | stamped": "Select | exterior | stamped"
+        },
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "preview",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ]
+      }
+    },
+    {
+      "name": "open",
+      "step": "box_lift",
+      "params": {
+        "lift_mm": 75
+      }
+    },
+    {
+      "name": "preview-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.37,
+            -0.92,
+            0.58
+          ],
+          "target": [
+            0,
+            0,
+            0.088
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}
