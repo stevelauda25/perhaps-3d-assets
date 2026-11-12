@@ -1,0 +1,200 @@
+{
+  "id": "facet-fold-v012",
+  "output": "outputs/jobs/facet-fold-v012",
+  "asset_type": "packaging",
+  "model": "12 Facet Fold v010: 140 mm cube, magnetic L flap cover on the back hinge, oxblood grained leather outside, small raised champagne-gold Perhaps and star, cream suede lining, card and fitted cushion",
+  "baseline": "v011 in a premium bordeaux: oxblood leather tinted to a deep wine red with a red satin sheen (roughness 0.45, finer 0.06 mm grain), warm ivory inside at a lower value, key 0.5 W and edge strip 9 W (v011: 0.8 / 14) plus a 2.5 W soft back rim light. GLB swatch recoloured to match.",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "textures/sources/designer_oxblood_leather/source_photo.png",
+    "references/packaging/12_facet_fold_proportions.png",
+    "references/packaging/11_facet_star_v003.png",
+    "config/presets/box_facet_fold_v010.json",
+    "config/presets/box_facet_fold_v010_look.json",
+    "Final Blender/Perhaps_Select_Box.blend"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_facet_fold",
+      "params": {
+        "spec": "config/presets/box_facet_fold_v012.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/facet-fold-v012/facet-fold.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_facet_fold_v012_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "light",
+      "step": "light_adjust",
+      "params": {
+        "edit": {
+          "PCS2 | 01 Grazing key": {
+            "power_w": 0.5
+          },
+          "PCS2 | 02 Upper edge strip": {
+            "power_w": 9.0
+          },
+          "PCS2 | 03 Side definition": {
+            "power_w": 0.1
+          },
+          "PCS2 | 04 Underside bounce": {
+            "power_w": 0.05
+          }
+        },
+        "add": [
+          {
+            "name": "FF12 | back rim",
+            "size": [
+              0.4,
+              0.4
+            ],
+            "position": [
+              0.6,
+              0.7,
+              0.5
+            ],
+            "target": [
+              0,
+              0,
+              0.07
+            ],
+            "power_w": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "closed",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f9",
+      "step": "scene_frame",
+      "params": {
+        "frame": 9
+      }
+    },
+    {
+      "name": "slightly-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f30",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -1.0,
+            -1.6,
+            0.75
+          ],
+          "target": [
+            0,
+            0,
+            0.14
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}

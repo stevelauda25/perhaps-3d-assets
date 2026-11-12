@@ -1,7 +1,7 @@
 {
   "asset": "Embossed fret felt (designer photo, 2026-11-12)",
   "author": "supplied by the designer in chat",
-  "note": "source_photo.png is the photo as sent (red). Maps: luminance with lighting divided out (60 px blur), mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237); height = the relief, softened 1.2 px so the felt hairs do not read as relief. fret_felt_black_color.png: the same relief times black (0.012, 0.0115, 0.011). fret_felt_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.2 mm render relief (for the GLB).",
+  "note": "source_photo.png is the photo as sent (red). Maps: luminance with lighting divided out (60 px blur), mirrored 2 x 2 so it repeats without a seam. Colour = that relief times the Select | exterior mean linear colour (0.0088, 0.0594, 0.0237); height = the relief, softened 1.2 px so the felt hairs do not read as relief. fret_felt_black_color.png: the same relief times black (0.012, 0.0115, 0.011). fret_felt_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.2 mm render relief (for the GLB). fret_felt_normal_soft_gl.png: the same at 35 % of the 0.08 mm v009 relief (subtler black-on-black, Facet Fold v009 GLB).",
   "files": {
     "fret_felt_black_color.png": {
       "bytes": 3209518,
@@ -14,6 +14,10 @@
     "fret_felt_normal_gl.png": {
       "bytes": 2667555,
       "sha256": "af824dd7fe3aa4da30ed4656acd8b076a750023ab1e22d18a2e6461efa1b4a5a"
+    },
+    "fret_felt_normal_soft_gl.png": {
+      "bytes": 1809457,
+      "sha256": "271be7915a714e839c0bcd929ec88264911bfa17bfcf666a6e65b44fcdd604f5"
     },
     "fret_felt_select_green_color.png": {
       "bytes": 3843100,

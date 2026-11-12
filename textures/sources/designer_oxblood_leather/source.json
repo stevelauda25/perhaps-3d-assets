@@ -1,0 +1,40 @@
+{
+  "asset": "Oxblood grained leather (designer photo, 2026-11-12)",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the photo as sent (720 x 1152). Maps: linear colour per channel divided by a 60 px blur (the photo's dark-to-light lighting gradient removed) and multiplied back by the photo's mean, mirrored 2 x 2 so it repeats without a seam (1440 x 2304). Colour keeps the photo's own oxblood. Height = the luminance relief, softened 1 px, stretched 0.5-99.5 percentile to 0-1. oxblood_leather_normal_gl.png: OpenGL normal map from the height at 35 % of the 0.1 mm render relief (for the GLB). Scale assumed: the photo spans 120 mm, so the tile is 240 mm wide. oxblood_leather_color_glb.jpg: the colour map as JPEG q90, only for the GLB swatch. wine_leather_color.png: the colour map times (0.7606, 0.3947, 1.0072) per linear channel, so its mean is the bordeaux (0.075, 0.006, 0.014), about sRGB #4D121F (facet-fold-v012); wine_leather_color_glb.jpg: the same as JPEG q90 for the GLB swatch.",
+  "measured_mean_linear_rgb": [
+    0.0986,
+    0.0152,
+    0.0139
+  ],
+  "files": {
+    "oxblood_leather_color.png": {
+      "bytes": 6310778,
+      "sha256": "f6c4a523d68910e171e4fdd212a4991645f46a8f884afef2983e7edc27e4f3ff"
+    },
+    "oxblood_leather_color_glb.jpg": {
+      "bytes": 1128549,
+      "sha256": "fca1302d0d10c39930c2dde947ba0987a5c5caf19da4e9a8980df088c36e4e0a"
+    },
+    "oxblood_leather_height.png": {
+      "bytes": 2457989,
+      "sha256": "2366c6f424d62dac7789a58ee3dd379aaa6a0ab9e40c1f41b88cc5bbb0b3a751"
+    },
+    "oxblood_leather_normal_gl.png": {
+      "bytes": 2594049,
+      "sha256": "2ebf91d9ce1467f68f3154e872938c55952faa0c2c6cbcc04fd68d20e270f678"
+    },
+    "source_photo.png": {
+      "bytes": 1207016,
+      "sha256": "511dbc81f8649087c5b98f09d5500106b6a109c309396ab0c8cf567cf6978558"
+    },
+    "wine_leather_color.png": {
+      "bytes": 6372628,
+      "sha256": "672abeb790e927b3f4a088bbe2d4814deda3a45a5fcd823bb9cb7705cad5a412"
+    },
+    "wine_leather_color_glb.jpg": {
+      "bytes": 1012508,
+      "sha256": "0659d93d6fdf21392030e367a992e16a823392c85772d70bf2beddb83cd9cf96"
+    }
+  }
+}

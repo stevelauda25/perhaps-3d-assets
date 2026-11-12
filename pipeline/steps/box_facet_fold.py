@@ -1,7 +1,7 @@
 """box_facet_fold: build the 12 Facet Fold cube box (two-part folding lid) in an empty scene.
 
 Params: spec (config/presets/box_facet_fold.json, millimetres). Scene units are metres. Closed (frame 1) it is size x size x height.
-Base group (never moves): `Box | Base` (faceted sides and back, recessed front wall), `Box | Liner`.
+Base group (never moves): `Box | Base` (faceted sides and back, recessed front wall), `Box | Liner`, optional `Box | Cushion`.
 Lid: `Box | Top` hinged on the top back edge, carrying `Box | Card`, `Box | Card text`, `Box | Top text` (same origin and action);
 `Box | Front` (faceted, the closed front face) is a child of `Box | Top` at the top front edge, held at 90 deg (the folded
 cover flap), with `Box | Star` as its child. One `Lid open` action swings the whole L on the back hinge (reference video).
@@ -117,6 +117,11 @@ def run(params):
     liner = block("Box | Liner", ox0 + 0.05, ox1 - 0.05, oy0 + 0.05, oy1 - 0.05, g["base_floor"] + 0.05, zb - g["liner_drop"])
     bevel(liner, g["liner_radius"], 4)
     boolean(liner, block("cut", ox0 + lb, ox1 - lb, oy0 + lb, oy1 - lb, g["base_floor"] + 1.5, H + 5), "DIFFERENCE")
+    cush = g.get("cushion")  # optional fitted presentation cushion in the liner well, rounded like a pillow
+    if cush:
+        c0 = lb + cush["clearance"]
+        cushion = block("Box | Cushion", ox0 + c0, ox1 - c0, oy0 + c0, oy1 - c0, g["base_floor"] + 1.5 + cush["clearance"], zb - g["liner_drop"] - cush["below_liner_top"])
+        bevel(cushion, cush["radius"], cush["segments"])
 
     # top panel: the closed top behind the front panel; gold on the upper top_trim of its edges
     top = block("Box | Top", -a, a, -a + tf, a, zt, H)
@@ -137,16 +142,22 @@ def run(params):
         t = 2 * math.pi * i / 96
         cx_, cz_ = math.cos(t), math.sin(t)
         pts.append((s["tip"] * math.copysign(abs(cx_) ** (2 / s["power"]), cx_), H / 2 + s["tip"] * math.copysign(abs(cz_) ** (2 / s["power"]), cz_)))
+    # chamfer by scaling the face ring toward the centre: a bevel modifier folds the sub-0.3 mm tips inside out
+    bv, th, n = s.get("bevel", 0.25), s["thickness"], len(pts)
+    kc = 1 - 2 * bv / s["tip"]
     bm = bmesh.new()
-    f0 = [bm.verts.new((x * MM, (-a - s["thickness"]) * MM, z * MM)) for x, z in pts]
-    f1 = [bm.verts.new((x * MM, -a * MM, z * MM)) for x, z in pts]
-    bm.faces.new(f0)
-    bm.faces.new(f1[::-1])
-    for k in range(len(pts)):
-        bm.faces.new((f0[k], f0[(k + 1) % len(pts)], f1[(k + 1) % len(pts)], f1[k]))
+    f0 = [bm.verts.new((x * kc * MM, (-a - th) * MM, (H / 2 + (z - H / 2) * kc) * MM)) for x, z in pts]
+    f1 = [bm.verts.new((x * MM, (-a - th + min(bv, th / 2)) * MM, z * MM)) for x, z in pts]
+    f2 = [bm.verts.new((x * MM, -a * MM, z * MM)) for x, z in pts]
+    for ring, y in ((f0, -a - th), (f2, -a)):  # caps as fans from the centre: one concave 96-gon triangulates into overlapping slivers in the GLB
+        c = bm.verts.new((0, y * MM, H / 2 * MM))
+        for k in range(n):
+            bm.faces.new((c, ring[k], ring[(k + 1) % n]))
+    for ra, rb in ((f0, f1), (f1, f2)):
+        for k in range(n):
+            bm.faces.new((ra[k], ra[(k + 1) % n], rb[(k + 1) % n], rb[k]))
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     star = link("Box | Star", bm)
-    bevel(star, s.get("bevel", 0.25), s.get("bevel_segments", 2))
 
     # card under the top panel, centred on the compartment opening, thumb notch on the right
     ccx, ccy = 0.0, (oy0 + oy1) / 2
@@ -189,7 +200,7 @@ def run(params):
 
     top_group = [top, card, card_text, top_text]
     front_group = [front, star]
-    base_group = [base, liner]
+    base_group = [base, liner] + ([cushion] if cush else [])
     parts = top_group + front_group + base_group
 
     # metric UVs (dominant-axis projection); keep every facet crisp
@@ -220,7 +231,7 @@ def run(params):
         bsdf.inputs["Base Color"].default_value = (*ms[role]["color_linear"], 1)
         bsdf.inputs["Roughness"].default_value = ms[role]["roughness"]
         bsdf.inputs["Metallic"].default_value = ms[role].get("metallic", 0.0)
-        if role == "exterior" and ms.get("swatch"):  # cloth colour (and normal) maps on the metric UVs, for the GLB
+        if role == "exterior" and (ms.get("swatch") or ms.get("swatch_normal")):  # cloth colour and/or normal maps on the metric UVs, for the GLB
             nodes, links = mat.node_tree.nodes, mat.node_tree.links
             uvn = nodes.new("ShaderNodeUVMap")
             uvn.uv_map = "Metric UV"
@@ -257,7 +268,8 @@ def run(params):
     for f in top.data.polygons:  # leather on top and the lower edge, lining underneath, gold on the upper edge
         f.material_index = 1 if f.normal.z < -0.7 else 2 if trim and f.normal.z <= 0.7 and f.center.z > (H - trim) * MM else 0
     front.data.materials.append(mats["exterior"])
-    liner.data.materials.append(mats["accent"])
+    for o in base_group[1:]:  # liner (and cushion)
+        o.data.materials.append(mats["accent"])
     card.data.materials.append(mats["card"])
     for o in (star, card_text, top_text):
         o.data.materials.append(mats["gold"])

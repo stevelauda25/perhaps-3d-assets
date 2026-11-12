@@ -1,0 +1,100 @@
+{
+  "name": "facet-fold-v009",
+  "note": "12 Facet Fold (written brief 2026-11-12, Facet Star look): 140 mm cube, the size of Final Blender/Perhaps_Select_Box.blend, closed by a magnetic-flap cover. The top panel is hinged on the box's top back edge; the front panel is the cover's front flap, folded at 90 deg to the top panel along the top front edge. Closed, the top panel is the top and the front panel the whole front face, carrying the 4 x 2 facets and the gold four-point star. Open (as the reference video, a magnetic flap box), the cover swings as one L: the top panel stands at 100 deg and the front flap becomes a canopy over the box. The base (floor and four walls, the front one set back behind the flap) never moves; all four walls carry the facets. Black embossed fret felt (designer photo) outside, black velvet lining with a thick border, black card under the top panel with a thumb notch and Perhaps in gold serif; Perhaps also on the top panel. Thin 3 mm cover; facets 2 mm deep everywhere so the flap can carry them. No gold on the cover edges. Since v006 the sides are plain (facet_depth 0, no criss-cross pyramids); the gold star stays on the front flap. Since v007 the outside is the thin designer fret felt in black. Since v008 the top Perhaps and the star are raised gold embossing: Perhaps 0.6 mm with a 0.12 mm rounded shoulder, star 1.2 mm with a 0.5 mm one. v009 (luxury brief 2026-11-12): fret much subtler (relief only, no colour contrast), smaller thinner raised wordmark (35 mm, 0.3 mm) and star (8 mm tip, 0.6 mm), muted lavender #C3A6CD suede lining and card, a fitted lavender presentation cushion in the well.",
+  "geometry_mm": {
+    "size": 140.0,
+    "height": 140.0,
+    "top_thickness": 3.0,
+    "front_thickness": 3.0,
+    "gap": 0.05,
+    "wall": 6.0,
+    "base_floor": 5.0,
+    "facet_grid": [
+      4,
+      2
+    ],
+    "facet_depth": 0.0,
+    "edge_radius": 0.5,
+    "edge_segments": 3,
+    "card_margin": 2.0,
+    "card_thickness": 1.5,
+    "card_notch_radius": 7.0,
+    "liner_border": 5.0,
+    "liner_drop": 2.0,
+    "liner_radius": 1.0,
+    "star": {
+      "tip": 8.0,
+      "power": 0.55,
+      "thickness": 0.6,
+      "bevel": 0.15,
+      "bevel_segments": 2
+    },
+    "lettering_thickness": 0.08,
+    "card_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 50.0
+    },
+    "top_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 35.0,
+      "thickness": 0.3,
+      "bevel": 0.06
+    },
+    "cushion": {
+      "clearance": 0.3,
+      "below_liner_top": 18.0,
+      "radius": 6.0,
+      "segments": 6,
+      "note": "fills the liner well to 18 mm below the liner top; 6 mm rounded pillow edges"
+    }
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (plain black with the soft fret normal map; lavender lining); renders swap in config/presets/box_facet_fold_v009_look.json.",
+    "exterior": {
+      "color_linear": [
+        0.012,
+        0.0115,
+        0.011
+      ],
+      "roughness": 0.8
+    },
+    "accent": {
+      "color_linear": [
+        0.546,
+        0.381,
+        0.611
+      ],
+      "roughness": 0.9
+    },
+    "card": {
+      "color_linear": [
+        0.546,
+        0.381,
+        0.611
+      ],
+      "roughness": 0.85
+    },
+    "gold": {
+      "color_linear": [
+        0.96,
+        0.72,
+        0.46
+      ],
+      "roughness": 0.5,
+      "metallic": 1.0
+    },
+    "swatch_normal": "textures/sources/designer_fret_felt/fret_felt_normal_soft_gl.png",
+    "swatch_tile_mm": 180
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": -0.25
+  },
+  "lid_animation": {
+    "note": "as the reference video (magnetic flap box): the cover swings as one L on the back hinge; frame 1 closed, last frame open",
+    "open_deg": 100,
+    "frames": 30
+  }
+}
