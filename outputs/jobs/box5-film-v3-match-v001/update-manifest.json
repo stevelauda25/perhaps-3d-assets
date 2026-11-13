@@ -1,0 +1,81 @@
+{
+  "source_blends_sha256": {
+    "/Users/naufalirsyad/Downloads/perhaps-unboxing-for-designer/source/unboxing-film-v3.blend": "48f66436038a630d7c2997def0c4e263b3468bdda865a40fee3d656f06f3d2aa",
+    "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/Box 3D Blender/Box 5/Box 5 - Leather gold seal.blend": "0ed25efbe11fcc956b8d631593320012eb2e2322b7c902d38adaecb9f93eb84b"
+  },
+  "output": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/Box 5 - Film v3 matched.blend",
+  "output_sha256": "174fe61bd1afe925059957c0e9999134c66670e0dbf936f443b07bf658beb95e",
+  "reference_shells": {
+    "base": "U6f5790de6100",
+    "lid": "Uc73a9f4fe739"
+  },
+  "material_ids": [
+    "leather-base",
+    "lid-suede",
+    "cavity-lining"
+  ],
+  "interior_assignments": [
+    [
+      "Body | back",
+      "lid-suede",
+      "cavity-lining"
+    ],
+    [
+      "Interior | raised display stage",
+      "lid-suede",
+      "cavity-lining"
+    ]
+  ],
+  "source_interior_colors_linear": {
+    "lid-suede": [
+      0.05999999865889549,
+      0.05999999865889549,
+      0.06300000101327896,
+      1.0
+    ],
+    "cavity-lining": [
+      0.026000000536441803,
+      0.026000000536441803,
+      0.027000000700354576,
+      1.0
+    ]
+  },
+  "shell_dimensions_before_mm": [
+    140.00000059604645,
+    140.08000493049622,
+    140.08000493049622
+  ],
+  "shell_dimensions_after_mm": [
+    140.00000059604645,
+    139.99998569488525,
+    140.00000059604645
+  ],
+  "root_scale": [
+    1.0,
+    0.9994288682937622,
+    0.9994288682937622
+  ],
+  "atlas_uv_from_local_face_xy_m": [
+    [
+      1.581596851348877,
+      0.0,
+      0.3364652991294861
+    ],
+    [
+      0.0003117639571428299,
+      -1.581596851348877,
+      0.11215981841087341
+    ]
+  ],
+  "atlas_note": "Original base exterior bottom atlas island reused at its physical scale on each box panel. Original packed images and shader graphs retained.",
+  "mesh_structure_sha256": {
+    "Body | back": "8c6160fdbe2765b2c8ef706abc0ed4200e5fe54568cefb717b370a8881dc709c",
+    "Body | base": "fde166c009e8fe369420d473c9f9e259a1086ba22c1d081bdd0142b021b4f794",
+    "Door | Left": "b86fddc5f1cd49343cf1787ce9de914edd648df4255083c477b0f4118026f268",
+    "Seal | left": "b432cbc051c6eed184343a2ca553482ab383823bc6c1728ae6104c80f94c4030",
+    "Door | Right": "e212e620f8a2e38c9bafb1b39c0d48221a6567ee50ad7435a9f68017047dd35f",
+    "Seal | right": "55fd9986a9968a9915fa7e08f8d3fe559da42761cab573a813712d432c494a2f",
+    "Interior | raised display stage": "3711fe88693eb020ffe4c9a96645926de785f9d6c2796e73683541dce679a9b3"
+  },
+  "visual_approval": "pending designer review"
+}

@@ -1,0 +1,53 @@
+{
+  "closed_shell_dimensions_mm": [
+    139.99999314546585,
+    140.00003039836884,
+    140.0000088481175
+  ],
+  "uv_mm_per_unit": {
+    "leather-base": {
+      "min": 632.2100640643156,
+      "max": 695.8491605790372,
+      "median": 632.5505724231938,
+      "samples": 134
+    },
+    "leather-lid": {
+      "min": 416.78504394527783,
+      "max": 499.1883246689059,
+      "median": 418.74303339562067,
+      "samples": 200
+    }
+  },
+  "images": {
+    "base_basecolor": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/base_basecolor.jpg",
+      "sha256": "e8322fb0f1051313966af56ec6c64ca3a766ccbcf42e0061dd4bbfd06673fcec",
+      "bytes": 191671
+    },
+    "base_normal": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/base_normal.jpg",
+      "sha256": "84ad0273ee5d832846f429be48e3e124805844005c60bf3c961bf048d05689cf",
+      "bytes": 287920
+    },
+    "base_orm": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/base_orm.jpg",
+      "sha256": "196b07ffa101af6520118bd762f4c9fbc0973755e18e7e43c88cfe5ad25f147c",
+      "bytes": 416286
+    },
+    "lid_basecolor": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/lid_basecolor.jpg",
+      "sha256": "22e7a9b6c354b20c7509d64f37fa0a7904d0d254b1a739d1d071f6bae82d5a86",
+      "bytes": 420109
+    },
+    "lid_normal": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/lid_normal.jpg",
+      "sha256": "d382c7eac10b7d4d2061edc310bf89ca649f636ec0fdec5c42e3169d7b28c031",
+      "bytes": 683553
+    },
+    "lid_orm": {
+      "path": "/Users/naufalirsyad/Documents/GitHub/perhaps-3d-assets/outputs/jobs/box5-film-v3-match-v001/textures/lid_orm.jpg",
+      "sha256": "eb110647ae95ebaf4de90c099ebc3e2881699a7d034872be2c29e259d2f13c85",
+      "bytes": 921080
+    }
+  }
+}

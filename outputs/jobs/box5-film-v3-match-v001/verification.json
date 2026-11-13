@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "dimensions_mm": [
+    140.00000059604645,
+    139.99999314546585,
+    140.00000059604645
+  ],
+  "source_material_graphs_identical": true,
+  "original_texture_bytes_verified": true,
+  "extracted_maps": 6,
+  "mesh_structure_unchanged": true,
+  "gold_seal_unchanged": true,
+  "door_animation_frames_verified": [
+    1,
+    30,
+    60,
+    90,
+    120
+  ],
+  "camera_lights_unchanged": true,
+  "exterior_uv_bounds": [
+    [
+      0.225753515958786,
+      0.0013629936147481203
+    ],
+    [
+      0.44717708230018616,
+      0.22283019125461578
+    ]
+  ],
+  "sources_unchanged": true,
+  "visual_approval": "pending designer review"
+}
