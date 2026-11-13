@@ -1,0 +1,67 @@
+{
+  "id": "suede.designer-dark-gold",
+  "category": "suede",
+  "name": "Dark gold suede (designer grey suede photo, recoloured)",
+  "version": "v001",
+  "status": "candidate",
+  "approved_version": null,
+  "source": {
+    "dir": "textures/sources/designer_grey_suede",
+    "url": null,
+    "license": "supplied by the designer for Perhaps packaging"
+  },
+  "maps": {
+    "color": "dark_gold_suede_color.png",
+    "roughness": null,
+    "normal": null,
+    "height": "dark_gold_suede_height.png"
+  },
+  "mapping": {
+    "mode": "uv",
+    "tile_width_mm": 200,
+    "uv_map": "Metric UV",
+    "uv_mm_per_unit": 1000
+  },
+  "color": {
+    "tint_linear": [
+      1,
+      1,
+      1
+    ],
+    "hue": 0.5,
+    "saturation": 1.0,
+    "value": 1.0
+  },
+  "roughness": {
+    "value": 0.85
+  },
+  "normal": {
+    "strength": 1.0
+  },
+  "height": {
+    "bump_distance_mm": 0.05,
+    "bump_strength": 1.0,
+    "note": "nap; distance chosen, not measured"
+  },
+  "micro": null,
+  "bsdf": {
+    "ior": 1.45,
+    "specular_ior_level": 0.15,
+    "sheen_weight": 0.5,
+    "sheen_roughness": 0.3
+  },
+  "measured": {
+    "mean_linear_rgb": [
+      0.1946,
+      0.1022,
+      0.0232
+    ],
+    "note": "colour map mean = dark gold sRGB #7A5A2A"
+  },
+  "limitations": [
+    "Built from one photo: relief is the nap luminance with the drape folds blurred out, not a height scan.",
+    "Mirrored 2 x 2.",
+    "Physical scale assumed: 100 mm across the photo."
+  ],
+  "selected_for": "medallion lining (candidate)"
+}

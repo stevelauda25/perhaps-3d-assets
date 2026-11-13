@@ -76,7 +76,7 @@ def run(params):
     bevel(lid)
     boolean(lid, block("cut", -a + w, a - w, -a + w, a - w, zb - nd - 5, H - g["lid_top"]), "DIFFERENCE")
 
-    # optional: the official perhaps wordmark pressed into the lid top (tone-on-tone), rim softened by a weighted bevel
+    # optional: the official perhaps wordmark pressed into the lid top (tone-on-tone, or gold with "foil"), rim softened by a weighted bevel
     db = g.get("lid_deboss")
     if db:
         from pipeline.steps.logo_deboss import parse_svg, solids_with_holes
@@ -223,11 +223,8 @@ def run(params):
         wn = o.modifiers.new("Weighted surface normals", "WEIGHTED_NORMAL")
         wn.mode, wn.keep_sharp = "FACE_AREA", True
         bake(o, wn)
-
-    # glTF-safe stand-ins (the charcoal swatch on the cloth); renders swap in the library look
+    # glTF-safe stand-ins (a colour swatch on the cloth, optionally one on the lining); renders swap in the library look
     ms = spec["materials"]
-    swatch = bpy.data.images.load(str(ROOT / ms["swatch"]))
-    swatch.pack()
     mats = {}
     for role in ("exterior", "accent", "gold"):
         mat = mats[role] = bpy.data.materials.new("Medallion | " + role)
@@ -237,19 +234,22 @@ def run(params):
         bsdf.inputs["Base Color"].default_value = (*ms[role]["color_linear"], 1)
         bsdf.inputs["Roughness"].default_value = ms[role]["roughness"]
         bsdf.inputs["Metallic"].default_value = ms[role].get("metallic", 0.0)
-        if role == "exterior":
+        sw = ms if role == "exterior" else ms[role]  # the exterior swatch keys sit on "materials" itself
+        if sw.get("swatch"):
+            swatch = bpy.data.images.load(str(ROOT / sw["swatch"]))
+            swatch.pack()
             uvn = nodes.new("ShaderNodeUVMap")
             uvn.uv_map = "Metric UV"
             mp = nodes.new("ShaderNodeMapping")
-            tw = ms["swatch_tile_mm"]
+            tw = sw["swatch_tile_mm"]
             mp.inputs["Scale"].default_value = (1000 / tw, 1000 / tw * swatch.size[0] / swatch.size[1], 1)  # square texels
             tex = nodes.new("ShaderNodeTexImage")
             tex.image = swatch
             links.new(uvn.outputs["UV"], mp.inputs["Vector"])
             links.new(mp.outputs["Vector"], tex.inputs["Vector"])
             links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
-            if ms.get("swatch_normal"):
-                nim = bpy.data.images.load(str(ROOT / ms["swatch_normal"]))
+            if sw.get("swatch_normal"):
+                nim = bpy.data.images.load(str(ROOT / sw["swatch_normal"]))
                 nim.colorspace_settings.name = "Non-Color"
                 nim.pack()
                 ntex, nmap = nodes.new("ShaderNodeTexImage"), nodes.new("ShaderNodeNormalMap")
@@ -272,6 +272,16 @@ def run(params):
             o.data.materials.append(mats[role_of.get(o, "gold")])
     lining = {o.name: sum(f.material_index for f in o.data.polygons) for o in inside}
     assert all(lining.values()), "a shell has no lining faces: %s" % lining
+    if db and db.get("foil"):  # hot-foil stamp: gold on the deboss floor and walls, the top-plane rim stays linen
+        lid.data.materials.append(mats["gold"])
+        lo, top = (H - db["depth"] - 0.01) * MM, H * MM - 1e-6
+        foil = 0
+        for f in lid.data.polygons:
+            vs = [lid.data.vertices[i].co for i in f.vertices]
+            if all(box[0] < v.x < box[1] and box[2] < v.y < box[3] and lo < v.z < top for v in vs):
+                f.material_index, foil = 2, foil + 1
+        assert foil, "no deboss faces took the foil"
+        lining["foil_faces"] = foil
 
     # hinge: the lid group pivots on the lid's outer back edge at its lower edge
     hinge = Vector((0, a, zl)) * MM
@@ -279,6 +289,24 @@ def run(params):
         o.data.transform(Matrix.Translation(-hinge))
         o.location = hinge
         o.rotation_mode = "QUATERNION"
+    # the deboss fans long sliver triangles across the lid top; pin the flat top to +Z so the lip's tilted normals don't streak across it
+    # (after the hinge move: mesh.transform resets custom normals)
+    # (zero-area slivers on the plane count as top too; a sharp seam to the lip keeps the two smoothing fans from averaging)
+    me = lid.data
+    keep = [tuple(n.vector) for n in me.corner_normals]
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    up = {f.index for f in bm.faces if all(abs(v.co.z - (H * MM - hinge.z)) < 1e-6 for v in f.verts)}
+    for e in bm.edges:
+        if len({f.index in up for f in e.link_faces}) > 1:
+            e.smooth = False
+    bm.to_mesh(me)
+    bm.free()
+    tri = {li for f in me.polygons if f.index in up for li in f.loop_indices}
+    me.normals_split_custom_set([(0.0, 0.0, 1.0) if i in tri else n for i, n in enumerate(keep)])
+    flat = [li for f in me.polygons if f.index in up and f.area > 1e-12 for li in f.loop_indices]  # zero-area faces have no normal space
+    assert up and all(me.corner_normals[i].vector.z > 0.999 for i in flat), "lid top normals not flat"  # int16 storage
+
     ctrl = {}
     for name in ("CTRL | Base", "CTRL | Lid lift-off"):
         ctrl[name] = bpy.data.objects.new(name, None)

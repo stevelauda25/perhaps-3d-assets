@@ -1,0 +1,94 @@
+{
+  "name": "medallion",
+  "note": "14 Medallion v007 (feedback 2026-11-13): darker bottle green leather with a thinner grain (half-contrast colour, 0.03 mm render relief, 12 % GLB normal), plain dark gold suede inside (soft matte suede, no photo texture), the gold Perhaps on the lid lining centred. Otherwise as v006 (lid and base 70 mm each, gold-foiled perhaps deboss, gold clasp).",
+  "geometry_mm": {
+    "size": 176.4,
+    "height": 140.0,
+    "base_top": 66.0,
+    "reveal": 4.0,
+    "wall": 4.0,
+    "lid_top": 4.0,
+    "base_floor": 4.0,
+    "edge_radius": 0.8,
+    "edge_segments": 3,
+    "collar_rise": 8.0,
+    "collar_wall": 2.5,
+    "collar_clearance": 0.5,
+    "collar_radius": 1.2,
+    "notch": [
+      35.0,
+      16.0
+    ],
+    "tab_clearance": 0.5,
+    "medallion": {
+      "shape": "rect",
+      "size": [
+        30.0,
+        26.0
+      ],
+      "thickness": 2.5,
+      "chamfer": 0.15,
+      "center_z": 68.0
+    },
+    "pad_top_z": 48.0,
+    "pad_slot": [
+      4.0,
+      10.0
+    ],
+    "pad_radius": 8.0,
+    "lettering_thickness": 0.08,
+    "lid_text": {
+      "text": "Perhaps",
+      "font": "/System/Library/Fonts/Supplemental/Georgia.ttf",
+      "width": 40.0,
+      "center_y": 0.0
+    },
+    "lid_deboss": {
+      "svg": "references/brand/perhaps-wordmark.svg",
+      "width": 66.0,
+      "depth": 0.6,
+      "lip": 0.3,
+      "center_y": 0.0,
+      "foil": true
+    }
+  },
+  "materials": {
+    "note": "glTF-safe stand-ins for the GLB (dark green leather colour + soft normal swatch outside, plain dark gold suede inside, champagne gold); renders swap in config/presets/box_medallion_v007_look.json.",
+    "exterior": {
+      "color_linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.55
+    },
+    "accent": {
+      "color_linear": [
+        0.1946,
+        0.1022,
+        0.0232
+      ],
+      "roughness": 0.95
+    },
+    "gold": {
+      "color_linear": [
+        0.5457,
+        0.402,
+        0.2016
+      ],
+      "roughness": 0.3,
+      "metallic": 1.0
+    },
+    "swatch": "textures/sources/designer_red_leather/dark_green_leather_color_glb.jpg",
+    "swatch_tile_mm": 300,
+    "swatch_normal": "textures/sources/designer_red_leather/green_leather_normal_soft_gl.png"
+  },
+  "lid_animation": {
+    "frames": 30,
+    "open_deg": 75.0
+  },
+  "scene": {
+    "view_transform": "Standard",
+    "exposure": 0.0
+  }
+}

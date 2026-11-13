@@ -1,0 +1,50 @@
+{
+  "asset": "Red grained leather with a blind-debossed VERSED (designer photo, 2026-11-13), recoloured bottle green",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the leather photo as sent (736 x 1308); green_reference.png the green envelope photo sent with it (colour target only). Maps use rows 0-560 of the photo, above the VERSED stamp. Relief = linear luminance divided by a ~60 px blur (lighting removed), mirrored 2 x 2 to 1472 x 1120. Colour = relief times the envelope green, sRGB #24503F (linear 0.0176, 0.0802, 0.0497; sampled from the lit envelope flap, about #2A5843 to #193A2F), mean checked; _glb.jpg the same as JPEG q90 4:4:4. Height = relief softened 1 px, stretched 0.5-99.5 percentile. green_leather_normal_gl.png: OpenGL normal from the height at 35 % of the 0.1 mm render relief. Scale assumed: the photo spans 150 mm, so the tile is 300 mm wide. dark_green_leather_color.png (+ _glb.jpg, q90 4:4:4; Medallion v007): the same relief at half contrast times a darker bottle green, sRGB #163E30 (linear 0.0080, 0.0482, 0.0296). green_leather_normal_soft_gl.png: the same height at 12 % of the 0.1 mm relief (a thinner grain for the GLB).",
+  "measured": {
+    "color_map_mean_linear": [
+      0.0176,
+      0.0802,
+      0.0497
+    ]
+  },
+  "files": {
+    "dark_green_leather_color.png": {
+      "bytes": 2314832,
+      "sha256": "b82ba17614808ec9ed11fb69f3162aa6b7d8a692f01e1826762e44c58b7c3bcb"
+    },
+    "dark_green_leather_color_glb.jpg": {
+      "bytes": 507064,
+      "sha256": "6bfd88309397d4d09d93c237fe809a3da81611a1a93b0f2e159a02a9222c4beb"
+    },
+    "green_leather_color.png": {
+      "bytes": 2972887,
+      "sha256": "d3c98e74e3c5401a76819092503021323b5a7e9b94420a040815644f9a2b043e"
+    },
+    "green_leather_color_glb.jpg": {
+      "bytes": 827806,
+      "sha256": "a69ec04dd3086fbaebc8ee81507d5a4524efef7f23e2c82bca719cc1c0f3ea8a"
+    },
+    "green_leather_height.png": {
+      "bytes": 3007939,
+      "sha256": "b0ccc033f67e88acc54cfcf1499bcf332f53e3070518a021d32bed0b28fde450"
+    },
+    "green_leather_normal_gl.png": {
+      "bytes": 918437,
+      "sha256": "0af1014d674335c17fa1acba603caee07707c0ff39d4ffdfbd87a6d350bdb7d2"
+    },
+    "green_leather_normal_soft_gl.png": {
+      "bytes": 586102,
+      "sha256": "ffba122899e526486c373e2acf59d5cad01537de9d85f7bfbbdefe5162838a22"
+    },
+    "green_reference.png": {
+      "bytes": 163251,
+      "sha256": "fc3c8ca69802a26d2a256f66dedae37a4c6c73f5b2593ba9ce446a09bd0bb1a5"
+    },
+    "source_photo.png": {
+      "bytes": 1614454,
+      "sha256": "3d5fa98ae176c4a9d19a2271cc1b490d4a5e6e2826f934f4d268d4e5b29ed1b1"
+    }
+  }
+}

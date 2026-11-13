@@ -1,0 +1,97 @@
+{
+  "tier": "medallion",
+  "builder": "paperboard",
+  "surface": "Render look for 14 Medallion v005: umber fine linen outside at 0.85 x (weave bump 0.1 mm, warm sheen 0.12 so the cloth reads under grazing light), umber suede lining, champagne gold at roughness 0.28 on the clasp and the foiled perhaps deboss.",
+  "roles": {
+    "exterior": {
+      "library": "fabric.designer-umber-linen",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            0.85,
+            0.85,
+            0.85
+          ]
+        },
+        "bsdf": {
+          "sheen_weight": 0.12,
+          "sheen_roughness": 0.4,
+          "sheen_tint": [
+            1.0,
+            0.86,
+            0.7
+          ]
+        },
+        "height": {
+          "bump_distance_mm": 0.1
+        }
+      }
+    },
+    "accent": {
+      "library": "suede.ambientcg-leather039",
+      "overrides": {
+        "color": {
+          "tint_linear": [
+            1.0,
+            0.612,
+            0.388
+          ],
+          "hue": 0.5,
+          "saturation": 0.0,
+          "value": 0.024,
+          "contrast": 0.3
+        },
+        "height": {
+          "bump_distance_mm": 0.06
+        },
+        "mapping": {
+          "tile_width_mm": 300
+        },
+        "bsdf": {
+          "sheen_weight": 0.5,
+          "sheen_roughness": 0.3,
+          "sheen_tint": [
+            0.7,
+            0.55,
+            0.42
+          ],
+          "specular_ior_level": 0.1
+        },
+        "maps": {
+          "normal": null
+        },
+        "nap": {
+          "scale_per_mm": 1.15,
+          "stretch": 2.6,
+          "bump": 1.0,
+          "distance_mm": 0.3,
+          "tone": 0.3,
+          "patch_per_mm": 0.12,
+          "patch_tone": 0.12,
+          "patch_stretch": 3,
+          "distortion": 0.5
+        }
+      }
+    },
+    "gold": {
+      "metal": {
+        "color_linear": [
+          0.96,
+          0.72,
+          0.46
+        ],
+        "roughness": 0.28,
+        "brush_bump": {
+          "scale_per_mm": 2.0,
+          "strength": 0.06,
+          "distance_mm": 0.02
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Medallion | exterior": "exterior",
+    "Medallion | accent": "accent",
+    "Medallion | gold": "gold"
+  }
+}

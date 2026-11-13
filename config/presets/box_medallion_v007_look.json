@@ -1,0 +1,63 @@
+{
+  "tier": "medallion",
+  "builder": "paperboard",
+  "surface": "Render look for 14 Medallion v007: dark bottle green grained leather outside with a thin grain (0.03 mm relief), plain dark gold suede lining (matte, soft sheen, only a faint fibre), champagne gold at roughness 0.28 on the clasp and the foiled perhaps deboss.",
+  "roles": {
+    "exterior": {
+      "library": "leather.designer-dark-green",
+      "overrides": {
+        "bsdf": {
+          "sheen_weight": 0.08,
+          "sheen_roughness": 0.4,
+          "sheen_tint": [
+            0.8,
+            1.0,
+            0.9
+          ]
+        }
+      }
+    },
+    "accent": {
+      "color_linear": [
+        0.1946,
+        0.1022,
+        0.0232
+      ],
+      "fiber_scale_per_mm": 6.0,
+      "fiber_detail": 2.0,
+      "mottle_scale_per_mm": 0.05,
+      "mottle_amount": 0.0,
+      "speckle_amount": 0.03,
+      "bump_strength": 0.1,
+      "bump_distance_mm": 0.05,
+      "roughness_range": [
+        0.9,
+        0.95
+      ],
+      "ior": 1.45,
+      "specular_ior_level": 0.15,
+      "sheen_weight": 0.6,
+      "sheen_roughness": 0.35
+    },
+    "gold": {
+      "metal": {
+        "color_linear": [
+          0.96,
+          0.72,
+          0.46
+        ],
+        "roughness": 0.28,
+        "brush_bump": {
+          "scale_per_mm": 2.0,
+          "strength": 0.06,
+          "distance_mm": 0.02
+        }
+      }
+    }
+  },
+  "slot_map": {
+    "Medallion | exterior": "exterior",
+    "Medallion | accent": "accent",
+    "Medallion | gold": "gold"
+  }
+}

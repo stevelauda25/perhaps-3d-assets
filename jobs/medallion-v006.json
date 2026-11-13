@@ -1,0 +1,312 @@
+{
+  "id": "medallion-v006",
+  "output": "outputs/jobs/medallion-v006",
+  "asset_type": "packaging",
+  "model": "14 Medallion v006: Select box size (176.4 x 176.4 x 140 mm), lid and base 70 mm each, back-hinged lid, bottle green grained leather outside, dark gold suede inside, gold-foiled perhaps deboss on the lid top, sharp rectangular gold clasp at the seam",
+  "baseline": "v005 with new materials (designer feedback 2026-11-13): the designer's leather photo recoloured to the green of the envelope reference outside, the designer's suede photo in dark gold on the lining, collar and pad. Geometry, light and cameras as v005.",
+  "input": "assets/watches/baseline/empty_base.blend",
+  "references": [
+    "references/packaging/14_medallion.png",
+    "Final Blender/Perhaps_Select_Box.blend",
+    "textures/sources/designer_red_leather/source_photo.png",
+    "textures/sources/designer_red_leather/green_reference.png",
+    "textures/sources/designer_grey_suede/source_photo.png"
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "step": "box_medallion",
+      "params": {
+        "spec": "config/presets/box_medallion_v006.json"
+      }
+    },
+    {
+      "name": "export",
+      "step": "watch_export_glb",
+      "params": {
+        "glb": "outputs/jobs/medallion-v006/medallion.glb"
+      }
+    },
+    {
+      "name": "look",
+      "step": "packaging_tier",
+      "params": {
+        "preset": "config/presets/box_medallion_v006_look.json"
+      }
+    },
+    {
+      "name": "float",
+      "step": "floating_stage",
+      "params": {
+        "camera_preset": "config/presets/floating_hero_low_angle_arc_reveal.json",
+        "studio_preset": "config/presets/dramatic_luxury_floating_studio.A2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "stage",
+      "step": "cinematic_studio",
+      "params": {
+        "studio_preset": "config/presets/perhaps_cinematic_studio_v2.json",
+        "tier": {}
+      }
+    },
+    {
+      "name": "select-light",
+      "step": "copy_look",
+      "params": {
+        "source": "Final Blender/Perhaps_Select_Box.blend",
+        "materials": {},
+        "lights_prefix": "PCS2 |"
+      }
+    },
+    {
+      "name": "light",
+      "step": "light_adjust",
+      "params": {
+        "edit": {
+          "PCS2 | 01 Grazing key": {
+            "power_w": 1.0
+          },
+          "PCS2 | 02 Upper edge strip": {
+            "power_w": 12.0
+          },
+          "PCS2 | 03 Side definition": {
+            "power_w": 0.05
+          },
+          "PCS2 | 04 Underside bounce": {
+            "power_w": 0.02
+          }
+        },
+        "add": [
+          {
+            "name": "MD04 | back rim right",
+            "size": [
+              0.08,
+              0.3
+            ],
+            "position": [
+              0.55,
+              0.65,
+              0.2
+            ],
+            "target": [
+              0,
+              0,
+              0.07
+            ],
+            "power_w": 1.5,
+            "color": [
+              1.0,
+              0.86,
+              0.7
+            ]
+          },
+          {
+            "name": "MD04 | back rim left",
+            "size": [
+              0.08,
+              0.3
+            ],
+            "position": [
+              -0.65,
+              0.55,
+              0.2
+            ],
+            "target": [
+              0,
+              0,
+              0.07
+            ],
+            "power_w": 1.5,
+            "color": [
+              1.0,
+              0.86,
+              0.7
+            ]
+          },
+          {
+            "name": "MD04 | lid top softbox",
+            "size": [
+              0.4,
+              0.25
+            ],
+            "position": [
+              0.24,
+              0.7,
+              0.45
+            ],
+            "target": [
+              0,
+              0,
+              0.14
+            ],
+            "power_w": 5.0,
+            "color": [
+              1.0,
+              0.86,
+              0.7
+            ]
+          },
+          {
+            "name": "MD04 | front fill",
+            "size": [
+              0.5,
+              0.5
+            ],
+            "position": [
+              -0.35,
+              -0.9,
+              0.3
+            ],
+            "target": [
+              0,
+              0,
+              0.07
+            ],
+            "power_w": 0.8,
+            "color": [
+              1.0,
+              0.86,
+              0.7
+            ]
+          },
+          {
+            "name": "MD04 | clasp glint",
+            "size": [
+              0.05,
+              0.05
+            ],
+            "position": [
+              0.14,
+              -0.468,
+              -0.094
+            ],
+            "target": [
+              0,
+              -0.0895,
+              0.068
+            ],
+            "power_w": 0.022
+          }
+        ]
+      }
+    },
+    {
+      "name": "closed",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.615,
+            -0.81,
+            0.541
+          ],
+          "target": [
+            0,
+            0,
+            0.07
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "select-view",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "camera_override": {
+          "position": [
+            0.2512,
+            -1.0076,
+            -0.3496
+          ],
+          "target": [
+            0,
+            0,
+            0.07
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f10",
+      "step": "scene_frame",
+      "params": {
+        "frame": 10
+      }
+    },
+    {
+      "name": "slightly-open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.616,
+            -0.811,
+            0.547
+          ],
+          "target": [
+            0,
+            0,
+            0.085
+          ],
+          "lens_mm": 90
+        }
+      }
+    },
+    {
+      "name": "f30",
+      "step": "scene_frame",
+      "params": {
+        "frame": 30
+      }
+    },
+    {
+      "name": "open",
+      "render": {
+        "camera": "CAM | floating_hero_low_angle",
+        "resolution": 2048,
+        "profile": "preview",
+        "border": [
+          0,
+          1,
+          0.1667,
+          0.8333
+        ],
+        "camera_override": {
+          "position": [
+            -0.735,
+            -0.998,
+            0.838
+          ],
+          "target": [
+            0,
+            0,
+            0.11
+          ],
+          "lens_mm": 90
+        }
+      }
+    }
+  ]
+}

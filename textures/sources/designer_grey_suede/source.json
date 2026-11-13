@@ -1,0 +1,34 @@
+{
+  "asset": "Grey suede (designer photo, 2026-11-13), recoloured dark gold",
+  "author": "supplied by the designer in chat",
+  "note": "source_photo.png is the draped grey suede photo as sent (600 x 960). Relief = linear luminance divided by a ~12 px blur (the drape folds and their shading removed, the nap kept), contrast 0.6 x, mirrored 2 x 2 to 1200 x 1920. Colour = relief times dark gold sRGB #7A5A2A (linear 0.1946, 0.1022, 0.0232), mean checked; _glb.jpg JPEG q90 4:4:4. Height = relief softened 1 px, stretched 0.5-99.5 percentile; normal (OpenGL) at 35 % of a 0.05 mm relief. Scale assumed: the photo spans 100 mm, so the tile is 200 mm wide.",
+  "measured": {
+    "color_map_mean_linear": [
+      0.1946,
+      0.1022,
+      0.0232
+    ]
+  },
+  "files": {
+    "dark_gold_suede_color.png": {
+      "bytes": 3615272,
+      "sha256": "3e5d601d2e399bc72e3abd056cd3e90eceefbef4eaad75034f56520c259e7023"
+    },
+    "dark_gold_suede_color_glb.jpg": {
+      "bytes": 848645,
+      "sha256": "696ada5084b0d42139421bac880ae9abd4ae0831bf3582a80a8a4d4f551aad2a"
+    },
+    "dark_gold_suede_height.png": {
+      "bytes": 4082416,
+      "sha256": "bdec65a0a3664916a9818b9c172c611541de6481fb7a5eb9812c3457364ce78a"
+    },
+    "dark_gold_suede_normal_gl.png": {
+      "bytes": 880446,
+      "sha256": "f6c82eb9de933445ef72778cef0c6855b78ed5123c67be1693c988c979786d50"
+    },
+    "source_photo.png": {
+      "bytes": 757319,
+      "sha256": "33433b5b7c20cc5c80bff74785074170b3fa30c6613b4dc2b647b3a38ad89fd2"
+    }
+  }
+}
