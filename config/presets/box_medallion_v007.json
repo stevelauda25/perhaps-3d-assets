@@ -1,8 +1,8 @@
 {
   "name": "medallion",
-  "note": "14 Medallion v007 (feedback 2026-11-13): darker bottle green leather with a thinner grain (half-contrast colour, 0.03 mm render relief, 12 % GLB normal), plain dark gold suede inside (soft matte suede, no photo texture), the gold Perhaps on the lid lining centred. Otherwise as v006 (lid and base 70 mm each, gold-foiled perhaps deboss, gold clasp).",
+  "note": "14 Medallion v007 (feedback 2026-11-13): darker bottle green leather with a thinner grain (half-contrast colour, 0.03 mm render relief, 12 % GLB normal), plain dark gold suede inside (soft matte suede, no photo texture), the gold Perhaps on the lid lining centred. Footprint 140 x 140 mm to match the unboxing film v3 box (feedback 2026-11-13). Otherwise as v006 (lid and base 70 mm each, gold-foiled perhaps deboss, gold clasp).",
   "geometry_mm": {
-    "size": 176.4,
+    "size": 140.0,
     "height": 140.0,
     "base_top": 66.0,
     "reveal": 4.0,

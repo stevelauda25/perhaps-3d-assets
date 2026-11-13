@@ -2,7 +2,7 @@
   "id": "medallion-v007",
   "output": "outputs/jobs/medallion-v007",
   "asset_type": "packaging",
-  "model": "14 Medallion v007: Select box size (176.4 x 176.4 x 140 mm), lid and base 70 mm each, back-hinged lid, dark bottle green grained leather outside with a thin grain, plain dark gold suede inside, gold-foiled perhaps deboss on the lid top, centred gold Perhaps on the lid lining, sharp rectangular gold clasp at the seam",
+  "model": "14 Medallion v007: unboxing film v3 box size (140 x 140 x 140 mm), lid and base 70 mm each, back-hinged lid, dark bottle green grained leather outside with a thin grain, plain dark gold suede inside, gold-foiled perhaps deboss on the lid top, centred gold Perhaps on the lid lining, sharp rectangular gold clasp at the seam",
   "baseline": "v006 with designer feedback 2026-11-13: darker green, thinner leather grain, plain suede lining instead of the suede photo, lining Perhaps centred, and the light and scene of Final Blender/Perhaps_Select_Box.blend unchanged (its four PCS2 lights, exposure and colour management via copy_look; no extra Medallion lights).",
   "input": "assets/watches/baseline/empty_base.blend",
   "references": [
